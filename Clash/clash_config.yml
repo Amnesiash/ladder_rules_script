@@ -290,7 +290,7 @@ rule-providers:
     
 rules:
   - RULE-SET,Direct,DIRECT
-  - RULE-SET,Bing,🧩 Bing
+  - DOMAIN-KEY,bing,🧩 Bing
   - DOMAIN-SUFFIX,figma.com,🎨 Figma
   - RULE-SET,my_proxy,🚀 手动切换
   - RULE-SET,Advertising_Classical,🆎 Adblock
