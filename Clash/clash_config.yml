@@ -159,6 +159,7 @@ proxy-groups:
   - name: 🧩 Bing
     type: select
     use:
+    proxies:
       - DIRECT
 
   - name: 🎨 Figma
