@@ -182,7 +182,7 @@ proxy-groups:
       - 🚀 手动切换
       - ✈️ 自动选择
 
-  - name: 🧩 微软服务
+  - name: ☁ OneDrive
     type: select
     proxies:
       - DIRECT
@@ -291,13 +291,13 @@ rule-providers:
     
 rules:
   - RULE-SET,Direct,DIRECT
+  - RULE-SET,Advertising_Classical,🆎 Adblock
   - DOMAIN-KEYWORD,bing,🧩 Bing
   - DOMAIN-SUFFIX,figma.com,🎨 Figma
   - RULE-SET,my_proxy,🚀 手动切换
-  - RULE-SET,Advertising_Classical,🆎 Adblock
+  - RULE-SET,OneDrive,☁ OneDrive
   - RULE-SET,Google,🧩 谷歌服务
   - RULE-SET,Apple,🍎 苹果服务
-  - RULE-SET,Microsoft,🧩 微软服务
   - RULE-SET,BiliBili,🎬 哔哩哔哩
   - RULE-SET,Proxy_Classical,🌏 国外网站
   - RULE-SET,ChinaMax_Classical,DIRECT
