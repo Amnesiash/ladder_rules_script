@@ -156,12 +156,6 @@ proxy-groups:
       - REJECT
       - 🚀 手动切换
 
-  - name: 🧩 Bing
-    type: select
-    use:
-    proxies:
-      - DIRECT
-
   - name: 🎨 Figma
     type: select
     proxies:
@@ -182,7 +176,7 @@ proxy-groups:
       - 🚀 手动切换
       - ✈️ 自动选择
 
-  - name: ☁ OneDrive
+  - name: 🧩 微软服务
     type: select
     proxies:
       - DIRECT
@@ -278,9 +272,9 @@ rule-providers:
 rules:
   - RULE-SET,my_proxy,🚀 手动切换
   - DOMAIN-SUFFIX,figma.com,🎨 Figma
-  - RULE-SET,Bing,🧩 Bing
+  - RULE-SET,Bing,🧩 微软服务
   - RULE-SET,Steam,🚀 手动切换
-  - RULE-SET,OneDrive,☁ OneDrive
+  - RULE-SET,OneDrive,🧩 微软服务
   - RULE-SET,Google,🧩 谷歌服务
   - RULE-SET,Apple,🍎 苹果服务
   - RULE-SET,BiliBili,🎬 哔哩哔哩
