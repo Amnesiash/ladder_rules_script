@@ -8,3 +8,4 @@ payload:
   - DOMAIN-SUFFIX,uscloud.men
   - DOMAIN-SUFFIX,python.org
   - DOMAIN-SUFFIX,huggingface.co
+  - DOMAIN-SUFFIX,civitai.com
