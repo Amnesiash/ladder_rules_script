@@ -220,16 +220,12 @@ proxy-groups:
   - name: 🧩 谷歌服务
     type: select
     proxies:
-      - HK
-      - 🚀 手动切换
-      - ✈️ 自动选择
+      - ALL
 
   - name: 🧩 微软服务
     type: select
     proxies:
-      - DIRECT
-      - 🚀 手动切换
-      - ✈️ 自动选择
+      - ALL
       
   - name: 🎬 哔哩哔哩
     type: select
