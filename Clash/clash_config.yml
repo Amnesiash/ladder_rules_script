@@ -124,8 +124,8 @@ proxy-providers:
   #     enable: true
   #     interval: 600
   #     url: http://www.gstatic.com/generate_204  
-    #香港节点   
-      
+  
+  #香港节点   
   HK:
     type: file
     path: ./all.yaml
