@@ -123,7 +123,44 @@ proxy-providers:
   #   health-check:
   #     enable: true
   #     interval: 600
-  #     url: http://www.gstatic.com/generate_204   
+  #     url: http://www.gstatic.com/generate_204  
+    #香港节点   
+      
+  HK:
+    type: file
+    path: ./all.yaml
+    filter: 港|HK|(?i)Hong
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204
+ #日本节点
+  JP:
+    type: file
+    path: ./all.yaml
+    filter: 日|东京|JP|(?i)Japan
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204
+ #美国节点
+  US:
+    type: file
+    path: ./all.yaml
+    filter: 美|US|(?i)States|American
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204
+ #台湾节点
+  TW:
+    type: file
+    path: ./all.yaml
+    filter: 台|湾|TW|(?i)Taiwan
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204 
    
 proxies:
 
