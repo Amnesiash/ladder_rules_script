@@ -112,18 +112,18 @@ dns:
 
 
 proxy-providers:
-  # All:
-  #   type: http
-  #   url: https://api.v1.mk/sub?target=clash&url=你的订阅链接&emoji=true&list=true&udp=true
-  #   # 可以使用任意类型的链接替换上面文字，多个链接使用英文符号的竖杠|隔开一起写上即可；也可以将Clash订阅链接替换掉整个引号""内的链接
-  #   interval: 3600
-  #   filter: 线|x|专
-  #   # 根据订阅内中的节点梳理关键字，排除无效节点，如“剩余流量：***”
-  #   path: ./proxy/all.yaml
-  #   health-check:
-  #     enable: true
-  #     interval: 600
-  #     url: http://www.gstatic.com/generate_204  
+  ALL:
+    type: http
+    url: https://api.v1.mk/sub?target=clash&url=你的链接&emoji=true&list=true&udp=true
+    # 可以使用任意类型的链接替换上面文字，多个链接使用英文符号的竖杠|隔开一起写上即可；也可以将Clash订阅链接替换掉整个引号""内的链接
+    interval: 3600
+    filter: 0.5x|1.0x|1.5x|2.0x
+    # 根据订阅内中的节点梳理关键字，排除无效节点，如“剩余流量：***”
+    path: ./proxy/all.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204 
 
   #香港节点   
   HK:
