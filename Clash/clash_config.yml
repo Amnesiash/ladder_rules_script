@@ -272,6 +272,7 @@ rule-providers:
 rules:
   - RULE-SET,my_proxy,🚀 手动切换
   - DOMAIN-SUFFIX,figma.com,🎨 Figma
+  - DOMAIN-KEYWORD,openai,🧩 微软服务
   - RULE-SET,Bing,🧩 微软服务
   - RULE-SET,Steam,🚀 手动切换
   - RULE-SET,OneDrive,🧩 微软服务
