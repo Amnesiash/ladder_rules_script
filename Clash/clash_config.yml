@@ -225,6 +225,7 @@ proxy-groups:
   - name: 🧩 微软服务
     type: select
     proxies:
+      - DIRECT
       - ALL
       
   - name: 🎬 哔哩哔哩
