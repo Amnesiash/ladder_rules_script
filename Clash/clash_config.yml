@@ -143,6 +143,15 @@ proxy-providers:
       enable: true
       interval: 120
       url: http://www.gstatic.com/generate_204
+  #韩国节点
+  KR:
+    type: file
+    path: ./proxy/all.yaml
+    filter: 韩|韩国|KR|(?i)Korea
+    health-check:
+      enable: true
+      interval: 120
+      url: http://www.gstatic.com/generate_204
  #美国节点
   US:
     type: file
