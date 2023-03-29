@@ -1,6 +1,7 @@
-# 需使用0.20.15版本cfw
+# 需使用0.20.19版本以上cfw
 # 将proxy-providers里面链接中的“你的订阅链接”全部替换即可
 #[2023.03.06]更新proxy-providers用法；
+#[2023.03.29]更新proxy-providers 代码，适配读取本地文件；
 
 
 
@@ -178,7 +179,7 @@ proxy-groups:
   - name: 🚀 手动切换
     type: select
     use:
-      - all
+      - ALL
     proxies:
       - ✈️ 自动选择
 
@@ -192,7 +193,7 @@ proxy-groups:
   - name: ✈️ 自动选择
     type: url-test
     use: 
-      - all 
+      - ALL 
     url: "http://www.gstatic.com/generate_204"
     interval: 300
   
