@@ -220,6 +220,7 @@ proxy-groups:
   - name: 🧩 谷歌服务
     type: select
     proxies:
+      - HK
       - 🚀 手动切换
       - ✈️ 自动选择
 
