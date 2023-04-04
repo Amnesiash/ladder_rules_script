@@ -21,7 +21,8 @@ dns:
   default-nameserver: 
     - 119.29.29.29
     - 223.5.5.5
-    - 8.8.4.4
+    - 114.114.114.114
+    - 8.8.8.8
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter: 
