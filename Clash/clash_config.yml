@@ -165,7 +165,7 @@ proxies:
 
             
 proxy-groups:
-  - name: 🚀 手动切换
+  - name: 🚀 节点切换
     type: select
     use:
       - ALL
@@ -190,20 +190,20 @@ proxy-groups:
     type: select
     proxies:
       - REJECT
-      - 🚀 手动切换
+      - 🚀 节点切换
 
   - name: 🎨 Figma
     type: select
     proxies:
       - DIRECT
-      - 🚀 手动切换
+      - 🚀 节点切换
       - ✈️ 自动选择
 
   - name: 🍎 苹果服务
     type: select
     proxies:
       - DIRECT
-      - 🚀 手动切换
+      - 🚀 节点切换
       - ✈️ 自动选择
 
   - name: 🧩 谷歌服务
@@ -222,20 +222,20 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-      - 🚀 手动切换
+      - 🚀 节点切换
       - ✈️ 自动选择
 
   - name: 🌏 国外网站
     type: select
     proxies:
-      - 🚀 手动切换
+      - 🚀 节点切换
       - ✈️ 自动选择
 
   - name: 🗑️ 黑白名单  
     type: select
     proxies:
       - DIRECT
-      - 🚀 手动切换
+      - 🚀 节点切换
       - ✈️ 自动选择 
 
 #20.14版本clash已忽略path属性，自动生成固定位置
@@ -325,7 +325,7 @@ rules:
   - RULE-SET,Direct,DIRECT
   - DOMAIN-SUFFIX,figma.com,🎨 Figma
   - RULE-SET,Bing,🧩 微软服务
-  - RULE-SET,Steam,🚀 手动切换
+  - RULE-SET,Steam,🚀 节点切换
   - RULE-SET,OneDrive,🧩 微软服务
   - RULE-SET,Google,🧩 谷歌服务
   - RULE-SET,Apple,🍎 苹果服务
