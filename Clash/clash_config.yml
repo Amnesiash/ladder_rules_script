@@ -305,6 +305,23 @@ rule-providers:
     interval: 86400
     
 rules:
+  #本地规则
+  - DOMAIN-KEYWORD,openai,🧩 微软服务
+  - DOMAIN-SUFFIX,hutao.cloud,🌏 国外网站
+  - DOMAIN-SUFFIX,hanime1.me,🌏 国外网站
+  - DOMAIN-SUFFIX,eton.club,🌏 国外网站
+  - DOMAIN-SUFFIX,framer.com,🌏 国外网站
+  - DOMAIN-SUFFIX,civtai.com,🌏 国外网站
+  - DOMAIN-SUFFIX,uscloud.men,🌏 国外网站
+  - DOMAIN-SUFFIX,python.org,🌏 国外网站
+  - DOMAIN-SUFFIX,huggingface.co,🌏 国外网站
+  - DOMAIN-SUFFIX,civitai.com,🌏 国外网站
+  - DOMAIN-SUFFIX,unpkg.com,🌏 国外网站
+  - DOMAIN-SUFFIX,arc.net,🌏 国外网站
+  - DOMAIN-SUFFIX,abduzeedo.com,🌏 国外网站
+  - DOMAIN-SUFFIX,bafang.vip,🌏 国外网站
+  - DOMAIN-SUFFIX,98ka.men,🌏 国外网站
+  #订阅规则
   - RULE-SET,Direct,DIRECT
   - DOMAIN-SUFFIX,figma.com,🎨 Figma
   - RULE-SET,Bing,🧩 微软服务
@@ -315,6 +332,7 @@ rules:
   - RULE-SET,BiliBili,🎬 哔哩哔哩
   - RULE-SET,Proxy_Classical,🌏 国外网站
   - RULE-SET,ChinaMax_Classical,DIRECT
+  #IP
   - GEOIP,LAN,DIRECT
   - GEOIP,CN,DIRECT
   - MATCH,🗑️ 黑白名单
