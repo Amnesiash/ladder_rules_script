@@ -179,6 +179,7 @@ proxy-groups:
     url: "http://www.gstatic.com/generate_204"
 
     interval: 300
+
   - name: ✈️ 自动选择
     type: url-test
     use: 
@@ -198,6 +199,10 @@ proxy-groups:
       - DIRECT
       - 🚀 节点切换
       - ✈️ 自动选择
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇨🇳 台湾节点
 
   - name: 🍎 苹果服务
     type: select
@@ -205,18 +210,31 @@ proxy-groups:
       - DIRECT
       - 🚀 节点切换
       - ✈️ 自动选择
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇨🇳 台湾节点
 
   - name: 🧩 谷歌服务
     type: select
-    use: 
-      - ALL
+    proxies:
+      - 🚀 节点切换
+      - ✈️ 自动选择
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇨🇳 台湾节点
 
   - name: 🧩 微软服务
     type: select
-    use: 
-      - ALL
     proxies:
+      - 🚀 节点切换
+      - ✈️ 自动选择
       - DIRECT
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇨🇳 台湾节点
       
   - name: 🎬 哔哩哔哩
     type: select
@@ -224,12 +242,20 @@ proxy-groups:
       - DIRECT
       - 🚀 节点切换
       - ✈️ 自动选择
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇨🇳 台湾节点
 
   - name: 🌏 国外网站
     type: select
     proxies:
       - 🚀 节点切换
       - ✈️ 自动选择
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇨🇳 台湾节点
 
   - name: 🗑️ 黑白名单  
     type: select
@@ -237,6 +263,38 @@ proxy-groups:
       - DIRECT
       - 🚀 节点切换
       - ✈️ 自动选择 
+      - 🇭🇰 香港节点
+      - 🇯🇵 日本节点
+      - 🇺🇲 美国节点
+      - 🇨🇳 台湾节点
+  
+  - name: 🇭🇰 香港节点
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 120
+    use:
+      - HK
+    
+  - name: 🇨🇳 台湾节点
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 120
+    use:
+      - TW
+    
+  - name: 🇺🇲 美国节点
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 120
+    use:
+      - US
+
+  - name: 🇯🇵 日本节点
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 120
+    use:
+      - JP
 
 #20.14版本clash已忽略path属性，自动生成固定位置
 rule-providers:
