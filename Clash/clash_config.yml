@@ -257,7 +257,7 @@ proxy-groups:
       - 🇺🇲 美国节点
       - 🇨🇳 台湾节点
 
-  - name: 🗑️ ｜−・;）
+  - name: 🗑️ 其它
     type: select
     proxies:
       - DIRECT
@@ -393,4 +393,4 @@ rules:
   #IP
   - GEOIP,LAN,DIRECT
   - GEOIP,CN,DIRECT
-  - MATCH,🗑️ ｜−・;）
+  - MATCH,🗑️ 其它
