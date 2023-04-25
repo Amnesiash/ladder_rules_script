@@ -16,7 +16,7 @@ external-controller: 127.0.0.1:9090
 
 dns:
   enable: true
-  ipv6: false
+  ipv6: true
   listen: 0.0.0.0:53
   nameserver: 
     - https://doh.pub/dns-query
