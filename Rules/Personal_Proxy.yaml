@@ -1,0 +1,28 @@
+# NAME: Personal_Proxy
+# AUTHOR: Calm-er
+# REPO: https://github.com/Calm-er/Proxy-Config
+# UPDATED: 2023-07-09
+# DOMAIN: 0
+# DOMAIN-KEYWORD: 0
+# DOMAIN-SUFFIX: 15
+# IP-CIDR: 0
+# IP-CIDR6: 0
+# PROCESS-NAME: 0
+# TOTAL: 15
+
+payload:
+  - DOMAIN-SUFFIX,zodgame.xyz
+  - DOMAIN-SUFFIX,v2ny.com
+  - DOMAIN-SUFFIX,hutao.cloud
+  - DOMAIN-SUFFIX,hanime1.me
+  - DOMAIN-SUFFIX,framer.com
+  - DOMAIN-SUFFIX,python.org
+  - DOMAIN-SUFFIX,huggingface.co
+  - DOMAIN-SUFFIX,civitai.com
+  - DOMAIN-SUFFIX,unpkg.com
+  - DOMAIN-SUFFIX,arc.net
+  - DOMAIN-SUFFIX,abduzeedo.com
+  - DOMAIN-SUFFIX,finding.art
+  - DOMAIN-SUFFIX,2046acg.com
+  - DOMAIN-SUFFIX,arca.live
+  - DOMAIN-SUFFIX,ptsearch.info
