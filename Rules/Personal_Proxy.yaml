@@ -9,7 +9,6 @@
 # IP-CIDR6: 0
 # PROCESS-NAME: 0
 # TOTAL: 15
-
 payload:
   - DOMAIN-SUFFIX,zodgame.xyz
   - DOMAIN-SUFFIX,v2ny.com
