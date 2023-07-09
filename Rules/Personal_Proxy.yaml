@@ -4,11 +4,11 @@
 # UPDATED: 2023-07-09
 # DOMAIN: 0
 # DOMAIN-KEYWORD: 0
-# DOMAIN-SUFFIX: 16
+# DOMAIN-SUFFIX: 15
 # IP-CIDR: 0
 # IP-CIDR6: 0
 # PROCESS-NAME: 0
-# TOTAL: 16
+# TOTAL: 15
 payload:
   - DOMAIN-SUFFIX,zodgame.xyz
   - DOMAIN-SUFFIX,v2ny.com
@@ -27,4 +27,3 @@ payload:
   - DOMAIN-SUFFIX,ptsearch.info
   - DOMAIN-SUFFIX,patreon.com
   - DOMAIN-SUFFIX,eton.club
-  - DOMAIN-SUFFIX,uscloud.men
