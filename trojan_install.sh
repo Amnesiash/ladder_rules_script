@@ -169,7 +169,7 @@ EOF
 	#设置伪装站
 	rm -rf /usr/share/nginx/html/*
 	cd /usr/share/nginx/html/
-	wget https://github.com/xyz690/Trojan/raw/master/web.zip
+	wget https://ghproxy.com/https://github.com/xyz690/Trojan/raw/master/web.zip
     	unzip web.zip
 	systemctl stop nginx
 	sleep 5
@@ -184,25 +184,25 @@ EOF
 	if test -s /usr/src/trojan-cert/fullchain.cer; then
 	systemctl start nginx
         cd /usr/src
-	#wget https://raw.githubusercontent.com/trojan-gfw/trojan/releases/download/v1.13.0/trojan-1.13.0-linux-amd64.tar.xz
+	#wget https://ghproxy.com/https://raw.githubusercontent.com/trojan-gfw/trojan/releases/download/v1.13.0/trojan-1.13.0-linux-amd64.tar.xz
 	# wget https://api.github.com/repos/trojan-gfw/trojan/releases/latest   # 当目录文件中存在latest时，并不会下载最新的，而是会读取已存在的latest
 	wget https://api.github.com/repos/trojan-gfw/trojan/releases/latest -O latest-trojan
 	latest_version=`grep tag_name latest-trojan| awk -F '[:,"v]' '{print $6}'`
-	wget https://github.com/trojan-gfw/trojan/releases/download/v${latest_version}/trojan-${latest_version}-linux-amd64.tar.xz
+	wget https://ghproxy.com/https://github.com/trojan-gfw/trojan/releases/download/v${latest_version}/trojan-${latest_version}-linux-amd64.tar.xz
 	tar xf trojan-${latest_version}-linux-amd64.tar.xz
 
     # 删除文件，节省空间以及便于重装
 	rm -rf ./trojan-${latest_version}-linux-amd64.tar.xz ./latest-trojan
 
 	#下载trojan WIN客户端
-	wget https://github.com/atrandys/trojan/raw/master/trojan-cli.zip
-	wget -P /usr/src/trojan-temp https://github.com/trojan-gfw/trojan/releases/download/v${latest_version}/trojan-${latest_version}-win.zip
+	wget https://ghproxy.com/https://github.com/atrandys/trojan/raw/master/trojan-cli.zip
+	wget -P /usr/src/trojan-temp https://ghproxy.com/https://github.com/trojan-gfw/trojan/releases/download/v${latest_version}/trojan-${latest_version}-win.zip
 	unzip trojan-cli.zip
 	unzip /usr/src/trojan-temp/trojan-${latest_version}-win.zip -d /usr/src/trojan-temp/
 	cp /usr/src/trojan-cert/fullchain.cer /usr/src/trojan-cli/fullchain.cer
 	mv -f /usr/src/trojan-temp/trojan/trojan.exe /usr/src/trojan-cli/ 
         #下载trojan MAC客户端
-        wget -P /usr/src/trojan-macos https://github.com/trojan-gfw/trojan/releases/download/v${latest_version}/trojan-${latest_version}-macos.zip
+        wget -P /usr/src/trojan-macos https://ghproxy.com/https://github.com/trojan-gfw/trojan/releases/download/v${latest_version}/trojan-${latest_version}-macos.zip
         unzip /usr/src/trojan-macos/trojan-${latest_version}-macos.zip -d /usr/src/trojan-macos/
         rm -rf /usr/src/trojan-macos/trojan-${latest_version}-macos.zip
 	trojan_passwd=$(cat /dev/urandom | head -1 | md5sum | head -c 8)
@@ -370,7 +370,7 @@ EOF
 	green "2、Windows将下载的客户端解压，打开文件夹，打开start.bat即打开并运行Trojan客户端"
 	green "3、MacOS将下载的客户端解压，打开文件夹，打开start.command即打开并运行Trojan客户端"
 	green "Trojan推荐使用 Mellow 工具代理（WIN/MAC通用）下载地址如下："
-	green "https://github.com/mellow-io/mellow/releases  (exe为Win客户端,dmg为Mac客户端)"
+	green "https://ghproxy.com/https://github.com/mellow-io/mellow/releases  (exe为Win客户端,dmg为Mac客户端)"
     green "   "
     green "速度慢?怕被墙?..推荐使用JMS CN2 GIA高速线路: https://www.itblogcn.com/article/1012.html"
     green "   "
@@ -451,7 +451,7 @@ function remove_trojan(){
 }
 
 function bbr_boost_sh(){
-    wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
+    wget -N --no-check-certificate "https://ghproxy.com/https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
 }
 
 start_menu(){
