@@ -1,14 +1,14 @@
 # NAME: MyProxy
 # AUTHOR: Calm-er
 # REPO: https://github.com/Calm-er/Proxy-Config
-# UPDATED: 2023-07-09
+# UPDATED: 2023-09-21
 # DOMAIN: 0
 # DOMAIN-KEYWORD: 0
-# DOMAIN-SUFFIX: 15
+# DOMAIN-SUFFIX: 16
 # IP-CIDR: 0
 # IP-CIDR6: 0
 # PROCESS-NAME: 0
-# TOTAL: 15
+# TOTAL: 16
 payload:
   - DOMAIN-SUFFIX,zodgame.xyz
   - DOMAIN-SUFFIX,v2ny.com
