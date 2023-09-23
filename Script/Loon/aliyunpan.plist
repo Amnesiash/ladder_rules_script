@@ -1,0 +1,10 @@
+#!name= 阿里云盘
+#!desc= 阿里云盘每日签到
+
+[Script]
+阿里云盘签到cookie
+http-response ^https?:\/\/auth.(aliyundrive|alipan).com\/v2\/account\/token requires-body=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
+cron "10 0 * * *" script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
+
+[MITM]
+hostname = %APPEND% auth.alipan.com
