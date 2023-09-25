@@ -6,7 +6,10 @@ payload:
   - DOMAIN-SUFFIX,qqmusic.qq.com
   - DOMAIN-SUFFIX,y.qq.com
   - DOMAIN-SUFFIX,aqqmusic.tc.qq.com
-  
+  # QQ音乐 CIDR
+  - IP-CIDR,203.205.137.159/24
+  - IP-CIDR,101.91.37.219/24
+  - IP-CIDR,112.60.22.33/24
   # 网易云音乐
   - DOMAIN,iadmat.nosdn.127.net
   - DOMAIN,netease.ugcvideoss.ourdvs.com
