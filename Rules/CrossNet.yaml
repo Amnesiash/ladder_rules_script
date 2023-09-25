@@ -1,5 +1,6 @@
 payload:
   # QQ音乐
+  - DOMAIN-SUFFIX,gtimg.cn
   - DOMAIN-SUFFIX,tencentmusic.com
   - DOMAIN-SUFFIX,music.qq.com
   - DOMAIN-SUFFIX,qqmusic.qq.com
