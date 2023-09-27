@@ -1,0 +1,206 @@
+#==========================================
+# @ConfigName        Clash常用配置
+# @ClashDownload     https://github.com/Fndroid/clash_for_windows_pkg/releases
+# @Thanks            @blackmatrix7, @Fndroid, @Anti
+# @Attention         𝐏𝐥𝐞𝐚𝐬𝐞 𝐮𝐬𝐞 𝐭𝐡𝐞 𝐥𝐚𝐭𝐞𝐬𝐭 𝐯𝐞𝐫𝐬𝐢𝐨𝐧 𝐨𝐟 𝐂𝐥𝐚𝐬𝐡/𝐂𝐥𝐚𝐬𝐡𝐟𝐨𝐫𝐖𝐢𝐧𝐝𝐨𝐰𝐬
+# @UpDate            2023/9/27
+#==========================================# 
+mixed-port: 7890     # 混合端口
+allow-lan: true      # 允许局域网连接
+bind-address: '*'    # 地址绑定
+mode: rule           # 规则模式
+log-level: info      # 日志级别
+ipv6: false          # IPV6开关
+external-controller:   127.0.0.1:9090
+secret: 'yuanchengmima'
+
+
+dns:
+  enable: true       # 不使用系统 DNS
+  ipv6: false        # 关闭 IPV6
+  listen: 0.0.0.0:53 # dns 监听
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - localhost.ptlogin2.qq.com
+    - +.srv.nintendo.net
+    - +.stun.playstation.net
+    - +.msftconnecttest.com
+    - +.msftncsi.com
+    - +.xboxlive.com
+    - msftconnecttest.com
+    - xbox.*.microsoft.com
+    - "*.battlenet.com.cn"
+    - "*.battlenet.com"
+    - "*.blzstatic.cn"
+    - "*.battle.net"
+  default-nameserver: # 默认 DNS 服务
+    - 119.29.29.29
+    - 223.5.5.5
+  nameserver:        
+    - https://doh.pub/dns-query      
+    - https://dns.alidns.com/dns-query
+    - 172.30.7.2      # 公司 DNS，避免无法上内网
+  fallback:           # 国外 DNS 服务器
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
+
+
+#========= 建立锚点 =========#
+# 策略组引用
+pr:
+  &a3 { type: select, proxies: [ 🚀 手动切换, DIRECT, ♻️ 自动切换, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🇨🇳 台湾节点, 🇸🇬 狮城节点] }
+# 订阅更新
+p:
+  &a1 { type: http, interval: 86400, health-check: { enable: true,   url: http://www.gstatic.com/generate_204,   interval: 1800 }
+  }
+# 自动选择
+auto:
+  &a4 { type: url-test, lazy: true, url: http://www.gstatic.com/generate_204, interval: 600, use: [ Subscribe ]
+  }
+# 手动选择
+use:
+  &a2 { type: select, use: [ Subscribe ] }
+# classical 规则
+c:
+  &a6 { type: http, behavior: classical, interval: 86400 }
+# domain 规则
+d:
+  &a5 { type: http, behavior: domain, interval: 86400 }
+# ipcidr 规则
+i:
+  &a7 { type: http, behavior: ipcidr, interval: 86400 }
+
+
+proxy-providers:
+  Subscribe:
+    <<: *a1
+    url: https:/www.baidu.com
+    path: ./proxy/Subscribe.yaml
+    # URL后面填写格式1: 直接填写你的机场Clash订阅[单一订阅][推荐此种方式，避免订阅泄露]
+    # URL后面填写格式2：https://sub.xeton.dev/sub?target=clash&url=请手动填入你的订阅[多机场订阅用|分割即可]&emoji=true&list=true&udp=false  
+
+
+proxies: null
+
+proxy-groups:
+  #分流分组
+  - { name: 🚀 手动切换, <<: *a2 }
+  - { name: 🛜 内网穿透, <<: *a3 }
+  - { name: 🌏 全球加速, <<: *a3 }
+  - { name: 🎨 Figma, <<: *a3 }
+  - { name: 🤖 OpenAi, <<: *a2 , filter: "美|US|日|JP|新|SG|土|TRY|欧|EUR|阿|ARS|德|澳"}
+  - { name: 🍎 苹果服务, <<: *a3 }
+  - { name: 📺 国外媒体, <<: *a3 }
+  - { name: 🆎 广告拦截, type: select, proxies: [ REJECT,DIRECT]}
+  - { name: 🗑️ 终极清单, <<: *a3 }
+  
+  #节点分组
+  - { name: ♻️ 自动切换, <<: *a4 }
+  - { name: 🇭🇰 香港节点, <<: *a4, filter: "港|HK|(?i)Hong" }
+  - { name: 🇨🇳 台湾节点, <<: *a4, filter: "台|湾|TW|(?i)Taiwan" }
+  - { name: 🇯🇵 日本节点, <<: *a4, filter: "日|东京|JP|(?i)Japan" }
+  - { name: 🇸🇬 狮城节点, <<: *a4, filter: "新|坡|SG|(?i)Singapore" }
+  - { name: 🇺🇲 美国节点, <<: *a4, filter: "美|US|(?i)States|American" }
+
+
+# 分流规则 
+rule-providers:
+  补充代理: 
+    <<: *a6
+    url: https://ghproxy.com/https://raw.githubusercontent.com/Calm-er/PRCHooray/main/Rules/MyProxy.yaml
+    path: ./ruleset/MyProxy.yaml 
+
+  内网穿透: 
+    <<: *a6
+    url: https://ghproxy.com/https://raw.githubusercontent.com/Calm-er/PRCHooray/main/Rules/CrossNet.yaml
+    path: ./ruleset/CrossNet.yaml
+  
+  局域网地址:
+    <<: *a6
+    url: https://ghproxy.com/https://github.com/ACL4SSR/ACL4SSR/raw/master/Clash/Providers/LocalAreaNetwork.yaml
+    path: ./ruleset/LocalAreaNetwork.yaml
+
+  规则修正: 
+    <<: *a6
+    url: https://ghproxy.com/https://github.com/ACL4SSR/ACL4SSR/raw/master/Clash/Providers/UnBan.yaml
+    path: ./ruleset/Unbreak.yaml
+
+  # 致力于成为中文区命中率最高的广告过滤列表，实现精确的广告屏蔽和隐私保护。
+  # https://anti-ad.net/
+  anti-AD: 
+    <<: *a5
+    url: https://anti-ad.net/clash.yaml
+    path: ./ruleset/anti-ad.yaml
+
+  OpenAi: 
+    <<: *a6
+    url: https://ghproxy.com/https://github.com/ACL4SSR/ACL4SSR/raw/master/Clash/Providers/Ruleset/OpenAi.yaml
+    path: ./ruleset/OpenAi.yaml 
+ 
+  国外媒体: 
+    <<: *a6
+    url: https://ghproxy.com/https://github.com/ACL4SSR/ACL4SSR/raw/master/Clash/Providers/ProxyMedia.yaml
+    path: ./ruleset/ProxyMedia.yaml
+ 
+  苹果服务: 
+    <<: *a6
+    url: https://ghproxy.com/https://github.com/ACL4SSR/ACL4SSR/raw/master/Clash/Providers/Apple.yaml
+    path: ./ruleset/Apple.yaml 
+ 
+  Steam: 
+    <<: *a6
+    url: https://ghproxy.com/https://github.com/ACL4SSR/ACL4SSR/raw/master/Clash/Providers/Ruleset/SteamCN.yaml
+    path: ./ruleset/SteamCN.yaml 
+
+  代理列表（精简）: 
+    <<: *a6
+    url: https://ghproxy.com/https://github.com/ACL4SSR/ACL4SSR/raw/master/Clash/Providers/ProxyLite.yaml
+    path: ./ruleset/ProxyLite.yaml
+
+  代理列表: 
+    <<: *a6
+    url: https://ghproxy.com/https://github.com/ACL4SSR/ACL4SSR/raw/master/Clash/Providers/ProxyGFWlist.yaml
+    path: ./ruleset/ProxyGFWlist.yaml
+
+  直连列表: 
+    <<: *a6
+    url: https://ghproxy.com/https://github.com/ACL4SSR/ACL4SSR/raw/master/Clash/Providers/ChinaDomain.yaml
+    path: ./ruleset/ChinaDomain.yaml
+
+  中国云服务商IP: 
+    <<: *a7
+    url: https://ghproxy.com/https://github.com/ACL4SSR/ACL4SSR/raw/master/Clash/Providers/ChinaCompanyIp.yaml
+    path: ./ruleset/ChinaCompanyIp.yaml
+
+    
+rules:
+  # 本地规则  
+  - DOMAIN-SUFFIX,bing.com,🤖 OpenAi
+  - DOMAIN-SUFFIX,figma.com,🎨 Figma
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+
+  # 订阅规则
+  - RULE-SET,内网穿透,🛜 内网穿透
+  - RULE-SET,局域网地址,DIRECT
+  - RULE-SET,规则修正,DIRECT
+  - RULE-SET,anti-AD,🆎 广告拦截
+  - RULE-SET,补充代理,🌏 全球加速
+  - RULE-SET,OpenAi,🤖 OpenAi
+  - RULE-SET,苹果服务,🍎 苹果服务
+  - RULE-SET,国外媒体,📺 国外媒体
+  - RULE-SET,Steam,DIRECT
+  - RULE-SET,代理列表,🌏 全球加速
+  - RULE-SET,直连列表,DIRECT
+  - RULE-SET,中国云服务商IP,DIRECT
+  # IP
+  # - GEOIP,LAN,DIRECT
+  # - GEOIP,CN,DIRECT
+  - MATCH,🗑️ 终极清单
