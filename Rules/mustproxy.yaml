@@ -10,6 +10,7 @@
 # PROCESS-NAME: 0
 # TOTAL: 16
 payload:
+  - DOMAIN-SUFFIX,gw2style.com
   - DOMAIN-SUFFIX,snowcrows.com
   - DOMAIN-SUFFIX,18comic.vip
   - DOMAIN-SUFFIX,zodgame.xyz
