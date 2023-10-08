@@ -1,7 +1,4 @@
 payload:
-  # ToDesk
-  - DOMAIN-SUFFIX,todesk.com
-  
   # QQ音乐
   - DOMAIN-SUFFIX,gtimg.cn
   - DOMAIN-SUFFIX,tencentmusic.com
