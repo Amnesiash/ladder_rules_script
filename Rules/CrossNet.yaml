@@ -1,4 +1,8 @@
 payload:
+  # 向日葵
+  - PROCESS-NAME,贝锐向日葵
+  - DOMAIN,oray
+  
   # QQ音乐
   - DOMAIN-SUFFIX,gtimg.cn
   - DOMAIN-SUFFIX,tencentmusic.com
