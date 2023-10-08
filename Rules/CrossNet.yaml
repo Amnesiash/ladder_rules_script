@@ -1,6 +1,8 @@
 payload:
   # 向日葵
-  - PROCESS-NAME,贝锐向日葵
+  - PROCESS-NAME,SunloginClient_Desktop
+  - PROCESS-NAME,SunloginClient_Helper
+  - PROCESS-NAME,SunloginClient
   - DOMAIN-KEYWORD,oray
   
   # QQ音乐
