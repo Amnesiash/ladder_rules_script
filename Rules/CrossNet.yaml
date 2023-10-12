@@ -1,5 +1,6 @@
 payload:
   # App Store
+  - DOMAIN-SUFFIX,xp.apple.com
   - DOMAIN-SUFFIX,apps.apple.com
 
   # 向日葵
