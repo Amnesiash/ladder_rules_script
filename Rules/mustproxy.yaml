@@ -10,6 +10,7 @@
 # PROCESS-NAME: 0
 # TOTAL: 16
 payload:
+  - DOMAIN-SUFFIX,onlyfans.com
   - DOMAIN-SUFFIX,jablehk.com
   - DOMAIN-SUFFIX,xsgames.co
   - DOMAIN-SUFFIX,dribbble.com
