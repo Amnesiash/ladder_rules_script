@@ -1,4 +1,7 @@
 payload:
+  # App Store
+  - PROCESS-NAME,apps.apple.com
+
   # 向日葵
   - PROCESS-NAME,SunloginClient_Desktop
   - PROCESS-NAME,SunloginClient_Helper
