@@ -1,6 +1,6 @@
 payload:
   # App Store
-  - PROCESS-NAME,apps.apple.com
+  - DOMAIN-SUFFIX,apps.apple.com
 
   # 向日葵
   - PROCESS-NAME,SunloginClient_Desktop
