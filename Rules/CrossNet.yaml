@@ -10,6 +10,7 @@ payload:
   - DOMAIN-KEYWORD,oray
   
   # QQ音乐
+  - PROCESS-NAME,QQMusic
   - DOMAIN-SUFFIX,gtimg.cn
   - DOMAIN-SUFFIX,tencentmusic.com
   - DOMAIN-SUFFIX,music.qq.com
