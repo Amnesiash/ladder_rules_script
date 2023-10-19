@@ -10,7 +10,6 @@
 # PROCESS-NAME: 0
 # TOTAL: 16
 payload:
-  - DOMAIN-SUFFIX,launchdarkly.com
   - DOMAIN-SUFFIX,rifabu.me
   - DOMAIN-SUFFIX,onlyfans.com
   - DOMAIN-SUFFIX,jablehk.com
