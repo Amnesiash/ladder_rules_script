@@ -1,8 +1,22 @@
 payload:
-  - DOMAIN-KEYWORD,nikke
-  - DOMAIN-SUFFIX,listdl.com
-  - DOMAIN-SUFFIX,truekex.com
+  - DOMAIN,global-lobby.nikke-kr.com
+  - DOMAIN,cloud.nikke-kr.com
+  - DOMAIN,sg-vas.intlgame.com
+  - DOMAIN,aws-na-dr.intlgame.com
+  - DOMAIN,data-aws-na.intlgame.com
+  - DOMAIN,pc.crashsight-us.iegcom.com
+  - IP-CIDR,43.152.114.31/32
+  
+  - DOMAIN-SUFFIX,nikke-kr.com
   - DOMAIN-SUFFIX,intlgame.com
-  - DOMAIN-SUFFIX,intlgame.com
-  - DOMAIN-SUFFIX,digicert.com
   - DOMAIN-SUFFIX,iegcom.com
+  
+  #ACE
+  - DOMAIN,down.anticheatexpert.com
+  - DOMAIN-SUFFIX,anticheatexpert.com
+  
+  #PC NA
+  - DOMAIN,catalog.gamepass.com
+  - DOMAIN,na1.centauriglobal.com
+  - DOMAIN-SUFFIX,gamepass.com
+  - DOMAIN-SUFFIX,centauriglobal.com
