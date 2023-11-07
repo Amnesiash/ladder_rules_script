@@ -8,6 +8,7 @@ payload:
   - PROCESS-NAME,SunloginClient_Helper
   - PROCESS-NAME,SunloginClient
   - DOMAIN-KEYWORD,oray
+  - DOMAIN-SUFFIX,oray.com
   
   # QQ音乐
   - PROCESS-NAME,QQMusic
