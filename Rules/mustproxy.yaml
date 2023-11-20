@@ -10,29 +10,19 @@
 # PROCESS-NAME: 0
 # TOTAL: 16
 payload:
+  # > 分流
   - DOMAIN-SUFFIX,lottielab.com
-  - DOMAIN-SUFFIX,rifabu.me
-  - DOMAIN-SUFFIX,onlyfans.com
-  - DOMAIN-SUFFIX,jablehk.com
-  - DOMAIN-SUFFIX,xsgames.co
-  - DOMAIN-SUFFIX,dribbble.com
-  - DOMAIN-SUFFIX,gw2style.com
-  - DOMAIN-SUFFIX,snowcrows.com
-  - DOMAIN-KEYWORD,18comic
-  - DOMAIN-SUFFIX,zodgame.xyz
-  - DOMAIN-SUFFIX,v2ny.com
-  - DOMAIN-SUFFIX,hutao.cloud
-  - DOMAIN-SUFFIX,hanime1.me
-  - DOMAIN-SUFFIX,framer.com
-  - DOMAIN-SUFFIX,huggingface.co
-  - DOMAIN-SUFFIX,civitai.com
+  - DOMAIN-SUFFIX,framercanvas.com
   - DOMAIN-SUFFIX,abduzeedo.com
-  - DOMAIN-SUFFIX,2046acg.com
-  - DOMAIN-SUFFIX,ptsearch.info
-  - DOMAIN-SUFFIX,patreon.com
-  - DOMAIN-SUFFIX,fanbox.cc
-  - DOMAIN-SUFFIX,miconisomi.xii.jp
+  - DOMAIN-SUFFIX,xsgames.co
   - DOMAIN-SUFFIX,v2rayssr.com
-  - DOMAIN-SUFFIX,19jv.tv
-  - DOMAIN-SUFFIX,19j22.xyz
-  - DOMAIN-SUFFIX,19j.tv
+  - DOMAIN-SUFFIX,fanbox.cc
+  - DOMAIN-SUFFIX,huggingface.co  
+  - DOMAIN-SUFFIX,ptsearch.info
+  # > Game 18+
+  - DOMAIN-SUFFIX,18comic.vip
+  - DOMAIN-SUFFIX,zodgame.xyz
+  - DOMAIN-SUFFIX,miconisomi.xii.jp
+  # > 18+
+  - DOMAIN-SUFFIX,rifabu.me 
+  - DOMAIN-KEYWORD,19j
