@@ -1,14 +1,15 @@
 #!name= 阿里云盘
-#!desc= 阿里云盘每日签到
-#!author = lowking
-#!homepage = https://github.com/lowking/Scripts/blob/master/ali/aliYunPanCheckIn.js
+#!desc= 阿里云盘定时签到
+#!openUrl=https://github.com/zqzess/rule_for_quantumultX/tree/master/js/Mine/aDriveCheckIn
+#!author=zqzess
+#!homepage=https://github.com/zqzess/rule_for_quantumultX/tree/master/js/Mine/aDriveCheckIn
 #!icon = https://files.catbox.moe/hzb8ow.png
 #!date = 2023-12-03
 
 [Script]
 # > 阿里云盘签到
-http-response ^https:\/\/auth.(aliyundrive|alipan).com\/v2\/account\/token script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js, tag=阿里云盘签到cookie
-cron "0 10 0 * * ?" script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js,timeout=60,tag=阿里云盘签到
+http-request ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token script-path=https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/aDriveCheckIn/aDriveCheckIn.js, requires-body=true, timeout=10, enabled=true, tag=阿里云盘token获取
+cron "12 0 * * *" script-path=https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master/js/Mine/aDriveCheckIn/aDriveCheckIn.js, tag=阿里云盘签到
 
 [MITM]
-hostname = %APPEND% auth.alipan.com
+hostname =  auth.alipan.com, auth.aliyundrive.com
