@@ -10,7 +10,7 @@ payload:
   - DOMAIN-SUFFIX,music.tc.qq.com
   - DOMAIN-SUFFIX,video.qq.com
   
-  # 网易云音乐 CIDR
+  # QQ音乐 CIDR
   - IP-CIDR,10.252.252.252/24
   - IP-CIDR,211.152.148.72/24
   
