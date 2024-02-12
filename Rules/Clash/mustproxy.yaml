@@ -1,16 +1,8 @@
-# NAME: MyProxy
-# AUTHOR: Calm-er
-# REPO: https://github.com/Calm-er/Proxy-Config
-# UPDATED: 2023-09-21
-# DOMAIN: 0
-# DOMAIN-KEYWORD: 0
-# DOMAIN-SUFFIX: 16
-# IP-CIDR: 0
-# IP-CIDR6: 0
-# PROCESS-NAME: 0
-# TOTAL: 16
+# UPDATED: 2024-02-12
+
 payload:
   # > 分流
+  - DOMAIN-SUFFIX,koofr.net
   - DOMAIN-SUFFIX,lottielab.com
   - DOMAIN-SUFFIX,framercanvas.com
   - DOMAIN-SUFFIX,abduzeedo.com
@@ -26,3 +18,4 @@ payload:
   # > 18+
   - DOMAIN-SUFFIX,rifabu.me 
   - DOMAIN-KEYWORD,19j
+  - DOMAIN-KEYWORD,hanime
