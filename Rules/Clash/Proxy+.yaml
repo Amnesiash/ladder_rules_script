@@ -2,6 +2,7 @@
 
 payload:
   # > 分流
+  - DOMAIN-SUFFIX,figma.com
   - DOMAIN-SUFFIX,koofr.net
   - DOMAIN-SUFFIX,lottielab.com
   - DOMAIN-SUFFIX,framercanvas.com
@@ -19,3 +20,4 @@ payload:
   - DOMAIN-SUFFIX,rifabu.me 
   - DOMAIN-KEYWORD,19j
   - DOMAIN-KEYWORD,hanime
+  
