@@ -26,5 +26,5 @@ payload:
   - DOMAIN,sydney.bing.com
   - DOMAIN,www.bing.com
 
-# > Meta
-- DOMAIN,imagine.meta.com
+  # > Meta
+  - DOMAIN,imagine.meta.com
