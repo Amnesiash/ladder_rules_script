@@ -2,13 +2,13 @@
 ## 前言
 自用的各平台的分流规则、复写规则及自动化脚本。
 
-## Profile文件说明
-### Clash <a href="">
+## 规则
 
-#### 1️⃣添加配置文件订阅连接：
-**MASTER分支**
+分流规则
 
-**MASTER分支 GHProxy`免代理`**
+https://github.com/blackmatrix7/ios_rule_script/tree/master/rule
+
+所有规则数据都来自互联网，感谢开源规则项目作者的辛勤付出
 
 ## 特别声明
 
