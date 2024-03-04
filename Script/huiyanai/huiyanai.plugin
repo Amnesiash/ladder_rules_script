@@ -6,8 +6,8 @@
 #!date = 2024-03-04
 
 [Script]
-http-request ^https?:\/\/foxirj\.huiyan-ai\.cn\/api\/user-info requires-body=1,script-path=https://mirror.ghproxy.com/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Script/huiyanai/huiyanai.js,tag=慧言AI_获取cookie
-cron "15 0 * * *" script-path=https://mirror.ghproxy.com/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Script/huiyanai/huiyanai.js,tag=慧言AI每日签到
+http-request ^https?:\/\/foxirj\.huiyan-ai\.cn\/api\/user-info requires-body=1,script-path=https://mirror.ghproxy.com/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Script/huiyanai/huiyanai.js,tag=慧言AI_获取cookie, img-url=https://mirror.ghproxy.com/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Script/huiyanai/huiyanai.png
+cron "15 0 * * *" script-path=https://mirror.ghproxy.com/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Script/huiyanai/huiyanai.js,tag=慧言AI每日签到, img-url=https://mirror.ghproxy.com/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Script/huiyanai/huiyanai.png
 
 [MITM]
 hostname = foxirj.huiyan-ai.cn
