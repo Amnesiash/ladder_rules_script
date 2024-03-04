@@ -13,6 +13,7 @@ payload:
   - DOMAIN-SUFFIX,huggingface.co  
   - DOMAIN-SUFFIX,ptsearch.info
   - DOMAIN-SUFFIX,wallhaven.cc
+  - DOMAIN-SUFFIX,alpacaml.com
   # > Game 18+
   - DOMAIN-SUFFIX,18comic.vip
   - DOMAIN-SUFFIX,wnacg.com
