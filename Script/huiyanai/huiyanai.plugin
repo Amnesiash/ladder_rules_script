@@ -1,13 +1,13 @@
 #!name= 慧言AI
 #!desc= 慧言AI每日签到
 #!author = Amnesiash
-#!homepage = https://github.com/blackmatrix7/ios_rule_script/blob/master/script/manmanbuy/
-#!icon = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanmai.png
-#!date = 2023-12-05
+#!homepage = https://github.com/Amnesiash/ladder_rules_script/tree/main/Script/huiyanai
+#!icon = https://mirror.ghproxy.com/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Script/huiyanai/huiyanai.png
+#!date = 2024-03-04
 
 [Script]
-http-request ^https?:\/\/apph5\.manmanbuy\.com\/taolijin\/(login.aspx|logserver.aspx) requires-body=1,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanbuy_checkin.js,tag=慢慢买_获取cookie
-cron "15 0 * * *" script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanbuy_checkin.js,tag=慢慢买每日签到
+http-request ^https?:\/\/foxirj\.huiyan-ai\.cn\/api\/user-info requires-body=1,script-path=https://mirror.ghproxy.com/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Script/huiyanai/huiyanai.js,tag=慧言AI_获取cookie
+cron "15 0 * * *" script-path=https://mirror.ghproxy.com/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Script/huiyanai/huiyanai.js,tag=慧言AI每日签到
 
 [MITM]
-hostname = apph5.manmanbuy.com
+hostname = foxirj.huiyan-ai.cn
