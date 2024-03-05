@@ -1,0 +1,5 @@
+#!name= 慧言AI每日签到
+
+^https?:\/\/foxirj\.huiyan-ai\.cn\/api\/user-info url script-request-header https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Script/huiyanai/huiyanai.js
+
+hostname = foxirj.huiyan-ai.cn
