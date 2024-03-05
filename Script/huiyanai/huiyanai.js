@@ -5,7 +5,7 @@ const hyaiCookieIdKey = "hyai_cookie_id";
 const hyaiSigninKey = "hyai_signin";
 
 const hyaiSyncQinglongKey = "hyai_sync_qinglong";
-const scriptName = "慧言";
+const scriptName = "慧言AI";
 
 // https://foxirj.huiyan-ai.cn/api/user-info
 const $ = MagicJS(scriptName, "INFO");
@@ -46,10 +46,10 @@ async function getmpAppCookie() {
             $.data.write(hyaiCookieKey, currentCookie, 'onlyOneUser');
             $.data.write(hyaiAuthorizationKey, Authorization, 'onlyOneUser');
             $.logger.info(`写入cookie\n${currentCookie}`);
-            $.notification.post(scriptName, "", `获取Cookie成功！！`);
-             
+            $.notification.post(scriptName, "", `🎉获取Cookie成功！`);
+            
         } else {
-            $.logger.warning("没有读取到有效的Cookie信息。");
+            $.logger.warning("❌获取token失败！没有读取到有效的Cookie信息。");
         }
     } catch (err) {
         $.logger.error(`获取Cookies出现异常，${err}`);
@@ -77,9 +77,9 @@ function appSignIn(appid) {
                 },
             })
             .then((resp) => {
-                 let obj = resp.body;
+                let obj = resp.body;
                 $.logger.info(`${JSON.stringify(obj)}`);
-                  resolve([true, "签到完成"]);
+                    resolve([true, "🎉签到完成"]);
 
             })
             .catch((err) => {
@@ -111,8 +111,8 @@ async function multiUsersSignIn() {
             $.logger.info(`当前正在进行第 ${index + 1} 个Cookie签到`);
             // 通知信息
             let title = scriptName;
-            let subTitle = "签到成功";
-            let content = "完成";
+            let subTitle = "🎉签到成功";
+            let content = "🎉签到成功!";
 
             // 获取Cookies
             currentCookie = $.data.read(hyaiCookieKey, "", session);
