@@ -2,6 +2,7 @@
 
 payload:
   # > 分流
+  - DOMAIN-SUFFIX,catbox.moe
   - DOMAIN-SUFFIX,figma.com
   - DOMAIN-SUFFIX,koofr.net
   - DOMAIN-SUFFIX,lottielab.com
