@@ -35,3 +35,7 @@ payload:
 
   # > Meta
   - DOMAIN,imagine.meta.com
+
+  # > Coze
+  - DOMAIN-SUFFIX,coze.com
+  - DOMAIN-SUFFIX,ciciai.com
