@@ -1,15 +1,22 @@
 payload:
+  # 常见需代理AIGC
+  
   # > OpenAI & ChatGPT
+  - DOMAIN-KEYWORD,openai
+  - DOMAIN-SUFFIX,auth0.com
+  - DOMAIN-SUFFIX,challenges.cloudflare.com
+  - DOMAIN-SUFFIX,client-api.arkoselabs.com
+  - DOMAIN-SUFFIX,events.statsigapi.net
+  - DOMAIN-SUFFIX,featuregates.org
+  - DOMAIN-SUFFIX,identrust.com
+  - DOMAIN-SUFFIX,intercom.io
+  - DOMAIN-SUFFIX,intercomcdn.com
   - DOMAIN-SUFFIX,oaistatic.com
   - DOMAIN-SUFFIX,oaiusercontent.com
   - DOMAIN-SUFFIX,openai.com
-  - DOMAIN,api.statsig.com
-  - DOMAIN,api-iam.intercom.io
-  - DOMAIN,chatgpt.livekit.cloud
-  - DOMAIN,o33249.ingest.sentry.io
-  - DOMAIN,openaiapi-site.azureedge.net
-  - DOMAIN,sfo3.turn.livekit.cloud
-  - DOMAIN-KEYWORD,openaicom
+  - DOMAIN-SUFFIX,openaiapi-site.azureedge.net
+  - DOMAIN-SUFFIX,sentry.io
+  - DOMAIN-SUFFIX,stripe.com
   
   # > Claude
   - DOMAIN-SUFFIX,claude.ai
