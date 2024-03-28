@@ -1,4 +1,7 @@
 payload:
+  # 其他
+  - DOMAIN-SUFFIX,coolapk.com
+
   # QQ音乐
   - PROCESS-NAME,QQMusic
   - DOMAIN-SUFFIX,gtimg.cn
