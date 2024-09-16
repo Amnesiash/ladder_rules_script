@@ -1,211 +1,88 @@
+# 锚点 - 优选节点筛选组
+FilterHK: &FilterHK '^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+FilterTW: &FilterTW '^(?=.*((?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+FilterJP: &FilterJP '^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+FilterSG: &FilterSG '^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+FilterUS: &FilterUS '^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+
+# 锚点 - 优选参数 [每 6 秒一次惰性健康检查，容差 20ms，超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
+UrlTest: &UrlTest {type: url-test, interval: 6, tolerance: 20, lazy: true, url: 'http://cp.cloudflare.com', disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: true, include-all-providers: true}
+
+# 锚点 - 规则参数 [每 12 小时更新一次订阅规则，更新规则时使用直连优选]
+RuleSet: &RuleSet {type: http, behavior: classical, interval: 21600, format: yaml, proxy: DIRECT}
+
 proxy-groups:
-  - name: 🚀 PROXY
-    include-all: true
-    type: select
+  - {name: 🚀 节点选择, type: select, include-all-providers: true}
+  - {name: 🌍 全球代理, type: select, proxies: [♻️ 自动选择, 🚀 节点选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
+  - {name: 🎨 Figma, type: select, proxies: [DIRECT, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
+  - {name: ✨ AIGC, type: select, proxies: [🇸🇬 狮城优选, 🇯🇵 日本优选, 🇺🇲 美国优选]}
+  - {name: 🎬️ 港台番剧, type: select, proxies: [DIRECT, 🚀 节点选择, 🇭🇰 香港优选, 🇨🇳 台湾优选]}
+  - {name: 🎬️ 国际媒体, type: select, proxies: [♻️ 自动选择, 🚀 节点选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
+  - {name: 🍎 苹果服务, type: select, proxies: [DIRECT, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
+  - {name: 🍎 苹果服务, type: select, proxies: [🗑 兜底策略, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
 
-  - name: 🌍 全球加速
-    type: select
-    proxies:
-      - ♻️ AUTO
-      - 🚀 PROXY
-      - 🇭🇰 HK AUTO
-      - 🇨🇳 TW AUTO
-      - 🇸🇬 SG AUTO
-      - 🇯🇵 JP AUTO
-      - 🇺🇸 US AUTO
-  
-  - name: 🎨 Figma
-    type: select
-    proxies:
-      - DIRECT
-      - 🚀 PROXY
-      - ♻️ AUTO
-      - 🇭🇰 HK AUTO
-      - 🇨🇳 TW AUTO
-      - 🇸🇬 SG AUTO
-      - 🇯🇵 JP AUTO
-      - 🇺🇸 US AUTO
-
-  - name: ✨ AIGC
-    type: select
-    proxies:
-      - 🇸🇬 SG AUTO
-      - 🇯🇵 JP AUTO
-      - 🇺🇸 US AUTO
-
-  - name: 🎬️ 港台番剧
-    type: select
-    proxies:
-      - DIRECT
-      - 🚀 PROXY
-      - 🇭🇰 HK AUTO
-      - 🇨🇳 TW AUTO
-
-  - name: 🎬️ 国际媒体
-    type: select
-    proxies:
-      - ♻️ AUTO
-      - 🚀 PROXY
-      - 🇭🇰 HK AUTO
-      - 🇨🇳 TW AUTO
-      - 🇸🇬 SG AUTO
-      - 🇯🇵 JP AUTO
-      - 🇺🇸 US AUTO
-
-  - name: 🍎 苹果服务
-    type: select
-    proxies:
-      - DIRECT
-      - 🚀 PROXY
-      - ♻️ AUTO
-      - 🇭🇰 HK AUTO
-      - 🇨🇳 TW AUTO
-      - 🇸🇬 SG AUTO
-      - 🇯🇵 JP AUTO
-      - 🇺🇸 US AUTO
-
-  - name: 🗑 兜底策略
-    type: select
-    proxies:
-      - DIRECT
-      - 🚀 PROXY
-      - ♻️ AUTO
-      - 🇭🇰 HK AUTO
-      - 🇨🇳 TW AUTO
-      - 🇸🇬 SG AUTO
-      - 🇯🇵 JP AUTO
-      - 🇺🇸 US AUTO
-
-  - name: ♻️ AUTO
-    include-all: true
-    type: url-test
-    interval: 300
-
-  - name: 🇭🇰 HK AUTO
-    include-all: true
-    filter: (?i)香港|Hong Kong|HK|🇭🇰
-    type: url-test
-    interval: 300
-
-  - name: 🇨🇳 TW AUTO
-    include-all: true
-    filter: (?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)
-    type: url-test
-    interval: 300
-    
-  - name: 🇸🇬 SG AUTO
-    include-all: true
-    filter: (?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)
-    type: url-test
-    interval: 300
-
-  - name: 🇯🇵 JP AUTO
-    include-all: true
-    filter: (?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b)
-    type: url-test
-    interval: 300
-
-  - name: 🇺🇸 US AUTO
-    include-all: true
-    filter: (?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b)
-    type: url-test
-    interval: 300
+  - {name: ♻️ 自动选择, <<: *UrlTest}
+  - {name: 🇭🇰 香港优选, <<: *UrlTest, filter: *FilterHK}
+  - {name: 🇨🇳 台湾优选, <<: *UrlTest, filter: *FilterTW}
+  - {name: 🇸🇬 狮城优选, <<: *UrlTest, filter: *FilterSG}
+  - {name: 🇯🇵 日本优选, <<: *UrlTest, filter: *FilterJP}
+  - {name: 🇺🇸 美国优选, <<: *UrlTest, filter: *FilterUS}
 
 
 rule-providers:
   直连修正: 
+    <<: *RuleSet
     url: https://mirror.ghproxy.com/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/yaml/Direct+.yaml
     path: ./ruleset/Direct+.yaml
-    behavior: classical
-    interval: 86400
-    format: yaml
-    type: http
   
-  代理修正: 
-    url: https://mirror.ghproxy.com/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/yaml/Proxy+.yaml
-    path: ./ruleset/Proxy+.yaml
-    behavior: classical
-    interval: 86400
-    format: yaml
-    type: http
-  
-  # LAN: 
-  #   url: https://mirror.ghproxy.com/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/yaml/LAN.yaml
-  #   path: ./ruleset/LAN.yaml
-  #   behavior: classical
-  #   interval: 86400
-  #   format: yaml
-  #   type: http
+  LAN: 
+    <<: *RuleSet
+    url: https://mirror.ghproxy.com/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/yaml/LAN.yaml
+    path: ./ruleset/LAN.yaml
   
   微信: 
+    <<: *RuleSet
     url: https://mirror.ghproxy.com/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/yaml/WeChat.yaml
     path: ./ruleset/WeChat.yaml
-    behavior: classical
-    interval: 86400
-    format: yaml
-    type: http
   
   电报: 
+    <<: *RuleSet
     url: https://mirror.ghproxy.com/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/yaml/Telegram.yaml
     path: ./ruleset/Telegram.yaml
-    behavior: classical
-    interval: 86400
-    format: yaml
-    type: http
   
-  AIGC: 
+  AIGC:
+    <<: *RuleSet 
     url: https://mirror.ghproxy.com/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/yaml/AI.yaml
     path: ./ruleset/AI.yaml
-    behavior: classical
-    interval: 86400
-    format: yaml
-    type: http
   
   港台番剧: 
+    <<: *RuleSet
     url: https://mirror.ghproxy.com/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/yaml/StreamingCN.yaml
     path: ./ruleset/StreamingCN.yaml
-    behavior: classical
-    interval: 86400
-    format: yaml
-    type: http
   
   国际媒体: 
+    <<: *RuleSet
     url: https://mirror.ghproxy.com/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/yaml/Streaming!CN.yaml
     path: ./ruleset/Streaming!CN.yaml
-    behavior: classical
-    interval: 86400
-    format: yaml
-    type: http
   
   苹果服务: 
+    <<: *RuleSet
     url: https://mirror.ghproxy.com/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/yaml/Apple.yaml
     path: ./ruleset/Apple.yaml
-    behavior: classical
-    interval: 86400
-    format: yaml
-    type: http
   
   代理列表: 
+    <<: *RuleSet
     url: https://mirror.ghproxy.com/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/yaml/Proxy.yaml
     path: ./ruleset/Proxy.yaml
-    behavior: classical
-    interval: 86400
-    format: yaml
-    type: http
-  
+
   直连列表: 
+    <<: *RuleSet
     url: https://mirror.ghproxy.com/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/yaml/Direct.yaml
     path: ./ruleset/Direct.yaml
-    behavior: classical
-    interval: 86400
-    format: yaml
-    type: http
         
 rules:
-  - PROCESS-NAME,OneDrive,DIRECT
-  - DOMAIN-SUFFIX,figma.com,🎨 Figma
+  - RULE-SET,LAN,DIRECT
   - RULE-SET,直连修正,DIRECT
-  - RULE-SET,代理修正,🌍 全球加速
   - RULE-SET,电报,🌍 全球加速
   - RULE-SET,AIGC,✨ AIGC
   - RULE-SET,港台番剧,🎬️ 港台番剧
@@ -214,13 +91,5 @@ rules:
   - RULE-SET,代理列表,🌍 全球加速
   - RULE-SET,微信,DIRECT
   - RULE-SET,直连列表,DIRECT
-  # - RULE-SET,LAN,DIRECT
-  - IP-CIDR,192.168.0.0/16,DIRECT
-  - IP-CIDR,10.0.0.0/8,DIRECT
-  - IP-CIDR,172.16.0.0/12,DIRECT
-  - IP-CIDR,127.0.0.0/8,DIRECT
-  - IP-CIDR,100.64.0.0/10,DIRECT
-  - IP-CIDR,224.0.0.0/4,DIRECT
-  - IP-CIDR,fe80::/10,DIRECT
   - GEOIP,CN,DIRECT
   - MATCH,🗑 兜底策略

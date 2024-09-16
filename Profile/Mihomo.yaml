@@ -155,11 +155,6 @@ rule-providers:
     url: https://mirror.ghproxy.com/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/yaml/Direct+.yaml
     path: ./ruleset/Direct+.yaml
 
-  代理修正: 
-    <<: *RuleSet
-    url: https://mirror.ghproxy.com/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/yaml/Proxy+.yaml
-    path: ./ruleset/Proxy+.yaml
-
   LAN: 
     <<: *RuleSet
     url: https://mirror.ghproxy.com/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/yaml/LAN.yaml
@@ -212,8 +207,8 @@ rules:
   - DOMAIN-SUFFIX,figma.com,🎨 FIGMA
 
   # 订阅规则
+  - RULE-SET,LAN,DIRECT
   - RULE-SET,直连修正,DIRECT
-  - RULE-SET,代理修正,🌍 全球代理
   - RULE-SET,Telegram,🌍 全球代理
   - RULE-SET,AI,🌟 AIGC
   - RULE-SET,港台番剧,🎬 港台番剧
@@ -222,7 +217,6 @@ rules:
   - RULE-SET,代理列表,🌍 全球代理
   - RULE-SET,微信,DIRECT
   - RULE-SET,直连列表,DIRECT
-  - RULE-SET,LAN,DIRECT
 
   # GeoIP China
   - GEOIP,CN,DIRECT
