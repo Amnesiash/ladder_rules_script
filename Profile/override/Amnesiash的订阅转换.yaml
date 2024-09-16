@@ -19,7 +19,7 @@ proxy-groups:
   - {name: 🎬️ 港台番剧, type: select, proxies: [DIRECT, 🚀 节点选择, 🇭🇰 香港优选, 🇨🇳 台湾优选]}
   - {name: 🎬️ 国际媒体, type: select, proxies: [♻️ 自动选择, 🚀 节点选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
   - {name: 🍎 苹果服务, type: select, proxies: [DIRECT, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
-  - {name: 🍎 苹果服务, type: select, proxies: [🗑 兜底策略, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
+  - {name: 🗑️ 兜底策略, type: select, proxies: [DIRECT, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
 
   - {name: ♻️ 自动选择, <<: *UrlTest}
   - {name: 🇭🇰 香港优选, <<: *UrlTest, filter: *FilterHK}
