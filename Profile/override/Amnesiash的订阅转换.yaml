@@ -83,12 +83,12 @@ rule-providers:
 rules:
   - RULE-SET,LAN,DIRECT
   - RULE-SET,直连修正,DIRECT
-  - RULE-SET,电报,🌍 全球加速
+  - RULE-SET,电报,🌍 全球代理
   - RULE-SET,AIGC,✨ AIGC
   - RULE-SET,港台番剧,🎬️ 港台番剧
   - RULE-SET,国际媒体,🎬️ 国际媒体
   - RULE-SET,苹果服务,🍎 苹果服务
-  - RULE-SET,代理列表,🌍 全球加速
+  - RULE-SET,代理列表,🌍 全球代理
   - RULE-SET,微信,DIRECT
   - RULE-SET,直连列表,DIRECT
   - GEOIP,CN,DIRECT
