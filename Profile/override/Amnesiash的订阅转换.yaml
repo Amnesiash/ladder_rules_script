@@ -13,7 +13,7 @@ RuleSet: &RuleSet {type: http, behavior: classical, interval: 21600, format: yam
 
 proxy-groups:
   - {name: 🚀 节点选择, type: select, include-all-providers: true}
-  - {name: 🌍 全球代理, type: select, proxies: [♻️ 自动选择, 🚀 节点选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
+  - {name: 🌍 全球加速, type: select, proxies: [♻️ 自动选择, 🚀 节点选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
   - {name: 🎨 Figma, type: select, proxies: [DIRECT, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
   - {name: ✨ AIGC, type: select, proxies: [🇸🇬 狮城优选, 🇯🇵 日本优选, 🇺🇲 美国优选]}
   - {name: 🎬️ 港台番剧, type: select, proxies: [DIRECT, 🚀 节点选择, 🇭🇰 香港优选, 🇨🇳 台湾优选]}
@@ -83,12 +83,12 @@ rule-providers:
 rules:
   - RULE-SET,LAN,DIRECT
   - RULE-SET,直连修正,DIRECT
-  - RULE-SET,电报,🌍 全球代理
+  - RULE-SET,电报,🌍 全球加速
   - RULE-SET,AIGC,✨ AIGC
   - RULE-SET,港台番剧,🎬️ 港台番剧
   - RULE-SET,国际媒体,🎬️ 国际媒体
   - RULE-SET,苹果服务,🍎 苹果服务
-  - RULE-SET,代理列表,🌍 全球代理
+  - RULE-SET,代理列表,🌍 全球加速
   - RULE-SET,微信,DIRECT
   - RULE-SET,直连列表,DIRECT
   - GEOIP,CN,DIRECT
