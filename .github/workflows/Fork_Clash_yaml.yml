@@ -32,16 +32,13 @@ jobs:
         # 直连修正
         curl -L -o ladder-repo/Rules/Clash/yaml/Direct+.yaml "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Direct%2B.list/_end_/Direct%252B.list?type=rule-set&target=stash-rule-set&del=true"
 
-        # 代理修正
-        curl -L -o ladder-repo/Rules/Clash/yaml/Proxy+.yaml "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Proxy%2B.list/_end_/Proxy%252B.list?type=rule-set&target=stash-rule-set&del=true"
-
         # 代理列表
         curl -L -o ladder-repo/Rules/Clash/yaml/Proxy.yaml "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Proxy.list/_end_/Proxy.list?type=rule-set&target=stash-rule-set&del=true"
 
         # 直连列表
         curl -L -o ladder-repo/Rules/Clash/yaml/Direct.yaml "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Direct.list/_end_/Direct.list?type=rule-set&target=stash-rule-set&del=true"
 
-        # 本地地址和路由器直连域名
+        # LAN
         curl -L -o ladder-repo/Rules/Clash/yaml/LAN.yaml "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.list/_end_/Lan.list?type=rule-set&target=stash-rule-set&del=true" 
 
         # 流媒体
@@ -71,16 +68,13 @@ jobs:
         # 直连修正
         curl -L -o ladder-repo/Rules/Loon/Direct+.list "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Direct%2B.list/_end_/Direct%252B.list?type=rule-set&target=loon-rule-set&del=true"
 
-        # 代理修正
-        curl -L -o ladder-repo/Rules/Loon/Proxy+.list "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Proxy%2B.list/_end_/Proxy%252B.list?type=rule-set&target=loon-rule-set&del=true"
-
         # 代理列表
         curl -L -o ladder-repo/Rules/Loon/Proxy.list "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Proxy.list/_end_/Proxy.list?type=rule-set&target=loon-rule-set&del=true"
 
         # 直连列表
         curl -L -o ladder-repo/Rules/Loon/Direct.list "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Direct.list/_end_/Direct.list?type=rule-set&target=loon-rule-set&del=true"
 
-        # 本地地址和路由器直连域名
+        # LAN
         curl -L -o ladder-repo/Rules/Loon/LAN.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Lan/Lan.list" 
 
         # 流媒体
