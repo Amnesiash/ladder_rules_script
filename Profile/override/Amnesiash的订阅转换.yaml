@@ -15,6 +15,7 @@ proxy-groups:
   - {name: 🚀 节点选择, type: select, include-all: true}
   - {name: 🌍 全球加速, type: select, proxies: [♻️ 自动选择, 🚀 节点选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
   - {name: ✨ AIGC, type: select, proxies: [🇸🇬 狮城优选, 🇯🇵 日本优选, 🇺🇲 美国优选]}
+  - {name: 🎮 游戏平台, type: select, proxies: [DIRECT, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
   - {name: 🎬️ 港台番剧, type: select, proxies: [DIRECT, 🚀 节点选择, 🇭🇰 香港优选, 🇨🇳 台湾优选]}
   - {name: 🎬️ 国际媒体, type: select, proxies: [♻️ 自动选择, 🚀 节点选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
   - {name: 🍎 苹果服务, type: select, proxies: [DIRECT, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
@@ -38,6 +39,16 @@ rule-providers:
     <<: *RuleSet
     url: https://mirror.ghproxy.com/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/yaml/LAN.yaml
     path: ./ruleset/LAN.yaml
+    
+  SteamCN: 
+    <<: *RuleSet
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/SteamCN.yaml
+    path: ./ruleset/SteamCN.yaml
+        
+  游戏平台: 
+    <<: *RuleSet
+    url: https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/Game.yaml
+    path: ./ruleset/Game.yaml
   
   微信: 
     <<: *RuleSet
@@ -82,8 +93,10 @@ rule-providers:
 rules:
   - RULE-SET,LAN,DIRECT
   - RULE-SET,直连修正,DIRECT
+  - RULE-SET,SteamCN,DIRECT
   - RULE-SET,电报,🌍 全球加速
   - RULE-SET,AIGC,✨ AIGC
+  - RULE-SET,游戏平台,🎮 游戏平台
   - RULE-SET,港台番剧,🎬️ 港台番剧
   - RULE-SET,国际媒体,🎬️ 国际媒体
   - RULE-SET,苹果服务,🍎 苹果服务
