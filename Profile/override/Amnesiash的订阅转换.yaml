@@ -6,13 +6,13 @@ FilterSG: &FilterSG '^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)))(?!
 FilterUS: &FilterUS '^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
 
 # 锚点 - 优选参数 [每 6 秒一次惰性健康检查，容差 20ms，超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
-UrlTest: &UrlTest {type: url-test, interval: 6, tolerance: 20, lazy: true, url: 'http://cp.cloudflare.com', disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: true, include-all-providers: true}
+UrlTest: &UrlTest {type: url-test, interval: 6, tolerance: 20, lazy: true, url: 'http://cp.cloudflare.com', disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: false, include-all: true}
 
 # 锚点 - 规则参数 [每 12 小时更新一次订阅规则，更新规则时使用直连优选]
 RuleSet: &RuleSet {type: http, behavior: classical, interval: 21600, format: yaml, proxy: DIRECT}
 
 proxy-groups:
-  - {name: 🚀 节点选择, type: select, include-all-providers: true}
+  - {name: 🚀 节点选择, type: select, include-all: true}
   - {name: 🌍 全球加速, type: select, proxies: [♻️ 自动选择, 🚀 节点选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
   - {name: 🎨 Figma, type: select, proxies: [DIRECT, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
   - {name: ✨ AIGC, type: select, proxies: [🇸🇬 狮城优选, 🇯🇵 日本优选, 🇺🇲 美国优选]}
@@ -26,7 +26,7 @@ proxy-groups:
   - {name: 🇨🇳 台湾优选, <<: *UrlTest, filter: *FilterTW}
   - {name: 🇸🇬 狮城优选, <<: *UrlTest, filter: *FilterSG}
   - {name: 🇯🇵 日本优选, <<: *UrlTest, filter: *FilterJP}
-  - {name: 🇺🇸 美国优选, <<: *UrlTest, filter: *FilterUS}
+  - {name: 🇺🇲 美国优选, <<: *UrlTest, filter: *FilterUS}
 
 
 rule-providers:
