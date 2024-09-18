@@ -1,0 +1,43 @@
++rules:
+  # > 按需配置
+  - DOMAIN-SUFFIX,figma.com,🗑 兜底策略
+  # - DOMAIN-SUFFIX,notion.so,🗑 兜底策略
+
+  # > 直连
+  - PROCESS-NAME,OneDrive,DIRECT
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - DOMAIN,mirror.ghproxy.com,DIRECT
+  - DOMAIN-SUFFIX,cloudinary.com,DIRECT
+  - DOMAIN-SUFFIX,arco.design,DIRECT
+
+  # > 机场代理
+  - DOMAIN-SUFFIX,bocchi.site,🌍 全球加速
+  - DOMAIN-SUFFIX,ssy61.com,🌍 全球加速
+  
+  # > 一般网站
+  - DOMAIN-SUFFIX,metacubex.one,🌍 全球加速
+  - DOMAIN-SUFFIX,doublesoftcream.net,🌍 全球加速
+  - DOMAIN-SUFFIX,meijutt.tv,🌍 全球加速
+  - DOMAIN-SUFFIX,catbox.moe,🌍 全球加速
+  - DOMAIN-SUFFIX,koofr.net,🌍 全球加速
+  - DOMAIN-SUFFIX,lottielab.com,🌍 全球加速
+  - DOMAIN-SUFFIX,framercanvas.com,🌍 全球加速
+  - DOMAIN-SUFFIX,abduzeedo.com,🌍 全球加速
+  - DOMAIN-SUFFIX,xsgames.co,🌍 全球加速
+  - DOMAIN-SUFFIX,v2rayssr.com,🌍 全球加速
+  - DOMAIN-SUFFIX,fanbox.cc,🌍 全球加速
+  - DOMAIN-SUFFIX,huggingface.co,🌍 全球加速
+  - DOMAIN-SUFFIX,ptsearch.info,🌍 全球加速
+  - DOMAIN-SUFFIX,wallhaven.cc,🌍 全球加速
+  - DOMAIN-SUFFIX,alpacaml.com,🌍 全球加速
+
+  # > 18+
+  - DOMAIN-SUFFIX,18comic.vip,🌍 全球加速
+  - DOMAIN-SUFFIX,wnacg.com,🌍 全球加速
+  - DOMAIN-SUFFIX,zodgame.xyz,🌍 全球加速
+  - DOMAIN-SUFFIX,miconisomi.xii.jp,🌍 全球加速
+  - DOMAIN-SUFFIX,rifabu.me,🌍 全球加速
+  - DOMAIN-KEYWORD,19j,🌍 全球加速
+  - DOMAIN-KEYWORD,hanime,🌍 全球加速
+  - DOMAIN-SUFFIX,uu-gg.one,🌍 全球加速
