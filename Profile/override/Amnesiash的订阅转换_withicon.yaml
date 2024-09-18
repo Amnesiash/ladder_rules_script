@@ -13,7 +13,7 @@ RuleSet: &RuleSet {type: http, behavior: classical, interval: 21600, format: yam
 
 proxy-groups:
   - {name: 节点选择, type: select, include-all: true, icon: https://fastly.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/select.png}
-  - {name: 全球加速, type: select, proxies: [自动选择, 节点选择, 香港优选, 台湾优选, 日本优选, 狮城优选, 美国优选], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png}
+  - {name: 全球加速, type: select, proxies: [自动选择, 节点选择, 香港优选, 台湾优选, 日本优选, 狮城优选, 美国优选], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png}
   - {name: AIGC, type: select, proxies: [狮城优选, 日本优选, 美国优选], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Bot.png}
   - {name: 游戏平台, type: select, proxies: [DIRECT, 节点选择, 自动选择, 香港优选, 台湾优选, 日本优选, 狮城优选, 美国优选], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png}
   - {name: 港台番剧, type: select, proxies: [DIRECT, 节点选择, 香港优选, 台湾优选],icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/DomesticMedia.png}
@@ -27,6 +27,10 @@ proxy-groups:
   - {name: 狮城优选, <<: *UrlTest, filter: *FilterSG, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png}
   - {name: 日本优选, <<: *UrlTest, filter: *FilterJP, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png}
   - {name: 美国优选, <<: *UrlTest, filter: *FilterUS, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png}
+
+  # 全局模式
+  - {name: GLOBAL, type: select, proxies: [DIRECT, 节点选择, 自动选择, 香港优选, 台湾优选, 日本优选, 狮城优选, 美国优选], include-all: true, icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png}
+
 
 
 rule-providers:
