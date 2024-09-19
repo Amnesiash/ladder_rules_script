@@ -85,7 +85,7 @@ rule-providers:
     url: https://mirror.ghproxy.com/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/yaml/Proxy.yaml
     path: ./ruleset/Proxy.yaml
 
-  直连列表: 
+  国内网站: 
     <<: *RuleSet
     url: https://mirror.ghproxy.com/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/yaml/Direct.yaml
     path: ./ruleset/Direct.yaml
@@ -102,6 +102,6 @@ rules:
   - RULE-SET,苹果服务,🍎 苹果服务
   - RULE-SET,代理列表,🌍 全球加速
   - RULE-SET,微信,DIRECT
-  - RULE-SET,直连列表,DIRECT
+  - RULE-SET,国内网站,DIRECT
   - GEOIP,CN,DIRECT
   - MATCH,🗑 兜底策略
