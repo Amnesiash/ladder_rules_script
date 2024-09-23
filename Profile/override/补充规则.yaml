@@ -1,6 +1,6 @@
 +rules:
   # > 按需配置
-  - DOMAIN-SUFFIX,figma.com,🗑 兜底策略
+  # - DOMAIN-SUFFIX,figma.com,🗑 兜底策略
   # - DOMAIN-SUFFIX,notion.so,🗑 兜底策略
 
   # > 直连
