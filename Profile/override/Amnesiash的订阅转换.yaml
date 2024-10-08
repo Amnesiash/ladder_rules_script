@@ -91,7 +91,6 @@ rule-providers:
     path: ./ruleset/Direct.yaml
         
 rules:
-  - RULE-SET,LAN,DIRECT
   - RULE-SET,直连修正,DIRECT
   - RULE-SET,SteamCN,DIRECT
   - RULE-SET,电报,🌍 全球加速
@@ -103,5 +102,6 @@ rules:
   - RULE-SET,代理列表,🌍 全球加速
   - RULE-SET,微信,DIRECT
   - RULE-SET,国内网站,DIRECT
+  - RULE-SET,LAN,DIRECT
   - GEOIP,CN,DIRECT
   - MATCH,🗑 兜底策略
