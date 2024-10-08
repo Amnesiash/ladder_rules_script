@@ -107,5 +107,6 @@ rules:
   - RULE-SET,代理列表,全球加速
   - RULE-SET,微信,DIRECT
   - RULE-SET,国内网站,DIRECT
+  - RULE-SET,LAN,DIRECT
   - GEOIP,CN,DIRECT
   - MATCH,兜底策略
