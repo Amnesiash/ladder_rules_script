@@ -1,4 +1,4 @@
-#规则数量:39
+#规则数量:40
 #不支持的规则数量:0
 #已排除的规则数量:0
 
@@ -14,7 +14,6 @@ payload:
   - DOMAIN,api.statsig.com
   - DOMAIN,bard.google.com
   - DOMAIN,chat.mistral.ai
-  - DOMAIN,chat.openai.com.cdn.cloudflare.net
   - DOMAIN,chatgpt.livekit.cloud
   - DOMAIN,console.mistral.ai
   - DOMAIN,copilot-proxy.githubusercontent.com
@@ -31,6 +30,7 @@ payload:
   - DOMAIN,sfo3.turn.livekit.cloud
   - DOMAIN,sydney.bing.com
   - DOMAIN,www.bing.com
+  - DOMAIN-SUFFIX,ai.com
   - DOMAIN-SUFFIX,anthropic.com
   - DOMAIN-SUFFIX,chatgpt.com
   - DOMAIN-SUFFIX,claude.ai
@@ -40,6 +40,7 @@ payload:
   - DOMAIN-SUFFIX,oaistatic.com
   - DOMAIN-SUFFIX,oaiusercontent.com
   - DOMAIN-SUFFIX,openai.com
+  - DOMAIN-SUFFIX,openai.com.cdn.cloudflare.net
   - DOMAIN-SUFFIX,perplexity.ai
   - DOMAIN-KEYWORD,openaicom
   - IP-CIDR,160.79.104.0/23,no-resolve
