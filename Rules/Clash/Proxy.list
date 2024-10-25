@@ -2,6 +2,9 @@ DOMAIN,a248.e.akamai.net
 DOMAIN,a771.dscq.akamai.net
 DOMAIN,addons.mozilla.org
 DOMAIN,amp-api.podcasts.apple.com 
+DOMAIN,apple-relay.apple.com 
+DOMAIN,apple-relay.cloudflare.com
+DOMAIN,apple-relay.fastly-edge.com
 DOMAIN,apple.comscoreresearch.com
 DOMAIN,apps.apple.com
 DOMAIN,assets1.xboxlive.com
@@ -18,6 +21,7 @@ DOMAIN,cloud-cdn-digitalocean-com.global.ssl.fastly.net
 DOMAIN,cloud.oracle.com
 DOMAIN,clubhouse.pubnubapi.com
 DOMAIN,community.oneplus.com
+DOMAIN,cp4.cloudflare.com
 DOMAIN,d19eijqb5qll1w.cloudfront.net
 DOMAIN,d1e00ek4ebabms.cloudfront.net
 DOMAIN,d3c33hcgiwev3.cloudfront.net

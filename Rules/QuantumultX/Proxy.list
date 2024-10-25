@@ -2,6 +2,9 @@ HOST,a248.e.akamai.net
 HOST,a771.dscq.akamai.net
 HOST,addons.mozilla.org
 HOST,amp-api.podcasts.apple.com
+HOST,apple-relay.apple.com
+HOST,apple-relay.cloudflare.com
+HOST,apple-relay.fastly-edge.com
 HOST,apple.comscoreresearch.com
 HOST,apps.apple.com
 HOST,assets1.xboxlive.com
@@ -18,6 +21,7 @@ HOST,cloud-cdn-digitalocean-com.global.ssl.fastly.net
 HOST,cloud.oracle.com
 HOST,clubhouse.pubnubapi.com
 HOST,community.oneplus.com
+HOST,cp4.cloudflare.com
 HOST,d19eijqb5qll1w.cloudfront.net
 HOST,d1e00ek4ebabms.cloudfront.net
 HOST,d3c33hcgiwev3.cloudfront.net
