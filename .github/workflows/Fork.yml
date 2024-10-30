@@ -196,7 +196,7 @@ jobs:
         cd ladder-repo/Rules/Clash
         for file in *.list; do
           # 不处理的规则
-          if [ "$file" != "Reject.list" ] && [ "$file" != "WeChat.list" ] && [ "$file" != "BilibiliHMT.list" ] && [ -f "$file" ]; then
+          if [ "$file" != "Reject.list" ] && [ "$file" != "BilibiliHMT.list" ] && [ -f "$file" ]; then
             # 适配
             sed -i -e 's/, /,/g' \
                    -e 's/;/# /g' \
@@ -231,7 +231,7 @@ jobs:
         cd ladder-repo/Rules/Clash
         shopt -s nullglob  # 避免没有匹配的文件时保留原始通配符
         for file in *.list; do
-          if [ "$file" != "Reject.list" ] && [ "$file" != "WeChat.list" ] && [ "$file" != "BilibiliHMT.list" ] && [ -f "$file" ]; then
+          if [ "$file" != "Reject.list" ] && [ "$file" != "BilibiliHMT.list" ] && [ -f "$file" ]; then
             # 分流规则的排序
             sort -o "$file" "$file"
             awk '
