@@ -62,10 +62,7 @@ jobs:
         curl -L -o ladder-repo/Rules/QuantumultX/Apple.list "https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Apple/Apple.list"
 
         # AI
-        { 
-        curl -L "https://raw.githubusercontent.com/luestr/ProxyResource/main/Tool/Loon/Rule/AI.list"
-        curl -L "https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/AI.list"
-        } | tee ladder-repo/Rules/QuantumultX/AI.list
+        curl -L -o  ladder-repo/Rules/QuantumultX/AI.list "https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/AI.list"
 
         # 广告拦截
         curl -L -o ladder-repo/Rules/QuantumultX/Reject.list "https://adrules.top/qx.conf"
@@ -181,10 +178,7 @@ jobs:
         curl -L -o ladder-repo/Rules/Clash/Apple.list "https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Apple/Apple.list"
 
         # AI
-        { 
-        curl -L "https://raw.githubusercontent.com/luestr/ProxyResource/main/Tool/Loon/Rule/AI.list"
-        curl -L "https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/AI.list"
-        } | tee ladder-repo/Rules/Clash/AI.list
+        curl -L -o  ladder-repo/Rules/Clash/AI.list "https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/AI.list"
 
         # 广告拦截
         curl -L -o ladder-repo/Rules/Clash/Reject.list "https://adrules.top/adrules_domainset.txt"
