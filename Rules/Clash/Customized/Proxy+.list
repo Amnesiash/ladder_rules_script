@@ -17,9 +17,12 @@ DOMAIN-SUFFIX,wallhaven.cc
 DOMAIN-SUFFIX,alpacaml.com
 
 # > 机场
-DOMAIN-SUFFIX,ununetwork.top
+DOMAIN,haruka.bocchi.ooo
+DOMAIN-SUFFIX,bocchi.site
+DOMAIN-SUFFIX,ssy61.com
 
 # > Game 18+
+DOMAIN-SUFFIX,uu-gg.one
 DOMAIN-SUFFIX,18comic.vip
 DOMAIN-SUFFIX,wnacg.com
 DOMAIN-SUFFIX,zodgame.xyz
