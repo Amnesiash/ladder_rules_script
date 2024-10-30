@@ -27,7 +27,7 @@ jobs:
       run: |
         mkdir -p ladder-repo/Rules/Clash/Yaml
         # 网络解限
-        curl -L -o ladder-repo/Rules/Clash/Yaml/unBan.yaml "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Extra/unBan.list/_end_/unlockblock.list?type=rule-set&target=stash-rule-set&del=true"
+        curl -L -o ladder-repo/Rules/Clash/Yaml/unBan.yaml "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Extra/unBan.list/_end_/unBan.list?type=rule-set&target=stash-rule-set&del=true"
         
         # 直连修正
         curl -L -o ladder-repo/Rules/Clash/Yaml/Direct+.yaml "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Direct%2B.list/_end_/Direct%252B.list?type=rule-set&target=stash-rule-set&del=true"
@@ -63,7 +63,7 @@ jobs:
       run: |
         mkdir -p ladder-repo/Rules/Loon
         # 网络解限
-        curl -L -o ladder-repo/Rules/Loon/unlockblock.list "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Customized/unlockblock.list/_end_/unlockblock.list?type=rule-set&target=loon-rule-set&del=true"
+        curl -L -o ladder-repo/Rules/Loon/unlockblock.list "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Extra/unBan.list/_end_/unBan.list?type=rule-set&target=loon-rule-set&del=true"
         
         # 直连修正
         curl -L -o ladder-repo/Rules/Loon/Direct+.list "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Direct%2B.list/_end_/Direct%252B.list?type=rule-set&target=loon-rule-set&del=true"
