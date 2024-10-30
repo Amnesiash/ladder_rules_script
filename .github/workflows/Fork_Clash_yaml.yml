@@ -52,7 +52,7 @@ jobs:
         curl -L -o ladder-repo/Rules/Clash/yaml/AI.yaml "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/AI.list/_end_/AI.list?type=rule-set&target=stash-rule-set&del=true"
 
         # WeChat
-        curl -L -o ladder-repo/Rules/Clash/yaml/WeChat.yaml "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/WeChat.list/_end_/WeChat.list?type=rule-set&target=stash-rule-set&del=true"  
+        curl -L -o ladder-repo/Rules/Clash/yaml/WeChat.yaml "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/WeChat.list/_end_/WeChat.list?type=rule-set&target=stash-rule-set&del=true"  
 
         # Telegram
         curl -L -o ladder-repo/Rules/Clash/yaml/Telegram.yaml "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Telegram.list/_end_/Telegram.list?type=rule-set&target=stash-rule-set&del=true"  

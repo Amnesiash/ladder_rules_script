@@ -185,7 +185,7 @@ jobs:
         curl -L -o ladder-repo/Rules/Clash/Reject.list "https://adrules.top/adrules_domainset.txt"
 
         # WeChat
-        curl -L -o ladder-repo/Rules/Clash/WeChat.list "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/Wechat.list"  
+        curl -L -o ladder-repo/Rules/Clash/WeChat.list "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Wechat.list"  
 
         # Telegram
         curl -L -o ladder-repo/Rules/Clash/Telegram.list "https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Telegram.list"  
