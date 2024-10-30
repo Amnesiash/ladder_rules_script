@@ -68,7 +68,7 @@ jobs:
         curl -L -o ladder-repo/Rules/QuantumultX/Reject.list "https://adrules.top/qx.conf"
 
         # WeChat
-        curl -L -o ladder-repo/Rules/QuantumultX/WeChat.list "https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/WeChat.list"  
+        curl -L -o ladder-repo/Rules/QuantumultX/WeChat.list "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/Wechat.list"  
 
         # Telegram
         curl -L -o ladder-repo/Rules/QuantumultX/Telegram.list "https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Telegram.list"
@@ -185,7 +185,7 @@ jobs:
         curl -L -o ladder-repo/Rules/Clash/Reject.list "https://adrules.top/adrules_domainset.txt"
 
         # WeChat
-        curl -L -o ladder-repo/Rules/Clash/WeChat.list "https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/WeChat.list"  
+        curl -L -o ladder-repo/Rules/Clash/WeChat.list "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/Wechat.list"  
 
         # Telegram
         curl -L -o ladder-repo/Rules/Clash/Telegram.list "https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Telegram.list"  
@@ -196,7 +196,7 @@ jobs:
         cd ladder-repo/Rules/Clash
         for file in *.list; do
           # 不处理的规则
-          if [ "$file" != "Reject.list" ] && [ "$file" != "BilibiliHMT.list" ] && [ -f "$file" ]; then
+          if [ "$file" != "Reject.list" ] && [ "$file" != "WeChat.list" ] && [ "$file" != "BilibiliHMT.list" ] && [ -f "$file" ]; then
             # 适配
             sed -i -e 's/, /,/g' \
                    -e 's/;/# /g' \
