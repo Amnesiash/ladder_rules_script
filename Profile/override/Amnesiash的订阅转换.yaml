@@ -106,8 +106,8 @@ rules:
   - DOMAIN-SUFFIX,arco.design,DIRECT
 
   # > 工具
-  - DOMAIN-SUFFIX,figma.com,🗑️ 兜底策略
-  - DOMAIN-SUFFIX,notion.so,🗑️ 兜底策略
+  - DOMAIN-SUFFIX,figma.com,🗑 兜底策略
+  - DOMAIN-SUFFIX,notion.so,🗑 兜底策略
 
   # > 订阅规则
   - RULE-SET,直连修正,DIRECT
