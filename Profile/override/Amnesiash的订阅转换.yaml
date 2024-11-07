@@ -18,7 +18,7 @@ proxy-groups:
   - {name: 🌍 全球加速, type: select, proxies: [♻️ 自动选择, 🚀 节点选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选], icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png}
   - {name: ✨ AIGC, type: select, proxies: [🇸🇬 狮城优选, 🇯🇵 日本优选, 🇺🇲 美国优选], icon: https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png}
   - {name: 🎬️ 哔哩哔哩, type: select, proxies: [DIRECT, 🚀 节点选择, 🇭🇰 香港优选, 🇨🇳 台湾优选], icon: https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Bili.png}
-  - {name: 🎬️ 国际媒体, type: select, proxies: [♻️ 自动选择, 🚀 节点选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选], icon: https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Streaming.png}
+  - {name: 🎬️ 国外媒体, type: select, proxies: [♻️ 自动选择, 🚀 节点选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选], icon: https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Streaming.png}
   - {name: 🍎 苹果服务, type: select, proxies: [DIRECT, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选], icon: https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png}
   - {name: 🗑 兜底策略, type: select, proxies: [DIRECT, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选], icon: https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png}
 
@@ -117,7 +117,7 @@ rules:
   - RULE-SET,Telegram,🌍 全球加速
   - RULE-SET,AI,✨ AIGC
   - RULE-SET,港台番剧,🎬️ 哔哩哔哩
-  - RULE-SET,国际媒体,🎬️ 国际媒体
+  - RULE-SET,国际媒体,🎬️ 国外媒体
   - RULE-SET,苹果服务,🍎 苹果服务
   - RULE-SET,代理修正,🌍 全球加速
   - RULE-SET,代理列表,🌍 全球加速
