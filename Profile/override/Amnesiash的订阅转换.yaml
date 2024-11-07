@@ -9,9 +9,9 @@ FilterUS: &FilterUS '^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|�
 UrlTest: &UrlTest {type: url-test, interval: 6, tolerance: 20, lazy: true, url: 'http://cp.cloudflare.com', disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: false, include-all: true}
 
 # 锚点 - 规则参数 [每 12 小时更新一次订阅规则，更新规则时使用直连优选]
-c: &RuleSet_c {type: http, behavior: classical, interval: 86400, format: yaml}
-d: &RuleSet_d {type: http, behavior: domain, interval: 86400, format: yaml}
-i: &RuleSet_i {type: http, behavior: ipcidr, interval: 86400, format: yaml}
+c: &RuleSet_c {type: http, behavior: classical, interval: 86400, format: text}
+d: &RuleSet_d {type: http, behavior: domain, interval: 86400, format: text}
+i: &RuleSet_i {type: http, behavior: ipcidr, interval: 86400, format: text}
 
 proxy-groups:
   - {name: 🚀 节点选择, type: select, include-all: true, icon: https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Static.png}
@@ -30,77 +30,96 @@ proxy-groups:
   - {name: 🇺🇲 美国优选, <<: *UrlTest, filter: *FilterUS, icon: https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png}
 
 
-rule-providers:
+rule-providers:    
+  SteamCN: 
+    <<: *RuleSet_c
+    url: https://github.com/ACL4SSR/ACL4SSR/blob/master/Clash/Ruleset/SteamCN.list
+    path: ./ruleset/SteamCN.list
+    
   直连修正: 
     <<: *RuleSet_c
-    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Yaml/Direct+.yaml
-    path: ./ruleset/Direct+.yaml
-  
-  LAN: 
+    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Direct+.list
+    path: ./ruleset/Direct+.list
+
+  代理修正: 
     <<: *RuleSet_c
-    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Yaml/LAN.yaml
-    path: ./ruleset/LAN.yaml
-  
+    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Extra/Proxy+.list
+    path: ./ruleset/Proxy+.list
+
   广告拦截: 
     <<: *RuleSet_d
     url: https://adrules.top/adrules_domainset.txt
-    path: ./ruleset/Reject.yaml
-    
-  SteamCN: 
+    path: ./ruleset/Reject.list
+  
+  LAN: 
     <<: *RuleSet_c
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/SteamCN.yaml
-    path: ./ruleset/SteamCN.yaml
+    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/LAN.list
+    path: ./ruleset/LAN.list
   
   微信: 
     <<: *RuleSet_c
-    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Yaml/WeChat.yaml
-    path: ./ruleset/WeChat.yaml
-  
-  电报: 
-    <<: *RuleSet_c
-    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Yaml/Telegram.yaml
-    path: ./ruleset/Telegram.yaml
-  
-  AIGC:
-    <<: *RuleSet_c 
-    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Yaml/AI.yaml
-    path: ./ruleset/AI.yaml
-  
-  港台番剧: 
-    <<: *RuleSet_c
-    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Yaml/StreamingCN.yaml
-    path: ./ruleset/StreamingCN.yaml
-  
-  国际媒体: 
-    <<: *RuleSet_c
-    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Yaml/Streaming!CN.yaml
-    path: ./ruleset/Streaming!CN.yaml
-  
-  苹果服务: 
-    <<: *RuleSet_c
-    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Yaml/Apple.yaml
-    path: ./ruleset/Apple.yaml
-  
-  代理列表: 
-    <<: *RuleSet_c
-    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Yaml/Proxy.yaml
-    path: ./ruleset/Proxy.yaml
+    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/WeChat.list
+    path: ./ruleset/WeChat.list
 
-  国内网站: 
+  Telegram: 
     <<: *RuleSet_c
-    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Yaml/Direct.yaml
-    path: ./ruleset/Direct.yaml
+    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Telegram.list
+    path: ./ruleset/Telegram.list
+
+  AI:
+    <<: *RuleSet_c
+    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/AI.list
+    path: ./ruleset/AI.list
+  
+  港台番剧:
+    <<: *RuleSet_c
+    url:  https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/StreamingCN.list
+    path: ./ruleset/StreamingCN.list
+
+  国外媒体: 
+    <<: *RuleSet_c
+    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Streaming!CN.list
+    path: ./ruleset/Streaming!CN.list
+    
+  苹果服务:
+    <<: *RuleSet_c
+    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Apple.list
+    path: ./ruleset/Apple.list
+
+  代理列表:
+    <<: *RuleSet_c
+    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Proxy.list
+    path: ./ruleset/Proxy.list
+
+  直连列表:
+    <<: *RuleSet_c
+    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Direct.list
+    path: ./ruleset/Direct.list
         
 rules:
+  # > 直连
+  - PROCESS-NAME,OneDrive,DIRECT
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - DOMAIN-SUFFIX,ghp.ci,DIRECT
+  - DOMAIN-SUFFIX,cloudinary.com,DIRECT
+  - DOMAIN-SUFFIX,arco.design,DIRECT
+
+  # > 工具
+  - DOMAIN-SUFFIX,figma.com,🎨 FIGMA
+  - DOMAIN-SUFFIX,notion.so,🗑️ 兜底策略
+
+  # > 订阅规则
   - RULE-SET,直连修正,DIRECT
   - RULE-SET,微信,DIRECT
   - RULE-SET,广告拦截,REJECT
   - RULE-SET,SteamCN,DIRECT
-  - RULE-SET,电报,🌍 全球加速
-  - RULE-SET,AIGC,✨ AIGC
+  - RULE-SET,Telegram,🌍 全球加速
+  - RULE-SET,AI,✨ AIGC
   - RULE-SET,港台番剧,🎬️ 哔哩哔哩
   - RULE-SET,国际媒体,🎬️ 国际媒体
   - RULE-SET,苹果服务,🍎 苹果服务
+  - RULE-SET,代理修正,🌍 全球加速
   - RULE-SET,代理列表,🌍 全球加速
   - RULE-SET,国内网站,DIRECT
   - RULE-SET,LAN,DIRECT
