@@ -179,7 +179,6 @@ rules:
   - RULE-SET,直连修正,DIRECT
   - RULE-SET,微信,DIRECT
   - RULE-SET,广告拦截,REJECT
-  - RULE-SET,网络解限,⭕️ 网络解限
   - RULE-SET,Telegram,🌍 全球加速
   - RULE-SET,AI,✨ AIGC
   - RULE-SET,港台番剧,🎬 哔哩哔哩
@@ -194,6 +193,3 @@ rules:
   - GEOIP,CN,DIRECT
   - MATCH,🗑️ 兜底策略
 
-  # > GeoIP China
-  - GEOIP,CN,DIRECT
-  - MATCH,🗑️ 兜底策略
