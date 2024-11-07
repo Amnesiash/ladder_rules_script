@@ -20,7 +20,7 @@ proxy-groups:
   - {name: 🎬️ 哔哩哔哩, type: select, proxies: [DIRECT, 🚀 节点选择, 🇭🇰 香港优选, 🇨🇳 台湾优选], icon: https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Bili.png}
   - {name: 🎬️ 国外媒体, type: select, proxies: [♻️ 自动选择, 🚀 节点选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选], icon: https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Streaming.png}
   - {name: 🍎 苹果服务, type: select, proxies: [DIRECT, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选], icon: https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png}
-  - {name: 🗑 兜底策略, type: select, proxies: [DIRECT, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选], icon: https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png}
+  - {name: 🗑️ 兜底策略, type: select, proxies: [DIRECT, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选], icon: https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png}
 
   - {name: ♻️ 自动选择, <<: *UrlTest, icon: https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Urltest.png}
   - {name: 🇭🇰 香港优选, <<: *UrlTest, filter: *FilterHK, icon: https://ghp.ci/https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png}
@@ -106,8 +106,8 @@ rules:
   - DOMAIN-SUFFIX,arco.design,DIRECT
 
   # > 工具
-  - DOMAIN-SUFFIX,figma.com,🗑 兜底策略
-  - DOMAIN-SUFFIX,notion.so,🗑 兜底策略
+  - DOMAIN-SUFFIX,figma.com,🗑️ 兜底策略
+  - DOMAIN-SUFFIX,notion.so,🗑️ 兜底策略
 
   # > 订阅规则
   - RULE-SET,直连修正,DIRECT
@@ -124,4 +124,4 @@ rules:
   - RULE-SET,国内网站,DIRECT
   - RULE-SET,LAN,DIRECT
   - GEOIP,CN,DIRECT
-  - MATCH,🗑 兜底策略
+  - MATCH,🗑️ 兜底策略
