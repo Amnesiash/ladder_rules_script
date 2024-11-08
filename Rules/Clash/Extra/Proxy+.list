@@ -1,8 +1,9 @@
 # 一些未被代理匹配到的网址
-# UPDATED: 2024-11-06
+# UPDATED: 2024-11-08
 
 
 # > 自用
+DOMAIN-SUFFIX,aishort.top
 DOMAIN-SUFFIX,metacubex.one
 DOMAIN-SUFFIX,catbox.moe
 DOMAIN-SUFFIX,koofr.net
