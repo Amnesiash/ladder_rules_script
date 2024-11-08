@@ -1,0 +1,34 @@
+#规则数量:27
+#不支持的规则数量:0
+#已排除的规则数量:0
+
+#-----------------以下为解析后的规则-----------------#
+
+payload:
+  - DOMAIN-SUFFIX,aishort.top
+  - DOMAIN-SUFFIX,metacubex.one
+  - DOMAIN-SUFFIX,catbox.moe
+  - DOMAIN-SUFFIX,koofr.net
+  - DOMAIN-SUFFIX,lottielab.com
+  - DOMAIN-SUFFIX,framercanvas.com
+  - DOMAIN-SUFFIX,abduzeedo.com
+  - DOMAIN-SUFFIX,xsgames.co
+  - DOMAIN-SUFFIX,v2rayssr.com
+  - DOMAIN-SUFFIX,fanbox.cc
+  - DOMAIN-SUFFIX,huggingface.co
+  - DOMAIN-SUFFIX,ptsearch.info
+  - DOMAIN-SUFFIX,wallhaven.cc
+  - DOMAIN-SUFFIX,alpacaml.com
+  - DOMAIN-SUFFIX,arca.live
+  - DOMAIN-SUFFIX,bocchi.ooo
+  - DOMAIN-SUFFIX,bocchi.site
+  - DOMAIN-KEYWORD,bocchi
+  - DOMAIN-SUFFIX,ssy61.com
+  - DOMAIN-SUFFIX,uu-gg.one
+  - DOMAIN-SUFFIX,18comic.vip
+  - DOMAIN-SUFFIX,wnacg.com
+  - DOMAIN-SUFFIX,zodgame.xyz
+  - DOMAIN-SUFFIX,miconisomi.xii.jp
+  - DOMAIN-SUFFIX,rifabu.me 
+  - DOMAIN-KEYWORD,19j
+  - DOMAIN-KEYWORD,hanime
