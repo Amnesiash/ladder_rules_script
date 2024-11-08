@@ -30,7 +30,10 @@ jobs:
         curl -L -o ladder-repo/Rules/Clash/Yaml/unBan.yaml "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Extra/unBan.list/_end_/unBan.list?type=rule-set&target=stash-rule-set&del=true"
         
         # 直连修正
-        curl -L -o ladder-repo/Rules/Clash/Yaml/Direct+.yaml "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Direct%2B.list/_end_/Direct%252B.list?type=rule-set&target=stash-rule-set&del=true"
+        curl -L -o ladder-repo/Rules/Clash/Yaml/Direct+.yaml "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Direct%2B.list/_end_/Direct%252B.list?type=rule-set&target=stash-rule-set&del=true"  
+
+        # 代理修正
+        curl -L -o ladder-repo/Rules/Clash/Yaml/Proxy+.yaml "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/Extra/Proxy%2B.list/_end_/Proxy%252B.list?type=rule-set&target=stash-rule-set&del=true"
 
         # 代理列表
         curl -L -o ladder-repo/Rules/Clash/Yaml/Proxy.yaml "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Proxy.list/_end_/Proxy.list?type=rule-set&target=stash-rule-set&del=true"
