@@ -134,6 +134,11 @@ rule-providers:
     <<: *RuleSet_c
     url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/AI.list
     path: ./ruleset/AI.list
+
+  SteamCN: 
+    <<: *RuleSet_c
+    url: https://github.com/ACL4SSR/ACL4SSR/blob/master/Clash/Ruleset/SteamCN.list
+    path: ./ruleset/SteamCN.list
   
   港台番剧:
     <<: *RuleSet_c
@@ -181,6 +186,7 @@ rules:
   - RULE-SET,广告拦截,REJECT
   - RULE-SET,Telegram,🌍 全球加速
   - RULE-SET,AI,✨ AIGC
+  - RULE-SET,SteamCN,DIRECT
   - RULE-SET,港台番剧,🎬 哔哩哔哩
   - RULE-SET,国外媒体,🎬 国外媒体
   - RULE-SET,苹果服务,🍎 苹果服务
