@@ -137,7 +137,7 @@ rule-providers:
 
   SteamCN: 
     <<: *RuleSet_c
-    url: https://github.com/ACL4SSR/ACL4SSR/blob/master/Clash/Ruleset/SteamCN.list
+    url: https://ghp.ci/https://github.com/ACL4SSR/ACL4SSR/blob/master/Clash/Ruleset/SteamCN.list
     path: ./ruleset/SteamCN.list
   
   港台番剧:
