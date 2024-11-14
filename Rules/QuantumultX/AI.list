@@ -22,6 +22,7 @@ HOST,www.bing.com
 HOST-SUFFIX,anthropic.com
 HOST-SUFFIX,chatgpt.com
 HOST-SUFFIX,claude.ai
+HOST-SUFFIX,githubcopilot.com
 HOST-SUFFIX,grazie.ai
 HOST-SUFFIX,oaistatic.com
 HOST-SUFFIX,oaiusercontent.com
