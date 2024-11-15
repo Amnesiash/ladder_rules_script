@@ -1,7 +1,7 @@
 ## 规则列表
 
-| 文件 | 名称 | 默认分流 | 解释 | 来源 |
-| --- | --- | --- | --- |--- |
+| 文件 | 名称 | 默认分流 | 解释 |
+| --- | --- | --- | --- |
 | [Direct+.list](https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Direct+.list) | 直连修正 | 直连 | 不应该被拦截或代理的网站|
 | [Reject.list](https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Reject.list) | 广告拦截 | 阻止 | 中国地区屏蔽广告列表 | 
 | [AI.list](https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/AI.list) | AIGC | 代理 | 指定地区可用的AIGC | 
