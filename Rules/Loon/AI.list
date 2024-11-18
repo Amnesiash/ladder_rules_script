@@ -1,4 +1,4 @@
-#规则数量:31
+#规则数量:32
 #不支持的规则数量:0
 #已排除的规则数量:0
 
@@ -22,6 +22,7 @@ DOMAIN,guzzoni.apple.com
 DOMAIN,imagine.meta.com
 DOMAIN,o33249.ingest.sentry.io
 DOMAIN,openaiapi-site.azureedge.net
+DOMAIN,proactivebackend-pa.googleapis.com
 DOMAIN,sfo3.turn.livekit.cloud
 DOMAIN,sydney.bing.com
 DOMAIN,www.bing.com
