@@ -1,4 +1,4 @@
-#规则数量:29
+#规则数量:30
 #不支持的规则数量:0
 #已排除的规则数量:0
 
@@ -31,6 +31,7 @@ payload:
   - DOMAIN-SUFFIX,zodgame.xyz
   - DOMAIN-SUFFIX,miconisomi.xii.jp
   - DOMAIN-SUFFIX,ero-labs.com
+  - DOMAIN-SUFFIX,misskon.com
   - DOMAIN-SUFFIX,rifabu.me 
   - DOMAIN-KEYWORD,19j
   - DOMAIN-KEYWORD,hanime
