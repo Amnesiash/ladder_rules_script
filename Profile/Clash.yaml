@@ -112,11 +112,6 @@ rule-providers:
     <<: *RuleSet_c
     url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Extra/Proxy+.list
     path: ./ruleset/Proxy+.list
-
-  广告拦截: 
-    <<: *RuleSet_d
-    url: https://adrules.top/adrules_domainset.txt
-    path: ./ruleset/Reject.list
   
   LAN: 
     <<: *RuleSet_c
@@ -181,7 +176,6 @@ rules:
   # > 订阅规则
   - RULE-SET,直连修正,DIRECT
   - RULE-SET,微信,DIRECT
-  # - RULE-SET,广告拦截,REJECT
   - RULE-SET,网络解限,⭕️ 网络解限
   - RULE-SET,Telegram,🌍 全球加速
   - RULE-SET,AI,✨ AIGC
