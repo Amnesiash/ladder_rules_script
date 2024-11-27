@@ -38,7 +38,7 @@ rule-providers:
 
   代理修正: 
     <<: *RuleSet_c
-    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Proxy+.list
+    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Extra/Proxy+.list
     path: ./ruleset/Proxy+.list
   
   LAN: 
