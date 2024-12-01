@@ -1,4 +1,4 @@
-#规则数量:34
+#规则数量:35
 #不支持的规则数量:0
 #已排除的规则数量:0
 
@@ -16,6 +16,7 @@ DOMAIN,bard.google.com
 DOMAIN,chatgpt.livekit.cloud
 DOMAIN,copilot.microsoft.com
 DOMAIN,cp4.cloudflare.com
+DOMAIN,gateway.ai.cloudflare.com
 DOMAIN,gemini.google.com
 DOMAIN,generativelanguage.googleapis.com
 DOMAIN,guzzoni.apple.com
