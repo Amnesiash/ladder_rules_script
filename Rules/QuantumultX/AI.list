@@ -10,6 +10,7 @@ HOST,bard.google.com
 HOST,chatgpt.livekit.cloud
 HOST,copilot.microsoft.com
 HOST,cp4.cloudflare.com
+HOST,gateway.ai.cloudflare.com
 HOST,gemini.google.com
 HOST,generativelanguage.googleapis.com
 HOST,guzzoni.apple.com
