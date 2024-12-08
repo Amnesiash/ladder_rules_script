@@ -13,79 +13,89 @@ c: &RuleSet_c {type: http, behavior: classical, interval: 86400, format: text}
 d: &RuleSet_d {type: http, behavior: domain, interval: 8640, format: text}
 i: &RuleSet_i {type: http, behavior: ipcidr, interval: 86400, format: text}
 
+# 策略组
 proxy-groups:
-  - {name: 🚀 节点选择, type: select, include-all: true}
+  - {name: 🚀 节点选择, type: select, use: *UseProxy}
   - {name: 🌍 全球加速, type: select, proxies: [♻️ 自动选择, 🚀 节点选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
-  - {name: ✨ AIGC, type: select, proxies: [🇸🇬 狮城优选, 🇯🇵 日本优选, 🇺🇲 美国优选]}
-  - {name: 📺 哔哩哔哩, type: select, proxies: [DIRECT, 🚀 节点选择, 🇭🇰 香港优选, 🇨🇳 台湾优选]}
-  - {name: 🎬️ 国际媒体, type: select, proxies: [♻️ 自动选择, 🚀 节点选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
+  - {name: 🎨 FIGMA, type: select, proxies: [DIRECT, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
+  - {name: ✨ AIGC, type: select, proxies: [🇸🇬 狮城优选, 🇯🇵 日本优选, 🇺🇲 美国优选, 🚀 节点选择]}
+  - {name: 📺 哔哩哔哩, type: select, proxies: [DIRECT, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选]}
+  - {name: 🎬 国际媒体, type: select, proxies: [♻️ 自动选择, 🚀 节点选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
   - {name: 🍎 苹果服务, type: select, proxies: [DIRECT, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
   - {name: 🗑️ 兜底策略, type: select, proxies: [DIRECT, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
 
+  # 最低延迟优选策略组
   - {name: ♻️ 自动选择, <<: *UrlTest}
   - {name: 🇭🇰 香港优选, <<: *UrlTest, filter: *FilterHK}
-  - {name: 🇨🇳 台湾优选, <<: *UrlTest, filter: *FilterTW}
-  - {name: 🇸🇬 狮城优选, <<: *UrlTest, filter: *FilterSG}
+  - {name: 🇨🇳 台湾优选, <<: *UrlTest, filter: *FilterTW}  
   - {name: 🇯🇵 日本优选, <<: *UrlTest, filter: *FilterJP}
+  - {name: 🇸🇬 狮城优选, <<: *UrlTest, filter: *FilterSG}
   - {name: 🇺🇲 美国优选, <<: *UrlTest, filter: *FilterUS}
 
-
-rule-providers:    
+# 订阅规则
+rule-providers:
   直连修正: 
     <<: *RuleSet_c
-    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Direct+.list
-    path: ./ruleset/Direct+.list
+    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Direct+.yaml
+    path: ./ruleset/Direct+.yaml
 
   代理修正: 
     <<: *RuleSet_c
-    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Extra/Proxy+.list
-    path: ./ruleset/Proxy+.list
+    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Proxy+.yaml
+    path: ./ruleset/Proxy+.yaml
   
   LAN: 
     <<: *RuleSet_c
-    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/LAN.list
-    path: ./ruleset/LAN.list
+    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/LAN.yaml
+    path: ./ruleset/LAN.yaml
   
   微信: 
     <<: *RuleSet_c
-    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/WeChat.list
-    path: ./ruleset/WeChat.list
+    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/WeChat.yaml
+    path: ./ruleset/WeChat.yaml
 
   Telegram: 
     <<: *RuleSet_c
-    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Telegram.list
-    path: ./ruleset/Telegram.list
+    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Telegram.yaml
+    path: ./ruleset/Telegram.yaml
 
   AI:
     <<: *RuleSet_c
-    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/AI.list
-    path: ./ruleset/AI.list
+    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/AI.yaml
+    path: ./ruleset/AI.yaml
   
-  港台番剧:
+  哔哩哔哩:
     <<: *RuleSet_c
-    url:  https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/StreamingCN.list
-    path: ./ruleset/StreamingCN.list
+    url:  https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/BilibiliHMT.yaml
+    path: ./ruleset/BilibiliHMT.yaml
 
-  国际媒体: 
+  SteamCN:
     <<: *RuleSet_c
-    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Streaming!CN.list
-    path: ./ruleset/Streaming!CN.list
+    url:  https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/SteamCN.yaml
+    path: ./ruleset/SteamCN.yaml
+
+  国外媒体: 
+    <<: *RuleSet_c
+    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Streaming!CN.yaml
+    path: ./ruleset/Streaming!CN.yaml
     
   苹果服务:
     <<: *RuleSet_c
-    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Apple.list
-    path: ./ruleset/Apple.list
+    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Apple.yaml
+    path: ./ruleset/Apple.yaml
 
   代理列表:
     <<: *RuleSet_c
-    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Proxy.list
-    path: ./ruleset/Proxy.list
+    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Proxy.yaml
+    path: ./ruleset/Proxy.yaml
 
   直连列表:
     <<: *RuleSet_c
-    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Direct.list
-    path: ./ruleset/Direct.list
-        
+    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Direct.yaml
+    path: ./ruleset/Direct.yaml
+
+
+# 规则指向
 rules:
   # > 直连
   - PROCESS-NAME,OneDrive,DIRECT
@@ -96,20 +106,23 @@ rules:
   - DOMAIN-SUFFIX,arco.design,DIRECT
 
   # > 工具
-  - DOMAIN-SUFFIX,figma.com,🗑️ 兜底策略
+  - DOMAIN-SUFFIX,figma.com,🎨 FIGMA
   - DOMAIN-SUFFIX,notion.so,🗑️ 兜底策略
 
   # > 订阅规则
   - RULE-SET,直连修正,DIRECT
   - RULE-SET,微信,DIRECT
+  - RULE-SET,SteamCN,DIRECT
   - RULE-SET,Telegram,🌍 全球加速
   - RULE-SET,AI,✨ AIGC
-  - RULE-SET,港台番剧,📺 哔哩哔哩
-  - RULE-SET,国际媒体,🎬️ 国际媒体
+  - RULE-SET,哔哩哔哩,📺 哔哩哔哩
+  - RULE-SET,国外媒体,🎬 国际媒体
   - RULE-SET,苹果服务,🍎 苹果服务
   - RULE-SET,代理修正,🌍 全球加速
   - RULE-SET,代理列表,🌍 全球加速
   - RULE-SET,直连列表,DIRECT
   - RULE-SET,LAN,DIRECT
+
+  # > GeoIP China
   - GEOIP,CN,DIRECT
   - MATCH,🗑️ 兜底策略
