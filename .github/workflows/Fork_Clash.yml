@@ -51,6 +51,9 @@ jobs:
 
         # AI
         curl -L -o ladder-repo/Rules/Clash/AI.yaml "https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/Extra/AIGC.yaml"
+
+        # GoogleCN
+        curl -L -o ladder-repo/Rules/Clash/GoogleCN.yaml "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/GoogleCN.yaml" 
         
         # WeChat
         curl -L -o ladder-repo/Rules/Clash/WeChat.yaml "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/Wechat.yaml"  
