@@ -1,6 +1,6 @@
 # 2024-12-08
 
-name: Fork Clash & Loon
+name: Fork & Edit Loon
 
 on:
   workflow_dispatch:
