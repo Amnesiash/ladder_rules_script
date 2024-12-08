@@ -30,10 +30,10 @@ jobs:
         curl -L -o ladder-repo/Rules/Clash/unBan.yaml "https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/Extra/unBan.yaml"
         
         # 直连修正
-        curl -L -o ladder-repo/Rules/Clash/Yaml/Direct+.yaml "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/UnBan.yaml"  
+        curl -L -o ladder-repo/Rules/Clash/Direct+.yaml "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/UnBan.yaml"  
 
         # 代理修正
-        curl -L -o ladder-repo/Rules/Clash/Yaml/Proxy+.yaml "https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/Extra/Proxy%2B.yaml"
+        curl -L -o ladder-repo/Rules/Clash/Proxy+.yaml "https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/Extra/Proxy%2B.yaml"
 
         # 代理列表
         curl -L -o ladder-repo/Rules/Clash/Proxy.yaml "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/ProxyGFWlist.yaml"
