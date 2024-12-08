@@ -1,10 +1,8 @@
-#规则数量:30
-#不支持的规则数量:0
-#已排除的规则数量:0
-
-#-----------------以下为解析后的规则-----------------#
-
 payload:
+  # 一些未被代理匹配到的网址
+  # UPDATED: 2024-12-08
+  
+  # > 自用
   - DOMAIN-SUFFIX,aishort.top
   - DOMAIN-SUFFIX,metacubex.one
   - DOMAIN-SUFFIX,catbox.moe
@@ -21,16 +19,22 @@ payload:
   - DOMAIN-SUFFIX,alpacaml.com
   - DOMAIN-SUFFIX,arca.live
   - DOMAIN-SUFFIX,namu.la
+  
+  # > 机场
   - DOMAIN-SUFFIX,bocchi.ooo
   - DOMAIN-SUFFIX,bocchi.site
   - DOMAIN-KEYWORD,bocchi
   - DOMAIN-SUFFIX,ssy61.com
+  
+  # > Game 18+
   - DOMAIN-SUFFIX,uu-gg.one
   - DOMAIN-SUFFIX,18comic.vip
   - DOMAIN-SUFFIX,wnacg.com
   - DOMAIN-SUFFIX,zodgame.xyz
   - DOMAIN-SUFFIX,miconisomi.xii.jp
   - DOMAIN-SUFFIX,ero-labs.com
+  
+  # > 18+
   - DOMAIN-SUFFIX,misskon.com
   - DOMAIN-SUFFIX,rifabu.me 
   - DOMAIN-KEYWORD,19j
