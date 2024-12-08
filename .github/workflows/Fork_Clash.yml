@@ -1,6 +1,6 @@
 # 2024-12-08
 
-name: Fork & Edit Clashyaml
+name: Fork & Edit Clash
 
 on:
   workflow_dispatch:
