@@ -1,0 +1,9 @@
+payload:
+    # 手动维护的直连列表
+
+    - PROCESS-NAME,OneDrive,DIRECT
+    - DOMAIN,clash.razord.top
+    - DOMAIN,yacd.haishan.me
+    - DOMAIN,mirror.ghproxy.com
+    - DOMAIN-SUFFIX,cloudinary.com
+    - DOMAIN-SUFFIX,arco.design
