@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   schedule:
     # "早上12点与中午12点运行"
-    - cron: "0 8,20 * * *"
+    - cron: "0 10,20 * * *"
 
 jobs:
   Fork-FLITER-list:
