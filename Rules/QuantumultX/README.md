@@ -1,8 +1,7 @@
 ## 使用方式
 
-1.设置解析器
-`[general]\n resource_parser_url = https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js`
-2.
+设置解析器并开启解析
+`resource_parser_url = https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js`
 
 ## 规则列表
 
