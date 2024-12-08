@@ -22,84 +22,47 @@ jobs:
         path: ladder-repo
 
 ######  
-    # 加载并合并规则:Clash YAML 🧸
+    # 加载并合并规则:Clash 🧸
     - name: Download Clash Rules
       run: |
-        mkdir -p ladder-repo/Rules/Clash/Yaml
+        mkdir -p ladder-repo/Rules/Clash
         # 网络解限
-        curl -L -o ladder-repo/Rules/Clash/Yaml/unBan.yaml "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Extra/unBan.list/_end_/unBan.list?type=rule-set&target=stash-rule-set&del=true"
+        curl -L -o ladder-repo/Rules/Clash/unBan.yaml "https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/Extra/unBan.yaml"
         
         # 直连修正
-        curl -L -o ladder-repo/Rules/Clash/Yaml/Direct+.yaml "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Direct%2B.list/_end_/Direct%252B.list?type=rule-set&target=stash-rule-set&del=true"  
+        curl -L -o ladder-repo/Rules/Clash/Yaml/Direct+.yaml "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/UnBan.yaml"  
 
         # 代理修正
-        curl -L -o ladder-repo/Rules/Clash/Yaml/Proxy+.yaml "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/Extra/Proxy%2B.list/_end_/Proxy%252B.list?type=rule-set&target=stash-rule-set&del=true"
+        curl -L -o ladder-repo/Rules/Clash/Yaml/Proxy+.yaml "https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/Extra/Proxy%2B.yaml"
 
         # 代理列表
-        curl -L -o ladder-repo/Rules/Clash/Yaml/Proxy.yaml "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Proxy.list/_end_/Proxy.list?type=rule-set&target=stash-rule-set&del=true"
+        curl -L -o ladder-repo/Rules/Clash/Proxy.yaml "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/ProxyGFWlist.yaml"
 
         # 直连列表
-        curl -L -o ladder-repo/Rules/Clash/Yaml/Direct.yaml "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Direct.list/_end_/Direct.list?type=rule-set&target=stash-rule-set&del=true"
+        curl -L -o ladder-repo/Rules/Clash/Direct.yaml "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/ChinaDomain.yaml"
 
         # LAN
-        curl -L -o ladder-repo/Rules/Clash/Yaml/LAN.yaml "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.list/_end_/Lan.list?type=rule-set&target=stash-rule-set&del=true"
+        curl -L -o ladder-repo/Rules/Clash/LAN.yaml "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/LocalAreaNetwork.yaml"
          
-
         # 流媒体
-        curl -L -o ladder-repo/Rules/Clash/Yaml/Streaming!CN.yaml "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Streaming/!CN.list/_end_/!CN.list?type=rule-set&target=stash-rule-set&del=true"
-        curl -L -o ladder-repo/Rules/Clash/Yaml/StreamingCN.yaml "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Streaming/CN.list/_end_/CN.list?type=rule-set&target=stash-rule-set&del=true"
+        curl -L -o ladder-repo/Rules/Clash/Streaming!CN.yaml "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/ProxyMedia.yaml"
+        curl -L -o ladder-repo/Rules/Clash/BilibiliHMT.yaml "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/BilibiliHMT.yaml"
 
         # 苹果服务
-        curl -L -o ladder-repo/Rules/Clash/Yaml/Apple.yaml "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Apple/Apple.list/_end_/Apple.list?type=rule-set&target=stash-rule-set&del=true"
+        curl -L -o ladder-repo/Rules/Clash/Apple.yaml "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Apple.yaml"
 
         # AI
-        curl -L -o ladder-repo/Rules/Clash/Yaml/AI.yaml "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/AI.list/_end_/AI.list?type=rule-set&target=stash-rule-set&del=true"
-
+        curl -L -o ladder-repo/Rules/Clash/AI.yaml "https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/Extra/AIGC.yaml"
+        
         # WeChat
-        curl -L -o ladder-repo/Rules/Clash/Yaml/WeChat.yaml "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/WeChat.list/_end_/WeChat.list?type=rule-set&target=stash-rule-set&del=true"  
+        curl -L -o ladder-repo/Rules/Clash/WeChat.yaml "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/Wechat.yaml"  
 
         # Telegram
-        curl -L -o ladder-repo/Rules/Clash/Yaml/Telegram.yaml "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Telegram.list/_end_/Telegram.list?type=rule-set&target=stash-rule-set&del=true"  
+        curl -L -o ladder-repo/Rules/Clash/Telegram.yaml "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/Telegram.yaml"  
 
         # SteamCN
-        curl -L -o ladder-repo/Rules/Clash/Yaml/SteamCN.yaml "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/SteamCN.yaml" 
-
-######  
-    # 加载并合并规则:Loon 🧸
-    - name: Download Loon Rules
-      run: |
-        mkdir -p ladder-repo/Rules/Loon
-        # 网络解限
-        curl -L -o ladder-repo/Rules/Loon/unlockblock.list "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Extra/unBan.list/_end_/unBan.list?type=rule-set&target=loon-rule-set&del=true"
+        curl -L -o ladder-repo/Rules/Clash/SteamCN.yaml "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/SteamCN.yaml" 
         
-        # 直连修正
-        curl -L -o ladder-repo/Rules/Loon/Direct+.list "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Direct%2B.list/_end_/Direct%252B.list?type=rule-set&target=loon-rule-set&del=true"
-
-        # 代理列表
-        curl -L -o ladder-repo/Rules/Loon/Proxy.list "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Proxy.list/_end_/Proxy.list?type=rule-set&target=loon-rule-set&del=true"
-
-        # 直连列表
-        curl -L -o ladder-repo/Rules/Loon/Direct.list "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Direct.list/_end_/Direct.list?type=rule-set&target=loon-rule-set&del=true"
-
-        # LAN
-        curl -L -o ladder-repo/Rules/Loon/LAN.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Lan/Lan.list" 
-
-        # 流媒体
-        curl -L -o ladder-repo/Rules/Loon/Streaming!CN.list "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Streaming/!CN.list/_end_/!CN.list?type=rule-set&target=loon-rule-set&del=true"
-        curl -L -o ladder-repo/Rules/Loon/StreamingCN.list "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Streaming/CN.list/_end_/CN.list?type=rule-set&target=loon-rule-set&del=true"
-
-        # 苹果服务
-        curl -L -o ladder-repo/Rules/Loon/Apple.list "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Apple/Apple.list/_end_/Apple.list?type=rule-set&target=loon-rule-set&del=true"
-
-        # AI
-        curl -L -o ladder-repo/Rules/Loon/AI.list "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/AI.list/_end_/AI.list?type=rule-set&target=loon-rule-set&del=true"
-
-        # WeChat
-        curl -L -o ladder-repo/Rules/Loon/WeChat.list "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/WeChat.list/_end_/WeChat.list?type=rule-set&target=loon-rule-set&del=true"  
-
-        # Telegram
-        curl -L -o ladder-repo/Rules/Loon/Telegram.list "https://scripthub-lp861i47.b4a.run/file/_start_/https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Telegram.list/_end_/Telegram.list?type=rule-set&target=loon-rule-set&del=true"  
-
 ######
     - name: Add 和 Commits
       run: |
