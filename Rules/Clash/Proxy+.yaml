@@ -1,6 +1,6 @@
 payload:
   # 一些未被代理匹配到的网址
-  # UPDATED: 2024-11-08
+  # UPDATED: 2024-12-08
   
   # > 自用
   - DOMAIN-SUFFIX,aishort.top
