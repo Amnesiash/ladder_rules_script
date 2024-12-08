@@ -111,6 +111,11 @@ rule-providers:
     <<: *RuleSet_c
     url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/LAN.yaml
     path: ./ruleset/LAN.yaml
+
+  GoogleCN:
+    <<: *RuleSet_c
+    url: https://ghp.ci/https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/GoogleCN.yaml
+    path: ./ruleset/GoogleCN.yaml
   
   微信: 
     <<: *RuleSet_c
@@ -173,9 +178,11 @@ rules:
   - DOMAIN-SUFFIX,notion.so,🗑️ 兜底策略
 
   # > 订阅规则
+  - RULE-SET,LAN,DIRECT
   - RULE-SET,直连修正,DIRECT
   - RULE-SET,微信,DIRECT
   - RULE-SET,SteamCN,DIRECT
+  - RULE-SET,GoogleCN,DIRECT
   - RULE-SET,Telegram,🌍 全球加速
   - RULE-SET,AI,✨ AIGC
   - RULE-SET,哔哩哔哩,📺 哔哩哔哩
@@ -184,7 +191,6 @@ rules:
   - RULE-SET,代理修正,🌍 全球加速
   - RULE-SET,代理列表,🌍 全球加速
   - RULE-SET,直连列表,DIRECT
-  - RULE-SET,LAN,DIRECT
 
   # > GeoIP China
   - GEOIP,CN,DIRECT
