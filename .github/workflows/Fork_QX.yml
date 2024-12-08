@@ -1,6 +1,6 @@
 # 2024-05-20
 
-name: Fork & Edit
+name: Fork & Edit QuantumultX
 
 on:
   workflow_dispatch:
@@ -20,14 +20,7 @@ jobs:
       with:
         repository: Amnesiash/ladder_rules_script
         path: ladder-repo
-
-######
-    - name: Download files to GeoIP
-      run: |
-        mkdir -p ladder-repo/Rules/GeoIP
-        curl -L -o ladder-repo/Rules/GeoIP/CN_Country.mmdb "https://raw.githubusercontent.com/Masaiki/GeoIP2-CN/release/Country.mmdb"
-        curl -L -o ladder-repo/Rules/GeoIP/Global_Country.mmdb "https://raw.githubusercontent.com/Masaiki/GeoIP2-CN/release/Country.mmdb"
-
+        
 ######  
     # 加载并合并规则:QuantumultX 🧸
     - name: Download QuantumultX Rules
