@@ -1,0 +1,8 @@
+#!name = QQ音乐
+#!desc = QQ音乐每日签到
+#!author= WowYiJiu
+#!homepage = https://github.com/WowYiJiu/Personal
+#!icon = https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Script/img/qqmusic.png
+
+[Script]
+cron "25 7-12/1 * * *" script-path=https://raw.githubusercontent.com/WowYiJiu/Personal/main/Script/qqMusic.js, timeout=120, tag=QQ音乐每日签到, img-url=https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Script/img/qqmusic.png

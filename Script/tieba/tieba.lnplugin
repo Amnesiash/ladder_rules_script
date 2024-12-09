@@ -1,0 +1,22 @@
+#!name= 百度贴吧
+#!desc= 百度贴吧每日签到
+#!author= blackmatrix7
+#!homepage= https://github.com/blackmatrix7/ios_rule_script
+#!icon= https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba.png
+
+[Argument]
+cron_setting = input, "30 9 * * *", tag=定时计划
+cookie_enable = switch, true, tag=获取Cookie
+
+[Script]
+cron {cron_setting} script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js,timeout=60,tag=百度贴吧每日签到,img-url=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba.png
+
+# 百度贴吧 获取Cookie
+http-request ^https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js, timeout=60, tag=百度贴吧获取Cookie1,img-url=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba.png, enable={cookie_enable}
+
+http-request ^https?:\/\/c\.tieba\.baidu\.com\/c\/s\/channelIconConfig script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js, timeout=60, tag=百度贴吧获取Cookie2,img-url=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba.png, enable={cookie_enable}
+
+http-request ^https?:\/\/tiebac\.baidu\.com\/c\/u\/follow\/getFoldedMessageUserInfo script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js, timeout=60, tag=百度贴吧获取Cookie3,img-url=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba.png, enable={cookie_enable}
+
+[MITM]
+hostname = c.tieba.baidu.com, tiebac.baidu.com

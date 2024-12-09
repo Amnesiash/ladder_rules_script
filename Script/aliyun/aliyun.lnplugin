@@ -1,0 +1,18 @@
+#!name= 阿里云盘
+#!desc= 阿里云盘每日签到
+#!author= Sliverkiss
+#!homepage= https://github.com/Sliverkiss/QuantumultX
+#!icon= https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Script/img/aliyunpan.png
+
+[Argument]
+cron_setting = input, "10 10 * * *", tag=定时计划
+cookie_enable = switch, true, tag=获取Cookie
+
+[Script]
+cron {cron_setting} script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, timeout=120, tag=阿里云盘签到, img-url=https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Script/img/aliyunpan.png
+
+# 阿里云盘 获取Cookie
+http-request ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, requires-body=true, timeout=60, tag=阿里云盘获取Cookie, img-url=https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Script/img/aliyunpan.png, enable={cookie_enable}
+
+[MITM]
+hostname = auth.alipan.com, auth.aliyundrive.com
