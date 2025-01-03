@@ -169,7 +169,7 @@ rules:
   - PROCESS-NAME,OneDrive,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
-  - DOMAIN-SUFFIX,ghp.ci,DIRECT
+  - DOMAIN-SUFFIX,ghgo.xyz,DIRECT
   - DOMAIN-SUFFIX,cloudinary.com,DIRECT
   - DOMAIN-SUFFIX,arco.design,DIRECT
 
