@@ -104,7 +104,7 @@ rule-providers:
 
   代理修正: 
     <<: *RuleSet_c
-    url: https://cdn.jsdelivr.net/gh/Amnesiash/ladder_rules_script@main/Rules/Clash/Direct.yaml
+    url: https://cdn.jsdelivr.net/gh/Amnesiash/ladder_rules_script@main/Rules/Clash/Proxy+.yaml
     path: ./ruleset/Proxy+.yaml
   
   LAN: 
