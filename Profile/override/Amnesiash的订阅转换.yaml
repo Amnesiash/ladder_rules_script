@@ -96,7 +96,6 @@ rules:
   - PROCESS-NAME,OneDrive,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
-  - DOMAIN-SUFFIX,cdn.jsdelivr.net,DIRECT
   - DOMAIN-SUFFIX,cloudinary.com,DIRECT
   - DOMAIN-SUFFIX,arco.design,DIRECT
 
