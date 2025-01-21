@@ -43,6 +43,11 @@ rule-providers:
     <<: *RuleSet_c
     url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/Proxy+.yaml
     path: ./ruleset/Proxy+.yaml
+
+  广告拦截: 
+    <<: *RuleSet_c
+    url: https://ghfast.top/https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
+    path: ./ruleset/anti-ad.yaml
   
   LAN: 
     <<: *RuleSet_c
@@ -103,6 +108,7 @@ rules:
   # > 订阅规则
   - RULE-SET,LAN,DIRECT
   - RULE-SET,直连修正,DIRECT
+  - RULE-SET,广告拦截,REJECT
   - RULE-SET,SteamCN,DIRECT
   - RULE-SET,GoogleCN,DIRECT
   - RULE-SET,AI,✨ AIGC
