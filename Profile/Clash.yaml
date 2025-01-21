@@ -79,6 +79,7 @@ i: &RuleSet_i {type: http, behavior: ipcidr, interval: 86400}
 # 策略组
 proxy-groups:
   - {name: 🚀 节点选择, type: select, use: *UseProxy}
+  - {name: ⛔️ 广告拦截, type: select, proxies: [REJECT, DIRECT]}
   - {name: 🌍 全球加速, type: select, proxies: [♻️ 自动选择, 🚀 节点选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
   - {name: 🎨 FIGMA, type: select, proxies: [DIRECT, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
   - {name: ✨ AIGC, type: select, proxies: [🇸🇬 狮城优选, 🇯🇵 日本优选, 🇺🇲 美国优选, 🚀 节点选择]}
@@ -173,7 +174,7 @@ rules:
   # > 订阅规则
   - RULE-SET,LAN,DIRECT
   - RULE-SET,直连修正,DIRECT
-  - RULE-SET,广告拦截,REJECT
+  - RULE-SET,广告拦截,⛔️ 广告拦截
   - RULE-SET,SteamCN,DIRECT
   - RULE-SET,GoogleCN,DIRECT
   - RULE-SET,AI,✨ AIGC
