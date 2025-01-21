@@ -169,6 +169,11 @@ rule-providers:
     url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/Proxy+.yaml
     path: ./ruleset/Proxy+.yaml
   
+  广告拦截: 
+    <<: *RuleSet_d
+    url: https://ghfast.top/https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
+    path: ./ruleset/anti-ad.yaml
+  
   LAN: 
     <<: *RuleSet_c
     url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/LAN.yaml
@@ -231,6 +236,7 @@ rules:
   - DOMAIN-SUFFIX,notion.so,🗑️ 兜底策略
 
   # > 订阅规则
+  - RULE-SET,LAN,DIRECT
   - RULE-SET,直连修正,DIRECT
   - RULE-SET,广告拦截,REJECT
   - RULE-SET,微信,DIRECT
@@ -243,7 +249,6 @@ rules:
   - RULE-SET,代理修正,🌍 全球加速
   - RULE-SET,代理列表,🌍 全球加速
   - RULE-SET,直连列表,DIRECT
-  - RULE-SET,LAN,DIRECT
 
   # > GeoIP China
   - GEOIP,CN,DIRECT

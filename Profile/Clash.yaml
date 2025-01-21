@@ -108,7 +108,7 @@ rule-providers:
     path: ./ruleset/Proxy+.yaml
 
   广告拦截: 
-    <<: *RuleSet_c
+    <<: *RuleSet_d
     url: https://ghfast.top/https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
     path: ./ruleset/anti-ad.yaml
   
