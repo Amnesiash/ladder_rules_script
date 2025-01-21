@@ -161,62 +161,62 @@ proxy-groups:
 rule-providers:
   直连修正: 
     <<: *RuleSet_c
-    url: https://cdn.jsdelivr.net/gh/Amnesiash/ladder_rules_script@main/Rules/Clash/Direct+.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/Direct+.yaml
     path: ./ruleset/Direct+.yaml
 
   代理修正: 
     <<: *RuleSet_c
-    url: https://cdn.jsdelivr.net/gh/Amnesiash/ladder_rules_script@main/Rules/Clash/Proxy+.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/Proxy+.yaml
     path: ./ruleset/Proxy+.yaml
   
   LAN: 
     <<: *RuleSet_c
-    url: https://cdn.jsdelivr.net/gh/Amnesiash/ladder_rules_script@main/Rules/Clash/LAN.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/LAN.yaml
     path: ./ruleset/LAN.yaml
   
   微信: 
     <<: *RuleSet_c
-    url: https://cdn.jsdelivr.net/gh/Amnesiash/ladder_rules_script@main/Rules/Clash/WeChat.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/WeChat.yaml
     path: ./ruleset/WeChat.yaml
 
   Telegram: 
     <<: *RuleSet_c
-    url: https://cdn.jsdelivr.net/gh/Amnesiash/ladder_rules_script@main/Rules/Clash/Telegram.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/Telegram.yaml
     path: ./ruleset/Telegram.yaml
 
   AI:
     <<: *RuleSet_c
-    url: https://cdn.jsdelivr.net/gh/Amnesiash/ladder_rules_script@main/Rules/Clash/AI.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/AI.yaml
     path: ./ruleset/AI.yaml
   
   哔哩哔哩:
     <<: *RuleSet_c
-    url:  https://cdn.jsdelivr.net/gh/Amnesiash/ladder_rules_script@main/Rules/Clash/BilibiliHMT.yaml
+    url:  https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/BilibiliHMT.yaml
     path: ./ruleset/BilibiliHMT.yaml
 
   SteamCN:
     <<: *RuleSet_c
-    url:  https://cdn.jsdelivr.net/gh/Amnesiash/ladder_rules_script@main/Rules/Clash/SteamCN.yaml
+    url:  https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/SteamCN.yaml
     path: ./ruleset/SteamCN.yaml
 
   国外媒体: 
     <<: *RuleSet_c
-    url: https://cdn.jsdelivr.net/gh/Amnesiash/ladder_rules_script@main/Rules/Clash/Streaming!CN.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/Streaming!CN.yaml
     path: ./ruleset/Streaming!CN.yaml
     
   苹果服务:
     <<: *RuleSet_c
-    url: https://cdn.jsdelivr.net/gh/Amnesiash/ladder_rules_script@main/Rules/Clash/Apple.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/Apple.yaml
     path: ./ruleset/Apple.yaml
 
   代理列表:
     <<: *RuleSet_c
-    url: https://cdn.jsdelivr.net/gh/Amnesiash/ladder_rules_script@main/Rules/Clash/Proxy.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/Proxy.yaml
     path: ./ruleset/Proxy.yaml
 
   直连列表:
     <<: *RuleSet_c
-    url: https://cdn.jsdelivr.net/gh/Amnesiash/ladder_rules_script@main/Rules/Clash/Direct.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/Direct.yaml
     path: ./ruleset/Direct.yaml
 
 
@@ -224,10 +224,7 @@ rule-providers:
 rules:
   # > 直连
   - PROCESS-NAME,OneDrive,DIRECT
-  - DOMAIN,clash.razord.top,DIRECT
-  - DOMAIN,yacd.haishan.me,DIRECT
-  - DOMAIN-SUFFIX,cloudinary.com,DIRECT
-  - DOMAIN-SUFFIX,arco.design,DIRECT
+  - DOMAIN,ghfast.top,DIRECT
 
   # > 工具
   - DOMAIN-SUFFIX,figma.com,🎨 FIGMA
