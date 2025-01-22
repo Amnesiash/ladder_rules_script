@@ -65,8 +65,8 @@ jobs:
         curl -L -o ladder-repo/Rules/Clash/SteamCN.yaml "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/SteamCN.yaml" 
         
 ######  
-    # 加载规则:Clash List Version 🧸
-    - name: Download Clash Rules
+    # 加载规则:Clash List 版本 🧸
+    - name: Download Clash Rules List Version
       run: |
         mkdir -p ladder-repo/Rules/Clash/List Version
         
