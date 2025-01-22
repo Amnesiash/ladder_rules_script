@@ -173,8 +173,9 @@ rule-providers:
   广告拦截: 
     <<: *RuleSet_d
     url: https://adrules.top/adrules_domainset.txt
-    path: ./ruleset/adrules.yaml
-  
+    path: ./ruleset/adrules.txt
+    format: text
+    
   LAN: 
     <<: *RuleSet_c
     url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/LAN.yaml
