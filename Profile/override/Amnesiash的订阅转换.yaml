@@ -47,8 +47,8 @@ rule-providers:
 
   广告拦截: 
     <<: *RuleSet_d
-    url: https://ghfast.top/https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
-    path: ./ruleset/anti-ad.yaml
+    url: https://adrules.top/adrules_domainset.txt
+    path: ./ruleset/adrules.yaml
   
   LAN: 
     <<: *RuleSet_c
