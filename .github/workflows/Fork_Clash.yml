@@ -84,7 +84,7 @@ jobs:
         
         # 流媒体
         curl -L -o ladder-repo/Rules/Clash/List Version/Streaming!CN.list "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyMedia.list"
-        curl -L -o ladder-repo/Rules/Clash/BilibiliHMT.list "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/BilibiliHMT.list"
+        curl -L -o ladder-repo/Rules/Clash/List Version/BilibiliHMT.list "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/BilibiliHMT.list"
 
         # 苹果服务
         curl -L -o ladder-repo/Rules/Clash/List Version/Apple.list "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Apple.list"
