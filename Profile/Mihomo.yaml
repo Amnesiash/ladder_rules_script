@@ -237,7 +237,6 @@ rules:
   - DOMAIN-SUFFIX,notion.so,🗑️ 兜底策略
 
   # > 订阅规则
-  - RULE-SET,LAN,DIRECT
   - RULE-SET,直连修正,DIRECT
   - RULE-SET,广告拦截,⛔️ 广告拦截
   - RULE-SET,微信,DIRECT
@@ -250,6 +249,7 @@ rules:
   - RULE-SET,代理修正,🌍 全球加速
   - RULE-SET,代理列表,🌍 全球加速
   - RULE-SET,直连列表,DIRECT
+  - RULE-SET,LAN,DIRECT
 
   # > GeoIP China
   - GEOIP,CN,DIRECT
