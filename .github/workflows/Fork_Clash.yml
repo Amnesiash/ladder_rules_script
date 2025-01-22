@@ -64,43 +64,6 @@ jobs:
         # SteamCN
         curl -L -o ladder-repo/Rules/Clash/SteamCN.yaml "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/SteamCN.yaml" 
         
-######  
-    # 加载规则:Clash List 版本 🧸
-    - name: Download Clash Rules List Version
-      run: |
-        mkdir -p ladder-repo/Rules/Clash/List Version
-        
-        # 直连修正
-        curl -L -o ladder-repo/Rules/Clash/List Version/Direct+.list "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/UnBan.list"  
-
-        # 代理列表
-        curl -L -o ladder-repo/Rules/Clash/List Version/Proxy.list "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyGFWlist.list"
-
-        # 直连列表
-        curl -L -o ladder-repo/Rules/Clash/List Version/Direct.list "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaDomain.list"
-
-        # LAN
-        curl -L -o ladder-repo/Rules/Clash/List Version/LAN.list "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/LocalAreaNetwork.list"
-        
-        # 流媒体
-        curl -L -o ladder-repo/Rules/Clash/List Version/Streaming!CN.list "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyMedia.list"
-        curl -L -o ladder-repo/Rules/Clash/List Version/BilibiliHMT.list "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/BilibiliHMT.list"
-
-        # 苹果服务
-        curl -L -o ladder-repo/Rules/Clash/List Version/Apple.list "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Apple.list"
-
-        # GoogleCN
-        curl -L -o ladder-repo/Rules/Clash/List Version/GoogleCN.list "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/GoogleCN.list" 
-        
-        # WeChat
-        curl -L -o ladder-repo/Rules/Clash/List Version/WeChat.list "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/Wechat.list"  
-
-        # Telegram
-        curl -L -o ladder-repo/Rules/Clash/List Version/Telegram.list "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/Telegram.list"  
-
-        # SteamCN
-        curl -L -o ladder-repo/Rules/Clash/List Version/SteamCN.list "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/SteamCN.list" 
-        
 ######
     - name: Add 和 Commits
       run: |
