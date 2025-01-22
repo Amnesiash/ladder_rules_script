@@ -47,7 +47,7 @@ rule-providers:
 
   广告拦截: 
     <<: *RuleSet_d
-    url: https://adrules.top/adrules_domainset.txt
+    url: https://ghfast.top/https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
     path: ./ruleset/adrules.txt
     format: text
   
