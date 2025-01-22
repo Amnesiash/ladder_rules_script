@@ -1,27 +1,22 @@
 payload:
-  # UPDATED: 2024-12-08
+  # UPDATED: 2025-01-22
   # 补充的需代理AIGC
   # 内容来源：https://github.com/ConnersHua/RuleGo/blob/master/Surge/Ruleset/Extra/AI.list,https://github.com/ACL4SSR/ACL4SSR/blob/master/Clash/Providers/Ruleset/OpenAi.yaml
   
-  # OpenAi
+  # OpenAI
   # > ChatGPT
-  - DOMAIN-KEYWORD,openai
-  - DOMAIN-SUFFIX,auth0.com
-  - DOMAIN-SUFFIX,challenges.cloudflare.com
   - DOMAIN-SUFFIX,chatgpt.com
-  - DOMAIN-SUFFIX,client-api.arkoselabs.com
-  - DOMAIN-SUFFIX,events.statsigapi.net
-  - DOMAIN-SUFFIX,featuregates.org
-  - DOMAIN-SUFFIX,identrust.com
-  - DOMAIN-SUFFIX,intercom.io
-  - DOMAIN-SUFFIX,intercomcdn.com
   - DOMAIN-SUFFIX,oaistatic.com
   - DOMAIN-SUFFIX,oaiusercontent.com
   - DOMAIN-SUFFIX,openai.com
-  - DOMAIN-SUFFIX,openaiapi-site.azureedge.net
-  - DOMAIN-SUFFIX,sentry.io
-  - DOMAIN-SUFFIX,stripe.com
-
+  - DOMAIN,api.statsig.com
+  - DOMAIN,api-iam.intercom.io
+  - DOMAIN,chatgpt.livekit.cloud
+  - DOMAIN,o33249.ingest.sentry.io
+  - DOMAIN,openaiapi-site.azureedge.net
+  - DOMAIN,sfo3.turn.livekit.cloud
+  - DOMAIN-KEYWORD,openaicom
+  
   # Apple Intelligence
   - DOMAIN-SUFFIX,smoot.apple.com
   - DOMAIN,apple-relay.apple.com
@@ -29,7 +24,12 @@ payload:
   - DOMAIN,apple-relay.fastly-edge.com
   - DOMAIN,cp4.cloudflare.com
   - DOMAIN,guzzoni.apple.com
-
+  
+  # Anthropic
+  # > Claude
+  - DOMAIN-SUFFIX,claude.ai
+  - DOMAIN-SUFFIX,anthropic.com
+  
   # Google
   # > Gemini
   - DOMAIN,ai.google.dev
@@ -40,6 +40,10 @@ payload:
   # > AI Studio
   - DOMAIN,aistudio.google.com
   - DOMAIN,alkalimakersuite-pa.clients6.google.com
+  # > Search Labs
+  - DOMAIN-KEYWORD,labs.google
+  # > NotebookLM
+  - DOMAIN-KEYWORD,notebooklm.google
   
   # JetBrains AI
   - DOMAIN-SUFFIX,grazie.ai
