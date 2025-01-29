@@ -231,7 +231,8 @@ rule-providers:
 rules:
   # > 直连
   - PROCESS-NAME,OneDrive,DIRECT
-  - DOMAIN,ghfast.top,DIRECT
+  - DOMAIN-SUFFIX,ghfast.top,DIRECT
+  - DOMAIN-SUFFIX,dns.pari.network,DIRECT
 
   # > 工具
   - DOMAIN-SUFFIX,figma.com,🎨 FIGMA
