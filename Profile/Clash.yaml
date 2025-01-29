@@ -164,9 +164,10 @@ rule-providers:
 rules:
   # > 直连
   - PROCESS-NAME,OneDrive,DIRECT
-  - DOMAIN,ghfast.top,DIRECT
-  - DOMAIN,clash.razord.top,DIRECT
-  - DOMAIN,yacd.haishan.me,DIRECT
+  - DOMAIN-SUFFIX,ghfast.top,DIRECT
+  - DOMAIN-SUFFIX,dns.pari.network,DIRECT
+  - DOMAIN-SUFFIX,clash.razord.top,DIRECT
+  - DOMAIN-SUFFIX,yacd.haishan.me,DIRECT
 
   # > 工具
   - DOMAIN-SUFFIX,figma.com,🎨 FIGMA
