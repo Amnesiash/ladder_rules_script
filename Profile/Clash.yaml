@@ -165,7 +165,6 @@ rules:
   # > 直连
   - PROCESS-NAME,OneDrive,DIRECT
   - DOMAIN-SUFFIX,ghfast.top,DIRECT
-  - DOMAIN-SUFFIX,dns.pari.network,DIRECT
   - DOMAIN-SUFFIX,clash.razord.top,DIRECT
   - DOMAIN-SUFFIX,yacd.haishan.me,DIRECT
 
