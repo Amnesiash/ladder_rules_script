@@ -87,27 +87,15 @@ dns:
     - "*.blzstatic.cn"
     - "*.battle.net"
   default-nameserver:
-    - 223.5.5.5
-    - 1.0.0.1
+    - tls://223.5.5.5
+    - tls://1.1.1.1
   nameserver:               # 默认DNS服务器，支持udp/tcp/dot/doh/doq
-    - 223.5.5.5
-    - 119.29.29.29
-  fallback:                 # 国外 DNS 服务器
-    - https://cloudflare-dns.com/dns-query
-    - https://dns.google/dns-query
     - https://dns.alidns.com/dns-query
-  fallback-filter:
-    geoip: true
-    geoip-code: CN
-    ipcidr:
-      - 240.0.0.0/4
-  nameserver-policy:
-    # > Google Dl
-    'dl.google.com': 119.29.29.29
-    'dl.l.google.com': 119.29.29.29
-    'update.googleapis.com': 119.29.29.29
-    # > PlayStation
-    '*.dl.playstation.net': 119.29.29.29
+    - https://dns.cloudflare.com/dns-query
+  proxy-server-nameserver:
+    - https://dns.cloudflare.com/dns-query
+  direct-nameserver:
+    - https://dns.alidns.com/dns-query
   
 
 # 锚点 - 优选节点订阅参数 [每天更新一次订阅优选节点，每 300 秒一次健康检查]
