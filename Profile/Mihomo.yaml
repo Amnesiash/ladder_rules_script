@@ -126,7 +126,6 @@ d: &RuleSet_d {type: http, behavior: domain, interval: 86400, format: text}
 i: &RuleSet_i {type: http, behavior: ipcidr, interval: 86400, format: text}
 
 # 策略组
-# 策略组
 proxy-groups:
   - {name: 🚀 节点选择, type: select, use: *UseProxy}
   - {name: ⛔️ 广告拦截, type: select, proxies: [REJECT, DIRECT]}
