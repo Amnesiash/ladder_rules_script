@@ -228,6 +228,7 @@ rules:
 
   # > 订阅规则
   - RULE-SET,直连修正,DIRECT
+  - RULE-SET,代理修正,🌍 全球加速
   - RULE-SET,广告拦截,⛔️ 广告拦截
   - RULE-SET,微信,DIRECT
   - RULE-SET,SteamCN,DIRECT
@@ -236,7 +237,6 @@ rules:
   - RULE-SET,哔哩哔哩,📺 哔哩哔哩
   - RULE-SET,国外媒体,🎬 国际媒体
   - RULE-SET,苹果服务,🍎 苹果服务
-  - RULE-SET,代理修正,🌍 全球加速
   - RULE-SET,代理列表,🌍 全球加速
   - RULE-SET,直连列表,DIRECT
   - RULE-SET,LAN,DIRECT
