@@ -230,7 +230,6 @@ rules:
 
   # > 工具
   - DOMAIN-SUFFIX,figma.com,🎨 FIGMA
-  - DOMAIN-SUFFIX,notion.so,🗑️ 兜底策略
 
   # > 订阅规则
   - RULE-SET,直连修正,DIRECT
