@@ -34,9 +34,11 @@ dns:
     - "*.battlenet.com"
     - "*.blzstatic.cn"
     - "*.battle.net"
-  nameserver:               # 默认DNS服务器，支持udp/tcp/dot/doh/doq
+  default-nameserver:
     - 223.5.5.5
-    - 119.29.29.29
+  nameserver:               # 默认DNS服务器，支持udp/tcp/dot/doh/doq
+    - https://doh.pub/dns-query
+    - https://cloudflare-dns.com/dns-query
   fallback:          # 国外 DNS 服务器
     - https://cloudflare-dns.com/dns-query
     - https://dns.google/dns-query
@@ -46,6 +48,10 @@ dns:
     geoip-code: CN
     ipcidr:
       - 240.0.0.0/4
+    domain:
+      - '+.google.com'
+      - '+.facebook.com'
+      - '+.youtube.com'
 
 # 锚点 - 优选订阅参数 [每天更新一次订阅优选，每 300 秒一次健康检查]
 NodeParam: &NodeParam {type: http, interval: 43200, health-check: {enable: true, url: http://www.apple.com/library/test/success.html, interval: 300}}
