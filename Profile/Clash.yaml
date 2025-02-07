@@ -42,6 +42,7 @@ dns:
   fallback:          # 国外 DNS 服务器
     - https://cloudflare-dns.com/dns-query
     - https://dns.google/dns-query
+    - https://dns.alidns.com/dns-query
   fallback-filter:
     geoip: true
     geoip-code: CN
