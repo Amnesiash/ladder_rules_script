@@ -77,6 +77,18 @@ dns:
     - "*"
     - "+.lan"
     - "+.local"
+    - localhost.ptlogin2.qq.com
+    - "+.srv.nintendo.net"
+    - "+.stun.playstation.net"
+    - "+.msftconnecttest.com"
+    - "+.msftncsi.com"
+    - "+.xboxlive.com"
+    - msftconnecttest.com
+    - "xbox.*.microsoft.com"
+    - "*.battlenet.com.cn"
+    - "*.battlenet.com"
+    - "*.blzstatic.cn"
+    - "*.battle.net"
   default-nameserver:
     - 223.5.5.5
   nameserver:               # 默认DNS服务器，支持udp/tcp/dot/doh/doq
