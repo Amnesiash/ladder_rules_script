@@ -80,12 +80,20 @@ dns:
   default-nameserver:
     - 223.5.5.5
   nameserver:               # 默认DNS服务器，支持udp/tcp/dot/doh/doq
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  fallback:          # 国外 DNS 服务器
     - https://8.8.8.8/dns-query
     - https://1.1.1.1/dns-query
-  nameserver-policy:
-    "geosite:cn,private,category-games@cn,microsoft@cn":
-      - https://dns.alidns.com/dns-query
-      - https://doh.pub/dns-query
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
+    domain:
+      - '+.google.com'
+      - '+.facebook.com'
+      - '+.youtube.com'
   
 
 # 锚点 - 优选节点订阅参数 [每天更新一次订阅优选节点，每 300 秒一次健康检查]
