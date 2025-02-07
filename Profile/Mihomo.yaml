@@ -5,10 +5,6 @@
 
 
 mixed-port: 7890      # 混合端口 HTTP和SOCKS5用一个端口
-port: 7891
-socks-port: 7892
-redir-port: 7893
-tproxy-port: 7894
 
 unified-delay: true
 geodata-mode: false
