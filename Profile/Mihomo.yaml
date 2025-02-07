@@ -68,8 +68,9 @@ tun:
 
 dns:
   enable: true              # 关闭将使用系统 DNS
-  listen: 0.0.0.0:53      # DNS监听地址
+  listen: :1053      # DNS监听地址
   ipv6: false               # IPV6解析开关；如果为false，将返回ipv6结果为空
+  prefer-h3: true           # 优先使用HTTP/3协议
   enhanced-mode: fake-ip    # 模式：redir-host或fake-ip
   fake-ip-range: 28.0.0.1/8 # Fake-IP解析地址池
   fake-ip-filter:           # fake ip 白名单列表'以下地址不会下发fakeip映射用于连接
@@ -89,21 +90,12 @@ dns:
   default-nameserver:
     - 223.5.5.5
   nameserver:               # 默认DNS服务器，支持udp/tcp/dot/doh/doq
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
-  fallback:          # 国外 DNS 服务器
-    - https://cloudflare-dns.com/dns-query
-    - https://dns.google/dns-query
-    - https://dns.alidns.com/dns-query
-  fallback-filter:
-    geoip: true
-    geoip-code: CN
-    ipcidr:
-      - 240.0.0.0/4
-    domain:
-      - '+.google.com'
-      - '+.facebook.com'
-      - '+.youtube.com'
+    - https://8.8.8.8/dns-query
+    - https://1.1.1.1/dns-query
+  nameserver-policy:
+    "geosite:cn,private":
+      - https://dns.alidns.com/dns-query
+      - https://doh.pub/dns-query
   
 
 # 锚点 - 优选节点订阅参数 [每天更新一次订阅优选节点，每 300 秒一次健康检查]
