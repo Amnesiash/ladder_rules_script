@@ -74,8 +74,7 @@ dns:
   enhanced-mode: fake-ip    # 模式：redir-host或fake-ip
   fake-ip-range: 28.0.0.1/8 # Fake-IP解析地址池
   fake-ip-filter:           # fake ip 白名单列表'以下地址不会下发fakeip映射用于连接
-    - "*"
-    - "+.lan"
+    - "*.lan"
     - "+.local"
     - localhost.ptlogin2.qq.com
     - "+.srv.nintendo.net"
