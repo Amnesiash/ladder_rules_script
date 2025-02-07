@@ -85,6 +85,7 @@ dns:
   fallback:          # 国外 DNS 服务器
     - https://8.8.8.8/dns-query
     - https://1.1.1.1/dns-query
+    - https://dns.alidns.com/dns-query
   fallback-filter:
     geoip: true
     geoip-code: CN
