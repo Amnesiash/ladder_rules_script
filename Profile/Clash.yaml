@@ -23,13 +23,13 @@ dns:
   fake-ip-filter:           # fake ip 白名单列表'以下地址不会下发fakeip映射用于连接
     - "*.lan"
     - localhost.ptlogin2.qq.com
-    - +.srv.nintendo.net
-    - +.stun.playstation.net
-    - +.msftconnecttest.com
-    - +.msftncsi.com
-    - +.xboxlive.com
+    - "+.srv.nintendo.net"
+    - "+.stun.playstation.net"
+    - "+.msftconnecttest.com"
+    - "+.msftncsi.com"
+    - "+.xboxlive.com"
     - msftconnecttest.com
-    - xbox.*.microsoft.com
+    - "xbox.*.microsoft.com"
     - "*.battlenet.com.cn"
     - "*.battlenet.com"
     - "*.blzstatic.cn"
