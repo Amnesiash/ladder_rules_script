@@ -108,9 +108,9 @@ rules:
 
   # > 订阅规则
   - RULE-SET,直连修正,DIRECT
-  - RULE-SET,广告拦截,广告拦截
   - RULE-SET,SteamCN,DIRECT
   - RULE-SET,GoogleCN,DIRECT
+  # - RULE-SET,广告拦截,广告拦截
   - RULE-SET,AI,AIGC
   - RULE-SET,哔哩哔哩,哔哩哔哩
   - RULE-SET,国外媒体,国际媒体
