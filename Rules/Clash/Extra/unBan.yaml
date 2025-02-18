@@ -1,6 +1,9 @@
 payload:
   # 被公司屏蔽的网络
   # Update: 2024-10-30
+
+  # > 豆瓣
+  - DOMAIN-SUFFIX,douban.com
   
   # > App Store Connect
   - DOMAIN,amp-api-edge.apps.apple.com
