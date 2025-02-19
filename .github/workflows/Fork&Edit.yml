@@ -87,6 +87,35 @@ jobs:
         # WeChat
         curl -L -o ladder-repo/Rules/QuantumultX/WeChat.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/WeChat/WeChat.list"   
 
+######  
+    # 加载规则:Loon 🧸
+    - name: Download Loon Rules
+      run: |
+        mkdir -p ladder-repo/Rules/Loon
+        
+        # 直连修正
+        curl -L -o ladder-repo/Rules/Loon/Direct+.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Direct/Direct.list"  
+
+        # 代理列表
+        curl -L -o ladder-repo/Rules/Loon/Proxy.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Proxy/Proxy.list"
+
+        # 直连列表
+        curl -L -o ladder-repo/Rules/Loon/Direct.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/China/China.list"
+
+        # LAN
+        curl -L -o ladder-repo/Rules/Loon/LAN.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Lan/Lan.list"
+        
+        # 国际流媒体
+        curl -L -o ladder-repo/Rules/Loon/Streaming!CN.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/GlobalMedia/GlobalMedia.list"
+
+        # 国内流媒体
+        curl -L -o ladder-repo/Rules/Loon/StreamingCN.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/ChinaMedia/ChinaMedia.list"
+
+        # 苹果服务
+        curl -L -o ladder-repo/Rules/Loon/Apple.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Apple/Apple.list"
+        
+        # WeChat
+        curl -L -o ladder-repo/Rules/Loon/WeChat.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/WeChat/WeChat.list" 
 ######
     - name: Add 和 Commits
       run: |
