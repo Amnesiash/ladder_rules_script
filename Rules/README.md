@@ -37,11 +37,11 @@
   此为浏览器地址栏中获取到的链接
 
 ```
-3.使用 **镜像加速域名** 替换 RAW链接,以避免更新配置时出错的相关问题
+3.使用 [**镜像加速域名**](https://ghproxy.link/) 替换 RAW链接,以避免更新配置时出错的相关问题
 
 
 ```markdown
-使用 [GitHub Proxy](https://ghproxy.link/) CDN 链接
+使用 GitHub Proxy CDN 链接
 
   e.g: https://ghfast.top/RAW链接
   
