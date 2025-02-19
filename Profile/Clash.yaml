@@ -172,10 +172,10 @@ rules:
   - RULE-SET,代理修正,🌍 全球加速
   # - RULE-SET,广告拦截,⛔️ 广告拦截
   - RULE-SET,AI,✨ AIGC
-  - RULE-SET,国内流媒体,🎬 国内媒体
+  #- RULE-SET,国内流媒体,🎬 国内媒体
   - RULE-SET,国际流媒体,🎬 国际媒体
   - RULE-SET,代理列表,🌍 全球加速
-  - RULE-SET,苹果服务,🍎 苹果服务
+  #- RULE-SET,苹果服务,🍎 苹果服务
   - RULE-SET,直连列表,DIRECT
   - RULE-SET,LAN,DIRECT
 
