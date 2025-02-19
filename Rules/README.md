@@ -27,3 +27,40 @@
  - 请使用规则的 **raw 链接**
 
 ### 2.安装步骤
+
+1. 选择你想要使用的规则
+2. 获取 RAW 链接
+```
+例如：
+  
+  https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Proxy.yaml 
+  此为浏览器地址栏中获取到的链接
+
+```
+3.使用 **镜像加速域名** 替换 RAW链接,以避免更新配置时出错的相关问题
+
+
+```markdown
+使用 [GitHub Proxy](https://ghproxy.link/) CDN 链接
+
+  e.g: https://ghfast.top/RAW链接
+  
+  例如文件: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Proxy.yaml
+  
+  替换后链接为
+  
+  https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Proxy.yaml
+```
+或
+```markdown
+使用 JsDeliver CDN 链接
+
+  e.g: https://cdn.jsdelivr.net/gh/Amnesiash/ladder_rules_script@main/Rules/Clash/Proxy.yaml
+  
+  例如文件: https://github.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Proxy.yaml
+  
+  替换后链接为
+  
+  https://cdn.jsdelivr.net/gh/Amnesiash/ladder_rules_script@main/Rules/Clash/Proxy.yaml
+```
+
