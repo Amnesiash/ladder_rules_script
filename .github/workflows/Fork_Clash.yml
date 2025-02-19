@@ -57,6 +57,36 @@ jobs:
         # WeChat
         curl -L -o ladder-repo/Rules/Clash/WeChat.yaml "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/WeChat/WeChat.yaml" 
 
+######  
+    # 加载规则:QuantumultX 🧸
+    - name: Download QuantumultX Rules
+      run: |
+        mkdir -p ladder-repo/Rules/QuantumultX
+        
+        # 直连修正
+        curl -L -o ladder-repo/Rules/QuantumultX/Direct+.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/Direct/Direct.list"  
+
+        # 代理列表
+        curl -L -o ladder-repo/Rules/QuantumultX/Proxy.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/Proxy/Proxy.list"
+
+        # 直连列表
+        curl -L -o ladder-repo/Rules/QuantumultX/Direct.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/China/China.list"
+
+        # LAN
+        curl -L -o ladder-repo/Rules/QuantumultX/LAN.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/Lan/Lan.list"
+        
+        # 国际流媒体
+        curl -L -o ladder-repo/Rules/QuantumultX/Streaming!CN.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/GlobalMedia/GlobalMedia.list"
+
+        # 国内流媒体
+        curl -L -o ladder-repo/Rules/QuantumultX/StreamingCN.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/ChinaMedia/ChinaMedia.list"
+
+        # 苹果服务
+        curl -L -o ladder-repo/Rules/QuantumultX/Apple.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/Apple/Apple.list"
+        
+        # WeChat
+        curl -L -o ladder-repo/Rules/QuantumultX/WeChat.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/WeChat/WeChat.list"   
+
 ######
     - name: Add 和 Commits
       run: |
