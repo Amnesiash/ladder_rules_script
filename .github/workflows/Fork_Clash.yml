@@ -1,11 +1,11 @@
 # 2025-01-22
 
-name: Fork & Edit Clash
+name: Fork & Edit
 
 on:
   workflow_dispatch:
   schedule:
-    # "早上12点与中午12点运行"
+    # "早上8点与下午8点运行"
     - cron: "0 8,20 * * *"
 
 jobs:
@@ -54,7 +54,7 @@ jobs:
         # AI
         curl -L -o ladder-repo/Rules/Clash/AI.yaml "https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/Extra/AIGC.yaml"
         
-        # SteamCN
+        # WeChat
         curl -L -o ladder-repo/Rules/Clash/WeChat.yaml "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/WeChat/WeChat.yaml" 
 
 ######
