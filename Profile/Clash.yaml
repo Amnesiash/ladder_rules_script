@@ -89,9 +89,9 @@ proxy-groups:
   - {name: 🌍 全球加速, type: select, proxies: [♻️ 自动选择, 🚀 节点选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
   - {name: 🎨 FIGMA, type: select, proxies: [DIRECT, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
   - {name: ✨ AIGC, type: select, proxies: [🇸🇬 狮城优选, 🇯🇵 日本优选, 🇺🇲 美国优选, 🚀 节点选择]}
-  # - {name: 🎬 国内媒体, type: select, proxies: [DIRECT, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选]}
+  - {name: 🎬 国内媒体, type: select, proxies: [DIRECT, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选]}
   - {name: 🎬 国际媒体, type: select, proxies: [♻️ 自动选择, 🚀 节点选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
-  # - {name: 🍎 苹果服务, type: select, proxies: [DIRECT, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
+  - {name: 🍎 苹果服务, type: select, proxies: [DIRECT, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
   - {name: 🗑️ 兜底策略, type: select, proxies: [DIRECT, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
 
   # 最低延迟优选策略组
@@ -172,10 +172,10 @@ rules:
   - RULE-SET,代理修正,🌍 全球加速
   # - RULE-SET,广告拦截,⛔️ 广告拦截
   - RULE-SET,AI,✨ AIGC
-  # - RULE-SET,国内流媒体,🎬 国内媒体
+  - RULE-SET,国内流媒体,🎬 国内媒体
   - RULE-SET,国际流媒体,🎬 国际媒体
   - RULE-SET,代理列表,🌍 全球加速
-  # - RULE-SET,苹果服务,🍎 苹果服务
+  - RULE-SET,苹果服务,🍎 苹果服务
   - RULE-SET,直连列表,DIRECT
   - RULE-SET,LAN,DIRECT
 
