@@ -39,6 +39,11 @@ rule-providers:
     <<: *RuleSet_c
     url: 'https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Proxy+.yaml'
     path: ./ruleset/Proxy+.yaml
+      
+  Figma: 
+    <<: *RuleSet_c
+    url: 'https://rule.kelee.one/Clash/Figma.yaml'
+    path: ./ruleset/Figma.yaml  
 
   直连修正: 
     <<: *RuleSet_c
