@@ -213,8 +213,6 @@ rules:
   # > 直连
   - PROCESS-NAME,OneDrive,DIRECT
   - DOMAIN-SUFFIX,ghfast.top,DIRECT
-  - DOMAIN,board.zash.run.place,DIRECT
-  - DOMAIN-SUFFIX,metacubex.one,DIRECT
 
   # > 订阅规则
   - RULE-SET,直连修正,DIRECT
