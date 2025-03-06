@@ -5,86 +5,86 @@ FilterJP: &FilterJP '^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼�
 FilterSG: &FilterSG '^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
 FilterUS: &FilterUS '^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
 
-# 锚点 - 优选参数 [每 6 秒一次惰性健康检查，容差 20ms，超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
-UrlTest: &UrlTest {type: url-test, interval: 6, tolerance: 20, lazy: true, url: 'http://www.apple.com/library/test/success.html', disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: false, include-all: true}
-
-# 锚点 - 规则参数 [每 12 小时更新一次订阅规则，更新规则时使用直连优选]
+# 锚点 - 优选参数 [每 6 秒一次惰性健康检查，容差 20ms，超过 5 秒判定为失败，失败 3 次则自动触发健康检查]
+UrlTest: &UrlTest {type: url-test, interval: 6, tolerance: 20, lazy: true, url: 'http://www.gstatic.com/generate_204', disable-udp: false, timeout: 5000, max-failed-times: 3, use: *UseProxy}
+# 锚点 - 规则参数 [每 12 小时更新一次订阅规则，更新规则时使用直连策略]
 c: &RuleSet_c {type: http, behavior: classical, interval: 86400}
 d: &RuleSet_d {type: http, behavior: domain, interval: 86400}
 i: &RuleSet_i {type: http, behavior: ipcidr, interval: 86400}
 
 # 策略组
 proxy-groups:
-  - {name: 节点选择, type: select, include-all: true}
-  # - {name: 广告拦截, type: select, proxies: [REJECT, DIRECT]}
-  - {name: 全球加速, type: select, proxies: [自动选择, 节点选择, 香港优选, 台湾优选, 日本优选, 狮城优选, 美国优选]}
-  - {name: FIGMA, type: select, proxies: [DIRECT, 节点选择, 自动选择, 香港优选, 台湾优选, 日本优选, 狮城优选, 美国优选]}
-  - {name: AIGC, type: select, proxies: [狮城优选, 日本优选, 美国优选, 节点选择]}
-  - {name: 国内媒体, type: select, proxies: [DIRECT, 节点选择, 自动选择, 香港优选, 台湾优选]}
-  - {name: 国际媒体, type: select, proxies: [自动选择, 节点选择, 香港优选, 台湾优选, 日本优选, 狮城优选, 美国优选]}
-  - {name: 苹果服务, type: select, proxies: [DIRECT, 节点选择, 自动选择, 香港优选, 台湾优选, 日本优选, 狮城优选, 美国优选]}
-  - {name: 兜底策略, type: select, proxies: [DIRECT, 节点选择, 自动选择, 香港优选, 台湾优选, 日本优选, 狮城优选, 美国优选]}
+  - {name: 🚀 节点选择, type: select, use: *UseProxy, url: 'http://www.gstatic.com/generate_204', interval: 300, lazy: true, timeout: 5000, max-failed-times: 3}
+  - {name: 🆎 网络解限, type: select, proxies: [DIRECT, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选], url: 'http://www.gstatic.com/generate_204', interval: 300, lazy: true, timeout: 5000, max-failed-times: 3}
+  # - {name: ⛔️ 广告拦截, type: select, proxies: [REJECT, DIRECT]}
+  - {name: 🌍 全球加速, type: select, proxies: [♻️ 自动选择, 🚀 节点选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选], url: 'http://www.gstatic.com/generate_204', interval: 300, lazy: true, timeout: 5000, max-failed-times: 3}
+  - {name: 🎨 FIGMA, type: select, proxies: [DIRECT, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选], url: 'http://www.gstatic.com/generate_204', interval: 300, lazy: true, timeout: 5000, max-failed-times: 3}
+  - {name: ✨ AI, type: select, proxies: [🇸🇬 狮城优选, 🇯🇵 日本优选, 🇺🇲 美国优选, 🚀 节点选择], url: 'http://www.gstatic.com/generate_204', interval: 300, lazy: true, timeout: 5000, max-failed-times: 3}
+  - {name: 🎬 国内媒体, type: select, proxies: [DIRECT, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选], url: 'http://www.gstatic.com/generate_204', interval: 300, lazy: true, timeout: 5000, max-failed-times: 3}
+  - {name: 🎬 国际媒体, type: select, proxies: [♻️ 自动选择, 🚀 节点选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选], url: 'http://www.gstatic.com/generate_204', interval: 300, lazy: true, timeout: 5000, max-failed-times: 3}
+  - {name: 🍎 苹果服务, type: select, proxies: [DIRECT, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选], url: 'http://www.gstatic.com/generate_204', interval: 300, lazy: true, timeout: 5000, max-failed-times: 3}
+  - {name: 🗑️ 兜底策略, type: select, proxies: [DIRECT, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选], url: 'http://www.gstatic.com/generate_204', interval: 300, lazy: true, timeout: 5000, max-failed-times: 3}
 
   # 最低延迟优选策略组
-  - {name: 自动选择, <<: *UrlTest}
-  - {name: 香港优选, <<: *UrlTest, filter: *FilterHK}
-  - {name: 台湾优选, <<: *UrlTest, filter: *FilterTW}  
-  - {name: 日本优选, <<: *UrlTest, filter: *FilterJP}
-  - {name: 狮城优选, <<: *UrlTest, filter: *FilterSG}
-  - {name: 美国优选, <<: *UrlTest, filter: *FilterUS}
+  - {name: ♻️ 自动选择, <<: *UrlTest}
+  - {name: 🇭🇰 香港优选, <<: *UrlTest, filter: *FilterHK}
+  - {name: 🇨🇳 台湾优选, <<: *UrlTest, filter: *FilterTW}  
+  - {name: 🇯🇵 日本优选, <<: *UrlTest, filter: *FilterJP}
+  - {name: 🇸🇬 狮城优选, <<: *UrlTest, filter: *FilterSG}
+  - {name: 🇺🇲 美国优选, <<: *UrlTest, filter: *FilterUS}
 
 # 订阅规则
 rule-providers:
-  直连修正: 
-    <<: *RuleSet_c
-    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/Direct+.yaml
-    path: ./ruleset/Direct+.yaml
-
   代理修正: 
     <<: *RuleSet_c
-    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/Proxy+.yaml
+    url: 'https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Proxy+.yaml'
     path: ./ruleset/Proxy+.yaml
+
+  直连修正: 
+    <<: *RuleSet_c
+    url: 'https://rule.kelee.one/Clash/Direct.yaml'
+    path: ./ruleset/Direct.yaml
 
   广告拦截: 
     <<: *RuleSet_d
     url: https://ghfast.top/https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
     path: ./ruleset/adrules.txt
     format: text
-  
+
   LAN: 
     <<: *RuleSet_c
-    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/LAN.yaml
-    path: ./ruleset/LAN.yaml
-    
+    url: 'https://rule.kelee.one/Clash/Lan.yaml'
+    path: ./ruleset/Lan.yaml
+
   AI:
     <<: *RuleSet_c
-    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/AI.yaml
+    url: 'https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/AI.yaml'
     path: ./ruleset/AI.yaml
   
   国内流媒体:
     <<: *RuleSet_c
-    url:  https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/StreamingCN.yaml
-    path: ./ruleset/StreamingCN.yaml
+    url: 'https://rule.kelee.one/Clash/ChinaMedia.yaml'
+    path: ./ruleset/ChinaMedia.yaml
 
-  国际流媒体: 
+  国外流媒体: 
     <<: *RuleSet_c
-    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/Streaming!CN.yaml
-    path: ./ruleset/Streaming!CN.yaml
+    url: 'https://rule.kelee.one/Clash/GlobalMedia.yaml'
+    path: ./ruleset/GlobalMedia.yaml
     
   苹果服务:
     <<: *RuleSet_c
-    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/Apple.yaml
+    url: 'https://rule.kelee.one/Clash/Apple.yaml'
     path: ./ruleset/Apple.yaml
 
   代理列表:
     <<: *RuleSet_c
-    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/Proxy.yaml
+    url: 'https://rule.kelee.one/Clash/Proxy.yaml'
     path: ./ruleset/Proxy.yaml
 
-  直连列表:
+  国内网站:
     <<: *RuleSet_c
-    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/Direct.yaml
-    path: ./ruleset/Direct.yaml
+    url: 'https://rule.kelee.one/Clash/China.yaml'
+    path: ./ruleset/China.yaml
 
 
 # 规则指向
@@ -92,22 +92,22 @@ rules:
   # > 直连
   - PROCESS-NAME,OneDrive,DIRECT
   - DOMAIN-SUFFIX,ghfast.top,DIRECT
-
-  # > 工具
-  - DOMAIN-SUFFIX,figma.com,FIGMA
+  - DOMAIN,board.zash.run.place,DIRECT
+  - DOMAIN-SUFFIX,metacubex.one,DIRECT
 
   # > 订阅规则
   - RULE-SET,直连修正,DIRECT
-  - RULE-SET,代理修正,全球加速
-  # - RULE-SET,广告拦截,广告拦截
-  - RULE-SET,AI,AIGC
-  - RULE-SET,国内流媒体,国内媒体
-  - RULE-SET,国际流媒体,国际媒体
-  - RULE-SET,代理列表,全球加速
-  - RULE-SET,苹果服务,苹果服务
-  - RULE-SET,直连列表,DIRECT
+  - RULE-SET,Figma,🎨 FIGMA
+  # - RULE-SET,广告拦截,⛔️ 广告拦截
+  - RULE-SET,AI,✨ AI
+  - RULE-SET,国内流媒体,🎬 国内媒体
+  - RULE-SET,国外流媒体,🎬 国际媒体
+  - RULE-SET,代理修正,🌍 全球加速
+  - RULE-SET,代理列表,🌍 全球加速
+  - RULE-SET,苹果服务,🍎 苹果服务
+  - RULE-SET,国内网站,DIRECT
   - RULE-SET,LAN,DIRECT
 
   # > GeoIP China
   - GEOIP,CN,DIRECT
-  - MATCH,兜底策略
+  - MATCH,🗑️ 兜底策略
