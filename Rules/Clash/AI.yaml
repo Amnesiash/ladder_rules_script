@@ -1,5 +1,5 @@
 payload:
-  # UPDATED: 2025-01-22
+  # UPDATED: 2025-03-07
   # 补充的需代理AIGC
   # 内容来源：https://github.com/ConnersHua/RuleGo/blob/master/Surge/Ruleset/Extra/AI.list,https://github.com/ACL4SSR/ACL4SSR/blob/master/Clash/Providers/Ruleset/OpenAi.yaml
   
@@ -50,6 +50,8 @@ payload:
   
   # Microsoft
   # > Copilot
+  - DOMAIN,api.githubcopilot.com
+  - DOMAIN,copilot-proxy.githubusercontent.com
   - DOMAIN,copilot.microsoft.com
   - DOMAIN,sydney.bing.com
   - DOMAIN,www.bing.com
@@ -71,3 +73,13 @@ payload:
   # Coze
   - DOMAIN-SUFFIX,coze.com
   - DOMAIN-SUFFIX,ciciai.com
+
+  # Mistral
+  - DOMAIN,chat.mistral.ai
+  - DOMAIN,console.mistral.ai
+  - DOMAIN-SUFFIX,mistral.ai
+
+  # Grok
+  - DOMAIN,api.x.ai
+  - DOMAIN-SUFFIX,x.ai
+  - DOMAIN-SUFFIX,grok.com
