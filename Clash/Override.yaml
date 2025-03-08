@@ -35,20 +35,15 @@ proxy-groups:
 
 # 订阅规则
 rule-providers:
-  代理修正: 
-    <<: *RuleSet_c
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Proxy+.yaml'
-    path: ./ruleset/Proxy+.yaml
-      
-  Figma: 
-    <<: *RuleSet_c
-    url: 'https://rule.kelee.one/Clash/Figma.yaml'
-    path: ./ruleset/Figma.yaml  
-
   直连修正: 
     <<: *RuleSet_c
-    url: 'https://rule.kelee.one/Clash/Direct.yaml'
+    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/Direct.yaml
     path: ./ruleset/Direct.yaml
+
+  代理修正: 
+    <<: *RuleSet_c
+    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/Proxy+.yaml
+    path: ./ruleset/Proxy+.yaml
 
   广告拦截: 
     <<: *RuleSet_d
@@ -56,39 +51,39 @@ rule-providers:
     path: ./ruleset/adrules.txt
     format: text
 
-  LAN: 
+  Lan: 
     <<: *RuleSet_c
-    url: 'https://rule.kelee.one/Clash/Lan.yaml'
+    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/Lan.yaml
     path: ./ruleset/Lan.yaml
 
   AI:
     <<: *RuleSet_c
-    url: 'https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/AI.yaml'
+    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/AI.yaml
     path: ./ruleset/AI.yaml
   
   国内流媒体:
     <<: *RuleSet_c
-    url: 'https://rule.kelee.one/Clash/ChinaMedia.yaml'
+    url:  https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/ChinaMedia.yaml
     path: ./ruleset/ChinaMedia.yaml
 
-  国外流媒体: 
+  国际流媒体: 
     <<: *RuleSet_c
-    url: 'https://rule.kelee.one/Clash/GlobalMedia.yaml'
+    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/GlobalMedia.yaml
     path: ./ruleset/GlobalMedia.yaml
     
   苹果服务:
     <<: *RuleSet_c
-    url: 'https://rule.kelee.one/Clash/Apple.yaml'
+    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/Apple.yaml
     path: ./ruleset/Apple.yaml
 
   代理列表:
     <<: *RuleSet_c
-    url: 'https://rule.kelee.one/Clash/Proxy.yaml'
+    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/Proxy.yaml
     path: ./ruleset/Proxy.yaml
 
   国内网站:
     <<: *RuleSet_c
-    url: 'https://rule.kelee.one/Clash/China.yaml'
+    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/China.yaml
     path: ./ruleset/China.yaml
 
 
@@ -98,18 +93,20 @@ rules:
   - PROCESS-NAME,OneDrive,DIRECT
   - DOMAIN-SUFFIX,ghfast.top,DIRECT
 
+  # > 工具
+  - DOMAIN-SUFFIX,figma.com,🎨 FIGMA
+  
   # > 订阅规则
   - RULE-SET,直连修正,DIRECT
-  - RULE-SET,Figma,🎨 FIGMA
-  # - RULE-SET,广告拦截,⛔️ 广告拦截
-  - RULE-SET,AI,✨ AI
-  - RULE-SET,国内流媒体,🎬 国内媒体
-  - RULE-SET,国外流媒体,🎬 国际媒体
   - RULE-SET,代理修正,🌍 全球加速
+  # - RULE-SET,广告拦截,⛔️ 广告拦截
+  - RULE-SET,AI,✨ AIGC
+  - RULE-SET,国内流媒体,🎬 国内媒体
+  - RULE-SET,国际流媒体,🎬 国际媒体
   - RULE-SET,代理列表,🌍 全球加速
   - RULE-SET,苹果服务,🍎 苹果服务
   - RULE-SET,国内网站,DIRECT
-  - RULE-SET,LAN,DIRECT
+  - RULE-SET,Lan,DIRECT
 
   # > GeoIP China
   - GEOIP,CN,DIRECT
