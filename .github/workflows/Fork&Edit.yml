@@ -52,7 +52,7 @@ jobs:
         curl -L -o ladder-repo/Clash/Rules/Apple.yaml "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Apple/Apple_Classical.yaml"
 
         # AI
-        curl -L -o ladder-repo/Clash/Rules/AI.yaml "https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Clash/Rules/Extra/AIGC.yaml"
+        curl -L -o ladder-repo/Clash/Rules/AI.yaml "https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Clash/Rules/Extra/AI.yaml"
         
         # WeChat
         curl -L -o ladder-repo/Clash/Rules/WeChat.yaml "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/WeChat/WeChat.yaml" 
