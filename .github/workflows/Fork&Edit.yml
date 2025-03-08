@@ -25,97 +25,97 @@ jobs:
     # 加载规则:Clash 🧸
     - name: Download Clash Rules
       run: |
-        mkdir -p ladder-repo/Rules/Clash
+        mkdir -p ladder-repo/Clash/Rules
         
         # 直连修正
-        curl -L -o ladder-repo/Rules/Clash/Direct+.yaml "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Direct/Direct.yaml"  
+        curl -L -o ladder-repo/Clash/Rules/Direct.yaml "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Direct/Direct.yaml"  
       
         # 代理修正
-        curl -L -o ladder-repo/Rules/Clash/Proxy+.yaml "https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/Extra/Proxy%2B.yaml"
+        curl -L -o ladder-repo/Clash/Rules/Proxy+.yaml "https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Clash/Rules/Extra/Proxy%2B.yaml"
 
         # 代理列表
-        curl -L -o ladder-repo/Rules/Clash/Proxy.yaml "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Proxy/Proxy_Classical.yaml"
+        curl -L -o ladder-repo/Clash/Rules/Proxy.yaml "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Proxy/Proxy_Classical.yaml"
 
-        # 直连列表
-        curl -L -o ladder-repo/Rules/Clash/Direct.yaml "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/China/China_Classical.yaml"
+        # 国内网站
+        curl -L -o ladder-repo/Clash/Rules/China.yaml "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/China/China_Classical.yaml"
 
         # LAN
-        curl -L -o ladder-repo/Rules/Clash/LAN.yaml "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Lan/Lan.yaml"
+        curl -L -o ladder-repo/Clash/Rules/LAN.yaml "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Lan/Lan.yaml"
         
         # 国际流媒体
-        curl -L -o ladder-repo/Rules/Clash/Streaming!CN.yaml "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia.yaml"
+        curl -L -o ladder-repo/Clash/Rules/GlobalMedia.yaml "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia_Classical.yaml"
 
         # 国内流媒体
-        curl -L -o ladder-repo/Rules/Clash/StreamingCN.yaml "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaMedia/ChinaMedia.yaml"
+        curl -L -o ladder-repo/Clash/Rules/ChinaMedia.yaml "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaMedia/ChinaMedia.yaml"
 
         # 苹果服务
-        curl -L -o ladder-repo/Rules/Clash/Apple.yaml "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Apple/Apple_Classical.yaml"
+        curl -L -o ladder-repo/Clash/Rules/Apple.yaml "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Apple/Apple_Classical.yaml"
 
         # AI
-        curl -L -o ladder-repo/Rules/Clash/AI.yaml "https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Rules/Clash/Extra/AIGC.yaml"
+        curl -L -o ladder-repo/Clash/Rules/AI.yaml "https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Clash/Rules/Extra/AIGC.yaml"
         
         # WeChat
-        curl -L -o ladder-repo/Rules/Clash/WeChat.yaml "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/WeChat/WeChat.yaml" 
+        curl -L -o ladder-repo/Clash/Rules/WeChat.yaml "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/WeChat/WeChat.yaml" 
 
 ######  
     # 加载规则:QuantumultX 🧸
     - name: Download QuantumultX Rules
       run: |
-        mkdir -p ladder-repo/Rules/QuantumultX
+        mkdir -p ladder-repo/QuantumultX/Rules
         
         # 直连修正
-        curl -L -o ladder-repo/Rules/QuantumultX/Direct+.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/Direct/Direct.list"  
+        curl -L -o ladder-repo/QuantumultX/Rules/Direct.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/Direct/Direct.list"  
 
         # 代理列表
-        curl -L -o ladder-repo/Rules/QuantumultX/Proxy.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/Proxy/Proxy.list"
+        curl -L -o ladder-repo/QuantumultX/Rules/Proxy.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/Proxy/Proxy.list"
 
-        # 直连列表
-        curl -L -o ladder-repo/Rules/QuantumultX/Direct.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/China/China.list"
+        # 国内网站
+        curl -L -o ladder-repo/QuantumultX/Rules/China.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/China/China.list"
 
         # LAN
-        curl -L -o ladder-repo/Rules/QuantumultX/LAN.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/Lan/Lan.list"
+        curl -L -o ladder-repo/QuantumultX/Rules/LAN.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/Lan/Lan.list"
         
         # 国际流媒体
-        curl -L -o ladder-repo/Rules/QuantumultX/Streaming!CN.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/GlobalMedia/GlobalMedia.list"
+        curl -L -o ladder-repo/QuantumultX/Rules/GlobalMedia.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/GlobalMedia/GlobalMedia.list"
 
         # 国内流媒体
-        curl -L -o ladder-repo/Rules/QuantumultX/StreamingCN.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/ChinaMedia/ChinaMedia.list"
+        curl -L -o ladder-repo/QuantumultX/Rules/ChinaMedia.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/ChinaMedia/ChinaMedia.list"
 
         # 苹果服务
-        curl -L -o ladder-repo/Rules/QuantumultX/Apple.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/Apple/Apple.list"
+        curl -L -o ladder-repo/QuantumultX/Rules/Apple.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/Apple/Apple.list"
         
         # WeChat
-        curl -L -o ladder-repo/Rules/QuantumultX/WeChat.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/WeChat/WeChat.list"   
+        curl -L -o ladder-repo/QuantumultX/Rules/WeChat.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/WeChat/WeChat.list"   
 
 ######  
     # 加载规则:Loon 🧸
     - name: Download Loon Rules
       run: |
-        mkdir -p ladder-repo/Rules/Loon
+        mkdir -p ladder-repo/Loon/Rules
         
         # 直连修正
-        curl -L -o ladder-repo/Rules/Loon/Direct+.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Direct/Direct.list"  
+        curl -L -o ladder-repo/Loon/Rules/Direct.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Direct/Direct.list"  
 
         # 代理列表
-        curl -L -o ladder-repo/Rules/Loon/Proxy.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Proxy/Proxy.list"
+        curl -L -o ladder-repo/Loon/Rules/Proxy.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Proxy/Proxy.list"
 
-        # 直连列表
-        curl -L -o ladder-repo/Rules/Loon/Direct.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/China/China.list"
+        # 国内网站
+        curl -L -o ladder-repo/Loon/Rules/China.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/China/China.list"
 
         # LAN
-        curl -L -o ladder-repo/Rules/Loon/LAN.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Lan/Lan.list"
+        curl -L -o ladder-repo/Loon/Rules/LAN.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Lan/Lan.list"
         
         # 国际流媒体
-        curl -L -o ladder-repo/Rules/Loon/Streaming!CN.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/GlobalMedia/GlobalMedia.list"
+        curl -L -o ladder-repo/Loon/Rules/GlobalMedia.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/GlobalMedia/GlobalMedia.list"
 
         # 国内流媒体
-        curl -L -o ladder-repo/Rules/Loon/StreamingCN.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/ChinaMedia/ChinaMedia.list"
+        curl -L -o ladder-repo/Loon/Rules/ChinaMedia.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/ChinaMedia/ChinaMedia.list"
 
         # 苹果服务
-        curl -L -o ladder-repo/Rules/Loon/Apple.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Apple/Apple.list"
+        curl -L -o ladder-repo/Loon/Rules/Apple.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Apple/Apple.list"
         
         # WeChat
-        curl -L -o ladder-repo/Rules/Loon/WeChat.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/WeChat/WeChat.list" 
+        curl -L -o ladder-repo/Loon/Rules/WeChat.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/WeChat/WeChat.list" 
 ######
     - name: Add 和 Commits
       run: |
