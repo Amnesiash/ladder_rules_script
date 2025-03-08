@@ -73,7 +73,7 @@ jobs:
         curl -L -o ladder-repo/QuantumultX/Rules/China.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/China/China.list"
 
         # LAN
-        curl -L -o ladder-repo/QuantumultX/Rules/LAN.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/Lan/Lan.list"
+        curl -L -o ladder-repo/QuantumultX/Rules/Lan.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/QuantumultX/Lan/Lan.list"
         
         # 国际流媒体
         curl -L -o ladder-repo/QuantumultX/Rules/GlobalMedia.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/GlobalMedia/GlobalMedia.list"
@@ -103,7 +103,7 @@ jobs:
         curl -L -o ladder-repo/Loon/Rules/China.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/China/China.list"
 
         # LAN
-        curl -L -o ladder-repo/Loon/Rules/LAN.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Lan/Lan.list"
+        curl -L -o ladder-repo/Loon/Rules/Lan.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Lan/Lan.list"
         
         # 国际流媒体
         curl -L -o ladder-repo/Loon/Rules/GlobalMedia.list "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/GlobalMedia/GlobalMedia.list"
