@@ -95,8 +95,8 @@ jobs:
             # 获取当前更新时间
             update_time=$(date +'%Y-%m-%d %H:%M:%S')
             # 在文件第一行和第二行添加更新时间和规则数量
-            awk -v update_time="$update_time" 'NR==1 {print "# 更新时间: " update_time} {print}' "$file" > tmpfile && mv tmpfile "$file"
-            awk -v count="$line_count" 'NR==2 {print "# 规则数量: " count} {print}' "$file" > tmpfile && mv tmpfile "$file"
+            awk -v update_time="$update_time" 'NR==1 {print "# UpdateTime: " update_time} {print}' "$file" > tmpfile && mv tmpfile "$file"
+            awk -v count="$line_count" 'NR==2 {print "# RuleCount: " count} {print}' "$file" > tmpfile && mv tmpfile "$file"
           else
             echo "$file not found."
           fi
