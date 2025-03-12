@@ -1,5 +1,5 @@
-# UpdateTime: 2025-03-12 16:08:57
-# RuleCount: 6384
+# UpdateTime: 2025-03-12 16:55:39
+# RuleCount: 6410
 payload:
   - DOMAIN,api.waqi.info
   - DOMAIN,aqi.aqicn.org
@@ -38,6 +38,7 @@ payload:
   - DOMAIN-SUFFIX,18board.com
   - DOMAIN-SUFFIX,18board.info
   - DOMAIN-SUFFIX,18comic.org
+  - DOMAIN-SUFFIX,18comic.vip
   - DOMAIN-SUFFIX,18onlygirls.com
   - DOMAIN-SUFFIX,18p2p.com
   - DOMAIN-SUFFIX,18virginsex.com
@@ -161,6 +162,7 @@ payload:
   - DOMAIN-SUFFIX,abc.xyz
   - DOMAIN-SUFFIX,abchinese.com
   - DOMAIN-SUFFIX,abclite.net
+  - DOMAIN-SUFFIX,abduzeedo.com
   - DOMAIN-SUFFIX,abebooks.co.uk
   - DOMAIN-SUFFIX,abebooks.com
   - DOMAIN-SUFFIX,ablwang.com
@@ -227,6 +229,7 @@ payload:
   - DOMAIN-SUFFIX,airtable.com
   - DOMAIN-SUFFIX,airvpn.org
   - DOMAIN-SUFFIX,aisex.com
+  - DOMAIN-SUFFIX,aishort.top
   - DOMAIN-SUFFIX,ait.org.tw
   - DOMAIN-SUFFIX,aiweiwei.com
   - DOMAIN-SUFFIX,aiweiweiblog.com
@@ -270,6 +273,7 @@ payload:
   - DOMAIN-SUFFIX,allowed.org
   - DOMAIN-SUFFIX,almasdarnews.com
   - DOMAIN-SUFFIX,almostmy.com
+  - DOMAIN-SUFFIX,alpacaml.com
   - DOMAIN-SUFFIX,alternate-tools.com
   - DOMAIN-SUFFIX,alternativeto.net
   - DOMAIN-SUFFIX,altrec.com
@@ -382,6 +386,7 @@ payload:
   - DOMAIN-SUFFIX,appspot.com
   - DOMAIN-SUFFIX,appsto.re
   - DOMAIN-SUFFIX,aptoide.com
+  - DOMAIN-SUFFIX,arca.live
   - DOMAIN-SUFFIX,arcgis.com
   - DOMAIN-SUFFIX,archive.fo
   - DOMAIN-SUFFIX,archive.is
@@ -677,6 +682,8 @@ payload:
   - DOMAIN-SUFFIX,bnn.co
   - DOMAIN-SUFFIX,bnrmetal.com
   - DOMAIN-SUFFIX,boardreader.com
+  - DOMAIN-SUFFIX,bocchi.ooo
+  - DOMAIN-SUFFIX,bocchi.site
   - DOMAIN-SUFFIX,bod.asia
   - DOMAIN-SUFFIX,bodog88.com
   - DOMAIN-SUFFIX,bolehvpn.net
@@ -1607,6 +1614,7 @@ payload:
   - DOMAIN-SUFFIX,eriversoft.com
   - DOMAIN-SUFFIX,erktv.com
   - DOMAIN-SUFFIX,ernestmandel.org
+  - DOMAIN-SUFFIX,ero-labs.com
   - DOMAIN-SUFFIX,erodaizensyu.com
   - DOMAIN-SUFFIX,erodoujinlog.com
   - DOMAIN-SUFFIX,erodoujinworld.com
@@ -1866,6 +1874,7 @@ payload:
   - DOMAIN-SUFFIX,fpmtmexico.org
   - DOMAIN-SUFFIX,fqok.org
   - DOMAIN-SUFFIX,fqrouter.com
+  - DOMAIN-SUFFIX,framercanvas.com
   - DOMAIN-SUFFIX,frank2019.me
   - DOMAIN-SUFFIX,franklc.com
   - DOMAIN-SUFFIX,freakshare.com
@@ -2972,6 +2981,7 @@ payload:
   - DOMAIN-SUFFIX,kompozer.net
   - DOMAIN-SUFFIX,konachan.com
   - DOMAIN-SUFFIX,kone.com
+  - DOMAIN-SUFFIX,koofr.net
   - DOMAIN-SUFFIX,koolsolutions.com
   - DOMAIN-SUFFIX,koornk.com
   - DOMAIN-SUFFIX,koranmandarin.com
@@ -3152,6 +3162,7 @@ payload:
   - DOMAIN-SUFFIX,lookpic.com
   - DOMAIN-SUFFIX,looktoronto.com
   - DOMAIN-SUFFIX,lotsawahouse.org
+  - DOMAIN-SUFFIX,lottielab.com
   - DOMAIN-SUFFIX,lotuslight.org.hk
   - DOMAIN-SUFFIX,lotuslight.org.tw
   - DOMAIN-SUFFIX,loved.hk
@@ -3315,6 +3326,7 @@ payload:
   - DOMAIN-SUFFIX,messenger.com
   - DOMAIN-SUFFIX,meta.com
   - DOMAIN-SUFFIX,metacafe.com
+  - DOMAIN-SUFFIX,metacubex.one
   - DOMAIN-SUFFIX,metafilter.com
   - DOMAIN-SUFFIX,metart.com
   - DOMAIN-SUFFIX,metarthunter.com
@@ -3332,6 +3344,7 @@ payload:
   - DOMAIN-SUFFIX,mh4u.org
   - DOMAIN-SUFFIX,michaelanti.com
   - DOMAIN-SUFFIX,michaelmarketl.com
+  - DOMAIN-SUFFIX,miconisomi.xii.jp
   - DOMAIN-SUFFIX,microsoft-falcon.io
   - DOMAIN-SUFFIX,microsoftapp.net
   - DOMAIN-SUFFIX,microsofttranslator.com
@@ -3380,6 +3393,7 @@ payload:
   - DOMAIN-SUFFIX,mirrorbooks.com
   - DOMAIN-SUFFIX,mirrormedia.mg
   - DOMAIN-SUFFIX,missav.com
+  - DOMAIN-SUFFIX,misskon.com
   - DOMAIN-SUFFIX,mist.vip
   - DOMAIN-SUFFIX,mit.edu
   - DOMAIN-SUFFIX,mitao.com.tw
@@ -3563,6 +3577,7 @@ payload:
   - DOMAIN-SUFFIX,namgyal.org
   - DOMAIN-SUFFIX,namgyalmonastery.org
   - DOMAIN-SUFFIX,namsisi.com
+  - DOMAIN-SUFFIX,namu.la
   - DOMAIN-SUFFIX,nanopool.org
   - DOMAIN-SUFFIX,nanyang.com
   - DOMAIN-SUFFIX,nanyangpost.com
@@ -4196,6 +4211,7 @@ payload:
   - DOMAIN-SUFFIX,pstatic.net
   - DOMAIN-SUFFIX,pt.im
   - DOMAIN-SUFFIX,pts.org.tw
+  - DOMAIN-SUFFIX,ptsearch.info
   - DOMAIN-SUFFIX,ptt.cc
   - DOMAIN-SUFFIX,pttgame.com
   - DOMAIN-SUFFIX,pttvan.org
@@ -4369,6 +4385,7 @@ payload:
   - DOMAIN-SUFFIX,rferl.org
   - DOMAIN-SUFFIX,rfi.fr
   - DOMAIN-SUFFIX,rfi.my
+  - DOMAIN-SUFFIX,rifabu.me 
   - DOMAIN-SUFFIX,rightbtc.com
   - DOMAIN-SUFFIX,rightster.com
   - DOMAIN-SUFFIX,rigpa.org
@@ -4809,6 +4826,7 @@ payload:
   - DOMAIN-SUFFIX,sstm.moe
   - DOMAIN-SUFFIX,sstmlt.moe
   - DOMAIN-SUFFIX,sstmlt.net
+  - DOMAIN-SUFFIX,ssy61.com
   - DOMAIN-SUFFIX,st.luluku.pw
   - DOMAIN-SUFFIX,stackoverflow.com
   - DOMAIN-SUFFIX,stage64.hk
@@ -5574,6 +5592,7 @@ payload:
   - DOMAIN-SUFFIX,usus.cc
   - DOMAIN-SUFFIX,utopianpal.com
   - DOMAIN-SUFFIX,uu-gg.com
+  - DOMAIN-SUFFIX,uu-gg.one
   - DOMAIN-SUFFIX,uujiasu.com
   - DOMAIN-SUFFIX,uukanshu.com
   - DOMAIN-SUFFIX,uvwxyz.xyz
@@ -5599,6 +5618,7 @@ payload:
   - DOMAIN-SUFFIX,v2fly.org
   - DOMAIN-SUFFIX,v2ray.com
   - DOMAIN-SUFFIX,v2raycn.com
+  - DOMAIN-SUFFIX,v2rayssr.com
   - DOMAIN-SUFFIX,v2raytech.com
   - DOMAIN-SUFFIX,valeursactuelles.com
   - DOMAIN-SUFFIX,valvesoftware.com
@@ -5757,6 +5777,7 @@ payload:
   - DOMAIN-SUFFIX,wailaike.net
   - DOMAIN-SUFFIX,wainao.me
   - DOMAIN-SUFFIX,waiwaier.com
+  - DOMAIN-SUFFIX,wallhaven.cc
   - DOMAIN-SUFFIX,wallmama.com
   - DOMAIN-SUFFIX,wallornot.org
   - DOMAIN-SUFFIX,wallpapercasa.com
@@ -6053,6 +6074,7 @@ payload:
   - DOMAIN-SUFFIX,xpud.org
   - DOMAIN-SUFFIX,xrentdvd.com
   - DOMAIN-SUFFIX,xsden.info
+  - DOMAIN-SUFFIX,xsgames.co
   - DOMAIN-SUFFIX,xskywalker.com
   - DOMAIN-SUFFIX,xskywalker.net
   - DOMAIN-SUFFIX,xt.com
@@ -6232,6 +6254,7 @@ payload:
   - DOMAIN-SUFFIX,zkiz.com
   - DOMAIN-SUFFIX,zmedia.com.tw
   - DOMAIN-SUFFIX,zodgame.us
+  - DOMAIN-SUFFIX,zodgame.xyz
   - DOMAIN-SUFFIX,zoho.com
   - DOMAIN-SUFFIX,zomobo.net
   - DOMAIN-SUFFIX,zonaeuropa.com
@@ -6262,6 +6285,7 @@ payload:
   - DOMAIN-SUFFIX,zzcartoon.com
   - DOMAIN-SUFFIX,zzcloud.me
   - DOMAIN-SUFFIX,zzux.com
+  - DOMAIN-KEYWORD,19j
   - DOMAIN-KEYWORD,1drv
   - DOMAIN-KEYWORD,1e100
   - DOMAIN-KEYWORD,abema
@@ -6269,12 +6293,14 @@ payload:
   - DOMAIN-KEYWORD,avtb
   - DOMAIN-KEYWORD,beetalk
   - DOMAIN-KEYWORD,blogspot
+  - DOMAIN-KEYWORD,bocchi
   - DOMAIN-KEYWORD,dlercloud
   - DOMAIN-KEYWORD,dropbox
   - DOMAIN-KEYWORD,facebook
   - DOMAIN-KEYWORD,fbcdn
   - DOMAIN-KEYWORD,gmail
   - DOMAIN-KEYWORD,google
+  - DOMAIN-KEYWORD,hanime
   - DOMAIN-KEYWORD,instagram
   - DOMAIN-KEYWORD,onedrive
   - DOMAIN-KEYWORD,paypal

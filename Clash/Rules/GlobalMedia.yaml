@@ -1,4 +1,4 @@
-# UpdateTime: 2025-03-12 16:08:57
+# UpdateTime: 2025-03-12 16:55:39
 # RuleCount: 2234
 payload:
   - DOMAIN,akmcdnoversea-tw.inter.ptqy.gitv.tv
@@ -535,13 +535,18 @@ payload:
   - DOMAIN-SUFFIX,gamer.com.tw
   - DOMAIN-SUFFIX,geraldoatlarge.com
   - DOMAIN-SUFFIX,getblueshift.com
+  - DOMAIN-SUFFIX,ggpht.cn
+  - DOMAIN-SUFFIX,ggpht.com
   - DOMAIN-SUFFIX,glasamerike.net
   - DOMAIN-SUFFIX,go-disneyworldgo.com
   - DOMAIN-SUFFIX,go.com
   - DOMAIN-SUFFIX,golos-ameriki.ru
   - DOMAIN-SUFFIX,golosameriki.com
   - DOMAIN-SUFFIX,gooddaychicago.com
+  - DOMAIN-SUFFIX,googlevideo.com
   - DOMAIN-SUFFIX,gorin.jp
+  - DOMAIN-SUFFIX,gvt1.com
+  - DOMAIN-SUFFIX,gvt2.com
   - DOMAIN-SUFFIX,haiwaikan.com
   - DOMAIN-SUFFIX,happyon.jp
   - DOMAIN-SUFFIX,hath.network
@@ -1023,6 +1028,7 @@ payload:
   - DOMAIN-SUFFIX,viacomcbspressexpress.com
   - DOMAIN-SUFFIX,viblast.com
   - DOMAIN-SUFFIX,video.a2z.com
+  - DOMAIN-SUFFIX,video.google.com
   - DOMAIN-SUFFIX,videos-f.jwpsrv.com
   - DOMAIN-SUFFIX,vidol.tv
   - DOMAIN-SUFFIX,viki.com
@@ -1086,33 +1092,16 @@ payload:
   - DOMAIN-SUFFIX,wetvinfo.com
   - DOMAIN-SUFFIX,whatthefox.com
   - DOMAIN-SUFFIX,whosthehost.com
+  - DOMAIN-SUFFIX,wide-youtube.l.google.com
   - DOMAIN-SUFFIX,wimpmusic.com
   - DOMAIN-SUFFIX,winticket.jp
+  - DOMAIN-SUFFIX,withyoutube.com
   - DOMAIN-SUFFIX,wofl.tv
   - DOMAIN-SUFFIX,woflthenewsstation.com
   - DOMAIN-SUFFIX,wogx.com
   - DOMAIN-SUFFIX,wwwhuluplus.com
   - DOMAIN-SUFFIX,yb.uncn.jp
   - DOMAIN-SUFFIX,youboranqs01.com
-  - DOMAIN-SUFFIX,z5.app
-  - DOMAIN-SUFFIX,z5.com
-  - DOMAIN-SUFFIX,zee5.com
-  - DOMAIN-SUFFIX,zee5.in
-  - DOMAIN-SUFFIX,zee5.tv
-  - DOMAIN-SUFFIX,zeebioskop.com
-  - DOMAIN-SUFFIX,zeetv.co.uk
-  - DOMAIN-SUFFIX,zeetv.com
-  - DOMAIN-SUFFIX,zeeuk.com
-  - DOMAIN-SUFFIX,zeriamerikes.com
-  - DOMAIN-SUFFIX,zype.com
-  - DOMAIN-SUFFIX,ggpht.cn
-  - DOMAIN-SUFFIX,ggpht.com
-  - DOMAIN-SUFFIX,googlevideo.com
-  - DOMAIN-SUFFIX,gvt1.com
-  - DOMAIN-SUFFIX,gvt2.com
-  - DOMAIN-SUFFIX,video.google.com
-  - DOMAIN-SUFFIX,wide-youtube.l.google.com
-  - DOMAIN-SUFFIX,withyoutube.com
   - DOMAIN-SUFFIX,youtu.be
   - DOMAIN-SUFFIX,youtube
   - DOMAIN-SUFFIX,youtube-nocookie.com
@@ -1284,6 +1273,17 @@ payload:
   - DOMAIN-SUFFIX,youtubemobilesupport.com
   - DOMAIN-SUFFIX,yt.be
   - DOMAIN-SUFFIX,ytimg.com
+  - DOMAIN-SUFFIX,z5.app
+  - DOMAIN-SUFFIX,z5.com
+  - DOMAIN-SUFFIX,zee5.com
+  - DOMAIN-SUFFIX,zee5.in
+  - DOMAIN-SUFFIX,zee5.tv
+  - DOMAIN-SUFFIX,zeebioskop.com
+  - DOMAIN-SUFFIX,zeetv.co.uk
+  - DOMAIN-SUFFIX,zeetv.com
+  - DOMAIN-SUFFIX,zeeuk.com
+  - DOMAIN-SUFFIX,zeriamerikes.com
+  - DOMAIN-SUFFIX,zype.com
   - DOMAIN-KEYWORD,abematv.akamaized.net
   - DOMAIN-KEYWORD,apiproxy-device-prod-nlb-
   - DOMAIN-KEYWORD,avoddashs
