@@ -86,8 +86,8 @@ jobs:
           if [ -f "$file" ]; then
             # 删除 USER-AGENT 和 URL-REGEX 规则
             sed -i -e '/^USER-AGENT/d' -e '/^URL-REGEX/d' "$file"
-            # 给每行规则开头增加 “-”
-            sed -i -e 's/^/ - /' "$file"
+            # 给每行规则开头增加缩进和 “-”
+            sed -i -e 's/^/  - /' "$file"
             # 新增一行 payload: 在最上方
             sed -i '1i payload:' "$file"
             # 计算排除了 payload 行的规则数量
