@@ -29,6 +29,7 @@ jobs:
             urls=(
                 "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Surge/Proxy/Proxy_All.list"
                 "https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Clash/Custom/AddProxy.list"
+                "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyGFWlist.list"
             )
             > ladder-repo/Ruleset/Proxy.list
             for url in "${urls[@]}"; do
