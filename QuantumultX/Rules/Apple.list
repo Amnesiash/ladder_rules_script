@@ -1,5 +1,5 @@
 # UpdateTime: Apple
-# RuleCount: 1599
+# RuleCount: 1576
 
 HOST,appldnld.apple.com.edgesuite.net,Apple
 HOST,apple-events.akamaized.net,Apple
@@ -1577,26 +1577,3 @@ IP-CIDR,198.183.17.0/24,Apple
 IP-CIDR,205.180.175.0/24,Apple
 IP-CIDR,63.92.224.0/19,Apple
 IP-CIDR,65.199.22.0/23,Apple
-USER-AGENT,*FindMyiPhone?,Apple
-USER-AGENT,*Music?,Apple
-USER-AGENT,*WeatherFoundation*,Apple
-USER-AGENT,*com.apple.Maps?,Apple
-USER-AGENT,*com.apple.mobileme.fmip1,Apple
-USER-AGENT,AppleNews*,Apple
-USER-AGENT,AppleTV*,Apple
-USER-AGENT,FMDClient*,Apple
-USER-AGENT,FMFD*,Apple
-USER-AGENT,FindMyFriends*,Apple
-USER-AGENT,FindMyiPhone*,Apple
-USER-AGENT,Maps*,Apple
-USER-AGENT,Music*,Apple
-USER-AGENT,Wallet*,Apple
-USER-AGENT,com.apple.Maps,Apple
-USER-AGENT,com.apple.appstored*,Apple
-USER-AGENT,com.apple.news*,Apple
-USER-AGENT,com.apple.trustd*,Apple
-USER-AGENT,com.apple.tv*,Apple
-USER-AGENT,fmflocatord*,Apple
-USER-AGENT,geod*,Apple
-USER-AGENT,locationd*,Apple
-USER-AGENT,passd*,Apple
