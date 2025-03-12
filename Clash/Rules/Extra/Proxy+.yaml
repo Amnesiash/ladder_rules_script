@@ -3,6 +3,7 @@ payload:
   # UPDATED: 2024-12-08
   
   # > 自用
+  - DOMAIN-SUFFIX,github.com
   - DOMAIN-SUFFIX,aishort.top
   - DOMAIN-SUFFIX,metacubex.one
   - DOMAIN-SUFFIX,catbox.moe
