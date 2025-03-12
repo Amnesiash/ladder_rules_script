@@ -79,8 +79,8 @@ jobs:
       run: |
         for file in ladder-repo/Ruleset/*.list ; do
           if [ -f "$file" ]; then
-            # 删除文件中所有 [以 # 或 ; 开头的注释行] + [空行] + [每行中 // 及其后面的内容]
-            sed -i -e '/^\s*[#;]/d' -e '/^$/d' -e 's| //.*||'  "$file"
+            # 删除文件中所有 [以 # 或 ; 开头的注释行] + [空行] + [每行中 // 及其后面的内容] + [,no-resolve]
+            sed -i -e '/^\s*[#;]/d' -e '/^$/d' -e 's| //.*||' -e 's/,no-resolve//g' "$file"
             # 修正格式
             sed -i 's/, */,/g' "$file"
           else
