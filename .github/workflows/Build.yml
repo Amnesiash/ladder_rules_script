@@ -3,8 +3,7 @@ name: Build
 on:
   workflow_dispatch:
   schedule:
-    # "早上8点与下午8点运行"
-    - cron: "0 8,20 * * *"
+    - cron: "5 0,12 * * *"
 
 jobs:
   Fork-FLITER-list:
@@ -19,44 +18,99 @@ jobs:
         repository: Amnesiash/ladder_rules_script
         path: ladder-repo
 
-######  
-    # 下载规则:Mihomo 🧸
-    - name: Download mihomo Rules
+    - name: Run Bash Script
       run: |
+        #!/bin/bash
         repo_name=$(basename "$GITHUB_REPOSITORY")
-          if [[ "$repo_name" == "ladder_rules_script" ]]; then
-            echo "Running in Tool repository"
-            mkdir -p ladder-repo/Mihomo/Rules
-            files=(
-                "Direct.yaml https://rule.kelee.one/Clash/Direct.yaml"
-                "Lan.yaml https://rule.kelee.one/Clash/Lan.yaml"
-                "ChinaMedia.yaml https://rule.kelee.one/Clash/ChinaMedia.yaml"
-                "GlobalMedia.yaml https://rule.kelee.one/Clash/GlobalMedia.yaml"
-                "Apple.yaml https://rule.kelee.one/Clash/Apple.yaml"
-                "Proxy.yaml https://rule.kelee.one/Clash/Proxy.yaml"
-                "China.yaml https://rule.kelee.one/Clash/China.yaml"
-              )
-              for file in "${files[@]}"; do
-                  set -- $file
-                  echo "Downloading: $2"
-                  curl -A "Loon/821" -f -L -o "ladder-repo/Mihomo/Rules/$1" "$2" || { echo "Download Failed: $2"; exit 1; }
-              done
-              echo "Files downloaded successfully."
+        if [[ "$repo_name" == "ladder_rules_script" ]]; then
+          echo "Running in Tool repository"
+          mkdir -p ladder-repo/Ruleset
+          files=(
+              # 直连修正
+              "Direct.list https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Direct/Direct.list"          
+              # LAN
+              "Lan.list https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Lan/Lan_Resolve.list"           
+              # 国内流媒体
+              "ChinaMedia.list https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaMedia/ChinaMedia_Resolve.list"
+              # 国际流媒体
+              "GlobalMedia.list https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GlobalMedia/GlobalMedia_All.list"
+              # 苹果服务
+              "Apple.list https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Apple/Apple_All.list"
+              # 代理列表
+              "Proxy.list https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Surge/Proxy/Proxy_All.list"
+              # 国内网站
+              "China.list https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/China/China_All.list"
+            )
+            for file in "${files[@]}"; do
+                set -- $file
+                echo "Downloading: $2"
+                curl -A "Surge iOS/3367" -f -L -o "ladder-repo/Ruleset/$1" "$2" || { echo "Download Failed: $2"; exit 1; }
+            done
+            echo "Files downloaded successfully."
         else
             echo "Unknown repository. Please run this script in either Tool or Tool repository."
             exit 1
         fi
 
-######
-    - name: Add 和 Commits
+    - name: Source build
+      run: |
+        for file in ladder-repo/Ruleset/*.list ; do
+          if [ -f "$file" ]; then
+            # 删除文件中所有 [以 # 或 ; 开头的注释行] + [空行] + [每行中 // 及其后面的内容]
+            sed -i -e '/^\s*[#;]/d' -e '/^$/d' -e 's| //.*||'  "$file"
+          else
+            echo "$file not found."
+          fi
+        done
+    
+    - name: Copy files
+      run: |
+        rm -rf ladder-repo/{QuantumultX,Mihomo}/Rules
+        mkdir -p ladder-repo/{QuantumultX,Mihomo}/Rules
+        for file in ladder-repo/Ruleset/*.list; do
+          filename=$(basename "$file")
+          for dir in QuantumultX; do
+            mkdir -p "ladder-repo/$dir/Rules"
+            cp "$file" "ladder-repo/$dir/Rules/$filename"
+          done
+          # 复制到 Mihomo 文件夹, 并将后缀改为.yaml
+          mkdir -p "ladder-repo/Mihomo/Rules"
+          cp "$file" "ladder-repo/Mihomo/Rules/${filename%.*}.yaml"
+        done
+        echo "Files copied successfully."
+
+    - name: Clash/Mihomo
+      run: |
+        rm -rf ladder-repo/Ruleset
+        for file in ladder-repo/Mihomo/Rules/*.yaml; do
+          if [ -f "$file" ]; then
+            # 删除 USER-AGENT 和 URL-REGEX 规则
+            sed -i -e '/^USER-AGENT/d' -e '/^URL-REGEX/d' "$file"
+            # 给每行规则开头增加 “-”
+            sed -i -e 's/^/ - /' "$file"
+            # 新增一行 payload: 在最上方
+            sed -i '1i payload:' "$file"
+            # 计算排除了 payload 行的规则数量
+            line_count=$(grep -v '^payload:' "$file" | wc -l)
+            # 获取当前更新时间
+            update_time=$(date +'%Y-%m-%d %H:%M:%S')
+            # 在文件第一行和第二行添加更新时间和规则数量
+            awk -v update_time="$update_time" 'NR==1 {print "# 更新时间: " update_time} {print}' "$file" > tmpfile && mv tmpfile "$file"
+            awk -v count="$line_count" 'NR==2 {print "# 规则数量: " count} {print}' "$file" > tmpfile && mv tmpfile "$file"
+          else
+            echo "$file not found."
+          fi
+        done
+
+    - name: Push Update
       run: |
         cd ladder-repo
         if [[ -n $(git status -s) ]]; then
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add .
-          git commit -m "Auto Update $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M')"
-          git push origin HEAD
+          git config --local user.email "${{ github.actor }}@users.noreply.github.com"
+          git config --local user.name "${{ github.actor }}"
+          git add -A
+          git commit -m "Auto Update $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')"
+          git push origin main
         else
           echo "No changes to commit."
         fi
