@@ -20,57 +20,23 @@ jobs:
         path: Tool-repo
         ref: main  # 确保克隆的是主分支
 
-    - name: Run Bash Script
+    - name: Download Rules
       run: |
-        #!/bin/bash
-        repo_name="ladder_rules_script"  # 确保 repo_name 正确
-        if [[ "$repo_name" == "ladder_rules_script" ]]; then
-            echo "Running in Tool repository"
-            mkdir -p Tool-repo/mihomo/Rules
-            # 下载规则
-            files=(
-                # 直连修正
-                "Direct.yaml https://rule.kelee.one/Clash/Direct.yaml"
-                # LAN
-                "Lan.yaml https://rule.kelee.one/Clash/Lan.yaml"
-                # 国内流媒体
-                "ChinaMedia.yaml https://rule.kelee.one/Clash/ChinaMedia.yaml"
-                # 国外流媒体
-                "GlobalMedia.yaml https://rule.kelee.one/Clash/GlobalMedia.yaml"
-                # 苹果服务
-                "Apple.yaml https://rule.kelee.one/Clash/Apple.yaml"
-                # 代理列表
-                "Proxy.yaml https://rule.kelee.one/Clash/Proxy.yaml"
-                # 国内网站
-                "China.yaml https://rule.kelee.one/Clash/China.yaml"
-            )
-            for file in "${files[@]}"; do
-                set -- $file
-                echo "Downloading: $2"
-                curl -A "Surge iOS/3367" -f -L -o "Tool-repo/mihomo/Rules/$1" "$2" || { echo "Download Failed: $2"; exit 1; }
-            done
-            echo "Files downloaded successfully."
-        else
-            echo "Unknown repository. Please run this script in either Tool or Tool repository."
-            exit 1
-        fi
-
-    - name: Process Files
-      run: |
-        for file in Tool-repo/mihomo/Rules/*.yaml; do
-          if [ -f "$file" ]; then
-            sed -i -e '/^USER-AGENT/d' "$file"
-            sed -i -e '/^URL-REGEX/d' "$file"
-            sed -i -e '/^AND/d' "$file"
-            file_names=$(basename "$file" .yaml)
-            line_count=$(wc -l < "$file")
-            awk -v fname="$file_names" 'NR==1 {print "# 规则名称: " fname} {print}' "$file" > tmpfile && mv tmpfile "$file"
-            awk -v count="$line_count" 'NR==2 {print "# 规则统计: " count} {print}' "$file" > tmpfile && mv tmpfile "$file"
-            sed -i '2a\\' "$file"
-          else
-            echo "$file not found."
-          fi
-        done
+        mkdir -p ladder_rules_script/mihomo/Rules
+        # 直连修正
+        curl -L -o Tool-repo/mihomo/Rules/Direct.yaml "https://rule.kelee.one/Clash/Direct.yaml"
+        # LAN
+        curl -L -o Tool-repo/mihomo/Rules/Lan.yaml "https://rule.kelee.one/Clash/Lan.yaml"
+        # 国内流媒体
+        curl -L -o Tool-repo/mihomo/Rules/ChinaMedia.yaml "https://rule.kelee.one/Clash/ChinaMedia.yaml"
+        # 国外流媒体
+        curl -L -o Tool-repo/mihomo/Rules/GlobalMedia.yaml "https://rule.kelee.one/Clash/GlobalMedia.yaml"
+        # 苹果服务
+        curl -L -o Tool-repo/mihomo/Rules/Apple.yaml "https://rule.kelee.one/Clash/Apple.yaml"
+        # 代理列表
+        curl -L -o Tool-repo/mihomo/Rules/Direct.yaml "Proxy.yaml https://rule.kelee.one/Clash/Proxy.yaml"
+        # 国内网站
+        curl -L -o Tool-repo/mihomo/Rules/China.yaml "https://rule.kelee.one/Clash/China.yaml"
 
     - name: Cleanup Workflow
       uses: Mattraks/delete-workflow-runs@main
