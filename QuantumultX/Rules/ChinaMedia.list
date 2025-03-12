@@ -1,5 +1,5 @@
 # UpdateTime: ChinaMedia
-# RuleCount: 388
+# RuleCount: 420
 
 HOST,00713915daab0be43def5c338c02c80b.dlied1.cdntips.net,ChinaMedia
 HOST,0gr4uqmtt8y41hcjsgrzdrc31.ourdvsss.com,ChinaMedia
@@ -389,3 +389,35 @@ IP6-CIDR,::ffff:58.58.0.90/128,ChinaMedia
 IP6-CIDR,::ffff:60.171.183.161/128,ChinaMedia
 IP6-CIDR,::ffff:60.171.183.186/128,ChinaMedia
 IP6-CIDR,::ffff:60.171.183.98/128,ChinaMedia
+USER-AGENT,%E4%BC%98%E9%85%B7*,ChinaMedia
+USER-AGENT,%E5%92%AA%E5%92%95%E8%A7%86%E9%A2%91,ChinaMedia
+USER-AGENT,%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90,ChinaMedia
+USER-AGENT,%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90*,ChinaMedia
+USER-AGENT,%E9%85%B7%E6%88%91%E9%9F%B3%E4%B9%90*,ChinaMedia
+USER-AGENT,*QIYI*,ChinaMedia
+USER-AGENT,*bili*,ChinaMedia
+USER-AGENT,AcFun*,ChinaMedia
+USER-AGENT,Bilibili*,ChinaMedia
+USER-AGENT,DomesticMedia*,ChinaMedia
+USER-AGENT,MGTV*,ChinaMedia
+USER-AGENT,MOO%E9%9F%B3%E4%B9%90*,ChinaMedia
+USER-AGENT,MOO*,ChinaMedia
+USER-AGENT,MiguVideo*,ChinaMedia
+USER-AGENT,NeteaseMusic*,ChinaMedia
+USER-AGENT,PPStream*,ChinaMedia
+USER-AGENT,QIYI*,ChinaMedia
+USER-AGENT,QQ%E9%9F%B3%E4%B9%90,ChinaMedia
+USER-AGENT,QQ%e9%9f%b3%e4%b9%90*,ChinaMedia
+USER-AGENT,QQMusic*,ChinaMedia
+USER-AGENT,QYPlayer*,ChinaMedia
+USER-AGENT,TencentMidasConnect*,ChinaMedia
+USER-AGENT,YYeTs*,ChinaMedia
+USER-AGENT,Youku*,ChinaMedia
+USER-AGENT,baiduyinyue,ChinaMedia
+USER-AGENT,bili*,ChinaMedia
+USER-AGENT,bili-inter*,ChinaMedia
+USER-AGENT,iQiYi*,ChinaMedia
+USER-AGENT,live4iphone*,ChinaMedia
+USER-AGENT,qqlive4iphone*,ChinaMedia
+USER-AGENT,walkman*,ChinaMedia
+USER-AGENT,xiami*,ChinaMedia

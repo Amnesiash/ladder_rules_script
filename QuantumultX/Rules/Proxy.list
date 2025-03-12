@@ -1,5 +1,5 @@
 # UpdateTime: Proxy
-# RuleCount: 6942
+# RuleCount: 6950
 
 HOST,api.waqi.info,Proxy
 HOST,aqi.aqicn.org,Proxy
@@ -6943,3 +6943,11 @@ IP6-CIDR,2001:67c:4e8::/48,Proxy
 IP6-CIDR,2001:b28:f23d::/48,Proxy
 IP6-CIDR,2001:b28:f23f::/48,Proxy
 IP6-CIDR,2a0a:f280::/32,Proxy
+USER-AGENT,Duolingo*,Proxy
+USER-AGENT,OneDrive*,Proxy
+USER-AGENT,PayPal*,Proxy
+USER-AGENT,Roam*,Proxy
+USER-AGENT,WhatsApp*,Proxy
+USER-AGENT,battleroyale*,Proxy
+USER-AGENT,com.apple.trustd*,Proxy
+USER-AGENT,hearthstone*,Proxy

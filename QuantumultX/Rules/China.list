@@ -1,5 +1,5 @@
 # UpdateTime: China
-# RuleCount: 3717
+# RuleCount: 3748
 
 HOST,analytics.strava.com,China
 HOST,blzddist1-a.akamaihd.net,China
@@ -3718,3 +3718,34 @@ IP6-CIDR,2a0b:b580::/48,China
 IP6-CIDR,2a0b:b581::/48,China
 IP6-CIDR,2a0b:b582::/48,China
 IP6-CIDR,2a0b:b583::/48,China
+USER-AGENT,%E4%B8%AD%E5%9B%BD%E5%B7%A5%E5%95%86%E9%93%B6%E8%A1%8C*,China
+USER-AGENT,%E4%BA%AC%E4%B8%9C%E5%88%B0%E5%AE%B6*,China
+USER-AGENT,%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1*,China
+USER-AGENT,%E4%BC%98%E9%85%B7*,China
+USER-AGENT,%E5%8D%B3%E5%88%BB*,China
+USER-AGENT,%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90*,China
+USER-AGENT,*Vainglory*,China
+USER-AGENT,AdBlock*,China
+USER-AGENT,Best%20Trace*,China
+USER-AGENT,MegaWerewolf*,China
+USER-AGENT,MicroMessenger%20Client,China
+USER-AGENT,MicroMessenger*,China
+USER-AGENT,MicroMessengerClient*,China
+USER-AGENT,Microsoft*,China
+USER-AGENT,Moke*,China
+USER-AGENT,NeteaseMusic*,China
+USER-AGENT,QQ*,China
+USER-AGENT,RemotePlay*,China
+USER-AGENT,TIM*,China
+USER-AGENT,TeamViewer*,China
+USER-AGENT,WeChat*,China
+USER-AGENT,WebTorrent*,China
+USER-AGENT,YYeTs*,China
+USER-AGENT,arrowio*,China
+USER-AGENT,balls*,China
+USER-AGENT,cmb*,China
+USER-AGENT,cmblife*,China
+USER-AGENT,eusoft_ting_en_iphone,China
+USER-AGENT,hearthstone*,China
+USER-AGENT,hide*,China
+USER-AGENT,ting_en,China
