@@ -1,41 +1,40 @@
-payload:
-  # 一些未被代理匹配到的网址
-  # UPDATED: 2024-12-08
-  
-  # > 自用
-  - DOMAIN-SUFFIX,aishort.top
-  - DOMAIN-SUFFIX,metacubex.one
-  - DOMAIN-SUFFIX,catbox.moe
-  - DOMAIN-SUFFIX,koofr.net
-  - DOMAIN-SUFFIX,lottielab.com
-  - DOMAIN-SUFFIX,framercanvas.com
-  - DOMAIN-SUFFIX,abduzeedo.com
-  - DOMAIN-SUFFIX,xsgames.co
-  - DOMAIN-SUFFIX,v2rayssr.com
-  - DOMAIN-SUFFIX,fanbox.cc
-  - DOMAIN-SUFFIX,huggingface.co
-  - DOMAIN-SUFFIX,ptsearch.info
-  - DOMAIN-SUFFIX,wallhaven.cc
-  - DOMAIN-SUFFIX,alpacaml.com
-  - DOMAIN-SUFFIX,arca.live
-  - DOMAIN-SUFFIX,namu.la
-  
-  # > 机场
-  - DOMAIN-SUFFIX,bocchi.ooo
-  - DOMAIN-SUFFIX,bocchi.site
-  - DOMAIN-KEYWORD,bocchi
-  - DOMAIN-SUFFIX,ssy61.com
-  
-  # > Game 18+
-  - DOMAIN-SUFFIX,uu-gg.one
-  - DOMAIN-SUFFIX,18comic.vip
-  - DOMAIN-SUFFIX,wnacg.com
-  - DOMAIN-SUFFIX,zodgame.xyz
-  - DOMAIN-SUFFIX,miconisomi.xii.jp
-  - DOMAIN-SUFFIX,ero-labs.com
-  
-  # > 18+
-  - DOMAIN-SUFFIX,misskon.com
-  - DOMAIN-SUFFIX,rifabu.me 
-  - DOMAIN-KEYWORD,19j
-  - DOMAIN-KEYWORD,hanime
+# 一些未被代理匹配到的网址
+# UPDATED: 2024-12-08
+
+# > 自用
+DOMAIN-SUFFIX,aishort.top
+DOMAIN-SUFFIX,metacubex.one
+DOMAIN-SUFFIX,catbox.moe
+DOMAIN-SUFFIX,koofr.net
+DOMAIN-SUFFIX,lottielab.com
+DOMAIN-SUFFIX,framercanvas.com
+DOMAIN-SUFFIX,abduzeedo.com
+DOMAIN-SUFFIX,xsgames.co
+DOMAIN-SUFFIX,v2rayssr.com
+DOMAIN-SUFFIX,fanbox.cc
+DOMAIN-SUFFIX,huggingface.co
+DOMAIN-SUFFIX,ptsearch.info
+DOMAIN-SUFFIX,wallhaven.cc
+DOMAIN-SUFFIX,alpacaml.com
+DOMAIN-SUFFIX,arca.live
+DOMAIN-SUFFIX,namu.la
+
+# > 机场
+DOMAIN-SUFFIX,bocchi.ooo
+DOMAIN-SUFFIX,bocchi.site
+DOMAIN-KEYWORD,bocchi
+DOMAIN-SUFFIX,ssy61.com
+
+# > Game 18+
+DOMAIN-SUFFIX,uu-gg.one
+DOMAIN-SUFFIX,18comic.vip
+DOMAIN-SUFFIX,wnacg.com
+DOMAIN-SUFFIX,zodgame.xyz
+DOMAIN-SUFFIX,miconisomi.xii.jp
+DOMAIN-SUFFIX,ero-labs.com
+
+# > 18+
+DOMAIN-SUFFIX,misskon.com
+DOMAIN-SUFFIX,rifabu.me 
+DOMAIN-KEYWORD,19j
+DOMAIN-KEYWORD,hanime
