@@ -65,24 +65,24 @@ jobs:
     
     - name: Copy files
       run: |
-        rm -rf ladder-repo/{QuantumultX,Mihomo}/Rules
-        mkdir -p ladder-repo/{QuantumultX,Mihomo}/Rules
+        rm -rf ladder-repo/{Clash,Loon,Shadowrocket}/Rules
+        mkdir -p ladder-repo/{Clash,Loon,Shadowrocket}/Rules
         for file in ladder-repo/Ruleset/*.list; do
           filename=$(basename "$file")
-          for dir in QuantumultX; do
+          for dir in Loon QuantumultX Shadowrocket; do
             mkdir -p "ladder-repo/$dir/Rules"
             cp "$file" "ladder-repo/$dir/Rules/$filename"
           done
-          # 复制到 Mihomo 文件夹, 并将后缀改为.yaml
-          mkdir -p "ladder-repo/Mihomo/Rules"
-          cp "$file" "ladder-repo/Mihomo/Rules/${filename%.*}.yaml"
+          # 复制到 Clash 文件夹, 并将后缀改为.yaml
+          mkdir -p "ladder-repo/Clash/Rules"
+          cp "$file" "ladder-repo/Clash/Rules/${filename%.*}.yaml"
         done
         echo "Files copied successfully."
 
     - name: Clash/Mihomo
       run: |
         rm -rf ladder-repo/Ruleset
-        for file in ladder-repo/Mihomo/Rules/*.yaml; do
+        for file in ladder-repo/Clash/Rules/*.yaml; do
           if [ -f "$file" ]; then
             # 删除 USER-AGENT 和 URL-REGEX 规则
             sed -i -e '/^USER-AGENT/d' -e '/^URL-REGEX/d' "$file"
@@ -97,6 +97,69 @@ jobs:
             # 在文件第一行和第二行添加更新时间和规则数量
             awk -v update_time="$update_time" 'NR==1 {print "# UpdateTime: " update_time} {print}' "$file" > tmpfile && mv tmpfile "$file"
             awk -v count="$line_count" 'NR==2 {print "# RuleCount: " count} {print}' "$file" > tmpfile && mv tmpfile "$file"
+          else
+            echo "$file not found."
+          fi
+        done
+
+    - name: QuantumultX
+      run: |
+        for file in ladder-repo/QuantumultX/Rules/*.list; do
+          if [ -f "$file" ]; then
+            sed -i -e '/^PROCESS-NAME/d' "$file"
+            sed -i -e '/^AND/d' "$file"
+            sed -i -e '/^OR/d' "$file"
+            sed -i -e '/^NOT/d' "$file"
+            sed -i -e '/^DEST-PORT/d' "$file"
+            sed -i -e 's/^DOMAIN,/HOST,/g' "$file"
+            sed -i -e 's/^DOMAIN-SUFFIX,/HOST-SUFFIX,/g' "$file"
+            sed -i -e 's/^DOMAIN-KEYWORD,/HOST-KEYWORD,/g' "$file"
+            sed -i -e 's/^DOMAIN-WILDCARD,/HOST-WILDCARD,/g' "$file"
+            sed -i -e 's/^IP-CIDR6,/IP6-CIDR,/g' "$file"
+            sed -i 's/,no-resolve//g' "$file"
+          else
+            echo "$file not found."
+          fi
+        done
+
+        for file in ladder-repo/QuantumultX/Rules/*.list; do
+          if [ -f "$file" ]; then
+            file_names=$(basename "$file" .list)
+            line_count=$(wc -l < "$file")
+            awk -v policy="$file_names" '!/^#|^ *$/ {print $0","policy; next} {print}' "$file" > tmpfile && mv tmpfile "$file"
+            awk -v fname="$file_names" 'NR==1 {print "# UpdateTime: " fname} {print}' "$file" > tmpfile && mv tmpfile "$file"
+            awk -v count="$line_count" 'NR==2 {print "# RuleCount: " count} {print}' "$file" > tmpfile && mv tmpfile "$file"
+            sed -i '2a\\' "$file"
+          else
+            echo "$file not found."
+          fi
+        done
+
+    - name: Loon
+      run: |
+        for file in ladder-repo/Loon/Rules/*.list; do
+          if [ -f "$file" ]; then
+            sed -i -e '/^PROCESS-NAME/d' "$file"
+            file_names=$(basename "$file" .list)
+            line_count=$(wc -l < "$file")
+            awk -v fname="$file_names" 'NR==1 {print "# UpdateTime: " fname} {print}' "$file" > tmpfile && mv tmpfile "$file"
+            awk -v count="$line_count" 'NR==2 {print "# RuleCount: " count} {print}' "$file" > tmpfile && mv tmpfile "$file"
+            sed -i '2a\\' "$file"
+          else
+            echo "$file not found."
+          fi
+        done
+
+    - name: Shadowrocket
+      run: |
+        for file in ladder-repo/Shadowrocket/Rules/*.list; do
+          if [ -f "$file" ]; then
+            sed -i -e '/^PROCESS-NAME/d' "$file"
+            file_names=$(basename "$file" .list)
+            line_count=$(wc -l < "$file")
+            awk -v fname="$file_names" 'NR==1 {print "# UpdateTime: " fname} {print}' "$file" > tmpfile && mv tmpfile "$file"
+            awk -v count="$line_count" 'NR==2 {print "# RuleCount: " count} {print}' "$file" > tmpfile && mv tmpfile "$file"
+            sed -i '2a\\' "$file"
           else
             echo "$file not found."
           fi
