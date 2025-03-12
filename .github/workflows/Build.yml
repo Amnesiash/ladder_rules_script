@@ -22,7 +22,7 @@ jobs:
     - name: Run Bash Script
       run: |
         #!/bin/bash
-        repo_name=$(basename "$GITHUB_REPOSITORY")
+        repo_name="ladder_rules_script"
         if [[ "$repo_name" == "ladder_rules_script" ]]; then
             echo "Running in Tool repository"
             mkdir -p Tool-repo/Ruleset
