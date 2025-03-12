@@ -23,28 +23,28 @@ jobs:
     # 下载规则:Mihomo 🧸
     - name: Download mihomo Rules
       run: |
-        mkdir -p ladder-repo/Clash/Rules
+        mkdir -p ladder-repo/Mihomo/Rules
         
         # 直连修正
-        curl -L -o ladder-repo/Clash/Rules/Direct.yaml "https://rule.kelee.one/Clash/Direct.yaml"
+        curl -L -o ladder-repo/Mihomo/Rules/Direct.yaml "https://rule.kelee.one/Clash/Direct.yaml"
       
         # LAN
-        curl -L -o ladder-repo/Clash/Rules/Lan.yaml "https://rule.kelee.one/Clash/Lan.yaml"
+        curl -L -o ladder-repo/Mihomo/Rules/Lan.yaml "https://rule.kelee.one/Clash/Lan.yaml"
         
         # 国内流媒体
-        curl -L -o ladder-repo/Clash/Rules/ChinaMedia.yaml "https://rule.kelee.one/Clash/ChinaMedia.yaml"
+        curl -L -o ladder-repo/Mihomo/Rules/ChinaMedia.yaml "https://rule.kelee.one/Clash/ChinaMedia.yaml"
 
         # 国际流媒体
-        curl -L -o ladder-repo/Clash/Rules/GlobalMedia.yaml "https://rule.kelee.one/Clash/GlobalMedia.yaml"
+        curl -L -o ladder-repo/Mihomo/Rules/GlobalMedia.yaml "https://rule.kelee.one/Clash/GlobalMedia.yaml"
 
         # 苹果服务
-        curl -L -o ladder-repo/Clash/Rules/Apple.yaml "https://rule.kelee.one/Clash/Apple.yaml"
+        curl -L -o ladder-repo/Mihomo/Rules/Apple.yaml "https://rule.kelee.one/Clash/Apple.yaml"
 
         # 代理列表
-        curl -L -o ladder-repo/Clash/Rules/Proxy.yaml "https://rule.kelee.one/Clash/Proxy.yaml"
+        curl -L -o ladder-repo/Mihomo/Rules/Proxy.yaml "https://rule.kelee.one/Clash/Proxy.yaml"
 
         # 国内网站
-        curl -L -o ladder-repo/Clash/Rules/China.yaml "https://rule.kelee.one/Clash/China.yaml"
+        curl -L -o ladder-repo/Mihomo/Rules/China.yaml "https://rule.kelee.one/Clash/China.yaml"
 
 ######
     - name: Add 和 Commits
