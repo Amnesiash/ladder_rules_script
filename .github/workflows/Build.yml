@@ -22,7 +22,7 @@ jobs:
 
     - name: Download Rules
       run: |
-        mkdir -p ladder_rules_script/mihomo/Rules
+        mkdir -p Tool-repo/mihomo/Rules
         # 直连修正
         curl -L -o Tool-repo/mihomo/Rules/Direct.yaml "https://rule.kelee.one/Clash/Direct.yaml"
         # LAN
@@ -34,7 +34,7 @@ jobs:
         # 苹果服务
         curl -L -o Tool-repo/mihomo/Rules/Apple.yaml "https://rule.kelee.one/Clash/Apple.yaml"
         # 代理列表
-        curl -L -o Tool-repo/mihomo/Rules/Direct.yaml "Proxy.yaml https://rule.kelee.one/Clash/Proxy.yaml"
+        curl -L -o Tool-repo/mihomo/Rules/Proxy.yaml "https://rule.kelee.one/Clash/Proxy.yaml"
         # 国内网站
         curl -L -o Tool-repo/mihomo/Rules/China.yaml "https://rule.kelee.one/Clash/China.yaml"
 
