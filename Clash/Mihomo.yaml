@@ -158,11 +158,6 @@ rule-providers:
     url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/Direct.yaml
     path: ./ruleset/Direct.yaml
 
-  代理修正: 
-    <<: *RuleSet_c
-    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/Proxy+.yaml
-    path: ./ruleset/Proxy+.yaml
-
   广告拦截: 
     <<: *RuleSet_d
     url: https://ghfast.top/https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
@@ -216,7 +211,6 @@ rules:
   
   # > 订阅规则
   - RULE-SET,直连修正,DIRECT
-  - RULE-SET,代理修正,🌍 全球加速
   # - RULE-SET,广告拦截,⛔️ 广告拦截
   - RULE-SET,AI,✨ AI
   - RULE-SET,国内流媒体,🎬 国内媒体
