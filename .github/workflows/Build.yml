@@ -25,6 +25,30 @@ jobs:
         if [[ "$repo_name" == "ladder_rules_script" ]]; then
           echo "Running in Tool repository"
           mkdir -p ladder-repo/Ruleset
+          # 合并 Proxy 规则
+            urls=(
+                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Surge/Proxy/Proxy_All.list"
+                "https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Clash/Custom/AddProxy.list"
+            )
+            > ladder-repo/Ruleset/Proxy.list
+            for url in "${urls[@]}"; do
+                echo "Downloading: $url"
+                curl -f -L "$url" >> ladder-repo/Ruleset/Proxy.list || { echo "Download Failed: $url"; exit 1; }
+                echo "" >> ladder-repo/Ruleset/Proxy.list
+            done
+          # 合并 AI 规则
+          urls=(
+              "https://raw.githubusercontent.com/ConnersHua/RuleGo/refs/heads/master/Surge/Ruleset/Extra/AI.list"
+              "https://raw.githubusercontent.com/Repcz/Tool/X/Surge/Custom/xAI.list"
+              "https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Custom/AI.list"
+          )
+          > ladder-repo/Ruleset/AI.list
+          for url in "${urls[@]}"; do
+              echo "Downloading: $url"
+              curl -f -L "$url" >> ladder-repo/Ruleset/AI.list || { echo "Download Failed: $url"; exit 1; }
+              echo "" >> ladder-repo/Ruleset/AI.list
+          done
+          # 下载规则
           files=(
               # 直连修正
               "Direct.list https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Direct/Direct.list"          
@@ -36,8 +60,6 @@ jobs:
               "GlobalMedia.list https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GlobalMedia/GlobalMedia_All.list"
               # 苹果服务
               "Apple.list https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Apple/Apple_All.list"
-              # 代理列表
-              "Proxy.list https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Surge/Proxy/Proxy_All.list"
               # 国内网站
               "China.list https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/China/China_All.list"
             )
@@ -58,11 +80,43 @@ jobs:
           if [ -f "$file" ]; then
             # 删除文件中所有 [以 # 或 ; 开头的注释行] + [空行] + [每行中 // 及其后面的内容]
             sed -i -e '/^\s*[#;]/d' -e '/^$/d' -e 's| //.*||'  "$file"
+            # 修正格式
+            sed -i 's/, */,/g' "$file"
           else
             echo "$file not found."
           fi
         done
-    
+
+    - name: Source sort
+      run: |
+        for file in ladder-repo/Ruleset/*.list ; do
+          if [ -f "$file" ]; then
+            sed -i -E '/^IP-CIDR,/!{/^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+\/[0-9]+/s/^/IP-CIDR,/}' "$file"
+            sed -i -E '/^IP-CIDR6,/!{/^[a-fA-F0-9]+:|([a-fA-F0-9]+:+)+[a-fA-F0-9]+\/[0-9]+/s/^/IP-CIDR6,/}' "$file"
+            awk '
+            /^DOMAIN,/         { print "0 " $0; next }
+            /^DOMAIN-SUFFIX,/  { print "1 " $0; next }
+            /^DOMAIN-KEYWORD,/ { print "2 " $0; next }
+            /^DOMAIN-WILDCARD,/{ print "3 " $0; next }
+            /^IP-CIDR,/        { print "4 " $0; next }
+            /^IP-CIDR6,/       { print "5 " $0; next }
+            /^IP-ASN,/         { print "6 " $0; next }
+            /^PROCESS-NAME,/   { print "7 " $0; next }
+            /^URL-REGEX,/      { print "8 " $0; next }
+            /^USER-AGENT,/     { print "9 " $0; next }
+            /^GEOIP,/          { print "10 " $0; next }
+            /^AND,/            { print "11 " $0; next }
+            /^OR,/             { print "12 " $0; next }
+            /^NOT,/            { print "13 " $0; next }
+            /^DEST-PORT,/      { print "14 " $0; next }
+                                { print "15 " $0; next }
+            ' "$file" | sort -k1,1n -k2,2 | cut -d' ' -f2- > "$file.sorted" && mv "$file.sorted" "$file"
+            awk '!seen[tolower($0)]++' "$file" > temp && mv temp "$file"
+          else
+            echo "$file not found."
+          fi
+        done
+
     - name: Copy files
       run: |
         rm -rf ladder-repo/{Clash,Loon,Shadowrocket}/Rules
