@@ -1,13 +1,5 @@
-# NAME: Apple
-# AUTHOR: blackmatrix7
-# REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-03-11 02:10:59
-# DOMAIN: 10
-# DOMAIN-KEYWORD: 7
-# DOMAIN-SUFFIX: 1549
-# IP-CIDR: 10
-# PROCESS-NAME: 13
-# TOTAL: 1589
+# UpdateTime: 2025-03-12 16:08:57
+# RuleCount: 1589
 payload:
   - DOMAIN,appldnld.apple.com.edgesuite.net
   - DOMAIN,apple-events.akamaized.net
