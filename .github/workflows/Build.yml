@@ -1,0 +1,101 @@
+name: Build
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "5 0,12 * * *"
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    env:
+      TZ: "Asia/Shanghai"
+      SING_BOX_VERSION: 1.10.5
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4.2.2
+      with:
+        repository: Amnesiash/ladder_rules_script
+        path: Tool-repo
+
+    - name: Run Bash Script
+      run: |
+        #!/bin/bash
+        repo_name=$(basename "$GITHUB_REPOSITORY")
+        if [[ "$repo_name" == "Tool" ]]; then
+            echo "Running in Tool repository"
+            mkdir -p Tool-repo/Ruleset
+            # 下载规则
+            files=(
+                # 直连修正
+                "Direct.yaml https://rule.kelee.one/Clash/Direct.yaml"
+                # LAN
+                "Lan.yaml https://rule.kelee.one/Clash/Lan.yaml"
+                # 国内流媒体
+                "ChinaMedia.yaml https://rule.kelee.one/Clash/ChinaMedia.yaml"
+                # 国外流媒体
+                "GlobalMedia.yaml https://rule.kelee.one/Clash/GlobalMedia.yaml"
+                # 苹果服务
+                "Apple.yaml https://rule.kelee.one/Clash/Apple.yaml"
+                # 代理列表
+                "Proxy.yaml https://rule.kelee.one/Clash/Proxy.yaml"
+                # 国内网站
+                "China.yaml https://rule.kelee.one/Clash/China.yaml"
+            )
+            for file in "${files[@]}"; do
+                set -- $file
+                echo "Downloading: $2"
+                curl -A "Surge iOS/3367" -f -L -o "Tool-repo/Ruleset/$1" "$2" || { echo "Download Failed: $2"; exit 1; }
+            done
+            echo "Files downloaded successfully."
+        else
+            echo "Unknown repository. Please run this script in either Tool or Tool repository."
+            exit 1
+        fi
+
+    - name: Copy files
+      run: |
+        rm -rf Tool-repo/mihomo/Rules
+        mkdir -p Tool-repo/mihomo/Rules
+        for file in Tool-repo/Ruleset/*.yaml; do
+          filename=$(basename "$file")
+          cp "$file" "Tool-repo/mihomo/Rules/$filename"
+        done
+        echo "Files copied successfully."
+
+    - name: Clash/mihomo
+      run: |
+        rm -rf Tool-repo/Ruleset
+        for file in Tool-repo/{Clash,mihomo}/Rules/*.list; do
+          if [ -f "$file" ]; then
+            sed -i -e '/^USER-AGENT/d' "$file"
+            sed -i -e '/^URL-REGEX/d' "$file"
+            file_names=$(basename "$file" .list)
+            line_count=$(wc -l < "$file")
+            awk -v fname="$file_names" 'NR==1 {print "# 规则名称: " fname} {print}' "$file" > tmpfile && mv tmpfile "$file"
+            awk -v count="$line_count" 'NR==2 {print "# 规则统计: " count} {print}' "$file" > tmpfile && mv tmpfile "$file"
+            sed -i '2a\\' "$file"
+          else
+            echo "$file not found."
+          fi
+        done
+
+    - name: Push Update
+      run: |
+        cd Tool-repo
+          if [[ -n $(git status -s) ]]; then
+            git config --local user.email "${{ github.actor }}@users.noreply.github.com"
+            git config --local user.name "${{ github.actor }}"
+            git add -A
+            git commit -m "Auto Update $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')"
+            git push origin X
+          else
+            echo "No changes to commit."
+          fi
+
+    - name: Cleanup Workflow
+      uses: Mattraks/delete-workflow-runs@main
+      with:
+        retain_days: 0
+        keep_minimum_runs: 2
