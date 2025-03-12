@@ -18,14 +18,15 @@ jobs:
       with:
         repository: Amnesiash/ladder_rules_script
         path: Tool-repo
+        ref: main  # 确保克隆的是主分支
 
     - name: Run Bash Script
       run: |
         #!/bin/bash
-        repo_name="ladder_rules_script"
+        repo_name="ladder_rules_script"  # 确保 repo_name 正确
         if [[ "$repo_name" == "ladder_rules_script" ]]; then
             echo "Running in Tool repository"
-            mkdir -p Tool-repo/Ruleset
+            mkdir -p Tool-repo/mihomo/Rules
             # 下载规则
             files=(
                 # 直连修正
@@ -46,7 +47,7 @@ jobs:
             for file in "${files[@]}"; do
                 set -- $file
                 echo "Downloading: $2"
-                curl -A "Surge iOS/3367" -f -L -o "Tool-repo/Ruleset/$1" "$2" || { echo "Download Failed: $2"; exit 1; }
+                curl -A "Surge iOS/3367" -f -L -o "Tool-repo/mihomo/Rules/$1" "$2" || { echo "Download Failed: $2"; exit 1; }
             done
             echo "Files downloaded successfully."
         else
@@ -54,19 +55,8 @@ jobs:
             exit 1
         fi
 
-    - name: Copy files
+    - name: Process Files
       run: |
-        rm -rf Tool-repo/mihomo/Rules
-        mkdir -p Tool-repo/mihomo/Rules
-        for file in Tool-repo/Ruleset/*.yaml; do
-          filename=$(basename "$file")
-          cp "$file" "Tool-repo/mihomo/Rules/$filename"
-        done
-        echo "Files copied successfully."
-
-    - name: Clash/mihomo
-      run: |
-        rm -rf Tool-repo/Ruleset
         for file in Tool-repo/mihomo/Rules/*.yaml; do
           if [ -f "$file" ]; then
             sed -i -e '/^USER-AGENT/d' "$file"
