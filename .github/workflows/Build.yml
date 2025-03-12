@@ -67,11 +67,12 @@ jobs:
     - name: Clash/mihomo
       run: |
         rm -rf Tool-repo/Ruleset
-        for file in Tool-repo/{Clash,mihomo}/Rules/*.list; do
+        for file in Tool-repo/mihomo/Rules/*.yaml; do
           if [ -f "$file" ]; then
             sed -i -e '/^USER-AGENT/d' "$file"
             sed -i -e '/^URL-REGEX/d' "$file"
-            file_names=$(basename "$file" .list)
+            sed -i -e '/^AND/d' "$file"
+            file_names=$(basename "$file" .yaml)
             line_count=$(wc -l < "$file")
             awk -v fname="$file_names" 'NR==1 {print "# 规则名称: " fname} {print}' "$file" > tmpfile && mv tmpfile "$file"
             awk -v count="$line_count" 'NR==2 {print "# 规则统计: " count} {print}' "$file" > tmpfile && mv tmpfile "$file"
