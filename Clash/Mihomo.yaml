@@ -140,15 +140,14 @@ i: &RuleSet_i {type: http, behavior: ipcidr, interval: 3600}
 proxy-groups:
   - {name: 🚀 节点选择, type: select, include-all-providers: true}
   # - {name: ⛔️ 广告拦截, type: select, proxies: [REJECT, DIRECT]}
-  - {name: 🌍 全球加速, type: select, proxies: [🇺🇳 全球策略, 🚀 节点选择, 🇭🇰 香港策略, 🇨🇳 台湾策略, 🇯🇵 日本策略, 🇸🇬 狮城策略, 🇺🇲 美国策略]}
-  - {name: 🎨 FIGMA, type: select, proxies: [DIRECT, 🚀 节点选择, 🇺🇳 全球策略, 🇭🇰 香港策略, 🇨🇳 台湾策略, 🇯🇵 日本策略, 🇸🇬 狮城策略, 🇺🇲 美国策略]}
+  - {name: 🌍 全球加速, type: select, proxies: [🇭🇰 香港策略, 🇨🇳 台湾策略, 🇯🇵 日本策略, 🇸🇬 狮城策略, 🇺🇲 美国策略, 🚀 节点选择]}
+  - {name: 🎨 FIGMA, type: select, proxies: [DIRECT, 🇭🇰 香港策略, 🇨🇳 台湾策略, 🇯🇵 日本策略, 🇸🇬 狮城策略, 🇺🇲 美国策略, 🚀 节点选择]}
   - {name: ✨ AI, type: select, proxies: [🇸🇬 狮城策略, 🇯🇵 日本策略, 🇺🇲 美国策略, 🚀 节点选择]}
-  - {name: 🎬 国内媒体, type: select, proxies: [DIRECT, 🚀 节点选择, 🇺🇳 全球策略, 🇭🇰 香港策略, 🇨🇳 台湾策略]}
-  - {name: 🎬 国际媒体, type: select, proxies: [🇺🇳 全球策略, 🚀 节点选择, 🇭🇰 香港策略, 🇨🇳 台湾策略, 🇯🇵 日本策略, 🇸🇬 狮城策略, 🇺🇲 美国策略]}
-  - {name: 🍎 苹果服务, type: select, proxies: [DIRECT, 🚀 节点选择, 🇺🇳 全球策略, 🇭🇰 香港策略, 🇨🇳 台湾策略, 🇯🇵 日本策略, 🇸🇬 狮城策略, 🇺🇲 美国策略]}
-  - {name: 🗑️ 兜底策略, type: select, proxies: [DIRECT, 🚀 节点选择, 🇺🇳 全球策略, 🇭🇰 香港策略, 🇨🇳 台湾策略, 🇯🇵 日本策略, 🇸🇬 狮城策略, 🇺🇲 美国策略]}
+  - {name: 🎬 国内媒体, type: select, proxies: [DIRECT, 🇭🇰 香港策略, 🇨🇳 台湾策略, 🚀 节点选择]}
+  - {name: 🎬 国际媒体, type: select, proxies: [🚀 节点选择, 🇭🇰 香港策略, 🇨🇳 台湾策略, 🇯🇵 日本策略, 🇸🇬 狮城策略, 🇺🇲 美国策略]}
+  - {name: 🍎 苹果服务, type: select, proxies: [DIRECT, 🇭🇰 香港策略, 🇨🇳 台湾策略, 🇯🇵 日本策略, 🇸🇬 狮城策略, 🇺🇲 美国策略, 🚀 节点选择]}
+  - {name: 🗑️ 兜底策略, type: select, proxies: [DIRECT, 🇭🇰 香港策略, 🇨🇳 台湾策略, 🇯🇵 日本策略, 🇸🇬 狮城策略, 🇺🇲 美国策略, 🚀 节点选择]}
 
-  - {name: 🇺🇳 全球策略, type: select, proxies: [🇺🇳 自动优选(全球), 🇺🇳 自动回退(全球), 🇺🇳 负载均衡(全球)]}
   - {name: 🇭🇰 香港策略, type: select, proxies: [🇭🇰 自动优选(香港), 🇭🇰 自动回退(香港), 🇭🇰 负载均衡(香港)]}
   - {name: 🇨🇳 台湾策略, type: select, proxies: [🇨🇳 自动优选(台湾), 🇨🇳 自动回退(台湾), 🇨🇳 负载均衡(台湾)]}
   - {name: 🇯🇵 日本策略, type: select, proxies: [🇯🇵 自动优选(日本), 🇯🇵 自动回退(日本), 🇯🇵 负载均衡(日本)]}
@@ -156,7 +155,6 @@ proxy-groups:
   - {name: 🇺🇲 美国策略, type: select, proxies: [🇺🇲 自动优选(美国), 🇺🇲 自动回退(美国), 🇺🇲 负载均衡(美国)]}
 
   # 最低延迟优选策略组
-  - {name: 🇺🇳 自动优选(全球), <<: *UrlTest}
   - {name: 🇭🇰 自动优选(香港), <<: *UrlTest, filter: *FilterHK}
   - {name: 🇨🇳 自动优选(台湾), <<: *UrlTest, filter: *FilterTW}
   - {name: 🇯🇵 自动优选(日本), <<: *UrlTest, filter: *FilterJP}
@@ -164,7 +162,6 @@ proxy-groups:
   - {name: 🇺🇲 自动优选(美国), <<: *UrlTest, filter: *FilterUS}
 
   # 自动回退策略组
-  - {name: 🇺🇳 自动回退(全球), <<: *FallBack}
   - {name: 🇭🇰 自动回退(香港), <<: *FallBack, filter: *FilterHK}
   - {name: 🇨🇳 自动回退(台湾), <<: *FallBack, filter: *FilterTW}
   - {name: 🇯🇵 自动回退(日本), <<: *FallBack, filter: *FilterJP}
@@ -172,7 +169,6 @@ proxy-groups:
   - {name: 🇺🇲 自动回退(美国), <<: *FallBack, filter: *FilterUS}
 
   # 负载均衡策略组
-  - {name: 🇺🇳 负载均衡(全球), <<: *LoadBalance}
   - {name: 🇭🇰 负载均衡(香港), <<: *LoadBalance, filter: *FilterHK}
   - {name: 🇨🇳 负载均衡(台湾), <<: *LoadBalance, filter: *FilterTW}
   - {name: 🇯🇵 负载均衡(日本), <<: *LoadBalance, filter: *FilterJP}
