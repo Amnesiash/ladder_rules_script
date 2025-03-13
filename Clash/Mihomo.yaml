@@ -27,8 +27,8 @@ external-controller: 127.0.0.1:9090   #外部控制器,可以使用 RESTful API 
 secret: 'clashpassword'
 
 geox-url:
-  geoip: 'https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat'
-  geosite: 'https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat'
+  # geoip: 'https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat'
+  # geosite: 'https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat'
   mmdb: 'https://raw.githubusercontent.com/Masaiki/GeoIP2-CN/release/Country.mmdb'
   asn: 'https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb'
 
@@ -54,7 +54,6 @@ sniffer:
 
   skip-domain:
     - Mijia Cloud
-    - +.push.apple.com
 
 tun:
   enable: true
@@ -67,10 +66,10 @@ tun:
 dns:
   enable: true              # 关闭将使用系统 DNS
   listen: 0.0.0.0:1053      # DNS监听地址
-  ipv6: false               # IPV6解析开关；如果为false，将返回ipv6结果为空
+  ipv6: true               # IPV6解析开关；如果为false，将返回ipv6结果为空
   prefer-h3: true           # 优先使用HTTP/3协议
   enhanced-mode: fake-ip    # 模式：redir-host或fake-ip
-  fake-ip-range: 198.18.0.1/16 # Fake-IP解析地址池
+  fake-ip-range: 28.0.0.1/8 # Fake-IP解析地址池
   fake-ip-filter:           # fake ip 白名单列表'以下地址不会下发fakeip映射用于连接
     - "*.lan"
     - "+.local"
@@ -88,10 +87,12 @@ dns:
     - "*.battle.net"
   default-nameserver:
     - 223.5.5.5
+    - 223.6.6.6
   nameserver:               # 默认DNS服务器，支持udp/tcp/dot/doh/doq
     - https://doh.pub/dns-query
-    - https://dns.alidns.com/dns-query
-  fallback:          # 国外 DNS 服务器
+    - https://223.5.5.5/dns-query#h3=true
+    - https://223.6.6.6/dns-query#h3=true
+  fallback:                 # 国外 DNS 服务器
     - https://8.8.8.8/dns-query
     - https://1.1.1.1/dns-query
     - https://dns.alidns.com/dns-query
@@ -106,8 +107,8 @@ dns:
       - '+.youtube.com'
   
 
-# 锚点 - 优选节点订阅参数 [每天更新一次订阅优选节点，每 300 秒一次健康检查]
-NodeParam: &NodeParam {type: http, interval: 43200, health-check: {enable: true, url: https://www.gstatic.com/generate_204, interval: 300}}
+# 锚点 - 优选节点订阅参数 [每半天更新一次订阅优选节点，每 6 秒一次健康检查]
+NodeParam: &NodeParam {type: http, interval: 3600, health-check: {enable: true, url: http://www.gstatic.com/generate_204, interval: 6}}
 
 # 锚点 - 优选节点订阅
 proxy-providers:
@@ -123,32 +124,60 @@ FilterJP: &FilterJP '^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼�
 FilterSG: &FilterSG '^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
 FilterUS: &FilterUS '^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
 
-# 锚点 - 优选参数 [每 6 秒一次惰性健康检查，容差 20ms，超过 5 秒判定为失败，失败 3 次则自动触发健康检查]
-UrlTest: &UrlTest {type: url-test, url: 'https://www.gstatic.com/generate_204', interval: 6, tolerance: 20, lazy: true, timeout: 5000, max-failed-times: 3, include-all: true}
-# 锚点 - 规则参数 [每 12 小时更新一次订阅规则，更新规则时使用直连策略]
-c: &RuleSet_c {type: http, behavior: classical, interval: 86400}
-d: &RuleSet_d {type: http, behavior: domain, interval: 86400}
-i: &RuleSet_i {type: http, behavior: ipcidr, interval: 86400}
+# 策略组参数锚点
+# 锚点 - 自动优选参数 [每 6 秒一次惰性健康检查，容差 20ms，超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
+UrlTest: &UrlTest {type: url-test, url: 'https://www.gstatic.com/generate_204', interval: 6, tolerance: 20, lazy: true, timeout: 2000, max-failed-times: 3, hidden: true, include-all-providers: true}
+# 锚点 - 自动回退参数 [每 6 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
+FallBack: &FallBack {type: fallback, url: 'https://www.gstatic.com/generate_204', interval: 6, lazy: true, timeout: 2000, max-failed-times: 3, hidden: true, include-all-providers: true}
+# 锚点 - 负载均衡参数 [每 6 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
+LoadBalance: &LoadBalance {type: load-balance, url: 'https://www.gstatic.com/generate_204', strategy: consistent-hashing, interval: 6, lazy: true, timeout: 2000, max-failed-times: 3, hidden: true, include-all-providers: true}
+# 锚点 - 规则参数 [每小时更新一次订阅规则，更新规则时使用直连策略]
+c: &RuleSet_c {type: http, behavior: classical, interval: 3600}
+d: &RuleSet_d {type: http, behavior: domain, interval: 3600}
+i: &RuleSet_i {type: http, behavior: ipcidr, interval: 3600}
 
 # 策略组
 proxy-groups:
-  - {name: 🚀 节点选择, type: select, include-all: true}
+  - {name: 🚀 节点选择, type: select, include-all-providers: true}
   # - {name: ⛔️ 广告拦截, type: select, proxies: [REJECT, DIRECT]}
-  - {name: 🌍 全球加速, type: select, proxies: [♻️ 自动选择, 🚀 节点选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
-  - {name: 🎨 FIGMA, type: select, proxies: [DIRECT, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
-  - {name: ✨ AI, type: select, proxies: [🇸🇬 狮城优选, 🇯🇵 日本优选, 🇺🇲 美国优选, 🚀 节点选择]}
-  - {name: 🎬 国内媒体, type: select, proxies: [DIRECT, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选]}
-  - {name: 🎬 国际媒体, type: select, proxies: [♻️ 自动选择, 🚀 节点选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
-  - {name: 🍎 苹果服务, type: select, proxies: [DIRECT, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
-  - {name: 🗑️ 兜底策略, type: select, proxies: [DIRECT, 🚀 节点选择, ♻️ 自动选择, 🇭🇰 香港优选, 🇨🇳 台湾优选, 🇯🇵 日本优选, 🇸🇬 狮城优选, 🇺🇲 美国优选]}
+  - {name: 🌍 全球加速, type: select, proxies: [🇺🇳 全球策略, 🚀 节点选择, 🇭🇰 香港策略, 🇨🇳 台湾策略, 🇯🇵 日本策略, 🇸🇬 狮城策略, 🇺🇲 美国策略]}
+  - {name: 🎨 FIGMA, type: select, proxies: [DIRECT, 🚀 节点选择, 🇺🇳 全球策略, 🇭🇰 香港策略, 🇨🇳 台湾策略, 🇯🇵 日本策略, 🇸🇬 狮城策略, 🇺🇲 美国策略]}
+  - {name: ✨ AI, type: select, proxies: [🇸🇬 狮城策略, 🇯🇵 日本策略, 🇺🇲 美国策略, 🚀 节点选择]}
+  - {name: 🎬 国内媒体, type: select, proxies: [DIRECT, 🚀 节点选择, 🇺🇳 全球策略, 🇭🇰 香港策略, 🇨🇳 台湾策略]}
+  - {name: 🎬 国际媒体, type: select, proxies: [🇺🇳 全球策略, 🚀 节点选择, 🇭🇰 香港策略, 🇨🇳 台湾策略, 🇯🇵 日本策略, 🇸🇬 狮城策略, 🇺🇲 美国策略]}
+  - {name: 🍎 苹果服务, type: select, proxies: [DIRECT, 🚀 节点选择, 🇺🇳 全球策略, 🇭🇰 香港策略, 🇨🇳 台湾策略, 🇯🇵 日本策略, 🇸🇬 狮城策略, 🇺🇲 美国策略]}
+  - {name: 🗑️ 兜底策略, type: select, proxies: [DIRECT, 🚀 节点选择, 🇺🇳 全球策略, 🇭🇰 香港策略, 🇨🇳 台湾策略, 🇯🇵 日本策略, 🇸🇬 狮城策略, 🇺🇲 美国策略]}
+
+  - {name: 🇺🇳 全球策略, type: select, proxies: [🇺🇳 自动优选(全球), 🇺🇳 自动回退(全球), 🇺🇳 负载均衡(全球)]}
+  - {name: 🇭🇰 香港策略, type: select, proxies: [🇭🇰 自动优选(香港), 🇭🇰 自动回退(香港), 🇭🇰 负载均衡(香港)]}
+  - {name: 🇨🇳 台湾策略, type: select, proxies: [🇨🇳 自动优选(台湾), 🇨🇳 自动回退(台湾), 🇨🇳 负载均衡(台湾)]}
+  - {name: 🇯🇵 日本策略, type: select, proxies: [🇯🇵 自动优选(日本), 🇯🇵 自动回退(日本), 🇯🇵 负载均衡(日本)]}
+  - {name: 🇸🇬 狮城策略, type: select, proxies: [🇸🇬 自动优选(狮城), 🇸🇬 自动回退(狮城), 🇸🇬 负载均衡(狮城)]}
+  - {name: 🇺🇲 美国策略, type: select, proxies: [🇺🇲 自动优选(美国), 🇺🇲 自动回退(美国), 🇺🇲 负载均衡(美国)]}
 
   # 最低延迟优选策略组
-  - {name: ♻️ 自动选择, <<: *UrlTest}
-  - {name: 🇭🇰 香港优选, <<: *UrlTest, filter: *FilterHK}
-  - {name: 🇨🇳 台湾优选, <<: *UrlTest, filter: *FilterTW}  
-  - {name: 🇯🇵 日本优选, <<: *UrlTest, filter: *FilterJP}
-  - {name: 🇸🇬 狮城优选, <<: *UrlTest, filter: *FilterSG}
-  - {name: 🇺🇲 美国优选, <<: *UrlTest, filter: *FilterUS}
+  - {name: 🇺🇳 自动优选(全球), <<: *UrlTest}
+  - {name: 🇭🇰 自动优选(香港), <<: *UrlTest, filter: *FilterHK}
+  - {name: 🇨🇳 自动优选(台湾), <<: *UrlTest, filter: *FilterTW}
+  - {name: 🇯🇵 自动优选(日本), <<: *UrlTest, filter: *FilterJP}
+  - {name: 🇸🇬 自动优选(狮城), <<: *UrlTest, filter: *FilterSG}
+  - {name: 🇺🇲 自动优选(美国), <<: *UrlTest, filter: *FilterUS}
+
+  # 自动回退策略组
+  - {name: 🇺🇳 自动回退(全球), <<: *FallBack}
+  - {name: 🇭🇰 自动回退(香港), <<: *FallBack, filter: *FilterHK}
+  - {name: 🇨🇳 自动回退(台湾), <<: *FallBack, filter: *FilterTW}
+  - {name: 🇯🇵 自动回退(日本), <<: *FallBack, filter: *FilterJP}
+  - {name: 🇸🇬 自动回退(狮城), <<: *FallBack, filter: *FilterSG}
+  - {name: 🇺🇲 自动回退(美国), <<: *FallBack, filter: *FilterUS}
+
+  # 负载均衡策略组
+  - {name: 🇺🇳 负载均衡(全球), <<: *LoadBalance}
+  - {name: 🇭🇰 负载均衡(香港), <<: *LoadBalance, filter: *FilterHK}
+  - {name: 🇨🇳 负载均衡(台湾), <<: *LoadBalance, filter: *FilterTW}
+  - {name: 🇯🇵 负载均衡(日本), <<: *LoadBalance, filter: *FilterJP}
+  - {name: 🇸🇬 负载均衡(狮城), <<: *LoadBalance, filter: *FilterSG}
+  - {name: 🇺🇲 负载均衡(美国), <<: *LoadBalance, filter: *FilterUS}
 
 # 订阅规则
 rule-providers:
