@@ -144,7 +144,7 @@ proxy-groups:
   - {name: 🎨 FIGMA, type: select, proxies: [DIRECT, 🇭🇰 香港策略, 🇨🇳 台湾策略, 🇯🇵 日本策略, 🇸🇬 狮城策略, 🇺🇲 美国策略, 🚀 节点选择]}
   - {name: ✨ AI, type: select, proxies: [🇸🇬 狮城策略, 🇯🇵 日本策略, 🇺🇲 美国策略, 🚀 节点选择]}
   - {name: 🎬 国内媒体, type: select, proxies: [DIRECT, 🇭🇰 香港策略, 🇨🇳 台湾策略, 🚀 节点选择]}
-  - {name: 🎬 国际媒体, type: select, proxies: [🚀 节点选择, 🇭🇰 香港策略, 🇨🇳 台湾策略, 🇯🇵 日本策略, 🇸🇬 狮城策略, 🇺🇲 美国策略]}
+  - {name: 🎬 国际媒体, type: select, proxies: [🇭🇰 香港策略, 🇨🇳 台湾策略, 🇯🇵 日本策略, 🇸🇬 狮城策略, 🇺🇲 美国策略, 🚀 节点选择]}
   - {name: 🍎 苹果服务, type: select, proxies: [DIRECT, 🇭🇰 香港策略, 🇨🇳 台湾策略, 🇯🇵 日本策略, 🇸🇬 狮城策略, 🇺🇲 美国策略, 🚀 节点选择]}
   - {name: 🗑️ 兜底策略, type: select, proxies: [DIRECT, 🇭🇰 香港策略, 🇨🇳 台湾策略, 🇯🇵 日本策略, 🇸🇬 狮城策略, 🇺🇲 美国策略, 🚀 节点选择]}
 
