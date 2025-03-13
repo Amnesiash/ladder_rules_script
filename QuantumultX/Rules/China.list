@@ -1,5 +1,5 @@
 # UpdateTime: China
-# RuleCount: 3748
+# RuleCount: 3752
 
 HOST,analytics.strava.com,China
 HOST,blzddist1-a.akamaihd.net,China
@@ -608,6 +608,7 @@ HOST-SUFFIX,boosj.com,China
 HOST-SUFFIX,bootcdn.net,China
 HOST-SUFFIX,bootcss.com,China
 HOST-SUFFIX,bosera.com,China
+HOST-SUFFIX,bosszhipin.com,China
 HOST-SUFFIX,broadcasthe.net,China
 HOST-SUFFIX,browserleaks.com,China
 HOST-SUFFIX,bstatic.com,China
@@ -1557,6 +1558,7 @@ HOST-SUFFIX,heytapcs.com,China
 HOST-SUFFIX,heytapdownload.com,China
 HOST-SUFFIX,heytapimage.com,China
 HOST-SUFFIX,heytapmobi.com,China
+HOST-SUFFIX,heytea-co.com,China
 HOST-SUFFIX,heytea.com,China
 HOST-SUFFIX,hftfund.com,China
 HOST-SUFFIX,hhtravel.com,China
@@ -2208,6 +2210,8 @@ HOST-SUFFIX,lrts.me,China
 HOST-SUFFIX,lsplayer.com,China
 HOST-SUFFIX,lu.com,China
 HOST-SUFFIX,lucifr.com,China
+HOST-SUFFIX,luckincdn.com,China
+HOST-SUFFIX,luckincoffee.com,China
 HOST-SUFFIX,luckincoffeecdn.com,China
 HOST-SUFFIX,luckyair.net,China
 HOST-SUFFIX,ludashi.com,China

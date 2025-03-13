@@ -1,5 +1,5 @@
-# UpdateTime: 2025-03-12 22:14:45
-# RuleCount: 3717
+# UpdateTime: 2025-03-13 09:23:38
+# RuleCount: 3721
 payload:
   - DOMAIN,analytics.strava.com
   - DOMAIN,blzddist1-a.akamaihd.net
@@ -608,6 +608,7 @@ payload:
   - DOMAIN-SUFFIX,bootcdn.net
   - DOMAIN-SUFFIX,bootcss.com
   - DOMAIN-SUFFIX,bosera.com
+  - DOMAIN-SUFFIX,bosszhipin.com
   - DOMAIN-SUFFIX,broadcasthe.net
   - DOMAIN-SUFFIX,browserleaks.com
   - DOMAIN-SUFFIX,bstatic.com
@@ -1557,6 +1558,7 @@ payload:
   - DOMAIN-SUFFIX,heytapdownload.com
   - DOMAIN-SUFFIX,heytapimage.com
   - DOMAIN-SUFFIX,heytapmobi.com
+  - DOMAIN-SUFFIX,heytea-co.com
   - DOMAIN-SUFFIX,heytea.com
   - DOMAIN-SUFFIX,hftfund.com
   - DOMAIN-SUFFIX,hhtravel.com
@@ -2208,6 +2210,8 @@ payload:
   - DOMAIN-SUFFIX,lsplayer.com
   - DOMAIN-SUFFIX,lu.com
   - DOMAIN-SUFFIX,lucifr.com
+  - DOMAIN-SUFFIX,luckincdn.com
+  - DOMAIN-SUFFIX,luckincoffee.com
   - DOMAIN-SUFFIX,luckincoffeecdn.com
   - DOMAIN-SUFFIX,luckyair.net
   - DOMAIN-SUFFIX,ludashi.com
