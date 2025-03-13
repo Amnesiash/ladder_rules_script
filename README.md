@@ -27,4 +27,4 @@
 ## 感谢
 
 以下排名不分先后
-[@ACL4SSR](https://github.com/ACL4SSR) [@ConnersHua](https://github.com/ConnersHua)[blackmatrix7](https://github.com/blackmatrix7)
+[@ACL4SSR](https://github.com/ACL4SSR) [@ConnersHua](https://github.com/ConnersHua) [@blackmatrix7](https://github.com/blackmatrix7)
