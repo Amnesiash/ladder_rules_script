@@ -1,5 +1,5 @@
-# UpdateTime: 2025-03-15 20:32:30
-# RuleCount: 6953
+# UpdateTime: 2025-03-16 09:35:49
+# RuleCount: 6952
 payload:
   - DOMAIN,api.waqi.info
   - DOMAIN,aqi.aqicn.org
@@ -1846,7 +1846,6 @@ payload:
   - DOMAIN-SUFFIX,fartit.com
   - DOMAIN-SUFFIX,farwestchina.com
   - DOMAIN-SUFFIX,fastestvpn.com
-  - DOMAIN-SUFFIX,fastgpt.run
   - DOMAIN-SUFFIX,fastly.net
   - DOMAIN-SUFFIX,fastmail.com
   - DOMAIN-SUFFIX,fastpic.ru

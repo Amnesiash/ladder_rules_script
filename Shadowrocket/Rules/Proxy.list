@@ -1,5 +1,5 @@
 # UpdateTime: Proxy
-# RuleCount: 6961
+# RuleCount: 6960
 
 DOMAIN,api.waqi.info
 DOMAIN,aqi.aqicn.org
@@ -1846,7 +1846,6 @@ DOMAIN-SUFFIX,faqserv.com
 DOMAIN-SUFFIX,fartit.com
 DOMAIN-SUFFIX,farwestchina.com
 DOMAIN-SUFFIX,fastestvpn.com
-DOMAIN-SUFFIX,fastgpt.run
 DOMAIN-SUFFIX,fastly.net
 DOMAIN-SUFFIX,fastmail.com
 DOMAIN-SUFFIX,fastpic.ru

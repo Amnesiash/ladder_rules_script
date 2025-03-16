@@ -1,5 +1,5 @@
 # UpdateTime: Proxy
-# RuleCount: 6961
+# RuleCount: 6960
 
 HOST,api.waqi.info,Proxy
 HOST,aqi.aqicn.org,Proxy
@@ -1846,7 +1846,6 @@ HOST-SUFFIX,faqserv.com,Proxy
 HOST-SUFFIX,fartit.com,Proxy
 HOST-SUFFIX,farwestchina.com,Proxy
 HOST-SUFFIX,fastestvpn.com,Proxy
-HOST-SUFFIX,fastgpt.run,Proxy
 HOST-SUFFIX,fastly.net,Proxy
 HOST-SUFFIX,fastmail.com,Proxy
 HOST-SUFFIX,fastpic.ru,Proxy
