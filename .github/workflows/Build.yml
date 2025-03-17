@@ -37,6 +37,17 @@ jobs:
                 curl -f -L "$url" >> ladder-repo/Ruleset/Proxy.list || { echo "Download Failed: $url"; exit 1; }
                 echo "" >> ladder-repo/Ruleset/Proxy.list
             done
+          # 合并 ChinaMedia 规则
+          urls=(
+              "https://raw.githubusercontent.com/ConnersHua/RuleGo/refs/heads/master/Surge/Ruleset/Extra/Streaming/CN.list"
+              "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaMedia.list"
+          )
+          > ladder-repo/Ruleset/ChinaMedia.list
+          for url in "${urls[@]}"; do
+              echo "Downloading: $url"
+              curl -f -L "$url" >> ladder-repo/Ruleset/ChinaMedia.list || { echo "Download Failed: $url"; exit 1; }
+              echo "" >> ladder-repo/Ruleset/ChinaMedia.list
+          done
           # 合并 AI 规则
           urls=(
               "https://raw.githubusercontent.com/ConnersHua/RuleGo/refs/heads/master/Surge/Ruleset/Extra/AI.list"
@@ -55,8 +66,6 @@ jobs:
               "Direct.list https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Direct/Direct.list"          
               # LAN
               "Lan.list https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Lan/Lan_Resolve.list"           
-              # 国内流媒体
-              "ChinaMedia.list https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaMedia/ChinaMedia_Resolve.list"
               # 国际流媒体
               "GlobalMedia.list https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GlobalMedia/GlobalMedia_All.list"
               # 苹果服务
