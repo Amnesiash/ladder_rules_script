@@ -1,5 +1,5 @@
-# UpdateTime: 2025-03-17 20:37:31
-# RuleCount: 6952
+# UpdateTime: 2025-03-18 09:23:24
+# RuleCount: 6954
 payload:
   - DOMAIN,api.waqi.info
   - DOMAIN,aqi.aqicn.org
@@ -374,6 +374,7 @@ payload:
   - DOMAIN-SUFFIX,aol.com
   - DOMAIN-SUFFIX,aolcdn.com
   - DOMAIN-SUFFIX,aolnews.com
+  - DOMAIN-SUFFIX,aomedia.org
   - DOMAIN-SUFFIX,aomiwang.com
   - DOMAIN-SUFFIX,ap.org
   - DOMAIN-SUFFIX,apache.org
@@ -4594,6 +4595,7 @@ payload:
   - DOMAIN-SUFFIX,pp.ua
   - DOMAIN-SUFFIX,ppy.sh
   - DOMAIN-SUFFIX,prayforchina.net
+  - DOMAIN-SUFFIX,prcleader.org
   - DOMAIN-SUFFIX,premeforwindows7.com
   - DOMAIN-SUFFIX,premproxy.com
   - DOMAIN-SUFFIX,presentation.new

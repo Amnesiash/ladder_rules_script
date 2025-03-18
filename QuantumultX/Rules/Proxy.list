@@ -1,5 +1,5 @@
 # UpdateTime: Proxy
-# RuleCount: 6960
+# RuleCount: 6962
 
 HOST,api.waqi.info,Proxy
 HOST,aqi.aqicn.org,Proxy
@@ -374,6 +374,7 @@ HOST-SUFFIX,aol.co.uk,Proxy
 HOST-SUFFIX,aol.com,Proxy
 HOST-SUFFIX,aolcdn.com,Proxy
 HOST-SUFFIX,aolnews.com,Proxy
+HOST-SUFFIX,aomedia.org,Proxy
 HOST-SUFFIX,aomiwang.com,Proxy
 HOST-SUFFIX,ap.org,Proxy
 HOST-SUFFIX,apache.org,Proxy
@@ -4594,6 +4595,7 @@ HOST-SUFFIX,pp.ru,Proxy
 HOST-SUFFIX,pp.ua,Proxy
 HOST-SUFFIX,ppy.sh,Proxy
 HOST-SUFFIX,prayforchina.net,Proxy
+HOST-SUFFIX,prcleader.org,Proxy
 HOST-SUFFIX,premeforwindows7.com,Proxy
 HOST-SUFFIX,premproxy.com,Proxy
 HOST-SUFFIX,presentation.new,Proxy
