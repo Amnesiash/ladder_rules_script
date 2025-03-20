@@ -6,7 +6,7 @@
 ## 规则&配置
 
 | <img src="https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Gallery/VpnLogo/Clash.png" alt="Clash" align="center" height="70" width="70"> | <img src="https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Gallery/VpnLogo/QuantumultX.png" alt="QuantumultX" align="center" height="70" width="70"> | <img src="https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Gallery/VpnLogo/Loon.png" alt="Loon" align="center" height="70" width="70"> | <img src="https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Gallery/VpnLogo/Shadowrocket.png" alt="Shadowrocket" align="center" height="70" width="70"> |
-|:--------:|:--------:|:--------:|:--------:|:--------:|
+|:--------:|:--------:|:--------:|:--------:|
 | [Clash&Mihomo](https://github.com/Amnesiash/ladder_rules_script/tree/main/Clash/) | [QuantumultX](https://github.com/Amnesiash/ladder_rules_script/tree/main/QuantumultX/) | [Loon](https://github.com/Amnesiash/ladder_rules_script/tree/main/Loon/) | [Shadowrocket](https://github.com/Amnesiash/ladder_rules_script/tree/main/Shadowrocket/) |
 
 
