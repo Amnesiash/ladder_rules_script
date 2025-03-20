@@ -23,7 +23,7 @@ log-level: info       # 设置日志输出级别 (5 个级别：silent / error /
 ipv6: true            # 开启 IPv6 总开关,关闭阻断所有 IPv6 链接和屏蔽 DNS 请求 AAAA 记录
 udp: true
 
-external-controller: 127.0.0.1:9090   #外部控制器,可以使用 RESTful API 来控制你的 clash 内核
+external-controller: 0.0.0.0:9090   #外部控制器,可以使用 RESTful API 来控制你的 clash 内核
 secret: ''
 
 geox-url:
