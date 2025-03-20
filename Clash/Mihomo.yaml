@@ -24,7 +24,7 @@ ipv6: true            # 开启 IPv6 总开关,关闭阻断所有 IPv6 链接和�
 udp: true
 
 external-controller: 127.0.0.1:9090   #外部控制器,可以使用 RESTful API 来控制你的 clash 内核
-secret: 'clashpassword'
+secret: ''
 
 geox-url:
   # geoip: 'https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat'
