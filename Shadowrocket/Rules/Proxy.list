@@ -1,5 +1,5 @@
 # UpdateTime: Proxy
-# RuleCount: 6962
+# RuleCount: 6963
 
 DOMAIN,api.waqi.info
 DOMAIN,aqi.aqicn.org
@@ -1825,6 +1825,7 @@ DOMAIN-SUFFIX,fanbox.cc
 DOMAIN-SUFFIX,fandom.com
 DOMAIN-SUFFIX,fangbinxing.com
 DOMAIN-SUFFIX,fangeming.com
+DOMAIN-SUFFIX,fangeming.comffvpn.com
 DOMAIN-SUFFIX,fangeqiang.com
 DOMAIN-SUFFIX,fanglizhi.info
 DOMAIN-SUFFIX,fangmincn.org

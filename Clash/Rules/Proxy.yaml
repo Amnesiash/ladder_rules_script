@@ -1,5 +1,5 @@
-# UpdateTime: 2025-03-23 20:33:26
-# RuleCount: 6954
+# UpdateTime: 2025-03-24 09:26:28
+# RuleCount: 6955
 payload:
   - DOMAIN,api.waqi.info
   - DOMAIN,aqi.aqicn.org
@@ -1825,6 +1825,7 @@ payload:
   - DOMAIN-SUFFIX,fandom.com
   - DOMAIN-SUFFIX,fangbinxing.com
   - DOMAIN-SUFFIX,fangeming.com
+  - DOMAIN-SUFFIX,fangeming.comffvpn.com
   - DOMAIN-SUFFIX,fangeqiang.com
   - DOMAIN-SUFFIX,fanglizhi.info
   - DOMAIN-SUFFIX,fangmincn.org
