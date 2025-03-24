@@ -39,6 +39,7 @@ dns:
   nameserver:               # 默认DNS服务器，支持udp/tcp/dot/doh/doq
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
+  nameserver-policy:
   fallback:          # 国外 DNS 服务器
     - https://cloudflare-dns.com/dns-query
     - https://dns.google/dns-query
