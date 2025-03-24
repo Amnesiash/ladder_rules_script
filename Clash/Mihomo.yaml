@@ -27,10 +27,13 @@ external-controller: 0.0.0.0:9090   #外部控制器,可以使用 RESTful API �
 secret: ''
 
 geox-url:
-  # geoip: 'https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat'
-  # geosite: 'https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat'
-  mmdb: 'https://raw.githubusercontent.com/Masaiki/GeoIP2-CN/release/Country.mmdb'
-  asn: 'https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb'
+  # geoip: 'https://ghfast.top/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat'
+  # geosite: 'https://ghfast.top/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat'
+  mmdb: 'https://ghfast.top/https://raw.githubusercontent.com/Masaiki/GeoIP2-CN/release/Country.mmdb'
+  asn: 'https://ghfast.top/https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb'
+
+external-ui: zashboard
+external-ui-url: "https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip" #从 GitHub Pages分支获取
 
 profile:
   store-selected: true
@@ -170,15 +173,56 @@ proxy-groups:
 
 # 订阅规则
 rule-providers:
-  - {name: 直连修正, <<: *RuleSet_c, url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/Direct.yaml, path: ./ruleset/Direct.yaml}
-  - {name: 广告拦截, <<: *RuleSet_d, url: https://ghfast.top/https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt, path: ./ruleset/adrules.txt, format: text}
-  - {name: Lan, <<: *RuleSet_c, url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/Lan.yaml, path: ./ruleset/Lan.yaml}
-  - {name: AI, <<: *RuleSet_c, url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/AI.yaml, path: ./ruleset/AI.yaml}
-  - {name: 国内流媒体, <<: *RuleSet_c, url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/ChinaMedia.yaml, path: ./ruleset/ChinaMedia.yaml}
-  - {name: 国际流媒体, <<: *RuleSet_c, url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/GlobalMedia.yaml, path: ./ruleset/GlobalMedia.yaml}
-  - {name: 苹果服务, <<: *RuleSet_c, url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/Apple.yaml, path: ./ruleset/Apple.yaml}
-  - {name: 代理列表, <<: *RuleSet_c, url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/Proxy.yaml, path: ./ruleset/Proxy.yaml}
-  - {name: 国内网站, <<: *RuleSet_c, url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/China.yaml, path: ./ruleset/China.yaml}
+  网络解限: 
+    <<: *RuleSet_c
+    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Custom/unBan.yaml
+    path: ./ruleset/unBan.yaml
+
+  直连修正:
+    <<: *RuleSet_c
+    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/Direct.yaml
+    path: ./ruleset/Direct.yaml
+
+  广告拦截:
+    <<: *RuleSet_d
+    url: https://ghfast.top/https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
+    path: ./ruleset/adrules.txt
+    format: text
+
+  Lan:
+    <<: *RuleSet_c
+    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/Lan.yaml
+    path: ./ruleset/Lan.yaml
+
+  AI:
+    <<: *RuleSet_c
+    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/AI.yaml
+    path: ./ruleset/AI.yaml
+
+  国内流媒体:
+    <<: *RuleSet_c
+    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/ChinaMedia.yaml
+    path: ./ruleset/ChinaMedia.yaml
+
+  国际流媒体:
+    <<: *RuleSet_c
+    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/GlobalMedia.yaml
+    path: ./ruleset/GlobalMedia.yaml
+
+  苹果服务:
+    <<: *RuleSet_c
+    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/Apple.yaml
+    path: ./ruleset/Apple.yaml
+
+  代理列表:
+    <<: *RuleSet_c
+    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/Proxy.yaml
+    path: ./ruleset/Proxy.yaml
+
+  国内网站:
+    <<: *RuleSet_c
+    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/China.yaml
+    path: ./ruleset/China.yaml
 
 # 规则指向
 rules:
