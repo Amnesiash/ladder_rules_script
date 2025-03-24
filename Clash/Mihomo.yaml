@@ -32,7 +32,6 @@ geox-url:
   mmdb: 'https://ghfast.top/https://raw.githubusercontent.com/Masaiki/GeoIP2-CN/release/Country.mmdb'
   asn: 'https://ghfast.top/https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb'
 
-external-ui: zashboard
 external-ui-url: "https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip" #从 GitHub Pages分支获取
 
 profile:
