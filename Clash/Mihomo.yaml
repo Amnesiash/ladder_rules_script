@@ -58,7 +58,7 @@ sniffer:
     - Mijia Cloud
 
 tun:
-  enable: true
+  enable: false
   stack: mixed
   dns-hijack:
     - any:53
