@@ -173,11 +173,6 @@ proxy-groups:
 
 # 订阅规则
 rule-providers:
-  网络解限: 
-    <<: *RuleSet_c
-    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Custom/unBan.yaml
-    path: ./ruleset/unBan.yaml
-
   直连修正:
     <<: *RuleSet_c
     url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/Direct.yaml
