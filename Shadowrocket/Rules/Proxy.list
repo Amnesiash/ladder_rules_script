@@ -1,5 +1,5 @@
 # UpdateTime: Proxy
-# RuleCount: 6963
+# RuleCount: 6966
 
 DOMAIN,api.waqi.info
 DOMAIN,aqi.aqicn.org
@@ -1178,6 +1178,7 @@ DOMAIN-SUFFIX,cofacts.tw
 DOMAIN-SUFFIX,coin2co.in
 DOMAIN-SUFFIX,coinbase.com
 DOMAIN-SUFFIX,coinbene.com
+DOMAIN-SUFFIX,coincarp.com
 DOMAIN-SUFFIX,coinegg.com
 DOMAIN-SUFFIX,coinex.com
 DOMAIN-SUFFIX,coingecko.com
@@ -2167,6 +2168,7 @@ DOMAIN-SUFFIX,geekerhome.com
 DOMAIN-SUFFIX,geekheart.info
 DOMAIN-SUFFIX,gekikame.com
 DOMAIN-SUFFIX,gelbooru.com
+DOMAIN-SUFFIX,gemini.com
 DOMAIN-SUFFIX,generated.photos
 DOMAIN-SUFFIX,geni.us
 DOMAIN-SUFFIX,genius.com
@@ -4262,6 +4264,7 @@ DOMAIN-SUFFIX,omy.sg
 DOMAIN-SUFFIX,on.cc
 DOMAIN-SUFFIX,on2.com
 DOMAIN-SUFFIX,onapp.com
+DOMAIN-SUFFIX,one.one.one.one
 DOMAIN-SUFFIX,oneclient.sfx.ms
 DOMAIN-SUFFIX,onedrive.com
 DOMAIN-SUFFIX,onedrive.live.com

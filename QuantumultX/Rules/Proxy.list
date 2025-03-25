@@ -1,5 +1,5 @@
 # UpdateTime: Proxy
-# RuleCount: 6963
+# RuleCount: 6966
 
 HOST,api.waqi.info,Proxy
 HOST,aqi.aqicn.org,Proxy
@@ -1178,6 +1178,7 @@ HOST-SUFFIX,cofacts.tw,Proxy
 HOST-SUFFIX,coin2co.in,Proxy
 HOST-SUFFIX,coinbase.com,Proxy
 HOST-SUFFIX,coinbene.com,Proxy
+HOST-SUFFIX,coincarp.com,Proxy
 HOST-SUFFIX,coinegg.com,Proxy
 HOST-SUFFIX,coinex.com,Proxy
 HOST-SUFFIX,coingecko.com,Proxy
@@ -2167,6 +2168,7 @@ HOST-SUFFIX,geekerhome.com,Proxy
 HOST-SUFFIX,geekheart.info,Proxy
 HOST-SUFFIX,gekikame.com,Proxy
 HOST-SUFFIX,gelbooru.com,Proxy
+HOST-SUFFIX,gemini.com,Proxy
 HOST-SUFFIX,generated.photos,Proxy
 HOST-SUFFIX,geni.us,Proxy
 HOST-SUFFIX,genius.com,Proxy
@@ -4262,6 +4264,7 @@ HOST-SUFFIX,omy.sg,Proxy
 HOST-SUFFIX,on.cc,Proxy
 HOST-SUFFIX,on2.com,Proxy
 HOST-SUFFIX,onapp.com,Proxy
+HOST-SUFFIX,one.one.one.one,Proxy
 HOST-SUFFIX,oneclient.sfx.ms,Proxy
 HOST-SUFFIX,onedrive.com,Proxy
 HOST-SUFFIX,onedrive.live.com,Proxy
