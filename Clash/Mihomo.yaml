@@ -59,7 +59,7 @@ sniffer:
 
 tun:
   enable: false
-  stack: mixed
+  stack: gvisor
   dns-hijack:
     - any:53
   auto-route: true
