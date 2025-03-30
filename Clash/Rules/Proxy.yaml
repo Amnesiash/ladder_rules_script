@@ -1,5 +1,5 @@
-# UpdateTime: 2025-03-30 09:38:42
-# RuleCount: 6895
+# UpdateTime: 2025-03-30 20:33:47
+# RuleCount: 6896
 payload:
   - DOMAIN,api.waqi.info
   - DOMAIN,aqi.aqicn.org
@@ -2894,6 +2894,7 @@ payload:
   - DOMAIN-SUFFIX,hwadzan.tw
   - DOMAIN-SUFFIX,hwayue.org.tw
   - DOMAIN-SUFFIX,hwinfo.com
+  - DOMAIN-SUFFIX,hxcy.top
   - DOMAIN-SUFFIX,hxwk.org
   - DOMAIN-SUFFIX,hxwq.org
   - DOMAIN-SUFFIX,hybrid-analysis.com

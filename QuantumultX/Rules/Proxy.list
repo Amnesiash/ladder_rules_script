@@ -1,5 +1,5 @@
 # UpdateTime: Proxy
-# RuleCount: 6903
+# RuleCount: 6904
 
 HOST,api.waqi.info,Proxy
 HOST,aqi.aqicn.org,Proxy
@@ -2894,6 +2894,7 @@ HOST-SUFFIX,huyandex.com,Proxy
 HOST-SUFFIX,hwadzan.tw,Proxy
 HOST-SUFFIX,hwayue.org.tw,Proxy
 HOST-SUFFIX,hwinfo.com,Proxy
+HOST-SUFFIX,hxcy.top,Proxy
 HOST-SUFFIX,hxwk.org,Proxy
 HOST-SUFFIX,hxwq.org,Proxy
 HOST-SUFFIX,hybrid-analysis.com,Proxy
