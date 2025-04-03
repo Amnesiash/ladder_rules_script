@@ -129,8 +129,8 @@ jobs:
 
     - name: Copy files
       run: |
-        rm -rf ladder-repo/{Clash,Loon,Shadowrocket}/Rules
-        mkdir -p ladder-repo/{Clash,Loon,Shadowrocket}/Rules
+        rm -rf ladder-repo/{Clash,Loon,Shadowrocket,QuantumultX,sing-box}/Rules
+        mkdir -p ladder-repo/{Clash,Loon,Shadowrocket,QuantumultX,sing-box}/Rules
         for file in ladder-repo/Ruleset/*.list; do
           filename=$(basename "$file")
           for dir in Loon QuantumultX Shadowrocket; do
@@ -140,6 +140,9 @@ jobs:
           # 复制到 Clash 文件夹, 并将后缀改为.yaml
           mkdir -p "ladder-repo/Clash/Rules"
           cp "$file" "ladder-repo/Clash/Rules/${filename%.*}.yaml"
+          # 复制到 sing-box 文件夹, 并将后缀改为.json
+          mkdir -p "ladder-repo/sing-box/Rules"
+          cp "$file" "ladder-repo/sing-box/Rules/${filename%.*}.json"
         done
         echo "Files copied successfully."
 
@@ -225,6 +228,85 @@ jobs:
             awk -v fname="$file_names" 'NR==1 {print "# UpdateTime: " fname} {print}' "$file" > tmpfile && mv tmpfile "$file"
             awk -v count="$line_count" 'NR==2 {print "# RuleCount: " count} {print}' "$file" > tmpfile && mv tmpfile "$file"
             sed -i '2a\\' "$file"
+          else
+            echo "$file not found."
+          fi
+        done
+
+    - name: sing-box
+      run: |
+        # 安装 sing-box
+        curl -L -o sing-box.tar.gz https://github.com/SagerNet/sing-box/releases/download/v${SING_BOX_VERSION}/sing-box-${SING_BOX_VERSION}-linux-amd64.tar.gz
+        tar -xzf sing-box.tar.gz
+        chmod +x sing-box-${SING_BOX_VERSION}-linux-amd64/sing-box
+        sudo mv sing-box-${SING_BOX_VERSION}-linux-amd64/sing-box /usr/local/bin/sing-box
+        sing-box version
+        # 处理 Rules
+        for file in ladder-repo/sing-box/Rules/*.json; do
+          if [ -f "$file" ]; then
+            sed -i -e '/^PROCESS-NAME/d' "$file"
+            sed -i -e '/^AND/d' "$file"
+            sed -i -e '/^OR/d' "$file"
+            sed -i -e '/^NOT/d' "$file"
+            sed -i -e '/^DEST-PORT/d' "$file"
+            sed -i -e '/^USER-AGENT/d' "$file"
+            sed -i -e '/^URL-REGEX/d' "$file"
+            sed -i -e '/^DOMAIN-WILDCARD/d' "$file"
+            sed -i -e '/^GEOIP/d' "$file"
+            sed -i -e '/^#/d' "$file"
+            sed -i -e '/^$/d' "$file"
+
+            temp_file=$(mktemp)
+            echo '{' > "$temp_file"
+            echo '  "version": 2,' >> "$temp_file"
+            echo '  "rules": [' >> "$temp_file"
+            domains=$(grep -E '^DOMAIN,' "$file" | cut -d, -f2)
+            if [ -n "$domains" ]; then
+              domain_array=$(echo "$domains" | jq -R . | jq -s .)
+              echo '    {' >> "$temp_file"
+              echo '      "domain": [' >> "$temp_file"
+              echo "$domain_array" | jq -r '.[]' | sed 's/^/        "/;s/$/",/' >> "$temp_file"
+              sed -i '$ s/,$//' "$temp_file"
+              echo '      ]' >> "$temp_file"
+              echo '    },' >> "$temp_file"
+            fi
+            domain_suffixes=$(grep -E '^DOMAIN-SUFFIX,' "$file" | cut -d, -f2)
+            if [ -n "$domain_suffixes" ]; then
+              domain_suffix_array=$(echo "$domain_suffixes" | jq -R . | jq -s .)
+              echo '    {' >> "$temp_file"
+              echo '      "domain_suffix": [' >> "$temp_file"
+              echo "$domain_suffix_array" | jq -r '.[]' | sed 's/^/        "/;s/$/",/' >> "$temp_file"
+              sed -i '$ s/,$//' "$temp_file"
+              echo '      ]' >> "$temp_file"
+              echo '    },' >> "$temp_file"
+            fi
+            domain_keywords=$(grep -E '^DOMAIN-KEYWORD,' "$file" | cut -d, -f2)
+            if [ -n "$domain_keywords" ]; then
+              domain_keyword_array=$(echo "$domain_keywords" | jq -R . | jq -s .)
+              echo '    {' >> "$temp_file"
+              echo '      "domain_keyword": [' >> "$temp_file"
+              echo "$domain_keyword_array" | jq -r '.[]' | sed 's/^/        "/;s/$/",/' >> "$temp_file"
+              sed -i '$ s/,$//' "$temp_file"
+              echo '      ]' >> "$temp_file"
+              echo '    },' >> "$temp_file"
+            fi
+            ip_cidrs=$(grep -E '^IP-CIDR,|^IP-CIDR6,' "$file" | cut -d, -f2)
+            if [ -n "$ip_cidrs" ]; then
+              ip_cidr_array=$(echo "$ip_cidrs" | jq -R . | jq -s .)
+              echo '    {' >> "$temp_file"
+              echo '      "ip_cidr": [' >> "$temp_file"
+              echo "$ip_cidr_array" | jq -r '.[]' | sed 's/^/        "/;s/$/",/' >> "$temp_file"
+              sed -i '$ s/,$//' "$temp_file"
+              echo '      ]' >> "$temp_file"
+              echo '    }' >> "$temp_file"
+            fi
+            sed -i '$ s/,$//' "$temp_file"
+            echo '  ]' >> "$temp_file"
+            echo '}' >> "$temp_file"
+            mv "$temp_file" "$file"
+            # 编译 JSON 规则并清理不需要的内容
+            sing-box rule-set compile "$file" -o "${file%.json}.srs"
+            rm -rf sing-box sing-box-${SING_BOX_VERSION}-linux-amd64 sing-box.tar.gz
           else
             echo "$file not found."
           fi
