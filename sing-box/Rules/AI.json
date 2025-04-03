@@ -1,0 +1,83 @@
+{
+  "version": 2,
+  "rules": [
+    {
+      "domain": [
+        "ai.google.dev",
+        "aistudio.google.com",
+        "alkalicore-pa.clients6.google.com",
+        "alkalimakersuite-pa.clients6.google.com",
+        "api-iam.intercom.io",
+        "api.githubcopilot.com",
+        "api.statsig.com",
+        "api.x.ai",
+        "apple-relay.apple.com",
+        "apple-relay.cloudflare.com",
+        "apple-relay.fastly-edge.com",
+        "bard.google.com",
+        "chat.mistral.ai",
+        "chatgpt.livekit.cloud",
+        "console.mistral.ai",
+        "copilot-proxy.githubusercontent.com",
+        "copilot.microsoft.com",
+        "cp4.cloudflare.com",
+        "gateway.ai.cloudflare.com",
+        "gemini.google.com",
+        "generativelanguage.googleapis.com",
+        "guzzoni.apple.com",
+        "imagine.meta.com",
+        "o33249.ingest.sentry.io",
+        "openaiapi-site.azureedge.net",
+        "pplx-res.cloudinary.com",
+        "proactivebackend-pa.googleapis.com",
+        "sfo3.turn.livekit.cloud",
+        "sydney.bing.com",
+        "www.bing.com"
+      ]
+    },
+    {
+      "domain_suffix": [
+        "anthropic.com",
+        "chat.com",
+        "chatgpt.com",
+        "ciciai.com",
+        "claude.ai",
+        "coze.com",
+        "cursor-cdn.com",
+        "cursor.com",
+        "cursor.sh",
+        "cursorapi.com",
+        "deepmind.com",
+        "deepmind.google",
+        "geller-pa.googleapis.com",
+        "generativeai.google",
+        "generativelanguage.googleapis.com",
+        "githubcopilot.com",
+        "grazie.ai",
+        "grok.com",
+        "groq.com",
+        "livekit.cloud",
+        "makersuite.google.com",
+        "meta.ai",
+        "mistral.ai",
+        "oaistatic.com",
+        "oaiusercontent.com",
+        "openai.com",
+        "perplexity.ai",
+        "pplx.ai",
+        "proactivebackend-pa.googleapis.com",
+        "smoot.apple.com",
+        "sora.com",
+        "x.ai"
+      ]
+    },
+    {
+      "domain_keyword": [
+        "labs.google",
+        "notebooklm.google",
+        "openaiapi",
+        "openaicom"
+      ]
+    }
+  ]
+}
