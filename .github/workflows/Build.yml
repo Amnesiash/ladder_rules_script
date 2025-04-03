@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       TZ: 'Asia/Shanghai'
+      SING_BOX_VERSION: 1.10.5
     
     steps: 
     - name: Checkout target repository
