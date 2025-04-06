@@ -1,5 +1,5 @@
 # UpdateTime: Proxy
-# RuleCount: 6904
+# RuleCount: 6906
 
 HOST,api.waqi.info,Proxy
 HOST,aqi.aqicn.org,Proxy
@@ -470,6 +470,7 @@ HOST-SUFFIX,atnext.com,Proxy
 HOST-SUFFIX,att.com,Proxy
 HOST-SUFFIX,audacy.com,Proxy
 HOST-SUFFIX,audionow.com,Proxy
+HOST-SUFFIX,auth.openai.com,Proxy
 HOST-SUFFIX,authorizeddns.net,Proxy
 HOST-SUFFIX,authorizeddns.org,Proxy
 HOST-SUFFIX,authorizeddns.us,Proxy
@@ -4258,6 +4259,7 @@ HOST-SUFFIX,open.com.hk,Proxy
 HOST-SUFFIX,openai.com,Proxy
 HOST-SUFFIX,openallweb.com,Proxy
 HOST-SUFFIX,opendemocracy.net,Proxy
+HOST-SUFFIX,opendesktop.org,Proxy
 HOST-SUFFIX,opendn.xyz,Proxy
 HOST-SUFFIX,openervpn.in,Proxy
 HOST-SUFFIX,openid.net,Proxy

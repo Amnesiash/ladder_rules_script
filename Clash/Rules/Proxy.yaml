@@ -1,5 +1,5 @@
-# UpdateTime: 2025-04-05 20:33:23
-# RuleCount: 6896
+# UpdateTime: 2025-04-06 09:37:34
+# RuleCount: 6898
 payload:
   - DOMAIN,api.waqi.info
   - DOMAIN,aqi.aqicn.org
@@ -470,6 +470,7 @@ payload:
   - DOMAIN-SUFFIX,att.com
   - DOMAIN-SUFFIX,audacy.com
   - DOMAIN-SUFFIX,audionow.com
+  - DOMAIN-SUFFIX,auth.openai.com
   - DOMAIN-SUFFIX,authorizeddns.net
   - DOMAIN-SUFFIX,authorizeddns.org
   - DOMAIN-SUFFIX,authorizeddns.us
@@ -4258,6 +4259,7 @@ payload:
   - DOMAIN-SUFFIX,openai.com
   - DOMAIN-SUFFIX,openallweb.com
   - DOMAIN-SUFFIX,opendemocracy.net
+  - DOMAIN-SUFFIX,opendesktop.org
   - DOMAIN-SUFFIX,opendn.xyz
   - DOMAIN-SUFFIX,openervpn.in
   - DOMAIN-SUFFIX,openid.net
