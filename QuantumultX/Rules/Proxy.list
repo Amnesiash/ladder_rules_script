@@ -250,6 +250,7 @@ HOST-SUFFIX,airtable.com,Proxy
 HOST-SUFFIX,airvpn.org,Proxy
 HOST-SUFFIX,aisex.com,Proxy
 HOST-SUFFIX,aishort.top,Proxy
+HOST-SUFFIX,aiss.anws.gov.tw,Proxy
 HOST-SUFFIX,ait.org.tw,Proxy
 HOST-SUFFIX,aiv-cdn.net,Proxy
 HOST-SUFFIX,aiv-cdn.net.c.footprint.net,Proxy
@@ -371,7 +372,6 @@ HOST-SUFFIX,anti1984.com,Proxy
 HOST-SUFFIX,antichristendom.com,Proxy
 HOST-SUFFIX,antiwave.net,Proxy
 HOST-SUFFIX,antpool.com,Proxy
-HOST-SUFFIX,anws.gov.tw,Proxy
 HOST-SUFFIX,anyporn.com,Proxy
 HOST-SUFFIX,anysex.com,Proxy
 HOST-SUFFIX,ao3.org,Proxy
@@ -1317,7 +1317,6 @@ HOST-SUFFIX,cusu.hk,Proxy
 HOST-SUFFIX,cutout.pro,Proxy
 HOST-SUFFIX,cutscenes.net,Proxy
 HOST-SUFFIX,cw.com.tw,Proxy
-HOST-SUFFIX,cwb.gov.tw,Proxy
 HOST-SUFFIX,cws.conviva.com,Proxy
 HOST-SUFFIX,cyberctm.com,Proxy
 HOST-SUFFIX,cyberghostvpn.com,Proxy
@@ -5593,6 +5592,7 @@ HOST-SUFFIX,taa-usa.org,Proxy
 HOST-SUFFIX,taaze.tw,Proxy
 HOST-SUFFIX,tablesgenerator.com,Proxy
 HOST-SUFFIX,tabtter.jp,Proxy
+HOST-SUFFIX,tacc.cwb.gov.tw,Proxy
 HOST-SUFFIX,tacem.org,Proxy
 HOST-SUFFIX,taconet.com.tw,Proxy
 HOST-SUFFIX,taedp.org.tw,Proxy

@@ -1,5 +1,5 @@
-# UpdateTime: 2025-04-12 20:33:32
-# RuleCount: 3725
+# UpdateTime: 2025-04-13 10:53:14
+# RuleCount: 3723
 payload:
   - DOMAIN,analytics.strava.com
   - DOMAIN,blzddist1-a.akamaihd.net
@@ -1539,7 +1539,6 @@ payload:
   - DOMAIN-SUFFIX,hdcmct.org
   - DOMAIN-SUFFIX,hddolby.com
   - DOMAIN-SUFFIX,hdhome.org
-  - DOMAIN-SUFFIX,hdsky.me
   - DOMAIN-SUFFIX,hdslb.com
   - DOMAIN-SUFFIX,hdslb.org
   - DOMAIN-SUFFIX,hdyxgame.com
@@ -2382,7 +2381,6 @@ payload:
   - DOMAIN-SUFFIX,mukewang.com
   - DOMAIN-SUFFIX,mumayi.com
   - DOMAIN-SUFFIX,muomou.com
-  - DOMAIN-SUFFIX,musical.ly
   - DOMAIN-SUFFIX,muwai.com
   - DOMAIN-SUFFIX,muyewx.com
   - DOMAIN-SUFFIX,muzhiwan.com

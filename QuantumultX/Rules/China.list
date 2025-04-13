@@ -1,5 +1,5 @@
 # UpdateTime: China
-# RuleCount: 3756
+# RuleCount: 3754
 
 HOST,analytics.strava.com,China
 HOST,blzddist1-a.akamaihd.net,China
@@ -1539,7 +1539,6 @@ HOST-SUFFIX,hdchina.org,China
 HOST-SUFFIX,hdcmct.org,China
 HOST-SUFFIX,hddolby.com,China
 HOST-SUFFIX,hdhome.org,China
-HOST-SUFFIX,hdsky.me,China
 HOST-SUFFIX,hdslb.com,China
 HOST-SUFFIX,hdslb.org,China
 HOST-SUFFIX,hdyxgame.com,China
@@ -2382,7 +2381,6 @@ HOST-SUFFIX,mubu.com,China
 HOST-SUFFIX,mukewang.com,China
 HOST-SUFFIX,mumayi.com,China
 HOST-SUFFIX,muomou.com,China
-HOST-SUFFIX,musical.ly,China
 HOST-SUFFIX,muwai.com,China
 HOST-SUFFIX,muyewx.com,China
 HOST-SUFFIX,muzhiwan.com,China

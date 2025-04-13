@@ -1,4 +1,4 @@
-# UpdateTime: 2025-04-12 20:33:32
+# UpdateTime: 2025-04-13 10:53:14
 # RuleCount: 7181
 payload:
   - DOMAIN,api.waqi.info
@@ -250,6 +250,7 @@ payload:
   - DOMAIN-SUFFIX,airvpn.org
   - DOMAIN-SUFFIX,aisex.com
   - DOMAIN-SUFFIX,aishort.top
+  - DOMAIN-SUFFIX,aiss.anws.gov.tw
   - DOMAIN-SUFFIX,ait.org.tw
   - DOMAIN-SUFFIX,aiv-cdn.net
   - DOMAIN-SUFFIX,aiv-cdn.net.c.footprint.net
@@ -371,7 +372,6 @@ payload:
   - DOMAIN-SUFFIX,antichristendom.com
   - DOMAIN-SUFFIX,antiwave.net
   - DOMAIN-SUFFIX,antpool.com
-  - DOMAIN-SUFFIX,anws.gov.tw
   - DOMAIN-SUFFIX,anyporn.com
   - DOMAIN-SUFFIX,anysex.com
   - DOMAIN-SUFFIX,ao3.org
@@ -1317,7 +1317,6 @@ payload:
   - DOMAIN-SUFFIX,cutout.pro
   - DOMAIN-SUFFIX,cutscenes.net
   - DOMAIN-SUFFIX,cw.com.tw
-  - DOMAIN-SUFFIX,cwb.gov.tw
   - DOMAIN-SUFFIX,cws.conviva.com
   - DOMAIN-SUFFIX,cyberctm.com
   - DOMAIN-SUFFIX,cyberghostvpn.com
@@ -5593,6 +5592,7 @@ payload:
   - DOMAIN-SUFFIX,taaze.tw
   - DOMAIN-SUFFIX,tablesgenerator.com
   - DOMAIN-SUFFIX,tabtter.jp
+  - DOMAIN-SUFFIX,tacc.cwb.gov.tw
   - DOMAIN-SUFFIX,tacem.org
   - DOMAIN-SUFFIX,taconet.com.tw
   - DOMAIN-SUFFIX,taedp.org.tw
