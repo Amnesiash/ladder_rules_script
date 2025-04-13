@@ -1,5 +1,5 @@
 # UpdateTime: Proxy
-# RuleCount: 7189
+# RuleCount: 7190
 
 HOST,api.waqi.info,Proxy
 HOST,aqi.aqicn.org,Proxy
@@ -487,6 +487,7 @@ HOST-SUFFIX,atlaspost.com,Proxy
 HOST-SUFFIX,atnext.com,Proxy
 HOST-SUFFIX,att.com,Proxy
 HOST-SUFFIX,audacy.com,Proxy
+HOST-SUFFIX,audiomack.com,Proxy
 HOST-SUFFIX,audionow.com,Proxy
 HOST-SUFFIX,auth.openai.com,Proxy
 HOST-SUFFIX,authorizeddns.net,Proxy
