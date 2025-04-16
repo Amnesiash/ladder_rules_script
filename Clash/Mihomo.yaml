@@ -1,5 +1,5 @@
 # Mihomo 配置
-# 日期：2025-03-06
+# 日期：2025-04-16
 # 配置作者：https://github.com/Amnesiash/
 # 适用版本：所有使用 Clash Meta 核心的程序
 
@@ -53,7 +53,6 @@ sniffer:
       ports: [443, 8443]
   force-domain:
     - +.v2ex.com
-
   skip-domain:
     - Mijia Cloud
 
@@ -115,11 +114,11 @@ FilterUS: &FilterUS '^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|�
 
 # 策略组参数锚点
 # 锚点 - 自动优选参数 [每 6 秒一次惰性健康检查，容差 20ms，超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
-UrlTest: &UrlTest {type: url-test, url: 'https://www.gstatic.com/generate_204', interval: 6, tolerance: 20, lazy: true, timeout: 2000, max-failed-times: 3, hidden: true, include-all-providers: true}
+UrlTest: &UrlTest {type: url-test, url: 'https://www.gstatic.com/generate_204', interval: 6, tolerance: 20, lazy: true, timeout: 2000, max-failed-times: 3, hidden: true, include-all: true}
 # 锚点 - 自动回退参数 [每 6 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
-FallBack: &FallBack {type: fallback, url: 'https://www.gstatic.com/generate_204', interval: 6, lazy: true, timeout: 2000, max-failed-times: 3, hidden: true, include-all-providers: true}
+FallBack: &FallBack {type: fallback, url: 'https://www.gstatic.com/generate_204', interval: 6, lazy: true, timeout: 2000, max-failed-times: 3, hidden: true, include-all: true}
 # 锚点 - 负载均衡参数 [每 6 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
-LoadBalance: &LoadBalance {type: load-balance, url: 'https://www.gstatic.com/generate_204', strategy: consistent-hashing, interval: 6, lazy: true, timeout: 2000, max-failed-times: 3, hidden: true, include-all-providers: true}
+LoadBalance: &LoadBalance {type: load-balance, url: 'https://www.gstatic.com/generate_204', strategy: consistent-hashing, interval: 6, lazy: true, timeout: 2000, max-failed-times: 3, hidden: true, include-all: true}
 # 锚点 - 规则参数 [每小时更新一次订阅规则，更新规则时使用直连策略]
 c: &RuleSet_c {type: http, behavior: classical, interval: 3600}
 d: &RuleSet_d {type: http, behavior: domain, interval: 3600}
@@ -127,7 +126,7 @@ i: &RuleSet_i {type: http, behavior: ipcidr, interval: 3600}
 
 # 策略组
 proxy-groups:
-  - {name: 🚀 节点选择, type: select, include-all-providers: true}
+  - {name: 🚀 节点选择, type: select, include-all: true}
   # - {name: ⛔️ 广告拦截, type: select, proxies: [REJECT, DIRECT]}
   - {name: 🌍 全球加速, type: select, proxies: [🇭🇰 香港策略, 🇨🇳 台湾策略, 🇯🇵 日本策略, 🇸🇬 狮城策略, 🇺🇲 美国策略, 🚀 节点选择]}
   - {name: 🎨 FIGMA, type: select, proxies: [DIRECT, 🇭🇰 香港策略, 🇨🇳 台湾策略, 🇯🇵 日本策略, 🇸🇬 狮城策略, 🇺🇲 美国策略, 🚀 节点选择]}
