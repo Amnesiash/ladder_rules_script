@@ -129,7 +129,7 @@ i: &RuleSet_i {type: http, behavior: ipcidr, interval: 3600}
 
 # 策略组
 proxy-groups:
-  - {name: 🚀 节点选择, type: select, include-all: true}
+  - {name: 🚀 节点选择, type: select,  use: *UseProxy}
   # - {name: ⛔️ 广告拦截, type: select, proxies: [REJECT, DIRECT]}
   - {name: 🌍 全球加速, type: select, proxies: [🇭🇰 香港策略, 🇨🇳 台湾策略, 🇯🇵 日本策略, 🇸🇬 狮城策略, 🇺🇲 美国策略, 🚀 节点选择]}
   - {name: 🎨 FIGMA, type: select, proxies: [DIRECT, 🇭🇰 香港策略, 🇨🇳 台湾策略, 🇯🇵 日本策略, 🇸🇬 狮城策略, 🇺🇲 美国策略, 🚀 节点选择]}
