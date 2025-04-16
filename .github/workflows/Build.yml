@@ -26,11 +26,36 @@ jobs:
         if [[ "$repo_name" == "ladder_rules_script" ]]; then
           echo "Running in Tool repository"
           mkdir -p ladder-repo/Ruleset
+          # 合并 China 规则
+            urls=(
+                "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaDomain.list"
+                "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaCompanyIp.list"
+                "https://raw.githubusercontent.com/ConnersHua/RuleGo/refs/heads/master/Surge/Ruleset/Direct.list"
+            )
+            > ladder-repo/Ruleset/China.list
+            for url in "${urls[@]}"; do
+                echo "Downloading: $url"
+                curl -f -L "$url" >> ladder-repo/Ruleset/China.list || { echo "Download Failed: $url"; exit 1; }
+                echo "" >> ladder-repo/Ruleset/China.list
+            done
+
+          # 合并 Direct 规则
+            urls=(
+                "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/UnBan.list"
+                "https://raw.githubusercontent.com/ConnersHua/RuleGo/refs/heads/master/Surge/Ruleset/Direct+.list"
+            )
+            > ladder-repo/Ruleset/Direct.list
+            for url in "${urls[@]}"; do
+                echo "Downloading: $url"
+                curl -f -L "$url" >> ladder-repo/Ruleset/Direct.list || { echo "Download Failed: $url"; exit 1; }
+                echo "" >> ladder-repo/Ruleset/Direct.list
+            done
+
           # 合并 Proxy 规则
             urls=(
-                "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Surge/Proxy/Proxy_All.list"
                 "https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Clash/Custom/AddProxy.list"
                 "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyGFWlist.list"
+                "https://raw.githubusercontent.com/ConnersHua/RuleGo/refs/heads/master/Surge/Ruleset/Proxy.list"
             )
             > ladder-repo/Ruleset/Proxy.list
             for url in "${urls[@]}"; do
@@ -38,6 +63,7 @@ jobs:
                 curl -f -L "$url" >> ladder-repo/Ruleset/Proxy.list || { echo "Download Failed: $url"; exit 1; }
                 echo "" >> ladder-repo/Ruleset/Proxy.list
             done
+
           # 合并 ChinaMedia 规则
           urls=(
               "https://raw.githubusercontent.com/ConnersHua/RuleGo/refs/heads/master/Surge/Ruleset/Extra/Streaming/CN.list"
@@ -49,6 +75,31 @@ jobs:
               curl -f -L "$url" >> ladder-repo/Ruleset/ChinaMedia.list || { echo "Download Failed: $url"; exit 1; }
               echo "" >> ladder-repo/Ruleset/ChinaMedia.list
           done
+
+          # 合并 GlobalMedia 规则
+          urls=(
+              "https://raw.githubusercontent.com/ConnersHua/RuleGo/refs/heads/master/Surge/Ruleset/Extra/Streaming/!CN.list"
+              "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyMedia.list"
+          )
+          > ladder-repo/Ruleset/GlobalMedia.list
+          for url in "${urls[@]}"; do
+              echo "Downloading: $url"
+              curl -f -L "$url" >> ladder-repo/Ruleset/GlobalMedia.list || { echo "Download Failed: $url"; exit 1; }
+              echo "" >> ladder-repo/Ruleset/GlobalMedia.list
+          done
+
+          # 合并 Apple 规则
+          urls=(
+              "https://raw.githubusercontent.com/ConnersHua/RuleGo/refs/heads/master/Surge/Ruleset/Extra/Apple/Apple.list"
+              "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Apple.list"
+          )
+          > ladder-repo/Ruleset/Apple.list
+          for url in "${urls[@]}"; do
+              echo "Downloading: $url"
+              curl -f -L "$url" >> ladder-repo/Ruleset/Apple.list || { echo "Download Failed: $url"; exit 1; }
+              echo "" >> ladder-repo/Ruleset/Apple.list
+          done
+          
           # 合并 AI 规则
           urls=(
               "https://raw.githubusercontent.com/ConnersHua/RuleGo/refs/heads/master/Surge/Ruleset/Extra/AI.list"
@@ -62,18 +113,11 @@ jobs:
               curl -f -L "$url" >> ladder-repo/Ruleset/AI.list || { echo "Download Failed: $url"; exit 1; }
               echo "" >> ladder-repo/Ruleset/AI.list
           done
+
           # 下载规则
-          files=(
-              # 直连修正
-              "Direct.list https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Direct/Direct.list"          
+          files=(     
               # LAN
-              "Lan.list https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Lan/Lan_Resolve.list"           
-              # 国际流媒体
-              "GlobalMedia.list https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GlobalMedia/GlobalMedia_All.list"
-              # 苹果服务
-              "Apple.list https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Apple/Apple_All.list"
-              # 国内网站
-              "China.list https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/China/China_All.list"
+              "Lan.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/LocalAreaNetwork.list"           
             )
             for file in "${files[@]}"; do
                 set -- $file
@@ -90,8 +134,8 @@ jobs:
       run: |
         for file in ladder-repo/Ruleset/*.list ; do
           if [ -f "$file" ]; then
-            # 删除文件中所有 [以 # 或 ; 开头的注释行] + [空行] + [每行中 // 及其后面的内容] + [,no-resolve]
-            sed -i -e '/^\s*[#;]/d' -e '/^$/d' -e 's| //.*||' -e 's/,no-resolve//g' "$file"
+            # 删除文件中所有 [以 # 或 ; 开头的注释行] + [空行] + [每行中 // 及其后面的内容]
+            sed -i -e '/^\s*[#;]/d' -e '/^$/d' -e 's| //.*||' "$file"
             # 修正格式
             sed -i 's/, */,/g' "$file"
           else
@@ -230,85 +274,6 @@ jobs:
             awk -v fname="$file_names" 'NR==1 {print "# UpdateTime: " fname} {print}' "$file" > tmpfile && mv tmpfile "$file"
             awk -v count="$line_count" 'NR==2 {print "# RuleCount: " count} {print}' "$file" > tmpfile && mv tmpfile "$file"
             sed -i '2a\\' "$file"
-          else
-            echo "$file not found."
-          fi
-        done
-
-    - name: sing-box
-      run: |
-        # 安装 sing-box
-        curl -L -o sing-box.tar.gz https://github.com/SagerNet/sing-box/releases/download/v${SING_BOX_VERSION}/sing-box-${SING_BOX_VERSION}-linux-amd64.tar.gz
-        tar -xzf sing-box.tar.gz
-        chmod +x sing-box-${SING_BOX_VERSION}-linux-amd64/sing-box
-        sudo mv sing-box-${SING_BOX_VERSION}-linux-amd64/sing-box /usr/local/bin/sing-box
-        sing-box version
-        # 处理 Rules
-        for file in ladder-repo/sing-box/Rules/*.json; do
-          if [ -f "$file" ]; then
-            sed -i -e '/^PROCESS-NAME/d' "$file"
-            sed -i -e '/^AND/d' "$file"
-            sed -i -e '/^OR/d' "$file"
-            sed -i -e '/^NOT/d' "$file"
-            sed -i -e '/^DEST-PORT/d' "$file"
-            sed -i -e '/^USER-AGENT/d' "$file"
-            sed -i -e '/^URL-REGEX/d' "$file"
-            sed -i -e '/^DOMAIN-WILDCARD/d' "$file"
-            sed -i -e '/^GEOIP/d' "$file"
-            sed -i -e '/^#/d' "$file"
-            sed -i -e '/^$/d' "$file"
-
-            temp_file=$(mktemp)
-            echo '{' > "$temp_file"
-            echo '  "version": 2,' >> "$temp_file"
-            echo '  "rules": [' >> "$temp_file"
-            domains=$(grep -E '^DOMAIN,' "$file" | cut -d, -f2)
-            if [ -n "$domains" ]; then
-              domain_array=$(echo "$domains" | jq -R . | jq -s .)
-              echo '    {' >> "$temp_file"
-              echo '      "domain": [' >> "$temp_file"
-              echo "$domain_array" | jq -r '.[]' | sed 's/^/        "/;s/$/",/' >> "$temp_file"
-              sed -i '$ s/,$//' "$temp_file"
-              echo '      ]' >> "$temp_file"
-              echo '    },' >> "$temp_file"
-            fi
-            domain_suffixes=$(grep -E '^DOMAIN-SUFFIX,' "$file" | cut -d, -f2)
-            if [ -n "$domain_suffixes" ]; then
-              domain_suffix_array=$(echo "$domain_suffixes" | jq -R . | jq -s .)
-              echo '    {' >> "$temp_file"
-              echo '      "domain_suffix": [' >> "$temp_file"
-              echo "$domain_suffix_array" | jq -r '.[]' | sed 's/^/        "/;s/$/",/' >> "$temp_file"
-              sed -i '$ s/,$//' "$temp_file"
-              echo '      ]' >> "$temp_file"
-              echo '    },' >> "$temp_file"
-            fi
-            domain_keywords=$(grep -E '^DOMAIN-KEYWORD,' "$file" | cut -d, -f2)
-            if [ -n "$domain_keywords" ]; then
-              domain_keyword_array=$(echo "$domain_keywords" | jq -R . | jq -s .)
-              echo '    {' >> "$temp_file"
-              echo '      "domain_keyword": [' >> "$temp_file"
-              echo "$domain_keyword_array" | jq -r '.[]' | sed 's/^/        "/;s/$/",/' >> "$temp_file"
-              sed -i '$ s/,$//' "$temp_file"
-              echo '      ]' >> "$temp_file"
-              echo '    },' >> "$temp_file"
-            fi
-            ip_cidrs=$(grep -E '^IP-CIDR,|^IP-CIDR6,' "$file" | cut -d, -f2)
-            if [ -n "$ip_cidrs" ]; then
-              ip_cidr_array=$(echo "$ip_cidrs" | jq -R . | jq -s .)
-              echo '    {' >> "$temp_file"
-              echo '      "ip_cidr": [' >> "$temp_file"
-              echo "$ip_cidr_array" | jq -r '.[]' | sed 's/^/        "/;s/$/",/' >> "$temp_file"
-              sed -i '$ s/,$//' "$temp_file"
-              echo '      ]' >> "$temp_file"
-              echo '    }' >> "$temp_file"
-            fi
-            sed -i '$ s/,$//' "$temp_file"
-            echo '  ]' >> "$temp_file"
-            echo '}' >> "$temp_file"
-            mv "$temp_file" "$file"
-            # 编译 JSON 规则并清理不需要的内容
-            sing-box rule-set compile "$file" -o "${file%.json}.srs"
-            rm -rf sing-box sing-box-${SING_BOX_VERSION}-linux-amd64 sing-box.tar.gz
           else
             echo "$file not found."
           fi
