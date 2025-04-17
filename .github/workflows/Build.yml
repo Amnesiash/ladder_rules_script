@@ -175,8 +175,8 @@ jobs:
 
     - name: Copy files
       run: |
-        rm -rf ladder-repo/{Clash,Loon,Shadowrocket,QuantumultX,sing-box}/Rules
-        mkdir -p ladder-repo/{Clash,Loon,Shadowrocket,QuantumultX,sing-box}/Rules
+        rm -rf ladder-repo/{Clash,Loon,Shadowrocket,QuantumultX}/Rules
+        mkdir -p ladder-repo/{Clash,Loon,Shadowrocket,QuantumultX}/Rules
         for file in ladder-repo/Ruleset/*.list; do
           filename=$(basename "$file")
           for dir in Loon QuantumultX Shadowrocket; do
@@ -186,9 +186,6 @@ jobs:
           # 复制到 Clash 文件夹, 并将后缀改为.yaml
           mkdir -p "ladder-repo/Clash/Rules"
           cp "$file" "ladder-repo/Clash/Rules/${filename%.*}.yaml"
-          # 复制到 sing-box 文件夹, 并将后缀改为.json
-          mkdir -p "ladder-repo/sing-box/Rules"
-          cp "$file" "ladder-repo/sing-box/Rules/${filename%.*}.json"
         done
         echo "Files copied successfully."
 
