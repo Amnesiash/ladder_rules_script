@@ -41,4 +41,4 @@ DOMAIN-KEYWORD,19j
 DOMAIN-KEYWORD,hanime
 
 # > Telegram
-IP-CIDR,91.108.0.0/16,no-resolve
+IP-CIDR,95.161.76.101/16,no-resolve
