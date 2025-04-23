@@ -39,3 +39,6 @@ DOMAIN-SUFFIX,misskon.com
 DOMAIN-SUFFIX,rifabu.me 
 DOMAIN-KEYWORD,19j
 DOMAIN-KEYWORD,hanime
+
+# > Telegram
+IP-CIDR,91.108.0.0/16,no-resolve
