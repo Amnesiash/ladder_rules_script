@@ -67,10 +67,10 @@
 ```markdown
 1. Direct - 代理修正（修正被广告拦截或被代理的正常网址）
 2. Adrules - 广告拦截（可不加）
-3. GlobalMedia - 国际流媒体
-4. ChinaMedia - 国内流媒体（可不加）
-5. Proxy - 国际网站/应用
-6. Apple - Apple 服务（可不加）
+3. Apple - Apple 服务（可不加）
+4. GlobalMedia - 国际流媒体
+5. ChinaMedia - 国内流媒体（可不加）
+6. Proxy - 国际网站/应用
 7. China - 国内网站/应用
 8. LAN - 局域网
 ```
