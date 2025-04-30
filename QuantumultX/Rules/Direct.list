@@ -1,14 +1,6 @@
 # UpdateTime: Direct
-# RuleCount: 38
+# RuleCount: 30
 
-HOST,alt1-mtalk.google.com,Direct
-HOST,alt2-mtalk.google.com,Direct
-HOST,alt3-mtalk.google.com,Direct
-HOST,alt4-mtalk.google.com,Direct
-HOST,alt5-mtalk.google.com,Direct
-HOST,alt6-mtalk.google.com,Direct
-HOST,alt7-mtalk.google.com,Direct
-HOST,alt8-mtalk.google.com,Direct
 HOST,analytics.strava.com,Direct
 HOST,app.adjust.com,Direct
 HOST,app.appsflyer.com,Direct
@@ -23,7 +15,6 @@ HOST,livew.l.qq.com,Direct
 HOST,log.mmstat.com,Direct
 HOST,msg.umeng.com,Direct
 HOST,msg.umengcloud.com,Direct
-HOST,mtalk.google.com,Direct
 HOST,origin-a.akamaihd.net,Direct
 HOST,redirector.gvt1.com,Direct
 HOST,rewards.hypixel.net,Direct
@@ -39,3 +30,4 @@ HOST-SUFFIX,koodomobile.ca,Direct
 HOST-SUFFIX,koodomobile.com,Direct
 HOST-SUFFIX,ol.epicgames.com,Direct
 HOST-SUFFIX,tracking-protection.cdn.mozilla.net,Direct
+DOMAIN-WILDCARD *mtalk*.google.com,Direct

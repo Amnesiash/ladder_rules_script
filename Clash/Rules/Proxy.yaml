@@ -1,5 +1,5 @@
-# UpdateTime: 2025-04-30 09:36:40
-# RuleCount: 6956
+# UpdateTime: 2025-04-30 20:37:53
+# RuleCount: 6959
 payload:
   - DOMAIN,a248.e.akamai.net
   - DOMAIN,a771.dscq.akamai.net
@@ -20,10 +20,10 @@ payload:
   - DOMAIN,c.mi.com
   - DOMAIN,cdn.jsdelivr.net
   - DOMAIN,cdn.statically.io
-  - DOMAIN,cloud-cdn-digitalocean-com.global.ssl.fastly.net
   - DOMAIN,cloud.oracle.com
   - DOMAIN,clubhouse.pubnubapi.com
   - DOMAIN,community.oneplus.com
+  - DOMAIN,copilot.microsoft.com
   - DOMAIN,cp4.cloudflare.com
   - DOMAIN,d19eijqb5qll1w.cloudfront.net
   - DOMAIN,d1e00ek4ebabms.cloudfront.net
@@ -46,7 +46,9 @@ payload:
   - DOMAIN,payments-jp.amazon.com
   - DOMAIN,radio.itunes.apple.com
   - DOMAIN,s3-ap-northeast-1.amazonaws.com
+  - DOMAIN,s3-ap-southeast-1.amazonaws.com
   - DOMAIN,s3-ap-southeast-2.amazonaws.com
+  - DOMAIN,s3.eu-central-1.amazonaws.com
   - DOMAIN,search.arc.net
   - DOMAIN,search.yahoo.co.jp
   - DOMAIN,steambroadcast.akamaized.net
@@ -3748,6 +3750,7 @@ payload:
   - DOMAIN-SUFFIX,meshrep.com
   - DOMAIN-SUFFIX,mesotw.com
   - DOMAIN-SUFFIX,messenger.com
+  - DOMAIN-SUFFIX,meta.ai
   - DOMAIN-SUFFIX,meta.com
   - DOMAIN-SUFFIX,metacafe.com
   - DOMAIN-SUFFIX,metacubex.one

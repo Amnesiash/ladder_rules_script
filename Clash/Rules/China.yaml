@@ -1,5 +1,5 @@
-# UpdateTime: 2025-04-30 09:36:40
-# RuleCount: 863
+# UpdateTime: 2025-04-30 20:37:52
+# RuleCount: 859
 payload:
   - DOMAIN,auth.wosms.cn
   - DOMAIN,config.cmpassport.com
@@ -12,7 +12,6 @@ payload:
   - DOMAIN,enrichgw.10010.com
   - DOMAIN,hmrz.wo.cn
   - DOMAIN,id.mail.wo.cn
-  - DOMAIN,ip.istatmenus.app
   - DOMAIN,log.cmpassport.com
   - DOMAIN,log1.cmpassport.com
   - DOMAIN,mdn.open.wo.cn
@@ -21,10 +20,8 @@ payload:
   - DOMAIN,opencloud.wostore.cn
   - DOMAIN,origin-a.akamaihd.net
   - DOMAIN,outlook.office365.com
-  - DOMAIN,sms.imagetasks.com
   - DOMAIN,smtp-mail.outlook.com
   - DOMAIN,smtp.office365.com
-  - DOMAIN,speedtest.macpaw.com
   - DOMAIN,st.dl.bscstorage.net
   - DOMAIN,st.dl.eccdnx.com
   - DOMAIN,st.dl.pinyuncloud.com
@@ -385,7 +382,6 @@ payload:
   - DOMAIN-SUFFIX,myqcloud.com
   - DOMAIN-SUFFIX,myunlu.com
   - DOMAIN-SUFFIX,netease.com
-  - DOMAIN-SUFFIX,netspeedtestmaster.com
   - DOMAIN-SUFFIX,nruan.com
   - DOMAIN-SUFFIX,nuomi.com
   - DOMAIN-SUFFIX,onedns.net

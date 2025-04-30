@@ -1,14 +1,6 @@
 # UpdateTime: Direct
-# RuleCount: 38
+# RuleCount: 30
 
-DOMAIN,alt1-mtalk.google.com
-DOMAIN,alt2-mtalk.google.com
-DOMAIN,alt3-mtalk.google.com
-DOMAIN,alt4-mtalk.google.com
-DOMAIN,alt5-mtalk.google.com
-DOMAIN,alt6-mtalk.google.com
-DOMAIN,alt7-mtalk.google.com
-DOMAIN,alt8-mtalk.google.com
 DOMAIN,analytics.strava.com
 DOMAIN,app.adjust.com
 DOMAIN,app.appsflyer.com
@@ -23,7 +15,6 @@ DOMAIN,livew.l.qq.com
 DOMAIN,log.mmstat.com
 DOMAIN,msg.umeng.com
 DOMAIN,msg.umengcloud.com
-DOMAIN,mtalk.google.com
 DOMAIN,origin-a.akamaihd.net
 DOMAIN,redirector.gvt1.com
 DOMAIN,rewards.hypixel.net
@@ -39,3 +30,4 @@ DOMAIN-SUFFIX,koodomobile.ca
 DOMAIN-SUFFIX,koodomobile.com
 DOMAIN-SUFFIX,ol.epicgames.com
 DOMAIN-SUFFIX,tracking-protection.cdn.mozilla.net
+DOMAIN-WILDCARD *mtalk*.google.com

@@ -1,5 +1,5 @@
 # UpdateTime: Proxy
-# RuleCount: 6956
+# RuleCount: 6959
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -20,10 +20,10 @@ HOST,books.itunes.apple.com,Proxy
 HOST,c.mi.com,Proxy
 HOST,cdn.jsdelivr.net,Proxy
 HOST,cdn.statically.io,Proxy
-HOST,cloud-cdn-digitalocean-com.global.ssl.fastly.net,Proxy
 HOST,cloud.oracle.com,Proxy
 HOST,clubhouse.pubnubapi.com,Proxy
 HOST,community.oneplus.com,Proxy
+HOST,copilot.microsoft.com,Proxy
 HOST,cp4.cloudflare.com,Proxy
 HOST,d19eijqb5qll1w.cloudfront.net,Proxy
 HOST,d1e00ek4ebabms.cloudfront.net,Proxy
@@ -46,7 +46,9 @@ HOST,ocsp.int-x3.letsencrypt.org,Proxy
 HOST,payments-jp.amazon.com,Proxy
 HOST,radio.itunes.apple.com,Proxy
 HOST,s3-ap-northeast-1.amazonaws.com,Proxy
+HOST,s3-ap-southeast-1.amazonaws.com,Proxy
 HOST,s3-ap-southeast-2.amazonaws.com,Proxy
+HOST,s3.eu-central-1.amazonaws.com,Proxy
 HOST,search.arc.net,Proxy
 HOST,search.yahoo.co.jp,Proxy
 HOST,steambroadcast.akamaized.net,Proxy
@@ -3748,6 +3750,7 @@ HOST-SUFFIX,merlinblog.xyz,Proxy
 HOST-SUFFIX,meshrep.com,Proxy
 HOST-SUFFIX,mesotw.com,Proxy
 HOST-SUFFIX,messenger.com,Proxy
+HOST-SUFFIX,meta.ai,Proxy
 HOST-SUFFIX,meta.com,Proxy
 HOST-SUFFIX,metacafe.com,Proxy
 HOST-SUFFIX,metacubex.one,Proxy

@@ -1,5 +1,5 @@
 # UpdateTime: China
-# RuleCount: 863
+# RuleCount: 859
 
 HOST,auth.wosms.cn,China
 HOST,config.cmpassport.com,China
@@ -12,7 +12,6 @@ HOST,download.microsoft.com,China
 HOST,enrichgw.10010.com,China
 HOST,hmrz.wo.cn,China
 HOST,id.mail.wo.cn,China
-HOST,ip.istatmenus.app,China
 HOST,log.cmpassport.com,China
 HOST,log1.cmpassport.com,China
 HOST,mdn.open.wo.cn,China
@@ -21,10 +20,8 @@ HOST,ntservicepack.microsoft.com,China
 HOST,opencloud.wostore.cn,China
 HOST,origin-a.akamaihd.net,China
 HOST,outlook.office365.com,China
-HOST,sms.imagetasks.com,China
 HOST,smtp-mail.outlook.com,China
 HOST,smtp.office365.com,China
-HOST,speedtest.macpaw.com,China
 HOST,st.dl.bscstorage.net,China
 HOST,st.dl.eccdnx.com,China
 HOST,st.dl.pinyuncloud.com,China
@@ -385,7 +382,6 @@ HOST-SUFFIX,myapp.com,China
 HOST-SUFFIX,myqcloud.com,China
 HOST-SUFFIX,myunlu.com,China
 HOST-SUFFIX,netease.com,China
-HOST-SUFFIX,netspeedtestmaster.com,China
 HOST-SUFFIX,nruan.com,China
 HOST-SUFFIX,nuomi.com,China
 HOST-SUFFIX,onedns.net,China
