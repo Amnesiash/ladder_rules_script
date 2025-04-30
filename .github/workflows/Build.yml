@@ -42,7 +42,7 @@ jobs:
           # 合并 Direct 规则
             urls=(
                 "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/UnBan.list"
-                "https://raw.githubusercontent.com/ConnersHua/RuleGo/refs/heads/master/Surge/Ruleset/Direct+.list"
+                # "https://raw.githubusercontent.com/ConnersHua/RuleGo/refs/heads/master/Surge/Ruleset/Direct+.list"
             )
             > ladder-repo/Ruleset/Direct.list
             for url in "${urls[@]}"; do
