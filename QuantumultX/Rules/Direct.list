@@ -1,33 +1,21 @@
 # UpdateTime: Direct
-# RuleCount: 30
+# RuleCount: 18
 
-HOST,analytics.strava.com,Direct
 HOST,app.adjust.com,Direct
-HOST,app.appsflyer.com,Direct
 HOST,bdtj.tagtic.cn,Direct
-HOST,ci.android.com,Direct
-HOST,clientservices.googleapis.com,Direct
 HOST,dl.google.com,Direct
-HOST,dl.l.google.com,Direct
 HOST,errlog.umeng.com,Direct
 HOST,fairplay.l.qq.com,Direct
 HOST,livew.l.qq.com,Direct
-HOST,log.mmstat.com,Direct
 HOST,msg.umeng.com,Direct
 HOST,msg.umengcloud.com,Direct
 HOST,origin-a.akamaihd.net,Direct
-HOST,redirector.gvt1.com,Direct
 HOST,rewards.hypixel.net,Direct
-HOST,sycm.mmstat.com,Direct
 HOST,tracking.miui.com,Direct
-HOST,update.googleapis.com,Direct
 HOST,vd.l.qq.com,Direct
-HOST,vi.l.qq.com,Direct
-HOST-SUFFIX,blog.google,Direct
 HOST-SUFFIX,dizhensubao.getui.com,Direct
 HOST-SUFFIX,googletraveladservices.com,Direct
 HOST-SUFFIX,koodomobile.ca,Direct
 HOST-SUFFIX,koodomobile.com,Direct
 HOST-SUFFIX,ol.epicgames.com,Direct
 HOST-SUFFIX,tracking-protection.cdn.mozilla.net,Direct
-DOMAIN-WILDCARD *mtalk*.google.com,Direct

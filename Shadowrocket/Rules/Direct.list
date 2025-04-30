@@ -1,33 +1,21 @@
 # UpdateTime: Direct
-# RuleCount: 30
+# RuleCount: 18
 
-DOMAIN,analytics.strava.com
 DOMAIN,app.adjust.com
-DOMAIN,app.appsflyer.com
 DOMAIN,bdtj.tagtic.cn
-DOMAIN,ci.android.com
-DOMAIN,clientservices.googleapis.com
 DOMAIN,dl.google.com
-DOMAIN,dl.l.google.com
 DOMAIN,errlog.umeng.com
 DOMAIN,fairplay.l.qq.com
 DOMAIN,livew.l.qq.com
-DOMAIN,log.mmstat.com
 DOMAIN,msg.umeng.com
 DOMAIN,msg.umengcloud.com
 DOMAIN,origin-a.akamaihd.net
-DOMAIN,redirector.gvt1.com
 DOMAIN,rewards.hypixel.net
-DOMAIN,sycm.mmstat.com
 DOMAIN,tracking.miui.com
-DOMAIN,update.googleapis.com
 DOMAIN,vd.l.qq.com
-DOMAIN,vi.l.qq.com
-DOMAIN-SUFFIX,blog.google
 DOMAIN-SUFFIX,dizhensubao.getui.com
 DOMAIN-SUFFIX,googletraveladservices.com
 DOMAIN-SUFFIX,koodomobile.ca
 DOMAIN-SUFFIX,koodomobile.com
 DOMAIN-SUFFIX,ol.epicgames.com
 DOMAIN-SUFFIX,tracking-protection.cdn.mozilla.net
-DOMAIN-WILDCARD *mtalk*.google.com
