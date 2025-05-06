@@ -1,5 +1,5 @@
 # UpdateTime: Proxy
-# RuleCount: 6959
+# RuleCount: 6961
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -5010,11 +5010,13 @@ HOST-SUFFIX,sex.com,Proxy
 HOST-SUFFIX,sex3.com,Proxy
 HOST-SUFFIX,sex8.cc,Proxy
 HOST-SUFFIX,sexandsubmission.com,Proxy
+HOST-SUFFIX,sexbjcam.com,Proxy
 HOST-SUFFIX,sexbot.com,Proxy
 HOST-SUFFIX,sexhu.com,Proxy
 HOST-SUFFIX,sexhuang.com,Proxy
 HOST-SUFFIX,sexidude.com,Proxy
 HOST-SUFFIX,sexinsex.net,Proxy
+HOST-SUFFIX,sexkbj.com,Proxy
 HOST-SUFFIX,sextvx.com,Proxy
 HOST-SUFFIX,sexxxy.biz,Proxy
 HOST-SUFFIX,sf.net,Proxy
