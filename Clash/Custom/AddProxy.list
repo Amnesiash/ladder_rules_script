@@ -1,5 +1,5 @@
 # 一些未被代理匹配到的网址
-# UPDATED: 2025-04-25
+# UPDATED: 2025-05-06
 
 # > 自用
 DOMAIN-SUFFIX,aishort.top
@@ -35,6 +35,8 @@ DOMAIN-SUFFIX,ero-labs.com
 DOMAIN-SUFFIX,hxcy.top
 
 # > 18+
+DOMAIN-SUFFIX,sexbjcam.com
+DOMAIN-SUFFIX,sexkbj.com
 DOMAIN-SUFFIX,misskon.com
 DOMAIN-SUFFIX,rifabu.me 
 DOMAIN-KEYWORD,19j
