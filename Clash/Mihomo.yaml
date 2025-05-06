@@ -39,10 +39,11 @@ profile:
   store-fake-ip: true
 
 tun:
-  enable: false
+  enable: true
   stack: gvisor
   dns-hijack:
     - any:53
+    - tcp://any:53
   auto-route: true
   auto-detect-interface: true
 
