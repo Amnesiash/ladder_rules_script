@@ -101,7 +101,7 @@ FilterUS: &FilterUS '^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|�
 
 # 策略组参数锚点
 # 锚点 - 自动优选参数 [每 6 秒一次惰性健康检查，容差 20ms，超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
-UrlTest: &UrlTest {type: url-test, url: 'https://www.gstatic.com/generate_204', interval: 6, tolerance: 20, lazy: true, timeout: 2000, max-failed-times: 3, hidden: true, use: *UseProxy}
+UrlTest: &UrlTest {type: url-test, url: 'https://www.gstatic.com/generate_204', interval: 6, tolerance: 20, lazy: true, timeout: 2000, max-failed-times: 3, hidden: false, use: *UseProxy}
 # 锚点 - 自动回退参数 [每 6 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
 FallBack: &FallBack {type: fallback, url: 'https://www.gstatic.com/generate_204', interval: 6, lazy: true, timeout: 2000, max-failed-times: 3, hidden: true, use: *UseProxy}
 # 锚点 - 负载均衡参数 [每 6 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
@@ -115,40 +115,20 @@ i: &RuleSet_i {type: http, behavior: ipcidr, interval: 3600}
 proxy-groups:
   - {name: 🚀 节点选择, type: select, use: *UseProxy}
   # - {name: ⛔️ 广告拦截, type: select, proxies: [REJECT, DIRECT]}
-  - {name: 🌍 全球加速, type: select, proxies: [🇭🇰 香港策略, 🇨🇳 台湾策略, 🇯🇵 日本策略, 🇸🇬 狮城策略, 🇺🇲 美国策略, 🚀 节点选择]}
-  - {name: 🎨 FIGMA, type: select, proxies: [DIRECT, 🇭🇰 香港策略, 🇨🇳 台湾策略, 🇯🇵 日本策略, 🇸🇬 狮城策略, 🇺🇲 美国策略, 🚀 节点选择]}
-  - {name: ✨ AI, type: select, proxies: [🇸🇬 狮城策略, 🇯🇵 日本策略, 🇺🇲 美国策略, 🚀 节点选择]}
-  - {name: 🎬 国内媒体, type: select, proxies: [DIRECT, 🇭🇰 香港策略, 🇨🇳 台湾策略, 🚀 节点选择]}
-  - {name: 🎬 国际媒体, type: select, proxies: [🇭🇰 香港策略, 🇨🇳 台湾策略, 🇯🇵 日本策略, 🇸🇬 狮城策略, 🇺🇲 美国策略, 🚀 节点选择]}
-  - {name: 🍎 苹果服务, type: select, proxies: [DIRECT, 🇭🇰 香港策略, 🇨🇳 台湾策略, 🇯🇵 日本策略, 🇸🇬 狮城策略, 🇺🇲 美国策略, 🚀 节点选择]}
-  - {name: 🗑️ 兜底策略, type: select, proxies: [DIRECT, 🇭🇰 香港策略, 🇨🇳 台湾策略, 🇯🇵 日本策略, 🇸🇬 狮城策略, 🇺🇲 美国策略, 🚀 节点选择]}
-
-  - {name: 🇭🇰 香港策略, type: select, proxies: [🇭🇰 自动优选(香港), 🇭🇰 自动回退(香港), 🇭🇰 负载均衡(香港)]}
-  - {name: 🇨🇳 台湾策略, type: select, proxies: [🇨🇳 自动优选(台湾), 🇨🇳 自动回退(台湾), 🇨🇳 负载均衡(台湾)]}
-  - {name: 🇯🇵 日本策略, type: select, proxies: [🇯🇵 自动优选(日本), 🇯🇵 自动回退(日本), 🇯🇵 负载均衡(日本)]}
-  - {name: 🇸🇬 狮城策略, type: select, proxies: [🇸🇬 自动优选(狮城), 🇸🇬 自动回退(狮城), 🇸🇬 负载均衡(狮城)]}
-  - {name: 🇺🇲 美国策略, type: select, proxies: [🇺🇲 自动优选(美国), 🇺🇲 自动回退(美国), 🇺🇲 负载均衡(美国)]}
+  - {name: 🌍 全球加速, type: select, proxies: [🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🚀 节点选择]}
+  - {name: 🎨 FIGMA, type: select, proxies: [DIRECT, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🚀 节点选择]}
+  - {name: ✨ AI, type: select, proxies: [🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🚀 节点选择]}
+  - {name: 🎬 国内媒体, type: select, proxies: [DIRECT, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🚀 节点选择]}
+  - {name: 🎬 国际媒体, type: select, proxies: [🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🚀 节点选择]}
+  - {name: 🍎 苹果服务, type: select, proxies: [DIRECT, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🚀 节点选择]}
+  - {name: 🐟 漏网之鱼, type: select, proxies: [DIRECT, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🚀 节点选择]}
 
   # 最低延迟优选策略组
-  - {name: 🇭🇰 自动优选(香港), <<: *UrlTest, filter: *FilterHK}
-  - {name: 🇨🇳 自动优选(台湾), <<: *UrlTest, filter: *FilterTW}
-  - {name: 🇯🇵 自动优选(日本), <<: *UrlTest, filter: *FilterJP}
-  - {name: 🇸🇬 自动优选(狮城), <<: *UrlTest, filter: *FilterSG}
-  - {name: 🇺🇲 自动优选(美国), <<: *UrlTest, filter: *FilterUS}
-
-  # 自动回退策略组
-  - {name: 🇭🇰 自动回退(香港), <<: *FallBack, filter: *FilterHK}
-  - {name: 🇨🇳 自动回退(台湾), <<: *FallBack, filter: *FilterTW}
-  - {name: 🇯🇵 自动回退(日本), <<: *FallBack, filter: *FilterJP}
-  - {name: 🇸🇬 自动回退(狮城), <<: *FallBack, filter: *FilterSG}
-  - {name: 🇺🇲 自动回退(美国), <<: *FallBack, filter: *FilterUS}
-
-  # 负载均衡策略组
-  - {name: 🇭🇰 负载均衡(香港), <<: *LoadBalance, filter: *FilterHK}
-  - {name: 🇨🇳 负载均衡(台湾), <<: *LoadBalance, filter: *FilterTW}
-  - {name: 🇯🇵 负载均衡(日本), <<: *LoadBalance, filter: *FilterJP}
-  - {name: 🇸🇬 负载均衡(狮城), <<: *LoadBalance, filter: *FilterSG}
-  - {name: 🇺🇲 负载均衡(美国), <<: *LoadBalance, filter: *FilterUS}
+  - {name: 🇭🇰 香港节点, <<: *UrlTest, filter: *FilterHK}
+  - {name: 🇨🇳 台湾节点, <<: *UrlTest, filter: *FilterTW}
+  - {name: 🇯🇵 日本节点, <<: *UrlTest, filter: *FilterJP}
+  - {name: 🇸🇬 狮城节点, <<: *UrlTest, filter: *FilterSG}
+  - {name: 🇺🇲 美国节点, <<: *UrlTest, filter: *FilterUS}
 
 # 订阅规则
 rule-providers:
@@ -220,4 +200,4 @@ rules:
 
   # > GeoIP China
   - GEOIP,CN,DIRECT
-  - MATCH,🗑️ 兜底策略
+  - MATCH,🐟 漏网之鱼
