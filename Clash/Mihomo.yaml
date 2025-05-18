@@ -181,7 +181,6 @@ rule-providers:
 # 规则指向
 rules:
   # > 直连
-  - PROCESS-NAME,OneDrive,DIRECT
   - DOMAIN-SUFFIX,ghfast.top,DIRECT
 
   # > 工具
