@@ -181,6 +181,7 @@ rule-providers:
 # 规则指向
 rules:
   # > 直连
+  - DOMAIN-SUFFIX,board.zash.run.place,DIRECT
   - DOMAIN-SUFFIX,ghfast.top,DIRECT
 
   # > 工具
