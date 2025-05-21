@@ -179,13 +179,23 @@ jobs:
         mkdir -p ladder-repo/{Clash,Loon,Shadowrocket,QuantumultX}/Rules
         for file in ladder-repo/Ruleset/*.list; do
           filename=$(basename "$file")
-          for dir in Loon QuantumultX Shadowrocket; do
-            mkdir -p "ladder-repo/$dir/Rules"
-            cp "$file" "ladder-repo/$dir/Rules/$filename"
-          done
+
           # 复制到 Clash 文件夹, 并将后缀改为.yaml
           mkdir -p "ladder-repo/Clash/Rules"
           cp "$file" "ladder-repo/Clash/Rules/${filename%.*}.yaml"
+
+          # 复制到 QuantumultX 文件夹, 并将后缀改为.list
+          mkdir -p "ladder-repo/QuantumultX/Rules"
+          cp "$file" "ladder-repo/QuantumultX/Rules/${filename%.*}.list"
+
+          # 复制到 Loon 文件夹, 并将后缀改为.list
+          mkdir -p "ladder-repo/Loon/Rules"
+          cp "$file" "ladder-repo/Loon/Rules/${filename%.*}.list"
+
+          # 复制到 Shadowrocket 文件夹, 并将后缀改为.list
+          mkdir -p "ladder-repo/Shadowrocket/Rules"
+          cp "$file" "ladder-repo/Shadowrocket/Rules/${filename%.*}.list"
+          
         done
         echo "Files copied successfully."
 
