@@ -1,5 +1,6 @@
-# UpdateTime: 2025-05-21 09:39:58
+# UpdateTime: 2025-05-21 14:17:29
 # RuleCount: 859
+
 payload:
   - DOMAIN,auth.wosms.cn
   - DOMAIN,config.cmpassport.com

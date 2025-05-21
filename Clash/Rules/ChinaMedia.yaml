@@ -1,5 +1,6 @@
-# UpdateTime: 2025-05-21 09:39:58
+# UpdateTime: 2025-05-21 14:17:29
 # RuleCount: 52
+
 payload:
   - DOMAIN,api.biliapi.com
   - DOMAIN,api.biliapi.net
