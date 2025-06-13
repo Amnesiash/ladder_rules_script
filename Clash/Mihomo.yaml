@@ -139,7 +139,7 @@ rule-providers:
 
   广告拦截:
     <<: *RuleSet_d
-    url: https://ghfast.top/https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt
+    url: https://ghfast.top/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
     path: ./ruleset/adrules.txt
     format: text
 
