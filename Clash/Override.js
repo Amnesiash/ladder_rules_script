@@ -15,14 +15,14 @@ function main(config) {
   const strategyParams = {
     urlTest: {
       type: "url-test",
-      url: "https://www.gstatic.com/generate_204",
+      url: "http://www.apple.com/library/test/success.html",
       interval: 300,
       tolerance: 20,
       lazy: true,
       timeout: 3000,
       "max-failed-times": 3,
       hidden: true,
-      use: useList,
+      "include-all": true,
     },
   };
 
@@ -31,7 +31,7 @@ function main(config) {
     { 
       name: "🚀 节点选择", 
       type: "select", 
-      use: useList,
+      "include-all": true,
     },
     {
       name: "🌍 全球加速",
