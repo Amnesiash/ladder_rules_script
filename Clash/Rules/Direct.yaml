@@ -1,5 +1,5 @@
-# UpdateTime: 2025-08-10 09:55:47
-# RuleCount: 18
+# UpdateTime: 2025-08-10 20:40:12
+# RuleCount: 31
 
 payload:
   - DOMAIN,app.adjust.com
@@ -14,9 +14,22 @@ payload:
   - DOMAIN,rewards.hypixel.net
   - DOMAIN,tracking.miui.com
   - DOMAIN,vd.l.qq.com
+  - DOMAIN-SUFFIX,DSCloud.biz
+  - DOMAIN-SUFFIX,DSCloud.me
+  - DOMAIN-SUFFIX,DSCloud.mobi
+  - DOMAIN-SUFFIX,DSmyNAS.com
+  - DOMAIN-SUFFIX,DSmyNAS.net
+  - DOMAIN-SUFFIX,DSmyNAS.org
+  - DOMAIN-SUFFIX,DiskStation.me
+  - DOMAIN-SUFFIX,FamilyDS.com
+  - DOMAIN-SUFFIX,FamilyDS.net
+  - DOMAIN-SUFFIX,FamilyDS.org
   - DOMAIN-SUFFIX,dizhensubao.getui.com
   - DOMAIN-SUFFIX,googletraveladservices.com
+  - DOMAIN-SUFFIX,i234.me
   - DOMAIN-SUFFIX,koodomobile.ca
   - DOMAIN-SUFFIX,koodomobile.com
+  - DOMAIN-SUFFIX,myDS.me
   - DOMAIN-SUFFIX,ol.epicgames.com
+  - DOMAIN-SUFFIX,synology.me
   - DOMAIN-SUFFIX,tracking-protection.cdn.mozilla.net

@@ -1,5 +1,5 @@
 # UpdateTime: China
-# RuleCount: 859
+# RuleCount: 860
 
 DOMAIN,auth.wosms.cn
 DOMAIN,config.cmpassport.com
@@ -438,6 +438,7 @@ DOMAIN-SUFFIX,quanmin.tv
 DOMAIN-SUFFIX,qunar.com
 DOMAIN-SUFFIX,qunarzz.com
 DOMAIN-SUFFIX,qupu123.com
+DOMAIN-SUFFIX,qwen.ai
 DOMAIN-SUFFIX,qy.net
 DOMAIN-SUFFIX,realme.com
 DOMAIN-SUFFIX,repaik.com

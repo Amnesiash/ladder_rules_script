@@ -1,5 +1,5 @@
 # UpdateTime: China
-# RuleCount: 859
+# RuleCount: 860
 
 HOST,auth.wosms.cn,China
 HOST,config.cmpassport.com,China
@@ -438,6 +438,7 @@ HOST-SUFFIX,quanmin.tv,China
 HOST-SUFFIX,qunar.com,China
 HOST-SUFFIX,qunarzz.com,China
 HOST-SUFFIX,qupu123.com,China
+HOST-SUFFIX,qwen.ai,China
 HOST-SUFFIX,qy.net,China
 HOST-SUFFIX,realme.com,China
 HOST-SUFFIX,repaik.com,China

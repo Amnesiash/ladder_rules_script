@@ -1,5 +1,5 @@
 # UpdateTime: Direct
-# RuleCount: 18
+# RuleCount: 31
 
 HOST,app.adjust.com,Direct
 HOST,bdtj.tagtic.cn,Direct
@@ -13,9 +13,22 @@ HOST,origin-a.akamaihd.net,Direct
 HOST,rewards.hypixel.net,Direct
 HOST,tracking.miui.com,Direct
 HOST,vd.l.qq.com,Direct
+HOST-SUFFIX,DSCloud.biz,Direct
+HOST-SUFFIX,DSCloud.me,Direct
+HOST-SUFFIX,DSCloud.mobi,Direct
+HOST-SUFFIX,DSmyNAS.com,Direct
+HOST-SUFFIX,DSmyNAS.net,Direct
+HOST-SUFFIX,DSmyNAS.org,Direct
+HOST-SUFFIX,DiskStation.me,Direct
+HOST-SUFFIX,FamilyDS.com,Direct
+HOST-SUFFIX,FamilyDS.net,Direct
+HOST-SUFFIX,FamilyDS.org,Direct
 HOST-SUFFIX,dizhensubao.getui.com,Direct
 HOST-SUFFIX,googletraveladservices.com,Direct
+HOST-SUFFIX,i234.me,Direct
 HOST-SUFFIX,koodomobile.ca,Direct
 HOST-SUFFIX,koodomobile.com,Direct
+HOST-SUFFIX,myDS.me,Direct
 HOST-SUFFIX,ol.epicgames.com,Direct
+HOST-SUFFIX,synology.me,Direct
 HOST-SUFFIX,tracking-protection.cdn.mozilla.net,Direct

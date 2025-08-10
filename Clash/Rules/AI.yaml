@@ -1,5 +1,5 @@
-# UpdateTime: 2025-08-10 09:55:47
-# RuleCount: 86
+# UpdateTime: 2025-08-10 20:40:11
+# RuleCount: 89
 
 payload:
   - DOMAIN,ai.google.dev
@@ -43,10 +43,13 @@ payload:
   - DOMAIN-SUFFIX,chatgpt.com
   - DOMAIN-SUFFIX,ciciai.com
   - DOMAIN-SUFFIX,claude.ai
+  - DOMAIN-SUFFIX,claudeusercontent.com
   - DOMAIN-SUFFIX,client-api.arkoselabs.com
   - DOMAIN-SUFFIX,copilot.cloud.microsoft
   - DOMAIN-SUFFIX,copilot.microsoft.com
   - DOMAIN-SUFFIX,coze.com
+  - DOMAIN-SUFFIX,curosr.com
+  - DOMAIN-SUFFIX,curosr.sh
   - DOMAIN-SUFFIX,cursor-cdn.com
   - DOMAIN-SUFFIX,cursor.com
   - DOMAIN-SUFFIX,cursor.sh

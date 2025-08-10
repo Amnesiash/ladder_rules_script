@@ -1,8 +1,9 @@
 # UpdateTime: GlobalMedia
-# RuleCount: 463
+# RuleCount: 467
 
 HOST,44wilhpljf.execute-api.ap-southeast-1.amazonaws.com,GlobalMedia
 HOST,ai.google.dev,GlobalMedia
+HOST,aistudio.google.com,GlobalMedia
 HOST,aod-dash-uk-live.akamaized.net,GlobalMedia
 HOST,aod-hls-uk-live.akamaized.net,GlobalMedia
 HOST,api-abematv.bucketeer.jp,GlobalMedia
@@ -134,10 +135,13 @@ HOST-SUFFIX,channel4.com,GlobalMedia
 HOST-SUFFIX,channel5.com,GlobalMedia
 HOST-SUFFIX,chatgpt.com,GlobalMedia
 HOST-SUFFIX,claude.ai,GlobalMedia
+HOST-SUFFIX,claudeusercontent.com,GlobalMedia
 HOST-SUFFIX,client-api.arkoselabs.com,GlobalMedia
 HOST-SUFFIX,cognito-identity.us-east-1.amazonaws.com,GlobalMedia
 HOST-SUFFIX,copilot.cloud.microsoft,GlobalMedia
 HOST-SUFFIX,copilot.microsoft.com,GlobalMedia
+HOST-SUFFIX,curosr.com,GlobalMedia
+HOST-SUFFIX,curosr.sh,GlobalMedia
 HOST-SUFFIX,cws-hulu.conviva.com,GlobalMedia
 HOST-SUFFIX,cws.conviva.com,GlobalMedia
 HOST-SUFFIX,d151l6v8er5bdm.cloudfront.net,GlobalMedia

@@ -1,5 +1,5 @@
-# UpdateTime: 2025-08-10 09:55:47
-# RuleCount: 859
+# UpdateTime: 2025-08-10 20:40:12
+# RuleCount: 860
 
 payload:
   - DOMAIN,auth.wosms.cn
@@ -439,6 +439,7 @@ payload:
   - DOMAIN-SUFFIX,qunar.com
   - DOMAIN-SUFFIX,qunarzz.com
   - DOMAIN-SUFFIX,qupu123.com
+  - DOMAIN-SUFFIX,qwen.ai
   - DOMAIN-SUFFIX,qy.net
   - DOMAIN-SUFFIX,realme.com
   - DOMAIN-SUFFIX,repaik.com
