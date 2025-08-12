@@ -1,5 +1,5 @@
 # UpdateTime: AI
-# RuleCount: 89
+# RuleCount: 87
 
 DOMAIN,ai.google.dev
 DOMAIN,aistudio.google.com
@@ -47,8 +47,6 @@ DOMAIN-SUFFIX,client-api.arkoselabs.com
 DOMAIN-SUFFIX,copilot.cloud.microsoft
 DOMAIN-SUFFIX,copilot.microsoft.com
 DOMAIN-SUFFIX,coze.com
-DOMAIN-SUFFIX,curosr.com
-DOMAIN-SUFFIX,curosr.sh
 DOMAIN-SUFFIX,cursor-cdn.com
 DOMAIN-SUFFIX,cursor.com
 DOMAIN-SUFFIX,cursor.sh

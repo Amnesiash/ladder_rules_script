@@ -1,5 +1,5 @@
 # UpdateTime: AI
-# RuleCount: 89
+# RuleCount: 87
 
 HOST,ai.google.dev,AI
 HOST,aistudio.google.com,AI
@@ -47,8 +47,6 @@ HOST-SUFFIX,client-api.arkoselabs.com,AI
 HOST-SUFFIX,copilot.cloud.microsoft,AI
 HOST-SUFFIX,copilot.microsoft.com,AI
 HOST-SUFFIX,coze.com,AI
-HOST-SUFFIX,curosr.com,AI
-HOST-SUFFIX,curosr.sh,AI
 HOST-SUFFIX,cursor-cdn.com,AI
 HOST-SUFFIX,cursor.com,AI
 HOST-SUFFIX,cursor.sh,AI
