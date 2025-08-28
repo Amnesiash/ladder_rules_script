@@ -110,7 +110,7 @@ function main(config) {
       type: "http",
       behavior: "domain",
       interval: 3600,
-      url: "https://ghfast.top/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt",
+      url: "https://adrules.top/adrules_domainset.txt",
       path: "./ruleset/adrules.txt",
       format: "text",
     },
