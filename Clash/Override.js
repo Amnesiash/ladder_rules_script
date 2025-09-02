@@ -175,7 +175,6 @@ function main(config) {
     "DOMAIN-SUFFIX,ghfast.top,DIRECT",
     "DOMAIN-SUFFIX,figma.com,🎨 FIGMA",
     "RULE-SET,直连修正,DIRECT",
-    "RULE-SET,广告拦截,REJECT",
     "RULE-SET,AI,✨ AI",
     "RULE-SET,苹果服务,🍎 苹果服务",
     "RULE-SET,国内流媒体,🎬 国内媒体",
