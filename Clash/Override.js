@@ -21,7 +21,7 @@ function main(config) {
       lazy: true,
       timeout: 3000,
       "max-failed-times": 3,
-      hidden: true,
+      // hidden: true,
       "include-all": true,
     },
   };
