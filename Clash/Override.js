@@ -110,6 +110,13 @@ function main(config) {
       url: "https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/Direct.yaml",
       path: "./ruleset/Direct.yaml",
     },
+    "SteamCN": {
+      type: "http",
+      behavior: "classical",
+      interval: 3600,
+      url: "https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN.yaml",
+      path: "./ruleset/SteamCN.yaml",
+    },
     "广告拦截": {
       type: "http",
       behavior: "domain",
@@ -175,6 +182,7 @@ function main(config) {
     "DOMAIN-SUFFIX,ghfast.top,DIRECT",
     "DOMAIN-SUFFIX,figma.com,🎨 FIGMA",
     "RULE-SET,直连修正,DIRECT",
+    "RULE-SET,SteamCN,DIRECT",
     "RULE-SET,AI,✨ AI",
     "RULE-SET,苹果服务,🍎 苹果服务",
     "RULE-SET,国内流媒体,🎬 国内媒体",
