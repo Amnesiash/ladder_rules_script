@@ -1,5 +1,5 @@
 # UpdateTime: Proxy
-# RuleCount: 6940
+# RuleCount: 6941
 
 DOMAIN,a248.e.akamai.net
 DOMAIN,a771.dscq.akamai.net
@@ -34,6 +34,7 @@ DOMAIN,gateway.icloud.com
 DOMAIN,github.global.ssl.fastly.net
 DOMAIN,itunes.apple.com
 DOMAIN,lab.skk.moe
+DOMAIN,login.alibaba.com
 DOMAIN,lookup-api.apple.com
 DOMAIN,new.c.mi.com
 DOMAIN,news-assets.apple.com

@@ -1,5 +1,5 @@
 # UpdateTime: Proxy
-# RuleCount: 6940
+# RuleCount: 6941
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -34,6 +34,7 @@ HOST,gateway.icloud.com,Proxy
 HOST,github.global.ssl.fastly.net,Proxy
 HOST,itunes.apple.com,Proxy
 HOST,lab.skk.moe,Proxy
+HOST,login.alibaba.com,Proxy
 HOST,lookup-api.apple.com,Proxy
 HOST,new.c.mi.com,Proxy
 HOST,news-assets.apple.com,Proxy
