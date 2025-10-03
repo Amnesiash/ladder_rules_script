@@ -1,5 +1,5 @@
 # UpdateTime: AI
-# RuleCount: 87
+# RuleCount: 88
 
 DOMAIN,ai.google.dev
 DOMAIN,aistudio.google.com
@@ -25,6 +25,7 @@ DOMAIN,cp4.cloudflare.com
 DOMAIN,gateway.ai.cloudflare.com
 DOMAIN,gemini.google.com
 DOMAIN,generativelanguage.googleapis.com
+DOMAIN,gspe1-ssl.ls.apple.com
 DOMAIN,guzzoni.apple.com
 DOMAIN,imagine.meta.com
 DOMAIN,o33249.ingest.sentry.io

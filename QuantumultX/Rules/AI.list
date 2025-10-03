@@ -1,5 +1,5 @@
 # UpdateTime: AI
-# RuleCount: 87
+# RuleCount: 88
 
 HOST,ai.google.dev,AI
 HOST,aistudio.google.com,AI
@@ -25,6 +25,7 @@ HOST,cp4.cloudflare.com,AI
 HOST,gateway.ai.cloudflare.com,AI
 HOST,gemini.google.com,AI
 HOST,generativelanguage.googleapis.com,AI
+HOST,gspe1-ssl.ls.apple.com,AI
 HOST,guzzoni.apple.com,AI
 HOST,imagine.meta.com,AI
 HOST,o33249.ingest.sentry.io,AI

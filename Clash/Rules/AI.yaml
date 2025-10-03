@@ -1,5 +1,5 @@
-# UpdateTime: 2025-10-03 09:22:31
-# RuleCount: 87
+# UpdateTime: 2025-10-03 20:38:11
+# RuleCount: 88
 
 payload:
   - DOMAIN,ai.google.dev
@@ -26,6 +26,7 @@ payload:
   - DOMAIN,gateway.ai.cloudflare.com
   - DOMAIN,gemini.google.com
   - DOMAIN,generativelanguage.googleapis.com
+  - DOMAIN,gspe1-ssl.ls.apple.com
   - DOMAIN,guzzoni.apple.com
   - DOMAIN,imagine.meta.com
   - DOMAIN,o33249.ingest.sentry.io
