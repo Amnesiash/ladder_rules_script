@@ -114,8 +114,8 @@ function main(config) {
       type: "http",
       behavior: "classical",
       interval: 3600,
-      url: "https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/Wechat.yaml",
-      path: "./ruleset/Wechat.yaml",
+      url: "https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/WeChat.yaml",
+      path: "./ruleset/WeChat.yaml",
     },
     "SteamCN": {
       type: "http",
