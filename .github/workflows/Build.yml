@@ -118,7 +118,7 @@ jobs:
           files=(     
               # LAN
               "Lan.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/LocalAreaNetwork.list"    
-              "WeChat.yaml https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/WeChat/WeChat.yaml"       
+              "WeChat.list https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/WeChat/WeChat.yaml"       
             )
             for file in "${files[@]}"; do
                 set -- $file
