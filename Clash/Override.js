@@ -110,6 +110,13 @@ function main(config) {
       url: "https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/Direct.yaml",
       path: "./ruleset/Direct.yaml",
     },
+    "微信": {
+      type: "http",
+      behavior: "classical",
+      interval: 3600,
+      url: "https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/Wechat.yaml",
+      path: "./ruleset/Wechat.yaml",
+    },
     "SteamCN": {
       type: "http",
       behavior: "classical",
