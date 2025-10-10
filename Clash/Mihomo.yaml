@@ -136,7 +136,12 @@ rule-providers:
     <<: *RuleSet_c
     url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/Direct.yaml
     path: ./ruleset/Direct.yaml
-  
+
+  微信:
+    <<: *RuleSet_c
+    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/Wechat.yaml
+    path: ./ruleset/Wechat.yaml
+
   SteamCN:
     <<: *RuleSet_c
     url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN.yaml
@@ -194,6 +199,7 @@ rules:
   
   # > 订阅规则
   - RULE-SET,直连修正,DIRECT
+  - RULE-SET,微信,DIRECT
   - RULE-SET,SteamCN,DIRECT
   # - RULE-SET,广告拦截,⛔️ 广告拦截
   - RULE-SET,AI,✨ AI
