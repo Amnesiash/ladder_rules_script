@@ -1,5 +1,5 @@
 # UpdateTime: AI
-# RuleCount: 88
+# RuleCount: 90
 
 HOST,ai.google.dev,AI
 HOST,aistudio.google.com,AI
@@ -41,7 +41,9 @@ HOST-SUFFIX,auth0.com,AI
 HOST-SUFFIX,bard.google.com,AI
 HOST-SUFFIX,chat.com,AI
 HOST-SUFFIX,chatgpt.com,AI
+HOST-SUFFIX,cici.com,extended-matching,AI
 HOST-SUFFIX,ciciai.com,AI
+HOST-SUFFIX,ciciai.com,extended-matching,AI
 HOST-SUFFIX,claude.ai,AI
 HOST-SUFFIX,claudeusercontent.com,AI
 HOST-SUFFIX,client-api.arkoselabs.com,AI

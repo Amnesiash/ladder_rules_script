@@ -1,5 +1,5 @@
 # UpdateTime: AI
-# RuleCount: 88
+# RuleCount: 90
 
 DOMAIN,ai.google.dev
 DOMAIN,aistudio.google.com
@@ -41,7 +41,9 @@ DOMAIN-SUFFIX,auth0.com
 DOMAIN-SUFFIX,bard.google.com
 DOMAIN-SUFFIX,chat.com
 DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,cici.com,extended-matching
 DOMAIN-SUFFIX,ciciai.com
+DOMAIN-SUFFIX,ciciai.com,extended-matching
 DOMAIN-SUFFIX,claude.ai
 DOMAIN-SUFFIX,claudeusercontent.com
 DOMAIN-SUFFIX,client-api.arkoselabs.com

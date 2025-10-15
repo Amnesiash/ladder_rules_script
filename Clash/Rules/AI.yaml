@@ -1,5 +1,5 @@
-# UpdateTime: 2025-10-15 09:26:48
-# RuleCount: 88
+# UpdateTime: 2025-10-15 20:41:45
+# RuleCount: 90
 
 payload:
   - DOMAIN,ai.google.dev
@@ -42,7 +42,9 @@ payload:
   - DOMAIN-SUFFIX,bard.google.com
   - DOMAIN-SUFFIX,chat.com
   - DOMAIN-SUFFIX,chatgpt.com
+  - DOMAIN-SUFFIX,cici.com,extended-matching
   - DOMAIN-SUFFIX,ciciai.com
+  - DOMAIN-SUFFIX,ciciai.com,extended-matching
   - DOMAIN-SUFFIX,claude.ai
   - DOMAIN-SUFFIX,claudeusercontent.com
   - DOMAIN-SUFFIX,client-api.arkoselabs.com
