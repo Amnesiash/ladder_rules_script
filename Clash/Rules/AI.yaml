@@ -1,5 +1,5 @@
-# UpdateTime: 2025-10-21 20:42:03
-# RuleCount: 90
+# UpdateTime: 2025-10-22 09:38:44
+# RuleCount: 92
 
 payload:
   - DOMAIN,ai.google.dev
@@ -36,6 +36,7 @@ payload:
   - DOMAIN,sfo3.turn.livekit.cloud
   - DOMAIN,sydney.bing.com
   - DOMAIN,www.bing.com
+  - DOMAIN-SUFFIX,abtest-sg.byteoversea.com,extended-matching
   - DOMAIN-SUFFIX,ai.azure.com
   - DOMAIN-SUFFIX,anthropic.com
   - DOMAIN-SUFFIX,auth0.com
@@ -57,6 +58,7 @@ payload:
   - DOMAIN-SUFFIX,cursorapi.com
   - DOMAIN-SUFFIX,deepmind.com
   - DOMAIN-SUFFIX,deepmind.google
+  - DOMAIN-SUFFIX,dola.com,extended-matching
   - DOMAIN-SUFFIX,events.statsigapi.net
   - DOMAIN-SUFFIX,featuregates.org
   - DOMAIN-SUFFIX,geller-pa.googleapis.com

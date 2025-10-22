@@ -1,5 +1,5 @@
 # UpdateTime: AI
-# RuleCount: 90
+# RuleCount: 92
 
 DOMAIN,ai.google.dev
 DOMAIN,aistudio.google.com
@@ -35,6 +35,7 @@ DOMAIN,proactivebackend-pa.googleapis.com
 DOMAIN,sfo3.turn.livekit.cloud
 DOMAIN,sydney.bing.com
 DOMAIN,www.bing.com
+DOMAIN-SUFFIX,abtest-sg.byteoversea.com,extended-matching
 DOMAIN-SUFFIX,ai.azure.com
 DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,auth0.com
@@ -56,6 +57,7 @@ DOMAIN-SUFFIX,cursor.sh
 DOMAIN-SUFFIX,cursorapi.com
 DOMAIN-SUFFIX,deepmind.com
 DOMAIN-SUFFIX,deepmind.google
+DOMAIN-SUFFIX,dola.com,extended-matching
 DOMAIN-SUFFIX,events.statsigapi.net
 DOMAIN-SUFFIX,featuregates.org
 DOMAIN-SUFFIX,geller-pa.googleapis.com
