@@ -103,9 +103,6 @@ jobs:
           # 合并 AI 规则
           urls=(
               "https://raw.githubusercontent.com/ConnersHua/RuleGo/refs/heads/master/Surge/Ruleset/Extra/AI.list"
-              "https://raw.githubusercontent.com/Repcz/Tool/X/Surge/Custom/xAI.list"
-              "https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Custom/AI.list"
-              "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/AI.list"
           )
           > ladder-repo/Ruleset/AI.list
           for url in "${urls[@]}"; do
@@ -118,6 +115,7 @@ jobs:
           files=(     
               # LAN
               "Lan.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/LocalAreaNetwork.list"
+              # WeChat
               "WeChat.list https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/WeChat/WeChat.list"     
             )
             for file in "${files[@]}"; do
@@ -248,7 +246,7 @@ jobs:
             file_names=$(basename "$file" .list)
             line_count=$(wc -l < "$file")
             awk -v policy="$file_names" '!/^#|^ *$/ {print $0","policy; next} {print}' "$file" > tmpfile && mv tmpfile "$file"
-            awk -v fname="$file_names" 'NR==1 {print "# UpdateTime: " fname} {print}' "$file" > tmpfile && mv tmpfile "$file"
+            awk -v fname="$file_names" 'NR==1 {print "# UpdateTime: " update_time} {print}' "$file" > tmpfile && mv tmpfile "$file"
             awk -v count="$line_count" 'NR==2 {print "# RuleCount: " count} {print}' "$file" > tmpfile && mv tmpfile "$file"
             sed -i '2a\\' "$file"
           else
@@ -263,7 +261,7 @@ jobs:
             sed -i -e '/^PROCESS-NAME/d' "$file"
             file_names=$(basename "$file" .list)
             line_count=$(wc -l < "$file")
-            awk -v fname="$file_names" 'NR==1 {print "# UpdateTime: " fname} {print}' "$file" > tmpfile && mv tmpfile "$file"
+            awk -v fname="$file_names" 'NR==1 {print "# UpdateTime: " update_time} {print}' "$file" > tmpfile && mv tmpfile "$file"
             awk -v count="$line_count" 'NR==2 {print "# RuleCount: " count} {print}' "$file" > tmpfile && mv tmpfile "$file"
             sed -i '2a\\' "$file"
           else
@@ -278,7 +276,7 @@ jobs:
             sed -i -e '/^PROCESS-NAME/d' "$file"
             file_names=$(basename "$file" .list)
             line_count=$(wc -l < "$file")
-            awk -v fname="$file_names" 'NR==1 {print "# UpdateTime: " fname} {print}' "$file" > tmpfile && mv tmpfile "$file"
+            awk -v fname="$file_names" 'NR==1 {print "# UpdateTime: " update_time} {print}' "$file" > tmpfile && mv tmpfile "$file"
             awk -v count="$line_count" 'NR==2 {print "# RuleCount: " count} {print}' "$file" > tmpfile && mv tmpfile "$file"
             sed -i '2a\\' "$file"
           else
