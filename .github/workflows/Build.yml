@@ -244,10 +244,14 @@ jobs:
         for file in ladder-repo/QuantumultX/Rules/*.list; do
           if [ -f "$file" ]; then
             file_names=$(basename "$file" .list)
-            line_count=$(wc -l < "$file")
+            # 给每条有效规则追加策略名
             awk -v policy="$file_names" '!/^#|^ *$/ {print $0","policy; next} {print}' "$file" > tmpfile && mv tmpfile "$file"
-            awk -v update_time="$update_time" 'NR==1 {print "# UpdateTime: " update_time} {print}' "$file" > tmpfile && mv tmpfile "$file"
-            awk -v count="$line_count" 'NR==2 {print "# RuleCount: " count} {print}' "$file" > tmpfile && mv tmpfile "$file"
+            # 计算规则数量（排除注释和空行）
+            line_count=$(grep -v '^#' "$file" | grep -v '^ *$' | wc -l)
+            # 获取更新时间
+            update_time=$(date +'%Y-%m-%d %H:%M:%S')
+            # 在文件第一行和第二行添加更新时间和规则数量
+            (printf "%s\n" "# UpdateTime: $update_time" "# RuleCount: $line_count" && cat "$file") > tmpfile && mv tmpfile "$file"
             sed -i '2a\\' "$file"
           else
             echo "$file not found."
@@ -259,10 +263,12 @@ jobs:
         for file in ladder-repo/Loon/Rules/*.list; do
           if [ -f "$file" ]; then
             sed -i -e '/^PROCESS-NAME/d' "$file"
-            file_names=$(basename "$file" .list)
-            line_count=$(wc -l < "$file")
-            awk -v update_time="$update_time" 'NR==1 {print "# UpdateTime: " update_time} {print}' "$file" > tmpfile && mv tmpfile "$file"
-            awk -v count="$line_count" 'NR==2 {print "# RuleCount: " count} {print}' "$file" > tmpfile && mv tmpfile "$file"
+            # 计算规则数量（排除注释和空行）
+            line_count=$(grep -v '^#' "$file" | grep -v '^ *$' | wc -l)
+            # 获取当前更新时间
+            update_time=$(date +'%Y-%m-%d %H:%M:%S')
+            # 在文件第一行和第二行添加更新时间和规则数量
+            (printf "%s\n" "# UpdateTime: $update_time" "# RuleCount: $line_count" && cat "$file") > tmpfile && mv tmpfile "$file"
             sed -i '2a\\' "$file"
           else
             echo "$file not found."
@@ -274,10 +280,12 @@ jobs:
         for file in ladder-repo/Shadowrocket/Rules/*.list; do
           if [ -f "$file" ]; then
             sed -i -e '/^PROCESS-NAME/d' "$file"
-            file_names=$(basename "$file" .list)
-            line_count=$(wc -l < "$file")
-            awk -v update_time="$update_time" 'NR==1 {print "# UpdateTime: " update_time} {print}' "$file" > tmpfile && mv tmpfile "$file"
-            awk -v count="$line_count" 'NR==2 {print "# RuleCount: " count} {print}' "$file" > tmpfile && mv tmpfile "$file"
+            # 计算规则数量（排除注释和空行）
+            line_count=$(grep -v '^#' "$file" | grep -v '^ *$' | wc -l)
+            # 获取当前更新时间
+            update_time=$(date +'%Y-%m-%d %H:%M:%S')
+            # 在文件第一行和第二行添加更新时间和规则数量
+            (printf "%s\n" "# UpdateTime: $update_time" "# RuleCount: $line_count" && cat "$file") > tmpfile && mv tmpfile "$file"
             sed -i '2a\\' "$file"
           else
             echo "$file not found."
