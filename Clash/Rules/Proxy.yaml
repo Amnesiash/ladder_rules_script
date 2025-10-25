@@ -1,5 +1,5 @@
-# UpdateTime: 2025-10-25 09:25:10
-# RuleCount: 6941
+# UpdateTime: 2025-10-25 20:35:40
+# RuleCount: 6942
 
 payload:
   - DOMAIN,a248.e.akamai.net
@@ -37,6 +37,7 @@ payload:
   - DOMAIN,lab.skk.moe
   - DOMAIN,login.alibaba.com
   - DOMAIN,lookup-api.apple.com
+  - DOMAIN,merchant-rating.alibaba.com
   - DOMAIN,new.c.mi.com
   - DOMAIN,news-assets.apple.com
   - DOMAIN,news-client-search.apple.com

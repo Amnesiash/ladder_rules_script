@@ -1,5 +1,5 @@
-# UpdateTime: 2025-10-25 09:25:11
-# RuleCount: 6941
+# UpdateTime: 2025-10-25 20:35:41
+# RuleCount: 6942
 
 DOMAIN,a248.e.akamai.net
 DOMAIN,a771.dscq.akamai.net
@@ -36,6 +36,7 @@ DOMAIN,itunes.apple.com
 DOMAIN,lab.skk.moe
 DOMAIN,login.alibaba.com
 DOMAIN,lookup-api.apple.com
+DOMAIN,merchant-rating.alibaba.com
 DOMAIN,new.c.mi.com
 DOMAIN,news-assets.apple.com
 DOMAIN,news-client-search.apple.com

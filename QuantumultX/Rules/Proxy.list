@@ -1,5 +1,5 @@
-# UpdateTime: 2025-10-25 09:25:11
-# RuleCount: 6941
+# UpdateTime: 2025-10-25 20:35:40
+# RuleCount: 6942
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -36,6 +36,7 @@ HOST,itunes.apple.com,Proxy
 HOST,lab.skk.moe,Proxy
 HOST,login.alibaba.com,Proxy
 HOST,lookup-api.apple.com,Proxy
+HOST,merchant-rating.alibaba.com,Proxy
 HOST,new.c.mi.com,Proxy
 HOST,news-assets.apple.com,Proxy
 HOST,news-client-search.apple.com,Proxy
