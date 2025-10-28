@@ -1,5 +1,5 @@
-# UpdateTime: 2025-10-28 09:26:39
-# RuleCount: 59
+# UpdateTime: 2025-10-28 20:40:44
+# RuleCount: 60
 
 payload:
   - DOMAIN,ai.google.dev
@@ -31,6 +31,7 @@ payload:
   - DOMAIN-SUFFIX,cici.com,extended-matching
   - DOMAIN-SUFFIX,ciciai.com,extended-matching
   - DOMAIN-SUFFIX,claude.ai
+  - DOMAIN-SUFFIX,claude.com
   - DOMAIN-SUFFIX,cursor-cdn.com
   - DOMAIN-SUFFIX,cursor.com
   - DOMAIN-SUFFIX,cursor.sh

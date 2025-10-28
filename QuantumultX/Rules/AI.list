@@ -1,5 +1,5 @@
-# UpdateTime: 2025-10-28 09:26:39
-# RuleCount: 59
+# UpdateTime: 2025-10-28 20:40:44
+# RuleCount: 60
 
 HOST,ai.google.dev,AI
 HOST,aistudio.google.com,AI
@@ -30,6 +30,7 @@ HOST-SUFFIX,chatgpt.com,AI
 HOST-SUFFIX,cici.com,extended-matching,AI
 HOST-SUFFIX,ciciai.com,extended-matching,AI
 HOST-SUFFIX,claude.ai,AI
+HOST-SUFFIX,claude.com,AI
 HOST-SUFFIX,cursor-cdn.com,AI
 HOST-SUFFIX,cursor.com,AI
 HOST-SUFFIX,cursor.sh,AI
