@@ -1,4 +1,4 @@
-# UpdateTime: 2025-11-03 20:42:21
+# UpdateTime: 2025-11-04 09:38:23
 # RuleCount: 60
 
 DOMAIN,ai.google.dev
@@ -23,8 +23,8 @@ DOMAIN,openaiapi-site.azureedge.net
 DOMAIN,pplx-res.cloudinary.com
 DOMAIN,sydney.bing.com
 DOMAIN,www.bing.com
-DOMAIN-SUFFIX,abtest-sg.byteoversea.com,extended-matching
 DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,byteoversea.com,extended-matching
 DOMAIN-SUFFIX,chat.com
 DOMAIN-SUFFIX,chatgpt.com
 DOMAIN-SUFFIX,cici.com,extended-matching

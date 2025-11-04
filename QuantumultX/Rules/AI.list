@@ -1,4 +1,4 @@
-# UpdateTime: 2025-11-03 20:42:21
+# UpdateTime: 2025-11-04 09:38:22
 # RuleCount: 60
 
 HOST,ai.google.dev,AI
@@ -23,8 +23,8 @@ HOST,openaiapi-site.azureedge.net,AI
 HOST,pplx-res.cloudinary.com,AI
 HOST,sydney.bing.com,AI
 HOST,www.bing.com,AI
-HOST-SUFFIX,abtest-sg.byteoversea.com,extended-matching,AI
 HOST-SUFFIX,anthropic.com,AI
+HOST-SUFFIX,byteoversea.com,extended-matching,AI
 HOST-SUFFIX,chat.com,AI
 HOST-SUFFIX,chatgpt.com,AI
 HOST-SUFFIX,cici.com,extended-matching,AI
