@@ -1,5 +1,5 @@
-# UpdateTime: 2025-11-05 09:39:07
-# RuleCount: 60
+# UpdateTime: 2025-11-05 20:41:50
+# RuleCount: 62
 
 payload:
   - DOMAIN,ai.google.dev
@@ -25,6 +25,7 @@ payload:
   - DOMAIN,sydney.bing.com
   - DOMAIN,www.bing.com
   - DOMAIN-SUFFIX,anthropic.com
+  - DOMAIN-SUFFIX,apps.mzstatic.com
   - DOMAIN-SUFFIX,byteoversea.com,extended-matching
   - DOMAIN-SUFFIX,chat.com
   - DOMAIN-SUFFIX,chatgpt.com
@@ -39,6 +40,7 @@ payload:
   - DOMAIN-SUFFIX,deepmind.com
   - DOMAIN-SUFFIX,deepmind.google
   - DOMAIN-SUFFIX,dola.com,extended-matching
+  - DOMAIN-SUFFIX,gateway.icloud.com
   - DOMAIN-SUFFIX,geller-pa.googleapis.com
   - DOMAIN-SUFFIX,generativeai.google
   - DOMAIN-SUFFIX,generativelanguage.googleapis.com
