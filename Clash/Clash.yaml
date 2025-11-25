@@ -94,7 +94,7 @@ proxy-groups:
   - {name: 🌍 全球加速, type: select, proxies: [🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🚀 节点选择]}
   - {name: 🎨 FIGMA, type: select, proxies: [DIRECT, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🚀 节点选择]}
   - {name: ✨ AI, type: select, proxies: [🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🚀 节点选择]}
-  - {name: 🎬 国内媒体, type: select, proxies: [DIRECT, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🚀 节点选择]}
+  - {name: 🎬 哔哩哔哩, type: select, proxies: [DIRECT, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🚀 节点选择]}
   - {name: 🎬 国际媒体, type: select, proxies: [🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🚀 节点选择]}
   - {name: 🍎 苹果服务, type: select, proxies: [DIRECT, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🚀 节点选择]}
   - {name: 🐟 漏网之鱼, type: select, proxies: [DIRECT, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🚀 节点选择]}
@@ -140,10 +140,10 @@ rule-providers:
     url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/AI.yaml
     path: ./ruleset/AI.yaml
 
-  国内流媒体:
+  哔哩哔哩:
     <<: *RuleSet_c
-    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/ChinaMedia.yaml
-    path: ./ruleset/ChinaMedia.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/BilibiliHMT.yaml
+    path: ./ruleset/BilibiliHMT.yaml
 
   国际流媒体:
     <<: *RuleSet_c
@@ -183,7 +183,7 @@ rules:
   # - RULE-SET,广告拦截,⛔️ 广告拦截
   - RULE-SET,AI,✨ AI
   - RULE-SET,苹果服务,🍎 苹果服务
-  - RULE-SET,国内流媒体,🎬 国内媒体
+  - RULE-SET,哔哩哔哩,🎬 哔哩哔哩
   - RULE-SET,国际流媒体,🎬 国际媒体
   - RULE-SET,代理列表,🌍 全球加速
   - RULE-SET,国内网站,DIRECT

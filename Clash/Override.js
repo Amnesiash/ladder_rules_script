@@ -49,7 +49,7 @@ function main(config) {
       proxies: ["🇸🇬 狮城节点", "🇯🇵 日本节点", "🇺🇲 美国节点", "🚀 节点选择"],
     },
     {
-      name: "🎬 国内媒体",
+      name: "🎬 哔哩哔哩",
       type: "select",
       proxies: ["DIRECT", "🇭🇰 香港节点", "🇨🇳 台湾节点", "🚀 节点选择"],
     },
@@ -146,12 +146,12 @@ function main(config) {
       url: "https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/AI.yaml",
       path: "./ruleset/AI.yaml",
     },
-    "国内流媒体": {
+    "哔哩哔哩": {
       type: "http",
       behavior: "classical",
       interval: 3600,
-      url: "https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/ChinaMedia.yaml",
-      path: "./ruleset/ChinaMedia.yaml",
+      url: "https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/BilibiliHMT.yaml",
+      path: "./ruleset/BilibiliHMT.yaml",
     },
     "国际流媒体": {
       type: "http",
@@ -192,7 +192,7 @@ function main(config) {
     "RULE-SET,SteamCN,DIRECT",
     "RULE-SET,AI,✨ AI",
     "RULE-SET,苹果服务,🍎 苹果服务",
-    "RULE-SET,国内流媒体,🎬 国内媒体",
+    "RULE-SET,哔哩哔哩,🎬 哔哩哔哩",
     "RULE-SET,国际流媒体,🎬 国际媒体",
     "RULE-SET,代理列表,🌍 全球加速",
     "RULE-SET,国内网站,DIRECT",
