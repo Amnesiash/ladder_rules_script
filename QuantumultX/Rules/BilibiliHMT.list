@@ -1,0 +1,14 @@
+# UpdateTime: 2025-11-25 10:01:20
+# RuleCount: 11
+
+HOST,api.biliapi.com,BilibiliHMT
+HOST,api.biliapi.net,BilibiliHMT
+HOST,api.bilibili.com,BilibiliHMT
+HOST,app.biliapi.com,BilibiliHMT
+HOST,app.biliapi.net,BilibiliHMT
+HOST,app.bilibili.com,BilibiliHMT
+HOST,grpc.biliapi.net,BilibiliHMT
+HOST,m.bilibili.com,BilibiliHMT
+HOST,upos-hz-mirrorakam.akamaized.net,BilibiliHMT
+HOST,www.bilibili.com,BilibiliHMT
+HOST-KEYWORD,cn-hk-eq-bcache-,BilibiliHMT
