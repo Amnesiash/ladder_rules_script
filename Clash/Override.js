@@ -33,7 +33,7 @@ function main(config) {
       name: "🚀 节点选择", 
       type: "select", 
       "include-all": true,
-      "exclude-filter": "到期|套餐",
+      "exclude-filter": "到期|套餐|剩余|流量",
     },
     {
       name: "🌍 全球加速",
