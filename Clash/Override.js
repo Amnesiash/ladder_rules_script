@@ -23,6 +23,7 @@ function main(config) {
       "max-failed-times": 3,
       // hidden: true,
       "include-all": true,
+      "exclude-filter": "到期|套餐",
     },
   };
 
@@ -32,6 +33,7 @@ function main(config) {
       name: "🚀 节点选择", 
       type: "select", 
       "include-all": true,
+      "exclude-filter": "到期|套餐",
     },
     {
       name: "🌍 全球加速",
