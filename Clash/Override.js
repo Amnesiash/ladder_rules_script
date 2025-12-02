@@ -23,7 +23,7 @@ function main(config) {
       "max-failed-times": 3,
       // hidden: true,
       "include-all": true,
-      "exclude-filter": "到期|套餐",
+      "exclude-filter": "到期|套餐|剩余|流量",
     },
   };
 
