@@ -1,5 +1,5 @@
-# UpdateTime: 2025-12-06 09:37:04
-# RuleCount: 428
+# UpdateTime: 2025-12-06 20:38:51
+# RuleCount: 432
 
 payload:
   - DOMAIN,44wilhpljf.execute-api.ap-southeast-1.amazonaws.com
@@ -74,6 +74,7 @@ payload:
   - DOMAIN,mytvsuperlimited.hb.omtrdc.net
   - DOMAIN,mytvsuperlimited.sc.omtrdc.net
   - DOMAIN,netflix.com.edgesuite.net
+  - DOMAIN,notebooklm.google.com
   - DOMAIN,np-edge.itunes.apple.com
   - DOMAIN,p-bstarstatic.akamaized.net
   - DOMAIN,p.bstarstatic.com
@@ -136,6 +137,7 @@ payload:
   - DOMAIN-SUFFIX,channel5.com
   - DOMAIN-SUFFIX,chatgpt.com
   - DOMAIN-SUFFIX,claude.ai
+  - DOMAIN-SUFFIX,claude.com
   - DOMAIN-SUFFIX,claudeusercontent.com
   - DOMAIN-SUFFIX,client-api.arkoselabs.com
   - DOMAIN-SUFFIX,cognito-identity.us-east-1.amazonaws.com
@@ -237,6 +239,7 @@ payload:
   - DOMAIN-SUFFIX,japronx.net
   - DOMAIN-SUFFIX,japronx.tv
   - DOMAIN-SUFFIX,japronx.vip
+  - DOMAIN-SUFFIX,jetbrains.ai
   - DOMAIN-SUFFIX,joox.com
   - DOMAIN-SUFFIX,js-agent.newrelic.com
   - DOMAIN-SUFFIX,jtvnw.net
@@ -354,6 +357,7 @@ payload:
   - DOMAIN-SUFFIX,wetv.vip
   - DOMAIN-SUFFIX,wetvinfo.com
   - DOMAIN-SUFFIX,withyoutube.com
+  - DOMAIN-SUFFIX,x.ai
   - DOMAIN-SUFFIX,yb.uncn.jp
   - DOMAIN-SUFFIX,youtu.be
   - DOMAIN-SUFFIX,youtube-nocookie.com

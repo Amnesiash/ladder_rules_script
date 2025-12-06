@@ -1,5 +1,5 @@
-# UpdateTime: 2025-12-06 09:37:04
-# RuleCount: 860
+# UpdateTime: 2025-12-06 20:38:51
+# RuleCount: 864
 
 HOST,auth.wosms.cn,China
 HOST,config.cmpassport.com,China
@@ -80,6 +80,7 @@ HOST-SUFFIX,aixifan.com,China
 HOST-SUFFIX,algocasts.io,China
 HOST-SUFFIX,aliapp.org,China
 HOST-SUFFIX,alibaba.com,China
+HOST-SUFFIX,alibabachengdun.com,China
 HOST-SUFFIX,alibabacloud.com,China
 HOST-SUFFIX,alibabausercontent.com,China
 HOST-SUFFIX,alicdn.com,China
@@ -102,6 +103,7 @@ HOST-SUFFIX,amap.com,China
 HOST-SUFFIX,amemv.com,China
 HOST-SUFFIX,appsimg.com,China
 HOST-SUFFIX,appvipshop.com,China
+HOST-SUFFIX,asklink.com,China
 HOST-SUFFIX,auth.wo.cn,China
 HOST-SUFFIX,autonavi.com,China
 HOST-SUFFIX,b23.tv,China
@@ -215,6 +217,7 @@ HOST-SUFFIX,eastmoney.com,China
 HOST-SUFFIX,ecitic.com,China
 HOST-SUFFIX,edgesrv.com,China
 HOST-SUFFIX,ele.me,China
+HOST-SUFFIX,elemecdn.com,China
 HOST-SUFFIX,element-plus.org,China
 HOST-SUFFIX,epicgames.com,China
 HOST-SUFFIX,epicgames.dev,China
@@ -492,6 +495,7 @@ HOST-SUFFIX,taihe.com,China
 HOST-SUFFIX,taobao.com,China
 HOST-SUFFIX,taobaocdn.com,China
 HOST-SUFFIX,tbcache.com,China
+HOST-SUFFIX,tbcdn.cn,China
 HOST-SUFFIX,tbcdn.com,China
 HOST-SUFFIX,teamviewer.com,China
 HOST-SUFFIX,tebex.io,China

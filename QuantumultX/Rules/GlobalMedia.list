@@ -1,5 +1,5 @@
-# UpdateTime: 2025-12-06 09:37:04
-# RuleCount: 467
+# UpdateTime: 2025-12-06 20:38:51
+# RuleCount: 471
 
 HOST,44wilhpljf.execute-api.ap-southeast-1.amazonaws.com,GlobalMedia
 HOST,ai.google.dev,GlobalMedia
@@ -73,6 +73,7 @@ HOST,music.youtube.com,GlobalMedia
 HOST,mytvsuperlimited.hb.omtrdc.net,GlobalMedia
 HOST,mytvsuperlimited.sc.omtrdc.net,GlobalMedia
 HOST,netflix.com.edgesuite.net,GlobalMedia
+HOST,notebooklm.google.com,GlobalMedia
 HOST,np-edge.itunes.apple.com,GlobalMedia
 HOST,p-bstarstatic.akamaized.net,GlobalMedia
 HOST,p.bstarstatic.com,GlobalMedia
@@ -135,6 +136,7 @@ HOST-SUFFIX,channel4.com,GlobalMedia
 HOST-SUFFIX,channel5.com,GlobalMedia
 HOST-SUFFIX,chatgpt.com,GlobalMedia
 HOST-SUFFIX,claude.ai,GlobalMedia
+HOST-SUFFIX,claude.com,GlobalMedia
 HOST-SUFFIX,claudeusercontent.com,GlobalMedia
 HOST-SUFFIX,client-api.arkoselabs.com,GlobalMedia
 HOST-SUFFIX,cognito-identity.us-east-1.amazonaws.com,GlobalMedia
@@ -236,6 +238,7 @@ HOST-SUFFIX,japronx.com,GlobalMedia
 HOST-SUFFIX,japronx.net,GlobalMedia
 HOST-SUFFIX,japronx.tv,GlobalMedia
 HOST-SUFFIX,japronx.vip,GlobalMedia
+HOST-SUFFIX,jetbrains.ai,GlobalMedia
 HOST-SUFFIX,joox.com,GlobalMedia
 HOST-SUFFIX,js-agent.newrelic.com,GlobalMedia
 HOST-SUFFIX,jtvnw.net,GlobalMedia
@@ -353,6 +356,7 @@ HOST-SUFFIX,vod360.net,GlobalMedia
 HOST-SUFFIX,wetv.vip,GlobalMedia
 HOST-SUFFIX,wetvinfo.com,GlobalMedia
 HOST-SUFFIX,withyoutube.com,GlobalMedia
+HOST-SUFFIX,x.ai,GlobalMedia
 HOST-SUFFIX,yb.uncn.jp,GlobalMedia
 HOST-SUFFIX,youtu.be,GlobalMedia
 HOST-SUFFIX,youtube-nocookie.com,GlobalMedia
