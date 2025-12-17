@@ -115,15 +115,16 @@ i: &RuleSet_i {type: http, behavior: ipcidr, interval: 3600}
 proxy-groups:
   - {name: 🚀 节点选择, type: select, use: *UseProxy}
   # - {name: ⛔️ 广告拦截, type: select, proxies: [REJECT, DIRECT]}
-  - {name: 🌍 全球加速, type: select, proxies: [🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🚀 节点选择]}
-  - {name: 🎨 FIGMA, type: select, proxies: [DIRECT, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🚀 节点选择]}
+  - {name: 🌍 全球加速, type: select, proxies: [♻️ 自动选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🚀 节点选择]}
+  - {name: 🎨 FIGMA, type: select, proxies: [DIRECT, ♻️ 自动选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🚀 节点选择]}
   - {name: ✨ AI, type: select, proxies: [🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🚀 节点选择]}
-  - {name: 🎬 哔哩哔哩, type: select, proxies: [DIRECT, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🚀 节点选择]}
-  - {name: 🎬 国际媒体, type: select, proxies: [🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🚀 节点选择]}
-  - {name: 🍎 苹果服务, type: select, proxies: [DIRECT, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🚀 节点选择]}
-  - {name: 🐟 漏网之鱼, type: select, proxies: [DIRECT, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🚀 节点选择]}
+  - {name: 🎬 哔哩哔哩, type: select, proxies: [DIRECT, ♻️ 自动选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🚀 节点选择]}
+  - {name: 🎬 国际媒体, type: select, proxies: [♻️ 自动选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🚀 节点选择]}
+  - {name: 🍎 苹果服务, type: select, proxies: [DIRECT, ♻️ 自动选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🚀 节点选择]}
+  - {name: 🐟 漏网之鱼, type: select, proxies: [DIRECT, ♻️ 自动选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🚀 节点选择]}
 
   # 最低延迟优选策略组
+  - {name: ♻️ 自动选择, <<: *UrlTest}
   - {name: 🇭🇰 香港节点, <<: *UrlTest, filter: *FilterHK}
   - {name: 🇨🇳 台湾节点, <<: *UrlTest, filter: *FilterTW}
   - {name: 🇯🇵 日本节点, <<: *UrlTest, filter: *FilterJP}
@@ -213,4 +214,5 @@ rules:
   # > GeoIP China
   - GEOIP,CN,DIRECT
   - MATCH,🐟 漏网之鱼
+
 
