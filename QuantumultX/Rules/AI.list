@@ -1,78 +1,92 @@
-# UpdateTime: 2025-12-18 14:00:17
-# RuleCount: 75
+# UpdateTime: 2025-12-18 14:04:08
+# RuleCount: 89
 
-  - DOMAIN,ai.google.dev,AI
-  - DOMAIN,aida.googleapis.com,AI
-  - DOMAIN,aiplatform.googleapis.com,AI
-  - DOMAIN,aisandbox-pa.googleapis.com,AI
-  - DOMAIN,aistudio.google.com,AI
-  - DOMAIN,alkalicore-pa.clients6.google.com,AI
-  - DOMAIN,alkalimakersuite-pa.clients6.google.com,AI
-  - DOMAIN,antigravity.google,AI
-  - DOMAIN,api.githubcopilot.com,AI
-  - DOMAIN,api.hyperbolic.xyz,AI
-  - DOMAIN,api.x.ai,AI
-  - DOMAIN,bard.google.com,AI
-  - DOMAIN,chat.mistral.ai,AI
-  - DOMAIN,chatgpt.livekit.cloud,AI
-  - DOMAIN,console.mistral.ai,AI
-  - DOMAIN,copilot-proxy.githubusercontent.com,AI
-  - DOMAIN,copilot.microsoft.com,AI
-  - DOMAIN,deepmind.com,AI
-  - DOMAIN,deepmind.google,AI
-  - DOMAIN,geller-pa.googleapis.com,AI
-  - DOMAIN,gemini.google,AI
-  - DOMAIN,gemini.google.com,AI
-  - DOMAIN,generativeai.google,AI
-  - DOMAIN,generativelanguage.googleapis.com,AI
-  - DOMAIN,host.livekit.cloud,AI
-  - DOMAIN,imagine.meta.com,AI
-  - DOMAIN,jules.google,AI
-  - DOMAIN,jules.google.com,AI
-  - DOMAIN,labs.google,AI
-  - DOMAIN,makersuite.google.com,AI
-  - DOMAIN,notebooklm.google,AI
-  - DOMAIN,notebooklm.google.com,AI
-  - DOMAIN,openai.com.cdn.cloudflare.net,AI
-  - DOMAIN,openaiapi-site.azureedge.net,AI
-  - DOMAIN,openaicomproductionae4b.blob.core.windows.net,AI
-  - DOMAIN,pplx-res.cloudinary.com,AI
-  - DOMAIN,proactivebackend-pa.googleapis.com,AI
-  - DOMAIN,production-openaicom-storage.azureedge.net,AI
-  - DOMAIN,robinfrontend-pa.googleapis.com,AI
-  - DOMAIN,sydney.bing.com,AI
-  - DOMAIN,trae-api-sg.mchost.guru,AI
-  - DOMAIN,turn.livekit.cloud,AI
-  - DOMAIN,webchannel-alkalimakersuite-pa.clients6.google.com,AI
-  - DOMAIN-SUFFIX,anthropic.com,AI
-  - DOMAIN-SUFFIX,chat.com,AI
-  - DOMAIN-SUFFIX,chatgpt.com,AI
-  - DOMAIN-SUFFIX,claude.ai,AI
-  - DOMAIN-SUFFIX,claudeusercontent.com,AI
-  - DOMAIN-SUFFIX,fireworks.ai,AI
-  - DOMAIN-SUFFIX,grazie.ai,AI
-  - DOMAIN-SUFFIX,grazie.aws.intellij.net,AI
-  - DOMAIN-SUFFIX,grok.com,AI
-  - DOMAIN-SUFFIX,groq.com,AI
-  - DOMAIN-SUFFIX,hyperbolic.ai,AI
-  - DOMAIN-SUFFIX,jetbrains.ai,AI
-  - DOMAIN-SUFFIX,jina.ai,AI
-  - DOMAIN-SUFFIX,meta.ai,AI
-  - DOMAIN-SUFFIX,mistral.ai,AI
-  - DOMAIN-SUFFIX,oaistatic.com,AI
-  - DOMAIN-SUFFIX,oaiusercontent.com,AI
-  - DOMAIN-SUFFIX,openai.com,AI
-  - DOMAIN-SUFFIX,openrouter.ai,AI
-  - DOMAIN-SUFFIX,perplexity.ai,AI
-  - DOMAIN-SUFFIX,perplexity.com,AI
-  - DOMAIN-SUFFIX,poe.com,AI
-  - DOMAIN-SUFFIX,pplx.ai,AI
-  - DOMAIN-SUFFIX,sora.com,AI
-  - DOMAIN-SUFFIX,together.ai,AI
-  - DOMAIN-SUFFIX,tokenflux.ai,AI
-  - DOMAIN-SUFFIX,trae.ai,AI
-  - DOMAIN-SUFFIX,voyageai.com,AI
-  - DOMAIN-SUFFIX,x.ai,AI
-  - IP-CIDR,160.79.104.0/23,AI
-  - IP-CIDR6,2607:6bc0::/48,AI
-payload:,AI
+HOST,ai.google.dev,AI
+HOST,aistudio.google.com,AI
+HOST,alkalicore-pa.clients6.google.com,AI
+HOST,alkalimakersuite-pa.clients6.google.com,AI
+HOST,api-iam.intercom.io,AI
+HOST,api.githubcopilot.com,AI
+HOST,api.groq.com,AI
+HOST,api.statsig.com,AI
+HOST,api.together.xyz,AI
+HOST,apple-relay.apple.com,AI
+HOST,apple-relay.cloudflare.com,AI
+HOST,apple-relay.fastly-edge.com,AI
+HOST,bard.google.com,AI
+HOST,console.groq.com,AI
+HOST,copilot-proxy.githubusercontent.com,AI
+HOST,copilot.microsoft.com,AI
+HOST,cp4.cloudflare.com,AI
+HOST,gateway.ai.cloudflare.com,AI
+HOST,gemini.google.com,AI
+HOST,generativelanguage.googleapis.com,AI
+HOST,gspe1-ssl.ls.apple.com,AI
+HOST,guzzoni.apple.com,AI
+HOST,imagine.meta.com,AI
+HOST,notebooklm.google.com,AI
+HOST,o33249.ingest.sentry.io,AI
+HOST,openaiapi-site.azureedge.net,AI
+HOST,pplx-res.cloudinary.com,AI
+HOST,sydney.bing.com,AI
+HOST,www.bing.com,AI
+HOST-SUFFIX,ai.azure.com,AI
+HOST-SUFFIX,anthropic.com,AI
+HOST-SUFFIX,apps.mzstatic.com,AI
+HOST-SUFFIX,auth0.com,AI
+HOST-SUFFIX,bard.google.com,AI
+HOST-SUFFIX,byteoversea.com,extended-matching,AI
+HOST-SUFFIX,chat.com,AI
+HOST-SUFFIX,chatgpt.com,AI
+HOST-SUFFIX,cici.com,extended-matching,AI
+HOST-SUFFIX,ciciai.com,extended-matching,AI
+HOST-SUFFIX,claude.ai,AI
+HOST-SUFFIX,claude.com,AI
+HOST-SUFFIX,claudeusercontent.com,AI
+HOST-SUFFIX,client-api.arkoselabs.com,AI
+HOST-SUFFIX,copilot.cloud.microsoft,AI
+HOST-SUFFIX,copilot.microsoft.com,AI
+HOST-SUFFIX,cursor-cdn.com,AI
+HOST-SUFFIX,cursor.com,AI
+HOST-SUFFIX,cursor.sh,AI
+HOST-SUFFIX,cursorapi.com,AI
+HOST-SUFFIX,deepmind.com,AI
+HOST-SUFFIX,deepmind.google,AI
+HOST-SUFFIX,dola.com,extended-matching,AI
+HOST-SUFFIX,events.statsigapi.net,AI
+HOST-SUFFIX,featuregates.org,AI
+HOST-SUFFIX,gateway.icloud.com,AI
+HOST-SUFFIX,geller-pa.googleapis.com,AI
+HOST-SUFFIX,gemini.google.com,AI
+HOST-SUFFIX,generativeai.google,AI
+HOST-SUFFIX,generativelanguage.googleapis.com,AI
+HOST-SUFFIX,githubcopilot.com,AI
+HOST-SUFFIX,grazie.ai,AI
+HOST-SUFFIX,grazie.aws.intellij.net,AI
+HOST-SUFFIX,grok.com,AI
+HOST-SUFFIX,groq.com,AI
+HOST-SUFFIX,identrust.com,AI
+HOST-SUFFIX,intercom.io,AI
+HOST-SUFFIX,intercomcdn.com,AI
+HOST-SUFFIX,jetbrains.ai,AI
+HOST-SUFFIX,livekit.cloud,AI
+HOST-SUFFIX,makersuite.google.com,AI
+HOST-SUFFIX,meta.ai,AI
+HOST-SUFFIX,mistral.ai,AI
+HOST-SUFFIX,oaistatic.com,AI
+HOST-SUFFIX,oaiusercontent.com,AI
+HOST-SUFFIX,openai.com,AI
+HOST-SUFFIX,openaiapi-site.azureedge.net,AI
+HOST-SUFFIX,perplexity.ai,AI
+HOST-SUFFIX,pplx.ai,AI
+HOST-SUFFIX,proactivebackend-pa.googleapis.com,AI
+HOST-SUFFIX,smoot.apple.com,AI
+HOST-SUFFIX,sora.com,AI
+HOST-SUFFIX,x.ai,AI
+HOST-KEYWORD,anthropic,AI
+HOST-KEYWORD,claude,AI
+HOST-KEYWORD,labs.google,AI
+HOST-KEYWORD,notebooklm.google,AI
+HOST-KEYWORD,openai,AI
+HOST-KEYWORD,openaiapi,AI
+HOST-KEYWORD,openaicom,AI
