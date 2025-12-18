@@ -90,7 +90,8 @@ jobs:
           
           # 合并 AI 规则
           urls=(
-              "https://sjnhfjyebflb.eu-central-1.clawcloudrun.com/mFCwYT4buE9XCKyDuVXg/api/file/AI.yaml"
+              "https://raw.githubusercontent.com/ConnersHua/RuleGo/refs/heads/master/Surge/Ruleset/Extra/AI.list"
+              "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/AI.list"
           )
           > ladder-repo/Ruleset/AI.list
           for url in "${urls[@]}"; do
