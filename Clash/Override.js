@@ -126,14 +126,6 @@ function main(config) {
       url: "https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN.yaml",
       path: "./ruleset/SteamCN.yaml",
     },
-    "广告拦截": {
-      type: "http",
-      behavior: "domain",
-      interval: 3600,
-      url: "https://adrules.top/adrules_domainset.txt",
-      path: "./ruleset/adrules.txt",
-      format: "text",
-    },
     "Lan": {
       type: "http",
       behavior: "classical",
@@ -190,6 +182,7 @@ function main(config) {
     "DOMAIN-SUFFIX,board.zash.run.place,DIRECT",
     "DOMAIN-SUFFIX,ghfast.top,DIRECT",
     "DOMAIN-SUFFIX,figma.com,🎨 FIGMA",
+    "RULE-SET,Lan,DIRECT",
     "RULE-SET,直连修正,DIRECT",
     "RULE-SET,SteamCN,DIRECT",
     "RULE-SET,AI,✨ AI",
@@ -198,7 +191,6 @@ function main(config) {
     "RULE-SET,国际流媒体,🎬 国际媒体",
     "RULE-SET,代理列表,🌍 全球加速",
     "RULE-SET,国内网站,DIRECT",
-    "RULE-SET,Lan,DIRECT",
     "GEOIP,CN,DIRECT",
     "MATCH,🐟 漏网之鱼",
   ];
