@@ -148,12 +148,6 @@ rule-providers:
     url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN.yaml
     path: ./ruleset/SteamCN.yaml
 
-  广告拦截:
-    <<: *RuleSet_d
-    url: https://ghfast.top/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
-    path: ./ruleset/adrules.txt
-    format: text
-
   Lan:
     <<: *RuleSet_c
     url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/Lan.yaml
@@ -199,20 +193,20 @@ rules:
   - DOMAIN-SUFFIX,figma.com,🎨 FIGMA
   
   # > 订阅规则
+  - RULE-SET,Lan,DIRECT
   - RULE-SET,直连修正,DIRECT
   - RULE-SET,微信,DIRECT
   - RULE-SET,SteamCN,DIRECT
-  # - RULE-SET,广告拦截,⛔️ 广告拦截
   - RULE-SET,AI,✨ AI
   - RULE-SET,苹果服务,🍎 苹果服务
   - RULE-SET,哔哩哔哩,🎬 哔哩哔哩
   - RULE-SET,国际流媒体,🎬 国际媒体
   - RULE-SET,代理列表,🌍 全球加速
   - RULE-SET,国内网站,DIRECT
-  - RULE-SET,Lan,DIRECT
 
   # > GeoIP China
   - GEOIP,CN,DIRECT
   - MATCH,🐟 漏网之鱼
+
 
 
