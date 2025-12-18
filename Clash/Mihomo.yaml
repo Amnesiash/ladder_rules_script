@@ -114,7 +114,6 @@ i: &RuleSet_i {type: http, behavior: ipcidr, interval: 3600}
 # 策略组
 proxy-groups:
   - {name: 🚀 节点选择, type: select, use: *UseProxy}
-  # - {name: ⛔️ 广告拦截, type: select, proxies: [REJECT, DIRECT]}
   - {name: 🌍 全球加速, type: select, proxies: [♻️ 自动选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🚀 节点选择]}
   - {name: 🎨 FIGMA, type: select, proxies: [DIRECT, ♻️ 自动选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🚀 节点选择]}
   - {name: ✨ AI, type: select, proxies: [🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🚀 节点选择]}
@@ -207,6 +206,7 @@ rules:
   # > GeoIP China
   - GEOIP,CN,DIRECT
   - MATCH,🐟 漏网之鱼
+
 
 
 
