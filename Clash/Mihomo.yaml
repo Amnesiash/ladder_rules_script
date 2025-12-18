@@ -1,5 +1,5 @@
 # Mihomo 配置
-# 日期：2025-04-16
+# 日期：2025-11-18
 # 配置作者：https://github.com/Amnesiash/
 # 适用版本：所有使用 Clash Meta 核心的程序
 
@@ -207,6 +207,7 @@ rules:
   # > GeoIP China
   - GEOIP,CN,DIRECT
   - MATCH,🐟 漏网之鱼
+
 
 
 
