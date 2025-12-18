@@ -1,5 +1,5 @@
 # Clash Premium 配置
-# 日期：2025-03-23
+# 日期：2025-11-18
 # 配置作者：https://github.com/Amnesiash/
 # 适用版本：所有使用 Clash Premium 核心的程序
 
@@ -90,7 +90,6 @@ i: &RuleSet_i {type: http, behavior: ipcidr, interval: 86400}
 # 策略组
 proxy-groups:
   - {name: 🚀 节点选择, type: select, use: *UseProxy}
-  # - {name: ⛔️ 广告拦截, type: select, proxies: [REJECT, DIRECT]}
   - {name: 🌍 全球加速, type: select, proxies: [🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🚀 节点选择]}
   - {name: 🎨 FIGMA, type: select, proxies: [DIRECT, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🚀 节点选择]}
   - {name: ✨ AI, type: select, proxies: [🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🚀 节点选择]}
@@ -116,20 +115,14 @@ rule-providers:
 
   微信:
     <<: *RuleSet_c
-    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/Wechat.yaml
+    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/WeChat.yaml
     path: ./ruleset/Wechat.yaml
 
   SteamCN:
     <<: *RuleSet_c
     url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN.yaml
     path: ./ruleset/SteamCN.yaml
-
-  广告拦截:
-    <<: *RuleSet_d
-    url: https://ghfast.top/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
-    path: ./ruleset/adrules.txt
-    format: text
-
+    
   Lan:
     <<: *RuleSet_c
     url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/Lan.yaml
@@ -168,7 +161,6 @@ rule-providers:
 # 规则指向
 rules:
   # > 直连
-  - PROCESS-NAME,OneDrive,DIRECT
   - DOMAIN-SUFFIX,ghfast.top,DIRECT
   - DOMAIN-SUFFIX,clash.razord.top,DIRECT
   - DOMAIN-SUFFIX,yacd.haishan.me,DIRECT
@@ -177,17 +169,16 @@ rules:
   - DOMAIN-SUFFIX,figma.com,🎨 FIGMA
   
   # > 订阅规则
+  - RULE-SET,Lan,DIRECT
   - RULE-SET,直连修正,DIRECT
   - RULE-SET,微信,DIRECT
   - RULE-SET,SteamCN,DIRECT
-  # - RULE-SET,广告拦截,⛔️ 广告拦截
   - RULE-SET,AI,✨ AI
   - RULE-SET,苹果服务,🍎 苹果服务
   - RULE-SET,哔哩哔哩,🎬 哔哩哔哩
   - RULE-SET,国际流媒体,🎬 国际媒体
   - RULE-SET,代理列表,🌍 全球加速
   - RULE-SET,国内网站,DIRECT
-  - RULE-SET,Lan,DIRECT
 
   # > GeoIP China
   - GEOIP,CN,DIRECT
