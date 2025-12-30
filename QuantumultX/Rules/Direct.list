@@ -1,18 +1,33 @@
-# UpdateTime: 2025-12-30 09:46:28
-# RuleCount: 31
+# UpdateTime: 2025-12-30 10:13:25
+# RuleCount: 66
 
 HOST,app.adjust.com,Direct
 HOST,bdtj.tagtic.cn,Direct
+HOST,captive.apple.com,Direct
+HOST,connect.qq.com,Direct
+HOST,connect.rom.miui.com,Direct
+HOST,connectivitycheck.gstatic.com,Direct
+HOST,connectivitycheck.platform.hicloud.com,Direct
+HOST,connectivitycheck.platform.hihonorcloud.com,Direct
+HOST,cp.cloudflare.com,Direct
+HOST,detectportal.firefox.com,Direct
 HOST,dl.google.com,Direct
 HOST,errlog.umeng.com,Direct
 HOST,fairplay.l.qq.com,Direct
 HOST,livew.l.qq.com,Direct
 HOST,msg.umeng.com,Direct
 HOST,msg.umengcloud.com,Direct
+HOST,network-test.debian.org,Direct
+HOST,networkcheck.kde.org,Direct
 HOST,origin-a.akamaihd.net,Direct
+HOST,ping.archlinux.org,Direct
 HOST,rewards.hypixel.net,Direct
+HOST,speedtest.10086.cn,Direct
 HOST,tracking.miui.com,Direct
 HOST,vd.l.qq.com,Direct
+HOST,www.gstatic.com,Direct
+HOST,www.msftconnecttest.com,Direct
+HOST,www.msftncsi.com,Direct
 HOST-SUFFIX,DSCloud.biz,Direct
 HOST-SUFFIX,DSCloud.me,Direct
 HOST-SUFFIX,DSCloud.mobi,Direct
@@ -23,12 +38,32 @@ HOST-SUFFIX,DiskStation.me,Direct
 HOST-SUFFIX,FamilyDS.com,Direct
 HOST-SUFFIX,FamilyDS.net,Direct
 HOST-SUFFIX,FamilyDS.org,Direct
+HOST-SUFFIX,checkip.dyndns.org,Direct
+HOST-SUFFIX,checkip.synology.com,Direct
+HOST-SUFFIX,checkipv6.dyndns.org,Direct
+HOST-SUFFIX,cloudstudio.work,Direct
+HOST-SUFFIX,cocopilot.org,Direct
+HOST-SUFFIX,czzyvideo.com,Direct
 HOST-SUFFIX,dizhensubao.getui.com,Direct
+HOST-SUFFIX,ghp.ci,Direct
 HOST-SUFFIX,googletraveladservices.com,Direct
+HOST-SUFFIX,gradio.live,Direct
 HOST-SUFFIX,i234.me,Direct
+HOST-SUFFIX,iqiyis.com,Direct
+HOST-SUFFIX,istoreos.com,Direct
+HOST-SUFFIX,kelee.one,Direct
 HOST-SUFFIX,koodomobile.ca,Direct
 HOST-SUFFIX,koodomobile.com,Direct
+HOST-SUFFIX,musicbrainz.org,Direct
 HOST-SUFFIX,myDS.me,Direct
+HOST-SUFFIX,ngrok-free.app,Direct
+HOST-SUFFIX,ntp.org,Direct
 HOST-SUFFIX,ol.epicgames.com,Direct
+HOST-SUFFIX,quickconnect.to,Direct
+HOST-SUFFIX,speedtest.cn,Direct
+HOST-SUFFIX,steamcontent.com,Direct
+HOST-SUFFIX,synology.com,Direct
 HOST-SUFFIX,synology.me,Direct
 HOST-SUFFIX,tracking-protection.cdn.mozilla.net,Direct
+HOST-KEYWORD,quickconnect,Direct
+HOST-KEYWORD,synology,Direct

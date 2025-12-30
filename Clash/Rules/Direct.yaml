@@ -1,19 +1,34 @@
-# UpdateTime: 2025-12-30 09:46:28
-# RuleCount: 31
+# UpdateTime: 2025-12-30 10:13:24
+# RuleCount: 66
 
 payload:
   - DOMAIN,app.adjust.com
   - DOMAIN,bdtj.tagtic.cn
+  - DOMAIN,captive.apple.com
+  - DOMAIN,connect.qq.com
+  - DOMAIN,connect.rom.miui.com
+  - DOMAIN,connectivitycheck.gstatic.com
+  - DOMAIN,connectivitycheck.platform.hicloud.com
+  - DOMAIN,connectivitycheck.platform.hihonorcloud.com
+  - DOMAIN,cp.cloudflare.com
+  - DOMAIN,detectportal.firefox.com
   - DOMAIN,dl.google.com
   - DOMAIN,errlog.umeng.com
   - DOMAIN,fairplay.l.qq.com
   - DOMAIN,livew.l.qq.com
   - DOMAIN,msg.umeng.com
   - DOMAIN,msg.umengcloud.com
+  - DOMAIN,network-test.debian.org
+  - DOMAIN,networkcheck.kde.org
   - DOMAIN,origin-a.akamaihd.net
+  - DOMAIN,ping.archlinux.org
   - DOMAIN,rewards.hypixel.net
+  - DOMAIN,speedtest.10086.cn
   - DOMAIN,tracking.miui.com
   - DOMAIN,vd.l.qq.com
+  - DOMAIN,www.gstatic.com
+  - DOMAIN,www.msftconnecttest.com
+  - DOMAIN,www.msftncsi.com
   - DOMAIN-SUFFIX,DSCloud.biz
   - DOMAIN-SUFFIX,DSCloud.me
   - DOMAIN-SUFFIX,DSCloud.mobi
@@ -24,12 +39,32 @@ payload:
   - DOMAIN-SUFFIX,FamilyDS.com
   - DOMAIN-SUFFIX,FamilyDS.net
   - DOMAIN-SUFFIX,FamilyDS.org
+  - DOMAIN-SUFFIX,checkip.dyndns.org
+  - DOMAIN-SUFFIX,checkip.synology.com
+  - DOMAIN-SUFFIX,checkipv6.dyndns.org
+  - DOMAIN-SUFFIX,cloudstudio.work
+  - DOMAIN-SUFFIX,cocopilot.org
+  - DOMAIN-SUFFIX,czzyvideo.com
   - DOMAIN-SUFFIX,dizhensubao.getui.com
+  - DOMAIN-SUFFIX,ghp.ci
   - DOMAIN-SUFFIX,googletraveladservices.com
+  - DOMAIN-SUFFIX,gradio.live
   - DOMAIN-SUFFIX,i234.me
+  - DOMAIN-SUFFIX,iqiyis.com
+  - DOMAIN-SUFFIX,istoreos.com
+  - DOMAIN-SUFFIX,kelee.one
   - DOMAIN-SUFFIX,koodomobile.ca
   - DOMAIN-SUFFIX,koodomobile.com
+  - DOMAIN-SUFFIX,musicbrainz.org
   - DOMAIN-SUFFIX,myDS.me
+  - DOMAIN-SUFFIX,ngrok-free.app
+  - DOMAIN-SUFFIX,ntp.org
   - DOMAIN-SUFFIX,ol.epicgames.com
+  - DOMAIN-SUFFIX,quickconnect.to
+  - DOMAIN-SUFFIX,speedtest.cn
+  - DOMAIN-SUFFIX,steamcontent.com
+  - DOMAIN-SUFFIX,synology.com
   - DOMAIN-SUFFIX,synology.me
   - DOMAIN-SUFFIX,tracking-protection.cdn.mozilla.net
+  - DOMAIN-KEYWORD,quickconnect
+  - DOMAIN-KEYWORD,synology
