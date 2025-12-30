@@ -28,9 +28,10 @@ jobs:
           mkdir -p ladder-repo/Ruleset
           # 合并 China 规则
             urls=(
-                "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaDomain.list"
-                "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaCompanyIp.list"
-                "https://raw.githubusercontent.com/ConnersHua/RuleGo/refs/heads/master/Surge/Ruleset/Direct.list"
+                "https://raw.githubusercontent.com/666OS/rules/release/mihomo/China.txt"
+                "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list"
+                "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list"
+                "https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Direct.list"
             )
             > ladder-repo/Ruleset/China.list
             for url in "${urls[@]}"; do
@@ -41,8 +42,9 @@ jobs:
 
           # 合并 Direct 规则
             urls=(
-                "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/UnBan.list"
-                # "https://raw.githubusercontent.com/ConnersHua/RuleGo/refs/heads/master/Surge/Ruleset/Direct+.list"
+                "https://raw.githubusercontent.com/666OS/rules/release/mihomo/Direct.txt"
+                "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list"
+                # "https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Direct+.list"
             )
             > ladder-repo/Ruleset/Direct.list
             for url in "${urls[@]}"; do
@@ -53,9 +55,10 @@ jobs:
 
           # 合并 Proxy 规则
             urls=(
-                "https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/refs/heads/main/Clash/Custom/AddProxy.list"
-                "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyGFWlist.list"
-                "https://raw.githubusercontent.com/ConnersHua/RuleGo/refs/heads/master/Surge/Ruleset/Proxy.list"
+                "https://raw.githubusercontent.com/666OS/rules/release/mihomo/Proxy.txt"
+                "https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Custom/AddProxy.list"
+                "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list"
+                "https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Proxy.list"
             )
             > ladder-repo/Ruleset/Proxy.list
             for url in "${urls[@]}"; do
@@ -66,8 +69,8 @@ jobs:
 
           # 合并 GlobalMedia 规则
           urls=(
-              "https://raw.githubusercontent.com/ConnersHua/RuleGo/refs/heads/master/Surge/Ruleset/Extra/Streaming/!CN.list"
-              "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyMedia.list"
+              "https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Streaming/!CN.list"
+              "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list"
           )
           > ladder-repo/Ruleset/GlobalMedia.list
           for url in "${urls[@]}"; do
@@ -78,8 +81,8 @@ jobs:
 
           # 合并 Apple 规则
           urls=(
-              "https://raw.githubusercontent.com/ConnersHua/RuleGo/refs/heads/master/Surge/Ruleset/Extra/Apple/Apple.list"
-              "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Apple.list"
+              "https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Apple/Apple.list"
+              "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list"
           )
           > ladder-repo/Ruleset/Apple.list
           for url in "${urls[@]}"; do
@@ -90,7 +93,8 @@ jobs:
           
           # 合并 AI 规则
           urls=(
-              "https://raw.githubusercontent.com/ConnersHua/RuleGo/refs/heads/master/Surge/Ruleset/Extra/AI.list"
+              "https://raw.githubusercontent.com/666OS/rules/release/mihomo/AI.txt"
+              "https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/AI.list"
               "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/AI.list"
           )
           > ladder-repo/Ruleset/AI.list
@@ -103,9 +107,9 @@ jobs:
           # 下载规则
           files=(     
               # LAN
-              "Lan.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/LocalAreaNetwork.list"
+              "Lan.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list"
               # WeChat
-              "WeChat.list https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/WeChat/WeChat.list" 
+              "WeChat.list https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/WeChat/WeChat.list" 
               # BilibiliHMT
               "BilibiliHMT.list https://raw.githubusercontent.com/ddgksf2013/Filter/master/StreamingSE.list"
             )
