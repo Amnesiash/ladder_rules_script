@@ -1,5 +1,5 @@
-# UpdateTime: 2025-12-30 20:45:53
-# RuleCount: 266
+# UpdateTime: 2025-12-31 09:47:13
+# RuleCount: 267
 
 HOST,ai.google.dev,AI
 HOST,aistudio.google.com,AI
@@ -31,6 +31,7 @@ HOST,copilot-proxy.githubusercontent.com,AI
 HOST,copilot.github.com,AI
 HOST,copilot.microsoft.com,AI
 HOST,cp4.cloudflare.com,AI
+HOST,d3ssuo6fbvr.cloudfront.net,AI
 HOST,default.exp-tas.com,AI
 HOST,edgeservices.bing.com,AI
 HOST,gateway.ai.cloudflare.com,AI
