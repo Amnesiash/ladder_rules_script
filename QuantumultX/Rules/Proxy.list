@@ -1,5 +1,5 @@
-# UpdateTime: 2026-01-01 20:44:11
-# RuleCount: 8674
+# UpdateTime: 2026-01-02 09:48:21
+# RuleCount: 8676
 
 HOST,0rz.tw,Proxy
 HOST,1-apple.com.tw,Proxy
@@ -5885,6 +5885,7 @@ HOST-SUFFIX,pct.org.tw,Proxy
 HOST-SUFFIX,pdetails.com,Proxy
 HOST-SUFFIX,pdproxy.com,Proxy
 HOST-SUFFIX,pds.nasa.gov,Proxy
+HOST-SUFFIX,pdst.fm,Proxy
 HOST-SUFFIX,peace.ca,Proxy
 HOST-SUFFIX,peacefire.org,Proxy
 HOST-SUFFIX,peacehall.com,Proxy
@@ -7620,6 +7621,7 @@ HOST-SUFFIX,unstable.icu,Proxy
 HOST-SUFFIX,untraceable.us,Proxy
 HOST-SUFFIX,unwire.hk,Proxy
 HOST-SUFFIX,uocn.org,Proxy
+HOST-SUFFIX,up.audio,Proxy
 HOST-SUFFIX,upbit.com,Proxy
 HOST-SUFFIX,updates.tdesktop.com,Proxy
 HOST-SUFFIX,updatestar.com,Proxy

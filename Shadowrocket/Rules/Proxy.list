@@ -1,5 +1,5 @@
-# UpdateTime: 2026-01-01 20:44:11
-# RuleCount: 8674
+# UpdateTime: 2026-01-02 09:48:21
+# RuleCount: 8676
 
 DOMAIN,0rz.tw
 DOMAIN,1-apple.com.tw
@@ -5885,6 +5885,7 @@ DOMAIN-SUFFIX,pct.org.tw
 DOMAIN-SUFFIX,pdetails.com
 DOMAIN-SUFFIX,pdproxy.com
 DOMAIN-SUFFIX,pds.nasa.gov
+DOMAIN-SUFFIX,pdst.fm
 DOMAIN-SUFFIX,peace.ca
 DOMAIN-SUFFIX,peacefire.org
 DOMAIN-SUFFIX,peacehall.com
@@ -7620,6 +7621,7 @@ DOMAIN-SUFFIX,unstable.icu
 DOMAIN-SUFFIX,untraceable.us
 DOMAIN-SUFFIX,unwire.hk
 DOMAIN-SUFFIX,uocn.org
+DOMAIN-SUFFIX,up.audio
 DOMAIN-SUFFIX,upbit.com
 DOMAIN-SUFFIX,updates.tdesktop.com
 DOMAIN-SUFFIX,updatestar.com
