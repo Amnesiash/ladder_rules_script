@@ -1,5 +1,5 @@
-# UpdateTime: 2026-01-05 20:49:41
-# RuleCount: 8676
+# UpdateTime: 2026-01-06 09:48:38
+# RuleCount: 8681
 
 HOST,0rz.tw,Proxy
 HOST,1-apple.com.tw,Proxy
@@ -1470,6 +1470,7 @@ HOST-SUFFIX,ai-kan.net,Proxy
 HOST-SUFFIX,ai-wen.net,Proxy
 HOST-SUFFIX,ai.dev,Proxy
 HOST-SUFFIX,ai.google,Proxy
+HOST-SUFFIX,ai.studio,Proxy
 HOST-SUFFIX,aiosearch.com,Proxy
 HOST-SUFFIX,aiph.net,Proxy
 HOST-SUFFIX,airasia.com,Proxy
@@ -2677,6 +2678,7 @@ HOST-SUFFIX,dawangidc.com,Proxy
 HOST-SUFFIX,daxa.cn,Proxy
 HOST-SUFFIX,dayabook.com,Proxy
 HOST-SUFFIX,daylife.com,Proxy
+HOST-SUFFIX,dazn.com,Proxy
 HOST-SUFFIX,db.tt,Proxy
 HOST-SUFFIX,dbc.hk,Proxy
 HOST-SUFFIX,dbgjd.com,Proxy
@@ -5754,6 +5756,8 @@ HOST-SUFFIX,onmypc.us,Proxy
 HOST-SUFFIX,onthehunt.com,Proxy
 HOST-SUFFIX,ontrac.com,Proxy
 HOST-SUFFIX,oojj.de,Proxy
+HOST-SUFFIX,ooni.io,Proxy
+HOST-SUFFIX,ooni.org,Proxy
 HOST-SUFFIX,oopsforum.com,Proxy
 HOST-SUFFIX,open.com.hk,Proxy
 HOST-SUFFIX,open.firstory.me,Proxy
@@ -8134,6 +8138,7 @@ HOST-SUFFIX,xbox.com,Proxy
 HOST-SUFFIX,xbox.net,Proxy
 HOST-SUFFIX,xbtce.com,Proxy
 HOST-SUFFIX,xcafe.in,Proxy
+HOST-SUFFIX,xcancel.com,Proxy
 HOST-SUFFIX,xcity.jp,Proxy
 HOST-SUFFIX,xcritic.com,Proxy
 HOST-SUFFIX,xerotica.com,Proxy
