@@ -1,5 +1,5 @@
-# UpdateTime: 2026-01-06 20:46:57
-# RuleCount: 8681
+# UpdateTime: 2026-01-07 09:48:16
+# RuleCount: 8680
 
 HOST,0rz.tw,Proxy
 HOST,1-apple.com.tw,Proxy
@@ -4544,7 +4544,6 @@ HOST-SUFFIX,ismalltits.com,Proxy
 HOST-SUFFIX,ismprofessional.net,Proxy
 HOST-SUFFIX,isohunt.com,Proxy
 HOST-SUFFIX,israbox.com,Proxy
-HOST-SUFFIX,issues.chromium.org,Proxy
 HOST-SUFFIX,issuu.com,Proxy
 HOST-SUFFIX,istars.co.nz,Proxy
 HOST-SUFFIX,istarshine.com,Proxy
