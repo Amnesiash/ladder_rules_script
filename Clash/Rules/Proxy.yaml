@@ -1,5 +1,5 @@
-# UpdateTime: 2026-01-09 09:49:17
-# RuleCount: 8680
+# UpdateTime: 2026-01-09 20:47:06
+# RuleCount: 8684
 
 payload:
   - DOMAIN,0rz.tw
@@ -66,6 +66,7 @@ payload:
   - DOMAIN,antiwave.net
   - DOMAIN,anysex.com
   - DOMAIN,aofriend.com
+  - DOMAIN,api.ip.sb
   - DOMAIN,apkmonk.com
   - DOMAIN,appdownloader.net
   - DOMAIN,apple-relay.apple.com
@@ -4497,6 +4498,7 @@ payload:
   - DOMAIN-SUFFIX,inxian.com
   - DOMAIN-SUFFIX,iownyour.biz
   - DOMAIN-SUFFIX,iownyour.org
+  - DOMAIN-SUFFIX,ip.sb
   - DOMAIN-SUFFIX,ip138.com
   - DOMAIN-SUFFIX,ipalter.com
   - DOMAIN-SUFFIX,ipdefenseforum.com
@@ -5335,6 +5337,7 @@ payload:
   - DOMAIN-SUFFIX,musical.ly
   - DOMAIN-SUFFIX,musixmatch.com
   - DOMAIN-SUFFIX,muslimvideo.com
+  - DOMAIN-SUFFIX,mux.com
   - DOMAIN-SUFFIX,muzi.com
   - DOMAIN-SUFFIX,muzi.net
   - DOMAIN-SUFFIX,muzu.tv
@@ -6498,6 +6501,7 @@ payload:
   - DOMAIN-SUFFIX,services.googleapis.cn
   - DOMAIN-SUFFIX,sesawe.net
   - DOMAIN-SUFFIX,sesawe.org
+  - DOMAIN-SUFFIX,setapp.com
   - DOMAIN-SUFFIX,sethwklein.net
   - DOMAIN-SUFFIX,setn.com
   - DOMAIN-SUFFIX,settv.com.tw

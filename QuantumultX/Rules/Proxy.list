@@ -1,5 +1,5 @@
-# UpdateTime: 2026-01-09 09:49:17
-# RuleCount: 8680
+# UpdateTime: 2026-01-09 20:47:06
+# RuleCount: 8684
 
 HOST,0rz.tw,Proxy
 HOST,1-apple.com.tw,Proxy
@@ -65,6 +65,7 @@ HOST,antichristendom.com,Proxy
 HOST,antiwave.net,Proxy
 HOST,anysex.com,Proxy
 HOST,aofriend.com,Proxy
+HOST,api.ip.sb,Proxy
 HOST,apkmonk.com,Proxy
 HOST,appdownloader.net,Proxy
 HOST,apple-relay.apple.com,Proxy
@@ -4496,6 +4497,7 @@ HOST-SUFFIX,invidio.us,Proxy
 HOST-SUFFIX,inxian.com,Proxy
 HOST-SUFFIX,iownyour.biz,Proxy
 HOST-SUFFIX,iownyour.org,Proxy
+HOST-SUFFIX,ip.sb,Proxy
 HOST-SUFFIX,ip138.com,Proxy
 HOST-SUFFIX,ipalter.com,Proxy
 HOST-SUFFIX,ipdefenseforum.com,Proxy
@@ -5334,6 +5336,7 @@ HOST-SUFFIX,musicade.net,Proxy
 HOST-SUFFIX,musical.ly,Proxy
 HOST-SUFFIX,musixmatch.com,Proxy
 HOST-SUFFIX,muslimvideo.com,Proxy
+HOST-SUFFIX,mux.com,Proxy
 HOST-SUFFIX,muzi.com,Proxy
 HOST-SUFFIX,muzi.net,Proxy
 HOST-SUFFIX,muzu.tv,Proxy
@@ -6497,6 +6500,7 @@ HOST-SUFFIX,serveusers.com,Proxy
 HOST-SUFFIX,services.googleapis.cn,Proxy
 HOST-SUFFIX,sesawe.net,Proxy
 HOST-SUFFIX,sesawe.org,Proxy
+HOST-SUFFIX,setapp.com,Proxy
 HOST-SUFFIX,sethwklein.net,Proxy
 HOST-SUFFIX,setn.com,Proxy
 HOST-SUFFIX,settv.com.tw,Proxy
