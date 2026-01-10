@@ -1,5 +1,5 @@
-# UpdateTime: 2026-01-09 20:47:06
-# RuleCount: 8684
+# UpdateTime: 2026-01-10 09:45:36
+# RuleCount: 8683
 
 payload:
   - DOMAIN,0rz.tw
@@ -1414,7 +1414,6 @@ payload:
   - DOMAIN-SUFFIX,abematv.akamaized.net
   - DOMAIN-SUFFIX,ablwang.com
   - DOMAIN-SUFFIX,aboluowang.com
-  - DOMAIN-SUFFIX,about.gitlab.com
   - DOMAIN-SUFFIX,about.google
   - DOMAIN-SUFFIX,about.me
   - DOMAIN-SUFFIX,abplive.com
