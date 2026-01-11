@@ -1,5 +1,5 @@
-# UpdateTime: 2026-01-10 20:41:05
-# RuleCount: 267
+# UpdateTime: 2026-01-11 09:57:27
+# RuleCount: 269
 
 HOST,ai.google.dev,AI
 HOST,aistudio.google.com,AI
@@ -63,6 +63,7 @@ HOST-SUFFIX,abtestvm-sg.bytedance.com,AI
 HOST-SUFFIX,abtestvm.bytedance.com,AI
 HOST-SUFFIX,ai.azure.com,AI
 HOST-SUFFIX,ai.com,AI
+HOST-SUFFIX,ai.studio,AI
 HOST-SUFFIX,aida.googleapis.com,AI
 HOST-SUFFIX,aiproxy.io,AI
 HOST-SUFFIX,aisandbox-pa.googleapis.com,AI
@@ -168,6 +169,7 @@ HOST-SUFFIX,jules.google,AI
 HOST-SUFFIX,jules.google.com,AI
 HOST-SUFFIX,kiro.dev,AI
 HOST-SUFFIX,labs.google,AI
+HOST-SUFFIX,labs.google.com,AI
 HOST-SUFFIX,launchdarkly.com,AI
 HOST-SUFFIX,lemon8-app.com,AI
 HOST-SUFFIX,lemon8cdn.com,AI
