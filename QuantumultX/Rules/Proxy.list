@@ -1,5 +1,5 @@
-# UpdateTime: 2026-01-16 20:47:17
-# RuleCount: 8683
+# UpdateTime: 2026-01-17 09:44:01
+# RuleCount: 8684
 
 HOST,0rz.tw,Proxy
 HOST,1-apple.com.tw,Proxy
@@ -1413,6 +1413,7 @@ HOST-SUFFIX,abebooks.com,Proxy
 HOST-SUFFIX,abematv.akamaized.net,Proxy
 HOST-SUFFIX,ablwang.com,Proxy
 HOST-SUFFIX,aboluowang.com,Proxy
+HOST-SUFFIX,about.gitlab.com,Proxy
 HOST-SUFFIX,about.google,Proxy
 HOST-SUFFIX,about.me,Proxy
 HOST-SUFFIX,abplive.com,Proxy

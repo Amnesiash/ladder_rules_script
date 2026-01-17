@@ -1,10 +1,12 @@
-# UpdateTime: 2026-01-16 20:47:17
-# RuleCount: 269
+# UpdateTime: 2026-01-17 09:44:01
+# RuleCount: 271
 
 HOST,ai.google.dev,AI
 HOST,aistudio.google.com,AI
 HOST,alkalicore-pa.clients6.google.com,AI
 HOST,alkalimakersuite-pa.clients6.google.com,AI
+HOST,antigravity-unleash.goog,AI
+HOST,antigravity.google,AI
 HOST,api-iam.intercom.io,AI
 HOST,api.anthropic.com,AI
 HOST,api.elevenlabs.io,AI
