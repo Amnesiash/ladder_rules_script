@@ -1,13 +1,15 @@
-# UpdateTime: 2026-01-17 20:40:53
-# RuleCount: 271
+# UpdateTime: 2026-01-18 09:56:19
+# RuleCount: 280
 
 payload:
   - DOMAIN,ai.google.dev
   - DOMAIN,aistudio.google.com
   - DOMAIN,alkalicore-pa.clients6.google.com
   - DOMAIN,alkalimakersuite-pa.clients6.google.com
+  - DOMAIN,antigravity-pa.googleapis.com
   - DOMAIN,antigravity-unleash.goog
   - DOMAIN,antigravity.google
+  - DOMAIN,antigravity.googleapis.com
   - DOMAIN,api-iam.intercom.io
   - DOMAIN,api.anthropic.com
   - DOMAIN,api.elevenlabs.io
@@ -28,6 +30,8 @@ payload:
   - DOMAIN,cdn.usefathom.com
   - DOMAIN,chat.openai.com
   - DOMAIN,chat.openai.com.cdn.cloudflare.net
+  - DOMAIN,cloudaicompanion.googleapis.com
+  - DOMAIN,cloudcode-pa.googleapis.com
   - DOMAIN,console.anthropic.com
   - DOMAIN,console.groq.com
   - DOMAIN,copilot-proxy.githubusercontent.com
@@ -35,6 +39,7 @@ payload:
   - DOMAIN,copilot.microsoft.com
   - DOMAIN,cp4.cloudflare.com
   - DOMAIN,d3ssuo6fbvr.cloudfront.net
+  - DOMAIN,daily-cloudcode-pa.googleapis.com
   - DOMAIN,default.exp-tas.com
   - DOMAIN,edgeservices.bing.com
   - DOMAIN,gateway.ai.cloudflare.com
@@ -46,7 +51,9 @@ payload:
   - DOMAIN,imagine.meta.com
   - DOMAIN,makersuite.google.com
   - DOMAIN,mj.run
+  - DOMAIN,notebooklm-pa.googleapis.com
   - DOMAIN,notebooklm.google.com
+  - DOMAIN,notebooklm.googleapis.com
   - DOMAIN,o33249.ingest.sentry.io
   - DOMAIN,openai-api.arkoselabs.com
   - DOMAIN,openaiapi-site.azureedge.net
@@ -73,6 +80,8 @@ payload:
   - DOMAIN-SUFFIX,aistudio.google.com
   - DOMAIN-SUFFIX,algolia.net
   - DOMAIN-SUFFIX,anthropic.com
+  - DOMAIN-SUFFIX,antigravity-unleash.goog
+  - DOMAIN-SUFFIX,antigravity.google
   - DOMAIN-SUFFIX,api-sg-central.marscode.com
   - DOMAIN-SUFFIX,api.marscode.com
   - DOMAIN-SUFFIX,api.statsig.com

@@ -1,12 +1,14 @@
-# UpdateTime: 2026-01-17 20:40:53
-# RuleCount: 271
+# UpdateTime: 2026-01-18 09:56:20
+# RuleCount: 280
 
 HOST,ai.google.dev,AI
 HOST,aistudio.google.com,AI
 HOST,alkalicore-pa.clients6.google.com,AI
 HOST,alkalimakersuite-pa.clients6.google.com,AI
+HOST,antigravity-pa.googleapis.com,AI
 HOST,antigravity-unleash.goog,AI
 HOST,antigravity.google,AI
+HOST,antigravity.googleapis.com,AI
 HOST,api-iam.intercom.io,AI
 HOST,api.anthropic.com,AI
 HOST,api.elevenlabs.io,AI
@@ -27,6 +29,8 @@ HOST,cdn.leonardo.ai,AI
 HOST,cdn.usefathom.com,AI
 HOST,chat.openai.com,AI
 HOST,chat.openai.com.cdn.cloudflare.net,AI
+HOST,cloudaicompanion.googleapis.com,AI
+HOST,cloudcode-pa.googleapis.com,AI
 HOST,console.anthropic.com,AI
 HOST,console.groq.com,AI
 HOST,copilot-proxy.githubusercontent.com,AI
@@ -34,6 +38,7 @@ HOST,copilot.github.com,AI
 HOST,copilot.microsoft.com,AI
 HOST,cp4.cloudflare.com,AI
 HOST,d3ssuo6fbvr.cloudfront.net,AI
+HOST,daily-cloudcode-pa.googleapis.com,AI
 HOST,default.exp-tas.com,AI
 HOST,edgeservices.bing.com,AI
 HOST,gateway.ai.cloudflare.com,AI
@@ -45,7 +50,9 @@ HOST,guzzoni.apple.com,AI
 HOST,imagine.meta.com,AI
 HOST,makersuite.google.com,AI
 HOST,mj.run,AI
+HOST,notebooklm-pa.googleapis.com,AI
 HOST,notebooklm.google.com,AI
+HOST,notebooklm.googleapis.com,AI
 HOST,o33249.ingest.sentry.io,AI
 HOST,openai-api.arkoselabs.com,AI
 HOST,openaiapi-site.azureedge.net,AI
@@ -72,6 +79,8 @@ HOST-SUFFIX,aisandbox-pa.googleapis.com,AI
 HOST-SUFFIX,aistudio.google.com,AI
 HOST-SUFFIX,algolia.net,AI
 HOST-SUFFIX,anthropic.com,AI
+HOST-SUFFIX,antigravity-unleash.goog,AI
+HOST-SUFFIX,antigravity.google,AI
 HOST-SUFFIX,api-sg-central.marscode.com,AI
 HOST-SUFFIX,api.marscode.com,AI
 HOST-SUFFIX,api.statsig.com,AI

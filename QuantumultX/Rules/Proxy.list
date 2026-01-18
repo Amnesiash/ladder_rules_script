@@ -1,5 +1,5 @@
-# UpdateTime: 2026-01-17 20:40:53
-# RuleCount: 8684
+# UpdateTime: 2026-01-18 09:56:20
+# RuleCount: 8687
 
 HOST,0rz.tw,Proxy
 HOST,1-apple.com.tw,Proxy
@@ -728,7 +728,6 @@ HOST,news.nationalgeographic.com,Proxy
 HOST,news.sina.com.hk,Proxy
 HOST,news.sinchew.com.my,Proxy
 HOST,news.singtao.ca,Proxy
-HOST,news.tvbs.com.tw,Proxy
 HOST,news100.com.tw,Proxy
 HOST,newschinacomment.org,Proxy
 HOST,newstarnet.com,Proxy
@@ -1491,6 +1490,7 @@ HOST-SUFFIX,ajsands.com,Proxy
 HOST-SUFFIX,aka.ms,Proxy
 HOST-SUFFIX,akademiye.org,Proxy
 HOST-SUFFIX,akamai.net,Proxy
+HOST-SUFFIX,akamai.tvb.com,Proxy
 HOST-SUFFIX,akamaihd.net,Proxy
 HOST-SUFFIX,akamaistream.net,Proxy
 HOST-SUFFIX,akamaized.net,Proxy
@@ -3314,7 +3314,6 @@ HOST-SUFFIX,foreignpolicy.com,Proxy
 HOST-SUFFIX,form.new,Proxy
 HOST-SUFFIX,forms.new,Proxy
 HOST-SUFFIX,forum.omy.sg,Proxy
-HOST-SUFFIX,forum.tvb.com,Proxy
 HOST-SUFFIX,forum4hk.com,Proxy
 HOST-SUFFIX,forums-free.com,Proxy
 HOST-SUFFIX,forvo.com,Proxy
@@ -5405,6 +5404,7 @@ HOST-SUFFIX,myspacecdn.com,Proxy
 HOST-SUFFIX,mytalkbox.com,Proxy
 HOST-SUFFIX,myteamspeak.com,Proxy
 HOST-SUFFIX,mytizi.com,Proxy
+HOST-SUFFIX,mytvsuper.com,Proxy
 HOST-SUFFIX,mywife.cc,Proxy
 HOST-SUFFIX,mywww.biz,Proxy
 HOST-SUFFIX,myz.info,Proxy
@@ -5498,6 +5498,7 @@ HOST-SUFFIX,news.ebc.net.tw,Proxy
 HOST-SUFFIX,news.mt.co.kr,Proxy
 HOST-SUFFIX,news.omy.sg,Proxy
 HOST-SUFFIX,news.seehua.com,Proxy
+HOST-SUFFIX,news.tvbs.com.tw,Proxy
 HOST-SUFFIX,news.ycombinator.com,Proxy
 HOST-SUFFIX,news1.kr,Proxy
 HOST-SUFFIX,news100.com.tw,Proxy
@@ -7444,6 +7445,7 @@ HOST-SUFFIX,tv.com,Proxy
 HOST-SUFFIX,tv.jtbc.joins.com,Proxy
 HOST-SUFFIX,tvants.com,Proxy
 HOST-SUFFIX,tvb.com,Proxy
+HOST-SUFFIX,tvbanywhere.com,Proxy
 HOST-SUFFIX,tvboxnow.com,Proxy
 HOST-SUFFIX,tvbs.com.tw,Proxy
 HOST-SUFFIX,tvider.com,Proxy
@@ -8458,6 +8460,7 @@ HOST-KEYWORD,adobe,Proxy
 HOST-KEYWORD,airbnb,Proxy
 HOST-KEYWORD,airtable,Proxy
 HOST-KEYWORD,amazonaws,Proxy
+HOST-KEYWORD,annas-archive,Proxy
 HOST-KEYWORD,anthropic,Proxy
 HOST-KEYWORD,appledaily,Proxy
 HOST-KEYWORD,archive,Proxy

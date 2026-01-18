@@ -1,5 +1,5 @@
-# UpdateTime: 2026-01-17 20:40:54
-# RuleCount: 8684
+# UpdateTime: 2026-01-18 09:56:20
+# RuleCount: 8687
 
 DOMAIN,0rz.tw
 DOMAIN,1-apple.com.tw
@@ -728,7 +728,6 @@ DOMAIN,news.nationalgeographic.com
 DOMAIN,news.sina.com.hk
 DOMAIN,news.sinchew.com.my
 DOMAIN,news.singtao.ca
-DOMAIN,news.tvbs.com.tw
 DOMAIN,news100.com.tw
 DOMAIN,newschinacomment.org
 DOMAIN,newstarnet.com
@@ -1491,6 +1490,7 @@ DOMAIN-SUFFIX,ajsands.com
 DOMAIN-SUFFIX,aka.ms
 DOMAIN-SUFFIX,akademiye.org
 DOMAIN-SUFFIX,akamai.net
+DOMAIN-SUFFIX,akamai.tvb.com
 DOMAIN-SUFFIX,akamaihd.net
 DOMAIN-SUFFIX,akamaistream.net
 DOMAIN-SUFFIX,akamaized.net
@@ -3314,7 +3314,6 @@ DOMAIN-SUFFIX,foreignpolicy.com
 DOMAIN-SUFFIX,form.new
 DOMAIN-SUFFIX,forms.new
 DOMAIN-SUFFIX,forum.omy.sg
-DOMAIN-SUFFIX,forum.tvb.com
 DOMAIN-SUFFIX,forum4hk.com
 DOMAIN-SUFFIX,forums-free.com
 DOMAIN-SUFFIX,forvo.com
@@ -5405,6 +5404,7 @@ DOMAIN-SUFFIX,myspacecdn.com
 DOMAIN-SUFFIX,mytalkbox.com
 DOMAIN-SUFFIX,myteamspeak.com
 DOMAIN-SUFFIX,mytizi.com
+DOMAIN-SUFFIX,mytvsuper.com
 DOMAIN-SUFFIX,mywife.cc
 DOMAIN-SUFFIX,mywww.biz
 DOMAIN-SUFFIX,myz.info
@@ -5498,6 +5498,7 @@ DOMAIN-SUFFIX,news.ebc.net.tw
 DOMAIN-SUFFIX,news.mt.co.kr
 DOMAIN-SUFFIX,news.omy.sg
 DOMAIN-SUFFIX,news.seehua.com
+DOMAIN-SUFFIX,news.tvbs.com.tw
 DOMAIN-SUFFIX,news.ycombinator.com
 DOMAIN-SUFFIX,news1.kr
 DOMAIN-SUFFIX,news100.com.tw
@@ -7444,6 +7445,7 @@ DOMAIN-SUFFIX,tv.com
 DOMAIN-SUFFIX,tv.jtbc.joins.com
 DOMAIN-SUFFIX,tvants.com
 DOMAIN-SUFFIX,tvb.com
+DOMAIN-SUFFIX,tvbanywhere.com
 DOMAIN-SUFFIX,tvboxnow.com
 DOMAIN-SUFFIX,tvbs.com.tw
 DOMAIN-SUFFIX,tvider.com
@@ -8458,6 +8460,7 @@ DOMAIN-KEYWORD,adobe
 DOMAIN-KEYWORD,airbnb
 DOMAIN-KEYWORD,airtable
 DOMAIN-KEYWORD,amazonaws
+DOMAIN-KEYWORD,annas-archive
 DOMAIN-KEYWORD,anthropic
 DOMAIN-KEYWORD,appledaily
 DOMAIN-KEYWORD,archive

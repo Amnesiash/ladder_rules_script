@@ -1,5 +1,5 @@
-# UpdateTime: 2026-01-17 20:40:53
-# RuleCount: 15581
+# UpdateTime: 2026-01-18 09:56:20
+# RuleCount: 15571
 
 HOST,265.com,China
 HOST,2mdn-cn.net,China
@@ -805,6 +805,7 @@ HOST-SUFFIX,4399api.net,China
 HOST-SUFFIX,4399biule.com,China
 HOST-SUFFIX,4399dmw.com,China
 HOST-SUFFIX,4399er.com,China
+HOST-SUFFIX,4399hdhh.com,China
 HOST-SUFFIX,4399hhh.com,China
 HOST-SUFFIX,4399inc.com,China
 HOST-SUFFIX,4399mail.com,China
@@ -879,6 +880,7 @@ HOST-SUFFIX,5gzm.net,China
 HOST-SUFFIX,5ifund.com,China
 HOST-SUFFIX,5khouse.com,China
 HOST-SUFFIX,5read.com,China
+HOST-SUFFIX,5wyxi.com,China
 HOST-SUFFIX,5you.com,China
 HOST-SUFFIX,6-u.com,China
 HOST-SUFFIX,61.com,China
@@ -955,6 +957,7 @@ HOST-SUFFIX,aamsmart.com,China
 HOST-SUFFIX,aardio.com,China
 HOST-SUFFIX,abc-ca.com,China
 HOST-SUFFIX,abchina.com,China
+HOST-SUFFIX,abdf002.com,China
 HOST-SUFFIX,abercrombie.com,China
 HOST-SUFFIX,abhouses.com,China
 HOST-SUFFIX,aboutamazon.cn,China
@@ -1119,6 +1122,7 @@ HOST-SUFFIX,allawno.com,China
 HOST-SUFFIX,allawntech.com,China
 HOST-SUFFIX,alloyteam.com,China
 HOST-SUFFIX,allyes.com,China
+HOST-SUFFIX,alookweb.com,China
 HOST-SUFFIX,aloys233.top,China
 HOST-SUFFIX,alphabet.com.cn,China
 HOST-SUFFIX,alphabet.net.cn,China
@@ -1155,6 +1159,7 @@ HOST-SUFFIX,andfx.net,China
 HOST-SUFFIX,anfensi.com,China
 HOST-SUFFIX,anfutong.cn,China
 HOST-SUFFIX,anfutong.com.cn,China
+HOST-SUFFIX,anhuinews.com,China
 HOST-SUFFIX,animetamashi.com,China
 HOST-SUFFIX,anitama.net,China
 HOST-SUFFIX,anjuke.com,China
@@ -1549,6 +1554,7 @@ HOST-SUFFIX,btgtravel.com,China
 HOST-SUFFIX,bthhotels.com,China
 HOST-SUFFIX,btime.com,China
 HOST-SUFFIX,build9s.io,China
+HOST-SUFFIX,buke999.com,China
 HOST-SUFFIX,burningvocabulary.com,China
 HOST-SUFFIX,bvfcdn.com,China
 HOST-SUFFIX,bx0byte.com,China
@@ -2021,6 +2027,7 @@ HOST-SUFFIX,cmcmcdn.com,China
 HOST-SUFFIX,cmf.biz,China
 HOST-SUFFIX,cmf.ltd,China
 HOST-SUFFIX,cmfchina.com,China
+HOST-SUFFIX,cmicapm.com,China
 HOST-SUFFIX,cmpassport.com,China
 HOST-SUFFIX,cmread.com,China
 HOST-SUFFIX,cn,China
@@ -2192,6 +2199,7 @@ HOST-SUFFIX,dcarvod.com,China
 HOST-SUFFIX,dcdapp.com,China
 HOST-SUFFIX,dcdkjx.com,China
 HOST-SUFFIX,dcg.microsoft.com,China
+HOST-SUFFIX,dcloud.io,China
 HOST-SUFFIX,dcloudlive.com,China
 HOST-SUFFIX,dcloudlive.net,China
 HOST-SUFFIX,dcloudsp.com,China
@@ -2375,6 +2383,7 @@ HOST-SUFFIX,duapps.com,China
 HOST-SUFFIX,duba.com,China
 HOST-SUFFIX,duba.net,China
 HOST-SUFFIX,dui.ai,China
+HOST-SUFFIX,dui88.com,China
 HOST-SUFFIX,duiopen.com,China
 HOST-SUFFIX,duitang.com,China
 HOST-SUFFIX,duoduocdn.com,China
@@ -2389,6 +2398,7 @@ HOST-SUFFIX,duote.com,China
 HOST-SUFFIX,duowan.com,China
 HOST-SUFFIX,durex.com.cn,China
 HOST-SUFFIX,durexchina.com.cn,China
+HOST-SUFFIX,dutenews.com,China
 HOST-SUFFIX,dutils.com,China
 HOST-SUFFIX,duxiaoman-int.com,China
 HOST-SUFFIX,duxiaoman.com,China
@@ -2940,6 +2950,7 @@ HOST-SUFFIX,hao123.com,China
 HOST-SUFFIX,hao123img.com,China
 HOST-SUFFIX,hao222.com,China
 HOST-SUFFIX,haofenshu.com,China
+HOST-SUFFIX,haohaowan.net,China
 HOST-SUFFIX,haokan.com,China
 HOST-SUFFIX,haolietou.com,China
 HOST-SUFFIX,haoso.com,China
@@ -2995,6 +3006,7 @@ HOST-SUFFIX,heytea.com,China
 HOST-SUFFIX,hf-aw.com,China
 HOST-SUFFIX,hftfund.com,China
 HOST-SUFFIX,hhtravel.com,China
+HOST-SUFFIX,hiaiabc.com,China
 HOST-SUFFIX,hiascend.cn,China
 HOST-SUFFIX,hiascend.com,China
 HOST-SUFFIX,hichina.com,China
@@ -3798,6 +3810,7 @@ HOST-SUFFIX,lawxp.com,China
 HOST-SUFFIX,lawyee.org,China
 HOST-SUFFIX,lazada.com,China
 HOST-SUFFIX,lazycat.cloud,China
+HOST-SUFFIX,lbtp.com,China
 HOST-SUFFIX,lckfb.com,China
 HOST-SUFFIX,lczq.com,China
 HOST-SUFFIX,ld246.com,China
@@ -3807,6 +3820,7 @@ HOST-SUFFIX,leagueoflegends.cn,China
 HOST-SUFFIX,leangoo.com,China
 HOST-SUFFIX,leanote.com,China
 HOST-SUFFIX,leautolink.com,China
+HOST-SUFFIX,lebo.top,China
 HOST-SUFFIX,lecloud.com,China
 HOST-SUFFIX,lecloudapi.com,China
 HOST-SUFFIX,ledu.com,China
@@ -3958,6 +3972,7 @@ HOST-SUFFIX,mahjongai.net,China
 HOST-SUFFIX,mahjongcup.com,China
 HOST-SUFFIX,mahjongcup.net,China
 HOST-SUFFIX,mail4399.com,China
+HOST-SUFFIX,maindown4399.com,China
 HOST-SUFFIX,maisanqi.com,China
 HOST-SUFFIX,maitix.com,China
 HOST-SUFFIX,maixhub.com,China
@@ -4117,6 +4132,7 @@ HOST-SUFFIX,mob.com,China
 HOST-SUFFIX,mobike.com,China
 HOST-SUFFIX,mobileinternational.com.cn,China
 HOST-SUFFIX,mobmore.com,China
+HOST-SUFFIX,mobsdks.com,China
 HOST-SUFFIX,modelarts-infer.com,China
 HOST-SUFFIX,modelarts-maas.com,China
 HOST-SUFFIX,moegirl.org,China
@@ -4194,6 +4210,7 @@ HOST-SUFFIX,mychinaunicom.com,China
 HOST-SUFFIX,mydown.com,China
 HOST-SUFFIX,mydrivers.com,China
 HOST-SUFFIX,myelasticsearch.com,China
+HOST-SUFFIX,mygolbs.com,China
 HOST-SUFFIX,myhuaweicloud-custom.com,China
 HOST-SUFFIX,myhuaweicloud-koodrive.com,China
 HOST-SUFFIX,myhuaweicloud-obs.com,China
@@ -4842,6 +4859,7 @@ HOST-SUFFIX,shopeesz.com,China
 HOST-SUFFIX,shopss.com,China
 HOST-SUFFIX,shoujihuifu.com,China
 HOST-SUFFIX,shouqianba.com,China
+HOST-SUFFIX,shoutanjjj.com,China
 HOST-SUFFIX,shouyoubus.com,China
 HOST-SUFFIX,shrbank.com,China
 HOST-SUFFIX,shssp.org,China
@@ -5034,6 +5052,8 @@ HOST-SUFFIX,szbdyd.com,China
 HOST-SUFFIX,szfw.org,China
 HOST-SUFFIX,szhk.com,China
 HOST-SUFFIX,szlcsc.com,China
+HOST-SUFFIX,sznews.com,China
+HOST-SUFFIX,szpgm.com,China
 HOST-SUFFIX,szzfgjj.com,China
 HOST-SUFFIX,t00ls.cc,China
 HOST-SUFFIX,t00ls.net,China
@@ -5578,6 +5598,7 @@ HOST-SUFFIX,volcfcdnrd.com,China
 HOST-SUFFIX,volcfcdnsc.com,China
 HOST-SUFFIX,volcfxgjrtm.com,China
 HOST-SUFFIX,volcgroup.com,China
+HOST-SUFFIX,volcgslb-mlt.com,China
 HOST-SUFFIX,volcgslb.com,China
 HOST-SUFFIX,volcgtm.com,China
 HOST-SUFFIX,volciad.com,China
@@ -5789,6 +5810,7 @@ HOST-SUFFIX,x-cloud.cc,China
 HOST-SUFFIX,x315.com,China
 HOST-SUFFIX,xa-bank.com,China
 HOST-SUFFIX,xafc.com,China
+HOST-SUFFIX,xbext.com,China
 HOST-SUFFIX,xbiao.com,China
 HOST-SUFFIX,xboxlive.cn,China
 HOST-SUFFIX,xcsc.com,China
@@ -6033,6 +6055,7 @@ HOST-SUFFIX,yizhibo.com,China
 HOST-SUFFIX,yizhitou.com,China
 HOST-SUFFIX,yjbys.com,China
 HOST-SUFFIX,ykimg.com,China
+HOST-SUFFIX,yksdks.com,China
 HOST-SUFFIX,ykzq.com,China
 HOST-SUFFIX,yl-scm.com,China
 HOST-SUFFIX,ylike.net,China
@@ -6061,6 +6084,7 @@ HOST-SUFFIX,youxihezi.net,China
 HOST-SUFFIX,youxila.com,China
 HOST-SUFFIX,youxiniao.com,China
 HOST-SUFFIX,youxiputao.com,China
+HOST-SUFFIX,youxituoluo.com,China
 HOST-SUFFIX,youyierp.com,China
 HOST-SUFFIX,youyitms.com,China
 HOST-SUFFIX,youyiwms.com,China
@@ -6139,7 +6163,9 @@ HOST-SUFFIX,yuzua.com,China
 HOST-SUFFIX,yxbao.com,China
 HOST-SUFFIX,yxdmgame.com,China
 HOST-SUFFIX,yxdown.com,China
+HOST-SUFFIX,yxhapi.com,China
 HOST-SUFFIX,yxhhdl.com,China
+HOST-SUFFIX,yxhimg.com,China
 HOST-SUFFIX,yximgs.com,China
 HOST-SUFFIX,yxwsgame.com,China
 HOST-SUFFIX,yy.com,China
@@ -6786,7 +6812,7 @@ IP-CIDR,103.138.208.0/23,China
 IP-CIDR,103.138.220.0/23,China
 IP-CIDR,103.138.248.0/23,China
 IP-CIDR,103.139.134.0/23,China
-IP-CIDR,103.139.136.0/23,China
+IP-CIDR,103.139.137.0/24,China
 IP-CIDR,103.139.172.0/23,China
 IP-CIDR,103.139.204.0/23,China
 IP-CIDR,103.139.212.0/23,China
@@ -6882,6 +6908,7 @@ IP-CIDR,103.151.148.0/23,China
 IP-CIDR,103.151.158.0/23,China
 IP-CIDR,103.151.216.0/23,China
 IP-CIDR,103.151.228.0/23,China
+IP-CIDR,103.151.4.0/24,China
 IP-CIDR,103.152.120.0/22,China
 IP-CIDR,103.152.152.0/23,China
 IP-CIDR,103.152.168.0/22,China
@@ -7099,6 +7126,7 @@ IP-CIDR,103.192.96.0/20,China
 IP-CIDR,103.193.120.0/22,China
 IP-CIDR,103.193.140.0/22,China
 IP-CIDR,103.193.160.0/22,China
+IP-CIDR,103.193.172.0/23,China
 IP-CIDR,103.193.188.0/22,China
 IP-CIDR,103.193.192.0/22,China
 IP-CIDR,103.193.212.0/22,China
@@ -7625,6 +7653,7 @@ IP-CIDR,103.25.48.0/22,China
 IP-CIDR,103.25.64.0/21,China
 IP-CIDR,103.250.104.0/22,China
 IP-CIDR,103.250.124.0/22,China
+IP-CIDR,103.250.172.0/22,China
 IP-CIDR,103.250.180.0/22,China
 IP-CIDR,103.250.192.0/22,China
 IP-CIDR,103.250.216.0/22,China
@@ -8454,7 +8483,6 @@ IP-CIDR,103.99.220.0/22,China
 IP-CIDR,103.99.232.0/21,China
 IP-CIDR,103.99.40.0/23,China
 IP-CIDR,103.99.56.0/22,China
-IP-CIDR,104.167.17.0/24,China
 IP-CIDR,104.192.108.0/23,China
 IP-CIDR,104.192.110.0/24,China
 IP-CIDR,104.192.94.0/23,China
@@ -10160,8 +10188,7 @@ IP-CIDR,125.96.0.0/15,China
 IP-CIDR,125.98.0.0/16,China
 IP-CIDR,128.107.24.0/23,China
 IP-CIDR,128.108.0.0/16,China
-IP-CIDR,128.254.240.0/23,China
-IP-CIDR,128.254.242.0/24,China
+IP-CIDR,128.254.240.0/22,China
 IP-CIDR,129.204.0.0/16,China
 IP-CIDR,129.211.0.0/16,China
 IP-CIDR,129.227.146.0/23,China
@@ -10189,7 +10216,7 @@ IP-CIDR,134.75.107.14/31,China
 IP-CIDR,137.59.59.0/24,China
 IP-CIDR,137.59.88.0/22,China
 IP-CIDR,138.252.72.0/23,China
-IP-CIDR,138.252.97.0/24,China
+IP-CIDR,138.252.96.0/23,China
 IP-CIDR,139.129.0.0/16,China
 IP-CIDR,139.138.238.0/28,China
 IP-CIDR,139.148.0.0/16,China
@@ -10332,7 +10359,7 @@ IP-CIDR,144.48.88.0/22,China
 IP-CIDR,144.52.0.0/16,China
 IP-CIDR,144.7.0.0/16,China
 IP-CIDR,144.79.10.0/23,China
-IP-CIDR,144.79.5.0/24,China
+IP-CIDR,144.79.4.0/23,China
 IP-CIDR,144.79.70.0/24,China
 IP-CIDR,145.14.71.0/24,China
 IP-CIDR,145.14.72.0/22,China
@@ -10446,6 +10473,7 @@ IP-CIDR,154.89.45.0/24,China
 IP-CIDR,154.89.46.0/24,China
 IP-CIDR,154.91.158.0/23,China
 IP-CIDR,155.117.164.0/24,China
+IP-CIDR,155.117.188.0/24,China
 IP-CIDR,155.126.176.0/23,China
 IP-CIDR,156.107.160.0/24,China
 IP-CIDR,156.107.170.0/24,China
@@ -10458,7 +10486,6 @@ IP-CIDR,156.230.11.0/24,China
 IP-CIDR,156.231.163.0/24,China
 IP-CIDR,156.237.104.0/23,China
 IP-CIDR,156.242.5.0/24,China
-IP-CIDR,156.242.6.0/24,China
 IP-CIDR,156.59.202.0/23,China
 IP-CIDR,156.59.204.0/23,China
 IP-CIDR,156.59.206.0/24,China
@@ -10911,6 +10938,7 @@ IP-CIDR,192.140.192.0/20,China
 IP-CIDR,192.140.208.0/21,China
 IP-CIDR,192.144.128.0/17,China
 IP-CIDR,192.163.11.0/24,China
+IP-CIDR,192.208.13.0/24,China
 IP-CIDR,192.23.191.0/24,China
 IP-CIDR,192.232.97.0/24,China
 IP-CIDR,192.55.46.0/23,China
@@ -11286,7 +11314,6 @@ IP-CIDR,202.57.216.0/22,China
 IP-CIDR,202.57.240.0/20,China
 IP-CIDR,202.58.0.0/24,China
 IP-CIDR,202.58.112.0/22,China
-IP-CIDR,202.58.122.0/23,China
 IP-CIDR,202.59.0.0/23,China
 IP-CIDR,202.59.212.0/22,China
 IP-CIDR,202.59.236.0/24,China
@@ -12763,7 +12790,6 @@ IP-CIDR,223.96.0.0/12,China
 IP-CIDR,23.133.188.0/24,China
 IP-CIDR,23.161.8.0/24,China
 IP-CIDR,23.236.111.0/24,China
-IP-CIDR,23.251.34.0/24,China
 IP-CIDR,27.0.128.0/21,China
 IP-CIDR,27.0.160.0/21,China
 IP-CIDR,27.0.188.0/22,China
@@ -12803,6 +12829,7 @@ IP-CIDR,27.8.0.0/13,China
 IP-CIDR,27.98.208.0/20,China
 IP-CIDR,27.98.224.0/19,China
 IP-CIDR,27.99.128.0/17,China
+IP-CIDR,31.133.128.0/18,China
 IP-CIDR,31.42.125.0/24,China
 IP-CIDR,31.56.66.0/24,China
 IP-CIDR,31.57.248.0/24,China
@@ -13385,6 +13412,7 @@ IP-CIDR,43.98.0.0/15,China
 IP-CIDR,44.30.15.0/24,China
 IP-CIDR,44.30.28.0/24,China
 IP-CIDR,44.31.216.0/24,China
+IP-CIDR,44.31.234.0/24,China
 IP-CIDR,44.31.28.0/24,China
 IP-CIDR,44.31.42.0/24,China
 IP-CIDR,44.31.81.0/24,China
@@ -13665,6 +13693,7 @@ IP-CIDR,45.40.192.0/19,China
 IP-CIDR,45.40.192.0/20,China
 IP-CIDR,45.40.208.0/21,China
 IP-CIDR,45.40.224.0/19,China
+IP-CIDR,45.62.168.0/24,China
 IP-CIDR,45.65.16.0/20,China
 IP-CIDR,45.82.239.0/24,China
 IP-CIDR,45.9.11.0/24,China
@@ -13933,6 +13962,7 @@ IP6-CIDR,2001:678:10d0::/48,China
 IP6-CIDR,2001:678:1184::/48,China
 IP6-CIDR,2001:678:120::/48,China
 IP6-CIDR,2001:678:53c::/48,China
+IP6-CIDR,2001:67c:1233::/48,China
 IP6-CIDR,2001:67c:ebc::/48,China
 IP6-CIDR,2001:7fa:5::/48,China
 IP6-CIDR,2001:c68::/32,China
@@ -13954,13 +13984,12 @@ IP6-CIDR,2001:df7:1480::/48,China
 IP6-CIDR,2400:1160::/32,China
 IP6-CIDR,2400:3200::/32,China
 IP6-CIDR,2400:5280:f803::/48,China
-IP6-CIDR,2400:54a0:21c0::/48,China
-IP6-CIDR,2400:54a0:21c3::/48,China
+IP6-CIDR,2400:54a0:21c0::/46,China
 IP6-CIDR,2400:5a60:100::/48,China
 IP6-CIDR,2400:5a60:2::/48,China
 IP6-CIDR,2400:5f60::/32,China
 IP6-CIDR,2400:6000::/32,China
-IP6-CIDR,2400:6460:300::/40,China
+IP6-CIDR,2400:6460:300::/48,China
 IP6-CIDR,2400:6460:500::/40,China
 IP6-CIDR,2400:6460::/39,China
 IP6-CIDR,2400:6600::/32,China
@@ -14072,7 +14101,6 @@ IP6-CIDR,2401:1160::/32,China
 IP6-CIDR,2401:11a0:10::/44,China
 IP6-CIDR,2401:11a0:d150::/48,China
 IP6-CIDR,2401:11a0:d152::/48,China
-IP6-CIDR,2401:11a0:d158::/48,China
 IP6-CIDR,2401:1320::/32,China
 IP6-CIDR,2401:1d40::/32,China
 IP6-CIDR,2401:20::/40,China
@@ -14248,7 +14276,6 @@ IP6-CIDR,2403:a140:100::/40,China
 IP6-CIDR,2403:a140:10::/48,China
 IP6-CIDR,2403:a200::/32,China
 IP6-CIDR,2403:ac00::/32,China
-IP6-CIDR,2403:ad80:101c::/48,China
 IP6-CIDR,2403:ad80:8008::/48,China
 IP6-CIDR,2403:ad80:8047::/48,China
 IP6-CIDR,2403:b400::/32,China
@@ -14349,12 +14376,7 @@ IP6-CIDR,2404:f4c0:f9cc::/47,China
 IP6-CIDR,2404:f4c0:f9ce::/48,China
 IP6-CIDR,2404:f4c0:f9d0::/44,China
 IP6-CIDR,2404:f4c0:f9e0::/43,China
-IP6-CIDR,2404:f4c0:fa00::/41,China
-IP6-CIDR,2404:f4c0:fa80::/48,China
-IP6-CIDR,2404:f4c0:fa90::/44,China
-IP6-CIDR,2404:f4c0:faa0::/43,China
-IP6-CIDR,2404:f4c0:fac0::/42,China
-IP6-CIDR,2404:f4c0:fb00::/40,China
+IP6-CIDR,2404:f4c0:fa00::/39,China
 IP6-CIDR,2404:f4c0:fc00::/38,China
 IP6-CIDR,2405:1480:1000::/48,China
 IP6-CIDR,2405:1480:2000::/48,China
@@ -14406,11 +14428,9 @@ IP6-CIDR,2406:840:e0e4::/47,China
 IP6-CIDR,2406:840:e0e8::/48,China
 IP6-CIDR,2406:840:e10f::/48,China
 IP6-CIDR,2406:840:e14f::/48,China
-IP6-CIDR,2406:840:e231::/48,China
 IP6-CIDR,2406:840:e234::/48,China
 IP6-CIDR,2406:840:e260::/48,China
-IP6-CIDR,2406:840:e603::/48,China
-IP6-CIDR,2406:840:e60c::/47,China
+IP6-CIDR,2406:840:e600::/46,China
 IP6-CIDR,2406:840:e620::/47,China
 IP6-CIDR,2406:840:e666::/47,China
 IP6-CIDR,2406:840:e720::/44,China
@@ -14441,9 +14461,7 @@ IP6-CIDR,2406:840:fa60::/44,China
 IP6-CIDR,2406:840:fc10::/44,China
 IP6-CIDR,2406:840:fc20::/43,China
 IP6-CIDR,2406:840:fc40::/42,China
-IP6-CIDR,2406:840:fc80::/46,China
-IP6-CIDR,2406:840:fc85::/48,China
-IP6-CIDR,2406:840:fc86::/47,China
+IP6-CIDR,2406:840:fc80::/45,China
 IP6-CIDR,2406:840:fc88::/47,China
 IP6-CIDR,2406:840:fc8f::/48,China
 IP6-CIDR,2406:840:fc90::/44,China
@@ -14455,7 +14473,7 @@ IP6-CIDR,2406:840:fcf4::/47,China
 IP6-CIDR,2406:840:fd40::/42,China
 IP6-CIDR,2406:840:fd80::/42,China
 IP6-CIDR,2406:840:fdc0::/44,China
-IP6-CIDR,2406:840:fdea::/48,China
+IP6-CIDR,2406:840:fdeb::/48,China
 IP6-CIDR,2406:840:fe27::/48,China
 IP6-CIDR,2406:840:fe90::/46,China
 IP6-CIDR,2406:840:fe94::/48,China
@@ -14474,7 +14492,7 @@ IP6-CIDR,2406:840:feca::/47,China
 IP6-CIDR,2406:840:fecc::/47,China
 IP6-CIDR,2406:840:fecf::/48,China
 IP6-CIDR,2406:840:fed1::/48,China
-IP6-CIDR,2406:840:fed8::/48,China
+IP6-CIDR,2406:840:fed8::/47,China
 IP6-CIDR,2406:840:fedb::/48,China
 IP6-CIDR,2406:840:fedc::/48,China
 IP6-CIDR,2406:840:fedf::/48,China
@@ -14519,24 +14537,7 @@ IP6-CIDR,2407:c080:6000::/36,China
 IP6-CIDR,2407:c080:8000::/36,China
 IP6-CIDR,2407:c080::/35,China
 IP6-CIDR,2407:d9c0::/32,China
-IP6-CIDR,2408:4000:1000::/36,China
-IP6-CIDR,2408:4000:2000::/35,China
-IP6-CIDR,2408:4000:200::/39,China
-IP6-CIDR,2408:4000:4000::/34,China
-IP6-CIDR,2408:4000:400::/38,China
-IP6-CIDR,2408:4000:8000::/33,China
-IP6-CIDR,2408:4000:800::/37,China
-IP6-CIDR,2408:4000::/40,China
-IP6-CIDR,2408:4001::/32,China
-IP6-CIDR,2408:4002::/31,China
-IP6-CIDR,2408:4004::/30,China
-IP6-CIDR,2408:4008::/29,China
-IP6-CIDR,2408:4010::/28,China
-IP6-CIDR,2408:4020::/27,China
-IP6-CIDR,2408:4040::/26,China
-IP6-CIDR,2408:4080::/25,China
-IP6-CIDR,2408:4100::/24,China
-IP6-CIDR,2408:4200::/23,China
+IP6-CIDR,2408:4000::/22,China
 IP6-CIDR,2408:8000:1000::/36,China
 IP6-CIDR,2408:8000:2000::/35,China
 IP6-CIDR,2408:8000:2::/47,China
@@ -15130,6 +15131,7 @@ IP6-CIDR,240a:40c3:4000::/43,China
 IP6-CIDR,240a:40c3:6000::/43,China
 IP6-CIDR,240a:40c3:8000::/43,China
 IP6-CIDR,240a:40c3::/43,China
+IP6-CIDR,240a:40c3:a000::/43,China
 IP6-CIDR,240a:40c3:c000::/43,China
 IP6-CIDR,240a:40c3:c200::/48,China
 IP6-CIDR,240a:40c3:c240::/48,China
@@ -15184,7 +15186,6 @@ IP6-CIDR,2602:f92a:a46f::/48,China
 IP6-CIDR,2602:f92a:a470::/48,China
 IP6-CIDR,2602:f92a:a473::/48,China
 IP6-CIDR,2602:f92a:dead::/48,China
-IP6-CIDR,2602:f92a:e100::/44,China
 IP6-CIDR,2602:f93b:400::/38,China
 IP6-CIDR,2602:f93b:800::/39,China
 IP6-CIDR,2602:f93b:a00::/44,China
@@ -15300,9 +15301,6 @@ IP6-CIDR,2a0a:2846::/48,China
 IP6-CIDR,2a0a:6040:ec00::/40,China
 IP6-CIDR,2a0a:6044:6600::/39,China
 IP6-CIDR,2a0a:6044:7a00::/40,China
-IP6-CIDR,2a0a:d682::/31,China
-IP6-CIDR,2a0a:d684::/31,China
-IP6-CIDR,2a0a:d686:8000::/40,China
 IP6-CIDR,2a0b:21c0:3003::/48,China
 IP6-CIDR,2a0b:2542::/48,China
 IP6-CIDR,2a0b:4e07:b8::/47,China
@@ -15362,7 +15360,6 @@ IP6-CIDR,2a0e:b107:272::/48,China
 IP6-CIDR,2a0e:b107:740::/44,China
 IP6-CIDR,2a0e:b107:c10::/48,China
 IP6-CIDR,2a0e:b107:da0::/44,China
-IP6-CIDR,2a0f:1cc4::/32,China
 IP6-CIDR,2a0f:1cc5:100::/43,China
 IP6-CIDR,2a0f:1cc5:10::/47,China
 IP6-CIDR,2a0f:1cc5:1200::/40,China
@@ -15372,7 +15369,7 @@ IP6-CIDR,2a0f:1cc5:1400::/48,China
 IP6-CIDR,2a0f:1cc5:1c00::/47,China
 IP6-CIDR,2a0f:1cc5:1d10::/47,China
 IP6-CIDR,2a0f:1cc5:1d14::/47,China
-IP6-CIDR,2a0f:1cc5:202::/48,China
+IP6-CIDR,2a0f:1cc5:203::/48,China
 IP6-CIDR,2a0f:1cc5:20::/44,China
 IP6-CIDR,2a0f:1cc5:2d01::/48,China
 IP6-CIDR,2a0f:1cc5:2e01::/48,China
@@ -15388,8 +15385,9 @@ IP6-CIDR,2a0f:1cc5:fff::/48,China
 IP6-CIDR,2a0f:1cc5:ffff::/48,China
 IP6-CIDR,2a0f:1cc6:b110::/47,China
 IP6-CIDR,2a0f:1cc6:bab4::/48,China
-IP6-CIDR,2a0f:1cc7::/32,China
 IP6-CIDR,2a0f:5707:ac01::/48,China
+IP6-CIDR,2a0f:6282::/32,China
+IP6-CIDR,2a0f:6284:3000::/39,China
 IP6-CIDR,2a0f:6284:300::/40,China
 IP6-CIDR,2a0f:6284:400::/42,China
 IP6-CIDR,2a0f:6284:440::/43,China
@@ -15402,17 +15400,12 @@ IP6-CIDR,2a0f:6284:4c60::/44,China
 IP6-CIDR,2a0f:6284:4c80::/43,China
 IP6-CIDR,2a0f:6284:4d00::/40,China
 IP6-CIDR,2a0f:6284:4e00::/39,China
+IP6-CIDR,2a0f:6287::/36,China
 IP6-CIDR,2a0f:7803:e300::/40,China
 IP6-CIDR,2a0f:7803:f680::/44,China
-IP6-CIDR,2a0f:7803:f8c0::/43,China
-IP6-CIDR,2a0f:7803:f8f0::/44,China
-IP6-CIDR,2a0f:7803:f900::/42,China
-IP6-CIDR,2a0f:7803:f940::/43,China
-IP6-CIDR,2a0f:7803:fa10::/44,China
 IP6-CIDR,2a0f:7803:fa21::/48,China
 IP6-CIDR,2a0f:7803:fa22::/47,China
 IP6-CIDR,2a0f:7803:fa24::/46,China
-IP6-CIDR,2a0f:7803:fa60::/44,China
 IP6-CIDR,2a0f:7803:faf3::/48,China
 IP6-CIDR,2a0f:7803:fc00::/44,China
 IP6-CIDR,2a0f:7803:fe45::/48,China
@@ -15446,13 +15439,11 @@ IP6-CIDR,2a13:a5c7:1800::/40,China
 IP6-CIDR,2a13:a5c7:2100::/48,China
 IP6-CIDR,2a13:a5c7:2102::/48,China
 IP6-CIDR,2a13:a5c7:2121::/48,China
-IP6-CIDR,2a13:a5c7:2301::/48,China
 IP6-CIDR,2a13:a5c7:2302::/47,China
 IP6-CIDR,2a13:a5c7:2306::/48,China
 IP6-CIDR,2a13:a5c7:23c0::/48,China
 IP6-CIDR,2a13:a5c7:2801::/48,China
-IP6-CIDR,2a13:a5c7:31a0::/43,China
-IP6-CIDR,2a13:a5c7:31c0::/46,China
+IP6-CIDR,2a13:a5c7:3100::/40,China
 IP6-CIDR,2a13:a5c7:3301::/48,China
 IP6-CIDR,2a13:a5c7:3302::/48,China
 IP6-CIDR,2a13:a5c7:3304::/48,China
@@ -15490,14 +15481,11 @@ IP6-CIDR,2a14:67c1:b105::/48,China
 IP6-CIDR,2a14:67c1:b107::/48,China
 IP6-CIDR,2a14:67c1:b110::/48,China
 IP6-CIDR,2a14:67c1:b130::/46,China
-IP6-CIDR,2a14:67c1:b134::/47,China
+IP6-CIDR,2a14:67c1:b134::/48,China
 IP6-CIDR,2a14:67c1:b136::/48,China
-IP6-CIDR,2a14:67c1:b140::/48,China
-IP6-CIDR,2a14:67c1:b142::/47,China
+IP6-CIDR,2a14:67c1:b140::/46,China
 IP6-CIDR,2a14:67c1:b146::/48,China
-IP6-CIDR,2a14:67c1:b441::/48,China
-IP6-CIDR,2a14:67c1:b442::/48,China
-IP6-CIDR,2a14:67c1:b490::/45,China
+IP6-CIDR,2a14:67c1:b460::/44,China
 IP6-CIDR,2a14:67c1:b4e0::/44,China
 IP6-CIDR,2a14:67c1:b500::/47,China
 IP6-CIDR,2a14:67c1:b514::/48,China
@@ -15513,8 +15501,8 @@ IP6-CIDR,2a14:67c1:b590::/48,China
 IP6-CIDR,2a14:67c1:b599::/48,China
 IP6-CIDR,2a14:67c1:c300::/40,China
 IP6-CIDR,2a14:67c1:c600::/40,China
-IP6-CIDR,2a14:67c2:a70::/47,China
 IP6-CIDR,2a14:67c3:30::/44,China
+IP6-CIDR,2a14:67c3:520::/44,China
 IP6-CIDR,2a14:67c3:c0::/48,China
 IP6-CIDR,2a14:7580:730::/44,China
 IP6-CIDR,2a14:7580:740::/44,China
@@ -15551,12 +15539,14 @@ IP6-CIDR,2a14:7581:bff::/48,China
 IP6-CIDR,2a14:7581:ffb::/48,China
 IP6-CIDR,2a14:7583:f224::/47,China
 IP6-CIDR,2a14:7583:f228::/48,China
+IP6-CIDR,2a14:7583:f22c::/48,China
 IP6-CIDR,2a14:7583:f244::/47,China
 IP6-CIDR,2a14:7583:f264::/48,China
 IP6-CIDR,2a14:7583:f268::/48,China
 IP6-CIDR,2a14:7583:f300::/46,China
-IP6-CIDR,2a14:7583:f304::/47,China
-IP6-CIDR,2a14:7583:f4f1::/48,China
+IP6-CIDR,2a14:7583:f305::/48,China
+IP6-CIDR,2a14:7583:f4f0::/47,China
+IP6-CIDR,2a14:7583:f4f4::/48,China
 IP6-CIDR,2a14:7583:f4fe::/48,China
 IP6-CIDR,2a14:7583:f500::/48,China
 IP6-CIDR,2a14:7583:f701::/48,China
@@ -15567,7 +15557,8 @@ IP6-CIDR,2a14:7583:f70c::/48,China
 IP6-CIDR,2a14:7583:f743::/48,China
 IP6-CIDR,2a14:7583:f744::/48,China
 IP6-CIDR,2a14:7583:f764::/48,China
-IP6-CIDR,2a14:7586:6100::/46,China
+IP6-CIDR,2a14:7586:6100::/47,China
+IP6-CIDR,2a14:7586:6103::/48,China
 IP6-CIDR,2a14:7586:6105::/48,China
 IP6-CIDR,2a14:7c0:4a01::/48,China
 IP6-CIDR,2a14:7c0:5103::/48,China
@@ -15577,8 +15568,7 @@ IP6-CIDR,2c0f:f7a8:805f::/48,China
 IP6-CIDR,2c0f:f7a8:8150::/48,China
 IP6-CIDR,2c0f:f7a8:815f::/48,China
 IP6-CIDR,2c0f:f7a8:8211::/48,China
-IP6-CIDR,2c0f:f7a8:9010::/48,China
 IP6-CIDR,2c0f:f7a8:9020::/48,China
 IP6-CIDR,2c0f:f7a8:9041::/48,China
-IP6-CIDR,2c0f:f7a8:9210::/47,China
+IP6-CIDR,2c0f:f7a8:9211::/48,China
 IP6-CIDR,2c0f:f7a8:9220::/48,China
