@@ -1,5 +1,5 @@
-# UpdateTime: 2026-01-20 20:52:09
-# RuleCount: 8687
+# UpdateTime: 2026-01-21 09:52:13
+# RuleCount: 8689
 
 HOST,0rz.tw,Proxy
 HOST,1-apple.com.tw,Proxy
@@ -7939,6 +7939,7 @@ HOST-SUFFIX,wefightcensorship.org,Proxy
 HOST-SUFFIX,wefong.com,Proxy
 HOST-SUFFIX,wego.here.com,Proxy
 HOST-SUFFIX,weiboleak.com,Proxy
+HOST-SUFFIX,weights.com,Proxy
 HOST-SUFFIX,weihuo.org,Proxy
 HOST-SUFFIX,weijingsheng.org,Proxy
 HOST-SUFFIX,weiming.info,Proxy
@@ -8301,6 +8302,7 @@ HOST-SUFFIX,youdontcare.com,Proxy
 HOST-SUFFIX,youjizz.com,Proxy
 HOST-SUFFIX,youlucky.com,Proxy
 HOST-SUFFIX,youmaker.com,Proxy
+HOST-SUFFIX,youmind.com,Proxy
 HOST-SUFFIX,youngpornvideos.com,Proxy
 HOST-SUFFIX,youngspiration.hk,Proxy
 HOST-SUFFIX,youpai.org,Proxy
