@@ -1,5 +1,5 @@
-# UpdateTime: 2026-01-24 09:46:31
-# RuleCount: 471
+# UpdateTime: 2026-01-24 20:42:06
+# RuleCount: 429
 
 HOST,44wilhpljf.execute-api.ap-southeast-1.amazonaws.com,GlobalMedia
 HOST,ai.google.dev,GlobalMedia
@@ -429,46 +429,4 @@ IP-CIDR,64.120.128.0/17,GlobalMedia
 IP-CIDR,66.197.128.0/17,GlobalMedia
 IP-CIDR,69.53.224.0/19,GlobalMedia
 IP-CIDR,8.41.4.0/24,GlobalMedia
-USER-AGENT,*YouTubeMusic*,GlobalMedia
-USER-AGENT,*com.google.ios.youtubemusic*,GlobalMedia
-USER-AGENT,*youtube*,GlobalMedia
-USER-AGENT,AbemaTV*,GlobalMedia
-USER-AGENT,All4*,GlobalMedia
-USER-AGENT,Anime*,GlobalMedia
-USER-AGENT,AppleNews*,GlobalMedia
-USER-AGENT,Argo*,GlobalMedia
-USER-AGENT,BBCiPlayer*,GlobalMedia
-USER-AGENT,DAZN*,GlobalMedia
-USER-AGENT,Deezer*,GlobalMedia
-USER-AGENT,Disney*,GlobalMedia
-USER-AGENT,Disney+*,GlobalMedia
-USER-AGENT,FOX%20NOW*,GlobalMedia
-USER-AGENT,HBO%20GO%20PROD*,GlobalMedia
-USER-AGENT,HBO%20NOW*,GlobalMedia
-USER-AGENT,HBOMAX*,GlobalMedia
-USER-AGENT,HWTVMobile*,GlobalMedia
-USER-AGENT,ITV_Player*,GlobalMedia
-USER-AGENT,JOOX*,GlobalMedia
-USER-AGENT,KKTV*,GlobalMedia
-USER-AGENT,LINE%20TV*,GlobalMedia
-USER-AGENT,LINE*,GlobalMedia
-USER-AGENT,My5*,GlobalMedia
-USER-AGENT,Niconico*,GlobalMedia
-USER-AGENT,PBS*,GlobalMedia
-USER-AGENT,Pandora*,GlobalMedia
-USER-AGENT,SoundCloud*,GlobalMedia
-USER-AGENT,Spotify*,GlobalMedia
-USER-AGENT,TIDAL*,GlobalMedia
-USER-AGENT,TaiwanGood*,GlobalMedia
-USER-AGENT,TikTok*,GlobalMedia
-USER-AGENT,Viu*,GlobalMedia
-USER-AGENT,WeMusic*,GlobalMedia
-USER-AGENT,YouTube*,GlobalMedia
-USER-AGENT,YouTubeMusic*,GlobalMedia
-USER-AGENT,com.apple.news*,GlobalMedia
-USER-AGENT,com.google.ios.youtube*,GlobalMedia
-USER-AGENT,com.google.ios.youtubemusic*,GlobalMedia
-USER-AGENT,com.kktv.ios.kktv*,GlobalMedia
-USER-AGENT,encoreTVB*,GlobalMedia
-USER-AGENT,mytv*,GlobalMedia
 GEOIP,NETFLIX,GlobalMedia
