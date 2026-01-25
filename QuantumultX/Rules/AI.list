@@ -1,5 +1,5 @@
-# UpdateTime: 2026-01-24 20:42:06
-# RuleCount: 280
+# UpdateTime: 2026-01-25 09:59:32
+# RuleCount: 285
 
 HOST,ai.google.dev,AI
 HOST,aistudio.google.com,AI
@@ -188,6 +188,8 @@ HOST-SUFFIX,leonardo.ai,AI
 HOST-SUFFIX,lf-cdn.marscode.com,AI
 HOST-SUFFIX,lf-rc1.yhgfb-static.com,AI
 HOST-SUFFIX,livekit.cloud,AI
+HOST-SUFFIX,liveperson.net,AI
+HOST-SUFFIX,lpsnmedia.net,AI
 HOST-SUFFIX,makersuite.google.com,AI
 HOST-SUFFIX,maliva-mcs.byteoversea.com,AI
 HOST-SUFFIX,marscode.com,AI
@@ -256,6 +258,9 @@ HOST-SUFFIX,ulikecam.com,AI
 HOST-SUFFIX,vcs-sg.byteoversea.com,AI
 HOST-SUFFIX,vmweb-va.ciciai.com,AI
 HOST-SUFFIX,x.ai,AI
+HOST-SUFFIX,youmind.ai,AI
+HOST-SUFFIX,youmind.com,AI
+HOST-SUFFIX,youmind.site,AI
 HOST-SUFFIX,zijieapi.com,AI
 HOST-KEYWORD,anthropic,AI
 HOST-KEYWORD,byteoversea,AI
