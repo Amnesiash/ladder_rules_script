@@ -1,33 +1,18 @@
-# UpdateTime: 2026-01-28 09:51:34
-# RuleCount: 66
+# UpdateTime: 2026-01-28 20:52:51
+# RuleCount: 51
 
 HOST,app.adjust.com,Direct
 HOST,bdtj.tagtic.cn,Direct
-HOST,captive.apple.com,Direct
-HOST,connect.qq.com,Direct
-HOST,connect.rom.miui.com,Direct
-HOST,connectivitycheck.gstatic.com,Direct
-HOST,connectivitycheck.platform.hicloud.com,Direct
-HOST,connectivitycheck.platform.hihonorcloud.com,Direct
-HOST,cp.cloudflare.com,Direct
-HOST,detectportal.firefox.com,Direct
 HOST,dl.google.com,Direct
 HOST,errlog.umeng.com,Direct
 HOST,fairplay.l.qq.com,Direct
 HOST,livew.l.qq.com,Direct
 HOST,msg.umeng.com,Direct
 HOST,msg.umengcloud.com,Direct
-HOST,network-test.debian.org,Direct
-HOST,networkcheck.kde.org,Direct
 HOST,origin-a.akamaihd.net,Direct
-HOST,ping.archlinux.org,Direct
 HOST,rewards.hypixel.net,Direct
-HOST,speedtest.10086.cn,Direct
 HOST,tracking.miui.com,Direct
 HOST,vd.l.qq.com,Direct
-HOST,www.gstatic.com,Direct
-HOST,www.msftconnecttest.com,Direct
-HOST,www.msftncsi.com,Direct
 HOST-SUFFIX,DSCloud.biz,Direct
 HOST-SUFFIX,DSCloud.me,Direct
 HOST-SUFFIX,DSCloud.mobi,Direct

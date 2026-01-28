@@ -1,33 +1,18 @@
-# UpdateTime: 2026-01-28 09:51:34
-# RuleCount: 66
+# UpdateTime: 2026-01-28 20:52:52
+# RuleCount: 51
 
 DOMAIN,app.adjust.com
 DOMAIN,bdtj.tagtic.cn
-DOMAIN,captive.apple.com
-DOMAIN,connect.qq.com
-DOMAIN,connect.rom.miui.com
-DOMAIN,connectivitycheck.gstatic.com
-DOMAIN,connectivitycheck.platform.hicloud.com
-DOMAIN,connectivitycheck.platform.hihonorcloud.com
-DOMAIN,cp.cloudflare.com
-DOMAIN,detectportal.firefox.com
 DOMAIN,dl.google.com
 DOMAIN,errlog.umeng.com
 DOMAIN,fairplay.l.qq.com
 DOMAIN,livew.l.qq.com
 DOMAIN,msg.umeng.com
 DOMAIN,msg.umengcloud.com
-DOMAIN,network-test.debian.org
-DOMAIN,networkcheck.kde.org
 DOMAIN,origin-a.akamaihd.net
-DOMAIN,ping.archlinux.org
 DOMAIN,rewards.hypixel.net
-DOMAIN,speedtest.10086.cn
 DOMAIN,tracking.miui.com
 DOMAIN,vd.l.qq.com
-DOMAIN,www.gstatic.com
-DOMAIN,www.msftconnecttest.com
-DOMAIN,www.msftncsi.com
 DOMAIN-SUFFIX,DSCloud.biz
 DOMAIN-SUFFIX,DSCloud.me
 DOMAIN-SUFFIX,DSCloud.mobi
