@@ -1,5 +1,5 @@
-# UpdateTime: 2026-01-30 10:05:43
-# RuleCount: 7511
+# UpdateTime: 2026-01-30 20:57:40
+# RuleCount: 7512
 
 payload:
   - DOMAIN,a248.e.akamai.net
@@ -5423,6 +5423,7 @@ payload:
   - DOMAIN-SUFFIX,silkbook.com
   - DOMAIN-SUFFIX,silvergatebank.com
   - DOMAIN-SUFFIX,simbolostwitter.com
+  - DOMAIN-SUFFIX,simianx.ai
   - DOMAIN-SUFFIX,simplecd.me
   - DOMAIN-SUFFIX,simplecd.org
   - DOMAIN-SUFFIX,simpleproductivityblog.com

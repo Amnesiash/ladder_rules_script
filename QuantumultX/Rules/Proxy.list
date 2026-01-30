@@ -1,5 +1,5 @@
-# UpdateTime: 2026-01-30 10:05:44
-# RuleCount: 7511
+# UpdateTime: 2026-01-30 20:57:41
+# RuleCount: 7512
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -5422,6 +5422,7 @@ HOST-SUFFIX,sijihuisuo.com,Proxy
 HOST-SUFFIX,silkbook.com,Proxy
 HOST-SUFFIX,silvergatebank.com,Proxy
 HOST-SUFFIX,simbolostwitter.com,Proxy
+HOST-SUFFIX,simianx.ai,Proxy
 HOST-SUFFIX,simplecd.me,Proxy
 HOST-SUFFIX,simplecd.org,Proxy
 HOST-SUFFIX,simpleproductivityblog.com,Proxy
