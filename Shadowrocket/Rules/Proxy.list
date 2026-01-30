@@ -1,5 +1,5 @@
-# UpdateTime: 2026-01-29 20:59:16
-# RuleCount: 7510
+# UpdateTime: 2026-01-30 10:05:44
+# RuleCount: 7511
 
 DOMAIN,a248.e.akamai.net
 DOMAIN,a771.dscq.akamai.net
@@ -2212,6 +2212,7 @@ DOMAIN-SUFFIX,freerk.com
 DOMAIN-SUFFIX,freess.org
 DOMAIN-SUFFIX,freessh.us
 DOMAIN-SUFFIX,freetcp.com
+DOMAIN-SUFFIX,freeterabox.com
 DOMAIN-SUFFIX,freetibet.net
 DOMAIN-SUFFIX,freetibet.org
 DOMAIN-SUFFIX,freetibetanheroes.org

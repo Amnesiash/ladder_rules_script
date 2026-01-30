@@ -1,5 +1,5 @@
-# UpdateTime: 2026-01-29 20:59:16
-# RuleCount: 7510
+# UpdateTime: 2026-01-30 10:05:44
+# RuleCount: 7511
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -2212,6 +2212,7 @@ HOST-SUFFIX,freerk.com,Proxy
 HOST-SUFFIX,freess.org,Proxy
 HOST-SUFFIX,freessh.us,Proxy
 HOST-SUFFIX,freetcp.com,Proxy
+HOST-SUFFIX,freeterabox.com,Proxy
 HOST-SUFFIX,freetibet.net,Proxy
 HOST-SUFFIX,freetibet.org,Proxy
 HOST-SUFFIX,freetibetanheroes.org,Proxy

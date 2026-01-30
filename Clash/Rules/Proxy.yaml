@@ -1,5 +1,5 @@
-# UpdateTime: 2026-01-29 20:59:16
-# RuleCount: 7510
+# UpdateTime: 2026-01-30 10:05:43
+# RuleCount: 7511
 
 payload:
   - DOMAIN,a248.e.akamai.net
@@ -2213,6 +2213,7 @@ payload:
   - DOMAIN-SUFFIX,freess.org
   - DOMAIN-SUFFIX,freessh.us
   - DOMAIN-SUFFIX,freetcp.com
+  - DOMAIN-SUFFIX,freeterabox.com
   - DOMAIN-SUFFIX,freetibet.net
   - DOMAIN-SUFFIX,freetibet.org
   - DOMAIN-SUFFIX,freetibetanheroes.org
