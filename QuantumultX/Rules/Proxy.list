@@ -1,5 +1,5 @@
-# UpdateTime: 2026-01-31 20:50:18
-# RuleCount: 7512
+# UpdateTime: 2026-02-01 10:30:33
+# RuleCount: 7516
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -633,6 +633,7 @@ HOST-SUFFIX,bbc.co,Proxy
 HOST-SUFFIX,bbc.co.uk,Proxy
 HOST-SUFFIX,bbc.com,Proxy
 HOST-SUFFIX,bbc.in,Proxy
+HOST-SUFFIX,bbc.pdn.tritondigital.com,Proxy
 HOST-SUFFIX,bbcchinese.com,Proxy
 HOST-SUFFIX,bbchat.tv,Proxy
 HOST-SUFFIX,bbci.co.uk,Proxy
@@ -1506,6 +1507,7 @@ HOST-SUFFIX,dbc.hk,Proxy
 HOST-SUFFIX,dbgjd.com,Proxy
 HOST-SUFFIX,dcard.tw,Proxy
 HOST-SUFFIX,dcmilitary.com,Proxy
+HOST-SUFFIX,dcs-spotify.megaphone.fm,Proxy
 HOST-SUFFIX,ddc.com.tw,Proxy
 HOST-SUFFIX,ddex.io,Proxy
 HOST-SUFFIX,ddhw.info,Proxy
@@ -2915,6 +2917,7 @@ HOST-SUFFIX,helloqueer.com,Proxy
 HOST-SUFFIX,helloss.pw,Proxy
 HOST-SUFFIX,hellotxt.com,Proxy
 HOST-SUFFIX,hellouk.org,Proxy
+HOST-SUFFIX,help.byspotify.com,Proxy
 HOST-SUFFIX,helpeachpeople.com,Proxy
 HOST-SUFFIX,helplinfen.com,Proxy
 HOST-SUFFIX,helpster.de,Proxy
@@ -7098,6 +7101,7 @@ HOST-SUFFIX,yesasia.com,Proxy
 HOST-SUFFIX,yesasia.com.hk,Proxy
 HOST-SUFFIX,yespornplease.com,Proxy
 HOST-SUFFIX,yeyeclub.com,Proxy
+HOST-SUFFIX,yfsp.tv,Proxy
 HOST-SUFFIX,ygto.com,Proxy
 HOST-SUFFIX,yhcw.net,Proxy
 HOST-SUFFIX,yibada.com,Proxy

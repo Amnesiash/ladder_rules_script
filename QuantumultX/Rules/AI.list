@@ -1,5 +1,5 @@
-# UpdateTime: 2026-01-31 20:50:18
-# RuleCount: 202
+# UpdateTime: 2026-02-01 10:30:33
+# RuleCount: 203
 
 HOST,ai.google.dev,AI
 HOST,aistudio.google.com,AI
@@ -81,6 +81,7 @@ HOST-SUFFIX,comfyregistry.org,AI
 HOST-SUFFIX,copilot.cloud.microsoft,AI
 HOST-SUFFIX,copilot.microsoft.com,AI
 HOST-SUFFIX,coze.com,AI
+HOST-SUFFIX,crixet.com,AI
 HOST-SUFFIX,cursor-cdn.com,AI
 HOST-SUFFIX,cursor.com,AI
 HOST-SUFFIX,cursor.sh,AI

@@ -1,5 +1,5 @@
-# UpdateTime: 2026-01-31 20:50:17
-# RuleCount: 202
+# UpdateTime: 2026-02-01 10:30:32
+# RuleCount: 203
 
 payload:
   - DOMAIN,ai.google.dev
@@ -82,6 +82,7 @@ payload:
   - DOMAIN-SUFFIX,copilot.cloud.microsoft
   - DOMAIN-SUFFIX,copilot.microsoft.com
   - DOMAIN-SUFFIX,coze.com
+  - DOMAIN-SUFFIX,crixet.com
   - DOMAIN-SUFFIX,cursor-cdn.com
   - DOMAIN-SUFFIX,cursor.com
   - DOMAIN-SUFFIX,cursor.sh

@@ -1,5 +1,5 @@
-# UpdateTime: 2026-01-31 20:50:18
-# RuleCount: 202
+# UpdateTime: 2026-02-01 10:30:33
+# RuleCount: 203
 
 DOMAIN,ai.google.dev
 DOMAIN,aistudio.google.com
@@ -81,6 +81,7 @@ DOMAIN-SUFFIX,comfyregistry.org
 DOMAIN-SUFFIX,copilot.cloud.microsoft
 DOMAIN-SUFFIX,copilot.microsoft.com
 DOMAIN-SUFFIX,coze.com
+DOMAIN-SUFFIX,crixet.com
 DOMAIN-SUFFIX,cursor-cdn.com
 DOMAIN-SUFFIX,cursor.com
 DOMAIN-SUFFIX,cursor.sh
