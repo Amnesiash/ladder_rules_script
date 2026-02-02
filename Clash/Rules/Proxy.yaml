@@ -1,5 +1,5 @@
-# UpdateTime: 2026-02-01 20:51:56
-# RuleCount: 7516
+# UpdateTime: 2026-02-02 10:21:56
+# RuleCount: 7517
 
 payload:
   - DOMAIN,a248.e.akamai.net
@@ -5801,6 +5801,7 @@ payload:
   - DOMAIN-SUFFIX,tagwa.org.au
   - DOMAIN-SUFFIX,tagwalk.com
   - DOMAIN-SUFFIX,tahr.org.tw
+  - DOMAIN-SUFFIX,tails.net
   - DOMAIN-SUFFIX,taipei.gov.tw
   - DOMAIN-SUFFIX,taipeisociety.org
   - DOMAIN-SUFFIX,taipeitimes.com

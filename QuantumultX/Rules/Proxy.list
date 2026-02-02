@@ -1,5 +1,5 @@
-# UpdateTime: 2026-02-01 20:51:56
-# RuleCount: 7516
+# UpdateTime: 2026-02-02 10:21:57
+# RuleCount: 7517
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -5800,6 +5800,7 @@ HOST-SUFFIX,tafm.org,Proxy
 HOST-SUFFIX,tagwa.org.au,Proxy
 HOST-SUFFIX,tagwalk.com,Proxy
 HOST-SUFFIX,tahr.org.tw,Proxy
+HOST-SUFFIX,tails.net,Proxy
 HOST-SUFFIX,taipei.gov.tw,Proxy
 HOST-SUFFIX,taipeisociety.org,Proxy
 HOST-SUFFIX,taipeitimes.com,Proxy
