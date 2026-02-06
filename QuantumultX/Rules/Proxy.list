@@ -1,5 +1,5 @@
-# UpdateTime: 2026-02-05 21:04:07
-# RuleCount: 7517
+# UpdateTime: 2026-02-06 10:08:22
+# RuleCount: 7520
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -2817,6 +2817,7 @@ HOST-SUFFIX,greenvpn.net,Proxy
 HOST-SUFFIX,greenvpn.org,Proxy
 HOST-SUFFIX,grindr.com,Proxy
 HOST-SUFFIX,grok.com,Proxy
+HOST-SUFFIX,grokipedia.com,Proxy
 HOST-SUFFIX,grotty-monday.com,Proxy
 HOST-SUFFIX,ground.news,Proxy
 HOST-SUFFIX,grow.google,Proxy
@@ -5312,6 +5313,7 @@ HOST-SUFFIX,seehua.com,Proxy
 HOST-SUFFIX,seesmic.com,Proxy
 HOST-SUFFIX,seevpn.com,Proxy
 HOST-SUFFIX,seezone.net,Proxy
+HOST-SUFFIX,sef.org.tw,Proxy
 HOST-SUFFIX,sehuatang.net,Proxy
 HOST-SUFFIX,sehuatang.org,Proxy
 HOST-SUFFIX,sejie.com,Proxy
@@ -6936,6 +6938,7 @@ HOST-SUFFIX,wwe.com,Proxy
 HOST-SUFFIX,wwitv.com,Proxy
 HOST-SUFFIX,www.ajsands.com,Proxy
 HOST-SUFFIX,www.bing.com,Proxy
+HOST-SUFFIX,www.hoyolab.com,Proxy
 HOST-SUFFIX,www.klip.me,Proxy
 HOST-SUFFIX,www.lamenhu.com,Proxy
 HOST-SUFFIX,www.lorenzetti.com.br,Proxy

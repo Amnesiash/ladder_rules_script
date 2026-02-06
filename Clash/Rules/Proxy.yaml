@@ -1,5 +1,5 @@
-# UpdateTime: 2026-02-05 21:04:07
-# RuleCount: 7517
+# UpdateTime: 2026-02-06 10:08:22
+# RuleCount: 7520
 
 payload:
   - DOMAIN,a248.e.akamai.net
@@ -2818,6 +2818,7 @@ payload:
   - DOMAIN-SUFFIX,greenvpn.org
   - DOMAIN-SUFFIX,grindr.com
   - DOMAIN-SUFFIX,grok.com
+  - DOMAIN-SUFFIX,grokipedia.com
   - DOMAIN-SUFFIX,grotty-monday.com
   - DOMAIN-SUFFIX,ground.news
   - DOMAIN-SUFFIX,grow.google
@@ -5313,6 +5314,7 @@ payload:
   - DOMAIN-SUFFIX,seesmic.com
   - DOMAIN-SUFFIX,seevpn.com
   - DOMAIN-SUFFIX,seezone.net
+  - DOMAIN-SUFFIX,sef.org.tw
   - DOMAIN-SUFFIX,sehuatang.net
   - DOMAIN-SUFFIX,sehuatang.org
   - DOMAIN-SUFFIX,sejie.com
@@ -6937,6 +6939,7 @@ payload:
   - DOMAIN-SUFFIX,wwitv.com
   - DOMAIN-SUFFIX,www.ajsands.com
   - DOMAIN-SUFFIX,www.bing.com
+  - DOMAIN-SUFFIX,www.hoyolab.com
   - DOMAIN-SUFFIX,www.klip.me
   - DOMAIN-SUFFIX,www.lamenhu.com
   - DOMAIN-SUFFIX,www.lorenzetti.com.br
