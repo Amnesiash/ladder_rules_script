@@ -1,5 +1,5 @@
-# UpdateTime: 2026-02-07 10:03:57
-# RuleCount: 432
+# UpdateTime: 2026-02-07 20:51:09
+# RuleCount: 433
 
 payload:
   - DOMAIN,44wilhpljf.execute-api.ap-southeast-1.amazonaws.com
@@ -339,6 +339,7 @@ payload:
   - DOMAIN-SUFFIX,tidalhifi.com
   - DOMAIN-SUFFIX,tik-tokapi.com
   - DOMAIN-SUFFIX,tiktok.com
+  - DOMAIN-SUFFIX,tiktokcdn-eu.com
   - DOMAIN-SUFFIX,tiktokcdn.com
   - DOMAIN-SUFFIX,tiktokv.com
   - DOMAIN-SUFFIX,ttvnw.net

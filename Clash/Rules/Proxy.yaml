@@ -1,4 +1,4 @@
-# UpdateTime: 2026-02-07 10:03:57
+# UpdateTime: 2026-02-07 20:51:09
 # RuleCount: 7520
 
 payload:
@@ -758,6 +758,7 @@ payload:
   - DOMAIN-SUFFIX,bitsnoop.com
   - DOMAIN-SUFFIX,bitstamp.net
   - DOMAIN-SUFFIX,bitterwinter.org
+  - DOMAIN-SUFFIX,bittorrent.com
   - DOMAIN-SUFFIX,bitvise.com
   - DOMAIN-SUFFIX,bitz.ai
   - DOMAIN-SUFFIX,bizhat.com
@@ -4834,6 +4835,7 @@ payload:
   - DOMAIN-SUFFIX,pmates.com
   - DOMAIN-SUFFIX,po2b.com
   - DOMAIN-SUFFIX,pobieramy.top
+  - DOMAIN-SUFFIX,pocketcasts.com
   - DOMAIN-SUFFIX,podbean.com
   - DOMAIN-SUFFIX,podcast.co
   - DOMAIN-SUFFIX,podictionary.com
@@ -5439,7 +5441,6 @@ payload:
   - DOMAIN-SUFFIX,singaporepools.com.sg
   - DOMAIN-SUFFIX,singfortibet.com
   - DOMAIN-SUFFIX,singlelogin.me
-  - DOMAIN-SUFFIX,singlelogin.re
   - DOMAIN-SUFFIX,singlelogin.rs
   - DOMAIN-SUFFIX,singlelogin.se
   - DOMAIN-SUFFIX,singpao.com.hk
@@ -7183,7 +7184,6 @@ payload:
   - DOMAIN-SUFFIX,z-lib.fo
   - DOMAIN-SUFFIX,z-lib.gd
   - DOMAIN-SUFFIX,z-lib.gl
-  - DOMAIN-SUFFIX,z-lib.gs
   - DOMAIN-SUFFIX,z-lib.io
   - DOMAIN-SUFFIX,z-lib.org
   - DOMAIN-SUFFIX,z-library.ec

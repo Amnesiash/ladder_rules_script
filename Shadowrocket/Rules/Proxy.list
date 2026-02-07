@@ -1,4 +1,4 @@
-# UpdateTime: 2026-02-07 10:03:58
+# UpdateTime: 2026-02-07 20:51:10
 # RuleCount: 7520
 
 DOMAIN,a248.e.akamai.net
@@ -757,6 +757,7 @@ DOMAIN-SUFFIX,bitshare.com
 DOMAIN-SUFFIX,bitsnoop.com
 DOMAIN-SUFFIX,bitstamp.net
 DOMAIN-SUFFIX,bitterwinter.org
+DOMAIN-SUFFIX,bittorrent.com
 DOMAIN-SUFFIX,bitvise.com
 DOMAIN-SUFFIX,bitz.ai
 DOMAIN-SUFFIX,bizhat.com
@@ -4833,6 +4834,7 @@ DOMAIN-SUFFIX,pmatehunter.com
 DOMAIN-SUFFIX,pmates.com
 DOMAIN-SUFFIX,po2b.com
 DOMAIN-SUFFIX,pobieramy.top
+DOMAIN-SUFFIX,pocketcasts.com
 DOMAIN-SUFFIX,podbean.com
 DOMAIN-SUFFIX,podcast.co
 DOMAIN-SUFFIX,podictionary.com
@@ -5438,7 +5440,6 @@ DOMAIN-SUFFIX,sinchew.com.my
 DOMAIN-SUFFIX,singaporepools.com.sg
 DOMAIN-SUFFIX,singfortibet.com
 DOMAIN-SUFFIX,singlelogin.me
-DOMAIN-SUFFIX,singlelogin.re
 DOMAIN-SUFFIX,singlelogin.rs
 DOMAIN-SUFFIX,singlelogin.se
 DOMAIN-SUFFIX,singpao.com.hk
@@ -7182,7 +7183,6 @@ DOMAIN-SUFFIX,z-lib.fm
 DOMAIN-SUFFIX,z-lib.fo
 DOMAIN-SUFFIX,z-lib.gd
 DOMAIN-SUFFIX,z-lib.gl
-DOMAIN-SUFFIX,z-lib.gs
 DOMAIN-SUFFIX,z-lib.io
 DOMAIN-SUFFIX,z-lib.org
 DOMAIN-SUFFIX,z-library.ec

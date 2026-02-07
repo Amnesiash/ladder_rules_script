@@ -1,4 +1,4 @@
-# UpdateTime: 2026-02-07 10:03:58
+# UpdateTime: 2026-02-07 20:51:10
 # RuleCount: 7520
 
 HOST,a248.e.akamai.net,Proxy
@@ -757,6 +757,7 @@ HOST-SUFFIX,bitshare.com,Proxy
 HOST-SUFFIX,bitsnoop.com,Proxy
 HOST-SUFFIX,bitstamp.net,Proxy
 HOST-SUFFIX,bitterwinter.org,Proxy
+HOST-SUFFIX,bittorrent.com,Proxy
 HOST-SUFFIX,bitvise.com,Proxy
 HOST-SUFFIX,bitz.ai,Proxy
 HOST-SUFFIX,bizhat.com,Proxy
@@ -4833,6 +4834,7 @@ HOST-SUFFIX,pmatehunter.com,Proxy
 HOST-SUFFIX,pmates.com,Proxy
 HOST-SUFFIX,po2b.com,Proxy
 HOST-SUFFIX,pobieramy.top,Proxy
+HOST-SUFFIX,pocketcasts.com,Proxy
 HOST-SUFFIX,podbean.com,Proxy
 HOST-SUFFIX,podcast.co,Proxy
 HOST-SUFFIX,podictionary.com,Proxy
@@ -5438,7 +5440,6 @@ HOST-SUFFIX,sinchew.com.my,Proxy
 HOST-SUFFIX,singaporepools.com.sg,Proxy
 HOST-SUFFIX,singfortibet.com,Proxy
 HOST-SUFFIX,singlelogin.me,Proxy
-HOST-SUFFIX,singlelogin.re,Proxy
 HOST-SUFFIX,singlelogin.rs,Proxy
 HOST-SUFFIX,singlelogin.se,Proxy
 HOST-SUFFIX,singpao.com.hk,Proxy
@@ -7182,7 +7183,6 @@ HOST-SUFFIX,z-lib.fm,Proxy
 HOST-SUFFIX,z-lib.fo,Proxy
 HOST-SUFFIX,z-lib.gd,Proxy
 HOST-SUFFIX,z-lib.gl,Proxy
-HOST-SUFFIX,z-lib.gs,Proxy
 HOST-SUFFIX,z-lib.io,Proxy
 HOST-SUFFIX,z-lib.org,Proxy
 HOST-SUFFIX,z-library.ec,Proxy

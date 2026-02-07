@@ -1,5 +1,5 @@
-# UpdateTime: 2026-02-07 10:03:57
-# RuleCount: 429
+# UpdateTime: 2026-02-07 20:51:10
+# RuleCount: 430
 
 HOST,44wilhpljf.execute-api.ap-southeast-1.amazonaws.com,GlobalMedia
 HOST,ai.google.dev,GlobalMedia
@@ -338,6 +338,7 @@ HOST-SUFFIX,tidal.com,GlobalMedia
 HOST-SUFFIX,tidalhifi.com,GlobalMedia
 HOST-SUFFIX,tik-tokapi.com,GlobalMedia
 HOST-SUFFIX,tiktok.com,GlobalMedia
+HOST-SUFFIX,tiktokcdn-eu.com,GlobalMedia
 HOST-SUFFIX,tiktokcdn.com,GlobalMedia
 HOST-SUFFIX,tiktokv.com,GlobalMedia
 HOST-SUFFIX,ttvnw.net,GlobalMedia

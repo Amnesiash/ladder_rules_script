@@ -1,5 +1,5 @@
-# UpdateTime: 2026-02-07 10:03:58
-# RuleCount: 430
+# UpdateTime: 2026-02-07 20:51:10
+# RuleCount: 431
 
 DOMAIN,44wilhpljf.execute-api.ap-southeast-1.amazonaws.com
 DOMAIN,ai.google.dev
@@ -338,6 +338,7 @@ DOMAIN-SUFFIX,tidal.com
 DOMAIN-SUFFIX,tidalhifi.com
 DOMAIN-SUFFIX,tik-tokapi.com
 DOMAIN-SUFFIX,tiktok.com
+DOMAIN-SUFFIX,tiktokcdn-eu.com
 DOMAIN-SUFFIX,tiktokcdn.com
 DOMAIN-SUFFIX,tiktokv.com
 DOMAIN-SUFFIX,ttvnw.net
