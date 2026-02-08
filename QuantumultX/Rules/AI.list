@@ -1,5 +1,5 @@
-# UpdateTime: 2026-02-07 20:51:09
-# RuleCount: 203
+# UpdateTime: 2026-02-08 10:37:00
+# RuleCount: 205
 
 HOST,ai.google.dev,AI
 HOST,aistudio.google.com,AI
@@ -137,6 +137,8 @@ HOST-SUFFIX,livekit.cloud,AI
 HOST-SUFFIX,liveperson.net,AI
 HOST-SUFFIX,lpsnmedia.net,AI
 HOST-SUFFIX,makersuite.google.com,AI
+HOST-SUFFIX,manus.im,AI
+HOST-SUFFIX,manuscdn.com,AI
 HOST-SUFFIX,marscode.com,AI
 HOST-SUFFIX,meta.ai,AI
 HOST-SUFFIX,microsoft-copilot.com,AI

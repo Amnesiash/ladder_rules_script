@@ -1,5 +1,5 @@
-# UpdateTime: 2026-02-07 20:51:10
-# RuleCount: 7520
+# UpdateTime: 2026-02-08 10:37:00
+# RuleCount: 7519
 
 DOMAIN,a248.e.akamai.net
 DOMAIN,a771.dscq.akamai.net
@@ -790,6 +790,7 @@ DOMAIN-SUFFIX,blog.google
 DOMAIN-SUFFIX,blog.jackjia.com
 DOMAIN-SUFFIX,blog.jp
 DOMAIN-SUFFIX,blog.kangye.org
+DOMAIN-SUFFIX,blog.martinoei.com
 DOMAIN-SUFFIX,blog.pathtosharepoint.com
 DOMAIN-SUFFIX,blog.pentalogic.net
 DOMAIN-SUFFIX,blog.qooza.hk
@@ -1059,8 +1060,6 @@ DOMAIN-SUFFIX,cdjp.org
 DOMAIN-SUFFIX,cdn-images.mailchimp.com
 DOMAIN-SUFFIX,cdn-telegram.org
 DOMAIN-SUFFIX,cdn.arstechnica.net
-DOMAIN-SUFFIX,cdn.assets.lfpcontent.com
-DOMAIN-SUFFIX,cdn.helixstudios.net
 DOMAIN-SUFFIX,cdn.jwplayer.com
 DOMAIN-SUFFIX,cdn.printfriendly.com
 DOMAIN-SUFFIX,cdn.registerdisney.go.com
@@ -2924,6 +2923,7 @@ DOMAIN-SUFFIX,helpeachpeople.com
 DOMAIN-SUFFIX,helplinfen.com
 DOMAIN-SUFFIX,helpster.de
 DOMAIN-SUFFIX,helpzhuling.org
+DOMAIN-SUFFIX,hembed.com
 DOMAIN-SUFFIX,hentai.to
 DOMAIN-SUFFIX,hentaitube.tv
 DOMAIN-SUFFIX,hentaivideoworld.com
@@ -4397,7 +4397,6 @@ DOMAIN-SUFFIX,niu.moe
 DOMAIN-SUFFIX,niusnews.com
 DOMAIN-SUFFIX,njactb.org
 DOMAIN-SUFFIX,njuice.com
-DOMAIN-SUFFIX,nko.navy.mil
 DOMAIN-SUFFIX,nl
 DOMAIN-SUFFIX,nlfreevpn.com
 DOMAIN-SUFFIX,nmsl.website
@@ -6531,6 +6530,7 @@ DOMAIN-SUFFIX,uygur.org
 DOMAIN-SUFFIX,uymaarip.com
 DOMAIN-SUFFIX,v.roucdn
 DOMAIN-SUFFIX,v2.help
+DOMAIN-SUFFIX,v2.hysteria.network
 DOMAIN-SUFFIX,v2ex.com
 DOMAIN-SUFFIX,v2fly.org
 DOMAIN-SUFFIX,v2mm.tech
@@ -6845,6 +6845,7 @@ DOMAIN-SUFFIX,wikinews.org
 DOMAIN-SUFFIX,wikipedia.com
 DOMAIN-SUFFIX,wikipedia.org
 DOMAIN-SUFFIX,wikiquote.org
+DOMAIN-SUFFIX,wikis.tw
 DOMAIN-SUFFIX,wikisource.org
 DOMAIN-SUFFIX,wikiunblocked.org
 DOMAIN-SUFFIX,wikiversity.org
@@ -7186,7 +7187,6 @@ DOMAIN-SUFFIX,z-lib.gl
 DOMAIN-SUFFIX,z-lib.io
 DOMAIN-SUFFIX,z-lib.org
 DOMAIN-SUFFIX,z-library.ec
-DOMAIN-SUFFIX,z-library.rs
 DOMAIN-SUFFIX,z-library.sk
 DOMAIN-SUFFIX,zacebook.com
 DOMAIN-SUFFIX,zalmos.com
@@ -7385,7 +7385,6 @@ DOMAIN-KEYWORD,rockstar
 DOMAIN-KEYWORD,sci-hub
 DOMAIN-KEYWORD,shadowsocks
 DOMAIN-KEYWORD,shopify
-DOMAIN-KEYWORD,singlelogin
 DOMAIN-KEYWORD,skillshare
 DOMAIN-KEYWORD,skydrive
 DOMAIN-KEYWORD,skyscanner

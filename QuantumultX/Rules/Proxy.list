@@ -1,5 +1,5 @@
-# UpdateTime: 2026-02-07 20:51:10
-# RuleCount: 7520
+# UpdateTime: 2026-02-08 10:37:00
+# RuleCount: 7519
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -790,6 +790,7 @@ HOST-SUFFIX,blog.google,Proxy
 HOST-SUFFIX,blog.jackjia.com,Proxy
 HOST-SUFFIX,blog.jp,Proxy
 HOST-SUFFIX,blog.kangye.org,Proxy
+HOST-SUFFIX,blog.martinoei.com,Proxy
 HOST-SUFFIX,blog.pathtosharepoint.com,Proxy
 HOST-SUFFIX,blog.pentalogic.net,Proxy
 HOST-SUFFIX,blog.qooza.hk,Proxy
@@ -1059,8 +1060,6 @@ HOST-SUFFIX,cdjp.org,Proxy
 HOST-SUFFIX,cdn-images.mailchimp.com,Proxy
 HOST-SUFFIX,cdn-telegram.org,Proxy
 HOST-SUFFIX,cdn.arstechnica.net,Proxy
-HOST-SUFFIX,cdn.assets.lfpcontent.com,Proxy
-HOST-SUFFIX,cdn.helixstudios.net,Proxy
 HOST-SUFFIX,cdn.jwplayer.com,Proxy
 HOST-SUFFIX,cdn.printfriendly.com,Proxy
 HOST-SUFFIX,cdn.registerdisney.go.com,Proxy
@@ -2924,6 +2923,7 @@ HOST-SUFFIX,helpeachpeople.com,Proxy
 HOST-SUFFIX,helplinfen.com,Proxy
 HOST-SUFFIX,helpster.de,Proxy
 HOST-SUFFIX,helpzhuling.org,Proxy
+HOST-SUFFIX,hembed.com,Proxy
 HOST-SUFFIX,hentai.to,Proxy
 HOST-SUFFIX,hentaitube.tv,Proxy
 HOST-SUFFIX,hentaivideoworld.com,Proxy
@@ -4397,7 +4397,6 @@ HOST-SUFFIX,niu.moe,Proxy
 HOST-SUFFIX,niusnews.com,Proxy
 HOST-SUFFIX,njactb.org,Proxy
 HOST-SUFFIX,njuice.com,Proxy
-HOST-SUFFIX,nko.navy.mil,Proxy
 HOST-SUFFIX,nl,Proxy
 HOST-SUFFIX,nlfreevpn.com,Proxy
 HOST-SUFFIX,nmsl.website,Proxy
@@ -6531,6 +6530,7 @@ HOST-SUFFIX,uygur.org,Proxy
 HOST-SUFFIX,uymaarip.com,Proxy
 HOST-SUFFIX,v.roucdn,Proxy
 HOST-SUFFIX,v2.help,Proxy
+HOST-SUFFIX,v2.hysteria.network,Proxy
 HOST-SUFFIX,v2ex.com,Proxy
 HOST-SUFFIX,v2fly.org,Proxy
 HOST-SUFFIX,v2mm.tech,Proxy
@@ -6845,6 +6845,7 @@ HOST-SUFFIX,wikinews.org,Proxy
 HOST-SUFFIX,wikipedia.com,Proxy
 HOST-SUFFIX,wikipedia.org,Proxy
 HOST-SUFFIX,wikiquote.org,Proxy
+HOST-SUFFIX,wikis.tw,Proxy
 HOST-SUFFIX,wikisource.org,Proxy
 HOST-SUFFIX,wikiunblocked.org,Proxy
 HOST-SUFFIX,wikiversity.org,Proxy
@@ -7186,7 +7187,6 @@ HOST-SUFFIX,z-lib.gl,Proxy
 HOST-SUFFIX,z-lib.io,Proxy
 HOST-SUFFIX,z-lib.org,Proxy
 HOST-SUFFIX,z-library.ec,Proxy
-HOST-SUFFIX,z-library.rs,Proxy
 HOST-SUFFIX,z-library.sk,Proxy
 HOST-SUFFIX,zacebook.com,Proxy
 HOST-SUFFIX,zalmos.com,Proxy
@@ -7385,7 +7385,6 @@ HOST-KEYWORD,rockstar,Proxy
 HOST-KEYWORD,sci-hub,Proxy
 HOST-KEYWORD,shadowsocks,Proxy
 HOST-KEYWORD,shopify,Proxy
-HOST-KEYWORD,singlelogin,Proxy
 HOST-KEYWORD,skillshare,Proxy
 HOST-KEYWORD,skydrive,Proxy
 HOST-KEYWORD,skyscanner,Proxy
