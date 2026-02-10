@@ -1,5 +1,5 @@
-# UpdateTime: 2026-02-09 21:11:23
-# RuleCount: 7519
+# UpdateTime: 2026-02-10 10:31:35
+# RuleCount: 7517
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -300,6 +300,7 @@ HOST-SUFFIX,airitilibrary.com,Proxy
 HOST-SUFFIX,airvpn.org,Proxy
 HOST-SUFFIX,aisex.com,Proxy
 HOST-SUFFIX,aishort.top,Proxy
+HOST-SUFFIX,aiss.anws.gov.tw,Proxy
 HOST-SUFFIX,ait.org.tw,Proxy
 HOST-SUFFIX,aiv-cdn.net,Proxy
 HOST-SUFFIX,aiv-cdn.net.c.footprint.net,Proxy
@@ -2509,6 +2510,7 @@ HOST-SUFFIX,goodtv.com.tw,Proxy
 HOST-SUFFIX,goodtv.tv,Proxy
 HOST-SUFFIX,goofind.com,Proxy
 HOST-SUFFIX,goog,Proxy
+HOST-SUFFIX,google,Proxy
 HOST-SUFFIX,google-analytics.com,Proxy
 HOST-SUFFIX,google.ac,Proxy
 HOST-SUFFIX,google.ad,Proxy
@@ -2850,6 +2852,7 @@ HOST-SUFFIX,gvlib.com,Proxy
 HOST-SUFFIX,gvm.com.tw,Proxy
 HOST-SUFFIX,gvt0.com,Proxy
 HOST-SUFFIX,gvt1.com,Proxy
+HOST-SUFFIX,gvt1.com],Proxy
 HOST-SUFFIX,gvt2.com,Proxy
 HOST-SUFFIX,gvt3.com,Proxy
 HOST-SUFFIX,gwins.org,Proxy
@@ -3112,6 +3115,7 @@ HOST-SUFFIX,html5rocks.com,Proxy
 HOST-SUFFIX,html5test.com,Proxy
 HOST-SUFFIX,https443.net,Proxy
 HOST-SUFFIX,https443.org,Proxy
+HOST-SUFFIX,htx.com,Proxy
 HOST-SUFFIX,hua-yue.net,Proxy
 HOST-SUFFIX,huaglad.com,Proxy
 HOST-SUFFIX,huanghuagang.org,Proxy
@@ -7323,7 +7327,6 @@ HOST-KEYWORD,disney,Proxy
 HOST-KEYWORD,dropbox,Proxy
 HOST-KEYWORD,duckduckgo,Proxy
 HOST-KEYWORD,duolingo,Proxy
-HOST-KEYWORD,dynamicdns,Proxy
 HOST-KEYWORD,economist,Proxy
 HOST-KEYWORD,elsevier,Proxy
 HOST-KEYWORD,envato,Proxy
@@ -7336,6 +7339,7 @@ HOST-KEYWORD,fbcdn,Proxy
 HOST-KEYWORD,figma,Proxy
 HOST-KEYWORD,firebase,Proxy
 HOST-KEYWORD,flightradar,Proxy
+HOST-KEYWORD,gettyimages,Proxy
 HOST-KEYWORD,ghostery,Proxy
 HOST-KEYWORD,github,Proxy
 HOST-KEYWORD,gitlab,Proxy
@@ -7368,7 +7372,6 @@ HOST-KEYWORD,notion,Proxy
 HOST-KEYWORD,ntdtv,Proxy
 HOST-KEYWORD,nytimes,Proxy
 HOST-KEYWORD,onedrive,Proxy
-HOST-KEYWORD,onmypc,Proxy
 HOST-KEYWORD,openai,Proxy
 HOST-KEYWORD,paramount,Proxy
 HOST-KEYWORD,paypal,Proxy
@@ -7439,8 +7442,6 @@ IP-CIDR,125.209.208.0/20,Proxy
 IP-CIDR,129.134.0.0/17,Proxy
 IP-CIDR,13.32.0.0/15,Proxy
 IP-CIDR,13.35.0.0/17,Proxy
-IP-CIDR,14.102.250.18/32,Proxy
-IP-CIDR,14.102.250.19/32,Proxy
 IP-CIDR,147.92.128.0/17,Proxy
 IP-CIDR,149.154.160.0/20,Proxy
 IP-CIDR,157.240.0.0/17,Proxy
@@ -7451,7 +7452,6 @@ IP-CIDR,173.192.222.160/27,Proxy
 IP-CIDR,173.192.231.32/27,Proxy
 IP-CIDR,173.194.0.0/16,Proxy
 IP-CIDR,173.252.64.0/18,Proxy
-IP-CIDR,174.142.105.153/32,Proxy
 IP-CIDR,174.37.243.0/16,Proxy
 IP-CIDR,179.60.192.0/22,Proxy
 IP-CIDR,18.184.0.0/15,Proxy
@@ -7483,7 +7483,6 @@ IP-CIDR,31.13.64.0/18,Proxy
 IP-CIDR,34.224.0.0/12,Proxy
 IP-CIDR,45.64.40.0/22,Proxy
 IP-CIDR,50.22.198.204/30,Proxy
-IP-CIDR,50.7.31.230/32,Proxy
 IP-CIDR,52.200.0.0/13,Proxy
 IP-CIDR,52.58.0.0/15,Proxy
 IP-CIDR,52.74.0.0/16,Proxy
@@ -7501,7 +7500,6 @@ IP-CIDR,67.220.91.23/32,Proxy
 IP-CIDR,69.171.224.0/19,Proxy
 IP-CIDR,69.171.235.0/16,Proxy
 IP-CIDR,69.63.176.0/20,Proxy
-IP-CIDR,69.65.19.160/32,Proxy
 IP-CIDR,72.52.81.22/32,Proxy
 IP-CIDR,74.119.76.0/22,Proxy
 IP-CIDR,74.125.0.0/16,Proxy

@@ -1,5 +1,5 @@
-# UpdateTime: 2026-02-09 21:11:23
-# RuleCount: 7519
+# UpdateTime: 2026-02-10 10:31:35
+# RuleCount: 7517
 
 DOMAIN,a248.e.akamai.net
 DOMAIN,a771.dscq.akamai.net
@@ -300,6 +300,7 @@ DOMAIN-SUFFIX,airitilibrary.com
 DOMAIN-SUFFIX,airvpn.org
 DOMAIN-SUFFIX,aisex.com
 DOMAIN-SUFFIX,aishort.top
+DOMAIN-SUFFIX,aiss.anws.gov.tw
 DOMAIN-SUFFIX,ait.org.tw
 DOMAIN-SUFFIX,aiv-cdn.net
 DOMAIN-SUFFIX,aiv-cdn.net.c.footprint.net
@@ -2509,6 +2510,7 @@ DOMAIN-SUFFIX,goodtv.com.tw
 DOMAIN-SUFFIX,goodtv.tv
 DOMAIN-SUFFIX,goofind.com
 DOMAIN-SUFFIX,goog
+DOMAIN-SUFFIX,google
 DOMAIN-SUFFIX,google-analytics.com
 DOMAIN-SUFFIX,google.ac
 DOMAIN-SUFFIX,google.ad
@@ -2850,6 +2852,7 @@ DOMAIN-SUFFIX,gvlib.com
 DOMAIN-SUFFIX,gvm.com.tw
 DOMAIN-SUFFIX,gvt0.com
 DOMAIN-SUFFIX,gvt1.com
+DOMAIN-SUFFIX,gvt1.com]
 DOMAIN-SUFFIX,gvt2.com
 DOMAIN-SUFFIX,gvt3.com
 DOMAIN-SUFFIX,gwins.org
@@ -3112,6 +3115,7 @@ DOMAIN-SUFFIX,html5rocks.com
 DOMAIN-SUFFIX,html5test.com
 DOMAIN-SUFFIX,https443.net
 DOMAIN-SUFFIX,https443.org
+DOMAIN-SUFFIX,htx.com
 DOMAIN-SUFFIX,hua-yue.net
 DOMAIN-SUFFIX,huaglad.com
 DOMAIN-SUFFIX,huanghuagang.org
@@ -7323,7 +7327,6 @@ DOMAIN-KEYWORD,disney
 DOMAIN-KEYWORD,dropbox
 DOMAIN-KEYWORD,duckduckgo
 DOMAIN-KEYWORD,duolingo
-DOMAIN-KEYWORD,dynamicdns
 DOMAIN-KEYWORD,economist
 DOMAIN-KEYWORD,elsevier
 DOMAIN-KEYWORD,envato
@@ -7336,6 +7339,7 @@ DOMAIN-KEYWORD,fbcdn
 DOMAIN-KEYWORD,figma
 DOMAIN-KEYWORD,firebase
 DOMAIN-KEYWORD,flightradar
+DOMAIN-KEYWORD,gettyimages
 DOMAIN-KEYWORD,ghostery
 DOMAIN-KEYWORD,github
 DOMAIN-KEYWORD,gitlab
@@ -7368,7 +7372,6 @@ DOMAIN-KEYWORD,notion
 DOMAIN-KEYWORD,ntdtv
 DOMAIN-KEYWORD,nytimes
 DOMAIN-KEYWORD,onedrive
-DOMAIN-KEYWORD,onmypc
 DOMAIN-KEYWORD,openai
 DOMAIN-KEYWORD,paramount
 DOMAIN-KEYWORD,paypal
@@ -7439,8 +7442,6 @@ IP-CIDR,125.209.208.0/20,no-resolve
 IP-CIDR,129.134.0.0/17,no-resolve
 IP-CIDR,13.32.0.0/15,no-resolve
 IP-CIDR,13.35.0.0/17,no-resolve
-IP-CIDR,14.102.250.18/32,no-resolve
-IP-CIDR,14.102.250.19/32,no-resolve
 IP-CIDR,147.92.128.0/17,no-resolve
 IP-CIDR,149.154.160.0/20,no-resolve
 IP-CIDR,157.240.0.0/17,no-resolve
@@ -7451,7 +7452,6 @@ IP-CIDR,173.192.222.160/27,no-resolve
 IP-CIDR,173.192.231.32/27,no-resolve
 IP-CIDR,173.194.0.0/16,no-resolve
 IP-CIDR,173.252.64.0/18,no-resolve
-IP-CIDR,174.142.105.153/32,no-resolve
 IP-CIDR,174.37.243.0/16,no-resolve
 IP-CIDR,179.60.192.0/22,no-resolve
 IP-CIDR,18.184.0.0/15,no-resolve
@@ -7483,7 +7483,6 @@ IP-CIDR,31.13.64.0/18,no-resolve
 IP-CIDR,34.224.0.0/12,no-resolve
 IP-CIDR,45.64.40.0/22,no-resolve
 IP-CIDR,50.22.198.204/30,no-resolve
-IP-CIDR,50.7.31.230/32,no-resolve
 IP-CIDR,52.200.0.0/13,no-resolve
 IP-CIDR,52.58.0.0/15,no-resolve
 IP-CIDR,52.74.0.0/16,no-resolve
@@ -7501,7 +7500,6 @@ IP-CIDR,67.220.91.23/32,no-resolve
 IP-CIDR,69.171.224.0/19,no-resolve
 IP-CIDR,69.171.235.0/16,no-resolve
 IP-CIDR,69.63.176.0/20,no-resolve
-IP-CIDR,69.65.19.160/32,no-resolve
 IP-CIDR,72.52.81.22/32,no-resolve
 IP-CIDR,74.119.76.0/22,no-resolve
 IP-CIDR,74.125.0.0/16,no-resolve
