@@ -1,5 +1,5 @@
-# UpdateTime: 2026-02-11 21:12:29
-# RuleCount: 7517
+# UpdateTime: 2026-02-12 10:23:16
+# RuleCount: 7510
 
 payload:
   - DOMAIN,a248.e.akamai.net
@@ -1817,6 +1817,7 @@ payload:
   - DOMAIN-SUFFIX,emule-ed2k.com
   - DOMAIN-SUFFIX,emulefans.com
   - DOMAIN-SUFFIX,emuparadise.me
+  - DOMAIN-SUFFIX,en.favotter.net
   - DOMAIN-SUFFIX,enanyang.my
   - DOMAIN-SUFFIX,encrypt.me
   - DOMAIN-SUFFIX,encyclopedia.com
@@ -2511,7 +2512,6 @@ payload:
   - DOMAIN-SUFFIX,goodtv.tv
   - DOMAIN-SUFFIX,goofind.com
   - DOMAIN-SUFFIX,goog
-  - DOMAIN-SUFFIX,google
   - DOMAIN-SUFFIX,google-analytics.com
   - DOMAIN-SUFFIX,google.ac
   - DOMAIN-SUFFIX,google.ad
@@ -3100,7 +3100,6 @@ payload:
   - DOMAIN-SUFFIX,hrea.org
   - DOMAIN-SUFFIX,hrichina.org
   - DOMAIN-SUFFIX,hrntt.org
-  - DOMAIN-SUFFIX,hrtsea.com
   - DOMAIN-SUFFIX,hrw.org
   - DOMAIN-SUFFIX,hrweb.org
   - DOMAIN-SUFFIX,hsex.men
@@ -4933,6 +4932,7 @@ payload:
   - DOMAIN-SUFFIX,probit.com
   - DOMAIN-SUFFIX,procopytips.com
   - DOMAIN-SUFFIX,project-syndicate.org
+  - DOMAIN-SUFFIX,prompthero.com
   - DOMAIN-SUFFIX,prosciana.com
   - DOMAIN-SUFFIX,prosiben.de
   - DOMAIN-SUFFIX,proton.me
@@ -4974,6 +4974,7 @@ payload:
   - DOMAIN-SUFFIX,puffinbrowser.com
   - DOMAIN-SUFFIX,puffstore.com
   - DOMAIN-SUFFIX,pugpig.com
+  - DOMAIN-SUFFIX,pullfolio.co
   - DOMAIN-SUFFIX,pullfolio.com
   - DOMAIN-SUFFIX,punyu.com
   - DOMAIN-SUFFIX,pure18.com
@@ -5753,7 +5754,6 @@ payload:
   - DOMAIN-SUFFIX,sunskyforum.com
   - DOMAIN-SUFFIX,sunta.com.tw
   - DOMAIN-SUFFIX,sunvpn.net
-  - DOMAIN-SUFFIX,sunwinism.joinbbs.net
   - DOMAIN-SUFFIX,suoluo.org
   - DOMAIN-SUFFIX,supchina.com
   - DOMAIN-SUFFIX,superfreevpn.com
@@ -6946,7 +6946,6 @@ payload:
   - DOMAIN-SUFFIX,www.ajsands.com
   - DOMAIN-SUFFIX,www.bing.com
   - DOMAIN-SUFFIX,www.hoyolab.com
-  - DOMAIN-SUFFIX,www.klip.me
   - DOMAIN-SUFFIX,www.lamenhu.com
   - DOMAIN-SUFFIX,www.lorenzetti.com.br
   - DOMAIN-SUFFIX,www.moztw.org
@@ -7370,7 +7369,6 @@ payload:
   - DOMAIN-KEYWORD,netlify
   - DOMAIN-KEYWORD,nordvpn
   - DOMAIN-KEYWORD,notion
-  - DOMAIN-KEYWORD,ntdtv
   - DOMAIN-KEYWORD,nytimes
   - DOMAIN-KEYWORD,onedrive
   - DOMAIN-KEYWORD,openai
@@ -7387,7 +7385,6 @@ payload:
   - DOMAIN-KEYWORD,riotgames
   - DOMAIN-KEYWORD,rockstar
   - DOMAIN-KEYWORD,sci-hub
-  - DOMAIN-KEYWORD,shadowsocks
   - DOMAIN-KEYWORD,shopify
   - DOMAIN-KEYWORD,skillshare
   - DOMAIN-KEYWORD,skydrive
@@ -7495,13 +7492,9 @@ payload:
   - IP-CIDR,54.242.0.0/15,no-resolve
   - IP-CIDR,54.93.0.0/16,no-resolve
   - IP-CIDR,66.220.144.0/20,no-resolve
-  - IP-CIDR,67.220.91.15/32,no-resolve
-  - IP-CIDR,67.220.91.18/32,no-resolve
-  - IP-CIDR,67.220.91.23/32,no-resolve
   - IP-CIDR,69.171.224.0/19,no-resolve
   - IP-CIDR,69.171.235.0/16,no-resolve
   - IP-CIDR,69.63.176.0/20,no-resolve
-  - IP-CIDR,72.52.81.22/32,no-resolve
   - IP-CIDR,74.119.76.0/22,no-resolve
   - IP-CIDR,74.125.0.0/16,no-resolve
   - IP-CIDR,75.126.150.0/16,no-resolve

@@ -1,5 +1,5 @@
-# UpdateTime: 2026-02-11 21:12:30
-# RuleCount: 7517
+# UpdateTime: 2026-02-12 10:23:17
+# RuleCount: 7510
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -1816,6 +1816,7 @@ HOST-SUFFIX,empfil.com,Proxy
 HOST-SUFFIX,emule-ed2k.com,Proxy
 HOST-SUFFIX,emulefans.com,Proxy
 HOST-SUFFIX,emuparadise.me,Proxy
+HOST-SUFFIX,en.favotter.net,Proxy
 HOST-SUFFIX,enanyang.my,Proxy
 HOST-SUFFIX,encrypt.me,Proxy
 HOST-SUFFIX,encyclopedia.com,Proxy
@@ -2510,7 +2511,6 @@ HOST-SUFFIX,goodtv.com.tw,Proxy
 HOST-SUFFIX,goodtv.tv,Proxy
 HOST-SUFFIX,goofind.com,Proxy
 HOST-SUFFIX,goog,Proxy
-HOST-SUFFIX,google,Proxy
 HOST-SUFFIX,google-analytics.com,Proxy
 HOST-SUFFIX,google.ac,Proxy
 HOST-SUFFIX,google.ad,Proxy
@@ -3099,7 +3099,6 @@ HOST-SUFFIX,hrcir.com,Proxy
 HOST-SUFFIX,hrea.org,Proxy
 HOST-SUFFIX,hrichina.org,Proxy
 HOST-SUFFIX,hrntt.org,Proxy
-HOST-SUFFIX,hrtsea.com,Proxy
 HOST-SUFFIX,hrw.org,Proxy
 HOST-SUFFIX,hrweb.org,Proxy
 HOST-SUFFIX,hsex.men,Proxy
@@ -4932,6 +4931,7 @@ HOST-SUFFIX,privoxy.org,Proxy
 HOST-SUFFIX,probit.com,Proxy
 HOST-SUFFIX,procopytips.com,Proxy
 HOST-SUFFIX,project-syndicate.org,Proxy
+HOST-SUFFIX,prompthero.com,Proxy
 HOST-SUFFIX,prosciana.com,Proxy
 HOST-SUFFIX,prosiben.de,Proxy
 HOST-SUFFIX,proton.me,Proxy
@@ -4973,6 +4973,7 @@ HOST-SUFFIX,puffin.com,Proxy
 HOST-SUFFIX,puffinbrowser.com,Proxy
 HOST-SUFFIX,puffstore.com,Proxy
 HOST-SUFFIX,pugpig.com,Proxy
+HOST-SUFFIX,pullfolio.co,Proxy
 HOST-SUFFIX,pullfolio.com,Proxy
 HOST-SUFFIX,punyu.com,Proxy
 HOST-SUFFIX,pure18.com,Proxy
@@ -5752,7 +5753,6 @@ HOST-SUFFIX,sunporno.com,Proxy
 HOST-SUFFIX,sunskyforum.com,Proxy
 HOST-SUFFIX,sunta.com.tw,Proxy
 HOST-SUFFIX,sunvpn.net,Proxy
-HOST-SUFFIX,sunwinism.joinbbs.net,Proxy
 HOST-SUFFIX,suoluo.org,Proxy
 HOST-SUFFIX,supchina.com,Proxy
 HOST-SUFFIX,superfreevpn.com,Proxy
@@ -6945,7 +6945,6 @@ HOST-SUFFIX,wwitv.com,Proxy
 HOST-SUFFIX,www.ajsands.com,Proxy
 HOST-SUFFIX,www.bing.com,Proxy
 HOST-SUFFIX,www.hoyolab.com,Proxy
-HOST-SUFFIX,www.klip.me,Proxy
 HOST-SUFFIX,www.lamenhu.com,Proxy
 HOST-SUFFIX,www.lorenzetti.com.br,Proxy
 HOST-SUFFIX,www.moztw.org,Proxy
@@ -7369,7 +7368,6 @@ HOST-KEYWORD,netflix,Proxy
 HOST-KEYWORD,netlify,Proxy
 HOST-KEYWORD,nordvpn,Proxy
 HOST-KEYWORD,notion,Proxy
-HOST-KEYWORD,ntdtv,Proxy
 HOST-KEYWORD,nytimes,Proxy
 HOST-KEYWORD,onedrive,Proxy
 HOST-KEYWORD,openai,Proxy
@@ -7386,7 +7384,6 @@ HOST-KEYWORD,reverso,Proxy
 HOST-KEYWORD,riotgames,Proxy
 HOST-KEYWORD,rockstar,Proxy
 HOST-KEYWORD,sci-hub,Proxy
-HOST-KEYWORD,shadowsocks,Proxy
 HOST-KEYWORD,shopify,Proxy
 HOST-KEYWORD,skillshare,Proxy
 HOST-KEYWORD,skydrive,Proxy
@@ -7494,13 +7491,9 @@ IP-CIDR,54.230.156.0/22,Proxy
 IP-CIDR,54.242.0.0/15,Proxy
 IP-CIDR,54.93.0.0/16,Proxy
 IP-CIDR,66.220.144.0/20,Proxy
-IP-CIDR,67.220.91.15/32,Proxy
-IP-CIDR,67.220.91.18/32,Proxy
-IP-CIDR,67.220.91.23/32,Proxy
 IP-CIDR,69.171.224.0/19,Proxy
 IP-CIDR,69.171.235.0/16,Proxy
 IP-CIDR,69.63.176.0/20,Proxy
-IP-CIDR,72.52.81.22/32,Proxy
 IP-CIDR,74.119.76.0/22,Proxy
 IP-CIDR,74.125.0.0/16,Proxy
 IP-CIDR,75.126.150.0/16,Proxy
