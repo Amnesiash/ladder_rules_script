@@ -1,5 +1,5 @@
-# UpdateTime: 2026-02-15 20:52:58
-# RuleCount: 205
+# UpdateTime: 2026-02-16 10:13:32
+# RuleCount: 208
 
 HOST,ai.google.dev,AI
 HOST,aistudio.google.com,AI
@@ -70,6 +70,7 @@ HOST-SUFFIX,client-api.arkoselabs.com,AI
 HOST-SUFFIX,clipdrop.co,AI
 HOST-SUFFIX,cocopilot.org,AI
 HOST-SUFFIX,codeium.com,AI
+HOST-SUFFIX,codeiumdata.com,AI
 HOST-SUFFIX,codepilot.ai,AI
 HOST-SUFFIX,coderabbit.ai,AI
 HOST-SUFFIX,coderabbit.gallery.vsassets.io,AI
@@ -183,6 +184,8 @@ HOST-SUFFIX,synthesia.io,AI
 HOST-SUFFIX,tabnine.com,AI
 HOST-SUFFIX,trae.ai,AI
 HOST-SUFFIX,turn.livekit.cloud,AI
+HOST-SUFFIX,windsurf.build,AI
+HOST-SUFFIX,windsurf.com,AI
 HOST-SUFFIX,x.ai,AI
 HOST-SUFFIX,youmind.ai,AI
 HOST-SUFFIX,youmind.com,AI

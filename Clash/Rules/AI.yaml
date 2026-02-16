@@ -1,5 +1,5 @@
-# UpdateTime: 2026-02-15 20:52:57
-# RuleCount: 205
+# UpdateTime: 2026-02-16 10:13:31
+# RuleCount: 208
 
 payload:
   - DOMAIN,ai.google.dev
@@ -71,6 +71,7 @@ payload:
   - DOMAIN-SUFFIX,clipdrop.co
   - DOMAIN-SUFFIX,cocopilot.org
   - DOMAIN-SUFFIX,codeium.com
+  - DOMAIN-SUFFIX,codeiumdata.com
   - DOMAIN-SUFFIX,codepilot.ai
   - DOMAIN-SUFFIX,coderabbit.ai
   - DOMAIN-SUFFIX,coderabbit.gallery.vsassets.io
@@ -184,6 +185,8 @@ payload:
   - DOMAIN-SUFFIX,tabnine.com
   - DOMAIN-SUFFIX,trae.ai
   - DOMAIN-SUFFIX,turn.livekit.cloud
+  - DOMAIN-SUFFIX,windsurf.build
+  - DOMAIN-SUFFIX,windsurf.com
   - DOMAIN-SUFFIX,x.ai
   - DOMAIN-SUFFIX,youmind.ai
   - DOMAIN-SUFFIX,youmind.com

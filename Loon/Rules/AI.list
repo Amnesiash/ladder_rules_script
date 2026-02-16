@@ -1,5 +1,5 @@
-# UpdateTime: 2026-02-15 20:52:58
-# RuleCount: 205
+# UpdateTime: 2026-02-16 10:13:32
+# RuleCount: 208
 
 DOMAIN,ai.google.dev
 DOMAIN,aistudio.google.com
@@ -70,6 +70,7 @@ DOMAIN-SUFFIX,client-api.arkoselabs.com
 DOMAIN-SUFFIX,clipdrop.co
 DOMAIN-SUFFIX,cocopilot.org
 DOMAIN-SUFFIX,codeium.com
+DOMAIN-SUFFIX,codeiumdata.com
 DOMAIN-SUFFIX,codepilot.ai
 DOMAIN-SUFFIX,coderabbit.ai
 DOMAIN-SUFFIX,coderabbit.gallery.vsassets.io
@@ -183,6 +184,8 @@ DOMAIN-SUFFIX,synthesia.io
 DOMAIN-SUFFIX,tabnine.com
 DOMAIN-SUFFIX,trae.ai
 DOMAIN-SUFFIX,turn.livekit.cloud
+DOMAIN-SUFFIX,windsurf.build
+DOMAIN-SUFFIX,windsurf.com
 DOMAIN-SUFFIX,x.ai
 DOMAIN-SUFFIX,youmind.ai
 DOMAIN-SUFFIX,youmind.com
