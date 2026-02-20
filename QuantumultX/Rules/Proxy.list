@@ -1,4 +1,4 @@
-# UpdateTime: 2026-02-19 21:07:39
+# UpdateTime: 2026-02-20 10:08:53
 # RuleCount: 7480
 
 HOST,a248.e.akamai.net,Proxy
@@ -2846,7 +2846,6 @@ HOST-SUFFIX,gvlib.com,Proxy
 HOST-SUFFIX,gvm.com.tw,Proxy
 HOST-SUFFIX,gvt0.com,Proxy
 HOST-SUFFIX,gvt1.com,Proxy
-HOST-SUFFIX,gvt1.com],Proxy
 HOST-SUFFIX,gvt2.com,Proxy
 HOST-SUFFIX,gvt3.com,Proxy
 HOST-SUFFIX,gwins.org,Proxy
@@ -4105,6 +4104,7 @@ HOST-SUFFIX,moresci.sale,Proxy
 HOST-SUFFIX,morningsun.org,Proxy
 HOST-SUFFIX,moroneta.com,Proxy
 HOST-SUFFIX,mos.ru,Proxy
+HOST-SUFFIX,mosavi.io,Proxy
 HOST-SUFFIX,mosucloud.site,Proxy
 HOST-SUFFIX,motherless.com,Proxy
 HOST-SUFFIX,motiyun.com,Proxy

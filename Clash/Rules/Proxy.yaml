@@ -1,4 +1,4 @@
-# UpdateTime: 2026-02-19 21:07:38
+# UpdateTime: 2026-02-20 10:08:53
 # RuleCount: 7480
 
 payload:
@@ -2847,7 +2847,6 @@ payload:
   - DOMAIN-SUFFIX,gvm.com.tw
   - DOMAIN-SUFFIX,gvt0.com
   - DOMAIN-SUFFIX,gvt1.com
-  - DOMAIN-SUFFIX,gvt1.com]
   - DOMAIN-SUFFIX,gvt2.com
   - DOMAIN-SUFFIX,gvt3.com
   - DOMAIN-SUFFIX,gwins.org
@@ -4106,6 +4105,7 @@ payload:
   - DOMAIN-SUFFIX,morningsun.org
   - DOMAIN-SUFFIX,moroneta.com
   - DOMAIN-SUFFIX,mos.ru
+  - DOMAIN-SUFFIX,mosavi.io
   - DOMAIN-SUFFIX,mosucloud.site
   - DOMAIN-SUFFIX,motherless.com
   - DOMAIN-SUFFIX,motiyun.com
