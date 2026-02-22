@@ -1,5 +1,5 @@
-# UpdateTime: 2026-02-21 20:49:58
-# RuleCount: 7480
+# UpdateTime: 2026-02-22 10:13:25
+# RuleCount: 7485
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -316,6 +316,7 @@ HOST-SUFFIX,akamaistream.net,Proxy
 HOST-SUFFIX,akamaized.net,Proxy
 HOST-SUFFIX,akiba-online.com,Proxy
 HOST-SUFFIX,akiba-web.com,Proxy
+HOST-SUFFIX,akile.io,Proxy
 HOST-SUFFIX,akinator.com,Proxy
 HOST-SUFFIX,akow.org,Proxy
 HOST-SUFFIX,al-islam.com,Proxy
@@ -533,6 +534,7 @@ HOST-SUFFIX,aspi.org.au,Proxy
 HOST-SUFFIX,aspistrategist.org.au,Proxy
 HOST-SUFFIX,assembla.com,Proxy
 HOST-SUFFIX,assets.bwbx.io,Proxy
+HOST-SUFFIX,assets.nxtrace.org,Proxy
 HOST-SUFFIX,assimp.org,Proxy
 HOST-SUFFIX,astrill.com,Proxy
 HOST-SUFFIX,atc.org.au,Proxy
@@ -3926,6 +3928,7 @@ HOST-SUFFIX,mediafreakcity.com,Proxy
 HOST-SUFFIX,mediawiki.org,Proxy
 HOST-SUFFIX,medibang.com,Proxy
 HOST-SUFFIX,medium.com,Proxy
+HOST-SUFFIX,meee.com.tw,Proxy
 HOST-SUFFIX,meetav.com,Proxy
 HOST-SUFFIX,meetup.com,Proxy
 HOST-SUFFIX,mefeedia.com,Proxy
@@ -4571,6 +4574,7 @@ HOST-SUFFIX,open.firstory.me,Proxy
 HOST-SUFFIX,openai.com,Proxy
 HOST-SUFFIX,openallweb.com,Proxy
 HOST-SUFFIX,openbase.com,Proxy
+HOST-SUFFIX,opencritic.com,Proxy
 HOST-SUFFIX,opendemocracy.net,Proxy
 HOST-SUFFIX,opendn.xyz,Proxy
 HOST-SUFFIX,openervpn.in,Proxy
@@ -6914,6 +6918,7 @@ HOST-SUFFIX,wwe.com,Proxy
 HOST-SUFFIX,wwitv.com,Proxy
 HOST-SUFFIX,www.ajsands.com,Proxy
 HOST-SUFFIX,www.bing.com,Proxy
+HOST-SUFFIX,www.clashverge.dev,Proxy
 HOST-SUFFIX,www.hoyolab.com,Proxy
 HOST-SUFFIX,www.lamenhu.com,Proxy
 HOST-SUFFIX,www.lorenzetti.com.br,Proxy
