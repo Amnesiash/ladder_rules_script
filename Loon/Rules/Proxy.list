@@ -1,5 +1,5 @@
-# UpdateTime: 2026-02-23 21:06:40
-# RuleCount: 7485
+# UpdateTime: 2026-02-24 10:10:53
+# RuleCount: 7486
 
 DOMAIN,a248.e.akamai.net
 DOMAIN,a771.dscq.akamai.net
@@ -6136,6 +6136,7 @@ DOMAIN-SUFFIX,topshareware.com
 DOMAIN-SUFFIX,topsy.com
 DOMAIN-SUFFIX,toptip.ca
 DOMAIN-SUFFIX,toptoon.net
+DOMAIN-SUFFIX,tor.eff.org
 DOMAIN-SUFFIX,tora.to
 DOMAIN-SUFFIX,torcn.com
 DOMAIN-SUFFIX,torguard.net

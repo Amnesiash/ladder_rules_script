@@ -1,5 +1,5 @@
-# UpdateTime: 2026-02-23 21:06:40
-# RuleCount: 7485
+# UpdateTime: 2026-02-24 10:10:53
+# RuleCount: 7486
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -6136,6 +6136,7 @@ HOST-SUFFIX,topshareware.com,Proxy
 HOST-SUFFIX,topsy.com,Proxy
 HOST-SUFFIX,toptip.ca,Proxy
 HOST-SUFFIX,toptoon.net,Proxy
+HOST-SUFFIX,tor.eff.org,Proxy
 HOST-SUFFIX,tora.to,Proxy
 HOST-SUFFIX,torcn.com,Proxy
 HOST-SUFFIX,torguard.net,Proxy
