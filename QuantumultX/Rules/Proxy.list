@@ -1,5 +1,5 @@
-# UpdateTime: 2026-02-25 21:06:45
-# RuleCount: 7486
+# UpdateTime: 2026-02-26 10:08:02
+# RuleCount: 7487
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -2179,6 +2179,7 @@ HOST-SUFFIX,freechinaweibo.com,Proxy
 HOST-SUFFIX,freeddns.com,Proxy
 HOST-SUFFIX,freeddns.org,Proxy
 HOST-SUFFIX,freedl.org,Proxy
+HOST-SUFFIX,freedom.gov,Proxy
 HOST-SUFFIX,freedomchina.info,Proxy
 HOST-SUFFIX,freedomcollection.org,Proxy
 HOST-SUFFIX,freedomhongkong.org,Proxy
