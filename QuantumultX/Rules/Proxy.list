@@ -1,5 +1,5 @@
-# UpdateTime: 2026-03-03 20:59:13
-# RuleCount: 7487
+# UpdateTime: 2026-03-04 10:05:47
+# RuleCount: 7492
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -499,6 +499,7 @@ HOST-SUFFIX,archiveofourown.org,Proxy
 HOST-SUFFIX,archives.gov,Proxy
 HOST-SUFFIX,arctosia.com,Proxy
 HOST-SUFFIX,areca-backup.org,Proxy
+HOST-SUFFIX,arena.ai,Proxy
 HOST-SUFFIX,arena.taipei,Proxy
 HOST-SUFFIX,arethusa.su,Proxy
 HOST-SUFFIX,arlingtoncemetery.mil,Proxy
@@ -512,6 +513,7 @@ HOST-SUFFIX,artstation.com,Proxy
 HOST-SUFFIX,artsy.net,Proxy
 HOST-SUFFIX,arunachalforests.gov.in,Proxy
 HOST-SUFFIX,arvanstorage.ir,Proxy
+HOST-SUFFIX,arweave.org,Proxy
 HOST-SUFFIX,arxiv.org,Proxy
 HOST-SUFFIX,asacp.org,Proxy
 HOST-SUFFIX,asdfg.jp,Proxy
@@ -1254,6 +1256,7 @@ HOST-SUFFIX,ck101.com,Proxy
 HOST-SUFFIX,clarionproject.org,Proxy
 HOST-SUFFIX,classicalguitarblog.net,Proxy
 HOST-SUFFIX,claude.ai,Proxy
+HOST-SUFFIX,claude.com,Proxy
 HOST-SUFFIX,clb.org.hk,Proxy
 HOST-SUFFIX,cldr.unicode.org,Proxy
 HOST-SUFFIX,cleansite.biz,Proxy
@@ -3874,6 +3877,7 @@ HOST-SUFFIX,manicur4ik.ru,Proxy
 HOST-SUFFIX,mansion.com,Proxy
 HOST-SUFFIX,mansionpoker.com,Proxy
 HOST-SUFFIX,manta.com,Proxy
+HOST-SUFFIX,manus.im,Proxy
 HOST-SUFFIX,manyvoices.news,Proxy
 HOST-SUFFIX,maplew.com,Proxy
 HOST-SUFFIX,marc.info,Proxy
@@ -6851,6 +6855,7 @@ HOST-SUFFIX,wireguard.com,Proxy
 HOST-SUFFIX,wisdompubs.org,Proxy
 HOST-SUFFIX,wise.com,Proxy
 HOST-SUFFIX,wisevid.com,Proxy
+HOST-SUFFIX,wispbyte.com,Proxy
 HOST-SUFFIX,wistia.com,Proxy
 HOST-SUFFIX,withgoogle.com,Proxy
 HOST-SUFFIX,withyoutube.com,Proxy
