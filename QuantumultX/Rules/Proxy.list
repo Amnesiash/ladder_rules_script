@@ -1,5 +1,5 @@
-# UpdateTime: 2026-03-05 21:02:18
-# RuleCount: 7492
+# UpdateTime: 2026-03-06 10:08:07
+# RuleCount: 7493
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -1668,6 +1668,7 @@ HOST-SUFFIX,douhokanko.net,Proxy
 HOST-SUFFIX,doujincafe.com,Proxy
 HOST-SUFFIX,dowei.org,Proxy
 HOST-SUFFIX,dowjones.com,Proxy
+HOST-SUFFIX,download.dappcdn.com,Proxy
 HOST-SUFFIX,dphk.org,Proxy
 HOST-SUFFIX,dpool.top,Proxy
 HOST-SUFFIX,dpp.org.tw,Proxy

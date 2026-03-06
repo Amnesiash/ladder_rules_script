@@ -1,5 +1,5 @@
-# UpdateTime: 2026-03-05 21:02:17
-# RuleCount: 7492
+# UpdateTime: 2026-03-06 10:08:06
+# RuleCount: 7493
 
 payload:
   - DOMAIN,a248.e.akamai.net
@@ -1669,6 +1669,7 @@ payload:
   - DOMAIN-SUFFIX,doujincafe.com
   - DOMAIN-SUFFIX,dowei.org
   - DOMAIN-SUFFIX,dowjones.com
+  - DOMAIN-SUFFIX,download.dappcdn.com
   - DOMAIN-SUFFIX,dphk.org
   - DOMAIN-SUFFIX,dpool.top
   - DOMAIN-SUFFIX,dpp.org.tw
