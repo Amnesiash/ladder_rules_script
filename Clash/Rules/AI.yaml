@@ -1,5 +1,5 @@
-# UpdateTime: 2026-03-07 20:49:25
-# RuleCount: 208
+# UpdateTime: 2026-03-08 10:10:45
+# RuleCount: 209
 
 payload:
   - DOMAIN,ai.google.dev
@@ -137,6 +137,7 @@ payload:
   - DOMAIN-SUFFIX,leonardo.ai
   - DOMAIN-SUFFIX,livekit.cloud
   - DOMAIN-SUFFIX,liveperson.net
+  - DOMAIN-SUFFIX,lovart.ai
   - DOMAIN-SUFFIX,lpsnmedia.net
   - DOMAIN-SUFFIX,makersuite.google.com
   - DOMAIN-SUFFIX,manus.im

@@ -1,5 +1,5 @@
-# UpdateTime: 2026-03-07 20:49:26
-# RuleCount: 208
+# UpdateTime: 2026-03-08 10:10:46
+# RuleCount: 209
 
 HOST,ai.google.dev,AI
 HOST,aistudio.google.com,AI
@@ -136,6 +136,7 @@ HOST-SUFFIX,launchdarkly.com,AI
 HOST-SUFFIX,leonardo.ai,AI
 HOST-SUFFIX,livekit.cloud,AI
 HOST-SUFFIX,liveperson.net,AI
+HOST-SUFFIX,lovart.ai,AI
 HOST-SUFFIX,lpsnmedia.net,AI
 HOST-SUFFIX,makersuite.google.com,AI
 HOST-SUFFIX,manus.im,AI

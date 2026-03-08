@@ -1,5 +1,5 @@
-# UpdateTime: 2026-03-07 20:49:26
-# RuleCount: 208
+# UpdateTime: 2026-03-08 10:10:46
+# RuleCount: 209
 
 DOMAIN,ai.google.dev
 DOMAIN,aistudio.google.com
@@ -136,6 +136,7 @@ DOMAIN-SUFFIX,launchdarkly.com
 DOMAIN-SUFFIX,leonardo.ai
 DOMAIN-SUFFIX,livekit.cloud
 DOMAIN-SUFFIX,liveperson.net
+DOMAIN-SUFFIX,lovart.ai
 DOMAIN-SUFFIX,lpsnmedia.net
 DOMAIN-SUFFIX,makersuite.google.com
 DOMAIN-SUFFIX,manus.im

@@ -1,5 +1,5 @@
-# UpdateTime: 2026-03-07 20:49:26
-# RuleCount: 7493
+# UpdateTime: 2026-03-08 10:10:46
+# RuleCount: 7495
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -1614,6 +1614,7 @@ HOST-SUFFIX,dmm.co.jp,Proxy
 HOST-SUFFIX,dmm.com,Proxy
 HOST-SUFFIX,dns-dns.com,Proxy
 HOST-SUFFIX,dns-stuff.com,Proxy
+HOST-SUFFIX,dns.cloudflare.com,Proxy
 HOST-SUFFIX,dns.google,Proxy
 HOST-SUFFIX,dns04.com,Proxy
 HOST-SUFFIX,dns05.com,Proxy
@@ -3320,6 +3321,7 @@ HOST-SUFFIX,internetpopculture.com,Proxy
 HOST-SUFFIX,interseclab.org,Proxy
 HOST-SUFFIX,inthenameofconfuciusmovie.com,Proxy
 HOST-SUFFIX,investigating.wordpress.com,Proxy
+HOST-SUFFIX,investing.com,Proxy
 HOST-SUFFIX,invidio.us,Proxy
 HOST-SUFFIX,inxian.com,Proxy
 HOST-SUFFIX,iownyour.biz,Proxy
