@@ -1,5 +1,5 @@
-# UpdateTime: 2026-03-09 21:05:28
-# RuleCount: 7495
+# UpdateTime: 2026-03-10 10:04:59
+# RuleCount: 7496
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -5392,6 +5392,7 @@ HOST-SUFFIX,shinychan.com,Proxy
 HOST-SUFFIX,shipcamouflage.com,Proxy
 HOST-SUFFIX,shireyishunjian.com,Proxy
 HOST-SUFFIX,shitaotv.org,Proxy
+HOST-SUFFIX,shitjournal.org,Proxy
 HOST-SUFFIX,shixiao.org,Proxy
 HOST-SUFFIX,shizhao.org,Proxy
 HOST-SUFFIX,shkspr.mobi,Proxy
