@@ -1,5 +1,5 @@
-# UpdateTime: 2026-03-15 20:55:07
-# RuleCount: 7496
+# UpdateTime: 2026-03-16 10:31:57
+# RuleCount: 7497
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -6968,6 +6968,7 @@ HOST-SUFFIX,xcafe.in,Proxy
 HOST-SUFFIX,xcancel.com,Proxy
 HOST-SUFFIX,xcity.jp,Proxy
 HOST-SUFFIX,xcritic.com,Proxy
+HOST-SUFFIX,xdaforums.com,Proxy
 HOST-SUFFIX,xerotica.com,Proxy
 HOST-SUFFIX,xfiles.to,Proxy
 HOST-SUFFIX,xfinity.com,Proxy

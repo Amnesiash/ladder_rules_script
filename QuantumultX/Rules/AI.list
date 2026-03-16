@@ -1,5 +1,5 @@
-# UpdateTime: 2026-03-15 20:55:07
-# RuleCount: 209
+# UpdateTime: 2026-03-16 10:31:57
+# RuleCount: 213
 
 HOST,ai.google.dev,AI
 HOST,aistudio.google.com,AI
@@ -62,10 +62,12 @@ HOST-SUFFIX,cici.com,extended-matching,AI
 HOST-SUFFIX,ciciai.com,AI
 HOST-SUFFIX,ciciai.com,extended-matching,AI
 HOST-SUFFIX,ciciaicdn.com,AI
+HOST-SUFFIX,clau.de,AI
 HOST-SUFFIX,claude.ai,AI
 HOST-SUFFIX,claude.com,AI
 HOST-SUFFIX,claudemcpclient.com,AI
 HOST-SUFFIX,claudeusercontent.com,AI
+HOST-SUFFIX,clawhub.ai,AI
 HOST-SUFFIX,client-api.arkoselabs.com,AI
 HOST-SUFFIX,clipdrop.co,AI
 HOST-SUFFIX,cocopilot.org,AI
@@ -116,6 +118,7 @@ HOST-SUFFIX,grazie.aws.intellij.net,AI
 HOST-SUFFIX,grok.com,AI
 HOST-SUFFIX,grok.x.com,AI
 HOST-SUFFIX,groq.com,AI
+HOST-SUFFIX,h2o.ai,AI
 HOST-SUFFIX,heygen.com,AI
 HOST-SUFFIX,hf.co,AI
 HOST-SUFFIX,hf.space,AI
@@ -159,6 +162,7 @@ HOST-SUFFIX,openai.com.cdn.cloudflare.net,AI
 HOST-SUFFIX,openaiapi-site.azureedge.net,AI
 HOST-SUFFIX,openaicom.imgix.net,AI
 HOST-SUFFIX,openart.ai,AI
+HOST-SUFFIX,openclaw.ai,AI
 HOST-SUFFIX,openrouter.ai,AI
 HOST-SUFFIX,oystermercury.top,AI
 HOST-SUFFIX,pawan.krd,AI

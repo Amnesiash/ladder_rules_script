@@ -1,5 +1,5 @@
-# UpdateTime: 2026-03-15 20:55:06
-# RuleCount: 7496
+# UpdateTime: 2026-03-16 10:31:57
+# RuleCount: 7497
 
 payload:
   - DOMAIN,a248.e.akamai.net
@@ -6969,6 +6969,7 @@ payload:
   - DOMAIN-SUFFIX,xcancel.com
   - DOMAIN-SUFFIX,xcity.jp
   - DOMAIN-SUFFIX,xcritic.com
+  - DOMAIN-SUFFIX,xdaforums.com
   - DOMAIN-SUFFIX,xerotica.com
   - DOMAIN-SUFFIX,xfiles.to
   - DOMAIN-SUFFIX,xfinity.com

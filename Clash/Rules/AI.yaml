@@ -1,5 +1,5 @@
-# UpdateTime: 2026-03-15 20:55:06
-# RuleCount: 209
+# UpdateTime: 2026-03-16 10:31:56
+# RuleCount: 213
 
 payload:
   - DOMAIN,ai.google.dev
@@ -63,10 +63,12 @@ payload:
   - DOMAIN-SUFFIX,ciciai.com
   - DOMAIN-SUFFIX,ciciai.com,extended-matching
   - DOMAIN-SUFFIX,ciciaicdn.com
+  - DOMAIN-SUFFIX,clau.de
   - DOMAIN-SUFFIX,claude.ai
   - DOMAIN-SUFFIX,claude.com
   - DOMAIN-SUFFIX,claudemcpclient.com
   - DOMAIN-SUFFIX,claudeusercontent.com
+  - DOMAIN-SUFFIX,clawhub.ai
   - DOMAIN-SUFFIX,client-api.arkoselabs.com
   - DOMAIN-SUFFIX,clipdrop.co
   - DOMAIN-SUFFIX,cocopilot.org
@@ -117,6 +119,7 @@ payload:
   - DOMAIN-SUFFIX,grok.com
   - DOMAIN-SUFFIX,grok.x.com
   - DOMAIN-SUFFIX,groq.com
+  - DOMAIN-SUFFIX,h2o.ai
   - DOMAIN-SUFFIX,heygen.com
   - DOMAIN-SUFFIX,hf.co
   - DOMAIN-SUFFIX,hf.space
@@ -160,6 +163,7 @@ payload:
   - DOMAIN-SUFFIX,openaiapi-site.azureedge.net
   - DOMAIN-SUFFIX,openaicom.imgix.net
   - DOMAIN-SUFFIX,openart.ai
+  - DOMAIN-SUFFIX,openclaw.ai
   - DOMAIN-SUFFIX,openrouter.ai
   - DOMAIN-SUFFIX,oystermercury.top
   - DOMAIN-SUFFIX,pawan.krd
