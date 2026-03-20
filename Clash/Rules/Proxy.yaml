@@ -1,5 +1,5 @@
-# UpdateTime: 2026-03-19 21:06:48
-# RuleCount: 7497
+# UpdateTime: 2026-03-20 10:09:25
+# RuleCount: 7500
 
 payload:
   - DOMAIN,a248.e.akamai.net
@@ -222,6 +222,7 @@ payload:
   - DOMAIN-SUFFIX,a248.e.akamai.net
   - DOMAIN-SUFFIX,a5.com.ru
   - DOMAIN-SUFFIX,aamacau.com
+  - DOMAIN-SUFFIX,aave.com
   - DOMAIN-SUFFIX,abc.com
   - DOMAIN-SUFFIX,abc.net.au
   - DOMAIN-SUFFIX,abc.pp.ru
@@ -4529,8 +4530,10 @@ payload:
   - DOMAIN-SUFFIX,oizoblog.com
   - DOMAIN-SUFFIX,ok.ru
   - DOMAIN-SUFFIX,okayfreedom.com
+  - DOMAIN-SUFFIX,okcoin.com
   - DOMAIN-SUFFIX,okex.com
   - DOMAIN-SUFFIX,okk.tw
+  - DOMAIN-SUFFIX,oklink.com
   - DOMAIN-SUFFIX,okpool.me
   - DOMAIN-SUFFIX,okx.com
   - DOMAIN-SUFFIX,okx.com.cdn.cloudflare.net

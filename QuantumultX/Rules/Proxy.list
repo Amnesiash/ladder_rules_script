@@ -1,5 +1,5 @@
-# UpdateTime: 2026-03-19 21:06:49
-# RuleCount: 7497
+# UpdateTime: 2026-03-20 10:09:26
+# RuleCount: 7500
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -221,6 +221,7 @@ HOST-SUFFIX,a-normal-day.com,Proxy
 HOST-SUFFIX,a248.e.akamai.net,Proxy
 HOST-SUFFIX,a5.com.ru,Proxy
 HOST-SUFFIX,aamacau.com,Proxy
+HOST-SUFFIX,aave.com,Proxy
 HOST-SUFFIX,abc.com,Proxy
 HOST-SUFFIX,abc.net.au,Proxy
 HOST-SUFFIX,abc.pp.ru,Proxy
@@ -4528,8 +4529,10 @@ HOST-SUFFIX,oiktv.com,Proxy
 HOST-SUFFIX,oizoblog.com,Proxy
 HOST-SUFFIX,ok.ru,Proxy
 HOST-SUFFIX,okayfreedom.com,Proxy
+HOST-SUFFIX,okcoin.com,Proxy
 HOST-SUFFIX,okex.com,Proxy
 HOST-SUFFIX,okk.tw,Proxy
+HOST-SUFFIX,oklink.com,Proxy
 HOST-SUFFIX,okpool.me,Proxy
 HOST-SUFFIX,okx.com,Proxy
 HOST-SUFFIX,okx.com.cdn.cloudflare.net,Proxy
