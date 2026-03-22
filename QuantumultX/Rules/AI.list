@@ -1,5 +1,5 @@
-# UpdateTime: 2026-03-21 20:51:35
-# RuleCount: 213
+# UpdateTime: 2026-03-22 10:23:53
+# RuleCount: 214
 
 HOST,ai.google.dev,AI
 HOST,aistudio.google.com,AI
@@ -182,6 +182,7 @@ HOST-SUFFIX,sentry.io,AI
 HOST-SUFFIX,smoot.apple.com,AI
 HOST-SUFFIX,sora.com,AI
 HOST-SUFFIX,sourcegraph.com,AI
+HOST-SUFFIX,spicywriter.com,AI
 HOST-SUFFIX,stability.ai,AI
 HOST-SUFFIX,stablediffusionweb.com,AI
 HOST-SUFFIX,stripe.com,AI

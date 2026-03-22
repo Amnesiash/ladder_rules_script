@@ -1,5 +1,5 @@
-# UpdateTime: 2026-03-21 20:51:34
-# RuleCount: 213
+# UpdateTime: 2026-03-22 10:23:52
+# RuleCount: 214
 
 payload:
   - DOMAIN,ai.google.dev
@@ -183,6 +183,7 @@ payload:
   - DOMAIN-SUFFIX,smoot.apple.com
   - DOMAIN-SUFFIX,sora.com
   - DOMAIN-SUFFIX,sourcegraph.com
+  - DOMAIN-SUFFIX,spicywriter.com
   - DOMAIN-SUFFIX,stability.ai
   - DOMAIN-SUFFIX,stablediffusionweb.com
   - DOMAIN-SUFFIX,stripe.com

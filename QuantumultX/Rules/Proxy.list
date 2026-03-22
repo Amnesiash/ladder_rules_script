@@ -1,5 +1,5 @@
-# UpdateTime: 2026-03-21 20:51:35
-# RuleCount: 7500
+# UpdateTime: 2026-03-22 10:23:53
+# RuleCount: 7501
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -1228,6 +1228,7 @@ HOST-SUFFIX,chuizi.net,Proxy
 HOST-SUFFIX,churchinhongkong.org,Proxy
 HOST-SUFFIX,chushigangdrug.ch,Proxy
 HOST-SUFFIX,ci-en.jp,Proxy
+HOST-SUFFIX,cia.gov,Proxy
 HOST-SUFFIX,cici.com,Proxy
 HOST-SUFFIX,ciciai.com,Proxy
 HOST-SUFFIX,cienen.com,Proxy

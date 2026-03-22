@@ -1,5 +1,5 @@
-# UpdateTime: 2026-03-21 20:51:35
-# RuleCount: 7500
+# UpdateTime: 2026-03-22 10:23:54
+# RuleCount: 7501
 
 DOMAIN,a248.e.akamai.net
 DOMAIN,a771.dscq.akamai.net
@@ -1228,6 +1228,7 @@ DOMAIN-SUFFIX,chuizi.net
 DOMAIN-SUFFIX,churchinhongkong.org
 DOMAIN-SUFFIX,chushigangdrug.ch
 DOMAIN-SUFFIX,ci-en.jp
+DOMAIN-SUFFIX,cia.gov
 DOMAIN-SUFFIX,cici.com
 DOMAIN-SUFFIX,ciciai.com
 DOMAIN-SUFFIX,cienen.com
