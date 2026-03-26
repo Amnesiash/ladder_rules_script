@@ -1,5 +1,5 @@
-# UpdateTime: 2026-03-25 21:12:31
-# RuleCount: 7502
+# UpdateTime: 2026-03-26 10:28:26
+# RuleCount: 7503
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -7018,6 +7018,7 @@ HOST-SUFFIX,xm.com,Proxy
 HOST-SUFFIX,xml-training-guide.com,Proxy
 HOST-SUFFIX,xmovies.com,Proxy
 HOST-SUFFIX,xn--11xs86f.icu,Proxy
+HOST-SUFFIX,xn--1jqvh729avzfcy2d8ummib.com,Proxy
 HOST-SUFFIX,xn--4gq171p.com,Proxy
 HOST-SUFFIX,xn--90wwvt03e.com,Proxy
 HOST-SUFFIX,xn--9iqy04a7fi01l.com,Proxy
