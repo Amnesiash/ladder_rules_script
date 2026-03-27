@@ -22,8 +22,8 @@ FilterEU: &FilterEU '^(?=.*(?i)(奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|
 
 # ==================== 代理提供者 ====================
 proxy-providers:
-  Sub1: {<<: *BaseProvider, url: '', path: ./proxy/Sub1.yaml, override: {additional-prefix: '[Sub1] '}}
-  Sub2: {<<: *BaseProvider, url: '', path: ./proxy/Sub2.yaml, override: {additional-prefix: '[Sub2] '}}
+  # Sub1: {<<: *BaseProvider, url: '', path: ./proxy/Sub1.yaml, override: {additional-prefix: '[Sub1] '}}
+  # Sub2: {<<: *BaseProvider, url: '', path: ./proxy/Sub2.yaml, override: {additional-prefix: '[Sub2] '}}
 
 # ==================== 核心配置 ====================
 #基础配置
