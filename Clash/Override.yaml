@@ -23,11 +23,10 @@ proxy-groups:
   - {name: 手动选择, type: select, include-all: true, icon: https://github.com/666OS/YYDS/raw/main/mihomo/image/mihomo.png}
   - {name: 全球加速, type: select, proxies: [香港节点, 台湾节点, 日本节点, 狮城节点, 韩国节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Global.png}
   - {name: AI, type: select, proxies: [香港节点, 台湾节点, 日本节点, 狮城节点, 韩国节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/AI.png}
-  - {name: 哔哩哔哩, type: select, proxies: [直接连接, 香港节点, 台湾节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/bilibili_3.png}
+  - {name: 哔哩哔哩, type: select, proxies: [DIRECT, 香港节点, 台湾节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/bilibili_3.png}
   - {name: 国际媒体, type: select, proxies: [香港节点, 台湾节点, 日本节点, 狮城节点, 韩国节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Streaming!CN.png}
-  - {name: 苹果服务, type: select, proxies: [直接连接, 香港节点, 台湾节点, 日本节点, 狮城节点, 韩国节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Apple.png}
-  - {name: 漏网之鱼, type: select, proxies: [直接连接, 香港节点, 台湾节点, 日本节点, 狮城节点, 韩国节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Final.png}
-  - {name: 直接连接,  type: select, proxies: [DIRECT], hidden: true, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Direct.png}
+  - {name: 苹果服务, type: select, proxies: [DIRECT, 香港节点, 台湾节点, 日本节点, 狮城节点, 韩国节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Apple.png}
+  - {name: 漏网之鱼, type: select, proxies: [DIRECT, 香港节点, 台湾节点, 日本节点, 狮城节点, 韩国节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Final.png}
 
   # 地理策略层 - Urltest节点选择，政策权重数值越大优先级越高，修改为关键词节点，比如 优:2;备:0.5，默认为1，优>备，使用时请修改
   - {name: 香港节点,  <<: *BaseUrltest, filter: *FilterHK, include-all: true, 节点icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Hong_Kong.png}
@@ -60,20 +59,20 @@ rule-providers:
 # ==================== 规则路由 ====================
 rules: 
   # 自定义规则
-  - DOMAIN-SUFFIX,ghfast.top,直接连接
+  - DOMAIN-SUFFIX,ghfast.top,DIRECT
   
   # > 订阅规则
-  - RULE-SET,Lan,直接连接
-  - RULE-SET,直连修正,直接连接
-  - RULE-SET,微信,直接连接
-  - RULE-SET,SteamCN,直接连接
+  - RULE-SET,Lan,DIRECT
+  - RULE-SET,直连修正,DIRECT
+  - RULE-SET,微信,DIRECT
+  - RULE-SET,SteamCN,DIRECT
   - RULE-SET,AI,AI
   - RULE-SET,苹果服务,苹果服务
   - RULE-SET,哔哩哔哩,哔哩哔哩
   - RULE-SET,国际流媒体,国际媒体
   - RULE-SET,代理列表,全球加速
-  - RULE-SET,国内网站,直接连接
-  - GEOIP,CN,直接连接
+  - RULE-SET,国内网站,DIRECT
+  - GEOIP,CN,DIRECT
 
   # 兜底规则
   - MATCH,漏网之鱼
