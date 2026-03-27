@@ -129,8 +129,6 @@ dns:
     - 180.184.1.1
     - 223.5.5.5
   nameserver:               # 默认DNS服务器，支持udp/tcp/dot/doh/doq
-    - 172.30.7.2
-    - 172.30.7.3
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
   proxy-server-nameserver:
@@ -183,7 +181,6 @@ rule-providers:
 rules: 
   # 自定义规则
   - DOMAIN-SUFFIX,kitty.su,全球加速
-  - DOMAIN-SUFFIX,jasolar.com,DIRECT
   - DOMAIN-SUFFIX,figma.com,漏网之鱼
 
   # > 订阅规则
