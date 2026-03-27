@@ -142,7 +142,7 @@ proxy-groups:
   - {name: 手动选择, type: select, include-all: true, icon: https://github.com/666OS/YYDS/raw/main/mihomo/image/mihomo.png}
   - {name: 网络解限, type: select, proxies: [DIRECT, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Unlock.png}
   - {name: 全球加速, type: select, proxies: [香港节点, 台湾节点, 日本节点, 狮城节点, 韩国节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Global.png}
-  - {name: AI,      输入: select, proxies: [狮城节点, 日本节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/AI.png}
+  - {name: AI, type: select, proxies: [狮城节点, 日本节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/AI.png}
   - {name: 哔哩哔哩, type: select, proxies: [DIRECT, 香港节点, 台湾节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/bilibili_3.png}
   - {name: 国际媒体, type: select, proxies: [香港节点, 台湾节点, 日本节点, 狮城节点, 韩国节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Streaming!CN.png}
   - {name: 苹果服务, type: select, proxies: [DIRECT, 香港节点, 台湾节点, 日本节点, 狮城节点, 韩国节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Apple.png}
