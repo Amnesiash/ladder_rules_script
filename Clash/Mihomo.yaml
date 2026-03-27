@@ -1,52 +1,107 @@
 # Mihomo 配置
-# 日期：2025-11-18
+# 日期：2026-03-25
 # 配置作者：https://github.com/Amnesiash/
 # 适用版本：所有使用 Clash Meta 核心的程序
 
 
+# ==================== 锚点配置 ====================
+# 代理提供者模板 - 订阅源基础配置
+BaseProvider: &BaseProvider {type: http, interval: 86400, proxy: DIRECT, health-check: {enable: true, url: 'https://www.google.com/generate_204', interval: 300}, filter: '^(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'}
+
+# 策略组类型模板 - 定义不同的策略组基础配置
+BaseUrltest: &BaseUrltest {type: url-test, interval: 300, tolerance: 50, timeout: 3000, max-failed-times: 3, lazy: true, url: 'https://www.gstatic.com/generate_204', hidden: true} 
+
+# 节点筛选正则表达式 - 基于地理位置和关键词过滤
+FilterHK: &FilterHK '^(?=.*(?i)(港|🇭🇰|HK|Hong|HKG))(?!.*(排除1|排除2|5x)).*$'
+FilterSG: &FilterSG '^(?=.*(?i)(坡|🇸🇬|SG|Sing|SIN|XSP))(?!.*(排除1|排除2|5x)).*$'
+FilterJP: &FilterJP '^(?=.*(?i)(日本|🇯🇵|JP|Japan|NRT|HND|KIX|CTS|FUK))(?!.*(排除1|排除2|5x)).*$'
+FilterKR: &FilterKR '^(?=.*(?i)(韩|🇰🇷|韓|首尔|南朝鲜|KR|KOR|Korea|South))(?!.*(排除1|排除2|5x)).*$'
+FilterUS: &FilterUS '^(?=.*(?i)(美|🇺🇸|US|USA|SJC|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD))(?!.*(排除1|排除2|5x)).*$'
+FilterTW: &FilterTW '^(?=.*(?i)(台|🇼🇸|🇹🇼|TW|tai|TPE|TSA|KHH))(?!.*(排除1|排除2|5x)).*$'
+FilterEU: &FilterEU '^(?=.*(?i)(奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|法|德|希|匈|爱尔|意|拉|立|卢|马其它|荷|波|葡|罗|斯洛伐|斯洛文|西|瑞|英|🇧🇪|🇨🇿|🇩🇰|🇫🇮|🇫🇷|🇩🇪|🇮🇪|🇮🇹|🇱🇹|🇱🇺|🇳🇱|🇵🇱|🇸🇪|🇬🇧|CDG|FRA|AMS|MAD|BCN|FCO|MUC|BRU))(?!.*(排除1|排除2|5x)).*$'
+
+# ==================== 代理提供者 ====================
+proxy-providers:
+  Sub1: {<<: *BaseProvider, url: '', path: ./proxy/Sub1.yaml, override: {additional-prefix: '[Sub1] '}}
+  Sub2: {<<: *BaseProvider, url: '', path: ./proxy/Sub2.yaml, override: {additional-prefix: '[Sub2] '}}
+
+# ==================== 核心配置 ====================
+#基础配置
 mixed-port: 7890      # 混合端口 HTTP和SOCKS5用一个端口
 port: 7891
 socks-port: 7892
-
 unified-delay: true
 geodata-mode: false
 geodata-loader: standard
 geo-auto-update: true
 geo-update-interval: 24
 tcp-concurrent: true
-find-process-mode: strict
+find-process-mode: 'always'
 global-client-fingerprint: chrome
-
+keep-alive-interval: 15
+keep-alive-idle: 600
 allow-lan: true       # 允许局域网的连接（可用来共享代理）
 mode: rule            # 规则模式：rule（规则） / global（全局代理）/ direct（全局直连）/ script (脚本)
 log-level: info       # 设置日志输出级别 (5 个级别：silent / error / warning / info / debug）
 ipv6: true            # 开启 IPv6 总开关,关闭阻断所有 IPv6 链接和屏蔽 DNS 请求 AAAA 记录
 udp: true
 
-external-controller: 0.0.0.0:9090   #外部控制器,可以使用 RESTful API 来控制你的 clash 内核
+geox-url:
+  # geoip: 'https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat'
+  # geosite: 'https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat'
+  mmdb: 'https://raw.githubusercontent.com/Masaiki/GeoIP2-CN/release/Country.mmdb'
+  asn: 'https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb'
+
+# 认证配置
+# authentication:
+#  - mihomo:mihomopassword
+skip-auth-prefixes:
+  - 192.168.1.0/24
+  - 192.168.31.0/24
+  - 192.168.100.0/24
+  - 127.0.0.1/8
+
+# 实验性功能
+experimental:
+  quic-go-disable-gso: true 
+
+# 管理面板配置
+external-ui-url: "https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip" 
+external-controller: 127.0.0.1:9090   #外部控制器,可以使用 RESTful API 来控制你的 clash 内核
 secret: ''
 
-geox-url:
-  # geoip: 'https://ghfast.top/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat'
-  # geosite: 'https://ghfast.top/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat'
-  mmdb: 'https://ghfast.top/https://raw.githubusercontent.com/Masaiki/GeoIP2-CN/release/Country.mmdb'
-  asn: 'https://ghfast.top/https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb'
-
-external-ui-url: "https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip" #从 GitHub Pages分支获取
-
+# 配置存储
 profile:
   store-selected: true
   store-fake-ip: true
 
+# 流量嗅探
+sniffer:
+  enable: true
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+    TLS:
+      ports: [443, 8443]
+    QUIC:
+      ports: [443, 8443]
+  skip-domain:
+    - "Mijia Cloud"
+    - "+.push.apple.com"
+
+# TUN模式配置    
 tun:
   enable: true
-  stack: gvisor
+  stack: mixed
   dns-hijack:
-    - any:53
-    - tcp://any:53
+    - "any:53"
+    - "tcp://any:53"
   auto-route: true
+  auto-redirect: true
   auto-detect-interface: true
 
+# DNS配置
 dns:
   enable: true              # 关闭将使用系统 DNS
   listen: 0.0.0.0:1053      # DNS监听地址
@@ -70,142 +125,83 @@ dns:
     - "*.blzstatic.cn"
     - "*.battle.net"    
   default-nameserver:
-    - 223.5.5.5
     - 119.29.29.29
+    - 180.184.1.1
+    - 223.5.5.5
   nameserver:               # 默认DNS服务器，支持udp/tcp/dot/doh/doq
-    - https://223.5.5.5/dns-query
+    - 172.30.7.2
+    - 172.30.7.3
+    - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
   proxy-server-nameserver:
-    - https://223.5.5.5/dns-query
+    - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
 
-# 锚点 - 优选节点订阅参数 [每半天更新一次订阅优选节点，每 6 秒一次健康检查]
-NodeParam: &NodeParam {type: http, interval: 3600, health-check: {enable: true, url: https://www.gstatic.com/generate_204, interval: 6}}
-
-# 锚点 - 优选节点订阅
-proxy-providers:
-  # Sub:
-  #   <<: *NodeParam
-  #   url: 
-  #   path: ./proxy/Sub.yaml
-
-# 锚点 - 订阅组应用
-UseProxy: &UseProxy [Sub]
-
-# 锚点 - 优选节点筛选组
-FilterHK: &FilterHK '^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
-FilterTW: &FilterTW '^(?=.*((?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
-FilterJP: &FilterJP '^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
-FilterSG: &FilterSG '^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
-FilterUS: &FilterUS '^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
-
-# 策略组参数锚点
-# 锚点 - 自动优选参数 [每 300 秒一次惰性健康检查，容差 20ms，超过 3 秒判定为失败，失败 3 次则自动触发健康检查]
-UrlTest: &UrlTest {type: url-test, url: 'https://www.gstatic.com/generate_204', interval: 300, tolerance: 20, lazy: true, timeout: 3000, max-failed-times: 3, hidden: false, use: *UseProxy}
-# 锚点 - 自动回退参数 [每 300 秒一次惰性健康检查，时延超过 3 秒判定为失败，失败 3 次则自动触发健康检查]
-FallBack: &FallBack {type: fallback, url: 'https://www.gstatic.com/generate_204', interval: 300, lazy: true, timeout: 3000, max-failed-times: 3, hidden: true, use: *UseProxy}
-# 锚点 - 负载均衡参数 [每 300 秒一次惰性健康检查，时延超过 3 秒判定为失败，失败 3 次则自动触发健康检查]
-LoadBalance: &LoadBalance {type: load-balance, url: 'https://www.gstatic.com/generate_204', strategy: consistent-hashing, interval: 300, lazy: true, timeout: 3000, max-failed-times: 3, hidden: true, use: *UseProxy}
-# 锚点 - 规则参数 [每小时更新一次订阅规则，更新规则时使用直连策略]
-c: &RuleSet_c {type: http, behavior: classical, interval: 3600}
-d: &RuleSet_d {type: http, behavior: domain, interval: 3600}
-i: &RuleSet_i {type: http, behavior: ipcidr, interval: 3600}
 
 # 策略组
 proxy-groups:
-  - {name: 🚀 节点选择, type: select, use: *UseProxy}
-  - {name: 🌍 全球加速, type: select, proxies: [♻️ 自动选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🚀 节点选择]}
-  - {name: 🎨 FIGMA, type: select, proxies: [DIRECT, ♻️ 自动选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🚀 节点选择]}
-  - {name: ✨ AI, type: select, proxies: [🇸🇬 狮城节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🚀 节点选择]}
-  - {name: 🎬 哔哩哔哩, type: select, proxies: [DIRECT, ♻️ 自动选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🚀 节点选择]}
-  - {name: 🎬 国际媒体, type: select, proxies: [♻️ 自动选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🚀 节点选择]}
-  - {name: 🍎 苹果服务, type: select, proxies: [DIRECT, ♻️ 自动选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🚀 节点选择]}
-  - {name: 🐟 漏网之鱼, type: select, proxies: [DIRECT, ♻️ 自动选择, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🚀 节点选择]}
+  # 应用策略层 - Select手动选择，支持多场景应用优化，使用时默认，也可修改
+  - {name: 手动选择, type: select, include-all: true, icon: https://github.com/666OS/YYDS/raw/main/mihomo/image/mihomo.png}
+  - {name: 网络解限, type: select, proxies: [DIRECT, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Unlock.png}
+  - {name: 全球加速, type: select, proxies: [香港节点, 台湾节点, 日本节点, 狮城节点, 韩国节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Global.png}
+  - {name: AI, type: select, proxies: [狮城节点, 日本节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/AI.png}
+  - {name: 哔哩哔哩, type: select, proxies: [DIRECT, 香港节点, 台湾节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/bilibili_3.png}
+  - {name: 国际媒体, type: select, proxies: [香港节点, 台湾节点, 日本节点, 狮城节点, 韩国节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Streaming!CN.png}
+  - {name: 苹果服务, type: select, proxies: [DIRECT, 香港节点, 台湾节点, 日本节点, 狮城节点, 韩国节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Apple.png}
+  - {name: 漏网之鱼, type: select, proxies: [DIRECT, 香港节点, 台湾节点, 日本节点, 狮城节点, 韩国节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Final.png}
 
-  # 最低延迟优选策略组
-  - {name: ♻️ 自动选择, <<: *UrlTest}
-  - {name: 🇭🇰 香港节点, <<: *UrlTest, filter: *FilterHK}
-  - {name: 🇨🇳 台湾节点, <<: *UrlTest, filter: *FilterTW}
-  - {name: 🇯🇵 日本节点, <<: *UrlTest, filter: *FilterJP}
-  - {name: 🇸🇬 狮城节点, <<: *UrlTest, filter: *FilterSG}
-  - {name: 🇺🇲 美国节点, <<: *UrlTest, filter: *FilterUS}
+  # 地理策略层 - 自动测速节点选择
+  - {name: 香港节点, <<: *BaseUrltest, include-all: true, filter: *FilterHK, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Hong_Kong.png}
+  - {name: 台湾节点, <<: *BaseUrltest, include-all: true, filter: *FilterTW, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Taiwan.png}
+  - {name: 日本节点, <<: *BaseUrltest, include-all: true, filter: *FilterJP, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Japan.png}
+  - {name: 狮城节点, <<: *BaseUrltest, include-all: true, filter: *FilterSG, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Singapore.png}
+  - {name: 韩国节点, <<: *BaseUrltest, include-all: true, filter: *FilterKR, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Korea.png}
+  - {name: 美国节点, <<: *BaseUrltest, include-all: true, filter: *FilterUS, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/United_States.png}
+  - {name: 欧洲节点, <<: *BaseUrltest, include-all: true, filter: *FilterEU, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/European_Union.png}
 
-# 订阅规则
+# ==================== 规则集 ====================
+# 规则集行为模板
+c: &RuleSet_c {type: http, behavior: classical, interval: 86400}
+d: &RuleSet_d {type: http, behavior: domain, interval: 86400}
+i: &RuleSet_i {type: http, behavior: ipcidr, interval: 86400}
+
+# 规则提供者
 rule-providers:
-  直连修正:
-    <<: *RuleSet_c
-    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/Direct.yaml
-    path: ./ruleset/Direct.yaml
+  unBan:        {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Custom/unBan.yaml, path: ./ruleset/unBan.yaml}
+  Direct:        {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/Direct.yaml, path: ./ruleset/Direct.yaml}
+  WeChat:           {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/WeChat.yaml, path: ./ruleset/WeChat.yaml}
+  SteamCN:       {<<: *RuleSet_c, url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN.yaml, path: ./ruleset/SteamCN.yaml}
+  Lan:           {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/Lan.yaml, path: ./ruleset/Lan.yaml}
+  AI:            {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/AI.yaml, path: ./ruleset/AI.yaml}
+  BilibiliHMT:        {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/BilibiliHMT.yaml, path: ./ruleset/BilibiliHMT.yaml}
+  GlobalMedia:       {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/GlobalMedia.yaml, path: ./ruleset/GlobalMedia.yaml}
+  Apple:        {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/Apple.yaml, path: ./ruleset/Apple.yaml}
+  Proxy:        {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/Proxy.yaml, path: ./ruleset/Proxy.yaml}
+  China:        {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/China.yaml, path: ./ruleset/China.yaml}
 
-  微信:
-    <<: *RuleSet_c
-    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/Wechat.yaml
-    path: ./ruleset/Wechat.yaml
+# ==================== 规则路由 ====================
+rules: 
+  # 自定义规则
+  - DOMAIN-SUFFIX,kitty.su,全球加速
+  - DOMAIN-SUFFIX,jasolar.com,DIRECT
+  - DOMAIN-SUFFIX,figma.com,漏网之鱼
 
-  SteamCN:
-    <<: *RuleSet_c
-    url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN.yaml
-    path: ./ruleset/SteamCN.yaml
-
-  Lan:
-    <<: *RuleSet_c
-    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/Lan.yaml
-    path: ./ruleset/Lan.yaml
-
-  AI:
-    <<: *RuleSet_c
-    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/AI.yaml
-    path: ./ruleset/AI.yaml
-
-  哔哩哔哩:
-    <<: *RuleSet_c
-    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/BilibiliHMT.yaml
-    path: ./ruleset/BilibiliHMT.yaml
-
-  国际流媒体:
-    <<: *RuleSet_c
-    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/GlobalMedia.yaml
-    path: ./ruleset/GlobalMedia.yaml
-
-  苹果服务:
-    <<: *RuleSet_c
-    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/Apple.yaml
-    path: ./ruleset/Apple.yaml
-
-  代理列表:
-    <<: *RuleSet_c
-    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/Proxy.yaml
-    path: ./ruleset/Proxy.yaml
-
-  国内网站:
-    <<: *RuleSet_c
-    url: https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Rules/China.yaml
-    path: ./ruleset/China.yaml
-
-# 规则指向
-rules:
-  # > 直连
-  - DOMAIN-SUFFIX,board.zash.run.place,DIRECT
-  - DOMAIN-SUFFIX,ghfast.top,DIRECT
-
-  # > 工具
-  - DOMAIN-SUFFIX,figma.com,🎨 FIGMA
-  
   # > 订阅规则
   - RULE-SET,Lan,DIRECT
-  - RULE-SET,直连修正,DIRECT
-  - RULE-SET,微信,DIRECT
+  - RULE-SET,unBan,网络解限
+  - RULE-SET,Direct,DIRECT
+  - RULE-SET,WeChat,DIRECT
   - RULE-SET,SteamCN,DIRECT
-  - RULE-SET,AI,✨ AI
-  - RULE-SET,苹果服务,🍎 苹果服务
-  - RULE-SET,哔哩哔哩,🎬 哔哩哔哩
-  - RULE-SET,国际流媒体,🎬 国际媒体
-  - RULE-SET,代理列表,🌍 全球加速
-  - RULE-SET,国内网站,DIRECT
-
-  # > GeoIP China
+  - RULE-SET,AI,AI
+  - RULE-SET,Apple,苹果服务
+  - RULE-SET,BilibiliHMT,哔哩哔哩
+  - RULE-SET,GlobalMedia,国际媒体
+  - RULE-SET,Proxy,全球加速
+  - RULE-SET,China,DIRECT
   - GEOIP,CN,DIRECT
-  - MATCH,🐟 漏网之鱼
+
+  # 兜底规则
+  - MATCH,漏网之鱼
 
 
 
