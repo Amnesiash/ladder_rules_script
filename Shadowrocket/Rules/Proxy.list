@@ -1,4 +1,4 @@
-# UpdateTime: 2026-03-27 21:08:48
+# UpdateTime: 2026-03-28 10:12:51
 # RuleCount: 7503
 
 DOMAIN,a248.e.akamai.net
@@ -5214,7 +5214,6 @@ DOMAIN-SUFFIX,rxhj.net
 DOMAIN-SUFFIX,s-cute.com
 DOMAIN-SUFFIX,s-dragon.org
 DOMAIN-SUFFIX,s-nbcnews.com
-DOMAIN-SUFFIX,s.rmimg.com
 DOMAIN-SUFFIX,s.yimg.com
 DOMAIN-SUFFIX,s1heng.com
 DOMAIN-SUFFIX,s1s1s1.com
@@ -7025,6 +7024,7 @@ DOMAIN-SUFFIX,xn--9iqy04a7fi01l.com
 DOMAIN-SUFFIX,xn--9pr62r24a.com
 DOMAIN-SUFFIX,xn--czq75pvv1aj5c.org
 DOMAIN-SUFFIX,xn--i2ru8q2qg.com
+DOMAIN-SUFFIX,xn--kcrv3utim32hx9f6qe.com
 DOMAIN-SUFFIX,xn--ngstr-lra8j.com
 DOMAIN-SUFFIX,xn--noss43i.com
 DOMAIN-SUFFIX,xn--oiq.cc

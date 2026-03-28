@@ -1,4 +1,4 @@
-# UpdateTime: 2026-03-27 21:08:48
+# UpdateTime: 2026-03-28 10:12:51
 # RuleCount: 7503
 
 HOST,a248.e.akamai.net,Proxy
@@ -5214,7 +5214,6 @@ HOST-SUFFIX,rxhj.net,Proxy
 HOST-SUFFIX,s-cute.com,Proxy
 HOST-SUFFIX,s-dragon.org,Proxy
 HOST-SUFFIX,s-nbcnews.com,Proxy
-HOST-SUFFIX,s.rmimg.com,Proxy
 HOST-SUFFIX,s.yimg.com,Proxy
 HOST-SUFFIX,s1heng.com,Proxy
 HOST-SUFFIX,s1s1s1.com,Proxy
@@ -7025,6 +7024,7 @@ HOST-SUFFIX,xn--9iqy04a7fi01l.com,Proxy
 HOST-SUFFIX,xn--9pr62r24a.com,Proxy
 HOST-SUFFIX,xn--czq75pvv1aj5c.org,Proxy
 HOST-SUFFIX,xn--i2ru8q2qg.com,Proxy
+HOST-SUFFIX,xn--kcrv3utim32hx9f6qe.com,Proxy
 HOST-SUFFIX,xn--ngstr-lra8j.com,Proxy
 HOST-SUFFIX,xn--noss43i.com,Proxy
 HOST-SUFFIX,xn--oiq.cc,Proxy
