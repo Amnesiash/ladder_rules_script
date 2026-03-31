@@ -78,18 +78,6 @@ jobs:
               curl -f -L "$url" >> ladder-repo/Ruleset/GlobalMedia.list || { echo "Download Failed: $url"; exit 1; }
               echo "" >> ladder-repo/Ruleset/GlobalMedia.list
           done
-
-          # 合并 Apple 规则
-          urls=(
-              "https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Apple/Apple.list"
-              "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list"
-          )
-          > ladder-repo/Ruleset/Apple.list
-          for url in "${urls[@]}"; do
-              echo "Downloading: $url"
-              curl -f -L "$url" >> ladder-repo/Ruleset/Apple.list || { echo "Download Failed: $url"; exit 1; }
-              echo "" >> ladder-repo/Ruleset/Apple.list
-          done
           
           # 合并 AI 规则
           urls=(
@@ -112,6 +100,8 @@ jobs:
               "WeChat.list https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/WeChat/WeChat.list" 
               # BilibiliHMT
               "BilibiliHMT.list https://raw.githubusercontent.com/ddgksf2013/Filter/master/StreamingSE.list"
+              # Apple
+              "Apple.list https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list"
             )
             for file in "${files[@]}"; do
                 set -- $file
@@ -169,32 +159,32 @@ jobs:
 
     - name: Copy files
       run: |
-        rm -rf ladder-repo/{Clash,Loon,Shadowrocket,QuantumultX}/Rules
-        mkdir -p ladder-repo/{Clash,Loon,Shadowrocket,QuantumultX}/Rules
+        rm -rf ladder-repo/Rules/{Clash,Loon,Shadowrocket,QuantumultX}
+        mkdir -p ladder-repo/Rules/{Clash,Loon,Shadowrocket,QuantumultX}
         for file in ladder-repo/Ruleset/*.list; do
           filename=$(basename "$file")
           for dir in Loon QuantumultX Shadowrocket; do
-            mkdir -p "ladder-repo/$dir/Rules"
-            cp "$file" "ladder-repo/$dir/Rules/$filename"
+            mkdir -p "ladder-repo/Rules/$dir"
+            cp "$file" "ladder-repo/Rules/$dir/$filename"
           done
-          mkdir -p "ladder-repo/Clash/Rules"
-          cp "$file" "ladder-repo/Clash/Rules/${filename%.*}.yaml"
+          mkdir -p "ladder-repo/Rules/Clash"
+          cp "$file" "ladder-repo/Rules/Clash/${filename%.*}.yaml"
         done
         # 检查复制结果
         echo "Loon:"
-        ls -l ladder-repo/Loon/Rules || true
+        ls -l ladder-repo/Rules/Loon || true
         echo "QuantumultX:"
-        ls -l ladder-repo/QuantumultX/Rules || true
+        ls -l ladder-repo/Rules/QuantumultX || true
         echo "Shadowrocket:"
-        ls -l ladder-repo/Shadowrocket/Rules || true
+        ls -l ladder-repo/Rules/Shadowrocket || true
         echo "Clash:"
-        ls -l ladder-repo/Clash/Rules || true
+        ls -l ladder-repo/Rules/Clash || true
         echo "Files copied successfully."
 
     - name: Clash/Mihomo
       run: |
         rm -rf ladder-repo/Ruleset
-        for file in ladder-repo/Clash/Rules/*.yaml; do
+        for file in ladder-repo/Rules/Clash/*.yaml; do
           if [ -f "$file" ]; then
             # 删除 USER-AGENT 和 URL-REGEX 规则
             sed -i -e '/^USER-AGENT/d' -e '/^URL-REGEX/d' "$file"
@@ -217,7 +207,7 @@ jobs:
 
     - name: QuantumultX
       run: |
-        for file in ladder-repo/QuantumultX/Rules/*.list; do
+        for file in ladder-repo/Rules/QuantumultX/*.list; do
           if [ -f "$file" ]; then
             sed -i -e '/^URL-REGEX/d' "$file"
             sed -i -e '/^PROCESS-NAME/d' "$file"
@@ -236,7 +226,7 @@ jobs:
           fi
         done
 
-        for file in ladder-repo/QuantumultX/Rules/*.list; do
+        for file in ladder-repo/Rules/QuantumultX/*.list; do
           if [ -f "$file" ]; then
             file_names=$(basename "$file" .list)
             # 给每条有效规则追加策略名
@@ -255,7 +245,7 @@ jobs:
 
     - name: Loon
       run: |
-        for file in ladder-repo/Loon/Rules/*.list; do
+        for file in ladder-repo/Rules/Loon/*.list; do
           if [ -f "$file" ]; then
             sed -i -e '/^PROCESS-NAME/d' "$file"
             # 计算规则数量（排除注释和空行）
@@ -272,7 +262,7 @@ jobs:
 
     - name: Shadowrocket
       run: |
-        for file in ladder-repo/Shadowrocket/Rules/*.list; do
+        for file in ladder-repo/Rules/Shadowrocket/*.list; do
           if [ -f "$file" ]; then
             sed -i -e '/^PROCESS-NAME/d' "$file"
             # 计算规则数量（排除注释和空行）
