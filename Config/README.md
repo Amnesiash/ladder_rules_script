@@ -53,26 +53,27 @@
 
 > 推荐使用的规则排序如下
 ```markdown
-1. Direct - 代理修正（修正被广告拦截或被代理的正常网址）
-2. Adrules - 广告拦截（可不加）
-3. Apple - Apple 服务（可不加）
-4. GlobalMedia - 国际流媒体
-5. ChinaMedia - 国内流媒体（可不加）
-6. Proxy - 国际网站/应用
-7. China - 国内网站/应用
-8. LAN - 局域网
+1. Lan - 局域网
+2. Direct - 代理修正（修正被广告拦截或被代理的正常网址）
+3. Adrules - 广告拦截（可不加）
+4. AI - 人工智能
+5. Apple - Apple 服务（可不加）
+6. BilibiliHMT - 哔哩哔哩港澳台（可不加）
+7. GlobalMedia - 国际流媒体
+8. Proxy - 国际网站/应用
+9. China - 国内网站/应用
 ```
 
 **说明**
 
-- 如若**不需要**观看哔哩哔哩、爱奇艺面向港澳台的限定内容可不加「StreamingCN」。
-- 如若**不需要**代理 Apple 服务可不加「Apple」，若加入必须在「Proxy」和「Direct」之间。
-- 如需细化流媒体如「Youtube」需要加在「Streaming!CN」之前。
+- 如若**不需要**观看哔哩哔哩、爱奇艺面向港澳台的限定内容可不加「BilibiliHMT」。
+- 如若**不需要**代理 Apple 服务可不加「Apple」。
+- 如需细化流媒体如「Youtube」需要加在「GlobalMedia」之前。
 - 如需应用类的如「Telegram、Google、PayPal」需要加在「Proxy」之前。
 
-一般情况下默认引入上述 8 个（如不需要 Adrules、StreamingCN 和 Apple 可减至 5 个）即可，那么为什么还有更多的如「Youtube、Netflix、Spotify、Mail」？
+一般情况下默认引入上述 8 个（如不需要 Adrules、GlobalMedia 和 Apple 可减至 5 个）即可，那么为什么还有更多的如「Youtube、Netflix、Spotify、Mail」？
 
-1. 对于一些「进阶玩家」来说其拥有专用于观看流媒体的线路，比如观看限定区域的 Netflix、Hulu、HBO 等，所以引入相关 .list 建立一个策略组设置相应服务区节点线路。但对于普通用户来说，那些「Youtube、Hulu」来说都是集成在「ForeignMedia」中**不需要**额外引入。
+1. 对于一些「进阶玩家」来说其拥有专用于观看流媒体的线路，比如观看限定区域的 Netflix、Hulu、HBO 等，所以引入相关 .list 建立一个策略组设置相应服务区节点线路。但对于普通用户来说，那些「Youtube、Hulu」来说都是集成在「GlobalMedia」中**不需要**额外引入。
 2. 对于一些「机场」来说为了避免有恶意用户利用节点线路滥发垃圾邮件，所以对服务器相关邮件端口进行了屏蔽，这时候可以引入「Mail」指定一个可收发邮件对节点。
 3. 对于一些「进阶玩家」来说其拥有高速的新加坡节点线路，为了提升 Telegram 使用体验所以会引入「Telegram」指定一些节点。
 
