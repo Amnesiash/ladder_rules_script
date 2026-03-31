@@ -45,16 +45,16 @@ i: &RuleSet_i {type: http, behavior: ipcidr, interval: 86400}
 
 # 规则提供者
 rule-providers:
-  直连修正:        {<<: *RuleSet_c, url: https://cdn.jsdelivr.net/gh/Amnesiash@ladder_rules_script@main/Rules/Clash/Direct.yaml, path: ./ruleset/Direct.yaml}
-  微信:           {<<: *RuleSet_c, url: https://cdn.jsdelivr.net/gh/Amnesiash@ladder_rules_script@main/Rules/Clash/WeChat.yaml, path: ./ruleset/WeChat.yaml}
+  直连修正:        {<<: *RuleSet_c, url: https://cdn.jsdelivr.net/gh/Amnesiash/ladder_rules_script@main/Rules/Clash/Direct.yaml, path: ./ruleset/Direct.yaml}
+  微信:           {<<: *RuleSet_c, url: https://cdn.jsdelivr.net/gh/Amnesiash/ladder_rules_script@main/Rules/Clash/WeChat.yaml, path: ./ruleset/WeChat.yaml}
   SteamCN:       {<<: *RuleSet_c, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/SteamCN/SteamCN.yaml, path: ./ruleset/SteamCN.yaml}
-  Lan:           {<<: *RuleSet_c, url: https://cdn.jsdelivr.net/gh/Amnesiash@ladder_rules_script@main/Rules/Clash/Lan.yaml, path: ./ruleset/Lan.yaml}
-  AI:            {<<: *RuleSet_c, url: https://cdn.jsdelivr.net/gh/Amnesiash@ladder_rules_script@main/Rules/Clash/AI.yaml, path: ./ruleset/AI.yaml}
-  哔哩哔哩:        {<<: *RuleSet_c, url: https://cdn.jsdelivr.net/gh/Amnesiash@ladder_rules_script@main/Rules/Clash/BilibiliHMT.yaml, path: ./ruleset/BilibiliHMT.yaml}
-  国际流媒体:       {<<: *RuleSet_c, url: https://cdn.jsdelivr.net/gh/Amnesiash@ladder_rules_script@main/Rules/Clash/GlobalMedia.yaml, path: ./ruleset/GlobalMedia.yaml}
-  苹果服务:        {<<: *RuleSet_c, url: https://cdn.jsdelivr.net/gh/Amnesiash@ladder_rules_script@main/Rules/Clash/Apple.yaml, path: ./ruleset/Apple.yaml}
-  代理列表:        {<<: *RuleSet_c, url: https://cdn.jsdelivr.net/gh/Amnesiash@ladder_rules_script@main/Rules/Clash/Proxy.yaml, path: ./ruleset/Proxy.yaml}
-  国内网站:        {<<: *RuleSet_c, url: https://cdn.jsdelivr.net/gh/Amnesiash@ladder_rules_script@main/Rules/Clash/China.yaml, path: ./ruleset/China.yaml}
+  Lan:           {<<: *RuleSet_c, url: https://cdn.jsdelivr.net/gh/Amnesiash/ladder_rules_script@main/Rules/Clash/Lan.yaml, path: ./ruleset/Lan.yaml}
+  AI:            {<<: *RuleSet_c, url: https://cdn.jsdelivr.net/gh/Amnesiash/ladder_rules_script@main/Rules/Clash/AI.yaml, path: ./ruleset/AI.yaml}
+  哔哩哔哩:        {<<: *RuleSet_c, url: https://cdn.jsdelivr.net/gh/Amnesiash/ladder_rules_script@main/Rules/Clash/BilibiliHMT.yaml, path: ./ruleset/BilibiliHMT.yaml}
+  国际流媒体:       {<<: *RuleSet_c, url: https://cdn.jsdelivr.net/gh/Amnesiash/ladder_rules_script@main/Rules/Clash/GlobalMedia.yaml, path: ./ruleset/GlobalMedia.yaml}
+  苹果服务:        {<<: *RuleSet_c, url: https://cdn.jsdelivr.net/gh/Amnesiash/ladder_rules_script@main/Rules/Clash/Apple.yaml, path: ./ruleset/Apple.yaml}
+  代理列表:        {<<: *RuleSet_c, url: https://cdn.jsdelivr.net/gh/Amnesiash/ladder_rules_script@main/Rules/Clash/Proxy.yaml, path: ./ruleset/Proxy.yaml}
+  国内网站:        {<<: *RuleSet_c, url: https://cdn.jsdelivr.net/gh/Amnesiash/ladder_rules_script@main/Rules/Clash/China.yaml, path: ./ruleset/China.yaml}
 
 # ==================== 规则路由 ====================
 rules: 
