@@ -37,18 +37,6 @@
 
 
 ```markdown
-使用 GitHub Proxy CDN 链接
-
-  e.g: https://ghfast.top/RAW链接
-  
-  例如文件: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Proxy.yaml
-  
-  替换后链接为
-  
-  https://ghfast.top/https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Proxy.yaml
-```
-或
-```markdown
 使用 JsDeliver CDN 链接
 
   e.g: https://cdn.jsdelivr.net/gh/Amnesiash/ladder_rules_script@main/Rules/Clash/Proxy.yaml
