@@ -7,7 +7,9 @@
 
 | <img src="https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Gallery/vpnlogo/Clash.png" alt="Clash" align="center" height="70" width="70"> | <img src="https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Gallery/vpnlogo/QuantumultX.png" alt="QuantumultX" align="center" height="70" width="70"> | <img src="https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Gallery/vpnlogo/Loon.png" alt="Loon" align="center" height="70" width="70"> | <img src="https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Gallery/vpnlogo/Shadowrocket.png" alt="Shadowrocket" align="center" height="70" width="70"> |
 |:--------:|:--------:|:--------:|:--------:|
-| [Clash&Mihomo](https://github.com/Amnesiash/ladder_rules_script/tree/main/Rules/Clash/) | [QuantumultX](https://github.com/Amnesiash/ladder_rules_script/tree/main/Rules/QuantumultX/) | [Loon](https://github.com/Amnesiash/ladder_rules_script/tree/main/Rules/Loon/) | [Shadowrocket](https://github.com/Amnesiash/ladder_rules_script/tree/main/Rules/Shadowrocket/) |
+| [Clash&Mihomo](https://github.com/Amnesiash/ladder_rules_script/tree/main/Rules/Clash) | [QuantumultX](https://github.com/Amnesiash/ladder_rules_script/tree/main/Rules/QuantumultX) | [Loon](https://github.com/Amnesiash/ladder_rules_script/tree/main/Rules/Loon) | [Shadowrocket](https://github.com/Amnesiash/ladder_rules_script/tree/main/Rules/Shadowrocket) |
+|:--------:|:--------:|:--------:|:--------:|
+| [配置](https://github.com/Amnesiash/ladder_rules_script/tree/main/Config) | [配置](https://github.com/Amnesiash/ladder_rules_script/tree/main/Config) | [配置](https://github.com/Amnesiash/ladder_rules_script/tree/main/Config) | [配置](https://github.com/Amnesiash/ladder_rules_script/tree/main/Config) |
 
 所有规则数据都来自互联网，感谢开源规则项目作者的辛勤付出
 
