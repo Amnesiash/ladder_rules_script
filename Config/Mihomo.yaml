@@ -49,7 +49,7 @@ udp: true
 geox-url:
   # geoip: 'https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat'
   # geosite: 'https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat'
-  mmdb: 'https://cdn.jsdelivr.net/gh/Masaiki/GeoIP2-CN/release/Country.mmdb'
+  mmdb: 'https://github.com/Masaiki/GeoIP2-CN/raw/release/Country.mmdb'
   asn: 'https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb'
 
 # 认证配置
