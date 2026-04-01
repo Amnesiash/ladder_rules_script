@@ -6,7 +6,7 @@
 
 # ==================== 锚点配置 ====================
 # 策略组类型模板 - 定义不同的策略组基础配置
-BaseUrltest: &BaseUrltest {type: url-test, interval: 300, tolerance: 50, timeout: 3000, max-failed-times: 3, lazy: true, url: 'https://www.gstatic.com/generate_204', hidden: true} 
+BaseUrltest: &BaseUrltest {type: url-test, interval: 300, tolerance: 50, timeout: 3000, max-failed-times: 3, lazy: true, url: 'https://cp.cloudflare.com/generate_204', hidden: true} 
 
 # 节点筛选正则表达式 - 基于地理位置和关键词过滤
 FilterHK: &FilterHK '^(?=.*(?i)(港|🇭🇰|HK|Hong|HKG))(?!.*(排除1|排除2|5x)).*$'
