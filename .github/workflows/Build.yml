@@ -56,7 +56,7 @@ jobs:
           # 合并 Proxy 规则
             urls=(
                 "https://raw.githubusercontent.com/666OS/rules/release/mihomo/Proxy.txt"
-                "https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Clash/Custom/AddProxy.list"
+                "https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Custom/AddProxy.list"
                 "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list"
                 "https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Proxy.list"
             )
