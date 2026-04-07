@@ -1,5 +1,5 @@
-# UpdateTime: 2026-03-31 08:44:33
-# RuleCount: 7503
+# UpdateTime: 2026-04-07 13:51:58
+# RuleCount: 7508
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -487,6 +487,7 @@ HOST-SUFFIX,appsto.re,Proxy
 HOST-SUFFIX,aptoide.com,Proxy
 HOST-SUFFIX,arc.net,Proxy
 HOST-SUFFIX,arca.live,Proxy
+HOST-SUFFIX,archive-it.org,Proxy
 HOST-SUFFIX,archive.fo,Proxy
 HOST-SUFFIX,archive.is,Proxy
 HOST-SUFFIX,archive.li,Proxy
@@ -1618,6 +1619,7 @@ HOST-SUFFIX,dns-dns.com,Proxy
 HOST-SUFFIX,dns-stuff.com,Proxy
 HOST-SUFFIX,dns.cloudflare.com,Proxy
 HOST-SUFFIX,dns.google,Proxy
+HOST-SUFFIX,dns.sb,Proxy
 HOST-SUFFIX,dns04.com,Proxy
 HOST-SUFFIX,dns05.com,Proxy
 HOST-SUFFIX,dns1.us,Proxy
@@ -1637,6 +1639,7 @@ HOST-SUFFIX,docs.new,Proxy
 HOST-SUFFIX,doctorvoice.org,Proxy
 HOST-SUFFIX,documentingreality.com,Proxy
 HOST-SUFFIX,dogfartnetwork.com,Proxy
+HOST-SUFFIX,doh.sb,Proxy
 HOST-SUFFIX,dojin.com,Proxy
 HOST-SUFFIX,dok-forum.net,Proxy
 HOST-SUFFIX,dolc.de,Proxy
@@ -1656,6 +1659,7 @@ HOST-SUFFIX,doom9.org,Proxy
 HOST-SUFFIX,doosho.com,Proxy
 HOST-SUFFIX,doourbest.org,Proxy
 HOST-SUFFIX,dorjeshugden.com,Proxy
+HOST-SUFFIX,dot.sb,Proxy
 HOST-SUFFIX,dotgov.gov,Proxy
 HOST-SUFFIX,dotplane.com,Proxy
 HOST-SUFFIX,dotsub.com,Proxy
@@ -4615,6 +4619,7 @@ HOST-SUFFIX,origin.com,Proxy
 HOST-SUFFIX,orn.jp,Proxy
 HOST-SUFFIX,orzistic.org,Proxy
 HOST-SUFFIX,osfoora.com,Proxy
+HOST-SUFFIX,osmand.net,Proxy
 HOST-SUFFIX,otcbtc.com,Proxy
 HOST-SUFFIX,otnd.org,Proxy
 HOST-SUFFIX,otto.de,Proxy
