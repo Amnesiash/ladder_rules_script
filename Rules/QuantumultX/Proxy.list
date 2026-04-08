@@ -1,5 +1,5 @@
-# UpdateTime: 2026-04-07 21:21:11
-# RuleCount: 7508
+# UpdateTime: 2026-04-08 10:31:50
+# RuleCount: 7509
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -1381,6 +1381,7 @@ HOST-SUFFIX,cpj.org,Proxy
 HOST-SUFFIX,cpu-monkey.com,Proxy
 HOST-SUFFIX,cq99.us,Proxy
 HOST-SUFFIX,crackle.com,Proxy
+HOST-SUFFIX,crashlytics.com,Proxy
 HOST-SUFFIX,crazypool.org,Proxy
 HOST-SUFFIX,crazys.cc,Proxy
 HOST-SUFFIX,crazyshit.com,Proxy
