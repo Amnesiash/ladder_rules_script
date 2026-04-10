@@ -1,5 +1,5 @@
-# UpdateTime: 2026-04-09 21:42:19
-# RuleCount: 7509
+# UpdateTime: 2026-04-10 10:38:13
+# RuleCount: 7510
 
 DOMAIN,a248.e.akamai.net
 DOMAIN,a771.dscq.akamai.net
@@ -4060,6 +4060,7 @@ DOMAIN-SUFFIX,missav.com
 DOMAIN-SUFFIX,missav.ws
 DOMAIN-SUFFIX,misskon.com
 DOMAIN-SUFFIX,mist.vip
+DOMAIN-SUFFIX,mistral.ai
 DOMAIN-SUFFIX,mit.edu
 DOMAIN-SUFFIX,mitao.com.tw
 DOMAIN-SUFFIX,mitbbs.com

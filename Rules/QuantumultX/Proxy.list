@@ -1,5 +1,5 @@
-# UpdateTime: 2026-04-09 21:42:19
-# RuleCount: 7509
+# UpdateTime: 2026-04-10 10:38:13
+# RuleCount: 7510
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -4060,6 +4060,7 @@ HOST-SUFFIX,missav.com,Proxy
 HOST-SUFFIX,missav.ws,Proxy
 HOST-SUFFIX,misskon.com,Proxy
 HOST-SUFFIX,mist.vip,Proxy
+HOST-SUFFIX,mistral.ai,Proxy
 HOST-SUFFIX,mit.edu,Proxy
 HOST-SUFFIX,mitao.com.tw,Proxy
 HOST-SUFFIX,mitbbs.com,Proxy
