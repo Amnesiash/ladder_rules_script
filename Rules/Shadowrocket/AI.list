@@ -1,5 +1,5 @@
-# UpdateTime: 2026-04-11 21:00:08
-# RuleCount: 214
+# UpdateTime: 2026-04-12 10:41:06
+# RuleCount: 218
 
 DOMAIN,ai.google.dev
 DOMAIN,aistudio.google.com
@@ -102,6 +102,9 @@ DOMAIN-SUFFIX,dola.com,extended-matching
 DOMAIN-SUFFIX,duck.ai
 DOMAIN-SUFFIX,elevenlabs.com
 DOMAIN-SUFFIX,elevenlabs.io
+DOMAIN-SUFFIX,envato-static.com
+DOMAIN-SUFFIX,envato.com
+DOMAIN-SUFFIX,envatousercontent.com
 DOMAIN-SUFFIX,events.statsigapi.net
 DOMAIN-SUFFIX,featuregates.org
 DOMAIN-SUFFIX,gateway.ai.cloudflare.com
@@ -188,6 +191,7 @@ DOMAIN-SUFFIX,stablediffusionweb.com
 DOMAIN-SUFFIX,stripe.com
 DOMAIN-SUFFIX,synthesia.io
 DOMAIN-SUFFIX,tabnine.com
+DOMAIN-SUFFIX,themeforest.net
 DOMAIN-SUFFIX,trae.ai
 DOMAIN-SUFFIX,turn.livekit.cloud
 DOMAIN-SUFFIX,windsurf.build

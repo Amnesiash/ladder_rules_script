@@ -1,5 +1,5 @@
-# UpdateTime: 2026-04-11 21:00:08
-# RuleCount: 7510
+# UpdateTime: 2026-04-12 10:41:06
+# RuleCount: 7511
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -5273,6 +5273,7 @@ HOST-SUFFIX,say2.info,Proxy
 HOST-SUFFIX,sb-cd.com,Proxy
 HOST-SUFFIX,sbme.me,Proxy
 HOST-SUFFIX,sbs.com.au,Proxy
+HOST-SUFFIX,sbti.unun.dev,Proxy
 HOST-SUFFIX,scache.vzw.com,Proxy
 HOST-SUFFIX,scache1.vzw.com,Proxy
 HOST-SUFFIX,scache2.vzw.com,Proxy

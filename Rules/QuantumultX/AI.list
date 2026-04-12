@@ -1,5 +1,5 @@
-# UpdateTime: 2026-04-11 21:00:08
-# RuleCount: 214
+# UpdateTime: 2026-04-12 10:41:06
+# RuleCount: 218
 
 HOST,ai.google.dev,AI
 HOST,aistudio.google.com,AI
@@ -102,6 +102,9 @@ HOST-SUFFIX,dola.com,extended-matching,AI
 HOST-SUFFIX,duck.ai,AI
 HOST-SUFFIX,elevenlabs.com,AI
 HOST-SUFFIX,elevenlabs.io,AI
+HOST-SUFFIX,envato-static.com,AI
+HOST-SUFFIX,envato.com,AI
+HOST-SUFFIX,envatousercontent.com,AI
 HOST-SUFFIX,events.statsigapi.net,AI
 HOST-SUFFIX,featuregates.org,AI
 HOST-SUFFIX,gateway.ai.cloudflare.com,AI
@@ -188,6 +191,7 @@ HOST-SUFFIX,stablediffusionweb.com,AI
 HOST-SUFFIX,stripe.com,AI
 HOST-SUFFIX,synthesia.io,AI
 HOST-SUFFIX,tabnine.com,AI
+HOST-SUFFIX,themeforest.net,AI
 HOST-SUFFIX,trae.ai,AI
 HOST-SUFFIX,turn.livekit.cloud,AI
 HOST-SUFFIX,windsurf.build,AI
