@@ -179,8 +179,8 @@ rule-providers:
 # ==================== 规则路由 ====================
 rules: 
   # > 订阅规则
-  - RULE-SET，Lan，DIRECT
-  - RULE-SET，Direct，DIRECT
+  - RULE-SET,Lan,DIRECT
+  - RULE-SET,Direct,DIRECT
   - RULE-SET,WeChat,DIRECT
   - RULE-SET,SteamCN,DIRECT
   - RULE-SET,AI,AI
