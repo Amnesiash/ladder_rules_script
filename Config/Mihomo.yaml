@@ -110,28 +110,18 @@ dns:
   enhanced-mode: fake-ip    # 模式：redir-host或fake-ip
   fake-ip-range: 28.0.0.1/8 # Fake-IP解析地址池
   fake-ip-filter:           # fake ip 白名单列表'以下地址不会下发fakeip映射用于连接
-    - "*.lan"
-    - "+.local"
-    - localhost.ptlogin2.qq.com
-    - "+.srv.nintendo.net"
-    - "+.stun.playstation.net"
-    - "+.msftconnecttest.com"
-    - "+.msftncsi.com"
-    - "+.xboxlive.com"
-    - msftconnecttest.com
-    - "xbox.*.microsoft.com"
-    - "*.battlenet.com.cn"
-    - "*.battlenet.com"
-    - "*.blzstatic.cn"
-    - "*.battle.net"    
+    - rule-set:Direct
+    - rule-set:Lan
+    - rule-set:China
+    - +.miwifi.com
+    - +.docker.io
+    - +.market.xiaomi.com
+    - +.push.apple.com
   default-nameserver:
     - 119.29.29.29
     - 180.184.1.1
     - 223.5.5.5
   nameserver:               # 默认DNS服务器，支持udp/tcp/dot/doh/doq
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
-  proxy-server-nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
 
@@ -142,10 +132,11 @@ proxy-groups:
   - {name: 手动选择, type: select, include-all: true, icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/Gallery/vpnlogo/Meta.png}
   - {name: 全球加速, type: select, proxies: [自动选择, 香港节点, 台湾节点, 日本节点, 狮城节点, 韩国节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Global.png}
   - {name: AI, type: select, proxies: [狮城节点, 日本节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/AI.png}
-  - {name: 哔哩哔哩, type: select, proxies: [DIRECT, 香港节点, 台湾节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/bilibili_3.png}
-  - {name: 国际媒体, type: select, proxies: [自动选择, 香港节点, 台湾节点, 日本节点, 狮城节点, 韩国节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Streaming!CN.png}
-  - {name: 苹果服务, type: select, proxies: [DIRECT, 自动选择, 香港节点, 台湾节点, 日本节点, 狮城节点, 韩国节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Apple.png}
-  - {name: 漏网之鱼, type: select, proxies: [DIRECT, 自动选择, 香港节点, 台湾节点, 日本节点, 狮城节点, 韩国节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Final.png}
+  - {name: Telegram, type: select, proxies: [自动选择, 香港节点, 台湾节点, 日本节点, 狮城节点, 韩国节点, 美国节点, 欧洲节点, 手动选择]， icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Telegram_X.png}
+  - {name: 哔哩哔哩, type: select, proxies: [DIRECT, 香港节点, 台湾节点, 手动选择]， icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/bilibili_3.png}
+  - {name: 国际媒体, type: select, proxies: [自动选择, 香港节点, 台湾节点, 日本节点, 狮城节点, 韩国节点, 美国节点, 欧洲节点, 手动选择]， icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Streaming!CN.png}
+  - {name: 苹果服务, type: select, proxies: [DIRECT, 自动选择, 香港节点, 台湾节点, 日本节点, 狮城节点, 韩国节点, 美国节点, 欧洲节点, 手动选择]， icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Apple.png}
+  - {name: 漏网之鱼, type: select, proxies: [DIRECT, 自动选择, 香港节点, 台湾节点, 日本节点, 狮城节点, 韩国节点, 美国节点, 欧洲节点, 手动选择]， icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Final.png}
 
   # 地理策略层 - 自动测速节点选择
   - {name: 自动选择, <<: *BaseUrltest, include-all: true, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png}
@@ -170,6 +161,7 @@ rule-providers:
   SteamCN:       {<<: *RuleSet_c, url: https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash/SteamCN/SteamCN.yaml, path: ./ruleset/SteamCN.yaml}
   Lan:           {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Lan.yaml, path: ./ruleset/Lan.yaml}
   AI:            {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/AI.yaml, path: ./ruleset/AI.yaml}
+  Telegram:   {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Telegram.yaml, path: ./ruleset/Telegram.yaml}
   BilibiliHMT:   {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/BilibiliHMT.yaml, path: ./ruleset/BilibiliHMT.yaml}
   GlobalMedia:   {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/GlobalMedia.yaml, path: ./ruleset/GlobalMedia.yaml}
   Apple:         {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Apple.yaml, path: ./ruleset/Apple.yaml}
@@ -185,6 +177,7 @@ rules:
   - RULE-SET,SteamCN,DIRECT
   - RULE-SET,AI,AI
   - RULE-SET,Apple,苹果服务
+  - RULE-SET,Telegram,Telegram
   - RULE-SET,BilibiliHMT,哔哩哔哩
   - RULE-SET,GlobalMedia,国际媒体
   - RULE-SET,Proxy,全球加速
