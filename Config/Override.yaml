@@ -22,21 +22,22 @@ proxy-groups:
   # 应用策略层 - Select手动选择，支持多场景应用优化，使用时默认，也可修改
   - {name: 手动选择, type: select, include-all: true, icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/Gallery/vpnlogo/Meta.png}
   - {name: 全球加速, type: select, proxies: [自动选择, 香港节点, 台湾节点, 日本节点, 狮城节点, 韩国节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Global.png}
-  - {name: AI, type: select, proxies: [日本节点, 狮城节点, 韩国节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/AI.png}
+  - {name: AI, type: select, proxies: [狮城节点, 日本节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/AI.png}
+  - {name: Telegram, type: select, proxies: [自动选择, 香港节点, 台湾节点, 日本节点, 狮城节点, 韩国节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Telegram_X.png}
   - {name: 哔哩哔哩, type: select, proxies: [DIRECT, 香港节点, 台湾节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/bilibili_3.png}
   - {name: 国际媒体, type: select, proxies: [自动选择, 香港节点, 台湾节点, 日本节点, 狮城节点, 韩国节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Streaming!CN.png}
   - {name: 苹果服务, type: select, proxies: [DIRECT, 自动选择, 香港节点, 台湾节点, 日本节点, 狮城节点, 韩国节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Apple.png}
   - {name: 漏网之鱼, type: select, proxies: [DIRECT, 自动选择, 香港节点, 台湾节点, 日本节点, 狮城节点, 韩国节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Final.png}
 
-  # 地理策略层 - Urltest节点选择，政策权重数值越大优先级越高，修改为关键词节点，比如 优:2;备:0.5，默认为1，优>备，使用时请修改
+  # 地理策略层 - 自动测速节点选择
   - {name: 自动选择, <<: *BaseUrltest, include-all: true, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png}
-  - {name: 香港节点,  <<: *BaseUrltest, filter: *FilterHK, include-all: true, 节点icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Hong_Kong.png}
-  - {name: 台湾节点,  <<: *BaseUrltest, filter: *FilterTW, include-all: true, 节点icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Taiwan.png}
-  - {name: 日本节点,  <<: *BaseUrltest, filter: *FilterJP, include-all: true, 节点icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Japan.png}
-  - {name: 狮城节点,  <<: *BaseUrltest, filter: *FilterSG, include-all: true, 节点icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Singapore.png}
-  - {name: 韩国节点,  <<: *BaseUrltest, filter: *FilterKR, include-all: true, 节点icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Korea.png}
-  - {name: 美国节点,  <<: *BaseUrltest, filter: *FilterUS, include-all: true, 节点icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/United_States.png}
-  - {name: 欧洲节点,  <<: *BaseUrltest, filter: *FilterEU, include-all: true, 节点icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/European_Union.png}
+  - {name: 香港节点, <<: *BaseUrltest, include-all: true, filter: *FilterHK, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Hong_Kong.png}
+  - {name: 台湾节点, <<: *BaseUrltest, include-all: true, filter: *FilterTW, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Taiwan.png}
+  - {name: 日本节点, <<: *BaseUrltest, include-all: true, filter: *FilterJP, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Japan.png}
+  - {name: 狮城节点, <<: *BaseUrltest, include-all: true, filter: *FilterSG, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Singapore.png}
+  - {name: 韩国节点, <<: *BaseUrltest, include-all: true, filter: *FilterKR, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Korea.png}
+  - {name: 美国节点, <<: *BaseUrltest, include-all: true, filter: *FilterUS, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/United_States.png}
+  - {name: 欧洲节点, <<: *BaseUrltest, include-all: true, filter: *FilterEU, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/European_Union.png}
 
 # ==================== 规则集 ====================
 # 规则集行为模板
@@ -46,31 +47,33 @@ i: &RuleSet_i {type: http, behavior: ipcidr, interval: 86400}
 
 # 规则提供者
 rule-providers:
-  直连修正:        {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Direct.yaml, path: ./ruleset/Direct.yaml}
-  微信:           {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/WeChat.yaml, path: ./ruleset/WeChat.yaml}
+  Direct:        {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Direct.yaml, path: ./ruleset/Direct.yaml}
+  WeChat:        {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/WeChat.yaml, path: ./ruleset/WeChat.yaml}
   SteamCN:       {<<: *RuleSet_c, url: https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash/SteamCN/SteamCN.yaml, path: ./ruleset/SteamCN.yaml}
   Lan:           {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Lan.yaml, path: ./ruleset/Lan.yaml}
   AI:            {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/AI.yaml, path: ./ruleset/AI.yaml}
-  哔哩哔哩:        {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/BilibiliHMT.yaml, path: ./ruleset/BilibiliHMT.yaml}
-  国际流媒体:       {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/GlobalMedia.yaml, path: ./ruleset/GlobalMedia.yaml}
-  苹果服务:        {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Apple.yaml, path: ./ruleset/Apple.yaml}
-  代理列表:        {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Proxy.yaml, path: ./ruleset/Proxy.yaml}
-  国内网站:        {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/China.yaml, path: ./ruleset/China.yaml}
+  Telegram:      {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Telegram.yaml, path: ./ruleset/Telegram.yaml}
+  BilibiliHMT:   {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/BilibiliHMT.yaml, path: ./ruleset/BilibiliHMT.yaml}
+  GlobalMedia:   {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/GlobalMedia.yaml, path: ./ruleset/GlobalMedia.yaml}
+  Apple:         {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Apple.yaml, path: ./ruleset/Apple.yaml}
+  Proxy:         {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Proxy.yaml, path: ./ruleset/Proxy.yaml}
+  China:         {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/China.yaml, path: ./ruleset/China.yaml}
 
 # ==================== 规则路由 ====================
 rules: 
   # > 订阅规则
-  - RULE-SET,Lan,DIRECT
-  - RULE-SET,直连修正,DIRECT
-  - RULE-SET,微信,DIRECT
-  - RULE-SET,SteamCN,DIRECT
-  - RULE-SET,AI,AI
-  - RULE-SET,苹果服务,苹果服务
-  - RULE-SET,哔哩哔哩,哔哩哔哩
-  - RULE-SET,国际流媒体,国际媒体
-  - RULE-SET,代理列表,全球加速
-  - RULE-SET,国内网站,DIRECT
-  - GEOIP,CN,DIRECT
+  - RULE-SET, Lan, DIRECT
+  - RULE-SET, Direct, DIRECT
+  - RULE-SET, WeChat, DIRECT
+  - RULE-SET, SteamCN, DIRECT
+  - RULE-SET, AI, AI
+  - RULE-SET, Apple, 苹果服务
+  - RULE-SET, Telegram, Telegram
+  - RULE-SET, BilibiliHMT, 哔哩哔哩
+  - RULE-SET, GlobalMedia, 国际媒体
+  - RULE-SET, Proxy, 全球加速
+  - RULE-SET, China, DIRECT
+  - GEOIP, CN, DIRECT
 
   # 兜底规则
-  - MATCH,漏网之鱼
+  - MATCH, 漏网之鱼
