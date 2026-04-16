@@ -1,5 +1,5 @@
-# UpdateTime: 2026-04-15 21:25:52
-# RuleCount: 7511
+# UpdateTime: 2026-04-16 10:44:23
+# RuleCount: 7505
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -4591,6 +4591,7 @@ HOST-SUFFIX,open.com.hk,Proxy
 HOST-SUFFIX,open.firstory.me,Proxy
 HOST-SUFFIX,openai.com,Proxy
 HOST-SUFFIX,openallweb.com,Proxy
+HOST-SUFFIX,openart.ai,Proxy
 HOST-SUFFIX,openbase.com,Proxy
 HOST-SUFFIX,opencritic.com,Proxy
 HOST-SUFFIX,opendemocracy.net,Proxy
@@ -5225,13 +5226,6 @@ HOST-SUFFIX,s.yimg.com,Proxy
 HOST-SUFFIX,s1heng.com,Proxy
 HOST-SUFFIX,s1s1s1.com,Proxy
 HOST-SUFFIX,s3-ap-northeast-1.amazonaws.com,Proxy
-HOST-SUFFIX,s3-ap-northeast-2.amazonaws.com,Proxy
-HOST-SUFFIX,s3-ap-southeast-1.amazonaws.com,Proxy
-HOST-SUFFIX,s3-ap-southeast-2.amazonaws.com,Proxy
-HOST-SUFFIX,s3-eu-central-1.amazonaws.com,Proxy
-HOST-SUFFIX,s3.ap-northeast-2.amazonaws.com,Proxy
-HOST-SUFFIX,s3.eu-central-1.amazonaws.com,Proxy
-HOST-SUFFIX,s3.us-east-1.amazonaws.com,Proxy
 HOST-SUFFIX,s4miniarchive.com,Proxy
 HOST-SUFFIX,s8forum.com,Proxy
 HOST-SUFFIX,saboom.com,Proxy
