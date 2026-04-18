@@ -66,7 +66,9 @@ experimental:
   quic-go-disable-gso: true 
 
 # 管理面板配置
-external-ui-url: "https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip" 
+external-ui-url: "https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip"
+external-ui-name: zashboard
+external-ui: ui
 external-controller: 127.0.0.1:9090   #外部控制器,可以使用 RESTful API 来控制你的 clash 内核
 secret: ''
 
