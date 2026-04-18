@@ -1,5 +1,5 @@
-# UpdateTime: 2026-04-17 21:21:43
-# RuleCount: 7505
+# UpdateTime: 2026-04-18 10:30:17
+# RuleCount: 7506
 
 payload:
   - DOMAIN,a248.e.akamai.net
@@ -573,6 +573,7 @@ payload:
   - DOMAIN-SUFFIX,avg.com
   - DOMAIN-SUFFIX,avgle.com
   - DOMAIN-SUFFIX,avidemux.org
+  - DOMAIN-SUFFIX,avistaz.to
   - DOMAIN-SUFFIX,avmo.pw
   - DOMAIN-SUFFIX,avmoo.com
   - DOMAIN-SUFFIX,avmoo.net

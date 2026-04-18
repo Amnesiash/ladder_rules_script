@@ -1,5 +1,5 @@
-# UpdateTime: 2026-04-17 21:21:44
-# RuleCount: 7505
+# UpdateTime: 2026-04-18 10:30:18
+# RuleCount: 7506
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -572,6 +572,7 @@ HOST-SUFFIX,avfantasy.com,Proxy
 HOST-SUFFIX,avg.com,Proxy
 HOST-SUFFIX,avgle.com,Proxy
 HOST-SUFFIX,avidemux.org,Proxy
+HOST-SUFFIX,avistaz.to,Proxy
 HOST-SUFFIX,avmo.pw,Proxy
 HOST-SUFFIX,avmoo.com,Proxy
 HOST-SUFFIX,avmoo.net,Proxy
