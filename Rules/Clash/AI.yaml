@@ -1,5 +1,5 @@
-# UpdateTime: 2026-04-19 21:03:37
-# RuleCount: 218
+# UpdateTime: 2026-04-20 10:47:18
+# RuleCount: 219
 
 payload:
   - DOMAIN,ai.google.dev
@@ -189,6 +189,7 @@ payload:
   - DOMAIN-SUFFIX,spicywriter.com
   - DOMAIN-SUFFIX,stability.ai
   - DOMAIN-SUFFIX,stablediffusionweb.com
+  - DOMAIN-SUFFIX,stitch.withgoogle.com
   - DOMAIN-SUFFIX,stripe.com
   - DOMAIN-SUFFIX,synthesia.io
   - DOMAIN-SUFFIX,tabnine.com

@@ -1,5 +1,5 @@
-# UpdateTime: 2026-04-19 21:03:38
-# RuleCount: 218
+# UpdateTime: 2026-04-20 10:47:19
+# RuleCount: 219
 
 DOMAIN,ai.google.dev
 DOMAIN,aistudio.google.com
@@ -188,6 +188,7 @@ DOMAIN-SUFFIX,sourcegraph.com
 DOMAIN-SUFFIX,spicywriter.com
 DOMAIN-SUFFIX,stability.ai
 DOMAIN-SUFFIX,stablediffusionweb.com
+DOMAIN-SUFFIX,stitch.withgoogle.com
 DOMAIN-SUFFIX,stripe.com
 DOMAIN-SUFFIX,synthesia.io
 DOMAIN-SUFFIX,tabnine.com
