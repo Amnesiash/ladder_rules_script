@@ -1,5 +1,5 @@
-# UpdateTime: 2026-04-20 10:47:19
-# RuleCount: 7506
+# UpdateTime: 2026-04-20 19:40:33
+# RuleCount: 7500
 
 payload:
   - DOMAIN,a248.e.akamai.net
@@ -839,8 +839,6 @@ payload:
   - DOMAIN-SUFFIX,bnrmetal.com
   - DOMAIN-SUFFIX,bntrace.com
   - DOMAIN-SUFFIX,boardreader.com
-  - DOMAIN-SUFFIX,bocchi.ooo
-  - DOMAIN-SUFFIX,bocchi.site
   - DOMAIN-SUFFIX,bod.asia
   - DOMAIN-SUFFIX,bodog88.com
   - DOMAIN-SUFFIX,bolehvpn.net
@@ -3174,7 +3172,6 @@ payload:
   - DOMAIN-SUFFIX,hwadzan.tw
   - DOMAIN-SUFFIX,hwayue.org.tw
   - DOMAIN-SUFFIX,hwinfo.com
-  - DOMAIN-SUFFIX,hxcy.top
   - DOMAIN-SUFFIX,hxwk.org
   - DOMAIN-SUFFIX,hxwq.org
   - DOMAIN-SUFFIX,hybrid-analysis.com
@@ -5337,7 +5334,6 @@ payload:
   - DOMAIN-SUFFIX,sex3.com
   - DOMAIN-SUFFIX,sex8.cc
   - DOMAIN-SUFFIX,sexandsubmission.com
-  - DOMAIN-SUFFIX,sexbjcam.com
   - DOMAIN-SUFFIX,sexbot.com
   - DOMAIN-SUFFIX,sexhu.com
   - DOMAIN-SUFFIX,sexhuang.com
@@ -5650,7 +5646,6 @@ payload:
   - DOMAIN-SUFFIX,sstm.moe
   - DOMAIN-SUFFIX,sstmlt.moe
   - DOMAIN-SUFFIX,sstmlt.net
-  - DOMAIN-SUFFIX,ssy61.com
   - DOMAIN-SUFFIX,stackexchange.com
   - DOMAIN-SUFFIX,stackoverflow.com
   - DOMAIN-SUFFIX,stage64.hk
@@ -7305,7 +7300,6 @@ payload:
   - DOMAIN-KEYWORD,blizzard
   - DOMAIN-KEYWORD,blogspot
   - DOMAIN-KEYWORD,bloomberg
-  - DOMAIN-KEYWORD,bocchi
   - DOMAIN-KEYWORD,brave
   - DOMAIN-KEYWORD,browserleaks
   - DOMAIN-KEYWORD,canva

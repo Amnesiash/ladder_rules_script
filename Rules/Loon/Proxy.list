@@ -1,5 +1,5 @@
-# UpdateTime: 2026-04-20 10:47:20
-# RuleCount: 7506
+# UpdateTime: 2026-04-20 19:40:34
+# RuleCount: 7500
 
 DOMAIN,a248.e.akamai.net
 DOMAIN,a771.dscq.akamai.net
@@ -838,8 +838,6 @@ DOMAIN-SUFFIX,bnn.co
 DOMAIN-SUFFIX,bnrmetal.com
 DOMAIN-SUFFIX,bntrace.com
 DOMAIN-SUFFIX,boardreader.com
-DOMAIN-SUFFIX,bocchi.ooo
-DOMAIN-SUFFIX,bocchi.site
 DOMAIN-SUFFIX,bod.asia
 DOMAIN-SUFFIX,bodog88.com
 DOMAIN-SUFFIX,bolehvpn.net
@@ -3173,7 +3171,6 @@ DOMAIN-SUFFIX,huyandex.com
 DOMAIN-SUFFIX,hwadzan.tw
 DOMAIN-SUFFIX,hwayue.org.tw
 DOMAIN-SUFFIX,hwinfo.com
-DOMAIN-SUFFIX,hxcy.top
 DOMAIN-SUFFIX,hxwk.org
 DOMAIN-SUFFIX,hxwq.org
 DOMAIN-SUFFIX,hybrid-analysis.com
@@ -5336,7 +5333,6 @@ DOMAIN-SUFFIX,sex.com
 DOMAIN-SUFFIX,sex3.com
 DOMAIN-SUFFIX,sex8.cc
 DOMAIN-SUFFIX,sexandsubmission.com
-DOMAIN-SUFFIX,sexbjcam.com
 DOMAIN-SUFFIX,sexbot.com
 DOMAIN-SUFFIX,sexhu.com
 DOMAIN-SUFFIX,sexhuang.com
@@ -5649,7 +5645,6 @@ DOMAIN-SUFFIX,sss.camp
 DOMAIN-SUFFIX,sstm.moe
 DOMAIN-SUFFIX,sstmlt.moe
 DOMAIN-SUFFIX,sstmlt.net
-DOMAIN-SUFFIX,ssy61.com
 DOMAIN-SUFFIX,stackexchange.com
 DOMAIN-SUFFIX,stackoverflow.com
 DOMAIN-SUFFIX,stage64.hk
@@ -7304,7 +7299,6 @@ DOMAIN-KEYWORD,bitwarden
 DOMAIN-KEYWORD,blizzard
 DOMAIN-KEYWORD,blogspot
 DOMAIN-KEYWORD,bloomberg
-DOMAIN-KEYWORD,bocchi
 DOMAIN-KEYWORD,brave
 DOMAIN-KEYWORD,browserleaks
 DOMAIN-KEYWORD,canva

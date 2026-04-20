@@ -1,5 +1,5 @@
-# UpdateTime: 2026-04-20 10:47:19
-# RuleCount: 7506
+# UpdateTime: 2026-04-20 19:40:34
+# RuleCount: 7500
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -838,8 +838,6 @@ HOST-SUFFIX,bnn.co,Proxy
 HOST-SUFFIX,bnrmetal.com,Proxy
 HOST-SUFFIX,bntrace.com,Proxy
 HOST-SUFFIX,boardreader.com,Proxy
-HOST-SUFFIX,bocchi.ooo,Proxy
-HOST-SUFFIX,bocchi.site,Proxy
 HOST-SUFFIX,bod.asia,Proxy
 HOST-SUFFIX,bodog88.com,Proxy
 HOST-SUFFIX,bolehvpn.net,Proxy
@@ -3173,7 +3171,6 @@ HOST-SUFFIX,huyandex.com,Proxy
 HOST-SUFFIX,hwadzan.tw,Proxy
 HOST-SUFFIX,hwayue.org.tw,Proxy
 HOST-SUFFIX,hwinfo.com,Proxy
-HOST-SUFFIX,hxcy.top,Proxy
 HOST-SUFFIX,hxwk.org,Proxy
 HOST-SUFFIX,hxwq.org,Proxy
 HOST-SUFFIX,hybrid-analysis.com,Proxy
@@ -5336,7 +5333,6 @@ HOST-SUFFIX,sex.com,Proxy
 HOST-SUFFIX,sex3.com,Proxy
 HOST-SUFFIX,sex8.cc,Proxy
 HOST-SUFFIX,sexandsubmission.com,Proxy
-HOST-SUFFIX,sexbjcam.com,Proxy
 HOST-SUFFIX,sexbot.com,Proxy
 HOST-SUFFIX,sexhu.com,Proxy
 HOST-SUFFIX,sexhuang.com,Proxy
@@ -5649,7 +5645,6 @@ HOST-SUFFIX,sss.camp,Proxy
 HOST-SUFFIX,sstm.moe,Proxy
 HOST-SUFFIX,sstmlt.moe,Proxy
 HOST-SUFFIX,sstmlt.net,Proxy
-HOST-SUFFIX,ssy61.com,Proxy
 HOST-SUFFIX,stackexchange.com,Proxy
 HOST-SUFFIX,stackoverflow.com,Proxy
 HOST-SUFFIX,stage64.hk,Proxy
@@ -7304,7 +7299,6 @@ HOST-KEYWORD,bitwarden,Proxy
 HOST-KEYWORD,blizzard,Proxy
 HOST-KEYWORD,blogspot,Proxy
 HOST-KEYWORD,bloomberg,Proxy
-HOST-KEYWORD,bocchi,Proxy
 HOST-KEYWORD,brave,Proxy
 HOST-KEYWORD,browserleaks,Proxy
 HOST-KEYWORD,canva,Proxy
