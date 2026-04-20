@@ -1,5 +1,5 @@
 # 一些未被代理匹配到的网址
-# UPDATED: 2025-05-06
+# UPDATED: 2025-04-26
 
 # > 自用
 DOMAIN-SUFFIX,aishort.top
@@ -19,12 +19,6 @@ DOMAIN-SUFFIX,alpacaml.com
 DOMAIN-SUFFIX,arca.live
 DOMAIN-SUFFIX,namu.la
 
-# > 机场
-DOMAIN-SUFFIX,bocchi.ooo
-DOMAIN-SUFFIX,bocchi.site
-DOMAIN-KEYWORD,bocchi
-DOMAIN-SUFFIX,ssy61.com
-
 # > Game 18+
 DOMAIN-SUFFIX,uu-gg.one
 DOMAIN-SUFFIX,18comic.vip
@@ -32,10 +26,8 @@ DOMAIN-SUFFIX,wnacg.com
 DOMAIN-SUFFIX,zodgame.xyz
 DOMAIN-SUFFIX,miconisomi.xii.jp
 DOMAIN-SUFFIX,ero-labs.com
-DOMAIN-SUFFIX,hxcy.top
 
 # > 18+
-DOMAIN-SUFFIX,sexbjcam.com
 DOMAIN-SUFFIX,sexkbj.com
 DOMAIN-SUFFIX,misskon.com
 DOMAIN-SUFFIX,rifabu.me 
