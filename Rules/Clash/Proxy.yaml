@@ -1,5 +1,5 @@
-# UpdateTime: 2026-04-23 21:44:22
-# RuleCount: 7500
+# UpdateTime: 2026-04-24 10:42:51
+# RuleCount: 7509
 
 payload:
   - DOMAIN,a248.e.akamai.net
@@ -469,6 +469,7 @@ payload:
   - DOMAIN-SUFFIX,app-measurement.net
   - DOMAIN-SUFFIX,app.box.com
   - DOMAIN-SUFFIX,app.cloudcone.com
+  - DOMAIN-SUFFIX,app.element.io
   - DOMAIN-SUFFIX,app.heywire.com
   - DOMAIN-SUFFIX,app.smartmailcloud.com
   - DOMAIN-SUFFIX,app.tutanota.com
@@ -530,6 +531,7 @@ payload:
   - DOMAIN-SUFFIX,asianspiss.com
   - DOMAIN-SUFFIX,asianwomensfilm.de
   - DOMAIN-SUFFIX,asiaone.com
+  - DOMAIN-SUFFIX,asiasociety.org
   - DOMAIN-SUFFIX,asiatgp.com
   - DOMAIN-SUFFIX,asiatoday.us
   - DOMAIN-SUFFIX,ask.com
@@ -685,6 +687,7 @@ payload:
   - DOMAIN-SUFFIX,beijingzx.org
   - DOMAIN-SUFFIX,belamionline.com
   - DOMAIN-SUFFIX,bell.wiki
+  - DOMAIN-SUFFIX,bellingcat.com
   - DOMAIN-SUFFIX,bemywife.cc
   - DOMAIN-SUFFIX,beric.me
   - DOMAIN-SUFFIX,berlinerbericht.de
@@ -3381,6 +3384,7 @@ payload:
   - DOMAIN-SUFFIX,ismprofessional.net
   - DOMAIN-SUFFIX,isohunt.com
   - DOMAIN-SUFFIX,israbox.com
+  - DOMAIN-SUFFIX,issues.chromium.org
   - DOMAIN-SUFFIX,issuu.com
   - DOMAIN-SUFFIX,istars.co.nz
   - DOMAIN-SUFFIX,istarshine.com
@@ -3666,6 +3670,7 @@ payload:
   - DOMAIN-SUFFIX,lamnia.co.uk
   - DOMAIN-SUFFIX,lamrim.com
   - DOMAIN-SUFFIX,landofhope.tv
+  - DOMAIN-SUFFIX,lantern.io
   - DOMAIN-SUFFIX,lanterncn.cn
   - DOMAIN-SUFFIX,lantosfoundation.org
   - DOMAIN-SUFFIX,laod.cn
@@ -5083,6 +5088,7 @@ payload:
   - DOMAIN-SUFFIX,raw.githack.com
   - DOMAIN-SUFFIX,rawgit.com
   - DOMAIN-SUFFIX,rawgithub.com
+  - DOMAIN-SUFFIX,rawstory.com
   - DOMAIN-SUFFIX,razyboard.com
   - DOMAIN-SUFFIX,rcam.target.com
   - DOMAIN-SUFFIX,rcinet.ca
@@ -5103,6 +5109,7 @@ payload:
   - DOMAIN-SUFFIX,reason.com
   - DOMAIN-SUFFIX,rebatesrule.net
   - DOMAIN-SUFFIX,recaptcha.net
+  - DOMAIN-SUFFIX,recordedfuture.com
   - DOMAIN-SUFFIX,recordhistory.org
   - DOMAIN-SUFFIX,recovery.org.tw
   - DOMAIN-SUFFIX,recoveryversion.com.tw
@@ -5171,6 +5178,7 @@ payload:
   - DOMAIN-SUFFIX,rmjdw.com
   - DOMAIN-SUFFIX,rmjdw132.info
   - DOMAIN-SUFFIX,roadshow.hk
+  - DOMAIN-SUFFIX,roblox.com
   - DOMAIN-SUFFIX,roboforex.com
   - DOMAIN-SUFFIX,robustnessiskey.com
   - DOMAIN-SUFFIX,rocket-inc.net
@@ -5968,6 +5976,7 @@ payload:
   - DOMAIN-SUFFIX,thewgo.org
   - DOMAIN-SUFFIX,thewirechina.com
   - DOMAIN-SUFFIX,theync.com
+  - DOMAIN-SUFFIX,thinkchina.sg
   - DOMAIN-SUFFIX,thinkgeek.com
   - DOMAIN-SUFFIX,thinkingtaiwan.com
   - DOMAIN-SUFFIX,thinkwithgoogle.com
