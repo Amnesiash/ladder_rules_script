@@ -1,5 +1,5 @@
-# UpdateTime: 2026-04-25 21:06:00
-# RuleCount: 7509
+# UpdateTime: 2026-04-26 10:48:37
+# RuleCount: 7510
 
 DOMAIN,a248.e.akamai.net
 DOMAIN,a771.dscq.akamai.net
@@ -5875,6 +5875,7 @@ DOMAIN-SUFFIX,tdm.com.mo
 DOMAIN-SUFFIX,teachparentstech.org
 DOMAIN-SUFFIX,teamamericany.com
 DOMAIN-SUFFIX,teams.microsoft.com
+DOMAIN-SUFFIX,techbang.com
 DOMAIN-SUFFIX,technews.tw
 DOMAIN-SUFFIX,techspot.com
 DOMAIN-SUFFIX,techviz.net

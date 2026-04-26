@@ -1,5 +1,5 @@
-# UpdateTime: 2026-04-25 21:05:59
-# RuleCount: 219
+# UpdateTime: 2026-04-26 10:48:37
+# RuleCount: 227
 
 HOST,ai.google.dev,AI
 HOST,aistudio.google.com,AI
@@ -32,9 +32,11 @@ HOST,openaiapi-site.azureedge.net,AI
 HOST,pplx-res.cloudinary.com,AI
 HOST,sydney.bing.com,AI
 HOST,www.bing.com,AI
+HOST-SUFFIX,agentclientprotocol.com,AI
 HOST-SUFFIX,ai.azure.com,AI
 HOST-SUFFIX,ai.com,AI
 HOST-SUFFIX,ai.studio,AI
+HOST-SUFFIX,aicode.googleapis.com,AI
 HOST-SUFFIX,aida.googleapis.com,AI
 HOST-SUFFIX,aiproxy.io,AI
 HOST-SUFFIX,aisandbox-pa.googleapis.com,AI
@@ -84,6 +86,7 @@ HOST-SUFFIX,comfyregistry.org,AI
 HOST-SUFFIX,copilot.cloud.microsoft,AI
 HOST-SUFFIX,copilot.microsoft.com,AI
 HOST-SUFFIX,coze.com,AI
+HOST-SUFFIX,crewai.com,AI
 HOST-SUFFIX,crixet.com,AI
 HOST-SUFFIX,cursor-cdn.com,AI
 HOST-SUFFIX,cursor.com,AI
@@ -138,10 +141,12 @@ HOST-SUFFIX,jules.google.com,AI
 HOST-SUFFIX,kiro.dev,AI
 HOST-SUFFIX,labs.google,AI
 HOST-SUFFIX,labs.google.com,AI
+HOST-SUFFIX,langchain.com,AI
 HOST-SUFFIX,launchdarkly.com,AI
 HOST-SUFFIX,leonardo.ai,AI
 HOST-SUFFIX,livekit.cloud,AI
 HOST-SUFFIX,liveperson.net,AI
+HOST-SUFFIX,lmstudio.ai,AI
 HOST-SUFFIX,lovart.ai,AI
 HOST-SUFFIX,lpsnmedia.net,AI
 HOST-SUFFIX,makersuite.google.com,AI
@@ -151,6 +156,7 @@ HOST-SUFFIX,marscode.com,AI
 HOST-SUFFIX,meta.ai,AI
 HOST-SUFFIX,microsoft-copilot.com,AI
 HOST-SUFFIX,midjourney.com,AI
+HOST-SUFFIX,minimax.io,AI
 HOST-SUFFIX,mistral.ai,AI
 HOST-SUFFIX,notebooklm.google,AI
 HOST-SUFFIX,notebooklm.google.com,AI
@@ -158,6 +164,7 @@ HOST-SUFFIX,oaifree.com,AI
 HOST-SUFFIX,oaistatic.com,AI
 HOST-SUFFIX,oaiusercontent.com,AI
 HOST-SUFFIX,observeit.net,AI
+HOST-SUFFIX,ollama.com,AI
 HOST-SUFFIX,opal.google,AI
 HOST-SUFFIX,opal.google.com,AI
 HOST-SUFFIX,openai.com,AI
@@ -171,6 +178,7 @@ HOST-SUFFIX,oystermercury.top,AI
 HOST-SUFFIX,pawan.krd,AI
 HOST-SUFFIX,perplexity.ai,AI
 HOST-SUFFIX,perplexity.com,AI
+HOST-SUFFIX,plannotator.ai,AI
 HOST-SUFFIX,play.ht,AI
 HOST-SUFFIX,poe.com,AI
 HOST-SUFFIX,poecdn.net,AI

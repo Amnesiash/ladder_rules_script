@@ -1,5 +1,5 @@
-# UpdateTime: 2026-04-25 21:05:59
-# RuleCount: 7509
+# UpdateTime: 2026-04-26 10:48:37
+# RuleCount: 7510
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -5875,6 +5875,7 @@ HOST-SUFFIX,tdm.com.mo,Proxy
 HOST-SUFFIX,teachparentstech.org,Proxy
 HOST-SUFFIX,teamamericany.com,Proxy
 HOST-SUFFIX,teams.microsoft.com,Proxy
+HOST-SUFFIX,techbang.com,Proxy
 HOST-SUFFIX,technews.tw,Proxy
 HOST-SUFFIX,techspot.com,Proxy
 HOST-SUFFIX,techviz.net,Proxy

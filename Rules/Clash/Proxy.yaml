@@ -1,5 +1,5 @@
-# UpdateTime: 2026-04-25 21:05:59
-# RuleCount: 7509
+# UpdateTime: 2026-04-26 10:48:37
+# RuleCount: 7510
 
 payload:
   - DOMAIN,a248.e.akamai.net
@@ -5876,6 +5876,7 @@ payload:
   - DOMAIN-SUFFIX,teachparentstech.org
   - DOMAIN-SUFFIX,teamamericany.com
   - DOMAIN-SUFFIX,teams.microsoft.com
+  - DOMAIN-SUFFIX,techbang.com
   - DOMAIN-SUFFIX,technews.tw
   - DOMAIN-SUFFIX,techspot.com
   - DOMAIN-SUFFIX,techviz.net
