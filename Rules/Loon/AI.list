@@ -1,5 +1,5 @@
-# UpdateTime: 2026-04-27 10:51:29
-# RuleCount: 227
+# UpdateTime: 2026-04-27 21:55:41
+# RuleCount: 228
 
 DOMAIN,ai.google.dev
 DOMAIN,aistudio.google.com
@@ -209,6 +209,7 @@ DOMAIN-SUFFIX,x.ai
 DOMAIN-SUFFIX,youmind.ai
 DOMAIN-SUFFIX,youmind.com
 DOMAIN-SUFFIX,youmind.site
+DOMAIN-SUFFIX,zed.dev
 DOMAIN-KEYWORD,anthropic
 DOMAIN-KEYWORD,antigravity
 DOMAIN-KEYWORD,claude
