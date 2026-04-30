@@ -1,5 +1,5 @@
-# UpdateTime: 2026-04-29 21:58:29
-# RuleCount: 7510
+# UpdateTime: 2026-04-30 10:57:41
+# RuleCount: 7511
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -6471,6 +6471,7 @@ HOST-SUFFIX,uploadstation.com,Proxy
 HOST-SUFFIX,upmedia.mg,Proxy
 HOST-SUFFIX,upornia.com,Proxy
 HOST-SUFFIX,uproxy.org,Proxy
+HOST-SUFFIX,upsangel.com,Proxy
 HOST-SUFFIX,uptodown.com,Proxy
 HOST-SUFFIX,upwill.org,Proxy
 HOST-SUFFIX,ur7s.com,Proxy
