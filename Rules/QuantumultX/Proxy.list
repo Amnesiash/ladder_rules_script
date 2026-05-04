@@ -1,5 +1,5 @@
-# UpdateTime: 2026-05-03 21:12:06
-# RuleCount: 7511
+# UpdateTime: 2026-05-04 10:56:05
+# RuleCount: 7507
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -5274,9 +5274,6 @@ HOST-SUFFIX,sb-cd.com,Proxy
 HOST-SUFFIX,sbme.me,Proxy
 HOST-SUFFIX,sbs.com.au,Proxy
 HOST-SUFFIX,sbti.unun.dev,Proxy
-HOST-SUFFIX,scache.vzw.com,Proxy
-HOST-SUFFIX,scache1.vzw.com,Proxy
-HOST-SUFFIX,scache2.vzw.com,Proxy
 HOST-SUFFIX,scasino.com,Proxy
 HOST-SUFFIX,schema.org,Proxy
 HOST-SUFFIX,scholar.google.com,Proxy
@@ -5636,7 +5633,6 @@ HOST-SUFFIX,squirrelvpn.com,Proxy
 HOST-SUFFIX,srocket.us,Proxy
 HOST-SUFFIX,ss-link.com,Proxy
 HOST-SUFFIX,ss.levyhsu.com,Proxy
-HOST-SUFFIX,ss7.vzw.com,Proxy
 HOST-SUFFIX,ssglobal.co,Proxy
 HOST-SUFFIX,ssglobal.me,Proxy
 HOST-SUFFIX,ssh91.com,Proxy

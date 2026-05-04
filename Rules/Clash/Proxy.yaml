@@ -1,5 +1,5 @@
-# UpdateTime: 2026-05-03 21:12:05
-# RuleCount: 7511
+# UpdateTime: 2026-05-04 10:56:05
+# RuleCount: 7507
 
 payload:
   - DOMAIN,a248.e.akamai.net
@@ -5275,9 +5275,6 @@ payload:
   - DOMAIN-SUFFIX,sbme.me
   - DOMAIN-SUFFIX,sbs.com.au
   - DOMAIN-SUFFIX,sbti.unun.dev
-  - DOMAIN-SUFFIX,scache.vzw.com
-  - DOMAIN-SUFFIX,scache1.vzw.com
-  - DOMAIN-SUFFIX,scache2.vzw.com
   - DOMAIN-SUFFIX,scasino.com
   - DOMAIN-SUFFIX,schema.org
   - DOMAIN-SUFFIX,scholar.google.com
@@ -5637,7 +5634,6 @@ payload:
   - DOMAIN-SUFFIX,srocket.us
   - DOMAIN-SUFFIX,ss-link.com
   - DOMAIN-SUFFIX,ss.levyhsu.com
-  - DOMAIN-SUFFIX,ss7.vzw.com
   - DOMAIN-SUFFIX,ssglobal.co
   - DOMAIN-SUFFIX,ssglobal.me
   - DOMAIN-SUFFIX,ssh91.com
