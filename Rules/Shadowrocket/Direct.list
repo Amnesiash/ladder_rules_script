@@ -1,5 +1,5 @@
-# UpdateTime: 2026-05-06 10:54:17
-# RuleCount: 51
+# UpdateTime: 2026-05-06 13:31:08
+# RuleCount: 53
 
 DOMAIN,app.adjust.com
 DOMAIN,bdtj.tagtic.cn
@@ -33,9 +33,11 @@ DOMAIN-SUFFIX,dizhensubao.getui.com
 DOMAIN-SUFFIX,ghp.ci
 DOMAIN-SUFFIX,googletraveladservices.com
 DOMAIN-SUFFIX,gradio.live
+DOMAIN-SUFFIX,hxcy.top
 DOMAIN-SUFFIX,i234.me
 DOMAIN-SUFFIX,iqiyis.com
 DOMAIN-SUFFIX,istoreos.com
+DOMAIN-SUFFIX,jasolar.com
 DOMAIN-SUFFIX,kelee.one
 DOMAIN-SUFFIX,koodomobile.ca
 DOMAIN-SUFFIX,koodomobile.com

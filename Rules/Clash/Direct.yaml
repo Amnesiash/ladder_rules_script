@@ -1,5 +1,5 @@
-# UpdateTime: 2026-05-06 10:54:15
-# RuleCount: 51
+# UpdateTime: 2026-05-06 13:31:07
+# RuleCount: 53
 
 payload:
   - DOMAIN,app.adjust.com
@@ -34,9 +34,11 @@ payload:
   - DOMAIN-SUFFIX,ghp.ci
   - DOMAIN-SUFFIX,googletraveladservices.com
   - DOMAIN-SUFFIX,gradio.live
+  - DOMAIN-SUFFIX,hxcy.top
   - DOMAIN-SUFFIX,i234.me
   - DOMAIN-SUFFIX,iqiyis.com
   - DOMAIN-SUFFIX,istoreos.com
+  - DOMAIN-SUFFIX,jasolar.com
   - DOMAIN-SUFFIX,kelee.one
   - DOMAIN-SUFFIX,koodomobile.ca
   - DOMAIN-SUFFIX,koodomobile.com

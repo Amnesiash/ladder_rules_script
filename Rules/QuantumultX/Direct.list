@@ -1,5 +1,5 @@
-# UpdateTime: 2026-05-06 10:54:16
-# RuleCount: 51
+# UpdateTime: 2026-05-06 13:31:08
+# RuleCount: 53
 
 HOST,app.adjust.com,Direct
 HOST,bdtj.tagtic.cn,Direct
@@ -33,9 +33,11 @@ HOST-SUFFIX,dizhensubao.getui.com,Direct
 HOST-SUFFIX,ghp.ci,Direct
 HOST-SUFFIX,googletraveladservices.com,Direct
 HOST-SUFFIX,gradio.live,Direct
+HOST-SUFFIX,hxcy.top,Direct
 HOST-SUFFIX,i234.me,Direct
 HOST-SUFFIX,iqiyis.com,Direct
 HOST-SUFFIX,istoreos.com,Direct
+HOST-SUFFIX,jasolar.com,Direct
 HOST-SUFFIX,kelee.one,Direct
 HOST-SUFFIX,koodomobile.ca,Direct
 HOST-SUFFIX,koodomobile.com,Direct
