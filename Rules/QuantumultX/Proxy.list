@@ -1,5 +1,5 @@
-# UpdateTime: 2026-05-06 13:31:08
-# RuleCount: 7507
+# UpdateTime: 2026-05-06 22:12:49
+# RuleCount: 7509
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -2001,6 +2001,7 @@ HOST-SUFFIX,fangong.org,Proxy
 HOST-SUFFIX,fangongheike.com,Proxy
 HOST-SUFFIX,fanhaodang.com,Proxy
 HOST-SUFFIX,fanhaolou.com,Proxy
+HOST-SUFFIX,fanjugou2.top,Proxy
 HOST-SUFFIX,fanqiang.network,Proxy
 HOST-SUFFIX,fanqiang.tk,Proxy
 HOST-SUFFIX,fanqiangdang.com,Proxy
@@ -7002,6 +7003,7 @@ HOST-SUFFIX,xicons.org,Proxy
 HOST-SUFFIX,xiezhua.com,Proxy
 HOST-SUFFIX,xihua.es,Proxy
 HOST-SUFFIX,xijie.wordpress.com,Proxy
+HOST-SUFFIX,xiloi.com,Proxy
 HOST-SUFFIX,xinbao.de,Proxy
 HOST-SUFFIX,xing.com,Proxy
 HOST-SUFFIX,xinhuanet.org,Proxy

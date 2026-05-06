@@ -1,5 +1,5 @@
-# UpdateTime: 2026-05-06 13:31:08
-# RuleCount: 53
+# UpdateTime: 2026-05-06 22:12:49
+# RuleCount: 54
 
 HOST,app.adjust.com,Direct
 HOST,bdtj.tagtic.cn,Direct
@@ -26,6 +26,7 @@ HOST-SUFFIX,FamilyDS.org,Direct
 HOST-SUFFIX,checkip.dyndns.org,Direct
 HOST-SUFFIX,checkip.synology.com,Direct
 HOST-SUFFIX,checkipv6.dyndns.org,Direct
+HOST-SUFFIX,clawcloudrun.com,Direct
 HOST-SUFFIX,cloudstudio.work,Direct
 HOST-SUFFIX,cocopilot.org,Direct
 HOST-SUFFIX,czzyvideo.com,Direct

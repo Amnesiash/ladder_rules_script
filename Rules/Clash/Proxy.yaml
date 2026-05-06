@@ -1,5 +1,5 @@
-# UpdateTime: 2026-05-06 13:31:07
-# RuleCount: 7507
+# UpdateTime: 2026-05-06 22:12:49
+# RuleCount: 7509
 
 payload:
   - DOMAIN,a248.e.akamai.net
@@ -2002,6 +2002,7 @@ payload:
   - DOMAIN-SUFFIX,fangongheike.com
   - DOMAIN-SUFFIX,fanhaodang.com
   - DOMAIN-SUFFIX,fanhaolou.com
+  - DOMAIN-SUFFIX,fanjugou2.top
   - DOMAIN-SUFFIX,fanqiang.network
   - DOMAIN-SUFFIX,fanqiang.tk
   - DOMAIN-SUFFIX,fanqiangdang.com
@@ -7003,6 +7004,7 @@ payload:
   - DOMAIN-SUFFIX,xiezhua.com
   - DOMAIN-SUFFIX,xihua.es
   - DOMAIN-SUFFIX,xijie.wordpress.com
+  - DOMAIN-SUFFIX,xiloi.com
   - DOMAIN-SUFFIX,xinbao.de
   - DOMAIN-SUFFIX,xing.com
   - DOMAIN-SUFFIX,xinhuanet.org

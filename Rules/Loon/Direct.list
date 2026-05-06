@@ -1,5 +1,5 @@
-# UpdateTime: 2026-05-06 13:31:08
-# RuleCount: 53
+# UpdateTime: 2026-05-06 22:12:49
+# RuleCount: 54
 
 DOMAIN,app.adjust.com
 DOMAIN,bdtj.tagtic.cn
@@ -26,6 +26,7 @@ DOMAIN-SUFFIX,FamilyDS.org
 DOMAIN-SUFFIX,checkip.dyndns.org
 DOMAIN-SUFFIX,checkip.synology.com
 DOMAIN-SUFFIX,checkipv6.dyndns.org
+DOMAIN-SUFFIX,clawcloudrun.com
 DOMAIN-SUFFIX,cloudstudio.work
 DOMAIN-SUFFIX,cocopilot.org
 DOMAIN-SUFFIX,czzyvideo.com

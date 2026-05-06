@@ -1,5 +1,5 @@
-# UpdateTime: 2026-05-06 13:31:07
-# RuleCount: 53
+# UpdateTime: 2026-05-06 22:12:48
+# RuleCount: 54
 
 payload:
   - DOMAIN,app.adjust.com
@@ -27,6 +27,7 @@ payload:
   - DOMAIN-SUFFIX,checkip.dyndns.org
   - DOMAIN-SUFFIX,checkip.synology.com
   - DOMAIN-SUFFIX,checkipv6.dyndns.org
+  - DOMAIN-SUFFIX,clawcloudrun.com
   - DOMAIN-SUFFIX,cloudstudio.work
   - DOMAIN-SUFFIX,cocopilot.org
   - DOMAIN-SUFFIX,czzyvideo.com
