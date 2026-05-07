@@ -1,5 +1,5 @@
-# UpdateTime: 2026-05-07 10:54:57
-# RuleCount: 228
+# UpdateTime: 2026-05-07 22:10:26
+# RuleCount: 230
 
 DOMAIN,ai.google.dev
 DOMAIN,aistudio.google.com
@@ -119,6 +119,8 @@ DOMAIN-SUFFIX,generativeai.google
 DOMAIN-SUFFIX,generativelanguage.googleapis.com
 DOMAIN-SUFFIX,githubcopilot.com
 DOMAIN-SUFFIX,githubnext.com
+DOMAIN-SUFFIX,googleapis.com
+DOMAIN-SUFFIX,googleusercontent.com
 DOMAIN-SUFFIX,grazie.ai
 DOMAIN-SUFFIX,grazie.aws.intellij.net
 DOMAIN-SUFFIX,grok.com

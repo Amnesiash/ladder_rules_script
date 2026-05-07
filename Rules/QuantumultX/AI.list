@@ -1,5 +1,5 @@
-# UpdateTime: 2026-05-07 10:54:57
-# RuleCount: 228
+# UpdateTime: 2026-05-07 22:10:26
+# RuleCount: 230
 
 HOST,ai.google.dev,AI
 HOST,aistudio.google.com,AI
@@ -119,6 +119,8 @@ HOST-SUFFIX,generativeai.google,AI
 HOST-SUFFIX,generativelanguage.googleapis.com,AI
 HOST-SUFFIX,githubcopilot.com,AI
 HOST-SUFFIX,githubnext.com,AI
+HOST-SUFFIX,googleapis.com,AI
+HOST-SUFFIX,googleusercontent.com,AI
 HOST-SUFFIX,grazie.ai,AI
 HOST-SUFFIX,grazie.aws.intellij.net,AI
 HOST-SUFFIX,grok.com,AI
