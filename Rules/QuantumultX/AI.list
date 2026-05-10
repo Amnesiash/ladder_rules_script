@@ -1,5 +1,5 @@
-# UpdateTime: 2026-05-09 21:19:11
-# RuleCount: 230
+# UpdateTime: 2026-05-10 11:23:50
+# RuleCount: 232
 
 HOST,ai.google.dev,AI
 HOST,aistudio.google.com,AI
@@ -45,6 +45,7 @@ HOST-SUFFIX,algolia.net,AI
 HOST-SUFFIX,anthropic.com,AI
 HOST-SUFFIX,antigravity-unleash.goog,AI
 HOST-SUFFIX,antigravity.google,AI
+HOST-SUFFIX,anythingllm.com,AI
 HOST-SUFFIX,api.statsig.com,AI
 HOST-SUFFIX,api2d.com,AI
 HOST-SUFFIX,apis.google.com,AI
@@ -176,6 +177,7 @@ HOST-SUFFIX,openaicom.imgix.net,AI
 HOST-SUFFIX,openart.ai,AI
 HOST-SUFFIX,openclaw.ai,AI
 HOST-SUFFIX,openrouter.ai,AI
+HOST-SUFFIX,openspec.dev,AI
 HOST-SUFFIX,oystermercury.top,AI
 HOST-SUFFIX,pawan.krd,AI
 HOST-SUFFIX,perplexity.ai,AI

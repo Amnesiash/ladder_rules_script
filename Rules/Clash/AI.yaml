@@ -1,5 +1,5 @@
-# UpdateTime: 2026-05-09 21:19:10
-# RuleCount: 230
+# UpdateTime: 2026-05-10 11:23:49
+# RuleCount: 232
 
 payload:
   - DOMAIN,ai.google.dev
@@ -46,6 +46,7 @@ payload:
   - DOMAIN-SUFFIX,anthropic.com
   - DOMAIN-SUFFIX,antigravity-unleash.goog
   - DOMAIN-SUFFIX,antigravity.google
+  - DOMAIN-SUFFIX,anythingllm.com
   - DOMAIN-SUFFIX,api.statsig.com
   - DOMAIN-SUFFIX,api2d.com
   - DOMAIN-SUFFIX,apis.google.com
@@ -177,6 +178,7 @@ payload:
   - DOMAIN-SUFFIX,openart.ai
   - DOMAIN-SUFFIX,openclaw.ai
   - DOMAIN-SUFFIX,openrouter.ai
+  - DOMAIN-SUFFIX,openspec.dev
   - DOMAIN-SUFFIX,oystermercury.top
   - DOMAIN-SUFFIX,pawan.krd
   - DOMAIN-SUFFIX,perplexity.ai
