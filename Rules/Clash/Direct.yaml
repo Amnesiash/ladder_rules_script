@@ -1,5 +1,5 @@
-# UpdateTime: 2026-05-10 21:19:56
-# RuleCount: 54
+# UpdateTime: 2026-05-11 11:35:52
+# RuleCount: 55
 
 payload:
   - DOMAIN,app.adjust.com
@@ -32,6 +32,7 @@ payload:
   - DOMAIN-SUFFIX,cocopilot.org
   - DOMAIN-SUFFIX,czzyvideo.com
   - DOMAIN-SUFFIX,dizhensubao.getui.com
+  - DOMAIN-SUFFIX,ghfast.top
   - DOMAIN-SUFFIX,ghp.ci
   - DOMAIN-SUFFIX,googletraveladservices.com
   - DOMAIN-SUFFIX,gradio.live

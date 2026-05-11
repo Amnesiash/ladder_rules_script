@@ -1,5 +1,5 @@
-# UpdateTime: 2026-05-10 21:19:57
-# RuleCount: 54
+# UpdateTime: 2026-05-11 11:35:52
+# RuleCount: 55
 
 DOMAIN,app.adjust.com
 DOMAIN,bdtj.tagtic.cn
@@ -31,6 +31,7 @@ DOMAIN-SUFFIX,cloudstudio.work
 DOMAIN-SUFFIX,cocopilot.org
 DOMAIN-SUFFIX,czzyvideo.com
 DOMAIN-SUFFIX,dizhensubao.getui.com
+DOMAIN-SUFFIX,ghfast.top
 DOMAIN-SUFFIX,ghp.ci
 DOMAIN-SUFFIX,googletraveladservices.com
 DOMAIN-SUFFIX,gradio.live
