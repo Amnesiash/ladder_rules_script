@@ -1,5 +1,5 @@
-# UpdateTime: 2026-05-11 22:53:27
-# RuleCount: 7534
+# UpdateTime: 2026-05-12 11:23:15
+# RuleCount: 7536
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -1508,6 +1508,7 @@ HOST-SUFFIX,darrenliuwei.com,Proxy
 HOST-SUFFIX,dashlane.com,Proxy
 HOST-SUFFIX,dastrassi.org,Proxy
 HOST-SUFFIX,data-vocabulary.org,Proxy
+HOST-SUFFIX,data18.com,Proxy
 HOST-SUFFIX,datalabour.com,Proxy
 HOST-SUFFIX,daum.net,Proxy
 HOST-SUFFIX,david-kilgour.com,Proxy
@@ -1706,6 +1707,7 @@ HOST-SUFFIX,dscn.info,Proxy
 HOST-SUFFIX,dsmtp.com,Proxy
 HOST-SUFFIX,dssott.com,Proxy
 HOST-SUFFIX,dstk.dk,Proxy
+HOST-SUFFIX,dt18.com,Proxy
 HOST-SUFFIX,dtdns.net,Proxy
 HOST-SUFFIX,dtiblog.com,Proxy
 HOST-SUFFIX,dtic.mil,Proxy
