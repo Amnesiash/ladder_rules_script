@@ -1,5 +1,5 @@
-# UpdateTime: 2026-05-13 22:35:19
-# RuleCount: 7536
+# UpdateTime: 2026-05-14 11:30:46
+# RuleCount: 7537
 
 DOMAIN,a248.e.akamai.net
 DOMAIN,a771.dscq.akamai.net
@@ -1213,6 +1213,7 @@ DOMAIN-SUFFIX,chingcheong.com
 DOMAIN-SUFFIX,chinman.net
 DOMAIN-SUFFIX,chithu.org
 DOMAIN-SUFFIX,chobit.cc
+DOMAIN-SUFFIX,chonglangtv.org
 DOMAIN-SUFFIX,chosun.com
 DOMAIN-SUFFIX,chrdnet.com
 DOMAIN-SUFFIX,christianfreedom.org
