@@ -1,5 +1,5 @@
-# UpdateTime: 2026-05-17 21:21:53
-# RuleCount: 7537
+# UpdateTime: 2026-05-18 11:45:42
+# RuleCount: 7539
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -5444,6 +5444,7 @@ HOST-SUFFIX,shwchurch3.com,Proxy
 HOST-SUFFIX,siddharthasintent.org,Proxy
 HOST-SUFFIX,sidelinesnews.com,Proxy
 HOST-SUFFIX,sidelinessportseatery.com,Proxy
+HOST-SUFFIX,sider.ai,Proxy
 HOST-SUFFIX,sierrafriendsoftibet.org,Proxy
 HOST-SUFFIX,signal.org,Proxy
 HOST-SUFFIX,sijihuisuo.club,Proxy
@@ -7248,6 +7249,7 @@ HOST-SUFFIX,zh.wikiquote.org,Proxy
 HOST-SUFFIX,zhanbin.net,Proxy
 HOST-SUFFIX,zhangboli.net,Proxy
 HOST-SUFFIX,zhangtianliang.com,Proxy
+HOST-SUFFIX,zhangzhehan.net,Proxy
 HOST-SUFFIX,zhanlve.org,Proxy
 HOST-SUFFIX,zhao.1984.city,Proxy
 HOST-SUFFIX,zhenghui.org,Proxy

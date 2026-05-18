@@ -1,5 +1,5 @@
-# UpdateTime: 2026-05-17 21:21:53
-# RuleCount: 7537
+# UpdateTime: 2026-05-18 11:45:42
+# RuleCount: 7539
 
 payload:
   - DOMAIN,a248.e.akamai.net
@@ -5445,6 +5445,7 @@ payload:
   - DOMAIN-SUFFIX,siddharthasintent.org
   - DOMAIN-SUFFIX,sidelinesnews.com
   - DOMAIN-SUFFIX,sidelinessportseatery.com
+  - DOMAIN-SUFFIX,sider.ai
   - DOMAIN-SUFFIX,sierrafriendsoftibet.org
   - DOMAIN-SUFFIX,signal.org
   - DOMAIN-SUFFIX,sijihuisuo.club
@@ -7249,6 +7250,7 @@ payload:
   - DOMAIN-SUFFIX,zhanbin.net
   - DOMAIN-SUFFIX,zhangboli.net
   - DOMAIN-SUFFIX,zhangtianliang.com
+  - DOMAIN-SUFFIX,zhangzhehan.net
   - DOMAIN-SUFFIX,zhanlve.org
   - DOMAIN-SUFFIX,zhao.1984.city
   - DOMAIN-SUFFIX,zhenghui.org
