@@ -23,11 +23,11 @@ jobs:
           path: ladder-repo
           fetch-depth: 0
 
-      - name: Checkout rule repository (release)
+      - name: Checkout rule repository
         uses: actions/checkout@v4.1.0
         with:
           repository: Amnesiash/rule
-          ref: release
+          ref: main
           path: rule-repo
           fetch-depth: 1
 
@@ -36,7 +36,7 @@ jobs:
         with:
           bun-version: 1.3.13
 
-      - name: Sync Clash rules from rule release branch artifacts
+      - name: Sync Clash rules from rule repository
         run: |
           cd ladder-repo
           bun run sync:clash -- --rule-repo ../rule-repo --ladder-repo .

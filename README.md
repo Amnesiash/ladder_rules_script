@@ -45,4 +45,4 @@ bun run build:release:clean
 ```
 
 产物输出：
-- `.release/Rules/`（打包自 `Rules/`）
+- `.release/{Clash,Loon,QuantumultX,Shadowrocket}/`（打包自 `Rules/{Clash,Loon,QuantumultX,Shadowrocket}/`）

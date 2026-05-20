@@ -1,6 +1,6 @@
 | 脚本名 | 脚本路径 | 脚本功能 |
 | --- | --- | --- |
-| build-release.ts | `build_scripts/build-release.ts` | 生成 `.release/Rules/` 产物（默认清理旧 `.release/`；并排除 `Rules/Custom`、`Rules/rule_source.txt`） |
+| build-release.ts | `build_scripts/build-release.ts` | 生成 `.release/{Clash,Loon,QuantumultX,Shadowrocket}/` 产物（默认清理旧 `.release/`；并排除 `Rules/Custom`） |
 | generate-rules.ts | `build_scripts/generate-rules.ts` | 读取 `Rules/rule_source.txt`，拉取订阅并按 Build.yml 的排序/去重逻辑生成 `Rules/{Loon,Shadowrocket,QuantumultX}/*.list` |
 | sync-clash-from-rule-release.ts | `build_scripts/sync-clash-from-rule-release.ts` | 从隔壁 `rule` 项目 `release` 分支的 `.release/` 同步 Clash 规则目录到 `Rules/Clash/`（跳过 `README*`） |
 | fetch.ts | `build_scripts/lib/fetch.ts` | `fetch` 拉取订阅（带 GitHub raw 代理候选兜底） |

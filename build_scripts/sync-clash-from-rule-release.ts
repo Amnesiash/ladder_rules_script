@@ -26,7 +26,7 @@ function parseArgs(argv: string[]): Options {
           "  Expects rule repo artifacts to have either:",
           "  - `Clash/` at artifacts root, OR",
           "  - `Rules/Clash/` at artifacts root.",
-          "  Copies all category folders under that location into `Rules/Clash/` in ladder repo.",
+          "  Copies all files under that location into `Rules/Clash/` in ladder repo (skips README*).",
         ].join("\n"),
       );
       process.exit(0);
@@ -91,29 +91,19 @@ async function main() {
     throw new Error(`Clash artifacts not found under: ${artifactsRoot}`);
   }
 
-  // Copy all category directories from rule `.release/*` into ladder `Rules/Clash/*`,
-  // excluding README* files. This mirrors the rule repo release branch artifacts.
-  const entries = await readdir(clashRoot, { withFileTypes: true });
-  for (const entry of entries) {
-    if (!entry.isDirectory()) continue;
-    if (entry.name === ".git") continue;
-    if (entry.name === ".github") continue;
-    if (entry.name === "node_modules") continue;
-    if (entry.name === ".bun") continue;
-    if (entry.name === ".release") continue;
-    const fromDir = path.join(clashRoot, entry.name);
-    const fromStat = await stat(fromDir).catch(() => undefined);
-    if (!fromStat?.isDirectory()) continue;
-    const toDir = path.join(tmpDir, entry.name);
-    await mkdir(toDir, { recursive: true });
-    await cp(fromDir, toDir, {
-      recursive: true,
-      filter: (src) => {
-        const base = path.basename(src);
-        return !/^README/i.test(base);
-      },
-    });
-  }
+  // Copy all files from rule artifacts `Clash/` into ladder `Rules/Clash/`,
+  // excluding README* and common repo metadata folders. Content is staged into tmpDir
+  // first so we can compare hashes before updating the working tree.
+  await cp(clashRoot, tmpDir, {
+    recursive: true,
+    filter: (src) => {
+      const base = path.basename(src);
+      if (/^README/i.test(base)) return false;
+      // Skip common VCS / package-manager folders if present in a working tree checkout.
+      if (base === ".git" || base === ".github" || base === "node_modules" || base === ".bun") return false;
+      return true;
+    },
+  });
 
   async function listFilesRecursively(dir: string): Promise<string[]> {
     const dirents = await readdir(dir, { withFileTypes: true }).catch(() => []);
