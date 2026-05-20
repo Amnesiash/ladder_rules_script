@@ -161,11 +161,11 @@ rule-providers:
   Direct:        {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Direct.yaml, path: ./ruleset/Direct.yaml}
   WeChat:        {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/WeChat.yaml, path: ./ruleset/WeChat.yaml}
   SteamCN:       {<<: *RuleSet_c, url: https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Clash/SteamCN/SteamCN.yaml, path: ./ruleset/SteamCN.yaml}
-  Lan:           {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Lan.yaml, path: ./ruleset/Lan.yaml}
+  Private:       {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Private.yaml, path: ./ruleset/Private.yaml}
   AI:            {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/AI.yaml, path: ./ruleset/AI.yaml}
   Telegram:      {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Telegram.yaml, path: ./ruleset/Telegram.yaml}
-  BilibiliHMT:   {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/BilibiliHMT.yaml, path: ./ruleset/BilibiliHMT.yaml}
-  GlobalMedia:   {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/GlobalMedia.yaml, path: ./ruleset/GlobalMedia.yaml}
+  StreamingHMT:  {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/StreamingHMT.yaml, path: ./ruleset/StreamingHMT.yaml}
+  Streaming:     {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Streaming.yaml, path: ./ruleset/Streaming.yaml}
   Apple:         {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Apple.yaml, path: ./ruleset/Apple.yaml}
   Proxy:         {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Proxy.yaml, path: ./ruleset/Proxy.yaml}
   China:         {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/China.yaml, path: ./ruleset/China.yaml}
@@ -173,15 +173,15 @@ rule-providers:
 # ==================== 规则路由 ====================
 rules: 
   # > 订阅规则
-  - RULE-SET, Lan, DIRECT
+  - RULE-SET, Private, DIRECT
   - RULE-SET, Direct, DIRECT
   - RULE-SET, WeChat, DIRECT
   - RULE-SET, SteamCN, DIRECT
   - RULE-SET, AI, AI
   - RULE-SET, Apple, 苹果服务
   - RULE-SET, Telegram, Telegram
-  - RULE-SET, BilibiliHMT, 哔哩哔哩
-  - RULE-SET, GlobalMedia, 国际媒体
+  - RULE-SET, StreamingHMT, 哔哩哔哩
+  - RULE-SET, Streaming, 国际媒体
   - RULE-SET, Proxy, 全球加速
   - RULE-SET, China, DIRECT
   - GEOIP, CN, DIRECT

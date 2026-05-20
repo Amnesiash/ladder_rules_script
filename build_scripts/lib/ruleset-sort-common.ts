@@ -13,10 +13,6 @@ function normalizeCommaSpacing(line: string): string {
   return line.replace(/,\s*/g, ",");
 }
 
-function stripNoResolveSuffix(line: string): string {
-  return line.replace(/,no-resolve$/iu, "");
-}
-
 function isLikelyYamlHeaderLine(line: string): boolean {
   const trimmed = line.trim();
   return (
@@ -85,7 +81,6 @@ export function normalizeRulesetLines(lines: string[]): string[] {
     .filter((l) => !isCommentLine(l))
     .filter((l) => !isLikelyYamlHeaderLine(l))
     .map(normalizeCommaSpacing)
-    .map(stripNoResolveSuffix)
     .map(normalizeLooseDomainSyntax)
     .map(ensureCidrPrefixes);
 }

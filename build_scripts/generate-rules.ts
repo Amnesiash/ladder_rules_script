@@ -73,18 +73,21 @@ function transformQxLine(line: string): string | null {
     line.startsWith("AND") ||
     line.startsWith("OR") ||
     line.startsWith("NOT") ||
-    line.startsWith("DEST-PORT")
+    line.startsWith("DEST-PORT") ||
+    // GEOIP in upstream lists is often non-country (e.g. GEOIP,NETFLIX) and not usable in QX rulesets.
+    line.startsWith("GEOIP")
   ) {
     return null;
   }
 
   let x = line;
+  // QX output should not include ",no-resolve".
+  x = x.replace(/,no-resolve$/i, "");
   x = x.replace(/^DOMAIN,/, "HOST,");
   x = x.replace(/^DOMAIN-SUFFIX,/, "HOST-SUFFIX,");
   x = x.replace(/^DOMAIN-KEYWORD,/, "HOST-KEYWORD,");
   x = x.replace(/^DOMAIN-WILDCARD,/, "HOST-WILDCARD,");
   x = x.replace(/^IP-CIDR6,/, "IP6-CIDR,");
-  x = x.replace(/,no-resolve$/i, "");
   return x;
 }
 
@@ -229,6 +232,18 @@ async function writeClashRulesFile(outDir: string, sectionName: string, rules: s
   await writeFile(outPath, header + "\n" + "payload:" + "\n" + body + "\n");
 }
 
+function addNoResolveForIpRules(lines: string[]): string[] {
+  // Only apply to clients that support it (Clash/Loon/Shadowrocket).
+  // QX explicitly strips it in transformQxLine.
+  return lines.map((line) => {
+    if (line.startsWith("IP-CIDR,") || line.startsWith("IP-CIDR6,")) {
+      if (/,no-resolve$/i.test(line)) return line;
+      return `${line},no-resolve`;
+    }
+    return line;
+  });
+}
+
 async function main() {
   const opts = parseArgs(Bun.argv.slice(2));
   const repoRoot = path.resolve(process.cwd(), opts.repoRoot);
@@ -274,12 +289,12 @@ async function main() {
       .filter((l): l is string => Boolean(l))
       .map((l) => `${l},${section.name}`);
 
-    await writeRulesFile(loonDir, section.name, loonSorted);
-    await writeRulesFile(shadowDir, section.name, shadowSorted);
+    await writeRulesFile(loonDir, section.name, addNoResolveForIpRules(loonSorted));
+    await writeRulesFile(shadowDir, section.name, addNoResolveForIpRules(shadowSorted));
     await writeRulesFile(qxDir, section.name, qxSorted);
 
     // Clash/Mihomo uses classical rules in YAML "payload:" format.
-    const clashSorted = buildSortedRulesetForClash(merged);
+    const clashSorted = addNoResolveForIpRules(buildSortedRulesetForClash(merged));
     await writeClashRulesFile(clashDir, section.name, clashSorted);
   }
 }
