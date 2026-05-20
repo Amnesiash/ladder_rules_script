@@ -2,6 +2,14 @@ name: Clear Commits
 
 on:
   workflow_dispatch:
+    inputs:
+      confirm:
+        description: 'Type CLEAR_MAIN to rewrite main history'
+        required: true
+        default: ''
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -12,6 +20,14 @@ jobs:
           ref: main
       - name: Configure Git
         run: |
+          if [ "${{ github.event.inputs.confirm }}" != "CLEAR_MAIN" ]; then
+            echo "Confirmation missing/invalid; aborting."
+            exit 1
+          fi
+          if [ "${{ github.actor }}" != "Amnesiash" ]; then
+            echo "Only Amnesiash can run this workflow; aborting."
+            exit 1
+          fi
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git checkout --orphan clearhistory
