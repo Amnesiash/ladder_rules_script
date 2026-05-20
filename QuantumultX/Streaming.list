@@ -1,6 +1,6 @@
 # NAME: Streaming
-# UPDATE: 2026-05-20 17:08:27
-# TOTAL: 430
+# UPDATE: 2026-05-20 17:33:56
+# TOTAL: 429
 
 HOST,44wilhpljf.execute-api.ap-southeast-1.amazonaws.com,Streaming
 HOST,ai.google.dev,Streaming
@@ -431,4 +431,3 @@ IP-CIDR,64.120.128.0/17,Streaming
 IP-CIDR,66.197.128.0/17,Streaming
 IP-CIDR,69.53.224.0/19,Streaming
 IP-CIDR,8.41.4.0/24,Streaming
-GEOIP,NETFLIX,Streaming

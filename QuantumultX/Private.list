@@ -1,6 +1,6 @@
 # NAME: Private
-# UPDATE: 2026-05-20 17:08:27
-# TOTAL: 161
+# UPDATE: 2026-05-20 17:33:56
+# TOTAL: 170
 
 HOST,instant.arubanetworks.com,Private
 HOST,router.asus.com,Private
@@ -142,13 +142,20 @@ HOST-SUFFIX,www.miwifi.com,Private
 HOST-SUFFIX,www.routerlogin.com,Private
 HOST-SUFFIX,zte.home,Private
 IP-CIDR,0.0.0.0/8,Private
+IP-CIDR,0.0.0.0/8,Private
+IP-CIDR,10.0.0.0/8,Private
 IP-CIDR,10.0.0.0/8,Private
 IP-CIDR,100.64.0.0/10,Private
+IP-CIDR,100.64.0.0/10,Private
+IP-CIDR,127.0.0.0/8,Private
 IP-CIDR,127.0.0.0/8,Private
 IP-CIDR,169.254.0.0/16,Private
+IP-CIDR,169.254.0.0/16,Private
+IP-CIDR,172.16.0.0/12,Private
 IP-CIDR,172.16.0.0/12,Private
 IP-CIDR,192.0.0.0/24,Private
 IP-CIDR,192.0.2.0/24,Private
+IP-CIDR,192.168.0.0/16,Private
 IP-CIDR,192.168.0.0/16,Private
 IP-CIDR,192.88.99.0/24,Private
 IP-CIDR,198.18.0.0/15,Private
@@ -160,6 +167,8 @@ IP-CIDR,224.0.0.0/4,Private
 IP6-CIDR,::/127,Private
 IP6-CIDR,::1/128,Private
 IP6-CIDR,fc00::/7,Private
+IP6-CIDR,fc00::/7,Private
 IP6-CIDR,fd00::/8,Private
+IP6-CIDR,fe80::/10,Private
 IP6-CIDR,fe80::/10,Private
 IP6-CIDR,ff00::/8,Private
