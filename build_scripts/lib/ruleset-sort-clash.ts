@@ -158,7 +158,7 @@ function ruleFromDomainPayload(payload: string): string | null {
 
 function ruleFromCidrPayload(payload: string): string | null {
   if (!payload.trim()) return null;
-  return `${payload.includes(":") ? "IP-CIDR6" : "IP-CIDR"},${payload}`;
+  return `${payload.includes(":") ? "IP-CIDR6" : "IP-CIDR"},${payload},no-resolve`;
 }
 
 export function buildRulesetPartsForClash(lines: string[]): ClashRulesetParts {

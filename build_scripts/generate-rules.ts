@@ -102,6 +102,9 @@ async function fetchMihomoVersion(): Promise<string> {
   });
   const version = (await res.text()).trim();
   if (!version) throw new Error("Mihomo version response was empty");
+  if (!/^v\d+\.\d+\.\d+(?:[-+][A-Za-z0-9._-]+)?$/u.test(version)) {
+    throw new Error(`Unexpected Mihomo version response: ${version.slice(0, 80)}`);
+  }
   return version;
 }
 
@@ -119,7 +122,15 @@ function ReadableStreamToNodeStream(stream: ReadableStream<Uint8Array>) {
 }
 
 async function ensureMihomo(repoRoot: string): Promise<string> {
-  const version = await fetchMihomoVersion();
+  const version = await fetchMihomoVersion().catch(async () => {
+    const cacheRoot = path.join(repoRoot, ".tools", "mihomo-release");
+    const cached = (await readdir(cacheRoot).catch(() => []))
+      .filter((name) => /^v\d+\.\d+\.\d+(?:[-+][A-Za-z0-9._-]+)?$/u.test(name))
+      .sort()
+      .at(-1);
+    if (!cached) throw new Error("Unable to resolve Mihomo version and no cached Mihomo binary was found");
+    return cached;
+  });
   const baseName = mihomoBaseName();
   const cacheDir = path.join(repoRoot, ".tools", "mihomo-release", version);
   const binaryPath = path.join(cacheDir, baseName);
@@ -498,8 +509,6 @@ async function main() {
   }
   await rm(rulesWorkRoot, { recursive: true, force: true });
 
-  const mihomoPath = await ensureMihomo(repoRoot);
-
   for (const section of sections) {
     const contents = await Promise.all(section.urls.map((u) => fetchText(u)));
 
@@ -526,43 +535,10 @@ async function main() {
     markGenerated(generated, await writeRulesFile(shadowDir, shadowWorkDir, section.name, addNoResolveForIpRules(shadowSorted)));
     markGenerated(generated, await writeRulesFile(qxDir, qxWorkDir, section.name, qxSorted));
 
-    // Clash/Mihomo provider payloads follow the reference repo:
-    // - <Name>.yaml is the combined classical provider.
-    // - <Name>_Domain.txt is domain behavior payload.
-    // - <Name>_IP.txt is ipcidr behavior payload.
-    // - <Name>_Remaining.yaml keeps rules that cannot safely become domain/ipcidr providers.
+    // Main branch keeps only the combined classical provider. Split MRS/TXT providers
+    // are produced by build-release into .release/Clash.
     const clashParts = buildRulesetPartsForClash(merged);
-    const sectionStem = toSafeFileStem(section.name);
-    const clashSectionDir = path.join(clashDir, sectionStem);
-    const clashSectionWorkDir = path.join(clashWorkDir, sectionStem);
-    markGenerated(generated, await writeClashRulesFile(clashSectionDir, clashSectionWorkDir, section.name, clashParts.combined));
-    if (clashParts.domain.length > 0) {
-      const domainFiles = await writeClashMrsProviderFiles({
-        outDir: clashSectionDir,
-        workDir: clashSectionWorkDir,
-        fileStem: `${section.name}_Domain`,
-        behavior: "domain",
-        rules: clashParts.domain,
-        mihomoPath,
-      });
-      markGenerated(generated, domainFiles.mrsPath);
-      markGenerated(generated, domainFiles.txtPath);
-    }
-    if (clashParts.ipcidr.length > 0) {
-      const ipFiles = await writeClashMrsProviderFiles({
-        outDir: clashSectionDir,
-        workDir: clashSectionWorkDir,
-        fileStem: `${section.name}_IP`,
-        behavior: "ipcidr",
-        rules: clashParts.ipcidr,
-        mihomoPath,
-      });
-      markGenerated(generated, ipFiles.mrsPath);
-      markGenerated(generated, ipFiles.txtPath);
-    }
-    if (clashParts.remaining.length > 0) {
-      markGenerated(generated, await writeClashNamedYamlFile(clashSectionDir, clashSectionWorkDir, `${section.name}_Remaining`, clashParts.remaining));
-    }
+    markGenerated(generated, await writeClashRulesFile(clashDir, clashWorkDir, section.name, clashParts.combined));
   }
 
   await pruneStaleGeneratedFiles([loonDir, shadowDir, qxDir, clashDir, sourceDir], generated);

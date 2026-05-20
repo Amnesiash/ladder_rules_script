@@ -48,28 +48,28 @@ i: &RuleSet_i {type: http, behavior: ipcidr, format: mrs, interval: 86400}
 # 规则提供者
 rule-providers:
   # Domain 规则提供者
-  Direct_Domain:         {<<: *RuleSet_d, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Direct/Direct_Domain.mrs, path: ./ruleset/Direct/Direct_Domain.mrs}
-  WeChat_Domain:         {<<: *RuleSet_d, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/WeChat/WeChat_Domain.mrs, path: ./ruleset/WeChat/WeChat_Domain.mrs}
-  SteamCN_Domain:        {<<: *RuleSet_d, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/SteamCN/SteamCN_Domain.mrs, path: ./ruleset/SteamCN/SteamCN_Domain.mrs}
-  Private_Domain:        {<<: *RuleSet_d, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Private/Private_Domain.mrs, path: ./ruleset/Private/Private_Domain.mrs}
-  AI_Domain:             {<<: *RuleSet_d, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/AI/AI_Domain.mrs, path: ./ruleset/AI/AI_Domain.mrs}
-  Apple_Domain:          {<<: *RuleSet_d, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Apple/Apple_Domain.mrs, path: ./ruleset/Apple/Apple_Domain.mrs}
-  Telegram_Domain:       {<<: *RuleSet_d, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Telegram/Telegram_Domain.mrs, path: ./ruleset/Telegram/Telegram_Domain.mrs}
-  StreamingHMT_Domain:   {<<: *RuleSet_d, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/StreamingHMT/StreamingHMT_Domain.mrs, path: ./ruleset/StreamingHMT/StreamingHMT_Domain.mrs}
-  Streaming_Domain:      {<<: *RuleSet_d, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Streaming/Streaming_Domain.mrs, path: ./ruleset/Streaming/Streaming_Domain.mrs}
-  Proxy_Domain:          {<<: *RuleSet_d, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Proxy/Proxy_Domain.mrs, path: ./ruleset/Proxy/Proxy_Domain.mrs}
-  China_Domain:          {<<: *RuleSet_d, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/China/China_Domain.mrs, path: ./ruleset/China/China_Domain.mrs}
+  Direct_Domain:         {<<: *RuleSet_d, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/Direct/Direct_Domain.mrs, path: ./ruleset/Direct/Direct_Domain.mrs}
+  WeChat_Domain:         {<<: *RuleSet_d, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/WeChat/WeChat_Domain.mrs, path: ./ruleset/WeChat/WeChat_Domain.mrs}
+  SteamCN_Domain:        {<<: *RuleSet_d, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/SteamCN/SteamCN_Domain.mrs, path: ./ruleset/SteamCN/SteamCN_Domain.mrs}
+  Private_Domain:        {<<: *RuleSet_d, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/Private/Private_Domain.mrs, path: ./ruleset/Private/Private_Domain.mrs}
+  AI_Domain:             {<<: *RuleSet_d, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/AI/AI_Domain.mrs, path: ./ruleset/AI/AI_Domain.mrs}
+  Apple_Domain:          {<<: *RuleSet_d, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/Apple/Apple_Domain.mrs, path: ./ruleset/Apple/Apple_Domain.mrs}
+  Telegram_Domain:       {<<: *RuleSet_d, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/Telegram/Telegram_Domain.mrs, path: ./ruleset/Telegram/Telegram_Domain.mrs}
+  StreamingHMT_Domain:   {<<: *RuleSet_d, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/StreamingHMT/StreamingHMT_Domain.mrs, path: ./ruleset/StreamingHMT/StreamingHMT_Domain.mrs}
+  Streaming_Domain:      {<<: *RuleSet_d, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/Streaming/Streaming_Domain.mrs, path: ./ruleset/Streaming/Streaming_Domain.mrs}
+  Proxy_Domain:          {<<: *RuleSet_d, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/Proxy/Proxy_Domain.mrs, path: ./ruleset/Proxy/Proxy_Domain.mrs}
+  China_Domain:          {<<: *RuleSet_d, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/China/China_Domain.mrs, path: ./ruleset/China/China_Domain.mrs}
 
   # IP 规则提供者
-  WeChat_IP:             {<<: *RuleSet_i, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/WeChat/WeChat_IP.mrs, path: ./ruleset/WeChat/WeChat_IP.mrs}
-  Private_IP:            {<<: *RuleSet_i, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Private/Private_IP.mrs, path: ./ruleset/Private/Private_IP.mrs}
-  AI_IP:                 {<<: *RuleSet_i, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/AI/AI_IP.mrs, path: ./ruleset/AI/AI_IP.mrs}
-  Apple_IP:              {<<: *RuleSet_i, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Apple/Apple_IP.mrs, path: ./ruleset/Apple/Apple_IP.mrs}
-  Telegram_IP:           {<<: *RuleSet_i, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Telegram/Telegram_IP.mrs, path: ./ruleset/Telegram/Telegram_IP.mrs}
-  StreamingHMT_IP:       {<<: *RuleSet_i, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/StreamingHMT/StreamingHMT_IP.mrs, path: ./ruleset/StreamingHMT/StreamingHMT_IP.mrs}
-  Streaming_IP:          {<<: *RuleSet_i, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Streaming/Streaming_IP.mrs, path: ./ruleset/Streaming/Streaming_IP.mrs}
-  Proxy_IP:              {<<: *RuleSet_i, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/Proxy/Proxy_IP.mrs, path: ./ruleset/Proxy/Proxy_IP.mrs}
-  China_IP:              {<<: *RuleSet_i, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Clash/China/China_IP.mrs, path: ./ruleset/China/China_IP.mrs}
+  WeChat_IP:             {<<: *RuleSet_i, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/WeChat/WeChat_IP.mrs, path: ./ruleset/WeChat/WeChat_IP.mrs}
+  Private_IP:            {<<: *RuleSet_i, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/Private/Private_IP.mrs, path: ./ruleset/Private/Private_IP.mrs}
+  AI_IP:                 {<<: *RuleSet_i, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/AI/AI_IP.mrs, path: ./ruleset/AI/AI_IP.mrs}
+  Apple_IP:              {<<: *RuleSet_i, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/Apple/Apple_IP.mrs, path: ./ruleset/Apple/Apple_IP.mrs}
+  Telegram_IP:           {<<: *RuleSet_i, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/Telegram/Telegram_IP.mrs, path: ./ruleset/Telegram/Telegram_IP.mrs}
+  StreamingHMT_IP:       {<<: *RuleSet_i, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/StreamingHMT/StreamingHMT_IP.mrs, path: ./ruleset/StreamingHMT/StreamingHMT_IP.mrs}
+  Streaming_IP:          {<<: *RuleSet_i, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/Streaming/Streaming_IP.mrs, path: ./ruleset/Streaming/Streaming_IP.mrs}
+  Proxy_IP:              {<<: *RuleSet_i, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/Proxy/Proxy_IP.mrs, path: ./ruleset/Proxy/Proxy_IP.mrs}
+  China_IP:              {<<: *RuleSet_i, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/China/China_IP.mrs, path: ./ruleset/China/China_IP.mrs}
 
 # ==================== 规则路由 ====================
 rules: 
