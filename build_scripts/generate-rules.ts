@@ -16,8 +16,6 @@ import { buildSortedRulesetForShadowrocket } from "./lib/ruleset-sort-shadowrock
 import { buildSortedRulesetForQuantumultX } from "./lib/ruleset-sort-quantumultx";
 import { buildRulesetPartsForClash } from "./lib/ruleset-sort-clash";
 
-const CLASH_DOMAIN_PLACEHOLDER = "blackhole.invalid";
-const CLASH_IPCIDR_PLACEHOLDER = "203.0.113.1/32";
 const MIHOMO_VERSION_URL = "https://github.com/MetaCubeX/mihomo/releases/latest/download/version.txt";
 const MIHOMO_RELEASE_BASE_URL = "https://github.com/MetaCubeX/mihomo/releases/download";
 
@@ -538,26 +536,30 @@ async function main() {
     const clashSectionDir = path.join(clashDir, sectionStem);
     const clashSectionWorkDir = path.join(clashWorkDir, sectionStem);
     markGenerated(generated, await writeClashRulesFile(clashSectionDir, clashSectionWorkDir, section.name, clashParts.combined));
-    const domainFiles = await writeClashMrsProviderFiles({
-      outDir: clashSectionDir,
-      workDir: clashSectionWorkDir,
-      fileStem: `${section.name}_Domain`,
-      behavior: "domain",
-      rules: clashParts.domain.length > 0 ? clashParts.domain : [CLASH_DOMAIN_PLACEHOLDER],
-      mihomoPath,
-    });
-    markGenerated(generated, domainFiles.mrsPath);
-    markGenerated(generated, domainFiles.txtPath);
-    const ipFiles = await writeClashMrsProviderFiles({
-      outDir: clashSectionDir,
-      workDir: clashSectionWorkDir,
-      fileStem: `${section.name}_IP`,
-      behavior: "ipcidr",
-      rules: clashParts.ipcidr.length > 0 ? clashParts.ipcidr : [CLASH_IPCIDR_PLACEHOLDER],
-      mihomoPath,
-    });
-    markGenerated(generated, ipFiles.mrsPath);
-    markGenerated(generated, ipFiles.txtPath);
+    if (clashParts.domain.length > 0) {
+      const domainFiles = await writeClashMrsProviderFiles({
+        outDir: clashSectionDir,
+        workDir: clashSectionWorkDir,
+        fileStem: `${section.name}_Domain`,
+        behavior: "domain",
+        rules: clashParts.domain,
+        mihomoPath,
+      });
+      markGenerated(generated, domainFiles.mrsPath);
+      markGenerated(generated, domainFiles.txtPath);
+    }
+    if (clashParts.ipcidr.length > 0) {
+      const ipFiles = await writeClashMrsProviderFiles({
+        outDir: clashSectionDir,
+        workDir: clashSectionWorkDir,
+        fileStem: `${section.name}_IP`,
+        behavior: "ipcidr",
+        rules: clashParts.ipcidr,
+        mihomoPath,
+      });
+      markGenerated(generated, ipFiles.mrsPath);
+      markGenerated(generated, ipFiles.txtPath);
+    }
     if (clashParts.remaining.length > 0) {
       markGenerated(generated, await writeClashNamedYamlFile(clashSectionDir, clashSectionWorkDir, `${section.name}_Remaining`, clashParts.remaining));
     }
