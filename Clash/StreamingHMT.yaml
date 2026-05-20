@@ -1,5 +1,5 @@
 # NAME: StreamingHMT
-# UPDATE: 2026-05-20 03:57:31
+# UPDATE: 2026-05-20 17:08:27
 # TOTAL: 16
 
 payload:
@@ -9,12 +9,12 @@ payload:
   - DOMAIN,app.biliapi.com
   - DOMAIN,app.biliapi.net
   - DOMAIN,app.bilibili.com
+  - DOMAIN,cache.video.iqiyi.com
   - DOMAIN,grpc.biliapi.net
   - DOMAIN,m.bilibili.com
+  - DOMAIN,mobileso.bz.mgtv.com
   - DOMAIN,upos-hz-mirrorakam.akamaized.net
   - DOMAIN,www.bilibili.com
-  - DOMAIN,cache.video.iqiyi.com
-  - DOMAIN,mobileso.bz.mgtv.com
   - DOMAIN-SUFFIX,api.mgtv.com
   - DOMAIN-KEYWORD,cn-hk-eq-bcache-
   - IP-CIDR,116.211.202.206/32

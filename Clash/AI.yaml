@@ -1,40 +1,41 @@
 # NAME: AI
-# UPDATE: 2026-05-20 03:57:29
-# TOTAL: 229
+# UPDATE: 2026-05-20 17:08:27
+# TOTAL: 232
 
 payload:
-  - DOMAIN,apple-relay.apple.com
-  - DOMAIN,apple-relay.cloudflare.com
-  - DOMAIN,apple-relay.fastly-edge.com
-  - DOMAIN,cp4.cloudflare.com
-  - DOMAIN,guzzoni.apple.com
-  - DOMAIN,gspe1-ssl.ls.apple.com
-  - DOMAIN,api.statsig.com
-  - DOMAIN,api-iam.intercom.io
-  - DOMAIN,o33249.ingest.sentry.io
-  - DOMAIN,openaiapi-site.azureedge.net
-  - DOMAIN,gateway.ai.cloudflare.com
+  - DOMAIN,ai.google.dev
   - DOMAIN,aistudio.google.com
   - DOMAIN,alkalicore-pa.clients6.google.com
   - DOMAIN,alkalimakersuite-pa.clients6.google.com
-  - DOMAIN,antigravity.google
   - DOMAIN,antigravity-unleash.goog
-  - DOMAIN,ai.google.dev
-  - DOMAIN,bard.google.com
-  - DOMAIN,gemini.google.com
-  - DOMAIN,imagine.meta.com
-  - DOMAIN,copilot.microsoft.com
-  - DOMAIN,sydney.bing.com
-  - DOMAIN,www.bing.com
-  - DOMAIN,pplx-res.cloudinary.com
+  - DOMAIN,antigravity.google
+  - DOMAIN,api-iam.intercom.io
   - DOMAIN,api.githubcopilot.com
   - DOMAIN,api.groq.com
+  - DOMAIN,api.statsig.com
   - DOMAIN,api.together.xyz
+  - DOMAIN,apple-relay.apple.com
+  - DOMAIN,apple-relay.cloudflare.com
+  - DOMAIN,apple-relay.fastly-edge.com
+  - DOMAIN,bard.google.com
   - DOMAIN,console.groq.com
   - DOMAIN,copilot-proxy.githubusercontent.com
+  - DOMAIN,copilot.microsoft.com
+  - DOMAIN,cp4.cloudflare.com
+  - DOMAIN,gateway.ai.cloudflare.com
+  - DOMAIN,gemini.google.com
   - DOMAIN,generativelanguage.googleapis.com
+  - DOMAIN,gspe1-ssl.ls.apple.com
+  - DOMAIN,guzzoni.apple.com
+  - DOMAIN,imagine.meta.com
   - DOMAIN,notebooklm.google.com
+  - DOMAIN,o33249.ingest.sentry.io
+  - DOMAIN,openaiapi-site.azureedge.net
+  - DOMAIN,pplx-res.cloudinary.com
+  - DOMAIN,sydney.bing.com
+  - DOMAIN,www.bing.com
   - DOMAIN-SUFFIX,agentclientprotocol.com
+  - DOMAIN-SUFFIX,ai.azure.com
   - DOMAIN-SUFFIX,ai.com
   - DOMAIN-SUFFIX,ai.studio
   - DOMAIN-SUFFIX,aicode.googleapis.com
@@ -54,6 +55,7 @@ payload:
   - DOMAIN-SUFFIX,apps.mzstatic.com
   - DOMAIN-SUFFIX,auth0.com
   - DOMAIN-SUFFIX,bard.google.com
+  - DOMAIN-SUFFIX,byteoversea.com,extended-matching
   - DOMAIN-SUFFIX,cerebras.ai
   - DOMAIN-SUFFIX,character.ai
   - DOMAIN-SUFFIX,chat.com
@@ -61,7 +63,9 @@ payload:
   - DOMAIN-SUFFIX,chatgpt.livekit.cloud
   - DOMAIN-SUFFIX,chutes.ai
   - DOMAIN-SUFFIX,cici.com
+  - DOMAIN-SUFFIX,cici.com,extended-matching
   - DOMAIN-SUFFIX,ciciai.com
+  - DOMAIN-SUFFIX,ciciai.com,extended-matching
   - DOMAIN-SUFFIX,ciciaicdn.com
   - DOMAIN-SUFFIX,clau.de
   - DOMAIN-SUFFIX,claude.ai
@@ -82,6 +86,7 @@ payload:
   - DOMAIN-SUFFIX,comfy.org
   - DOMAIN-SUFFIX,comfyci.org
   - DOMAIN-SUFFIX,comfyregistry.org
+  - DOMAIN-SUFFIX,copilot.cloud.microsoft
   - DOMAIN-SUFFIX,copilot.microsoft.com
   - DOMAIN-SUFFIX,coze.com
   - DOMAIN-SUFFIX,crewai.com
@@ -99,6 +104,7 @@ payload:
   - DOMAIN-SUFFIX,diffusionbee.com
   - DOMAIN-SUFFIX,dify.ai
   - DOMAIN-SUFFIX,dola.com
+  - DOMAIN-SUFFIX,dola.com,extended-matching
   - DOMAIN-SUFFIX,duck.ai
   - DOMAIN-SUFFIX,elevenlabs.com
   - DOMAIN-SUFFIX,elevenlabs.io
@@ -119,6 +125,7 @@ payload:
   - DOMAIN-SUFFIX,googleapis.com
   - DOMAIN-SUFFIX,googleusercontent.com
   - DOMAIN-SUFFIX,grazie.ai
+  - DOMAIN-SUFFIX,grazie.aws.intellij.net
   - DOMAIN-SUFFIX,grok.com
   - DOMAIN-SUFFIX,grok.x.com
   - DOMAIN-SUFFIX,groq.com
@@ -133,6 +140,7 @@ payload:
   - DOMAIN-SUFFIX,intercom.io
   - DOMAIN-SUFFIX,intercomcdn.com
   - DOMAIN-SUFFIX,jasper.ai
+  - DOMAIN-SUFFIX,jetbrains.ai
   - DOMAIN-SUFFIX,jules.google
   - DOMAIN-SUFFIX,jules.google.com
   - DOMAIN-SUFFIX,kiro.dev
@@ -208,12 +216,9 @@ payload:
   - DOMAIN-SUFFIX,youmind.com
   - DOMAIN-SUFFIX,youmind.site
   - DOMAIN-SUFFIX,zed.dev
-  - DOMAIN-SUFFIX,byteoversea.com
-  - DOMAIN-SUFFIX,ai.azure.com
-  - DOMAIN-SUFFIX,copilot.cloud.microsoft
-  - DOMAIN-SUFFIX,grazie.aws.intellij.net
-  - DOMAIN-SUFFIX,jetbrains.ai
+  - DOMAIN-KEYWORD,anthropic
   - DOMAIN-KEYWORD,antigravity
+  - DOMAIN-KEYWORD,claude
   - DOMAIN-KEYWORD,colab
   - DOMAIN-KEYWORD,developerprofiles
   - DOMAIN-KEYWORD,diabrowser
@@ -225,10 +230,8 @@ payload:
   - DOMAIN-KEYWORD,openai-proxy
   - DOMAIN-KEYWORD,openaiapi
   - DOMAIN-KEYWORD,openaicom
-  - DOMAIN-KEYWORD,anthropic
-  - DOMAIN-KEYWORD,claude
   - IP-CIDR,104.18.6.192/32
   - IP-CIDR,104.18.7.192/32
   - IP-CIDR,24.199.123.28/32
   - IP-CIDR,64.23.132.171/32
-  - IP-ASN,20473,no-resolve
+  - IP-ASN,20473

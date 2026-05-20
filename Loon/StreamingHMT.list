@@ -1,5 +1,5 @@
 # NAME: StreamingHMT
-# UPDATE: 2026-05-20 15:50:55
+# UPDATE: 2026-05-20 17:08:27
 # TOTAL: 16
 
 DOMAIN,api.biliapi.com
@@ -16,5 +16,5 @@ DOMAIN,upos-hz-mirrorakam.akamaized.net
 DOMAIN,www.bilibili.com
 DOMAIN-SUFFIX,api.mgtv.com
 DOMAIN-KEYWORD,cn-hk-eq-bcache-
-IP-CIDR,116.211.202.206/32,no-resolve
-IP-CIDR,116.211.202.216/32,no-resolve
+IP-CIDR,116.211.202.206/32
+IP-CIDR,116.211.202.216/32
