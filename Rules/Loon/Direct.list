@@ -1,28 +1,30 @@
-# UpdateTime: 2026-05-20 11:38:38
-# RuleCount: 55
+# NAME: Direct
+# UPDATE: 2026-05-20 13:53:25
+# TOTAL: 67
 
+DOMAIN,analytics.strava.com
 DOMAIN,app.adjust.com
+DOMAIN,app.appsflyer.com
 DOMAIN,bdtj.tagtic.cn
+DOMAIN,ci.android.com
+DOMAIN,clientservices.googleapis.com
 DOMAIN,dl.google.com
+DOMAIN,dl.l.google.com
 DOMAIN,errlog.umeng.com
 DOMAIN,fairplay.l.qq.com
 DOMAIN,livew.l.qq.com
+DOMAIN,log.mmstat.com
 DOMAIN,msg.umeng.com
 DOMAIN,msg.umengcloud.com
 DOMAIN,origin-a.akamaihd.net
+DOMAIN,redirector.gvt1.com
 DOMAIN,rewards.hypixel.net
+DOMAIN,sycm.mmstat.com
 DOMAIN,tracking.miui.com
+DOMAIN,update.googleapis.com
 DOMAIN,vd.l.qq.com
-DOMAIN-SUFFIX,DSCloud.biz
-DOMAIN-SUFFIX,DSCloud.me
-DOMAIN-SUFFIX,DSCloud.mobi
-DOMAIN-SUFFIX,DSmyNAS.com
-DOMAIN-SUFFIX,DSmyNAS.net
-DOMAIN-SUFFIX,DSmyNAS.org
-DOMAIN-SUFFIX,DiskStation.me
-DOMAIN-SUFFIX,FamilyDS.com
-DOMAIN-SUFFIX,FamilyDS.net
-DOMAIN-SUFFIX,FamilyDS.org
+DOMAIN,vi.l.qq.com
+DOMAIN-SUFFIX,blog.google
 DOMAIN-SUFFIX,checkip.dyndns.org
 DOMAIN-SUFFIX,checkip.synology.com
 DOMAIN-SUFFIX,checkipv6.dyndns.org
@@ -30,9 +32,20 @@ DOMAIN-SUFFIX,clawcloudrun.com
 DOMAIN-SUFFIX,cloudstudio.work
 DOMAIN-SUFFIX,cocopilot.org
 DOMAIN-SUFFIX,czzyvideo.com
+DOMAIN-SUFFIX,DiskStation.me
 DOMAIN-SUFFIX,dizhensubao.getui.com
+DOMAIN-SUFFIX,DSCloud.biz
+DOMAIN-SUFFIX,DSCloud.me
+DOMAIN-SUFFIX,DSCloud.mobi
+DOMAIN-SUFFIX,DSmyNAS.com
+DOMAIN-SUFFIX,DSmyNAS.net
+DOMAIN-SUFFIX,DSmyNAS.org
+DOMAIN-SUFFIX,FamilyDS.com
+DOMAIN-SUFFIX,FamilyDS.net
+DOMAIN-SUFFIX,FamilyDS.org
 DOMAIN-SUFFIX,ghfast.top
 DOMAIN-SUFFIX,ghp.ci
+DOMAIN-SUFFIX,googletraveladservices-cn.com
 DOMAIN-SUFFIX,googletraveladservices.com
 DOMAIN-SUFFIX,gradio.live
 DOMAIN-SUFFIX,hxcy.top

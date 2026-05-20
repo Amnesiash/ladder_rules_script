@@ -1,0 +1,39 @@
+# NAME: Streaming_Remaining
+# UPDATE: 2026-05-20 03:57:31
+# TOTAL: 34
+
+payload:
+  - DOMAIN-KEYWORD,jooxweb-api
+  - DOMAIN-KEYWORD,spotify.com
+  - DOMAIN-KEYWORD,-spotify-com
+  - DOMAIN-KEYWORD,abematv.akamaized.net
+  - DOMAIN-KEYWORD,avoddashs
+  - DOMAIN-KEYWORD,bbcfmt
+  - DOMAIN-KEYWORD,uk-live
+  - DOMAIN-KEYWORD,voddazn
+  - DOMAIN-KEYWORD,discovery.uplynk.com
+  - DOMAIN-KEYWORD,hamivideo.cdn.hinet.net
+  - DOMAIN-KEYWORD,.hbogoasia.
+  - DOMAIN-KEYWORD,netflixdnstest
+  - DOMAIN-KEYWORD,apiproxy-device-prod-nlb-
+  - DOMAIN-KEYWORD,dualstack.apiproxy-
+  - DOMAIN-KEYWORD,tiktokcdn-
+  - DOMAIN-KEYWORD,anthropic
+  - DOMAIN-KEYWORD,claude
+  - DOMAIN-KEYWORD,openai
+  - DOMAIN-KEYWORD,hbogoasia
+  - DOMAIN-KEYWORD,japonx
+  - DOMAIN-KEYWORD,japronx
+  - DOMAIN-KEYWORD,nowtv100
+  - DOMAIN-KEYWORD,rthklive
+  - DOMAIN-KEYWORD,nivod
+  - DOMAIN-KEYWORD,olevod
+  - DOMAIN-KEYWORD,-spotify-
+  - DOMAIN-KEYWORD,tiktokcdn
+  - DOMAIN-KEYWORD,ttvnw
+  - DOMAIN-KEYWORD,youtube
+  - PROCESS-NAME,com.viu.pad
+  - PROCESS-NAME,com.viu.phone
+  - PROCESS-NAME,com.vuclip.viu
+  - URL-REGEX,^https?:\/\/www\.amazon\.com\/(Amazon-Video|gp\/video)\/
+  - GEOIP,NETFLIX,no-resolve

@@ -1,0 +1,17 @@
+# NAME: StreamingHMT_Domain
+# UPDATE: 2026-05-20 03:57:31
+# TOTAL: 13
+
++.api.mgtv.com
+api.biliapi.com
+api.biliapi.net
+api.bilibili.com
+app.biliapi.com
+app.biliapi.net
+app.bilibili.com
+cache.video.iqiyi.com
+grpc.biliapi.net
+m.bilibili.com
+mobileso.bz.mgtv.com
+upos-hz-mirrorakam.akamaized.net
+www.bilibili.com

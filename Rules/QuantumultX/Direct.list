@@ -1,28 +1,30 @@
-# UpdateTime: 2026-05-20 11:38:38
-# RuleCount: 55
+# NAME: Direct
+# UPDATE: 2026-05-20 13:53:25
+# TOTAL: 67
 
+HOST,analytics.strava.com,Direct
 HOST,app.adjust.com,Direct
+HOST,app.appsflyer.com,Direct
 HOST,bdtj.tagtic.cn,Direct
+HOST,ci.android.com,Direct
+HOST,clientservices.googleapis.com,Direct
 HOST,dl.google.com,Direct
+HOST,dl.l.google.com,Direct
 HOST,errlog.umeng.com,Direct
 HOST,fairplay.l.qq.com,Direct
 HOST,livew.l.qq.com,Direct
+HOST,log.mmstat.com,Direct
 HOST,msg.umeng.com,Direct
 HOST,msg.umengcloud.com,Direct
 HOST,origin-a.akamaihd.net,Direct
+HOST,redirector.gvt1.com,Direct
 HOST,rewards.hypixel.net,Direct
+HOST,sycm.mmstat.com,Direct
 HOST,tracking.miui.com,Direct
+HOST,update.googleapis.com,Direct
 HOST,vd.l.qq.com,Direct
-HOST-SUFFIX,DSCloud.biz,Direct
-HOST-SUFFIX,DSCloud.me,Direct
-HOST-SUFFIX,DSCloud.mobi,Direct
-HOST-SUFFIX,DSmyNAS.com,Direct
-HOST-SUFFIX,DSmyNAS.net,Direct
-HOST-SUFFIX,DSmyNAS.org,Direct
-HOST-SUFFIX,DiskStation.me,Direct
-HOST-SUFFIX,FamilyDS.com,Direct
-HOST-SUFFIX,FamilyDS.net,Direct
-HOST-SUFFIX,FamilyDS.org,Direct
+HOST,vi.l.qq.com,Direct
+HOST-SUFFIX,blog.google,Direct
 HOST-SUFFIX,checkip.dyndns.org,Direct
 HOST-SUFFIX,checkip.synology.com,Direct
 HOST-SUFFIX,checkipv6.dyndns.org,Direct
@@ -30,9 +32,20 @@ HOST-SUFFIX,clawcloudrun.com,Direct
 HOST-SUFFIX,cloudstudio.work,Direct
 HOST-SUFFIX,cocopilot.org,Direct
 HOST-SUFFIX,czzyvideo.com,Direct
+HOST-SUFFIX,DiskStation.me,Direct
 HOST-SUFFIX,dizhensubao.getui.com,Direct
+HOST-SUFFIX,DSCloud.biz,Direct
+HOST-SUFFIX,DSCloud.me,Direct
+HOST-SUFFIX,DSCloud.mobi,Direct
+HOST-SUFFIX,DSmyNAS.com,Direct
+HOST-SUFFIX,DSmyNAS.net,Direct
+HOST-SUFFIX,DSmyNAS.org,Direct
+HOST-SUFFIX,FamilyDS.com,Direct
+HOST-SUFFIX,FamilyDS.net,Direct
+HOST-SUFFIX,FamilyDS.org,Direct
 HOST-SUFFIX,ghfast.top,Direct
 HOST-SUFFIX,ghp.ci,Direct
+HOST-SUFFIX,googletraveladservices-cn.com,Direct
 HOST-SUFFIX,googletraveladservices.com,Direct
 HOST-SUFFIX,gradio.live,Direct
 HOST-SUFFIX,hxcy.top,Direct
