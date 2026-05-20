@@ -46,4 +46,3 @@ bun run build:release:clean
 
 产物输出：
 - `.release/Rules/`（打包自 `Rules/`）
-- `.release/BUILD_INFO.json`（构建时间、git commit 等信息）

@@ -1,4 +1,4 @@
-import { cp, mkdir, readdir, rm, stat, writeFile } from "node:fs/promises";
+import { cp, mkdir, readdir, rm, stat } from "node:fs/promises";
 import path from "node:path";
 
 type BuildOptions = {
@@ -52,17 +52,6 @@ function printHelpAndExit(): never {
     ].join("\n"),
   );
   process.exit(0);
-}
-
-function gitHeadSha(repoRoot: string): string | undefined {
-  try {
-    const result = Bun.spawnSync(["git", "rev-parse", "HEAD"], { cwd: repoRoot });
-    if (result.exitCode !== 0) return undefined;
-    const text = (result.stdout?.toString() ?? "").trim();
-    return text.length ? text : undefined;
-  } catch {
-    return undefined;
-  }
 }
 
 async function listFilesRecursively(dir: string): Promise<string[]> {
@@ -125,15 +114,6 @@ async function main() {
   if (opts.prune) {
     await pruneReleaseDir(outDirAbs);
   }
-
-  const buildInfo = {
-    buildTime: new Date().toISOString(),
-    repo: opts.repo,
-    gitHead: gitHeadSha(repoRoot),
-    outputDir: opts.outDir,
-    packagedDir: opts.rulesDir,
-  };
-  await writeFile(path.join(outDirAbs, "BUILD_INFO.json"), JSON.stringify(buildInfo, null, 2) + "\n");
 
   const fileCount = (await listFilesRecursively(outDirAbs)).length;
   // eslint-disable-next-line no-console
