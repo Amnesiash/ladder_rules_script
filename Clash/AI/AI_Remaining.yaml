@@ -1,0 +1,20 @@
+# NAME: AI_Remaining
+# UPDATE: 2026-05-20 20:39:47
+# TOTAL: 15
+
+payload:
+  - DOMAIN-KEYWORD,antigravity
+  - DOMAIN-KEYWORD,colab
+  - DOMAIN-KEYWORD,developerprofiles
+  - DOMAIN-KEYWORD,diabrowser
+  - DOMAIN-KEYWORD,generativelanguage
+  - DOMAIN-KEYWORD,generativelanguage.googleapis
+  - DOMAIN-KEYWORD,labs.google
+  - DOMAIN-KEYWORD,notebooklm.google
+  - DOMAIN-KEYWORD,openai
+  - DOMAIN-KEYWORD,openai-proxy
+  - DOMAIN-KEYWORD,openaiapi
+  - DOMAIN-KEYWORD,openaicom
+  - DOMAIN-KEYWORD,anthropic
+  - DOMAIN-KEYWORD,claude
+  - IP-ASN,20473,no-resolve
