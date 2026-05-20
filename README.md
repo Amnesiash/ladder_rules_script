@@ -27,3 +27,23 @@
 
 以下排名不分先后
 [@ACL4SSR](https://github.com/ACL4SSR) [@ConnersHua](https://github.com/ConnersHua) [@blackmatrix7](https://github.com/blackmatrix7) [@Loyalsoldier](https://github.com/Loyalsoldier) [@Repcz](https://github.com/Repcz)
+
+## 本地构建（Bun）
+
+本项目提供与 `rule` 项目一致的 Bun 构建入口：生成 `.release/` 本地产物目录。
+
+```bash
+cd /Users/company/Desktop/Project/ladder_rules_script
+# 1) 同步 Clash 规则（从隔壁 rule 项目的 release 分支产物）
+bun run sync:clash -- --rule-repo /Users/company/Desktop/Project/rule --ladder-repo .
+
+# 2) 生成 Loon / QuantumultX / Shadowrocket 规则（读取 Rules/rule_source.txt）
+bun run generate:clients
+
+# 3) 生成 release 产物（不会包含 Rules/Custom）
+bun run build:release:clean
+```
+
+产物输出：
+- `.release/Rules/`（打包自 `Rules/`）
+- `.release/BUILD_INFO.json`（构建时间、git commit 等信息）
