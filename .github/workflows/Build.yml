@@ -6,9 +6,6 @@ permissions:
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
   schedule:
     - cron: "5 0,12 * * *"
 
@@ -54,6 +51,20 @@ jobs:
         run: |
           cd ladder-repo
           bun run generate:clients
+
+      - name: Push rule updates to main
+        run: |
+          cd ladder-repo
+          git config --local user.email "${{ github.actor }}@users.noreply.github.com"
+          git config --local user.name "${{ github.actor }}"
+          # 仅在生成结果有变化时更新 main
+          if [[ -n $(git status -s) ]]; then
+            git add -A
+            git commit -m "Auto Update (rules) $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')"
+            git push origin HEAD:main
+          else
+            echo "No rule changes to push to main."
+          fi
 
       - name: Prepare ladder release artifacts
         run: |

@@ -90,8 +90,24 @@ async function writeRulesFile(outDir: string, sectionName: string, rules: string
   await mkdir(outDir, { recursive: true });
   const updateTime = formatUpdateTimeShanghai(new Date());
   const name = toSafeFileStem(sectionName);
-  const header = [`# NAME: ${name}`, `# UPDATE: ${updateTime}`, `# TOTAL: ${rules.length}`, "", ""].join("\n");
   const outPath = path.join(outDir, `${name}.list`);
+
+  // Compare-update semantics:
+  // - If the rules content hasn't changed, keep the existing file unchanged (no UPDATE timestamp churn).
+  // - Only rewrite when rules differ.
+  const existing = await readFile(outPath, "utf8").catch(() => "");
+  const existingRules = existing
+    .split(/\r?\n/)
+    .map((l) => l.trimEnd())
+    .filter((l) => l && !l.startsWith("#"));
+
+  const sameRules =
+    existingRules.length === rules.length &&
+    existingRules.every((v, i) => v === rules[i]);
+
+  if (sameRules) return;
+
+  const header = [`# NAME: ${name}`, `# UPDATE: ${updateTime}`, `# TOTAL: ${rules.length}`, "", ""].join("\n");
   await writeFile(outPath, header + rules.join("\n") + "\n");
 }
 

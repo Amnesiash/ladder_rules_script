@@ -1,4 +1,5 @@
-import { cp, mkdir, readdir, rm, stat } from "node:fs/promises";
+import { cp, mkdir, readdir, readFile, rm, stat, writeFile } from "node:fs/promises";
+import { createHash } from "node:crypto";
 import path from "node:path";
 
 type Options = {
@@ -22,9 +23,10 @@ function parseArgs(argv: string[]): Options {
           "  bun run build_scripts/sync-clash-from-rule-release.ts --rule-repo <path> [--ladder-repo <path>]",
           "",
           "Notes:",
-          "  Expects rule repo to have `.release/Rules/Clash/` (release branch).",
-          "  Copies all contents under that folder into `Rules/Clash/` in ladder repo.",
-          "  Deletes README* and non-rule files at the rule repo root `.release/` only.",
+          "  Expects rule repo artifacts to have either:",
+          "  - `Clash/` at artifacts root, OR",
+          "  - `Rules/Clash/` at artifacts root.",
+          "  Copies all category folders under that location into `Rules/Clash/` in ladder repo.",
         ].join("\n"),
       );
       process.exit(0);
@@ -51,12 +53,25 @@ async function main() {
   const artifactsRoot = dotReleaseStat?.isDirectory() ? dotReleaseRoot : ruleRepoAbs;
 
   const outDir = path.join(ladderRepoAbs, "Rules", "Clash");
-  await rm(outDir, { recursive: true, force: true });
-  await mkdir(outDir, { recursive: true });
+  const tmpDir = path.join(ladderRepoAbs, ".tmp-sync-clash");
+  await rm(tmpDir, { recursive: true, force: true });
+  await mkdir(tmpDir, { recursive: true });
+
+  const clashRootA = path.join(artifactsRoot, "Clash");
+  const clashRootB = path.join(artifactsRoot, "Rules", "Clash");
+  const clashRoot =
+    (await stat(clashRootA).catch(() => undefined))?.isDirectory()
+      ? clashRootA
+      : (await stat(clashRootB).catch(() => undefined))?.isDirectory()
+        ? clashRootB
+        : null;
+  if (!clashRoot) {
+    throw new Error(`Clash artifacts not found under: ${artifactsRoot}`);
+  }
 
   // Copy all category directories from rule `.release/*` into ladder `Rules/Clash/*`,
   // excluding README* files. This mirrors the rule repo release branch artifacts.
-  const entries = await readdir(artifactsRoot, { withFileTypes: true });
+  const entries = await readdir(clashRoot, { withFileTypes: true });
   for (const entry of entries) {
     if (!entry.isDirectory()) continue;
     if (entry.name === ".git") continue;
@@ -64,10 +79,10 @@ async function main() {
     if (entry.name === "node_modules") continue;
     if (entry.name === ".bun") continue;
     if (entry.name === ".release") continue;
-    const fromDir = path.join(artifactsRoot, entry.name);
+    const fromDir = path.join(clashRoot, entry.name);
     const fromStat = await stat(fromDir).catch(() => undefined);
     if (!fromStat?.isDirectory()) continue;
-    const toDir = path.join(outDir, entry.name);
+    const toDir = path.join(tmpDir, entry.name);
     await mkdir(toDir, { recursive: true });
     await cp(fromDir, toDir, {
       recursive: true,
@@ -77,6 +92,46 @@ async function main() {
       },
     });
   }
+
+  async function listFilesRecursively(dir: string): Promise<string[]> {
+    const dirents = await readdir(dir, { withFileTypes: true }).catch(() => []);
+    const files: string[] = [];
+    for (const d of dirents) {
+      const p = path.join(dir, d.name);
+      if (d.isDirectory()) files.push(...(await listFilesRecursively(p)));
+      else if (d.isFile()) files.push(p);
+    }
+    return files;
+  }
+
+  async function hashTree(root: string): Promise<string> {
+    const files = (await listFilesRecursively(root)).sort();
+    const h = createHash("sha256");
+    for (const abs of files) {
+      const rel = path.relative(root, abs).replaceAll(path.sep, "/");
+      h.update(rel);
+      h.update("\0");
+      h.update(await readFile(abs));
+      h.update("\0");
+    }
+    return h.digest("hex");
+  }
+
+  const newHash = await hashTree(tmpDir);
+  const existingStat = await stat(outDir).catch(() => undefined);
+  const oldHash = existingStat?.isDirectory() ? await hashTree(outDir) : "";
+
+  if (oldHash && oldHash === newHash) {
+    await rm(tmpDir, { recursive: true, force: true });
+    // eslint-disable-next-line no-console
+    console.log(`Clash rules unchanged: ${outDir}`);
+    return;
+  }
+
+  await rm(outDir, { recursive: true, force: true });
+  await mkdir(path.dirname(outDir), { recursive: true });
+  await cp(tmpDir, outDir, { recursive: true });
+  await rm(tmpDir, { recursive: true, force: true });
 
   // eslint-disable-next-line no-console
   console.log(`Synced Clash rules: ${outDir}`);
