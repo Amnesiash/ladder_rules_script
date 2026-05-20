@@ -43,16 +43,12 @@ async function main() {
   const ruleRepoAbs = path.resolve(opts.ruleRepo);
   const ladderRepoAbs = path.resolve(opts.ladderRepo);
 
-  const releaseRoot = path.join(ruleRepoAbs, ".release");
-  const releaseStat = await stat(releaseRoot).catch(() => undefined);
-  if (!releaseStat?.isDirectory()) {
-    throw new Error(
-      [
-        `Expected directory not found: ${releaseRoot}`,
-        "Hint: in GitHub Actions you must run the rule repo build first (bun install && bun run build:release).",
-      ].join("\n"),
-    );
-  }
+  // The upstream rule repo may expose artifacts either at:
+  // - repoRoot/.release/* (build output in a working tree), OR
+  // - repoRoot/* directly (when checking out its `release` branch).
+  const dotReleaseRoot = path.join(ruleRepoAbs, ".release");
+  const dotReleaseStat = await stat(dotReleaseRoot).catch(() => undefined);
+  const artifactsRoot = dotReleaseStat?.isDirectory() ? dotReleaseRoot : ruleRepoAbs;
 
   const outDir = path.join(ladderRepoAbs, "Rules", "Clash");
   await rm(outDir, { recursive: true, force: true });
@@ -60,10 +56,15 @@ async function main() {
 
   // Copy all category directories from rule `.release/*` into ladder `Rules/Clash/*`,
   // excluding README* files. This mirrors the rule repo release branch artifacts.
-  const entries = await readdir(releaseRoot, { withFileTypes: true });
+  const entries = await readdir(artifactsRoot, { withFileTypes: true });
   for (const entry of entries) {
     if (!entry.isDirectory()) continue;
-    const fromDir = path.join(releaseRoot, entry.name);
+    if (entry.name === ".git") continue;
+    if (entry.name === ".github") continue;
+    if (entry.name === "node_modules") continue;
+    if (entry.name === ".bun") continue;
+    if (entry.name === ".release") continue;
+    const fromDir = path.join(artifactsRoot, entry.name);
     const fromStat = await stat(fromDir).catch(() => undefined);
     if (!fromStat?.isDirectory()) continue;
     const toDir = path.join(outDir, entry.name);
