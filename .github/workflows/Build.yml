@@ -1,5 +1,8 @@
 name: Build
 
+permissions:
+  contents: write
+
 on:
   workflow_dispatch:
   push:
@@ -58,13 +61,18 @@ jobs:
     - name: Push Update
       run: |
         cd ladder-repo
+        # release 分支用于发布产物，允许覆盖式更新
+        git fetch origin release || true
         git checkout -B release
+        if git show-ref --verify --quiet refs/remotes/origin/release; then
+          git reset --hard origin/release
+        fi
         if [[ -n $(git status -s) ]]; then
           git config --local user.email "${{ github.actor }}@users.noreply.github.com"
           git config --local user.name "${{ github.actor }}"
           git add -A
           git commit -m "Auto Update $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')"
-          git push origin release
+          git push --force-with-lease origin release
         else
           echo "No changes to commit."
         fi
