@@ -1,7 +1,11 @@
 # NAME: Private_Domain
-# UPDATE: 2026-05-20 20:39:48
+# UPDATE: 2026-05-20 23:21:39
 # TOTAL: 139
 
+instant.arubanetworks.com
+setmeup.arubanetworks.com
+router.asus.com
+www.asusrouter.com
 +.acl4.ssr
 +.ip6-localhost
 +.ip6-loopback
@@ -9,10 +13,6 @@
 +.lan
 +.local
 +.localhost
-instant.arubanetworks.com
-setmeup.arubanetworks.com
-router.asus.com
-www.asusrouter.com
 +.hiwifi.com
 +.leike.cc
 +.miwifi.com

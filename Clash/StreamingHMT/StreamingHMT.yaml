@@ -1,5 +1,5 @@
 # NAME: StreamingHMT
-# UPDATE: 2026-05-20 20:39:49
+# UPDATE: 2026-05-20 22:02:39
 # TOTAL: 16
 
 payload:
@@ -17,5 +17,5 @@ payload:
   - DOMAIN,mobileso.bz.mgtv.com
   - DOMAIN-SUFFIX,api.mgtv.com
   - DOMAIN-KEYWORD,cn-hk-eq-bcache-
-  - IP-CIDR,116.211.202.206/32
-  - IP-CIDR,116.211.202.216/32
+  - IP-CIDR,116.211.202.206/32,no-resolve
+  - IP-CIDR,116.211.202.216/32,no-resolve

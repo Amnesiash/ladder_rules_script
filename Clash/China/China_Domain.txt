@@ -1,7 +1,38 @@
 # NAME: China_Domain
-# UPDATE: 2026-05-20 20:39:38
+# UPDATE: 2026-05-20 23:21:39
 # TOTAL: 112803
 
+auth.wosms.cn
+config.cmpassport.com
+enrichgw.10010.com
+hmrz.wo.cn
+id.mail.wo.cn
+log.cmpassport.com
+log1.cmpassport.com
+mdn.open.wo.cn
+nishub1.10010.com
+opencloud.wostore.cn
+ye.dun.163yun.com
+csgo.wmsj.cn
+dota2.wmsj.cn
+wmsjsteam.com
+dl.steam.clngaa.com
+dl.steam.ksyna.com
+st.dl.bscstorage.net
+st.dl.eccdnx.com
+st.dl.pinyuncloud.com
+xz.pphimalayanrt.com
+steampipe.steamcontent.tnkjmec.com
+steampowered.com.8686c.com
+steamstatic.com.8686c.com
+download.jetbrains.com
+origin-a.akamaihd.net
+outlook.office365.com
+smtp-mail.outlook.com
+smtp.office365.com
+download.microsoft.com
+wustat.windows.com
+ntservicepack.microsoft.com
 +.0.zone
 +.00.net
 +.000.link
@@ -112700,17 +112731,6 @@
 +.bilivideo.cn
 +.feelgood.cn
 +.toutiaopage.com
-auth.wosms.cn
-config.cmpassport.com
-enrichgw.10010.com
-hmrz.wo.cn
-id.mail.wo.cn
-log.cmpassport.com
-log1.cmpassport.com
-mdn.open.wo.cn
-nishub1.10010.com
-opencloud.wostore.cn
-ye.dun.163yun.com
 +.auth.wo.cn
 +.cmpassport.com
 +.id6.me
@@ -112742,18 +112762,6 @@ ye.dun.163yun.com
 +.steamcontent.com
 +.steamusercontent.com
 +.steamchina.com
-csgo.wmsj.cn
-dota2.wmsj.cn
-wmsjsteam.com
-dl.steam.clngaa.com
-dl.steam.ksyna.com
-st.dl.bscstorage.net
-st.dl.eccdnx.com
-st.dl.pinyuncloud.com
-xz.pphimalayanrt.com
-steampipe.steamcontent.tnkjmec.com
-steampowered.com.8686c.com
-steamstatic.com.8686c.com
 +.tencent.com
 +.tencentmind.com
 +.wechat.com
@@ -112791,15 +112799,7 @@ steamstatic.com.8686c.com
 +.tuniu.com
 +.xdrig.com
 +.xip.io
-download.jetbrains.com
-origin-a.akamaihd.net
-outlook.office365.com
-smtp-mail.outlook.com
-smtp.office365.com
 +.windowsupdate.com
-download.microsoft.com
-wustat.windows.com
-ntservicepack.microsoft.com
 +.paypal.com
 +.paypal.me
 +.paypal-mktg.com
