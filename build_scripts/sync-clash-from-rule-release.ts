@@ -46,7 +46,12 @@ async function main() {
   const releaseRoot = path.join(ruleRepoAbs, ".release");
   const releaseStat = await stat(releaseRoot).catch(() => undefined);
   if (!releaseStat?.isDirectory()) {
-    throw new Error(`Expected directory not found: ${releaseRoot}`);
+    throw new Error(
+      [
+        `Expected directory not found: ${releaseRoot}`,
+        "Hint: in GitHub Actions you must run the rule repo build first (bun install && bun run build:release).",
+      ].join("\n"),
+    );
   }
 
   const outDir = path.join(ladderRepoAbs, "Rules", "Clash");

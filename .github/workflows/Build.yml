@@ -31,6 +31,12 @@ jobs:
       with:
         bun-version: 1.3.13
 
+    - name: Build rule repository release artifacts
+      run: |
+        cd rule-repo
+        bun install --frozen-lockfile
+        bun run build:release --repo "Amnesiash/rule"
+
     - name: Sync Clash rules from rule release branch artifacts
       run: |
         cd ladder-repo
