@@ -1,4 +1,4 @@
-import { cp, mkdir, readdir, readFile, rm, stat, writeFile } from "node:fs/promises";
+import { cp, mkdir, readdir, readFile, rm, stat } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import path from "node:path";
 
@@ -57,14 +57,36 @@ async function main() {
   await rm(tmpDir, { recursive: true, force: true });
   await mkdir(tmpDir, { recursive: true });
 
-  const clashRootA = path.join(artifactsRoot, "Clash");
-  const clashRootB = path.join(artifactsRoot, "Rules", "Clash");
-  const clashRoot =
-    (await stat(clashRootA).catch(() => undefined))?.isDirectory()
-      ? clashRootA
-      : (await stat(clashRootB).catch(() => undefined))?.isDirectory()
-        ? clashRootB
-        : null;
+  async function findClashRoot(root: string): Promise<string | null> {
+    const directCandidates = [
+      path.join(root, "Clash"),
+      path.join(root, "Rules", "Clash"),
+      path.join(root, "rules", "Clash"),
+      path.join(root, "Rules", "clash"),
+      path.join(root, "rules", "clash"),
+    ];
+    for (const c of directCandidates) {
+      if ((await stat(c).catch(() => undefined))?.isDirectory()) return c;
+    }
+
+    async function walkDirs(dir: string, depth: number): Promise<string | null> {
+      if (depth < 0) return null;
+      const dirents = await readdir(dir, { withFileTypes: true }).catch(() => []);
+      for (const d of dirents) {
+        if (!d.isDirectory()) continue;
+        if (d.name === ".git" || d.name === "node_modules" || d.name === ".bun") continue;
+        const abs = path.join(dir, d.name);
+        if (d.name.toLowerCase() === "clash") return abs;
+        const found = await walkDirs(abs, depth - 1);
+        if (found) return found;
+      }
+      return null;
+    }
+
+    return await walkDirs(root, 4);
+  }
+
+  const clashRoot = await findClashRoot(artifactsRoot);
   if (!clashRoot) {
     throw new Error(`Clash artifacts not found under: ${artifactsRoot}`);
   }
