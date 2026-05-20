@@ -8,7 +8,6 @@
     "build:release:clean": "bun run build_scripts/build-release.ts --clean",
     "build:release:prune": "bun run build_scripts/build-release.ts --clean --prune",
     "build:release:noclean": "bun run build_scripts/build-release.ts --no-clean",
-    "sync:clash": "bun run build_scripts/sync-clash-from-rule-release.ts",
     "generate:clients": "bun run build_scripts/generate-rules.ts --clean",
     "build:all": "bun run generate:clients && bun run build:release:clean"
   }

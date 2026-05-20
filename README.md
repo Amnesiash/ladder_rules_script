@@ -34,13 +34,10 @@
 
 ```bash
 cd /Users/company/Desktop/Project/ladder_rules_script
-# 1) 同步 Clash 规则（从隔壁 rule 项目的 release 分支产物）
-bun run sync:clash -- --rule-repo /Users/company/Desktop/Project/rule --ladder-repo .
-
-# 2) 生成 Loon / QuantumultX / Shadowrocket 规则（读取 Rules/rule_source.txt）
+# 1) 生成 Clash / Loon / QuantumultX / Shadowrocket 规则（读取 Rules/rule_source.txt）
 bun run generate:clients
 
-# 3) 生成 release 产物（不会包含 Rules/Custom）
+# 2) 生成 release 产物（不会包含 Rules/Custom）
 bun run build:release:clean
 ```
 

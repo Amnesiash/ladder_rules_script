@@ -23,31 +23,12 @@ jobs:
           path: ladder-repo
           fetch-depth: 0
 
-      - name: Checkout rule repository
-        uses: actions/checkout@v4.1.0
-        with:
-          repository: Amnesiash/rule
-          ref: main
-          path: rule-repo
-          fetch-depth: 1
-
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
         with:
           bun-version: 1.3.13
 
-      - name: Sync Clash rules from rule repository
-        run: |
-          cd ladder-repo
-          bun run sync:clash -- --rule-repo ../rule-repo --ladder-repo .
-
-      - name: Copy files
-        run: |
-          # 仅输出当前已同步的 Clash 规则
-          echo "Clash:"
-          find ladder-repo/Rules/Clash -type f | head -n 50 || true
-
-      - name: Generate Loon / QuantumultX / Shadowrocket rules
+      - name: Generate Clash / Loon / QuantumultX / Shadowrocket rules
         run: |
           cd ladder-repo
           bun run generate:clients

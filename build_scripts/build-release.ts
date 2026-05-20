@@ -111,6 +111,7 @@ async function main() {
     entries.map(async (entry) => {
       if (!entry.isDirectory()) return;
       if (entry.name === "Custom") return; // Requirement: do not publish Custom folder.
+      if (entry.name === "source") return; // Internal: per-author source artifacts for development.
       const src = path.join(rulesDirAbs, entry.name);
       const dst = path.join(outDirAbs, entry.name);
       await rm(dst, { recursive: true, force: true });
