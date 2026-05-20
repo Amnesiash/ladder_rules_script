@@ -85,9 +85,6 @@ async function main() {
   const repoRoot = path.resolve(import.meta.dir, "..");
   const outDirAbs = path.resolve(repoRoot, opts.outDir);
   const rulesDirAbs = path.resolve(repoRoot, opts.rulesDir);
-  const outRulesDirAbs = path.join(outDirAbs, "Rules");
-  const outCustomDirAbs = path.join(outRulesDirAbs, "Custom");
-  const outRuleSourceTxtAbs = path.join(outRulesDirAbs, "rule_source.txt");
 
   const rulesStat = await stat(rulesDirAbs).catch(() => undefined);
   if (!rulesStat?.isDirectory()) {
@@ -101,15 +98,25 @@ async function main() {
   }
 
   await mkdir(outDirAbs, { recursive: true });
-  await rm(outRulesDirAbs, { recursive: true, force: true });
-  await mkdir(outRulesDirAbs, { recursive: true });
 
-  await cp(rulesDirAbs, outRulesDirAbs, { recursive: true });
-
-  // Requirement: do not publish Custom folder in release artifacts.
-  await rm(outCustomDirAbs, { recursive: true, force: true });
-  // Requirement: source config should not be published as artifacts.
-  await rm(outRuleSourceTxtAbs, { force: true });
+  // Publish as:
+  //   .release/Clash
+  //   .release/Loon
+  //   .release/QuantumultX
+  //   .release/Shadowrocket
+  //
+  // i.e. do not wrap in an extra Rules/ folder to match downstream expectations.
+  const entries = await readdir(rulesDirAbs, { withFileTypes: true });
+  await Promise.all(
+    entries.map(async (entry) => {
+      if (!entry.isDirectory()) return;
+      if (entry.name === "Custom") return; // Requirement: do not publish Custom folder.
+      const src = path.join(rulesDirAbs, entry.name);
+      const dst = path.join(outDirAbs, entry.name);
+      await rm(dst, { recursive: true, force: true });
+      await cp(src, dst, { recursive: true });
+    }),
+  );
 
   if (opts.prune) {
     await pruneReleaseDir(outDirAbs);
