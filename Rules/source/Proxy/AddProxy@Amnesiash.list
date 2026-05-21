@@ -1,8 +1,8 @@
 # 补充一些未被代理匹配到的网址
 # UPDATED: 2026-05-06
 # > 自用
-DOMAIN-SUFFIX, xiloi.com
-DOMAIN-SUFFIX, fanjugou2.top
+DOMAIN-SUFFIX,xiloi.com
+DOMAIN-SUFFIX,fanjugou2.top
 DOMAIN-SUFFIX,aishort.top
 DOMAIN-SUFFIX,metacubex.one
 DOMAIN-SUFFIX,catbox.moe
