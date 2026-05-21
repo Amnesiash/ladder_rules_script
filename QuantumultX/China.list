@@ -1,6 +1,6 @@
 # NAME: China
-# UPDATE: 2026-05-21 09:17:07
-# TOTAL: 129381
+# UPDATE: 2026-05-21 23:28:09
+# TOTAL: 129367
 
 HOST,1-fss24-s0.streamhoster.com,China
 HOST,14033.live.streamtheworld.com,China
@@ -81,7 +81,6 @@ HOST,dota2.wmsj.cn,China
 HOST,doubleclick-cn.net,China
 HOST,doubleclick.net,China
 HOST,download.jetbrains.com,China
-HOST,download.microsoft.com,China
 HOST,download.qatp1.net,China
 HOST,e1.vdowowza.vip.hk1.tvb.com,China
 HOST,ea2cn-dev-outlet.dell.com,China
@@ -216,7 +215,6 @@ HOST,opencloud.wostore.cn,China
 HOST,origin-a.akamaihd.ne,China
 HOST,origin-a.akamaihd.net,China
 HOST,ott-live.olympicchannel.com,China
-HOST,outlook.office365.com,China
 HOST,play.jinnantv.top,China
 HOST,play.scrstv.com,China
 HOST,play.sngdxsn.com,China
@@ -254,8 +252,6 @@ HOST,service.urchin.com,China
 HOST,slive.ytn.co.kr,China
 HOST,sm.dell.com,China
 HOST,sms.imagetasks.com,China
-HOST,smtp-mail.outlook.com,China
-HOST,smtp.office365.com,China
 HOST,snp.cdn.dell.com,China
 HOST,snpi.dell.com,China
 HOST,sohucao.duapp.com,China
@@ -320,7 +316,6 @@ HOST,wowza.ner.gov.tw,China
 HOST,wpc.124ce.sigmacdn.net,China
 HOST,wscont1.apps.microsoft.com,China
 HOST,wscont2.apps.microsoft.com,China
-HOST,wustat.windows.com,China
 HOST,wuwm.streamguys1.com,China
 HOST,www-csb.dell.com,China
 HOST,www.cbsnews.com,China
@@ -73631,10 +73626,6 @@ HOST-SUFFIX,paykwai.com,China
 HOST-SUFFIX,paylf.com,China
 HOST-SUFFIX,paympay.com,China
 HOST-SUFFIX,paynews.net,China
-HOST-SUFFIX,paypal-mktg.com,China
-HOST-SUFFIX,paypal.com,China
-HOST-SUFFIX,paypal.me,China
-HOST-SUFFIX,paypalobjects.com,China
 HOST-SUFFIX,paypaytech.com,China
 HOST-SUFFIX,pb89.com,China
 HOST-SUFFIX,pbaohza.com,China
@@ -86584,7 +86575,6 @@ HOST-SUFFIX,steampp.net,China
 HOST-SUFFIX,steamproxy.net,China
 HOST-SUFFIX,steampy.com,China
 HOST-SUFFIX,steamrepcn.com,China
-HOST-SUFFIX,steamserver.net,China
 HOST-SUFFIX,steamusercontent.com,China
 HOST-SUFFIX,stec.net,China
 HOST-SUFFIX,stecn.org,China
@@ -97815,7 +97805,6 @@ HOST-SUFFIX,windows10zj.com,China
 HOST-SUFFIX,windows11.pro,China
 HOST-SUFFIX,windows7en.com,China
 HOST-SUFFIX,windowstool.net,China
-HOST-SUFFIX,windowsupdate.com,China
 HOST-SUFFIX,windowsupdate.microsoft.com,China
 HOST-SUFFIX,windowszj.com,China
 HOST-SUFFIX,windpayer.com,China
@@ -119554,7 +119543,6 @@ IP-CIDR,182.238.0.0/16,China
 IP-CIDR,182.239.0.0/19,China
 IP-CIDR,182.240.0.0/13,China
 IP-CIDR,182.254.0.0/16,China
-IP-CIDR,182.254.116.0/24,China
 IP-CIDR,182.255.60.0/22,China
 IP-CIDR,182.32.0.0/12,China
 IP-CIDR,182.48.96.0/19,China
@@ -120676,11 +120664,9 @@ IP-CIDR,203.205.220.0/22,China
 IP-CIDR,203.205.225.0/24,China
 IP-CIDR,203.205.226.0/23,China
 IP-CIDR,203.205.228.0/22,China
-IP-CIDR,203.205.238.0/23,China
 IP-CIDR,203.205.243.0/24,China
 IP-CIDR,203.205.244.0/22,China
 IP-CIDR,203.205.248.0/21,China
-IP-CIDR,203.205.254.0/23,China
 IP-CIDR,203.205.64.0/19,China
 IP-CIDR,203.207.128.0/17,China
 IP-CIDR,203.207.64.0/18,China

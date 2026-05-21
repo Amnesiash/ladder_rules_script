@@ -1,6 +1,6 @@
 # NAME: China
-# UPDATE: 2026-05-21 09:17:06
-# TOTAL: 129381
+# UPDATE: 2026-05-21 23:28:09
+# TOTAL: 129367
 
 DOMAIN,1-fss24-s0.streamhoster.com
 DOMAIN,14033.live.streamtheworld.com
@@ -81,7 +81,6 @@ DOMAIN,dota2.wmsj.cn
 DOMAIN,doubleclick-cn.net
 DOMAIN,doubleclick.net
 DOMAIN,download.jetbrains.com
-DOMAIN,download.microsoft.com
 DOMAIN,download.qatp1.net
 DOMAIN,e1.vdowowza.vip.hk1.tvb.com
 DOMAIN,ea2cn-dev-outlet.dell.com
@@ -216,7 +215,6 @@ DOMAIN,opencloud.wostore.cn
 DOMAIN,origin-a.akamaihd.ne
 DOMAIN,origin-a.akamaihd.net
 DOMAIN,ott-live.olympicchannel.com
-DOMAIN,outlook.office365.com
 DOMAIN,play.jinnantv.top
 DOMAIN,play.scrstv.com
 DOMAIN,play.sngdxsn.com
@@ -254,8 +252,6 @@ DOMAIN,service.urchin.com
 DOMAIN,slive.ytn.co.kr
 DOMAIN,sm.dell.com
 DOMAIN,sms.imagetasks.com
-DOMAIN,smtp-mail.outlook.com
-DOMAIN,smtp.office365.com
 DOMAIN,snp.cdn.dell.com
 DOMAIN,snpi.dell.com
 DOMAIN,sohucao.duapp.com
@@ -320,7 +316,6 @@ DOMAIN,wowza.ner.gov.tw
 DOMAIN,wpc.124ce.sigmacdn.net
 DOMAIN,wscont1.apps.microsoft.com
 DOMAIN,wscont2.apps.microsoft.com
-DOMAIN,wustat.windows.com
 DOMAIN,wuwm.streamguys1.com
 DOMAIN,www-csb.dell.com
 DOMAIN,www.cbsnews.com
@@ -73631,10 +73626,6 @@ DOMAIN-SUFFIX,paykwai.com
 DOMAIN-SUFFIX,paylf.com
 DOMAIN-SUFFIX,paympay.com
 DOMAIN-SUFFIX,paynews.net
-DOMAIN-SUFFIX,paypal-mktg.com
-DOMAIN-SUFFIX,paypal.com
-DOMAIN-SUFFIX,paypal.me
-DOMAIN-SUFFIX,paypalobjects.com
 DOMAIN-SUFFIX,paypaytech.com
 DOMAIN-SUFFIX,pb89.com
 DOMAIN-SUFFIX,pbaohza.com
@@ -86584,7 +86575,6 @@ DOMAIN-SUFFIX,steampp.net
 DOMAIN-SUFFIX,steamproxy.net
 DOMAIN-SUFFIX,steampy.com
 DOMAIN-SUFFIX,steamrepcn.com
-DOMAIN-SUFFIX,steamserver.net
 DOMAIN-SUFFIX,steamusercontent.com
 DOMAIN-SUFFIX,stec.net
 DOMAIN-SUFFIX,stecn.org
@@ -97815,7 +97805,6 @@ DOMAIN-SUFFIX,windows10zj.com
 DOMAIN-SUFFIX,windows11.pro
 DOMAIN-SUFFIX,windows7en.com
 DOMAIN-SUFFIX,windowstool.net
-DOMAIN-SUFFIX,windowsupdate.com
 DOMAIN-SUFFIX,windowsupdate.microsoft.com
 DOMAIN-SUFFIX,windowszj.com
 DOMAIN-SUFFIX,windpayer.com
@@ -119554,7 +119543,6 @@ IP-CIDR,182.238.0.0/16,no-resolve
 IP-CIDR,182.239.0.0/19,no-resolve
 IP-CIDR,182.240.0.0/13,no-resolve
 IP-CIDR,182.254.0.0/16,no-resolve
-IP-CIDR,182.254.116.0/24,no-resolve
 IP-CIDR,182.255.60.0/22,no-resolve
 IP-CIDR,182.32.0.0/12,no-resolve
 IP-CIDR,182.48.96.0/19,no-resolve
@@ -120676,11 +120664,9 @@ IP-CIDR,203.205.220.0/22,no-resolve
 IP-CIDR,203.205.225.0/24,no-resolve
 IP-CIDR,203.205.226.0/23,no-resolve
 IP-CIDR,203.205.228.0/22,no-resolve
-IP-CIDR,203.205.238.0/23,no-resolve
 IP-CIDR,203.205.243.0/24,no-resolve
 IP-CIDR,203.205.244.0/22,no-resolve
 IP-CIDR,203.205.248.0/21,no-resolve
-IP-CIDR,203.205.254.0/23,no-resolve
 IP-CIDR,203.205.64.0/19,no-resolve
 IP-CIDR,203.207.128.0/17,no-resolve
 IP-CIDR,203.207.64.0/18,no-resolve

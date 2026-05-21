@@ -1,6 +1,6 @@
 # NAME: China_Domain
-# UPDATE: 2026-05-21 11:49:36
-# TOTAL: 113890
+# UPDATE: 2026-05-21 23:28:16
+# TOTAL: 113879
 
 auth.wosms.cn
 config.cmpassport.com
@@ -25,22 +25,17 @@ xz.pphimalayanrt.com
 steampipe.steamcontent.tnkjmec.com
 steampowered.com.8686c.com
 steamstatic.com.8686c.com
-download.jetbrains.com
-origin-a.akamaihd.net
-outlook.office365.com
-smtp-mail.outlook.com
-smtp.office365.com
-download.microsoft.com
-wustat.windows.com
-ntservicepack.microsoft.com
 cpro.baidustatic.com
 analytics.strava.com
 blzddist1-a.akamaihd.net
 cdn.angruo.com
 client.amplifi.com
+download.jetbrains.com
 images-cn.ssl-images-amazon.com
 ip.istatmenus.app
+ntservicepack.microsoft.com
 origin-a.akamaihd.ne
+origin-a.akamaihd.net
 sms.imagetasks.com
 steamcommunity-a.akamaihd.net
 265.com
@@ -113108,12 +113103,6 @@ weizhiyundong.list
 +.tuniu.com
 +.xdrig.com
 +.xip.io
-+.windowsupdate.com
-+.paypal.com
-+.paypal.me
-+.paypal-mktg.com
-+.paypalobjects.com
-+.steamserver.net
 +.alipay
 +.alipay-corp.com
 +.alipay-eco.com
