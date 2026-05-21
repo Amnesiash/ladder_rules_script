@@ -1,6 +1,6 @@
 # NAME: Proxy
-# UPDATE: 2026-05-20 22:02:37
-# TOTAL: 29413
+# UPDATE: 2026-05-21 09:17:08
+# TOTAL: 29422
 
 payload:
   - DOMAIN,cloud.oracle.com
@@ -15941,6 +15941,7 @@ payload:
   - DOMAIN-SUFFIX,g-tun.com
   - DOMAIN-SUFFIX,g-tvapp.com
   - DOMAIN-SUFFIX,g-xxxhub.com
+  - DOMAIN-SUFFIX,g.ai
   - DOMAIN-SUFFIX,g.dev
   - DOMAIN-SUFFIX,g.page
   - DOMAIN-SUFFIX,g1.com.br
@@ -19350,6 +19351,7 @@ payload:
   - DOMAIN-SUFFIX,lenkino.xxx
   - DOMAIN-SUFFIX,lenporno.net
   - DOMAIN-SUFFIX,lenporno.red
+  - DOMAIN-SUFFIX,leonardo.ai
   - DOMAIN-SUFFIX,leporno.org
   - DOMAIN-SUFFIX,lepornochaud.com
   - DOMAIN-SUFFIX,lepornofrais.com
@@ -20898,9 +20900,11 @@ payload:
   - DOMAIN-SUFFIX,moxing.news
   - DOMAIN-SUFFIX,moystoys.com
   - DOMAIN-SUFFIX,mozgcp.net
+  - DOMAIN-SUFFIX,mozilla.ai
   - DOMAIN-SUFFIX,mozilla.com
   - DOMAIN-SUFFIX,mozilla.community
   - DOMAIN-SUFFIX,mozilla.net
+  - DOMAIN-SUFFIX,mozillafoundation.org
   - DOMAIN-SUFFIX,mp.world
   - DOMAIN-SUFFIX,mpgw-my.com
   - DOMAIN-SUFFIX,mplstudios.com
@@ -21207,6 +21211,7 @@ payload:
   - DOMAIN-SUFFIX,myyoungmomisnude.com
   - DOMAIN-SUFFIX,myyoungwifeisnude.com
   - DOMAIN-SUFFIX,mzed.com
+  - DOMAIN-SUFFIX,mzl.la
   - DOMAIN-SUFFIX,mzstatic.com
   - DOMAIN-SUFFIX,n0vadesktop.com
   - DOMAIN-SUFFIX,n26.com
@@ -23655,6 +23660,7 @@ payload:
   - DOMAIN-SUFFIX,randyblue.com
   - DOMAIN-SUFFIX,rapefilms.net
   - DOMAIN-SUFFIX,rapetube.me
+  - DOMAIN-SUFFIX,raphael.app
   - DOMAIN-SUFFIX,rapidprototyping-cadcam.com
   - DOMAIN-SUFFIX,rapidssl.com
   - DOMAIN-SUFFIX,raponlinereview.com
@@ -24034,6 +24040,7 @@ payload:
   - DOMAIN-SUFFIX,ruinedking.com
   - DOMAIN-SUFFIX,rukoebxx.com
   - DOMAIN-SUFFIX,rulaisc-tv.buzz
+  - DOMAIN-SUFFIX,rule34.us
   - DOMAIN-SUFFIX,rule34h.com
   - DOMAIN-SUFFIX,rule34pornvids.com
   - DOMAIN-SUFFIX,ruleporn.com
@@ -25091,6 +25098,7 @@ payload:
   - DOMAIN-SUFFIX,sorcerersarena.com
   - DOMAIN-SUFFIX,sos44.com
   - DOMAIN-SUFFIX,soso7778.com
+  - DOMAIN-SUFFIX,sotwe.com
   - DOMAIN-SUFFIX,souka.xyz
   - DOMAIN-SUFFIX,soundcloud.cloud
   - DOMAIN-SUFFIX,soundofhope.eu
@@ -25673,6 +25681,7 @@ payload:
   - DOMAIN-SUFFIX,tantaly.com
   - DOMAIN-SUFFIX,taoil-cn.sbs
   - DOMAIN-SUFFIX,taose.in
+  - DOMAIN-SUFFIX,tapnow.ai
   - DOMAIN-SUFFIX,taptotokyo.com
   - DOMAIN-SUFFIX,taqunuhai.vip
   - DOMAIN-SUFFIX,taradinhos.com

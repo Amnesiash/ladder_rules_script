@@ -1,6 +1,6 @@
 # NAME: Proxy_Domain
-# UPDATE: 2026-05-20 23:21:39
-# TOTAL: 29186
+# UPDATE: 2026-05-21 09:17:12
+# TOTAL: 29195
 
 cloud.oracle.com
 steambroadcast.akamaized.net
@@ -15940,6 +15940,7 @@ copilot.microsoft.com
 +.g-tun.com
 +.g-tvapp.com
 +.g-xxxhub.com
++.g.ai
 +.g.dev
 +.g.page
 +.g1.com.br
@@ -19349,6 +19350,7 @@ copilot.microsoft.com
 +.lenkino.xxx
 +.lenporno.net
 +.lenporno.red
++.leonardo.ai
 +.leporno.org
 +.lepornochaud.com
 +.lepornofrais.com
@@ -20897,9 +20899,11 @@ copilot.microsoft.com
 +.moxing.news
 +.moystoys.com
 +.mozgcp.net
++.mozilla.ai
 +.mozilla.com
 +.mozilla.community
 +.mozilla.net
++.mozillafoundation.org
 +.mp.world
 +.mpgw-my.com
 +.mplstudios.com
@@ -21206,6 +21210,7 @@ copilot.microsoft.com
 +.myyoungmomisnude.com
 +.myyoungwifeisnude.com
 +.mzed.com
++.mzl.la
 +.mzstatic.com
 +.n0vadesktop.com
 +.n26.com
@@ -23654,6 +23659,7 @@ copilot.microsoft.com
 +.randyblue.com
 +.rapefilms.net
 +.rapetube.me
++.raphael.app
 +.rapidprototyping-cadcam.com
 +.rapidssl.com
 +.raponlinereview.com
@@ -24033,6 +24039,7 @@ copilot.microsoft.com
 +.ruinedking.com
 +.rukoebxx.com
 +.rulaisc-tv.buzz
++.rule34.us
 +.rule34h.com
 +.rule34pornvids.com
 +.ruleporn.com
@@ -25090,6 +25097,7 @@ copilot.microsoft.com
 +.sorcerersarena.com
 +.sos44.com
 +.soso7778.com
++.sotwe.com
 +.souka.xyz
 +.soundcloud.cloud
 +.soundofhope.eu
@@ -25672,6 +25680,7 @@ copilot.microsoft.com
 +.tantaly.com
 +.taoil-cn.sbs
 +.taose.in
++.tapnow.ai
 +.taptotokyo.com
 +.taqunuhai.vip
 +.taradinhos.com

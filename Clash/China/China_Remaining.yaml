@@ -1,6 +1,6 @@
 # NAME: China_Remaining
-# UPDATE: 2026-05-20 23:21:39
-# TOTAL: 146
+# UPDATE: 2026-05-21 09:17:13
+# TOTAL: 162
 
 payload:
   - DOMAIN-KEYWORD,alibabacloud
@@ -149,3 +149,19 @@ payload:
   - DOMAIN-KEYWORD,qhimg
   - DOMAIN-KEYWORD,vpimg
   - DOMAIN-KEYWORD,xiami
+  - DOMAIN-KEYWORD,.tmall.com
+  - IP-ASN,132203,no-resolve
+  - PROCESS-NAME,com.taobao.taobao
+  - PROCESS-NAME,com.bilibili.app.blue
+  - PROCESS-NAME,com.bilibili.app.in
+  - PROCESS-NAME,com.bilibili.comic
+  - PROCESS-NAME,com.bilibili.comic.intl
+  - PROCESS-NAME,tv.danmaku.bili
+  - PROCESS-NAME,tv.danmaku.bilibilihd
+  - PROCESS-NAME,com.zhiliaoapp.musically
+  - PROCESS-NAME,com.jjwxc.reader
+  - PROCESS-NAME,com.xiaomi.mibrain.speech
+  - PROCESS-NAME,小米云服务.exe
+  - PROCESS-NAME,Thunder
+  - PROCESS-NAME,Thunder.exe
+  - PROCESS-NAME,com.qiyi.video
