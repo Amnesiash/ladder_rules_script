@@ -1,5 +1,5 @@
 # NAME: Proxy_Domain
-# UPDATE: 2026-05-21 23:28:15
+# UPDATE: 2026-05-22 11:43:02
 # TOTAL: 29195
 
 cloud.oracle.com
@@ -1114,6 +1114,7 @@ copilot.microsoft.com
 +.f-droid.org
 +.f2pool.com
 +.f8.com
++.f95zone.to
 +.facebookmail.com
 +.facebookquotes4u.com
 +.faceless.me
@@ -1287,6 +1288,7 @@ copilot.microsoft.com
 +.fxnetworks.com
 +.g-area.org
 +.g-queen.com
++.g.ai
 +.g.co
 +.g0v.social
 +.gab.com
@@ -1911,6 +1913,7 @@ copilot.microsoft.com
 +.lematin.ch
 +.lemonde.fr
 +.lenwhite.com
++.leonardo.ai
 +.lesoir.be
 +.letscorp.net
 +.letsencrypt.org
@@ -2646,6 +2649,7 @@ copilot.microsoft.com
 +.raidcall.com.tw
 +.rakuten.co.jp
 +.ramcity.com.au
++.raphael.app
 +.rapidmoviez.com
 +.rapidvpn.com
 +.rarbgprx.org
@@ -2726,6 +2730,7 @@ copilot.microsoft.com
 +.rti.tw
 +.rtm.tnt-ea.com
 +.rts.ch
++.rule34.us
 +.rule34.xxx
 +.rule34video.com
 +.rumble.com
@@ -2909,6 +2914,7 @@ copilot.microsoft.com
 +.sos.org
 +.sosad.fun
 +.sosreader.com
++.sotwe.com
 +.soulcaliburhentai.net
 +.soundcloud.com
 +.soundofhope.org
@@ -14842,7 +14848,6 @@ copilot.microsoft.com
 +.f6.ru
 +.f6.security
 +.f6988.com
-+.f95zone.to
 +.faacebok.com
 +.faacebook.com
 +.faapy.com
@@ -15940,7 +15945,6 @@ copilot.microsoft.com
 +.g-tun.com
 +.g-tvapp.com
 +.g-xxxhub.com
-+.g.ai
 +.g.dev
 +.g.page
 +.g1.com.br
@@ -19350,7 +19354,6 @@ copilot.microsoft.com
 +.lenkino.xxx
 +.lenporno.net
 +.lenporno.red
-+.leonardo.ai
 +.leporno.org
 +.lepornochaud.com
 +.lepornofrais.com
@@ -23659,7 +23662,6 @@ copilot.microsoft.com
 +.randyblue.com
 +.rapefilms.net
 +.rapetube.me
-+.raphael.app
 +.rapidprototyping-cadcam.com
 +.rapidssl.com
 +.raponlinereview.com
@@ -24039,7 +24041,6 @@ copilot.microsoft.com
 +.ruinedking.com
 +.rukoebxx.com
 +.rulaisc-tv.buzz
-+.rule34.us
 +.rule34h.com
 +.rule34pornvids.com
 +.ruleporn.com
@@ -25097,7 +25098,6 @@ copilot.microsoft.com
 +.sorcerersarena.com
 +.sos44.com
 +.soso7778.com
-+.sotwe.com
 +.souka.xyz
 +.soundcloud.cloud
 +.soundofhope.eu
