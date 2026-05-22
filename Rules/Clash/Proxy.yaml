@@ -1,5 +1,5 @@
 # NAME: Proxy
-# UPDATE: 2026-05-21 09:17:08
+# UPDATE: 2026-05-22 11:42:58
 # TOTAL: 29422
 
 payload:
@@ -1115,6 +1115,7 @@ payload:
   - DOMAIN-SUFFIX,f-droid.org
   - DOMAIN-SUFFIX,f2pool.com
   - DOMAIN-SUFFIX,f8.com
+  - DOMAIN-SUFFIX,f95zone.to
   - DOMAIN-SUFFIX,facebookmail.com
   - DOMAIN-SUFFIX,facebookquotes4u.com
   - DOMAIN-SUFFIX,faceless.me
@@ -1288,6 +1289,7 @@ payload:
   - DOMAIN-SUFFIX,fxnetworks.com
   - DOMAIN-SUFFIX,g-area.org
   - DOMAIN-SUFFIX,g-queen.com
+  - DOMAIN-SUFFIX,g.ai
   - DOMAIN-SUFFIX,g.co
   - DOMAIN-SUFFIX,g0v.social
   - DOMAIN-SUFFIX,gab.com
@@ -1912,6 +1914,7 @@ payload:
   - DOMAIN-SUFFIX,lematin.ch
   - DOMAIN-SUFFIX,lemonde.fr
   - DOMAIN-SUFFIX,lenwhite.com
+  - DOMAIN-SUFFIX,leonardo.ai
   - DOMAIN-SUFFIX,lesoir.be
   - DOMAIN-SUFFIX,letscorp.net
   - DOMAIN-SUFFIX,letsencrypt.org
@@ -2647,6 +2650,7 @@ payload:
   - DOMAIN-SUFFIX,raidcall.com.tw
   - DOMAIN-SUFFIX,rakuten.co.jp
   - DOMAIN-SUFFIX,ramcity.com.au
+  - DOMAIN-SUFFIX,raphael.app
   - DOMAIN-SUFFIX,rapidmoviez.com
   - DOMAIN-SUFFIX,rapidvpn.com
   - DOMAIN-SUFFIX,rarbgprx.org
@@ -2727,6 +2731,7 @@ payload:
   - DOMAIN-SUFFIX,rti.tw
   - DOMAIN-SUFFIX,rtm.tnt-ea.com
   - DOMAIN-SUFFIX,rts.ch
+  - DOMAIN-SUFFIX,rule34.us
   - DOMAIN-SUFFIX,rule34.xxx
   - DOMAIN-SUFFIX,rule34video.com
   - DOMAIN-SUFFIX,rumble.com
@@ -2910,6 +2915,7 @@ payload:
   - DOMAIN-SUFFIX,sos.org
   - DOMAIN-SUFFIX,sosad.fun
   - DOMAIN-SUFFIX,sosreader.com
+  - DOMAIN-SUFFIX,sotwe.com
   - DOMAIN-SUFFIX,soulcaliburhentai.net
   - DOMAIN-SUFFIX,soundcloud.com
   - DOMAIN-SUFFIX,soundofhope.org
@@ -14843,7 +14849,6 @@ payload:
   - DOMAIN-SUFFIX,f6.ru
   - DOMAIN-SUFFIX,f6.security
   - DOMAIN-SUFFIX,f6988.com
-  - DOMAIN-SUFFIX,f95zone.to
   - DOMAIN-SUFFIX,faacebok.com
   - DOMAIN-SUFFIX,faacebook.com
   - DOMAIN-SUFFIX,faapy.com
@@ -15941,7 +15946,6 @@ payload:
   - DOMAIN-SUFFIX,g-tun.com
   - DOMAIN-SUFFIX,g-tvapp.com
   - DOMAIN-SUFFIX,g-xxxhub.com
-  - DOMAIN-SUFFIX,g.ai
   - DOMAIN-SUFFIX,g.dev
   - DOMAIN-SUFFIX,g.page
   - DOMAIN-SUFFIX,g1.com.br
@@ -19351,7 +19355,6 @@ payload:
   - DOMAIN-SUFFIX,lenkino.xxx
   - DOMAIN-SUFFIX,lenporno.net
   - DOMAIN-SUFFIX,lenporno.red
-  - DOMAIN-SUFFIX,leonardo.ai
   - DOMAIN-SUFFIX,leporno.org
   - DOMAIN-SUFFIX,lepornochaud.com
   - DOMAIN-SUFFIX,lepornofrais.com
@@ -23660,7 +23663,6 @@ payload:
   - DOMAIN-SUFFIX,randyblue.com
   - DOMAIN-SUFFIX,rapefilms.net
   - DOMAIN-SUFFIX,rapetube.me
-  - DOMAIN-SUFFIX,raphael.app
   - DOMAIN-SUFFIX,rapidprototyping-cadcam.com
   - DOMAIN-SUFFIX,rapidssl.com
   - DOMAIN-SUFFIX,raponlinereview.com
@@ -24040,7 +24042,6 @@ payload:
   - DOMAIN-SUFFIX,ruinedking.com
   - DOMAIN-SUFFIX,rukoebxx.com
   - DOMAIN-SUFFIX,rulaisc-tv.buzz
-  - DOMAIN-SUFFIX,rule34.us
   - DOMAIN-SUFFIX,rule34h.com
   - DOMAIN-SUFFIX,rule34pornvids.com
   - DOMAIN-SUFFIX,ruleporn.com
@@ -25098,7 +25099,6 @@ payload:
   - DOMAIN-SUFFIX,sorcerersarena.com
   - DOMAIN-SUFFIX,sos44.com
   - DOMAIN-SUFFIX,soso7778.com
-  - DOMAIN-SUFFIX,sotwe.com
   - DOMAIN-SUFFIX,souka.xyz
   - DOMAIN-SUFFIX,soundcloud.cloud
   - DOMAIN-SUFFIX,soundofhope.eu
