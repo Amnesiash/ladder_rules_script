@@ -89,14 +89,14 @@ rules:
 
   # > IP 规则
   - RULE-SET, Private_IP, DIRECT, no-resolve
-  - RULE-SET, WeChat_IP, DIRECT
+  - RULE-SET, WeChat_IP, DIRECT, no-resolve
   - RULE-SET, AI_IP, AI, no-resolve
   - RULE-SET, Apple_IP, 苹果服务, no-resolve
   - RULE-SET, Telegram_IP, Telegram, no-resolve
   - RULE-SET, StreamingHMT_IP, 哔哩哔哩, no-resolve
   - RULE-SET, Streaming_IP, 国际媒体, no-resolve
   - RULE-SET, Proxy_IP, 全球加速, no-resolve
-  - RULE-SET, China_IP, DIRECT
+  - RULE-SET, China_IP, DIRECT, no-resolve
   - GEOIP, CN, DIRECT
 
   # 兜底规则
