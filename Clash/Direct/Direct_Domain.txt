@@ -1,6 +1,6 @@
 # NAME: Direct_Domain
-# UPDATE: 2026-05-22 11:43:03
-# TOTAL: 65
+# UPDATE: 2026-05-22 22:40:36
+# TOTAL: 64
 
 dl.google.com
 origin-a.akamaihd.net
@@ -24,7 +24,6 @@ redirector.gvt1.com
 update.googleapis.com
 vi.l.qq.com
 analytics.strava.com
-+.jasolar.com
 +.hxcy.top
 +.clawcloudrun.com
 +.ghfast.top

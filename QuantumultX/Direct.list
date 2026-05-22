@@ -1,6 +1,6 @@
 # NAME: Direct
-# UPDATE: 2026-05-20 17:33:56
-# TOTAL: 67
+# UPDATE: 2026-05-22 22:40:32
+# TOTAL: 66
 
 HOST,analytics.strava.com,Direct
 HOST,app.adjust.com,Direct
@@ -52,7 +52,6 @@ HOST-SUFFIX,hxcy.top,Direct
 HOST-SUFFIX,i234.me,Direct
 HOST-SUFFIX,iqiyis.com,Direct
 HOST-SUFFIX,istoreos.com,Direct
-HOST-SUFFIX,jasolar.com,Direct
 HOST-SUFFIX,kelee.one,Direct
 HOST-SUFFIX,koodomobile.ca,Direct
 HOST-SUFFIX,koodomobile.com,Direct

@@ -1,6 +1,6 @@
 # NAME: Direct
-# UPDATE: 2026-05-20 22:02:35
-# TOTAL: 67
+# UPDATE: 2026-05-22 22:40:32
+# TOTAL: 66
 
 payload:
   - DOMAIN,dl.google.com
@@ -25,7 +25,6 @@ payload:
   - DOMAIN,update.googleapis.com
   - DOMAIN,vi.l.qq.com
   - DOMAIN,analytics.strava.com
-  - DOMAIN-SUFFIX,jasolar.com
   - DOMAIN-SUFFIX,hxcy.top
   - DOMAIN-SUFFIX,clawcloudrun.com
   - DOMAIN-SUFFIX,ghfast.top

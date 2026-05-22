@@ -1,6 +1,6 @@
 # NAME: Direct
-# UPDATE: 2026-05-20 17:33:56
-# TOTAL: 67
+# UPDATE: 2026-05-22 22:40:32
+# TOTAL: 66
 
 DOMAIN,analytics.strava.com
 DOMAIN,app.adjust.com
@@ -52,7 +52,6 @@ DOMAIN-SUFFIX,hxcy.top
 DOMAIN-SUFFIX,i234.me
 DOMAIN-SUFFIX,iqiyis.com
 DOMAIN-SUFFIX,istoreos.com
-DOMAIN-SUFFIX,jasolar.com
 DOMAIN-SUFFIX,kelee.one
 DOMAIN-SUFFIX,koodomobile.ca
 DOMAIN-SUFFIX,koodomobile.com
