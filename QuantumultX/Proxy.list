@@ -1,6 +1,6 @@
 # NAME: Proxy
-# UPDATE: 2026-05-21 09:17:08
-# TOTAL: 29422
+# UPDATE: 2026-05-23 11:21:35
+# TOTAL: 29425
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -316,6 +316,7 @@ HOST-SUFFIX,233abc.com,Proxy
 HOST-SUFFIX,233v2.com,Proxy
 HOST-SUFFIX,2371tom.com,Proxy
 HOST-SUFFIX,24h.tv,Proxy
+HOST-SUFFIX,24hbook.com,Proxy
 HOST-SUFFIX,24hjav.com,Proxy
 HOST-SUFFIX,24hrs.ca,Proxy
 HOST-SUFFIX,24porn.com,Proxy
@@ -16023,6 +16024,7 @@ HOST-SUFFIX,marvelsuperwar.com,Proxy
 HOST-SUFFIX,marxist.com,Proxy
 HOST-SUFFIX,marxist.net,Proxy
 HOST-SUFFIX,marxists.org,Proxy
+HOST-SUFFIX,mas.to,Proxy
 HOST-SUFFIX,masalabin.com,Proxy
 HOST-SUFFIX,masaladesi.com,Proxy
 HOST-SUFFIX,masalaseen.net,Proxy
@@ -17889,6 +17891,7 @@ HOST-SUFFIX,nenastran.com,Proxy
 HOST-SUFFIX,nenitas.club,Proxy
 HOST-SUFFIX,nentindo.net,Proxy
 HOST-SUFFIX,neo-miracle.com,Proxy
+HOST-SUFFIX,neodb.social,Proxy
 HOST-SUFFIX,neoforged.net,Proxy
 HOST-SUFFIX,neotokyo.supertop-100.com,Proxy
 HOST-SUFFIX,neovim.io,Proxy
