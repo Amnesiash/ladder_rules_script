@@ -1,6 +1,6 @@
 # NAME: AI
-# UPDATE: 2026-05-20 22:02:38
-# TOTAL: 229
+# UPDATE: 2026-05-24 11:40:07
+# TOTAL: 231
 
 payload:
   - DOMAIN,apple-relay.apple.com
@@ -155,6 +155,7 @@ payload:
   - DOMAIN-SUFFIX,midjourney.com
   - DOMAIN-SUFFIX,minimax.io
   - DOMAIN-SUFFIX,mistral.ai
+  - DOMAIN-SUFFIX,mozilla.ai
   - DOMAIN-SUFFIX,notebooklm.google
   - DOMAIN-SUFFIX,notebooklm.google.com
   - DOMAIN-SUFFIX,oaifree.com
@@ -198,6 +199,7 @@ payload:
   - DOMAIN-SUFFIX,stripe.com
   - DOMAIN-SUFFIX,synthesia.io
   - DOMAIN-SUFFIX,tabnine.com
+  - DOMAIN-SUFFIX,tapnow.ai
   - DOMAIN-SUFFIX,themeforest.net
   - DOMAIN-SUFFIX,trae.ai
   - DOMAIN-SUFFIX,turn.livekit.cloud

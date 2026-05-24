@@ -1,6 +1,6 @@
 # NAME: AI
-# UPDATE: 2026-05-20 17:33:56
-# TOTAL: 232
+# UPDATE: 2026-05-24 11:40:07
+# TOTAL: 234
 
 HOST,ai.google.dev,AI
 HOST,aistudio.google.com,AI
@@ -162,6 +162,7 @@ HOST-SUFFIX,microsoft-copilot.com,AI
 HOST-SUFFIX,midjourney.com,AI
 HOST-SUFFIX,minimax.io,AI
 HOST-SUFFIX,mistral.ai,AI
+HOST-SUFFIX,mozilla.ai,AI
 HOST-SUFFIX,notebooklm.google,AI
 HOST-SUFFIX,notebooklm.google.com,AI
 HOST-SUFFIX,oaifree.com,AI
@@ -205,6 +206,7 @@ HOST-SUFFIX,stitch.withgoogle.com,AI
 HOST-SUFFIX,stripe.com,AI
 HOST-SUFFIX,synthesia.io,AI
 HOST-SUFFIX,tabnine.com,AI
+HOST-SUFFIX,tapnow.ai,AI
 HOST-SUFFIX,themeforest.net,AI
 HOST-SUFFIX,trae.ai,AI
 HOST-SUFFIX,turn.livekit.cloud,AI
