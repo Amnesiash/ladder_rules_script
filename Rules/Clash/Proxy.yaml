@@ -1,5 +1,5 @@
 # NAME: Proxy
-# UPDATE: 2026-05-23 11:21:35
+# UPDATE: 2026-05-24 11:40:07
 # TOTAL: 29425
 
 payload:
@@ -91,6 +91,7 @@ payload:
   - DOMAIN-SUFFIX,2047.one
   - DOMAIN-SUFFIX,2049bbs.xyz
   - DOMAIN-SUFFIX,233abc.com
+  - DOMAIN-SUFFIX,24hbook.com
   - DOMAIN-SUFFIX,24hrs.ca
   - DOMAIN-SUFFIX,32red.com
   - DOMAIN-SUFFIX,36rain.com
@@ -2017,6 +2018,7 @@ payload:
   - DOMAIN-SUFFIX,martau.com
   - DOMAIN-SUFFIX,marxist.net
   - DOMAIN-SUFFIX,marxists.org
+  - DOMAIN-SUFFIX,mas.to
   - DOMAIN-SUFFIX,matainja.com
   - DOMAIN-SUFFIX,material.io
   - DOMAIN-SUFFIX,matome-plus.com
@@ -2219,6 +2221,7 @@ payload:
   - DOMAIN-SUFFIX,ndi.org
   - DOMAIN-SUFFIX,nekoslovakia.net
   - DOMAIN-SUFFIX,neo-miracle.com
+  - DOMAIN-SUFFIX,neodb.social
   - DOMAIN-SUFFIX,neowin.net
   - DOMAIN-SUFFIX,nephobox.com
   - DOMAIN-SUFFIX,netalert.me
@@ -8210,7 +8213,6 @@ payload:
   - DOMAIN-SUFFIX,22112211.xyz
   - DOMAIN-SUFFIX,2371tom.com
   - DOMAIN-SUFFIX,24h.tv
-  - DOMAIN-SUFFIX,24hbook.com
   - DOMAIN-SUFFIX,24hjav.com
   - DOMAIN-SUFFIX,24porn.com
   - DOMAIN-SUFFIX,24porn.pro
@@ -19877,7 +19879,6 @@ payload:
   - DOMAIN-SUFFIX,marvelspotlightplays.com
   - DOMAIN-SUFFIX,marvelsuperheroseptember.com
   - DOMAIN-SUFFIX,marvelsuperwar.com
-  - DOMAIN-SUFFIX,mas.to
   - DOMAIN-SUFFIX,masalabin.com
   - DOMAIN-SUFFIX,masaladesi.com
   - DOMAIN-SUFFIX,masalaseen.net
@@ -21333,7 +21334,6 @@ payload:
   - DOMAIN-SUFFIX,nenastran.com
   - DOMAIN-SUFFIX,nenitas.club
   - DOMAIN-SUFFIX,nentindo.net
-  - DOMAIN-SUFFIX,neodb.social
   - DOMAIN-SUFFIX,neotokyo.supertop-100.com
   - DOMAIN-SUFFIX,neovim.io
   - DOMAIN-SUFFIX,neow.in

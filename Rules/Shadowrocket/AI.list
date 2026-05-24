@@ -1,6 +1,6 @@
 # NAME: AI
-# UPDATE: 2026-05-20 17:33:56
-# TOTAL: 232
+# UPDATE: 2026-05-24 11:40:07
+# TOTAL: 234
 
 DOMAIN,ai.google.dev
 DOMAIN,aistudio.google.com
@@ -162,6 +162,7 @@ DOMAIN-SUFFIX,microsoft-copilot.com
 DOMAIN-SUFFIX,midjourney.com
 DOMAIN-SUFFIX,minimax.io
 DOMAIN-SUFFIX,mistral.ai
+DOMAIN-SUFFIX,mozilla.ai
 DOMAIN-SUFFIX,notebooklm.google
 DOMAIN-SUFFIX,notebooklm.google.com
 DOMAIN-SUFFIX,oaifree.com
@@ -205,6 +206,7 @@ DOMAIN-SUFFIX,stitch.withgoogle.com
 DOMAIN-SUFFIX,stripe.com
 DOMAIN-SUFFIX,synthesia.io
 DOMAIN-SUFFIX,tabnine.com
+DOMAIN-SUFFIX,tapnow.ai
 DOMAIN-SUFFIX,themeforest.net
 DOMAIN-SUFFIX,trae.ai
 DOMAIN-SUFFIX,turn.livekit.cloud
