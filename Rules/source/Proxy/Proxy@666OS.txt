@@ -1,7 +1,7 @@
 # NAME: Proxy
 # AUTHOR: YYDS666
-# UPDATED: 2026-05-24 02:52:19
-# TOTAL: 3943
+# UPDATED: 2026-05-26 03:12:51
+# TOTAL: 3944
 DOMAIN-SUFFIX,000webhost.com
 DOMAIN-SUFFIX,1-apple.com.tw
 DOMAIN-SUFFIX,1000giri.net
@@ -2093,6 +2093,7 @@ DOMAIN-SUFFIX,mos.ru
 DOMAIN-SUFFIX,mosavi.io
 DOMAIN-SUFFIX,movements.org
 DOMAIN-SUFFIX,moviefap.com
+DOMAIN-SUFFIX,mozilla.ai
 DOMAIN-SUFFIX,mpettis.com
 DOMAIN-SUFFIX,mpfinance.com
 DOMAIN-SUFFIX,mpinews.com

@@ -1,6 +1,6 @@
 # NAME: Proxy
-# UPDATE: 2026-05-24 11:40:07
-# TOTAL: 29425
+# UPDATE: 2026-05-26 11:37:34
+# TOTAL: 29426
 
 payload:
   - DOMAIN,cloud.oracle.com
@@ -2155,6 +2155,7 @@ payload:
   - DOMAIN-SUFFIX,mosavi.io
   - DOMAIN-SUFFIX,movements.org
   - DOMAIN-SUFFIX,moviefap.com
+  - DOMAIN-SUFFIX,mozilla.ai
   - DOMAIN-SUFFIX,mpettis.com
   - DOMAIN-SUFFIX,mpfinance.com
   - DOMAIN-SUFFIX,mpinews.com
@@ -20327,6 +20328,7 @@ payload:
   - DOMAIN-SUFFIX,micstl.com
   - DOMAIN-SUFFIX,midatlanticbmwmotorcycles.com
   - DOMAIN-SUFFIX,midentsolutions.com
+  - DOMAIN-SUFFIX,midjourney.com
   - DOMAIN-SUFFIX,midoushe.com
   - DOMAIN-SUFFIX,mie.co.jp
   - DOMAIN-SUFFIX,miexnoviadesnuda.com
@@ -20906,7 +20908,6 @@ payload:
   - DOMAIN-SUFFIX,moxing.news
   - DOMAIN-SUFFIX,moystoys.com
   - DOMAIN-SUFFIX,mozgcp.net
-  - DOMAIN-SUFFIX,mozilla.ai
   - DOMAIN-SUFFIX,mozilla.com
   - DOMAIN-SUFFIX,mozilla.community
   - DOMAIN-SUFFIX,mozilla.net
