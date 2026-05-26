@@ -1,6 +1,6 @@
 # NAME: Proxy
-# UPDATE: 2026-05-23 11:21:35
-# TOTAL: 29425
+# UPDATE: 2026-05-26 11:37:34
+# TOTAL: 29426
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -16586,6 +16586,7 @@ HOST-SUFFIX,micstl.com,Proxy
 HOST-SUFFIX,midatlanticbmwmotorcycles.com,Proxy
 HOST-SUFFIX,middle-way.net,Proxy
 HOST-SUFFIX,midentsolutions.com,Proxy
+HOST-SUFFIX,midjourney.com,Proxy
 HOST-SUFFIX,midoushe.com,Proxy
 HOST-SUFFIX,mie.co.jp,Proxy
 HOST-SUFFIX,miexnoviadesnuda.com,Proxy

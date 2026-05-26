@@ -1,6 +1,6 @@
 # NAME: Proxy_Domain
-# UPDATE: 2026-05-25 22:54:19
-# TOTAL: 29198
+# UPDATE: 2026-05-26 11:37:38
+# TOTAL: 29199
 
 cloud.oracle.com
 steambroadcast.akamaized.net
@@ -2154,6 +2154,7 @@ copilot.microsoft.com
 +.mosavi.io
 +.movements.org
 +.moviefap.com
++.mozilla.ai
 +.mpettis.com
 +.mpfinance.com
 +.mpinews.com
@@ -20326,6 +20327,7 @@ copilot.microsoft.com
 +.micstl.com
 +.midatlanticbmwmotorcycles.com
 +.midentsolutions.com
++.midjourney.com
 +.midoushe.com
 +.mie.co.jp
 +.miexnoviadesnuda.com
@@ -20905,7 +20907,6 @@ copilot.microsoft.com
 +.moxing.news
 +.moystoys.com
 +.mozgcp.net
-+.mozilla.ai
 +.mozilla.com
 +.mozilla.community
 +.mozilla.net

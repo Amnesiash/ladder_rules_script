@@ -1,6 +1,6 @@
 # NAME: Proxy
-# UPDATE: 2026-05-23 11:21:35
-# TOTAL: 29425
+# UPDATE: 2026-05-26 11:37:34
+# TOTAL: 29426
 
 DOMAIN,a248.e.akamai.net
 DOMAIN,a771.dscq.akamai.net
@@ -16586,6 +16586,7 @@ DOMAIN-SUFFIX,micstl.com
 DOMAIN-SUFFIX,midatlanticbmwmotorcycles.com
 DOMAIN-SUFFIX,middle-way.net
 DOMAIN-SUFFIX,midentsolutions.com
+DOMAIN-SUFFIX,midjourney.com
 DOMAIN-SUFFIX,midoushe.com
 DOMAIN-SUFFIX,mie.co.jp
 DOMAIN-SUFFIX,miexnoviadesnuda.com
