@@ -1,5 +1,5 @@
 # NAME: Apple_Domain
-# UPDATE: 2026-05-26 11:37:38
+# UPDATE: 2026-05-26 23:31:03
 # TOTAL: 19
 
 apple.comscoreresearch.com
