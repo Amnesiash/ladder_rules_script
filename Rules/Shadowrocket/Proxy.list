@@ -1,6 +1,6 @@
 # NAME: Proxy
-# UPDATE: 2026-05-28 11:40:46
-# TOTAL: 29459
+# UPDATE: 2026-05-30 11:29:41
+# TOTAL: 29462
 
 DOMAIN,a248.e.akamai.net
 DOMAIN,a771.dscq.akamai.net
@@ -2557,6 +2557,7 @@ DOMAIN-SUFFIX,arzon.jp
 DOMAIN-SUFFIX,as-dash-uk-live.akamaized.net
 DOMAIN-SUFFIX,as-hls-uk-live.akamaized.net
 DOMAIN-SUFFIX,as-hp.ca
+DOMAIN-SUFFIX,as.mr
 DOMAIN-SUFFIX,asacp.org
 DOMAIN-SUFFIX,asagaku.com
 DOMAIN-SUFFIX,asahi.com
@@ -10670,6 +10671,7 @@ DOMAIN-SUFFIX,gemfury.com
 DOMAIN-SUFFIX,gemini.com
 DOMAIN-SUFFIX,gemini.google.com
 DOMAIN-SUFFIX,gen.lib.rus.ec
+DOMAIN-SUFFIX,gencraft.com
 DOMAIN-SUFFIX,gendai.net
 DOMAIN-SUFFIX,generated.photos
 DOMAIN-SUFFIX,genetic-technologies.am
@@ -25905,6 +25907,7 @@ DOMAIN-SUFFIX,ve-dash-uk-live.akamaized.net
 DOMAIN-SUFFIX,ve-uhd-push-uk-live.akamaized.net
 DOMAIN-SUFFIX,vecchiescopate.casa
 DOMAIN-SUFFIX,vector.im
+DOMAIN-SUFFIX,veed.io
 DOMAIN-SUFFIX,veet.at
 DOMAIN-SUFFIX,veet.be
 DOMAIN-SUFFIX,veet.ca
