@@ -1,6 +1,6 @@
 # NAME: Proxy
-# UPDATE: 2026-05-28 11:40:46
-# TOTAL: 29459
+# UPDATE: 2026-05-30 11:29:41
+# TOTAL: 29462
 
 payload:
   - DOMAIN,cloud.oracle.com
@@ -305,6 +305,7 @@ payload:
   - DOMAIN-SUFFIX,arvanstorage.ir
   - DOMAIN-SUFFIX,arweave.org
   - DOMAIN-SUFFIX,arxiv.org
+  - DOMAIN-SUFFIX,as.mr
   - DOMAIN-SUFFIX,asacp.org
   - DOMAIN-SUFFIX,asiaharvest.org
   - DOMAIN-SUFFIX,asianage.com
@@ -368,6 +369,7 @@ payload:
   - DOMAIN-SUFFIX,bangdream.space
   - DOMAIN-SUFFIX,bangkokpost.com
   - DOMAIN-SUFFIX,bangumi.moe
+  - DOMAIN-SUFFIX,bangumi.tv
   - DOMAIN-SUFFIX,bangyoulater.com
   - DOMAIN-SUFFIX,bankmobilevibe.com
   - DOMAIN-SUFFIX,bannedbook.org
@@ -421,6 +423,7 @@ payload:
   - DOMAIN-SUFFIX,betvictor.com
   - DOMAIN-SUFFIX,bfnn.org
   - DOMAIN-SUFFIX,bfsh.hk
+  - DOMAIN-SUFFIX,bgm.tv
   - DOMAIN-SUFFIX,bgme.me
   - DOMAIN-SUFFIX,bgvpn.com
   - DOMAIN-SUFFIX,biblesforamerica.org
@@ -680,6 +683,7 @@ payload:
   - DOMAIN-SUFFIX,chenshan20042005.wordpress.com
   - DOMAIN-SUFFIX,cherrysave.com
   - DOMAIN-SUFFIX,chhongbi.org
+  - DOMAIN-SUFFIX,chii.in
   - DOMAIN-SUFFIX,china-mmm.net
   - DOMAIN-SUFFIX,china-week.com
   - DOMAIN-SUFFIX,china101.com
@@ -774,7 +778,6 @@ payload:
   - DOMAIN-SUFFIX,cn.uptodown.com
   - DOMAIN-SUFFIX,cna.com.tw
   - DOMAIN-SUFFIX,cnbbnews.wordpress.com
-  - DOMAIN-SUFFIX,cnbc.com
   - DOMAIN-SUFFIX,cnbeta.com.tw
   - DOMAIN-SUFFIX,cnd.org
   - DOMAIN-SUFFIX,cnnews.chosun.com
@@ -1320,6 +1323,7 @@ payload:
   - DOMAIN-SUFFIX,gekikame.com
   - DOMAIN-SUFFIX,gemini.com
   - DOMAIN-SUFFIX,gemini.google.com
+  - DOMAIN-SUFFIX,gencraft.com
   - DOMAIN-SUFFIX,generated.photos
   - DOMAIN-SUFFIX,genius.com
   - DOMAIN-SUFFIX,geph.io
@@ -1522,6 +1526,7 @@ payload:
   - DOMAIN-SUFFIX,hicairo.com
   - DOMAIN-SUFFIX,hiccears.com
   - DOMAIN-SUFFIX,hidden-advent.org
+  - DOMAIN-SUFFIX,hiddify.com
   - DOMAIN-SUFFIX,hide.me
   - DOMAIN-SUFFIX,hideipvpn.com
   - DOMAIN-SUFFIX,hideman.net
@@ -2899,7 +2904,6 @@ payload:
   - DOMAIN-SUFFIX,socialblade.com
   - DOMAIN-SUFFIX,socks-proxy.net
   - DOMAIN-SUFFIX,sockslist.net
-  - DOMAIN-SUFFIX,softether-download.com
   - DOMAIN-SUFFIX,softether.co.jp
   - DOMAIN-SUFFIX,softether.org
   - DOMAIN-SUFFIX,softfamous.com
@@ -3441,6 +3445,7 @@ payload:
   - DOMAIN-SUFFIX,vatn.org
   - DOMAIN-SUFFIX,vcf-online.org
   - DOMAIN-SUFFIX,vcfbuilder.org
+  - DOMAIN-SUFFIX,veed.io
   - DOMAIN-SUFFIX,vegas.williamhill.com
   - DOMAIN-SUFFIX,vegasred.com
   - DOMAIN-SUFFIX,venetianmacao.com
@@ -3778,7 +3783,6 @@ payload:
   - DOMAIN-SUFFIX,yfsp.tv
   - DOMAIN-SUFFIX,yhcw.net
   - DOMAIN-SUFFIX,yibaochina.com
-  - DOMAIN-SUFFIX,yidio.com
   - DOMAIN-SUFFIX,yigeni.com
   - DOMAIN-SUFFIX,yimg.com
   - DOMAIN-SUFFIX,yingwangtech.cloud
@@ -6507,6 +6511,7 @@ payload:
   - DOMAIN-SUFFIX,sockscap64.com
   - DOMAIN-SUFFIX,socrec.org
   - DOMAIN-SUFFIX,sod.co.jp
+  - DOMAIN-SUFFIX,softether-download.com
   - DOMAIN-SUFFIX,softlayer.net
   - DOMAIN-SUFFIX,softsmirror.cf
   - DOMAIN-SUFFIX,sogoo.org
@@ -7189,6 +7194,7 @@ payload:
   - DOMAIN-SUFFIX,yeyeclub.com
   - DOMAIN-SUFFIX,ygto.com
   - DOMAIN-SUFFIX,yibada.com
+  - DOMAIN-SUFFIX,yidio.com
   - DOMAIN-SUFFIX,yilubbs.com
   - DOMAIN-SUFFIX,yingsuoss.com
   - DOMAIN-SUFFIX,yinlei.org
@@ -10555,7 +10561,6 @@ payload:
   - DOMAIN-SUFFIX,bangbros.com
   - DOMAIN-SUFFIX,bangher.net
   - DOMAIN-SUFFIX,bangkokstreetwhores.com
-  - DOMAIN-SUFFIX,bangumi.tv
   - DOMAIN-SUFFIX,bangyourwife.com
   - DOMAIN-SUFFIX,bank-arzamas.ru
   - DOMAIN-SUFFIX,bank-credit-suisse-moscow.ru
@@ -11050,7 +11055,6 @@ payload:
   - DOMAIN-SUFFIX,bfa.ru
   - DOMAIN-SUFFIX,bffshd.com
   - DOMAIN-SUFFIX,bgicdn.com
-  - DOMAIN-SUFFIX,bgm.tv
   - DOMAIN-SUFFIX,bgov.com
   - DOMAIN-SUFFIX,bgr.in
   - DOMAIN-SUFFIX,bhent.co.kr
@@ -12583,7 +12587,6 @@ payload:
   - DOMAIN-SUFFIX,chickteases.com
   - DOMAIN-SUFFIX,chid.com.mm
   - DOMAIN-SUFFIX,chihair-straightener.com
-  - DOMAIN-SUFFIX,chii.in
   - DOMAIN-SUFFIX,chikiporn.com
   - DOMAIN-SUFFIX,chikubank.co.jp
   - DOMAIN-SUFFIX,chillingo.com
@@ -12816,6 +12819,7 @@ payload:
   - DOMAIN-SUFFIX,cms-twdigitalassets.com
   - DOMAIN-SUFFIX,cn.fmnnow.com
   - DOMAIN-SUFFIX,cn.shafaqna.com
+  - DOMAIN-SUFFIX,cnbc.com
   - DOMAIN-SUFFIX,cnbcfm.com
   - DOMAIN-SUFFIX,cnbeta.com
   - DOMAIN-SUFFIX,cnbetacdn.com
@@ -17027,7 +17031,6 @@ payload:
   - DOMAIN-SUFFIX,hibdontire.com
   - DOMAIN-SUFFIX,hibiki-cast.jp
   - DOMAIN-SUFFIX,hiddenvoyeurspy.com
-  - DOMAIN-SUFFIX,hiddify.com
   - DOMAIN-SUFFIX,hidefporn.ws
   - DOMAIN-SUFFIX,hidive.com
   - DOMAIN-SUFFIX,hifacebook.info

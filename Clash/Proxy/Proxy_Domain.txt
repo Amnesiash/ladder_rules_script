@@ -1,6 +1,6 @@
 # NAME: Proxy_Domain
-# UPDATE: 2026-05-29 23:33:39
-# TOTAL: 29232
+# UPDATE: 2026-05-30 11:29:44
+# TOTAL: 29235
 
 cloud.oracle.com
 steambroadcast.akamaized.net
@@ -304,6 +304,7 @@ copilot.microsoft.com
 +.arvanstorage.ir
 +.arweave.org
 +.arxiv.org
++.as.mr
 +.asacp.org
 +.asiaharvest.org
 +.asianage.com
@@ -367,6 +368,7 @@ copilot.microsoft.com
 +.bangdream.space
 +.bangkokpost.com
 +.bangumi.moe
++.bangumi.tv
 +.bangyoulater.com
 +.bankmobilevibe.com
 +.bannedbook.org
@@ -420,6 +422,7 @@ copilot.microsoft.com
 +.betvictor.com
 +.bfnn.org
 +.bfsh.hk
++.bgm.tv
 +.bgme.me
 +.bgvpn.com
 +.biblesforamerica.org
@@ -679,6 +682,7 @@ copilot.microsoft.com
 +.chenshan20042005.wordpress.com
 +.cherrysave.com
 +.chhongbi.org
++.chii.in
 +.china-mmm.net
 +.china-week.com
 +.china101.com
@@ -773,7 +777,6 @@ copilot.microsoft.com
 +.cn.uptodown.com
 +.cna.com.tw
 +.cnbbnews.wordpress.com
-+.cnbc.com
 +.cnbeta.com.tw
 +.cnd.org
 +.cnnews.chosun.com
@@ -1319,6 +1322,7 @@ copilot.microsoft.com
 +.gekikame.com
 +.gemini.com
 +.gemini.google.com
++.gencraft.com
 +.generated.photos
 +.genius.com
 +.geph.io
@@ -1521,6 +1525,7 @@ copilot.microsoft.com
 +.hicairo.com
 +.hiccears.com
 +.hidden-advent.org
++.hiddify.com
 +.hide.me
 +.hideipvpn.com
 +.hideman.net
@@ -2898,7 +2903,6 @@ copilot.microsoft.com
 +.socialblade.com
 +.socks-proxy.net
 +.sockslist.net
-+.softether-download.com
 +.softether.co.jp
 +.softether.org
 +.softfamous.com
@@ -3440,6 +3444,7 @@ copilot.microsoft.com
 +.vatn.org
 +.vcf-online.org
 +.vcfbuilder.org
++.veed.io
 +.vegas.williamhill.com
 +.vegasred.com
 +.venetianmacao.com
@@ -3777,7 +3782,6 @@ copilot.microsoft.com
 +.yfsp.tv
 +.yhcw.net
 +.yibaochina.com
-+.yidio.com
 +.yigeni.com
 +.yimg.com
 +.yingwangtech.cloud
@@ -6506,6 +6510,7 @@ copilot.microsoft.com
 +.sockscap64.com
 +.socrec.org
 +.sod.co.jp
++.softether-download.com
 +.softlayer.net
 +.softsmirror.cf
 +.sogoo.org
@@ -7188,6 +7193,7 @@ copilot.microsoft.com
 +.yeyeclub.com
 +.ygto.com
 +.yibada.com
++.yidio.com
 +.yilubbs.com
 +.yingsuoss.com
 +.yinlei.org
@@ -10554,7 +10560,6 @@ copilot.microsoft.com
 +.bangbros.com
 +.bangher.net
 +.bangkokstreetwhores.com
-+.bangumi.tv
 +.bangyourwife.com
 +.bank-arzamas.ru
 +.bank-credit-suisse-moscow.ru
@@ -11049,7 +11054,6 @@ copilot.microsoft.com
 +.bfa.ru
 +.bffshd.com
 +.bgicdn.com
-+.bgm.tv
 +.bgov.com
 +.bgr.in
 +.bhent.co.kr
@@ -12582,7 +12586,6 @@ copilot.microsoft.com
 +.chickteases.com
 +.chid.com.mm
 +.chihair-straightener.com
-+.chii.in
 +.chikiporn.com
 +.chikubank.co.jp
 +.chillingo.com
@@ -12815,6 +12818,7 @@ copilot.microsoft.com
 +.cms-twdigitalassets.com
 +.cn.fmnnow.com
 +.cn.shafaqna.com
++.cnbc.com
 +.cnbcfm.com
 +.cnbeta.com
 +.cnbetacdn.com
@@ -17026,7 +17030,6 @@ copilot.microsoft.com
 +.hibdontire.com
 +.hibiki-cast.jp
 +.hiddenvoyeurspy.com
-+.hiddify.com
 +.hidefporn.ws
 +.hidive.com
 +.hifacebook.info
