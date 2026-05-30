@@ -1,5 +1,5 @@
 # NAME: WeChat_Domain
-# UPDATE: 2026-05-30 11:29:45
+# UPDATE: 2026-05-30 21:39:52
 # TOTAL: 30
 
 apd-pcdnwxlogin.teg.tencent-cloud.net
