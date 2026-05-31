@@ -47,47 +47,12 @@ jobs:
             echo "No rule changes to push to main."
           fi
 
-      - name: Prepare ladder release artifacts
-        run: |
-          cd ladder-repo
-          bun run build:release:clean
-
-      - name: Push Update
-        run: |
-          cd ladder-repo
-          # release 分支用于发布产物，允许覆盖式更新
-          git fetch origin release || true
-          git checkout -B release
-          if git show-ref --verify --quiet refs/remotes/origin/release; then
-            git reset --hard origin/release
-          fi
-
-          # 仅发布 .release/ 目录中的产物到 release 分支根目录
-          if [[ ! -d ".release" ]]; then
-            echo "Missing .release/ artifacts directory; aborting."
-            exit 1
-          fi
-          # 清空工作区（保留 .git），避免把主仓库源文件提交到 release 分支
-          find . -mindepth 1 -maxdepth 1 ! -name ".git" ! -name ".release" -exec rm -rf {} +
-          cp -a .release/. .
-          rm -rf .release
-
-          if [[ -n $(git status -s) ]]; then
-            git config --local user.email "${{ github.actor }}@users.noreply.github.com"
-            git config --local user.name "${{ github.actor }}"
-            git add -A
-            git commit -m "Auto Update $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')"
-            git push --force-with-lease origin release
-          else
-            echo "No changes to commit."
-          fi
-
       - name: Check for rule changes
         id: check-changes
         run: |
           cd ladder-repo
-          # 检查 Rules 目录是否有变化
-          if [[ -n $(git status -s | grep "^Rules/") ]]; then
+          # 对比上次提交，检查 Rules 目录是否有变化
+          if [[ -n $(git diff HEAD~1 HEAD --name-only -- Rules/) ]]; then
             echo "has_changes=true" >> $GITHUB_OUTPUT
             
             # 按客户端分类
@@ -96,24 +61,21 @@ jobs:
             QX_DATA=""
             SR_DATA=""
             
-            while IFS= read -r line; do
-              status=$(echo "$line" | awk '{print $1}')
-              file=$(echo "$line" | awk '{print $2}')
+            while IFS= read -r file; do
+              status=$(git diff HEAD~1 HEAD --diff-filter=ADM --name-status -- "$file" | awk '{print $1}')
+              bname=$(basename "$file")
               
               # 计算行数变化
               if [[ "$status" == "A" ]]; then
-                lines=$(wc -l < "$file" 2>/dev/null || echo "0")
+                lines=$(git show HEAD:"$file" 2>/dev/null | wc -l | tr -d ' ')
                 stats="(+${lines})"
               elif [[ "$status" == "M" ]]; then
-                added=$(git diff --unified=0 "$file" 2>/dev/null | grep '^+' | grep -v '^+++' | wc -l)
-                deleted=$(git diff --unified=0 "$file" 2>/dev/null | grep '^-' | grep -v '^---' | wc -l)
+                added=$(git diff HEAD~1 HEAD --unified=0 -- "$file" 2>/dev/null | grep '^+' | grep -v '^+++' | wc -l)
+                deleted=$(git diff HEAD~1 HEAD --unified=0 -- "$file" 2>/dev/null | grep '^-' | grep -v '^---' | wc -l)
                 stats="(+${added}/-${deleted})"
               elif [[ "$status" == "D" ]]; then
                 stats=""
               fi
-              
-              # 提取文件名（不含路径）
-              bname=$(basename "$file")
               
               # 按客户端分类
               if [[ "$file" == Rules/Clash/* ]]; then
@@ -125,7 +87,7 @@ jobs:
               elif [[ "$file" == Rules/Shadowrocket/* ]]; then
                 SR_DATA="${SR_DATA}${bname}|${status}|${stats}\n"
               fi
-            done < <(git status -s | grep "^Rules/")
+            done < <(git diff HEAD~1 HEAD --name-only -- Rules/)
             
             # 输出分类结果
             echo "clash_data<<EOF" >> $GITHUB_OUTPUT
@@ -145,9 +107,9 @@ jobs:
             echo "EOF" >> $GITHUB_OUTPUT
             
             # 统计新增/更新/删除文件数量
-            added_count=$(git status -s -- Rules/ | grep -c "^A") || true
-            modified_count=$(git status -s -- Rules/ | grep -c "^M") || true
-            deleted_count=$(git status -s -- Rules/ | grep -c "^D") || true
+            added_count=$(git diff HEAD~1 HEAD --diff-filter=A --name-only -- Rules/ | wc -l | tr -d ' ')
+            modified_count=$(git diff HEAD~1 HEAD --diff-filter=M --name-only -- Rules/ | wc -l | tr -d ' ')
+            deleted_count=$(git diff HEAD~1 HEAD --diff-filter=D --name-only -- Rules/ | wc -l | tr -d ' ')
             echo "added_count=$added_count" >> $GITHUB_OUTPUT
             echo "modified_count=$modified_count" >> $GITHUB_OUTPUT
             echo "deleted_count=$deleted_count" >> $GITHUB_OUTPUT
@@ -225,6 +187,41 @@ jobs:
             -d "parse_mode=Markdown" \
             -d "text=${MESSAGE}" \
             -d "disable_web_page_preview=true"
+
+      - name: Prepare ladder release artifacts
+        run: |
+          cd ladder-repo
+          bun run build:release:clean
+
+      - name: Push Update
+        run: |
+          cd ladder-repo
+          # release 分支用于发布产物，允许覆盖式更新
+          git fetch origin release || true
+          git checkout -B release
+          if git show-ref --verify --quiet refs/remotes/origin/release; then
+            git reset --hard origin/release
+          fi
+
+          # 仅发布 .release/ 目录中的产物到 release 分支根目录
+          if [[ ! -d ".release" ]]; then
+            echo "Missing .release/ artifacts directory; aborting."
+            exit 1
+          fi
+          # 清空工作区（保留 .git），避免把主仓库源文件提交到 release 分支
+          find . -mindepth 1 -maxdepth 1 ! -name ".git" ! -name ".release" -exec rm -rf {} +
+          cp -a .release/. .
+          rm -rf .release
+
+          if [[ -n $(git status -s) ]]; then
+            git config --local user.email "${{ github.actor }}@users.noreply.github.com"
+            git config --local user.name "${{ github.actor }}"
+            git add -A
+            git commit -m "Auto Update $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')"
+            git push --force-with-lease origin release
+          else
+            echo "No changes to commit."
+          fi
 
       - name: Cleanup Workflow
         uses: Mattraks/delete-workflow-runs@main
