@@ -1,6 +1,6 @@
 # NAME: Proxy
-# UPDATE: 2026-05-30 11:29:41
-# TOTAL: 29462
+# UPDATE: 2026-05-31 11:56:16
+# TOTAL: 29464
 
 payload:
   - DOMAIN,cloud.oracle.com
@@ -19504,6 +19504,7 @@ payload:
   - DOMAIN-SUFFIX,livesketchshare.com
   - DOMAIN-SUFFIX,livexxx.me
   - DOMAIN-SUFFIX,livingyourambition.com
+  - DOMAIN-SUFFIX,livinno.org
   - DOMAIN-SUFFIX,livrariart.com.br
   - DOMAIN-SUFFIX,lizardporn.com
   - DOMAIN-SUFFIX,lizol.co.in
@@ -22217,6 +22218,7 @@ payload:
   - DOMAIN-SUFFIX,ootbstudio.co.kr
   - DOMAIN-SUFFIX,op.gg
   - DOMAIN-SUFFIX,op7979.com
+  - DOMAIN-SUFFIX,opac-project.eu
   - DOMAIN-SUFFIX,openamt.com
   - DOMAIN-SUFFIX,openapiplatform.com
   - DOMAIN-SUFFIX,openapiservice.com
