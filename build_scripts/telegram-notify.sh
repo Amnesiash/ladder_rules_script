@@ -25,6 +25,10 @@ if [[ -z "$CHANGED_FILES" ]]; then
   exit 0
 fi
 
+# 临时文件存储消息体（避免 curl -d 对 +、* 等字符的转义问题）
+TMPFILE=$(mktemp)
+trap "rm -f $TMPFILE" EXIT
+
 # 按客户端收集
 CLASH_DATA=""
 LOON_DATA=""
@@ -53,40 +57,38 @@ while IFS= read -r file; do
     DELETED=$((DELETED + 1))
   fi
 
-  entry="${bname}|${status}|${stats}"$'\n'
+  entry="${bname}|${status}|${stats}"
   case "$file" in
-    Rules/Clash/*)       CLASH_DATA="${CLASH_DATA}${entry}" ;;
-    Rules/Loon/*)        LOON_DATA="${LOON_DATA}${entry}" ;;
-    Rules/QuantumultX/*) QX_DATA="${QX_DATA}${entry}" ;;
-    Rules/Shadowrocket/*) SR_DATA="${SR_DATA}${entry}" ;;
+    Rules/Clash/*)       CLASH_DATA="${CLASH_DATA}${entry}"$'\n' ;;
+    Rules/Loon/*)        LOON_DATA="${LOON_DATA}${entry}"$'\n' ;;
+    Rules/QuantumultX/*) QX_DATA="${QX_DATA}${entry}"$'\n' ;;
+    Rules/Shadowrocket/*) SR_DATA="${SR_DATA}${entry}"$'\n' ;;
   esac
 done <<< "$CHANGED_FILES"
 
-# 构建消息
-summary_line="🟢 新增 **${ADDED}** / 🟡 更新 **${MODIFIED}** / 🔴 删除 **${DELETED}**"
-message="*📢 rule provider 产物变化*"
-message="${message}"$'\n'
-message="${message}"$'\n'"━━━━━━━━━━━━━━━━━━"
-message="${message}"$'\n'"${summary_line}"
-message="${message}"$'\n'"━━━━━━━━━━━━━━━━━━"
+# 构建消息到临时文件
+printf '*📢 rule provider 产物变化*\n\n' >> "$TMPFILE"
+printf '━━━━━━━━━━━━━━━━━━\n' >> "$TMPFILE"
+printf '🟢 新增 **%s** / 🟡 更新 **%s** / 🔴 删除 **%s**\n' "$ADDED" "$MODIFIED" "$DELETED" >> "$TMPFILE"
+printf '━━━━━━━━━━━━━━━━━━\n' >> "$TMPFILE"
 
-# 构建客户端列表
+# 客户端列表
 build_section() {
   local client="$1"
   local path="$2"
   local data="$3"
   [[ -z "$data" ]] && return
-  message="${message}"$'\n'$'\n'"*${client}*"
+  printf '\n*%s*\n' "$client" >> "$TMPFILE"
   while IFS='|' read -r filename status stats; do
     [[ -z "$filename" ]] && continue
-    emoji=""
+    local emoji=""
     [[ "$status" == "A" ]] && emoji="🟢"
     [[ "$status" == "M" ]] && emoji="🟡"
     [[ "$status" == "D" ]] && emoji="🔴"
     if [[ "$status" == "D" ]]; then
-      message="${message}"$'\n'"${emoji} ${filename}"
+      printf '%s %s\n' "$emoji" "$filename" >> "$TMPFILE"
     else
-      message="${message}"$'\n'"${emoji} [${filename}](${TREE_URL}/Rules/${path}/${filename}) ${stats}"
+      printf '%s [%s](%s/Rules/%s/%s) %s\n' "$emoji" "$filename" "$TREE_URL" "$path" "$filename" "$stats" >> "$TMPFILE"
     fi
   done <<< "$data"
 }
@@ -96,11 +98,11 @@ build_section "Loon" "Loon" "$LOON_DATA"
 build_section "QuantumultX" "QuantumultX" "$QX_DATA"
 build_section "Shadowrocket" "Shadowrocket" "$SR_DATA"
 
-# 发送
+# 发送（用 --data-urlencode text@file 避免特殊字符转义）
 response=$(curl -s -X POST "https://api.telegram.org/bot${TG_BOT_TOKEN}/sendMessage" \
   -d "chat_id=${TG_CHAT_ID}" \
   -d "parse_mode=Markdown" \
-  -d "text=${message}" \
+  --data-urlencode "text@${TMPFILE}" \
   -d "disable_web_page_preview=true" 2>&1)
 
 if echo "$response" | grep -q '"ok":false'; then
