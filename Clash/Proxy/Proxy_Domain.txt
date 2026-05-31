@@ -1,6 +1,6 @@
 # NAME: Proxy_Domain
-# UPDATE: 2026-05-30 21:39:51
-# TOTAL: 29235
+# UPDATE: 2026-05-31 11:56:20
+# TOTAL: 29237
 
 cloud.oracle.com
 steambroadcast.akamaized.net
@@ -19503,6 +19503,7 @@ copilot.microsoft.com
 +.livesketchshare.com
 +.livexxx.me
 +.livingyourambition.com
++.livinno.org
 +.livrariart.com.br
 +.lizardporn.com
 +.lizol.co.in
@@ -22216,6 +22217,7 @@ copilot.microsoft.com
 +.ootbstudio.co.kr
 +.op.gg
 +.op7979.com
++.opac-project.eu
 +.openamt.com
 +.openapiplatform.com
 +.openapiservice.com
