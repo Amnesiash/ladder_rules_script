@@ -82,6 +82,142 @@ jobs:
             echo "No changes to commit."
           fi
 
+      - name: Check for rule changes
+        id: check-changes
+        run: |
+          cd ladder-repo
+          # 检查 Rules 目录是否有变化
+          if [[ -n $(git status -s | grep "^Rules/") ]]; then
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            
+            # 按客户端分类
+            CLASH_DATA=""
+            LOON_DATA=""
+            QX_DATA=""
+            SR_DATA=""
+            
+            while IFS= read -r line; do
+              status=$(echo "$line" | awk '{print $1}')
+              file=$(echo "$line" | awk '{print $2}')
+              
+              # 计算行数变化
+              if [[ "$status" == "A" ]]; then
+                lines=$(wc -l < "$file" 2>/dev/null || echo "0")
+                stats="(+${lines})"
+              elif [[ "$status" == "M" ]]; then
+                added=$(git diff --unified=0 "$file" 2>/dev/null | grep '^+' | grep -v '^+++' | wc -l)
+                deleted=$(git diff --unified=0 "$file" 2>/dev/null | grep '^-' | grep -v '^---' | wc -l)
+                stats="(+${added}/-${deleted})"
+              elif [[ "$status" == "D" ]]; then
+                stats=""
+              fi
+              
+              # 提取文件名（不含路径）
+              bname=$(basename "$file")
+              
+              # 按客户端分类
+              if [[ "$file" == Rules/Clash/* ]]; then
+                CLASH_DATA="${CLASH_DATA}${bname}|${status}|${stats}\n"
+              elif [[ "$file" == Rules/Loon/* ]]; then
+                LOON_DATA="${LOON_DATA}${bname}|${status}|${stats}\n"
+              elif [[ "$file" == Rules/QuantumultX/* ]]; then
+                QX_DATA="${QX_DATA}${bname}|${status}|${stats}\n"
+              elif [[ "$file" == Rules/Shadowrocket/* ]]; then
+                SR_DATA="${SR_DATA}${bname}|${status}|${stats}\n"
+              fi
+            done < <(git status -s | grep "^Rules/")
+            
+            # 输出分类结果
+            echo "clash_data<<EOF" >> $GITHUB_OUTPUT
+            echo -e "$CLASH_DATA" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+            
+            echo "loon_data<<EOF" >> $GITHUB_OUTPUT
+            echo -e "$LOON_DATA" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+            
+            echo "qx_data<<EOF" >> $GITHUB_OUTPUT
+            echo -e "$QX_DATA" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+            
+            echo "sr_data<<EOF" >> $GITHUB_OUTPUT
+            echo -e "$SR_DATA" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+            
+            # 统计新增/更新/删除文件数量
+            added_count=$(git status -s -- Rules/ | grep -c "^A") || true
+            modified_count=$(git status -s -- Rules/ | grep -c "^M") || true
+            deleted_count=$(git status -s -- Rules/ | grep -c "^D") || true
+            echo "added_count=$added_count" >> $GITHUB_OUTPUT
+            echo "modified_count=$modified_count" >> $GITHUB_OUTPUT
+            echo "deleted_count=$deleted_count" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Send Telegram notification
+        if: steps.check-changes.outputs.has_changes == 'true' && secrets.TELEGRAM_BOT_TOKEN != '' && secrets.TELEGRAM_CHAT_ID != ''
+        run: |
+          CLASH="${{ steps.check-changes.outputs.clash_data }}"
+          LOON="${{ steps.check-changes.outputs.loon_data }}"
+          QX="${{ steps.check-changes.outputs.qx_data }}"
+          SR="${{ steps.check-changes.outputs.sr_data }}"
+          ADDED="${{ steps.check-changes.outputs.added_count }}"
+          MODIFIED="${{ steps.check-changes.outputs.modified_count }}"
+          DELETED="${{ steps.check-changes.outputs.deleted_count }}"
+          TREE_URL="https://github.com/${{ github.repository }}/blob/main"
+          
+          # 构建文件列表
+          build_list() {
+            local input="$1"
+            local client_path="$2"
+            local result=""
+            
+            if [[ -n "$input" ]]; then
+              while IFS= read -r line; do
+                if [[ -n "$line" ]]; then
+                  IFS='|' read -r filename status stats <<< "$line"
+                  
+                  local emoji=""
+                  [[ "$status" == "A" ]] && emoji="🟢"
+                  [[ "$status" == "M" ]] && emoji="🟡"
+                  [[ "$status" == "D" ]] && emoji="🔴"
+                  
+                  if [[ "$status" == "D" ]]; then
+                    result="${result}${emoji} ${filename}\n"
+                  else
+                    result="${result}${emoji} [${filename}](${TREE_URL}/${client_path}/${filename}) ${stats}\n"
+                  fi
+                fi
+              done <<< "$input"
+            fi
+            echo -e "$result"
+          }
+          
+          # 构建统计摘要
+          SUMMARY=""
+          [[ "$ADDED" -gt "0" ]] && SUMMARY="${SUMMARY}🟢 新增 **${ADDED}**"
+          [[ "$MODIFIED" -gt "0" ]] && { [[ -n "$SUMMARY" ]] && SUMMARY="${SUMMARY} / "; SUMMARY="${SUMMARY}🟡 更新 **${MODIFIED}**"; }
+          [[ "$DELETED" -gt "0" ]] && { [[ -n "$SUMMARY" ]] && SUMMARY="${SUMMARY} / "; SUMMARY="${SUMMARY}🔴 删除 **${DELETED}**"; }
+          
+          MESSAGE="*📢 rule provider 产物变化*
+
+━━━━━━━━━━━━━━━━━━
+${SUMMARY}
+━━━━━━━━━━━━━━━━━━
+"
+          
+          [[ -n "$CLASH" ]] && MESSAGE="${MESSAGE}*Clash*\n$(build_list "$CLASH" "Rules/Clash")\n"
+          [[ -n "$LOON" ]] && MESSAGE="${MESSAGE}*Loon*\n$(build_list "$LOON" "Rules/Loon")\n"
+          [[ -n "$QX" ]] && MESSAGE="${MESSAGE}*QuantumultX*\n$(build_list "$QX" "Rules/QuantumultX")\n"
+          [[ -n "$SR" ]] && MESSAGE="${MESSAGE}*Shadowrocket*\n$(build_list "$SR" "Rules/Shadowrocket")\n"
+
+          curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+            -d "chat_id=${{ secrets.TELEGRAM_CHAT_ID }}" \
+            -d "parse_mode=Markdown" \
+            -d "text=${MESSAGE}" \
+            -d "disable_web_page_preview=true"
+
       - name: Cleanup Workflow
         uses: Mattraks/delete-workflow-runs@main
         with:
