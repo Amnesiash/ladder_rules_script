@@ -19,7 +19,8 @@ REPO_DIR="${1:-.}"
 cd "$REPO_DIR"
 
 # 检测 Rules 变更
-CHANGED_FILES=$(git diff HEAD~1 HEAD --name-only -- Rules/)
+# git diff returns 1 when differences exist, which triggers set -e
+CHANGED_FILES=$(git diff HEAD~1 HEAD --name-only -- Rules/ 2>/dev/null || true)
 if [[ -z "$CHANGED_FILES" ]]; then
   echo "No rule changes detected, skipping."
   exit 0
@@ -40,17 +41,17 @@ DELETED=0
 
 while IFS= read -r file; do
   [[ -z "$file" ]] && continue
-  status=$(git diff HEAD~1 HEAD --diff-filter=ADM --name-status -- "$file" | awk '{print $1}')
+  status=$(git diff HEAD~1 HEAD --diff-filter=ADM --name-status -- "$file" 2>/dev/null | awk '{print $1}' || true)
   bname=$(basename "$file")
 
   stats=""
   if [[ "$status" == "A" ]]; then
-    lines=$(git show HEAD:"$file" 2>/dev/null | wc -l | tr -d ' ')
+    lines=$(git show HEAD:"$file" 2>/dev/null | wc -l | tr -d ' ' || true)
     stats="(+${lines})"
     ADDED=$((ADDED + 1))
   elif [[ "$status" == "M" ]]; then
-    added=$(git diff HEAD~1 HEAD --unified=0 -- "$file" 2>/dev/null | grep '^+' | grep -v '^+++' | wc -l)
-    deleted=$(git diff HEAD~1 HEAD --unified=0 -- "$file" 2>/dev/null | grep '^-' | grep -v '^---' | wc -l)
+    added=$(git diff HEAD~1 HEAD --unified=0 -- "$file" 2>/dev/null | grep '^+' | grep -v '^+++' | wc -l || true)
+    deleted=$(git diff HEAD~1 HEAD --unified=0 -- "$file" 2>/dev/null | grep '^-' | grep -v '^---' | wc -l || true)
     stats="(+${added}/-${deleted})"
     MODIFIED=$((MODIFIED + 1))
   elif [[ "$status" == "D" ]]; then
