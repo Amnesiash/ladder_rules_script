@@ -1,6 +1,6 @@
 # NAME: China_Remaining
-# UPDATE: 2026-06-01 13:34:47
-# TOTAL: 40
+# UPDATE: 2026-06-01 13:39:45
+# TOTAL: 16
 
 payload:
   - DOMAIN-KEYWORD,360buy
@@ -19,27 +19,3 @@ payload:
   - DOMAIN-KEYWORD,vpimg
   - DOMAIN-KEYWORD,xiami
   - DOMAIN-KEYWORD,xiaomi
-  - DOMAIN-KEYWORD,.tmall.com
-  - DOMAIN-KEYWORD,aliyun
-  - DOMAIN-KEYWORD,baidu
-  - DOMAIN-KEYWORD,beplay
-  - DOMAIN-KEYWORD,officecdn
-  - DOMAIN-KEYWORD,taobao
-  - DOMAIN-KEYWORD,qiyi
-  - DOMAIN-KEYWORD,hnagroup
-  - DOMAIN-KEYWORD,stripe
-  - DOMAIN-KEYWORD,weibo
-  - PROCESS-NAME,com.taobao.taobao
-  - PROCESS-NAME,com.bilibili.app.blue
-  - PROCESS-NAME,com.bilibili.app.in
-  - PROCESS-NAME,com.bilibili.comic
-  - PROCESS-NAME,com.bilibili.comic.intl
-  - PROCESS-NAME,tv.danmaku.bili
-  - PROCESS-NAME,tv.danmaku.bilibilihd
-  - PROCESS-NAME,com.zhiliaoapp.musically
-  - PROCESS-NAME,com.jjwxc.reader
-  - PROCESS-NAME,com.xiaomi.mibrain.speech
-  - PROCESS-NAME,小米云服务.exe
-  - PROCESS-NAME,Thunder
-  - PROCESS-NAME,Thunder.exe
-  - PROCESS-NAME,com.qiyi.video
