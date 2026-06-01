@@ -1,6 +1,6 @@
 # NAME: Proxy
-# UPDATE: 2026-05-31 23:24:40
-# TOTAL: 29464
+# UPDATE: 2026-06-01 13:08:07
+# TOTAL: 29470
 
 payload:
   - DOMAIN,cloud.oracle.com
@@ -7584,6 +7584,7 @@ payload:
   - DOMAIN-SUFFIX,medone-education.thieme.com
   - DOMAIN-SUFFIX,misa-prod.s3.ap-northeast-1.amazonaws.com
   - DOMAIN-SUFFIX,mobilelive-hamivideo.cdn.hinet.net
+  - DOMAIN-SUFFIX,mozilla-ohttp.fastly-edge.com
   - DOMAIN-SUFFIX,mscrl.microsoft.com
   - DOMAIN-SUFFIX,msh.amazon.co.uk
   - DOMAIN-SUFFIX,mtalk-dev.google.com
@@ -13829,6 +13830,7 @@ payload:
   - DOMAIN-SUFFIX,disneyturkiye.com.tr
   - DOMAIN-SUFFIX,disneytvajobs.com
   - DOMAIN-SUFFIX,disneyworld-go.com
+  - DOMAIN-SUFFIX,disq.us
   - DOMAIN-SUFFIX,disquscdn.com
   - DOMAIN-SUFFIX,disqusservice.com
   - DOMAIN-SUFFIX,divas.com.uy
@@ -28146,10 +28148,14 @@ payload:
   - DOMAIN-SUFFIX,xhamster18.com
   - DOMAIN-SUFFIX,xhamster18.desi
   - DOMAIN-SUFFIX,xhamster19.com
+  - DOMAIN-SUFFIX,xhamster2.com
   - DOMAIN-SUFFIX,xhamster3.com
   - DOMAIN-SUFFIX,xhamsterlive.com
+  - DOMAIN-SUFFIX,xhnews.live
   - DOMAIN-SUFFIX,xhot.pro
+  - DOMAIN-SUFFIX,xhpingcdn.com
   - DOMAIN-SUFFIX,xhpjc6-cdn-settings.appsflyersdk.com
+  - DOMAIN-SUFFIX,xhreal5.com
   - DOMAIN-SUFFIX,xhub.tv
   - DOMAIN-SUFFIX,xiangrikui-app.com
   - DOMAIN-SUFFIX,xianir.xyz

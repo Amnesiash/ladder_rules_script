@@ -1,6 +1,6 @@
 # NAME: AI
-# UPDATE: 2026-05-31 23:24:40
-# TOTAL: 234
+# UPDATE: 2026-06-01 13:08:07
+# TOTAL: 236
 
 HOST,ai.google.dev,AI
 HOST,aistudio.google.com,AI
@@ -52,6 +52,7 @@ HOST-SUFFIX,api2d.com,AI
 HOST-SUFFIX,apis.google.com,AI
 HOST-SUFFIX,app-analytics-services.com,AI
 HOST-SUFFIX,apps.mzstatic.com,AI
+HOST-SUFFIX,arena.ai,AI
 HOST-SUFFIX,auth0.com,AI
 HOST-SUFFIX,bard.google.com,AI
 HOST-SUFFIX,byteoversea.com,extended-matching,AI
@@ -117,6 +118,7 @@ HOST-SUFFIX,gateway.icloud.com,AI
 HOST-SUFFIX,geller-pa.googleapis.com,AI
 HOST-SUFFIX,gemini.google,AI
 HOST-SUFFIX,gemini.google.com,AI
+HOST-SUFFIX,gemini.gstatic.com,AI
 HOST-SUFFIX,generativeai.google,AI
 HOST-SUFFIX,generativelanguage.googleapis.com,AI
 HOST-SUFFIX,githubcopilot.com,AI

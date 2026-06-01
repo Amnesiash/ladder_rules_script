@@ -1,6 +1,6 @@
 # NAME: Proxy
-# UPDATE: 2026-05-31 11:56:16
-# TOTAL: 29464
+# UPDATE: 2026-06-01 13:08:07
+# TOTAL: 29470
 
 DOMAIN,a248.e.akamai.net
 DOMAIN,a771.dscq.akamai.net
@@ -7550,6 +7550,7 @@ DOMAIN-SUFFIX,disneyturkiye.com.tr
 DOMAIN-SUFFIX,disneytvajobs.com
 DOMAIN-SUFFIX,disneyworld-go.com
 DOMAIN-SUFFIX,disp.cc
+DOMAIN-SUFFIX,disq.us
 DOMAIN-SUFFIX,disqus.com
 DOMAIN-SUFFIX,disquscdn.com
 DOMAIN-SUFFIX,disqusservice.com
@@ -17324,6 +17325,7 @@ DOMAIN-SUFFIX,moxing.mobi
 DOMAIN-SUFFIX,moxing.news
 DOMAIN-SUFFIX,moystoys.com
 DOMAIN-SUFFIX,mozgcp.net
+DOMAIN-SUFFIX,mozilla-ohttp.fastly-edge.com
 DOMAIN-SUFFIX,mozilla.ai
 DOMAIN-SUFFIX,mozilla.com
 DOMAIN-SUFFIX,mozilla.community
@@ -27844,11 +27846,15 @@ DOMAIN-SUFFIX,xhamster.xxx
 DOMAIN-SUFFIX,xhamster18.com
 DOMAIN-SUFFIX,xhamster18.desi
 DOMAIN-SUFFIX,xhamster19.com
+DOMAIN-SUFFIX,xhamster2.com
 DOMAIN-SUFFIX,xhamster3.com
 DOMAIN-SUFFIX,xhamsterlive.com
 DOMAIN-SUFFIX,xhcdn.com
+DOMAIN-SUFFIX,xhnews.live
 DOMAIN-SUFFIX,xhot.pro
+DOMAIN-SUFFIX,xhpingcdn.com
 DOMAIN-SUFFIX,xhpjc6-cdn-settings.appsflyersdk.com
+DOMAIN-SUFFIX,xhreal5.com
 DOMAIN-SUFFIX,xhub.tv
 DOMAIN-SUFFIX,xianba.net
 DOMAIN-SUFFIX,xianchawang.net
