@@ -2,7 +2,7 @@
 
 [China]
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMaxNoIP/ChinaMaxNoIP_Classical.yaml
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/China/China_Domain.txt
 
 [Direct]
 https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Custom/AddDirect.list
