@@ -18,7 +18,7 @@ jobs:
     
     steps:
       - name: Checkout target repository
-        uses: actions/checkout@v4.1.0
+        uses: actions/checkout@v6.0.2
         with:
           path: ladder-repo
           fetch-depth: 0
