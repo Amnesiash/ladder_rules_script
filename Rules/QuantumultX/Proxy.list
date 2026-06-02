@@ -1,6 +1,6 @@
 # NAME: Proxy
-# UPDATE: 2026-06-01 13:08:07
-# TOTAL: 29470
+# UPDATE: 2026-06-02 12:54:34
+# TOTAL: 29472
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -10741,6 +10741,7 @@ HOST-SUFFIX,getmalus.com,Proxy
 HOST-SUFFIX,getmdl.io,Proxy
 HOST-SUFFIX,getnews.jp,Proxy
 HOST-SUFFIX,getoutline.org,Proxy
+HOST-SUFFIX,getpaint.net,Proxy
 HOST-SUFFIX,getpocket.com,Proxy
 HOST-SUFFIX,getporn.tv,Proxy
 HOST-SUFFIX,getprintersupports.com,Proxy
@@ -19398,6 +19399,7 @@ HOST-SUFFIX,paily.org,Proxy
 HOST-SUFFIX,paimon.moe,Proxy
 HOST-SUFFIX,painfulpussytortures.com,Proxy
 HOST-SUFFIX,painnovel.com,Proxy
+HOST-SUFFIX,paint.net,Proxy
 HOST-SUFFIX,paipal.com,Proxy
 HOST-SUFFIX,paipancon.com,Proxy
 HOST-SUFFIX,paisapay.cc,Proxy
