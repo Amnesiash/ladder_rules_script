@@ -3,12 +3,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "bun run build:all",
-    "build:release": "bun run build_scripts/build-release.ts --clean",
-    "build:release:clean": "bun run build_scripts/build-release.ts --clean",
-    "build:release:prune": "bun run build_scripts/build-release.ts --clean --prune",
-    "build:release:noclean": "bun run build_scripts/build-release.ts --no-clean",
-    "generate:clients": "bun run build_scripts/generate-rules.ts",
-    "build:all": "bun run generate:clients && bun run build:release:clean"
+    "build": "bun run build_scripts/build.mjs --clean",
+    "build:release": "bun run build_scripts/build.mjs --clean",
+    "build:release:clean": "bun run build_scripts/build.mjs --clean",
+    "build:release:prune": "bun run build_scripts/build.mjs --clean --prune",
+    "build:release:noclean": "bun run build_scripts/build.mjs --no-clean",
+    "generate:clients": "bun run build_scripts/build.mjs",
+    "build:all": "bun run generate:clients && bun run build:release:clean",
+    "notify:artifact-changes": "bun run build_scripts/notify-artifact-changes.mjs"
   }
 }
