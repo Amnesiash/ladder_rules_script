@@ -40,31 +40,28 @@ jobs:
       - name: Push Update
         run: |
           cd ladder-repo
-          # release 分支用于发布产物，允许覆盖式更新
-          git fetch origin release || true
-          git checkout -B release
-          if git show-ref --verify --quiet refs/remotes/origin/release; then
-            git reset --hard origin/release
-          fi
-
-          # 仅发布 .release/ 目录中的产物到 release 分支根目录
           if [[ ! -d ".release" ]]; then
             echo "Missing .release/ artifacts directory; aborting."
             exit 1
           fi
-          # 清空工作区（保留 .git），避免把主仓库源文件提交到 release 分支
-          find . -mindepth 1 -maxdepth 1 ! -name ".git" ! -name ".release" -exec rm -rf {} +
-          cp -a .release/. .
-          rm -rf .release
+
+          release_worktree="../ladder-release"
+          rm -rf "$release_worktree"
+          git fetch origin release || true
+          git worktree add -B release "$release_worktree" origin/release
+
+          cd "$release_worktree"
+          find . -mindepth 1 -maxdepth 1 ! -name ".git" -exec rm -rf {} +
+          cp -a ../ladder-repo/.release/. .
 
           if [[ -n $(git status -s) ]]; then
             git config --local user.email "${{ github.actor }}@users.noreply.github.com"
             git config --local user.name "${{ github.actor }}"
             git add -A
-            git commit -m "Auto Update $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')"
+            git commit -m "Auto Update Release $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')"
             git push --force-with-lease origin release
           else
-            echo "No changes to commit."
+            echo "No release changes to commit."
           fi
 
       - name: Cleanup Workflow

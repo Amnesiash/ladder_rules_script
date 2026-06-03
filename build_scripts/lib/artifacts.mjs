@@ -130,6 +130,7 @@ async function processEntry({ entry, outputRoot, workRoot, fetchImpl, warn }) {
     const clashPath = await writeRulesFile({
       outputRoot,
       entry,
+      kind: "clash",
       suffix: ".txt",
       lines: clashLines,
     });
@@ -139,21 +140,28 @@ async function processEntry({ entry, outputRoot, workRoot, fetchImpl, warn }) {
   // Loon 格式
   const loonLines = buildSortedRulesetForLoon(content.split(/\r?\n/));
   if (loonLines.length) {
-    const loonPath = await writeRulesFile({ outputRoot, entry, suffix: ".list", lines: loonLines });
+    const loonPath = await writeRulesFile({ outputRoot, entry, kind: "loon", suffix: ".list", lines: loonLines });
     artifacts.push(makeArtifact({ entry, outputRoot, filePath: loonPath, kind: "loon", label: `${entry.name} Loon` }));
   }
 
   // Shadowrocket 格式
   const srLines = buildSortedRulesetForShadowrocket(content.split(/\r?\n/));
   if (srLines.length) {
-    const srPath = await writeRulesFile({ outputRoot, entry, suffix: ".list", lines: srLines });
+    const srPath = await writeRulesFile({ outputRoot, entry, kind: "shadowrocket", suffix: ".list", lines: srLines });
     artifacts.push(makeArtifact({ entry, outputRoot, filePath: srPath, kind: "shadowrocket", label: `${entry.name} Shadowrocket` }));
   }
 
   // QuantumultX 格式
   const qxLines = buildSortedRulesetForQuantumultX(content.split(/\r?\n/));
   if (qxLines.length) {
-    const qxPath = await writeRulesFile({ outputRoot, entry, suffix: ".list", lines: qxLines, policyName: toSafeFileStem(entry.name) });
+    const qxPath = await writeRulesFile({
+      outputRoot,
+      entry,
+      kind: "quantumultx",
+      suffix: ".list",
+      lines: qxLines,
+      policyName: toSafeFileStem(entry.name),
+    });
     artifacts.push(makeArtifact({ entry, outputRoot, filePath: qxPath, kind: "quantumultx", label: `${entry.name} QuantumultX` }));
   }
 
@@ -161,6 +169,23 @@ async function processEntry({ entry, outputRoot, workRoot, fetchImpl, warn }) {
 }
 
 async function fetchEntryContent(entry, fetchImpl) {
+  if (Array.isArray(entry.urls) && entry.urls.length > 0) {
+    const parts = [];
+    for (const url of entry.urls) {
+      if (entry.type === "http") {
+        const res = await fetchWithFallback(url, {}, fetchImpl);
+        parts.push(await res.text());
+      } else if (entry.type === "file") {
+        parts.push(await fs.readFile(url, "utf8"));
+      } else if (entry.type === "inline") {
+        parts.push(String(url));
+      } else {
+        throw new BuildReleaseError(`unsupported entry type: ${entry.type}`, { entryName: entry.name });
+      }
+    }
+    return parts.join("\n");
+  }
+
   if (entry.type === "http") {
     const res = await fetchWithFallback(entry.url, {}, fetchImpl);
     return await res.text();
@@ -174,23 +199,39 @@ async function fetchEntryContent(entry, fetchImpl) {
   throw new BuildReleaseError(`unsupported entry type: ${entry.type}`, { entryName: entry.name });
 }
 
-async function writeRulesFile({ outputRoot, entry, suffix, lines, policyName, includeHeader = true }) {
+async function writeRulesFile({ outputRoot, entry, kind, suffix, lines, policyName, includeHeader = true }) {
   const name = toSafeFileStem(entry.name);
-  const outPath = path.join(outputRoot, entry.sourceRelativeDir, `${name}${suffix}`);
+  const outPath = path.join(outputRoot, kindFolderName(kind), `${name}${suffix}`);
   const updateTime = formatUpdateTimeShanghai();
   const bodyLines = policyName ? lines.map((line) => `${line},${policyName}`) : lines;
-  const header = includeHeader ? buildHeaderBlock({ updateTime, bodyLines }) : "";
+  const header = includeHeader ? buildHeaderBlock({ name: entry.name, updateTime, bodyLines }) : "";
 
   await fs.mkdir(path.dirname(outPath), { recursive: true });
   await fs.writeFile(outPath, header + bodyLines.join("\n") + "\n");
   return outPath;
 }
 
-function buildHeaderBlock({ updateTime, bodyLines }) {
+function kindFolderName(kind) {
+  switch (kind) {
+    case "clash":
+      return "Clash";
+    case "loon":
+      return "Loon";
+    case "shadowrocket":
+      return "Shadowrocket";
+    case "quantumultx":
+      return "QuantumultX";
+    default:
+      return kind;
+  }
+}
+
+function buildHeaderBlock({ name, updateTime, bodyLines }) {
   const typeCounts = countRuleTypes(bodyLines);
   const lines = [
-    `# UpdateTime: ${updateTime}`,
-    `# RuleCount: ${bodyLines.length}`,
+    `# NAME: ${name}`,
+    `# UPDATE: ${updateTime}`,
+    `# TOTAL: ${bodyLines.length}`,
   ];
 
   for (const [type, count] of typeCounts) {
@@ -198,7 +239,7 @@ function buildHeaderBlock({ updateTime, bodyLines }) {
   }
 
   lines.push("");
-  return lines.join("\n");
+  return `${lines.join("\n")}\n`;
 }
 
 function countRuleTypes(lines) {

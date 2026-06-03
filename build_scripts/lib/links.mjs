@@ -102,7 +102,7 @@ function renderMihomoConfig({ artifacts, repository, releaseBranch }) {
   const lines = ["```yaml", "rule-providers:"];
 
   for (const artifact of mrsArtifacts) {
-    const rawPath = `${artifact.sourceRelativeDir}/${artifact.outputPath}`;
+    const rawPath = artifact.relativePath || artifact.outputPath;
     const rawUrl = githubRawURL({ repository, branch: releaseBranch, filePath: rawPath });
     lines.push(`  ${artifact.slug}:`);
     lines.push(`    type: http`);
@@ -113,7 +113,7 @@ function renderMihomoConfig({ artifacts, repository, releaseBranch }) {
   }
 
   for (const artifact of yamlArtifacts) {
-    const rawPath = `${artifact.sourceRelativeDir}/${artifact.outputPath}`;
+    const rawPath = artifact.relativePath || artifact.outputPath;
     const rawUrl = githubRawURL({ repository, branch: releaseBranch, filePath: rawPath });
     lines.push(`  ${artifact.slug}:`);
     lines.push(`    type: http`);
@@ -130,7 +130,7 @@ function renderMihomoConfig({ artifacts, repository, releaseBranch }) {
 function renderArtifacts({ artifacts, repository, releaseBranch }) {
   if (!artifacts.length) return "_暂无产物_";
   const rows = artifacts.map((artifact) => {
-    const rawPath = `${artifact.sourceRelativeDir}/${artifact.outputPath}`;
+    const rawPath = artifact.relativePath || artifact.outputPath;
     const rawUrl = githubRawURL({ repository, branch: releaseBranch, filePath: rawPath });
     return `| ${artifact.label} | [下载](${rawUrl}) |`;
   });

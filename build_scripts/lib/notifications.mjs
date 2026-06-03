@@ -326,13 +326,14 @@ export async function sendTelegramNotification({ botToken, chatId, changes, repo
 
 export function makeArtifact({ entry, outputRoot, filePath, kind, label }) {
   const sourceRelativeDir = entry.sourceRelativeDir || "";
-  const outputPath = path.relative(path.join(outputRoot, sourceRelativeDir), filePath).split(path.sep).join("/");
+  const outputPath = path.relative(outputRoot, filePath).split(path.sep).join("/");
 
   return {
     slug: entry.slug || entry.name,
     name: entry.name,
     sourceRelativeDir,
     outputPath,
+    relativePath: outputPath,
     filePath,
     kind,
     label,
@@ -349,7 +350,7 @@ export async function writeArtifactManifest({ outputRoot, artifacts }) {
       name: a.name,
       sourceRelativeDir: a.sourceRelativeDir,
       outputPath: a.outputPath,
-      relativePath: path.join(a.sourceRelativeDir || "", a.outputPath || ""),
+      relativePath: a.relativePath || a.outputPath || path.join(a.sourceRelativeDir || "", a.outputPath || ""),
       kind: a.kind,
       label: a.label,
       behavior: a.behavior,

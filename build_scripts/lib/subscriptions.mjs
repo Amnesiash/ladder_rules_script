@@ -137,15 +137,19 @@ export async function sourceConfigsFromSourceTxt({ projectRoot, sourceRoot }) {
   for (const section of sections) {
     const sourceName = sanitizeName(section.name);
     const sourceRelativeDir = sourceName;
-    const files = section.urls.map((url, index) => ({
-      name: sanitizeName(`${sourceName}-${index}`),
-      type: "http",
-      url,
-      format: inferFormatFromUrl(url),
-      behavior: "classical",
-      sourceName,
-      sourceRelativeDir: sourceName,
-    }));
+    const firstUrl = section.urls[0];
+    const files = [
+      {
+        name: sourceName,
+        type: "http",
+        url: firstUrl,
+        urls: [...section.urls],
+        format: inferFormatFromUrl(firstUrl),
+        behavior: "classical",
+        sourceName,
+        sourceRelativeDir: sourceName,
+      },
+    ];
 
     configs.push({
       sourceName,
