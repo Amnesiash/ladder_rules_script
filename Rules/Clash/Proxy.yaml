@@ -1,6 +1,6 @@
 # NAME: Proxy
-# UPDATE: 2026-06-02 12:54:34
-# TOTAL: 29472
+# UPDATE: 2026-06-03 13:05:09
+# TOTAL: 29473
 
 payload:
   - DOMAIN,cloud.oracle.com
@@ -26173,6 +26173,7 @@ payload:
   - DOMAIN-SUFFIX,tomibank.co.jp
   - DOMAIN-SUFFIX,tomsguide.com
   - DOMAIN-SUFFIX,ton.org
+  - DOMAIN-SUFFIX,toncenter.com
   - DOMAIN-SUFFIX,tonec.com
   - DOMAIN-SUFFIX,tonicmovies.com
   - DOMAIN-SUFFIX,toolforge.org
