@@ -1,0 +1,34 @@
+# UpdateTime: 2026-06-03 15:01:20
+# RuleCount: 29
+# HOST: 1
+# HOST-SUFFIX: 18
+# IP-CIDR: 10
+HOST,apple.comscoreresearch.com,Apple-0
+HOST-SUFFIX,aaplimg.com,Apple-0
+HOST-SUFFIX,akadns.net,Apple-0
+HOST-SUFFIX,apple-cloudkit.com,Apple-0
+HOST-SUFFIX,apple-dns.net,Apple-0
+HOST-SUFFIX,apple-mapkit.com,Apple-0
+HOST-SUFFIX,apple.co,Apple-0
+HOST-SUFFIX,apple.com,Apple-0
+HOST-SUFFIX,apple.com.cn,Apple-0
+HOST-SUFFIX,apple.news,Apple-0
+HOST-SUFFIX,appstore.com,Apple-0
+HOST-SUFFIX,cdn-apple.com,Apple-0
+HOST-SUFFIX,crashlytics.com,Apple-0
+HOST-SUFFIX,icloud-content.com,Apple-0
+HOST-SUFFIX,icloud.com,Apple-0
+HOST-SUFFIX,icloud.com.cn,Apple-0
+HOST-SUFFIX,itunes.com,Apple-0
+HOST-SUFFIX,me.com,Apple-0
+HOST-SUFFIX,mzstatic.com,Apple-0
+IP-CIDR,139.178.128.0/18,Apple-0
+IP-CIDR,144.178.0.0/19,Apple-0
+IP-CIDR,144.178.36.0/22,Apple-0
+IP-CIDR,144.178.48.0/20,Apple-0
+IP-CIDR,17.0.0.0/8,Apple-0
+IP-CIDR,192.35.50.0/24,Apple-0
+IP-CIDR,198.183.17.0/24,Apple-0
+IP-CIDR,205.180.175.0/24,Apple-0
+IP-CIDR,63.92.224.0/19,Apple-0
+IP-CIDR,65.199.22.0/23,Apple-0

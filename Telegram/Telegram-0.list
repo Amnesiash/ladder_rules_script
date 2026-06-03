@@ -1,0 +1,48 @@
+# UpdateTime: 2026-06-03 15:01:20
+# RuleCount: 40
+# HOST: 2
+# HOST-SUFFIX: 22
+# HOST-KEYWORD: 1
+# IP-CIDR: 6
+# IP6-CIDR: 4
+# IP-ASN: 5
+HOST,api.imem.app,Telegram-0
+HOST,api.swiftgram.app,Telegram-0
+HOST-SUFFIX,cdn-telegram.org,Telegram-0
+HOST-SUFFIX,comments.app,Telegram-0
+HOST-SUFFIX,contest.com,Telegram-0
+HOST-SUFFIX,graph.org,Telegram-0
+HOST-SUFFIX,legra.ph,Telegram-0
+HOST-SUFFIX,mbrx.app,Telegram-0
+HOST-SUFFIX,quiz.directory,Telegram-0
+HOST-SUFFIX,stel.com,Telegram-0
+HOST-SUFFIX,t.me,Telegram-0
+HOST-SUFFIX,tdesktop.com,Telegram-0
+HOST-SUFFIX,telega.one,Telegram-0
+HOST-SUFFIX,telegra.ph,Telegram-0
+HOST-SUFFIX,telegram-cdn.org,Telegram-0
+HOST-SUFFIX,telegram.dog,Telegram-0
+HOST-SUFFIX,telegram.me,Telegram-0
+HOST-SUFFIX,telegram.org,Telegram-0
+HOST-SUFFIX,telegram.space,Telegram-0
+HOST-SUFFIX,telegramdownload.com,Telegram-0
+HOST-SUFFIX,telesco.pe,Telegram-0
+HOST-SUFFIX,tg.dev,Telegram-0
+HOST-SUFFIX,tx.me,Telegram-0
+HOST-SUFFIX,usercontent.dev,Telegram-0
+HOST-KEYWORD,nicegram,Telegram-0
+IP-CIDR,109.239.140.0/24,Telegram-0
+IP-CIDR,139.59.210.98/32,Telegram-0
+IP-CIDR,149.154.160.0/20,Telegram-0
+IP-CIDR,196.55.216.167/32,Telegram-0
+IP-CIDR,5.28.192.0/18,Telegram-0
+IP-CIDR,91.108.0.0/16,Telegram-0
+IP6-CIDR,2001:67c:4e8::/48,Telegram-0
+IP6-CIDR,2001:b28:f23c::/47,Telegram-0
+IP6-CIDR,2001:b28:f23f::/48,Telegram-0
+IP6-CIDR,2a0a:f280::/29,Telegram-0
+IP-ASN,211157,Telegram-0
+IP-ASN,44907,Telegram-0
+IP-ASN,59930,Telegram-0
+IP-ASN,62014,Telegram-0
+IP-ASN,62041,Telegram-0

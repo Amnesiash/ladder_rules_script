@@ -1,0 +1,35 @@
+# UpdateTime: 2026-06-03 15:01:20
+# RuleCount: 30
+# HOST-SUFFIX: 16
+# IP-CIDR: 9
+# IP6-CIDR: 5
+HOST-SUFFIX,cdn-telegram.org,Telegram-2
+HOST-SUFFIX,comments.app,Telegram-2
+HOST-SUFFIX,graph.org,Telegram-2
+HOST-SUFFIX,legra.ph,Telegram-2
+HOST-SUFFIX,quiz.directory,Telegram-2
+HOST-SUFFIX,t.me,Telegram-2
+HOST-SUFFIX,tdesktop.com,Telegram-2
+HOST-SUFFIX,telegra.ph,Telegram-2
+HOST-SUFFIX,telegram-cdn.org,Telegram-2
+HOST-SUFFIX,telegram.dog,Telegram-2
+HOST-SUFFIX,telegram.me,Telegram-2
+HOST-SUFFIX,telegram.org,Telegram-2
+HOST-SUFFIX,telegram.space,Telegram-2
+HOST-SUFFIX,telesco.pe,Telegram-2
+HOST-SUFFIX,tg.dev,Telegram-2
+HOST-SUFFIX,tx.me,Telegram-2
+IP-CIDR,149.154.160.0/20,Telegram-2
+IP-CIDR,185.76.151.0/24,Telegram-2
+IP-CIDR,91.105.192.0/23,Telegram-2
+IP-CIDR,91.108.12.0/22,Telegram-2
+IP-CIDR,91.108.16.0/22,Telegram-2
+IP-CIDR,91.108.20.0/22,Telegram-2
+IP-CIDR,91.108.4.0/22,Telegram-2
+IP-CIDR,91.108.56.0/22,Telegram-2
+IP-CIDR,91.108.8.0/22,Telegram-2
+IP6-CIDR,2001:67c:4e8::/48,Telegram-2
+IP6-CIDR,2001:b28:f23c::/48,Telegram-2
+IP6-CIDR,2001:b28:f23d::/48,Telegram-2
+IP6-CIDR,2001:b28:f23f::/48,Telegram-2
+IP6-CIDR,2a0a:f280::/32,Telegram-2

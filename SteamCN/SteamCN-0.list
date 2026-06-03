@@ -1,0 +1,21 @@
+# UpdateTime: 2026-06-03 15:01:20
+# RuleCount: 17
+# HOST: 12
+# HOST-SUFFIX: 5
+HOST,csgo.wmsj.cn,SteamCN-0
+HOST,dl.steam.clngaa.com,SteamCN-0
+HOST,dl.steam.ksyna.com,SteamCN-0
+HOST,dota2.wmsj.cn,SteamCN-0
+HOST,st.dl.bscstorage.net,SteamCN-0
+HOST,st.dl.eccdnx.com,SteamCN-0
+HOST,st.dl.pinyuncloud.com,SteamCN-0
+HOST,steampipe.steamcontent.tnkjmec.com,SteamCN-0
+HOST,steampowered.com.8686c.com,SteamCN-0
+HOST,steamstatic.com.8686c.com,SteamCN-0
+HOST,wmsjsteam.com,SteamCN-0
+HOST,xz.pphimalayanrt.com,SteamCN-0
+HOST-SUFFIX,cm.steampowered.com,SteamCN-0
+HOST-SUFFIX,steamchina.com,SteamCN-0
+HOST-SUFFIX,steamcontent.com,SteamCN-0
+HOST-SUFFIX,steamserver.net,SteamCN-0
+HOST-SUFFIX,steamusercontent.com,SteamCN-0

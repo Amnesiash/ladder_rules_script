@@ -1,0 +1,25 @@
+# UpdateTime: 2026-06-03 15:01:19
+# RuleCount: 21
+# HOST: 18
+# HOST-SUFFIX: 3
+HOST,analytics.strava.com,Direct-3
+HOST,app.adjust.com,Direct-3
+HOST,app.appsflyer.com,Direct-3
+HOST,bdtj.tagtic.cn,Direct-3
+HOST,ci.android.com,Direct-3
+HOST,clientservices.googleapis.com,Direct-3
+HOST,dl.google.com,Direct-3
+HOST,dl.l.google.com,Direct-3
+HOST,fairplay.l.qq.com,Direct-3
+HOST,livew.l.qq.com,Direct-3
+HOST,log.mmstat.com,Direct-3
+HOST,msg.umeng.com,Direct-3
+HOST,msg.umengcloud.com,Direct-3
+HOST,redirector.gvt1.com,Direct-3
+HOST,sycm.mmstat.com,Direct-3
+HOST,update.googleapis.com,Direct-3
+HOST,vd.l.qq.com,Direct-3
+HOST,vi.l.qq.com,Direct-3
+HOST-SUFFIX,blog.google,Direct-3
+HOST-SUFFIX,googletraveladservices-cn.com,Direct-3
+HOST-SUFFIX,googletraveladservices.com,Direct-3
