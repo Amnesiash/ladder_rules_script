@@ -40,6 +40,19 @@ jobs:
         run: |
           bun run build:release:clean
 
+      - name: Update Rules README on main
+        run: |
+          if git diff --quiet -- Rules/README.md; then
+            echo "Rules/README.md is unchanged."
+            exit 0
+          fi
+
+          git config --local user.email "${{ github.actor }}@users.noreply.github.com"
+          git config --local user.name "${{ github.actor }}"
+          git add Rules/README.md
+          git commit -m "Auto Update Rules README $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')"
+          git push --force-with-lease origin HEAD:main
+
       - name: Push Update
         run: |
           if [[ ! -d ".release" ]]; then

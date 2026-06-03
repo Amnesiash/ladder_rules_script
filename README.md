@@ -7,7 +7,7 @@
 
 | <img src="https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Gallery/vpnlogo/Clash.png" alt="Clash" align="center" height="70" width="70"> | <img src="https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Gallery/vpnlogo/QuantumultX.png" alt="QuantumultX" align="center" height="70" width="70"> | <img src="https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Gallery/vpnlogo/Loon.png" alt="Loon" align="center" height="70" width="70"> | <img src="https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Gallery/vpnlogo/Shadowrocket.png" alt="Shadowrocket" align="center" height="70" width="70"> |
 |:--------:|:--------:|:--------:|:--------:|
-| [Clash&Mihomo](https://github.com/Amnesiash/ladder_rules_script/tree/main/Rules/Clash) | [QuantumultX](https://github.com/Amnesiash/ladder_rules_script/tree/main/Rules/QuantumultX) | [Loon](https://github.com/Amnesiash/ladder_rules_script/tree/main/Rules/Loon) | [Shadowrocket](https://github.com/Amnesiash/ladder_rules_script/tree/main/Rules/Shadowrocket) |
+| [Clash&Mihomo](https://github.com/Amnesiash/ladder_rules_script/tree/release/Clash) | [QuantumultX](https://github.com/Amnesiash/ladder_rules_script/tree/release/QuantumultX) | [Loon](https://github.com/Amnesiash/ladder_rules_script/tree/release/Loon) | [Shadowrocket](https://github.com/Amnesiash/ladder_rules_script/tree/release/Shadowrocket) |
 | [配置](https://github.com/Amnesiash/ladder_rules_script/tree/main/Config) | [配置](https://github.com/Amnesiash/ladder_rules_script/tree/main/Config) | [配置](https://github.com/Amnesiash/ladder_rules_script/tree/main/Config) | [配置](https://github.com/Amnesiash/ladder_rules_script/tree/main/Config) |
 
 所有规则数据都来自互联网，感谢开源规则项目作者的辛勤付出
@@ -27,19 +27,3 @@
 
 以下排名不分先后
 [@ACL4SSR](https://github.com/ACL4SSR) [@ConnersHua](https://github.com/ConnersHua) [@blackmatrix7](https://github.com/blackmatrix7) [@Loyalsoldier](https://github.com/Loyalsoldier) [@Repcz](https://github.com/Repcz)
-
-## 本地构建（Bun）
-
-本项目提供与 `rule` 项目一致的 Bun 构建入口：生成 `.release/` 本地产物目录。
-
-```bash
-cd /Users/company/Desktop/Project/ladder_rules_script
-# 1) 生成 Clash / Loon / QuantumultX / Shadowrocket 规则（读取 Rules/rule_source.txt）
-bun run generate:clients
-
-# 2) 生成 release 产物（不会包含 Rules/Custom）
-bun run build:release:clean
-```
-
-产物输出：
-- `.release/{Clash,Loon,QuantumultX,Shadowrocket}/`（打包自 `Rules/{Clash,Loon,QuantumultX,Shadowrocket}/`）
