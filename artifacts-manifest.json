@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-03T07:49:29.052Z",
+  "timestamp": "2026-06-03T08:05:02.663Z",
   "artifacts": [
     {
       "slug": "China",
@@ -43,16 +43,6 @@
       "kind": "quantumultx",
       "label": "China QuantumultX",
       "behavior": "classical",
-      "sha256": {}
-    },
-    {
-      "slug": "README",
-      "name": "README",
-      "sourceRelativeDir": "China",
-      "outputPath": "China/README.md",
-      "relativePath": "China/README.md",
-      "kind": "readme",
-      "label": "China README",
       "sha256": {}
     },
     {
@@ -100,16 +90,6 @@
       "sha256": {}
     },
     {
-      "slug": "README",
-      "name": "README",
-      "sourceRelativeDir": "Direct",
-      "outputPath": "Direct/README.md",
-      "relativePath": "Direct/README.md",
-      "kind": "readme",
-      "label": "Direct README",
-      "sha256": {}
-    },
-    {
       "slug": "Proxy",
       "name": "Proxy",
       "sourceRelativeDir": "Proxy",
@@ -151,16 +131,6 @@
       "kind": "quantumultx",
       "label": "Proxy QuantumultX",
       "behavior": "classical",
-      "sha256": {}
-    },
-    {
-      "slug": "README",
-      "name": "README",
-      "sourceRelativeDir": "Proxy",
-      "outputPath": "Proxy/README.md",
-      "relativePath": "Proxy/README.md",
-      "kind": "readme",
-      "label": "Proxy README",
       "sha256": {}
     },
     {
@@ -208,16 +178,6 @@
       "sha256": {}
     },
     {
-      "slug": "README",
-      "name": "README",
-      "sourceRelativeDir": "Streaming",
-      "outputPath": "Streaming/README.md",
-      "relativePath": "Streaming/README.md",
-      "kind": "readme",
-      "label": "Streaming README",
-      "sha256": {}
-    },
-    {
       "slug": "AI",
       "name": "AI",
       "sourceRelativeDir": "AI",
@@ -259,16 +219,6 @@
       "kind": "quantumultx",
       "label": "AI QuantumultX",
       "behavior": "classical",
-      "sha256": {}
-    },
-    {
-      "slug": "README",
-      "name": "README",
-      "sourceRelativeDir": "AI",
-      "outputPath": "AI/README.md",
-      "relativePath": "AI/README.md",
-      "kind": "readme",
-      "label": "AI README",
       "sha256": {}
     },
     {
@@ -316,16 +266,6 @@
       "sha256": {}
     },
     {
-      "slug": "README",
-      "name": "README",
-      "sourceRelativeDir": "Private",
-      "outputPath": "Private/README.md",
-      "relativePath": "Private/README.md",
-      "kind": "readme",
-      "label": "Private README",
-      "sha256": {}
-    },
-    {
       "slug": "WeChat",
       "name": "WeChat",
       "sourceRelativeDir": "WeChat",
@@ -367,16 +307,6 @@
       "kind": "quantumultx",
       "label": "WeChat QuantumultX",
       "behavior": "classical",
-      "sha256": {}
-    },
-    {
-      "slug": "README",
-      "name": "README",
-      "sourceRelativeDir": "WeChat",
-      "outputPath": "WeChat/README.md",
-      "relativePath": "WeChat/README.md",
-      "kind": "readme",
-      "label": "WeChat README",
       "sha256": {}
     },
     {
@@ -424,16 +354,6 @@
       "sha256": {}
     },
     {
-      "slug": "README",
-      "name": "README",
-      "sourceRelativeDir": "StreamingHMT",
-      "outputPath": "StreamingHMT/README.md",
-      "relativePath": "StreamingHMT/README.md",
-      "kind": "readme",
-      "label": "StreamingHMT README",
-      "sha256": {}
-    },
-    {
       "slug": "Apple",
       "name": "Apple",
       "sourceRelativeDir": "Apple",
@@ -475,16 +395,6 @@
       "kind": "quantumultx",
       "label": "Apple QuantumultX",
       "behavior": "classical",
-      "sha256": {}
-    },
-    {
-      "slug": "README",
-      "name": "README",
-      "sourceRelativeDir": "Apple",
-      "outputPath": "Apple/README.md",
-      "relativePath": "Apple/README.md",
-      "kind": "readme",
-      "label": "Apple README",
       "sha256": {}
     },
     {
@@ -532,16 +442,6 @@
       "sha256": {}
     },
     {
-      "slug": "README",
-      "name": "README",
-      "sourceRelativeDir": "SteamCN",
-      "outputPath": "SteamCN/README.md",
-      "relativePath": "SteamCN/README.md",
-      "kind": "readme",
-      "label": "SteamCN README",
-      "sha256": {}
-    },
-    {
       "slug": "Telegram",
       "name": "Telegram",
       "sourceRelativeDir": "Telegram",
@@ -583,16 +483,6 @@
       "kind": "quantumultx",
       "label": "Telegram QuantumultX",
       "behavior": "classical",
-      "sha256": {}
-    },
-    {
-      "slug": "README",
-      "name": "README",
-      "sourceRelativeDir": "Telegram",
-      "outputPath": "Telegram/README.md",
-      "relativePath": "Telegram/README.md",
-      "kind": "readme",
-      "label": "Telegram README",
       "sha256": {}
     }
   ]
