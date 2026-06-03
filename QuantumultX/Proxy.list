@@ -1,6 +1,6 @@
 # NAME: Proxy
-# UPDATE: 2026-06-02 12:54:34
-# TOTAL: 29472
+# UPDATE: 2026-06-03 13:05:09
+# TOTAL: 29473
 
 HOST,a248.e.akamai.net,Proxy
 HOST,a771.dscq.akamai.net,Proxy
@@ -24855,6 +24855,7 @@ HOST-SUFFIX,tomonews.net,Proxy
 HOST-SUFFIX,tomp3.cc,Proxy
 HOST-SUFFIX,tomsguide.com,Proxy
 HOST-SUFFIX,ton.org,Proxy
+HOST-SUFFIX,toncenter.com,Proxy
 HOST-SUFFIX,tonec.com,Proxy
 HOST-SUFFIX,tongil.or.kr,Proxy
 HOST-SUFFIX,tonicmovies.com,Proxy
