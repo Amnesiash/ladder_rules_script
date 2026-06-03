@@ -47,14 +47,15 @@ jobs:
             exit 1
           fi
 
-          release_worktree="../ladder-release"
+          release_worktree="$GITHUB_WORKSPACE/../ladder-release"
+          release_source="$GITHUB_WORKSPACE/.release"
           rm -rf "$release_worktree"
           git fetch origin release || true
           git worktree add -B release "$release_worktree" origin/release
 
           cd "$release_worktree"
           find . -mindepth 1 -maxdepth 1 ! -name ".git" -exec rm -rf {} +
-          cp -a ../.release/. .
+          cp -a "$release_source"/. .
 
           if [[ -n $(git status -s) ]]; then
             git config --local user.email "${{ github.actor }}@users.noreply.github.com"
