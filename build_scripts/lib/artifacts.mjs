@@ -1,7 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { loadAllSources, toSafeFileStem } from "./config.mjs";
-import { renderReleaseReadme } from "./links.mjs";
 import { buildSortedRulesetForClash, buildSortedRulesetForLoon, buildSortedRulesetForShadowrocket, buildSortedRulesetForQuantumultX } from "./rules.mjs";
 import { fetchWithFallback, sourceConfigsFromSourceTxt } from "./subscriptions.mjs";
 import { makeArtifact, writeArtifactManifest } from "./notifications.mjs";
@@ -46,8 +45,6 @@ export async function buildRelease({
 
   // 处理每个源配置
   for (const sourceConfig of sourceConfigs) {
-    const dirArtifacts = [];
-    
     // 按名称分组处理
     const groups = new Map();
     for (const file of sourceConfig.files) {
@@ -66,7 +63,6 @@ export async function buildRelease({
             fetchImpl,
             warn,
           });
-          dirArtifacts.push(...entryArtifacts);
           allArtifacts.push(...entryArtifacts);
         } catch (error) {
           if (error instanceof BuildReleaseError) {
@@ -76,30 +72,6 @@ export async function buildRelease({
           }
         }
       }
-    }
-
-    // 生成 README
-    if (dirArtifacts.length > 0) {
-      const readme = renderReleaseReadme({
-        sourceConfig,
-        artifacts: allArtifacts,
-        repository,
-        mainBranch,
-        releaseBranch,
-      });
-      const readmePath = path.join(outputRoot, sourceConfig.sourceRelativeDir, "README.md");
-      await fs.mkdir(path.dirname(readmePath), { recursive: true });
-      await fs.writeFile(readmePath, readme);
-      
-      const readmeArtifact = makeArtifact({
-        entry: { slug: "README", name: "README", sourceRelativeDir: sourceConfig.sourceRelativeDir },
-        outputRoot,
-        filePath: readmePath,
-        kind: "readme",
-        label: `${sourceConfig.sourceName} README`,
-      });
-      dirArtifacts.push(readmeArtifact);
-      allArtifacts.push(readmeArtifact);
     }
   }
 
