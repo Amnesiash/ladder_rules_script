@@ -152,23 +152,23 @@ proxy-groups:
 
 # ==================== 规则集 ====================
 # 规则集行为模板
-c: &RuleSet_c {type: http, behavior: classical, interval: 86400}
-d: &RuleSet_d {type: http, behavior: domain, interval: 86400}
-i: &RuleSet_i {type: http, behavior: ipcidr, interval: 86400}
+c: &RuleSet_c {type: http, behavior: classical, format: text, interval: 86400}
+d: &RuleSet_d {type: http, behavior: domain, format: text, interval: 86400}
+i: &RuleSet_i {type: http, behavior: ipcidr, format: text, interval: 86400}
 
 # 规则提供者
 rule-providers:
-  Direct:        {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Rules/Clash/Direct.yaml, path: ./ruleset/Direct.yaml}
-  WeChat:        {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Rules/Clash/WeChat.yaml, path: ./ruleset/WeChat.yaml}
-  SteamCN:       {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Rules/Clash/SteamCN.yaml, path: ./ruleset/SteamCN.yaml}
-  Private:       {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Rules/Clash/Private.yaml, path: ./ruleset/Private.yaml}
-  AI:            {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Rules/Clash/AI.yaml, path: ./ruleset/AI.yaml}
-  Apple:         {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Rules/Clash/Apple.yaml, path: ./ruleset/Apple.yaml}
-  Telegram:      {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Rules/Clash/Telegram.yaml, path: ./ruleset/Telegram.yaml}
-  StreamingHMT:  {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Rules/Clash/StreamingHMT.yaml, path: ./ruleset/StreamingHMT.yaml}
-  Streaming:     {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Rules/Clash/Streaming.yaml, path: ./ruleset/Streaming.yaml}
-  Proxy:         {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Rules/Clash/Proxy.yaml, path: ./ruleset/Proxy.yaml}
-  China:         {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Rules/Clash/China.yaml, path: ./ruleset/China.yaml}
+  Direct:        {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/Direct.txt, path: ./ruleset/Direct.txt}
+  WeChat:        {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/WeChat.txt, path: ./ruleset/WeChat.txt}
+  SteamCN:       {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/SteamCN.txt, path: ./ruleset/SteamCN.txt}
+  Private:       {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/Private.txt, path: ./ruleset/Private.txt}
+  AI:            {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/AI.txt, path: ./ruleset/AI.txt}
+  Apple:         {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/Apple.txt, path: ./ruleset/Apple.txt}
+  Telegram:      {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/Telegram.txt, path: ./ruleset/Telegram.txt}
+  StreamingHMT:  {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/StreamingHMT.txt, path: ./ruleset/StreamingHMT.txt}
+  Streaming:     {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/Streaming.txt, path: ./ruleset/Streaming.txt}
+  Proxy:         {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/Proxy.txt, path: ./ruleset/Proxy.txt}
+  China:         {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/China.txt, path: ./ruleset/China.txt}
 
 # ==================== 规则路由 ====================
 rules: 
