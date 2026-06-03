@@ -6,7 +6,7 @@
 
 | 名称 | 链接 |
 | --- | --- |
-| Apple-0 | [链接](https://github.com/Amnesiash/ladder_rules_script/blob/main/https%3A//raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list) |
+| Apple | [链接](https://github.com/Amnesiash/ladder_rules_script/blob/main/https%3A//raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list) |
 
 ## Mihomo 用法（复制粘贴）
 
@@ -16,7 +16,7 @@ _暂无可用产物_
 
 | 名称 | 链接 |
 | --- | --- |
-| Apple-0 Clash | [下载](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Apple/Apple-0.txt) |
-| Apple-0 Loon | [下载](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Apple/Apple-0.list) |
-| Apple-0 Shadowrocket | [下载](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Apple/Apple-0.list) |
-| Apple-0 QuantumultX | [下载](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Apple/Apple-0.list) |
+| Apple Clash | [下载](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Apple.txt) |
+| Apple Loon | [下载](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/Apple.list) |
+| Apple Shadowrocket | [下载](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/Apple.list) |
+| Apple QuantumultX | [下载](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/QuantumultX/Apple.list) |
