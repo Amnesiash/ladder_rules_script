@@ -29,7 +29,7 @@
 ```
 例如：
   
-  https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Proxy.yaml 
+  https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Rules/Clash/Proxy.yaml 
   此为浏览器地址栏中获取到的链接
 
 ```
@@ -39,13 +39,13 @@
 ```markdown
 使用 JsDeliver CDN 链接
 
-  e.g: https://cdn.jsdelivr.net/gh/Amnesiash/ladder_rules_script@main/Rules/Clash/Proxy.yaml
+  e.g: https://cdn.jsdelivr.net/gh/Amnesiash/ladder_rules_script@release/Rules/Clash/Proxy.yaml
   
-  例如文件: https://github.com/Amnesiash/ladder_rules_script/main/Rules/Clash/Proxy.yaml
+  例如文件: https://github.com/Amnesiash/ladder_rules_script/release/Rules/Clash/Proxy.yaml
   
   替换后链接为
   
-  https://cdn.jsdelivr.net/gh/Amnesiash/ladder_rules_script@main/Rules/Clash/Proxy.yaml
+  https://cdn.jsdelivr.net/gh/Amnesiash/ladder_rules_script@release/Rules/Clash/Proxy.yaml
 ```
 
 

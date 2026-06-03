@@ -131,7 +131,7 @@ function renderSourceTable({ files, repository, mainBranch }) {
   const rows = files.map((file) => {
     const name = file.name || file.slug;
     const blobUrl = file.url ? githubBlobURL({ repository, branch: mainBranch, filePath: file.url }) : null;
-    return blobUrl ? `| ${name} | [链接](${blobUrl}) |` : `| ${name} | - |`;
+    return blobUrl ? `| ${name} | [${blobUrl}](${blobUrl}) |` : `| ${name} | - |`;
   });
   return ["| 名称 | 链接 |", "| --- | --- |", ...rows].join("\n");
 }
@@ -229,7 +229,7 @@ function renderArtifactLink(artifact, repository, releaseBranch) {
   if (!artifact) return "-";
   const rawPath = artifact.relativePath || artifact.outputPath;
   const rawUrl = githubRawURL({ repository, branch: releaseBranch, filePath: rawPath });
-  return `[链接](${rawUrl})`;
+  return `[${rawUrl}](${rawUrl})`;
 }
 
 function collectSourceLabels(sourceConfig) {
