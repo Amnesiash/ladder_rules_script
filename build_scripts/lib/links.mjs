@@ -1,3 +1,5 @@
+import path from "node:path";
+
 const DEFAULT_MAIN_BRANCH = "main";
 const DEFAULT_RELEASE_BRANCH = "release";
 
@@ -73,6 +75,47 @@ export function renderReleaseReadme({
   return sections.join("\n");
 }
 
+export function renderRulesReadme({
+  sourceConfigs = [],
+  artifacts = [],
+  changes = null,
+  updateTime = formatUpdateTimeShanghai(),
+  repository,
+  mainBranch = DEFAULT_MAIN_BRANCH,
+  releaseBranch = DEFAULT_RELEASE_BRANCH,
+}) {
+  const repo = resolveRepository(repository);
+  const providerArtifacts = artifacts.filter((artifact) => artifact.kind && artifact.kind !== "manifest");
+  const rows = renderRulesRows({
+    sourceConfigs,
+    artifacts: providerArtifacts,
+    repository: repo,
+    releaseBranch,
+  });
+  const changeRows = renderRulesChangeRows({
+    changes,
+    repository: repo,
+    releaseBranch,
+  });
+
+  return [
+    "# Rules",
+    "",
+    "本目录保存规则输入与构建说明。分流产物以 `release` 分支的 raw 链接为准，来源按 `文件名@作者` 展示。",
+    "",
+    "| 分流 | 文件 | 来源 |",
+    "| --- | --- | --- |",
+    rows.length ? rows.join("\n") : "| - | - | - |",
+    "",
+    `## 文件更新 ${updateTime}`,
+    "",
+    "| 文件 | 变化 |",
+    "| --- | --- |",
+    changeRows.length ? changeRows.join("\n") : "| - | - |",
+    "",
+  ].join("\n");
+}
+
 function renderSourceConfigLinks({ sourceConfig, repository, mainBranch }) {
   const configFiles = sourceConfig.configFiles?.length
     ? sourceConfig.configFiles
@@ -135,4 +178,113 @@ function renderArtifacts({ artifacts, repository, releaseBranch }) {
     return `| ${artifact.label} | [下载](${rawUrl}) |`;
   });
   return ["| 名称 | 链接 |", "| --- | --- |", ...rows].join("\n");
+}
+
+function renderRulesRows({ sourceConfigs, artifacts, repository, releaseBranch }) {
+  const rows = [];
+  for (const sourceConfig of sourceConfigs) {
+    const relevantArtifacts = artifacts.filter((artifact) => artifact.sourceRelativeDir === sourceConfig.sourceRelativeDir);
+    const artifactByKind = new Map();
+    for (const artifact of relevantArtifacts) {
+      artifactByKind.set(artifact.kind, artifact);
+    }
+
+    const sourceLinks = collectSourceLabels(sourceConfig).join("<br>") || "-";
+    const rowName = escapeTableCell(sourceConfig.sourceName);
+    const fileCell = [
+      `Clash：${renderArtifactLink(artifactByKind.get("clash"), repository, releaseBranch)}`,
+      `QuantumultX：${renderArtifactLink(artifactByKind.get("quantumultx"), repository, releaseBranch)}`,
+      `Loon：${renderArtifactLink(artifactByKind.get("loon"), repository, releaseBranch)}`,
+      `Shadowrocket：${renderArtifactLink(artifactByKind.get("shadowrocket"), repository, releaseBranch)}`,
+    ].join("<br>");
+
+    rows.push(`| ${rowName} | ${fileCell} | ${sourceLinks} |`);
+  }
+
+  return rows;
+}
+
+function renderRulesChangeRows({ changes, repository, releaseBranch }) {
+  if (!changes) return [];
+
+  const rows = [];
+  const pushRows = (items, changeType) => {
+    for (const artifact of items) {
+      const rawPath = artifact.relativePath || artifact.outputPath;
+      const label = artifact.label || artifact.name || artifact.relativePath || "-";
+      const fileCell = changeType === "删除" || !rawPath
+        ? escapeTableCell(label)
+        : `[${escapeTableCell(label)}](${githubRawURL({ repository, branch: releaseBranch, filePath: rawPath })})`;
+      rows.push(`| ${fileCell} | ${escapeTableCell(changeType)} |`);
+    }
+  };
+
+  pushRows(changes.added || [], "新增");
+  pushRows(changes.updated || [], "更新");
+  pushRows(changes.removed || [], "删除");
+  return rows;
+}
+
+function renderArtifactLink(artifact, repository, releaseBranch) {
+  if (!artifact) return "-";
+  const rawPath = artifact.relativePath || artifact.outputPath;
+  const rawUrl = githubRawURL({ repository, branch: releaseBranch, filePath: rawPath });
+  return `[链接](${rawUrl})`;
+}
+
+function collectSourceLabels(sourceConfig) {
+  const urls = (sourceConfig.files || [])
+    .flatMap((file) => Array.isArray(file.urls) && file.urls.length ? file.urls : file.url ? [file.url] : [])
+    .filter(Boolean);
+
+  const labels = urls.map((url) => sourceLabelFromUrl(url));
+  return [...new Set(labels)];
+}
+
+function sourceLabelFromUrl(url) {
+  try {
+    const parsed = new URL(url);
+    const fileName = path.posix.basename(parsed.pathname) || parsed.hostname;
+    const author = githubAuthorFromUrl(parsed);
+    return author ? `${fileName}@${author}` : fileName;
+  } catch {
+    const fileName = String(url).split("/").pop() || String(url);
+    return fileName;
+  }
+}
+
+function githubAuthorFromUrl(parsedUrl) {
+  const host = parsedUrl.hostname.toLowerCase();
+  const segments = parsedUrl.pathname.split("/").filter(Boolean);
+
+  if (host === "raw.githubusercontent.com" || host === "github.com") {
+    return segments[0] || null;
+  }
+
+  return null;
+}
+
+function escapeTableCell(value) {
+  return String(value ?? "")
+    .replace(/\|/g, "\\|")
+    .replace(/\r?\n/g, "<br>");
+}
+
+function normalizeTableLink(value) {
+  return String(value ?? "");
+}
+
+function formatUpdateTimeShanghai(date = new Date()) {
+  const parts = new Intl.DateTimeFormat("sv-SE", {
+    timeZone: "Asia/Shanghai",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
+  }).formatToParts(date);
+  const map = new Map(parts.map((part) => [part.type, part.value]));
+  return `${map.get("year")}-${map.get("month")}-${map.get("day")} ${map.get("hour")}:${map.get("minute")}:${map.get("second")}`;
 }

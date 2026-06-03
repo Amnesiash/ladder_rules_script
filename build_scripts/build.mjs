@@ -1,10 +1,12 @@
 #!/usr/bin/env bun
+import fs from "node:fs/promises";
 import path from "node:path";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import { buildRelease } from "./lib/artifacts.mjs";
 import { backupSourceTxtEntries } from "./lib/subscriptions.mjs";
 import { loadPreviousManifest, compareProviderArtifactChanges, sendTelegramNotification } from "./lib/notifications.mjs";
+import { renderRulesReadme } from "./lib/links.mjs";
 
 const execFileAsync = promisify(execFile);
 
@@ -105,13 +107,14 @@ async function main() {
 
   console.log(`Generated ${result.artifacts.length} release files in ${result.outputRoot}`);
 
-  // 检测变更并发送通知
+  // 生成 Rules/README.md，汇总分流文件、版本链接和来源
   const currentManifest = await loadPreviousManifest({
     previousReleaseDir: result.outputRoot,
   });
 
+  let changes = null;
   if (currentManifest) {
-    const changes = compareProviderArtifactChanges(previousManifest, currentManifest);
+    changes = compareProviderArtifactChanges(previousManifest, currentManifest);
     
     // Telegram 通知
     await sendTelegramNotification({
@@ -122,6 +125,32 @@ async function main() {
       dryRun: args["telegram-dry-run"] ?? false,
     });
   }
+
+  const rulesReadmePath = path.join(projectRoot, "Rules", "README.md");
+  const rulesReadme = renderRulesReadme({
+    sourceConfigs: result.sourceConfigs,
+    artifacts: result.artifacts,
+    changes,
+    updateTime: formatUpdateTimeShanghai(),
+    repository,
+  });
+  await fs.mkdir(path.dirname(rulesReadmePath), { recursive: true });
+  await fs.writeFile(rulesReadmePath, `${rulesReadme}\n`);
+}
+
+function formatUpdateTimeShanghai(date = new Date()) {
+  const parts = new Intl.DateTimeFormat("sv-SE", {
+    timeZone: "Asia/Shanghai",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
+  }).formatToParts(date);
+  const map = new Map(parts.map((part) => [part.type, part.value]));
+  return `${map.get("year")}-${map.get("month")}-${map.get("day")} ${map.get("hour")}:${map.get("minute")}:${map.get("second")}`;
 }
 
 main().catch((error) => {

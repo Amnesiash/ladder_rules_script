@@ -8,6 +8,15 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "5 0,12 * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - Rules/rule_source.txt
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   Build:
@@ -20,7 +29,6 @@ jobs:
       - name: Checkout target repository
         uses: actions/checkout@v6.0.2
         with:
-          path: ladder-repo
           fetch-depth: 0
 
       - name: Setup Bun
@@ -34,12 +42,10 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          cd ladder-repo
           bun run build:release:clean
 
       - name: Push Update
         run: |
-          cd ladder-repo
           if [[ ! -d ".release" ]]; then
             echo "Missing .release/ artifacts directory; aborting."
             exit 1
@@ -52,7 +58,7 @@ jobs:
 
           cd "$release_worktree"
           find . -mindepth 1 -maxdepth 1 ! -name ".git" -exec rm -rf {} +
-          cp -a ../ladder-repo/.release/. .
+          cp -a ../.release/. .
 
           if [[ -n $(git status -s) ]]; then
             git config --local user.email "${{ github.actor }}@users.noreply.github.com"
