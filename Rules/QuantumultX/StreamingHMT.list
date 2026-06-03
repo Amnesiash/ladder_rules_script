@@ -1,7 +1,10 @@
 # NAME: StreamingHMT
-# UPDATE: 2026-05-31 23:24:40
+# UPDATE: 2026-06-03 13:59:59
 # TOTAL: 16
-
+IP-CIDR,116.211.202.206/32,StreamingHMT
+IP-CIDR,116.211.202.216/32,StreamingHMT
+HOST-KEYWORD,cn-hk-eq-bcache-,StreamingHMT
+HOST-SUFFIX,api.mgtv.com,StreamingHMT
 HOST,api.biliapi.com,StreamingHMT
 HOST,api.biliapi.net,StreamingHMT
 HOST,api.bilibili.com,StreamingHMT
@@ -14,7 +17,3 @@ HOST,m.bilibili.com,StreamingHMT
 HOST,mobileso.bz.mgtv.com,StreamingHMT
 HOST,upos-hz-mirrorakam.akamaized.net,StreamingHMT
 HOST,www.bilibili.com,StreamingHMT
-HOST-SUFFIX,api.mgtv.com,StreamingHMT
-HOST-KEYWORD,cn-hk-eq-bcache-,StreamingHMT
-IP-CIDR,116.211.202.206/32,StreamingHMT
-IP-CIDR,116.211.202.216/32,StreamingHMT

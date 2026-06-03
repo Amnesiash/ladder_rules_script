@@ -1,7 +1,11 @@
 # NAME: SteamCN
-# UPDATE: 2026-05-31 23:24:40
+# UPDATE: 2026-06-03 13:59:59
 # TOTAL: 17
-
+HOST-SUFFIX,cm.steampowered.com,SteamCN
+HOST-SUFFIX,steamchina.com,SteamCN
+HOST-SUFFIX,steamcontent.com,SteamCN
+HOST-SUFFIX,steamserver.net,SteamCN
+HOST-SUFFIX,steamusercontent.com,SteamCN
 HOST,csgo.wmsj.cn,SteamCN
 HOST,dl.steam.clngaa.com,SteamCN
 HOST,dl.steam.ksyna.com,SteamCN
@@ -14,8 +18,3 @@ HOST,steampowered.com.8686c.com,SteamCN
 HOST,steamstatic.com.8686c.com,SteamCN
 HOST,wmsjsteam.com,SteamCN
 HOST,xz.pphimalayanrt.com,SteamCN
-HOST-SUFFIX,cm.steampowered.com,SteamCN
-HOST-SUFFIX,steamchina.com,SteamCN
-HOST-SUFFIX,steamcontent.com,SteamCN
-HOST-SUFFIX,steamserver.net,SteamCN
-HOST-SUFFIX,steamusercontent.com,SteamCN

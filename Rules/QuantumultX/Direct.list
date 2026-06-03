@@ -1,29 +1,8 @@
 # NAME: Direct
-# UPDATE: 2026-05-31 23:24:39
+# UPDATE: 2026-06-03 13:59:59
 # TOTAL: 66
-
-HOST,analytics.strava.com,Direct
-HOST,app.adjust.com,Direct
-HOST,app.appsflyer.com,Direct
-HOST,bdtj.tagtic.cn,Direct
-HOST,ci.android.com,Direct
-HOST,clientservices.googleapis.com,Direct
-HOST,dl.google.com,Direct
-HOST,dl.l.google.com,Direct
-HOST,errlog.umeng.com,Direct
-HOST,fairplay.l.qq.com,Direct
-HOST,livew.l.qq.com,Direct
-HOST,log.mmstat.com,Direct
-HOST,msg.umeng.com,Direct
-HOST,msg.umengcloud.com,Direct
-HOST,origin-a.akamaihd.net,Direct
-HOST,redirector.gvt1.com,Direct
-HOST,rewards.hypixel.net,Direct
-HOST,sycm.mmstat.com,Direct
-HOST,tracking.miui.com,Direct
-HOST,update.googleapis.com,Direct
-HOST,vd.l.qq.com,Direct
-HOST,vi.l.qq.com,Direct
+HOST-KEYWORD,quickconnect,Direct
+HOST-KEYWORD,synology,Direct
 HOST-SUFFIX,blog.google,Direct
 HOST-SUFFIX,checkip.dyndns.org,Direct
 HOST-SUFFIX,checkip.synology.com,Direct
@@ -66,5 +45,25 @@ HOST-SUFFIX,steamcontent.com,Direct
 HOST-SUFFIX,synology.com,Direct
 HOST-SUFFIX,synology.me,Direct
 HOST-SUFFIX,tracking-protection.cdn.mozilla.net,Direct
-HOST-KEYWORD,quickconnect,Direct
-HOST-KEYWORD,synology,Direct
+HOST,analytics.strava.com,Direct
+HOST,app.adjust.com,Direct
+HOST,app.appsflyer.com,Direct
+HOST,bdtj.tagtic.cn,Direct
+HOST,ci.android.com,Direct
+HOST,clientservices.googleapis.com,Direct
+HOST,dl.google.com,Direct
+HOST,dl.l.google.com,Direct
+HOST,errlog.umeng.com,Direct
+HOST,fairplay.l.qq.com,Direct
+HOST,livew.l.qq.com,Direct
+HOST,log.mmstat.com,Direct
+HOST,msg.umeng.com,Direct
+HOST,msg.umengcloud.com,Direct
+HOST,origin-a.akamaihd.net,Direct
+HOST,redirector.gvt1.com,Direct
+HOST,rewards.hypixel.net,Direct
+HOST,sycm.mmstat.com,Direct
+HOST,tracking.miui.com,Direct
+HOST,update.googleapis.com,Direct
+HOST,vd.l.qq.com,Direct
+HOST,vi.l.qq.com,Direct

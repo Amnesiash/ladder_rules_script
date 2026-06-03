@@ -14,12 +14,13 @@ permissions:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6.0.2
         with:
           ref: main
       - name: Configure Git
+        shell: bash
         run: |
           if [ "${{ github.event.inputs.confirm }}" != "CLEAR_MAIN" ]; then
             echo "Confirmation missing/invalid; aborting."

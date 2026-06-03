@@ -1,7 +1,6 @@
 # NAME: Streaming
-# UPDATE: 2026-05-31 23:24:40
+# UPDATE: 2026-06-03 13:59:59
 # TOTAL: 434
-
 payload:
   - DOMAIN,api-abematv.bucketeer.jp
   - DOMAIN,atv-ps.amazon.com

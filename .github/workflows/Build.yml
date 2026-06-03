@@ -28,34 +28,11 @@ jobs:
         with:
           bun-version: 1.3.13
 
-      - name: Generate Clash / Loon / QuantumultX / Shadowrocket rules
-        run: |
-          cd ladder-repo
-          bun run generate:clients
-
-      - name: Push rule updates to main
-        run: |
-          cd ladder-repo
-          git config --local user.email "${{ github.actor }}@users.noreply.github.com"
-          git config --local user.name "${{ github.actor }}"
-          # 仅在生成结果有变化时更新 main
-          if [[ -n $(git status -s) ]]; then
-            git add -A
-            git commit -m "Auto Update $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')"
-            git push origin HEAD:main
-          else
-            echo "No rule changes to push to main."
-          fi
-
-      - name: Check and notify rule changes via Telegram
+      - name: Build release artifacts
         env:
-          TG_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TG_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: |
-          cd ladder-repo
-          bash build_scripts/telegram-notify.sh .
-
-      - name: Prepare ladder release artifacts
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           cd ladder-repo
           bun run build:release:clean

@@ -1,7 +1,6 @@
 # NAME: AI
-# UPDATE: 2026-06-01 13:08:07
+# UPDATE: 2026-06-03 13:59:59
 # TOTAL: 233
-
 payload:
   - DOMAIN,apple-relay.apple.com
   - DOMAIN,apple-relay.cloudflare.com

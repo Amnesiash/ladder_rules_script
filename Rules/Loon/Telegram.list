@@ -1,7 +1,6 @@
 # NAME: Telegram
-# UPDATE: 2026-05-20 17:33:57
+# UPDATE: 2026-06-03 13:59:59
 # TOTAL: 64
-
 DOMAIN,api.imem.app
 DOMAIN,api.swiftgram.app
 DOMAIN-SUFFIX,cdn-telegram.org

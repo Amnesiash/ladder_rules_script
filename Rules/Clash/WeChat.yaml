@@ -1,7 +1,6 @@
 # NAME: WeChat
-# UPDATE: 2026-05-31 23:24:40
+# UPDATE: 2026-06-03 13:59:59
 # TOTAL: 48
-
 payload:
   - DOMAIN,apd-pcdnwxlogin.teg.tencent-cloud.net
   - DOMAIN,btrace.qq.com

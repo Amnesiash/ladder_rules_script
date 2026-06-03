@@ -1,7 +1,6 @@
 # NAME: Telegram
-# UPDATE: 2026-05-31 23:24:40
+# UPDATE: 2026-06-03 13:59:59
 # TOTAL: 60
-
 payload:
   - DOMAIN,api.imem.app
   - DOMAIN,api.swiftgram.app

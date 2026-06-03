@@ -1,7 +1,6 @@
 # NAME: China
-# UPDATE: 2026-06-01 13:39:42
+# UPDATE: 2026-06-03 13:59:59
 # TOTAL: 3864
-
 payload:
   - DOMAIN,auth.wosms.cn
   - DOMAIN,config.cmpassport.com
