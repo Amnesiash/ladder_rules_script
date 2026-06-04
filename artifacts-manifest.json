@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-03T09:26:51.208Z",
+  "timestamp": "2026-06-04T02:01:26.716Z",
   "artifacts": [
     {
       "slug": "China",
@@ -31,17 +31,6 @@
       "relativePath": "Shadowrocket/China.list",
       "kind": "shadowrocket",
       "label": "China Shadowrocket",
-      "behavior": "classical",
-      "sha256": {}
-    },
-    {
-      "slug": "China",
-      "name": "China",
-      "sourceRelativeDir": "China",
-      "outputPath": "QuantumultX/China.list",
-      "relativePath": "QuantumultX/China.list",
-      "kind": "quantumultx",
-      "label": "China QuantumultX",
       "behavior": "classical",
       "sha256": {}
     },
@@ -79,17 +68,6 @@
       "sha256": {}
     },
     {
-      "slug": "Direct",
-      "name": "Direct",
-      "sourceRelativeDir": "Direct",
-      "outputPath": "QuantumultX/Direct.list",
-      "relativePath": "QuantumultX/Direct.list",
-      "kind": "quantumultx",
-      "label": "Direct QuantumultX",
-      "behavior": "classical",
-      "sha256": {}
-    },
-    {
       "slug": "Proxy",
       "name": "Proxy",
       "sourceRelativeDir": "Proxy",
@@ -119,17 +97,6 @@
       "relativePath": "Shadowrocket/Proxy.list",
       "kind": "shadowrocket",
       "label": "Proxy Shadowrocket",
-      "behavior": "classical",
-      "sha256": {}
-    },
-    {
-      "slug": "Proxy",
-      "name": "Proxy",
-      "sourceRelativeDir": "Proxy",
-      "outputPath": "QuantumultX/Proxy.list",
-      "relativePath": "QuantumultX/Proxy.list",
-      "kind": "quantumultx",
-      "label": "Proxy QuantumultX",
       "behavior": "classical",
       "sha256": {}
     },
@@ -167,17 +134,6 @@
       "sha256": {}
     },
     {
-      "slug": "Streaming",
-      "name": "Streaming",
-      "sourceRelativeDir": "Streaming",
-      "outputPath": "QuantumultX/Streaming.list",
-      "relativePath": "QuantumultX/Streaming.list",
-      "kind": "quantumultx",
-      "label": "Streaming QuantumultX",
-      "behavior": "classical",
-      "sha256": {}
-    },
-    {
       "slug": "AI",
       "name": "AI",
       "sourceRelativeDir": "AI",
@@ -207,17 +163,6 @@
       "relativePath": "Shadowrocket/AI.list",
       "kind": "shadowrocket",
       "label": "AI Shadowrocket",
-      "behavior": "classical",
-      "sha256": {}
-    },
-    {
-      "slug": "AI",
-      "name": "AI",
-      "sourceRelativeDir": "AI",
-      "outputPath": "QuantumultX/AI.list",
-      "relativePath": "QuantumultX/AI.list",
-      "kind": "quantumultx",
-      "label": "AI QuantumultX",
       "behavior": "classical",
       "sha256": {}
     },
@@ -255,17 +200,6 @@
       "sha256": {}
     },
     {
-      "slug": "Private",
-      "name": "Private",
-      "sourceRelativeDir": "Private",
-      "outputPath": "QuantumultX/Private.list",
-      "relativePath": "QuantumultX/Private.list",
-      "kind": "quantumultx",
-      "label": "Private QuantumultX",
-      "behavior": "classical",
-      "sha256": {}
-    },
-    {
       "slug": "WeChat",
       "name": "WeChat",
       "sourceRelativeDir": "WeChat",
@@ -295,17 +229,6 @@
       "relativePath": "Shadowrocket/WeChat.list",
       "kind": "shadowrocket",
       "label": "WeChat Shadowrocket",
-      "behavior": "classical",
-      "sha256": {}
-    },
-    {
-      "slug": "WeChat",
-      "name": "WeChat",
-      "sourceRelativeDir": "WeChat",
-      "outputPath": "QuantumultX/WeChat.list",
-      "relativePath": "QuantumultX/WeChat.list",
-      "kind": "quantumultx",
-      "label": "WeChat QuantumultX",
       "behavior": "classical",
       "sha256": {}
     },
@@ -343,17 +266,6 @@
       "sha256": {}
     },
     {
-      "slug": "StreamingHMT",
-      "name": "StreamingHMT",
-      "sourceRelativeDir": "StreamingHMT",
-      "outputPath": "QuantumultX/StreamingHMT.list",
-      "relativePath": "QuantumultX/StreamingHMT.list",
-      "kind": "quantumultx",
-      "label": "StreamingHMT QuantumultX",
-      "behavior": "classical",
-      "sha256": {}
-    },
-    {
       "slug": "Apple",
       "name": "Apple",
       "sourceRelativeDir": "Apple",
@@ -383,17 +295,6 @@
       "relativePath": "Shadowrocket/Apple.list",
       "kind": "shadowrocket",
       "label": "Apple Shadowrocket",
-      "behavior": "classical",
-      "sha256": {}
-    },
-    {
-      "slug": "Apple",
-      "name": "Apple",
-      "sourceRelativeDir": "Apple",
-      "outputPath": "QuantumultX/Apple.list",
-      "relativePath": "QuantumultX/Apple.list",
-      "kind": "quantumultx",
-      "label": "Apple QuantumultX",
       "behavior": "classical",
       "sha256": {}
     },
@@ -431,17 +332,6 @@
       "sha256": {}
     },
     {
-      "slug": "SteamCN",
-      "name": "SteamCN",
-      "sourceRelativeDir": "SteamCN",
-      "outputPath": "QuantumultX/SteamCN.list",
-      "relativePath": "QuantumultX/SteamCN.list",
-      "kind": "quantumultx",
-      "label": "SteamCN QuantumultX",
-      "behavior": "classical",
-      "sha256": {}
-    },
-    {
       "slug": "Telegram",
       "name": "Telegram",
       "sourceRelativeDir": "Telegram",
@@ -471,17 +361,6 @@
       "relativePath": "Shadowrocket/Telegram.list",
       "kind": "shadowrocket",
       "label": "Telegram Shadowrocket",
-      "behavior": "classical",
-      "sha256": {}
-    },
-    {
-      "slug": "Telegram",
-      "name": "Telegram",
-      "sourceRelativeDir": "Telegram",
-      "outputPath": "QuantumultX/Telegram.list",
-      "relativePath": "QuantumultX/Telegram.list",
-      "kind": "quantumultx",
-      "label": "Telegram QuantumultX",
       "behavior": "classical",
       "sha256": {}
     }
