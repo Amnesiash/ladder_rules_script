@@ -1,5 +1,3 @@
-import path from "node:path";
-
 const DEFAULT_MAIN_BRANCH = "main";
 const DEFAULT_RELEASE_BRANCH = "release";
 
@@ -78,42 +76,60 @@ export function renderReleaseReadme({
 export function renderRulesReadme({
   sourceConfigs = [],
   artifacts = [],
-  changes = null,
-  updateTime = formatUpdateTimeShanghai(),
   repository,
-  mainBranch = DEFAULT_MAIN_BRANCH,
   releaseBranch = DEFAULT_RELEASE_BRANCH,
+  updateTime = "北京时间 2:00",
 }) {
   const repo = resolveRepository(repository);
   const providerArtifacts = artifacts.filter((artifact) => artifact.kind && artifact.kind !== "manifest");
   const rows = renderRulesRows({
-    sourceConfigs,
+    sourceConfigs: sortRulesSourceConfigs(sourceConfigs),
     artifacts: providerArtifacts,
-    repository: repo,
-    releaseBranch,
-  });
-  const changeRows = renderRulesChangeRows({
-    changes,
     repository: repo,
     releaseBranch,
   });
 
   return [
-    "# Rules",
+    "# 规则",
     "",
-    "本目录保存规则输入与构建说明。分流产物以 `release` 分支的 raw 链接为准，来源按 `文件名@作者` 展示。",
+    "本目录自动生成规则文件仓库，包含各类代理软件使用的规则集。",
     "",
-    "| 分流 | 文件 | 来源 |",
-    "| --- | --- | --- |",
-    rows.length ? rows.join("\n") : "| - | - | - |",
+    "---",
     "",
-    `## 文件更新 ${updateTime}`,
+    "## 更新",
     "",
-    "| 文件 | 变化 |",
-    "| --- | --- |",
-    changeRows.length ? changeRows.join("\n") : "| - | - |",
+    "- 规则文件自动更新",
+    `- 更新时间：${updateTime}`,
+    "",
+    "---",
+    "",
+    "## 规则集",
+    "",
+    "| 文件名 | 包含内容 | 用途 | 链接 |",
+    "| :--- | :--- | :--- | :--- |",
+    rows.length ? rows.join("\n") : "| - | - | - | - |",
+    "",
+    "## 使用示例",
+    "",
+    "### Clash 使用示例",
+    "",
+    renderRulesClashExample({ sourceConfigs: sortRulesSourceConfigs(sourceConfigs), repository: repo, releaseBranch }),
+    "",
+    "### QX 使用示例",
+    "",
+    renderRulesQxExample(),
     "",
   ].join("\n");
+}
+
+function sortRulesSourceConfigs(sourceConfigs) {
+  const order = new Map(RULE_SOURCE_ORDER.map((name, index) => [name, index]));
+  return [...sourceConfigs].sort((left, right) => {
+    const leftIndex = order.has(left.sourceName) ? order.get(left.sourceName) : Number.POSITIVE_INFINITY;
+    const rightIndex = order.has(right.sourceName) ? order.get(right.sourceName) : Number.POSITIVE_INFINITY;
+    if (leftIndex !== rightIndex) return leftIndex - rightIndex;
+    return String(left.sourceName).localeCompare(String(right.sourceName));
+  });
 }
 
 function renderSourceConfigLinks({ sourceConfig, repository, mainBranch }) {
@@ -124,6 +140,54 @@ function renderSourceConfigLinks({ sourceConfig, repository, mainBranch }) {
     (configFile) => `[${configFile.fileName}](${githubBlobURL({ repository, branch: mainBranch, filePath: configFile.relativePath })})`,
   );
   return `配置文件：${links.join("、")}`;
+}
+
+function renderRulesClashExample({ sourceConfigs, repository, releaseBranch }) {
+  if (!sourceConfigs.length) return "_暂无可用配置示例_";
+
+  const lines = [
+    "```yaml",
+    "c: &RuleSet_c {type: http, behavior: classical, format: text, interval: 86400}",
+    "",
+    "rule-providers:",
+    "  # 规则集",
+  ];
+
+  for (const sourceConfig of sourceConfigs) {
+    const rawUrl = githubRawURL({
+      repository,
+      branch: releaseBranch,
+      filePath: `Clash/${sourceConfig.sourceName}.txt`,
+    });
+    lines.push(`  ${sourceConfig.sourceName}: {<<: *RuleSet_c, url: ${rawUrl}}`);
+  }
+
+  lines.push("");
+  lines.push("rules:");
+  lines.push("  # 订阅规则");
+  for (const sourceConfig of sourceConfigs) {
+    const policy = RULE_POLICY_BY_SOURCE_NAME[sourceConfig.sourceName] || "DIRECT";
+    lines.push(`  - RULE-SET,${sourceConfig.sourceName},${policy}`);
+  }
+  lines.push("  - GEOIP,CN,DIRECT");
+  lines.push("");
+  lines.push("  # 兜底规则");
+  lines.push("  - MATCH,漏网之鱼");
+  lines.push("```");
+  return lines.join("\n");
+}
+
+function renderRulesQxExample() {
+  return [
+    "```ini",
+    "[general]",
+    "# 资源解析器，可用于自定义各类远程资源的转换，如节点，规则 filter，重写 rewrite 等，url 地址可远程，可task_local本地/iCloud(Quantumult X/Scripts目录)",
+    "resource_parser_url=https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js",
+    "",
+    "[filter_remote]",
+    "https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/Direct.txt, tag=直连修正, force-policy=direct, img-url=https://github.com/Koolson/Qure/raw/master/IconSet/mini/Direct.png, update-interval=172800, opt-parser=true, enabled=true",
+    "```",
+  ].join("\n");
 }
 
 function renderSourceTable({ files, repository, mainBranch }) {
@@ -189,79 +253,25 @@ function renderRulesRows({ sourceConfigs, artifacts, repository, releaseBranch }
       artifactByKind.set(artifact.kind, artifact);
     }
 
-    const sourceLinks = collectSourceLabels(sourceConfig).join("<br>") || "-";
     const rowName = escapeTableCell(sourceConfig.sourceName);
     const fileCell = [
-      `Clash：${renderArtifactLink(artifactByKind.get("clash"), repository, releaseBranch)}`,
-      `QuantumultX：${renderArtifactLink(artifactByKind.get("quantumultx"), repository, releaseBranch)}`,
-      `Loon：${renderArtifactLink(artifactByKind.get("loon"), repository, releaseBranch)}`,
-      `Shadowrocket：${renderArtifactLink(artifactByKind.get("shadowrocket"), repository, releaseBranch)}`,
-    ].join("<br>");
+      renderArtifactLink(artifactByKind.get("clash"), repository, releaseBranch, "Clash"),
+      renderArtifactLink(artifactByKind.get("loon"), repository, releaseBranch, "Loon"),
+      renderArtifactLink(artifactByKind.get("shadowrocket"), repository, releaseBranch, "Shadowrocket"),
+    ].join(" / ");
+    const info = RULE_ROW_INFO[sourceConfig.sourceName] || DEFAULT_RULE_ROW_INFO;
 
-    rows.push(`| ${rowName} | ${fileCell} | ${sourceLinks} |`);
+    rows.push(`| ${rowName} | ${escapeTableCell(info.content)} | ${escapeTableCell(info.purpose)} | ${nowrapTableCell(fileCell)} |`);
   }
 
   return rows;
 }
 
-function renderRulesChangeRows({ changes, repository, releaseBranch }) {
-  if (!changes) return [];
-
-  const rows = [];
-  const pushRows = (items, changeType) => {
-    for (const artifact of items) {
-      const rawPath = artifact.relativePath || artifact.outputPath;
-      const label = artifact.label || artifact.name || artifact.relativePath || "-";
-      const fileCell = changeType === "删除" || !rawPath
-        ? escapeTableCell(label)
-        : `[${escapeTableCell(label)}](${githubRawURL({ repository, branch: releaseBranch, filePath: rawPath })})`;
-      rows.push(`| ${fileCell} | ${escapeTableCell(changeType)} |`);
-    }
-  };
-
-  pushRows(changes.added || [], "新增");
-  pushRows(changes.updated || [], "更新");
-  pushRows(changes.removed || [], "删除");
-  return rows;
-}
-
-function renderArtifactLink(artifact, repository, releaseBranch) {
+function renderArtifactLink(artifact, repository, releaseBranch, label) {
   if (!artifact) return "-";
   const rawPath = artifact.relativePath || artifact.outputPath;
   const rawUrl = githubRawURL({ repository, branch: releaseBranch, filePath: rawPath });
-  return `[${rawUrl}](${rawUrl})`;
-}
-
-function collectSourceLabels(sourceConfig) {
-  const urls = (sourceConfig.files || [])
-    .flatMap((file) => Array.isArray(file.urls) && file.urls.length ? file.urls : file.url ? [file.url] : [])
-    .filter(Boolean);
-
-  const labels = urls.map((url) => sourceLabelFromUrl(url));
-  return [...new Set(labels)];
-}
-
-function sourceLabelFromUrl(url) {
-  try {
-    const parsed = new URL(url);
-    const fileName = path.posix.basename(parsed.pathname) || parsed.hostname;
-    const author = githubAuthorFromUrl(parsed);
-    return author ? `${fileName}@${author}` : fileName;
-  } catch {
-    const fileName = String(url).split("/").pop() || String(url);
-    return fileName;
-  }
-}
-
-function githubAuthorFromUrl(parsedUrl) {
-  const host = parsedUrl.hostname.toLowerCase();
-  const segments = parsedUrl.pathname.split("/").filter(Boolean);
-
-  if (host === "raw.githubusercontent.com" || host === "github.com") {
-    return segments[0] || null;
-  }
-
-  return null;
+  return `[${label}](${rawUrl})`;
 }
 
 function escapeTableCell(value) {
@@ -270,21 +280,86 @@ function escapeTableCell(value) {
     .replace(/\r?\n/g, "<br>");
 }
 
-function normalizeTableLink(value) {
-  return String(value ?? "");
+function nowrapTableCell(value) {
+  return `<span style="white-space:nowrap">${String(value ?? "")}</span>`;
 }
 
-function formatUpdateTimeShanghai(date = new Date()) {
-  const parts = new Intl.DateTimeFormat("sv-SE", {
-    timeZone: "Asia/Shanghai",
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-    hour12: false,
-  }).formatToParts(date);
-  const map = new Map(parts.map((part) => [part.type, part.value]));
-  return `${map.get("year")}-${map.get("month")}-${map.get("day")} ${map.get("hour")}:${map.get("minute")}:${map.get("second")}`;
-}
+const DEFAULT_RULE_ROW_INFO = {
+  content: "规则集合",
+  purpose: "按需分流与策略匹配",
+};
+
+const RULE_ROW_INFO = {
+  China: {
+    content: "中国网站列表",
+    purpose: "国内网站、服务，确保直连访问",
+  },
+  Direct: {
+    content: "直连域名列表",
+    purpose: "国内可直连的常用服务，避免不必要的代理",
+  },
+  Proxy: {
+    content: "代理服务列表",
+    purpose: "国外代理、VPN、科学上网服务",
+  },
+  Streaming: {
+    content: "流媒体",
+    purpose: "Netflix、Disney+、HBO 等国际流媒体",
+  },
+  AI: {
+    content: "AI 服务",
+    purpose: "ChatGPT、Claude、Gemini 等主流 AI 服务",
+  },
+  Private: {
+    content: "私有网络",
+    purpose: "内网设备管理、路由器配置、本地服务访问",
+  },
+  WeChat: {
+    content: "微信服务",
+    purpose: "微信相关服务、API 与访问优化",
+  },
+  StreamingHMT: {
+    content: "港澳台流媒体",
+    purpose: "哔哩哔哩、爱奇艺等港澳台流媒体",
+  },
+  Apple: {
+    content: "苹果服务",
+    purpose: "苹果全球服务、iCloud、App Store 国际区",
+  },
+  SteamCN: {
+    content: "Steam国内直连",
+    purpose: "Steam 国内可直连访问内容",
+  },
+  Telegram: {
+    content: "Telegram",
+    purpose: "Telegram 官方及第三方客户端、API 服务",
+  },
+};
+
+const RULE_SOURCE_ORDER = [
+  "Private",
+  "Direct",
+  "WeChat",
+  "SteamCN",
+  "AI",
+  "Apple",
+  "Telegram",
+  "StreamingHMT",
+  "Streaming",
+  "Proxy",
+  "China",
+];
+
+const RULE_POLICY_BY_SOURCE_NAME = {
+  Private: "DIRECT",
+  Direct: "DIRECT",
+  WeChat: "DIRECT",
+  SteamCN: "DIRECT",
+  AI: "AI",
+  Apple: "苹果服务",
+  Telegram: "Telegram",
+  StreamingHMT: "哔哩哔哩",
+  Streaming: "国际媒体",
+  Proxy: "全球加速",
+  China: "DIRECT",
+};

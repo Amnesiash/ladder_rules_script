@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { loadAllSources, toSafeFileStem } from "./config.mjs";
-import { buildSortedRulesetForClash, buildSortedRulesetForLoon, buildSortedRulesetForShadowrocket, buildSortedRulesetForQuantumultX } from "./rules.mjs";
+import { buildSortedRulesetForClash, buildSortedRulesetForLoon, buildSortedRulesetForShadowrocket } from "./rules.mjs";
 import { fetchWithFallback, sourceConfigsFromSourceTxt } from "./subscriptions.mjs";
 import { makeArtifact, writeArtifactManifest } from "./notifications.mjs";
 
@@ -36,6 +36,8 @@ export async function buildRelease({
   await fs.rm(workRoot, { recursive: true, force: true });
   await fs.mkdir(outputRoot, { recursive: true });
   await fs.mkdir(workRoot, { recursive: true });
+  await fs.mkdir(path.join(outputRoot, "QuantumultX"), { recursive: true });
+  await fs.writeFile(path.join(outputRoot, "QuantumultX", ".gitkeep"), "");
 
   // 加载源配置
   const sourceTxtConfigs = await sourceConfigsFromSourceTxt({ projectRoot, sourceRoot });
@@ -121,20 +123,6 @@ async function processEntry({ entry, outputRoot, workRoot, fetchImpl, warn }) {
   if (srLines.length) {
     const srPath = await writeRulesFile({ outputRoot, entry, kind: "shadowrocket", suffix: ".list", lines: srLines });
     artifacts.push(makeArtifact({ entry, outputRoot, filePath: srPath, kind: "shadowrocket", label: `${entry.name} Shadowrocket` }));
-  }
-
-  // QuantumultX 格式
-  const qxLines = buildSortedRulesetForQuantumultX(content.split(/\r?\n/));
-  if (qxLines.length) {
-    const qxPath = await writeRulesFile({
-      outputRoot,
-      entry,
-      kind: "quantumultx",
-      suffix: ".list",
-      lines: qxLines,
-      policyName: toSafeFileStem(entry.name),
-    });
-    artifacts.push(makeArtifact({ entry, outputRoot, filePath: qxPath, kind: "quantumultx", label: `${entry.name} QuantumultX` }));
   }
 
   return artifacts;

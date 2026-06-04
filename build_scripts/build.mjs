@@ -54,6 +54,20 @@ if (args.help || args.h) {
 
 const projectRoot = process.cwd();
 
+function formatUpdateTimeShanghai(date = new Date()) {
+  const parts = new Intl.DateTimeFormat("sv-SE", {
+    timeZone: "Asia/Shanghai",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  }).formatToParts(date);
+  const map = new Map(parts.map((part) => [part.type, part.value]));
+  return `${map.get("year")}-${map.get("month")}-${map.get("day")} ${map.get("hour")}:${map.get("minute")}`;
+}
+
 async function inferRepositoryFromGit(projectDir) {
   try {
     const { stdout } = await execFileAsync("git", ["config", "--get", "remote.origin.url"], {
@@ -92,9 +106,15 @@ async function main() {
   }
 
   // 加载之前的 manifest（用于变更检测）
-  const previousManifest = await loadPreviousManifest({
+  let previousManifest = await loadPreviousManifest({
     previousReleaseDir: path.resolve(projectRoot, args.out ?? ".release"),
   });
+  if (!previousManifest) {
+    previousManifest = await loadPreviousManifest({
+      previousRef: "origin/release",
+      cwd: projectRoot,
+    });
+  }
 
   // 执行构建
   const result = await buildRelease({
@@ -123,6 +143,9 @@ async function main() {
       changes,
       repository,
       dryRun: args["telegram-dry-run"] ?? false,
+      previousRef: "origin/release",
+      currentReleaseDir: result.outputRoot,
+      cwd: projectRoot,
     });
   }
 
@@ -130,27 +153,11 @@ async function main() {
   const rulesReadme = renderRulesReadme({
     sourceConfigs: result.sourceConfigs,
     artifacts: result.artifacts,
-    changes,
-    updateTime: formatUpdateTimeShanghai(),
     repository,
+    updateTime: formatUpdateTimeShanghai(),
   });
   await fs.mkdir(path.dirname(rulesReadmePath), { recursive: true });
   await fs.writeFile(rulesReadmePath, `${rulesReadme}\n`);
-}
-
-function formatUpdateTimeShanghai(date = new Date()) {
-  const parts = new Intl.DateTimeFormat("sv-SE", {
-    timeZone: "Asia/Shanghai",
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-    hour12: false,
-  }).formatToParts(date);
-  const map = new Map(parts.map((part) => [part.type, part.value]));
-  return `${map.get("year")}-${map.get("month")}-${map.get("day")} ${map.get("hour")}:${map.get("minute")}:${map.get("second")}`;
 }
 
 main().catch((error) => {

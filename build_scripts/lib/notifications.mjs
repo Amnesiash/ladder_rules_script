@@ -6,7 +6,7 @@ import crypto from "node:crypto";
 
 const execFileAsync = promisify(execFile);
 const MANIFEST_FILE_NAME = "artifacts-manifest.json";
-const PROVIDER_KINDS = new Set(["domain-mrs", "ipcidr-mrs", "classical-yaml", "remaining-yaml", "loon", "shadowrocket", "quantumultx"]);
+const PROVIDER_KINDS = new Set(["domain-mrs", "ipcidr-mrs", "classical-yaml", "remaining-yaml", "loon", "shadowrocket"]);
 const TELEGRAM_MESSAGE_MAX_LENGTH = 4096;
 
 // ==================== Manifest 文件操作 ====================
@@ -191,18 +191,24 @@ function escapeHtml(text) {
     .replace(/"/g, "&quot;");
 }
 
-export function renderTelegramArtifactChangeMessage({
+export async function renderTelegramArtifactChangeMessage({
   changes,
   repository,
   releaseBranch = "release",
   maxItemsPerSection = 25,
   maxMessageLength = TELEGRAM_MESSAGE_MAX_LENGTH,
+  previousReleaseDir,
+  currentReleaseDir,
+  previousRef,
+  cwd = process.cwd(),
 }) {
-  const normalizedChanges = {
-    added: Array.isArray(changes.added) ? changes.added : [],
-    removed: Array.isArray(changes.removed) ? changes.removed : [],
-    updated: Array.isArray(changes.updated) ? changes.updated : [],
-  };
+  const normalizedChanges = await enrichChangesWithRuleDeltas({
+    changes,
+    previousReleaseDir,
+    currentReleaseDir,
+    previousRef,
+    cwd,
+  });
 
   const itemLimits = {
     added: Math.min(normalizedChanges.added.length, maxItemsPerSection),
@@ -258,12 +264,13 @@ function renderChangeSection({ title, artifacts, repository, releaseBranch, maxI
   const lines = [`<b>${title}</b>`];
 
   for (const artifact of items) {
-    const displayName = artifact.label || artifact.relativePath;
+    const displayName = artifact.relativePath || artifact.outputPath || artifact.label || "-";
+    const detail = artifact.ruleDeltaText ? ` ${escapeHtml(artifact.ruleDeltaText)}` : "";
     if (repository && releaseBranch) {
       const url = `https://github.com/${repository}/blob/${releaseBranch}/${artifact.relativePath}`;
-      lines.push(`• <a href="${url}">${escapeHtml(displayName)}</a>`);
+      lines.push(`- <a href="${url}">${escapeHtml(displayName)}</a>${detail}`);
     } else {
-      lines.push(`• ${escapeHtml(displayName)}`);
+      lines.push(`- ${escapeHtml(displayName)}${detail}`);
     }
   }
 
@@ -272,6 +279,153 @@ function renderChangeSection({ title, artifacts, repository, releaseBranch, maxI
   }
 
   return lines.join("\n");
+}
+
+async function enrichChangesWithRuleDeltas({
+  changes,
+  previousReleaseDir,
+  currentReleaseDir,
+  previousRef,
+  cwd = process.cwd(),
+}) {
+  const added = await Promise.all((Array.isArray(changes?.added) ? changes.added : []).map(async (artifact) => ({
+    ...artifact,
+    ruleDeltaText: await formatArtifactRuleDelta({
+      artifact,
+      previousReleaseDir,
+      currentReleaseDir,
+      previousRef,
+      cwd,
+      mode: "added",
+    }),
+  })));
+
+  const removed = await Promise.all((Array.isArray(changes?.removed) ? changes.removed : []).map(async (artifact) => ({
+    ...artifact,
+    ruleDeltaText: await formatArtifactRuleDelta({
+      artifact,
+      previousReleaseDir,
+      currentReleaseDir,
+      previousRef,
+      cwd,
+      mode: "removed",
+    }),
+  })));
+
+  const updated = await Promise.all((Array.isArray(changes?.updated) ? changes.updated : []).map(async (artifact) => ({
+    ...artifact,
+    ruleDeltaText: await formatArtifactRuleDelta({
+      artifact,
+      previousReleaseDir,
+      currentReleaseDir,
+      previousRef,
+      cwd,
+      mode: "updated",
+    }),
+  })));
+
+  return { added, removed, updated };
+}
+
+async function formatArtifactRuleDelta({
+  artifact,
+  previousReleaseDir,
+  currentReleaseDir,
+  previousRef,
+  cwd,
+  mode,
+}) {
+  const relativePath = String(artifact?.relativePath || "");
+  if (!relativePath) return "";
+
+  const currentLines = mode === "removed"
+    ? []
+    : await readArtifactRuleLines({
+      releaseDir: currentReleaseDir,
+      gitRef: null,
+      relativePath,
+      cwd,
+    });
+
+  const previousLines = mode === "added"
+    ? []
+    : await readArtifactRuleLines({
+      releaseDir: previousReleaseDir,
+      gitRef: previousRef,
+      relativePath,
+      cwd,
+    });
+
+  const { added, removed } = diffRuleLines(previousLines, currentLines);
+
+  if (mode === "added") {
+    return added > 0 ? `(+${added})` : "";
+  }
+  if (mode === "removed") {
+    return removed > 0 ? `(-${removed})` : "";
+  }
+  if (added > 0 && removed > 0) return `(+${added}/-${removed})`;
+  if (added > 0) return `(+${added})`;
+  if (removed > 0) return `(-${removed})`;
+  return "";
+}
+
+async function readArtifactRuleLines({ releaseDir, gitRef, relativePath, cwd }) {
+  if (releaseDir) {
+    try {
+      const content = await fs.readFile(path.join(releaseDir, relativePath), "utf8");
+      return extractRuleLines(content);
+    } catch {
+      // fall through to git ref if available
+    }
+  }
+
+  if (gitRef) {
+    try {
+      const { stdout } = await execFileAsync(
+        "git",
+        ["show", `${gitRef}:${relativePath}`],
+        { cwd, maxBuffer: 1024 * 1024 * 8 },
+      );
+      return extractRuleLines(stdout);
+    } catch {
+      return [];
+    }
+  }
+
+  return [];
+}
+
+function extractRuleLines(content) {
+  return String(content ?? "")
+    .split(/\r?\n/u)
+    .map((line) => line.trim())
+    .filter((line) => line.length > 0 && !line.startsWith("#"));
+}
+
+function diffRuleLines(previousLines, currentLines) {
+  const previousCounts = countLineOccurrences(previousLines);
+  const currentCounts = countLineOccurrences(currentLines);
+  const allLines = new Set([...previousCounts.keys(), ...currentCounts.keys()]);
+  let added = 0;
+  let removed = 0;
+
+  for (const line of allLines) {
+    const prev = previousCounts.get(line) || 0;
+    const curr = currentCounts.get(line) || 0;
+    if (curr > prev) added += curr - prev;
+    else if (prev > curr) removed += prev - curr;
+  }
+
+  return { added, removed };
+}
+
+function countLineOccurrences(lines) {
+  const counts = new Map();
+  for (const line of lines) {
+    counts.set(line, (counts.get(line) || 0) + 1);
+  }
+  return counts;
 }
 
 // ==================== Telegram 发送 ====================
@@ -295,7 +449,17 @@ export async function sendTelegramMessage({ botToken, chatId, text, fetchImpl = 
   }
 }
 
-export async function sendTelegramNotification({ botToken, chatId, changes, repository, dryRun = false }) {
+export async function sendTelegramNotification({
+  botToken,
+  chatId,
+  changes,
+  repository,
+  dryRun = false,
+  previousReleaseDir,
+  currentReleaseDir,
+  previousRef,
+  cwd = process.cwd(),
+}) {
   if (!botToken || !chatId) {
     console.log("Telegram notification skipped: missing botToken or chatId");
     return;
@@ -306,7 +470,14 @@ export async function sendTelegramNotification({ botToken, chatId, changes, repo
     return;
   }
 
-  const message = renderTelegramArtifactChangeMessage({ changes, repository });
+  const message = await renderTelegramArtifactChangeMessage({
+    changes,
+    repository,
+    previousReleaseDir,
+    currentReleaseDir,
+    previousRef,
+    cwd,
+  });
 
   if (dryRun) {
     console.log("Telegram notification (dry run):");

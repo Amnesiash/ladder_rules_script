@@ -1,56 +1,79 @@
-# Rules
+# 规则
 
-本目录保存规则输入与构建说明。分流产物以 `release` 分支的 raw 链接为准，来源按 `文件名@作者` 展示。
+本目录自动生成规则文件仓库，包含各类代理软件使用的规则集。
 
-| 分流 | 文件 | 来源 |
-| --- | --- | --- |
-| China | Clash：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/China.txt](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/China.txt)<br>QuantumultX：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/QuantumultX/China.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/QuantumultX/China.list)<br>Loon：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/China.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/China.list)<br>Shadowrocket：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/China.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/China.list) | ChinaDomain.list@ACL4SSR<br>China_Domain.txt@blackmatrix7 |
-| Direct | Clash：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Direct.txt](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Direct.txt)<br>QuantumultX：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/QuantumultX/Direct.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/QuantumultX/Direct.list)<br>Loon：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/Direct.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/Direct.list)<br>Shadowrocket：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/Direct.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/Direct.list) | AddDirect.list@Amnesiash<br>Direct.txt@666OS<br>UnBan.list@ACL4SSR<br>Direct+.list@ConnersHua |
-| Proxy | Clash：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Proxy.txt](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Proxy.txt)<br>QuantumultX：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/QuantumultX/Proxy.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/QuantumultX/Proxy.list)<br>Loon：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/Proxy.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/Proxy.list)<br>Shadowrocket：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/Proxy.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/Proxy.list) | Proxy.txt@666OS<br>AddProxy.list@Amnesiash<br>ProxyGFWlist.list@ACL4SSR<br>Proxy.list@ConnersHua<br>proxy.txt@Loyalsoldier |
-| Streaming | Clash：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Streaming.txt](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Streaming.txt)<br>QuantumultX：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/QuantumultX/Streaming.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/QuantumultX/Streaming.list)<br>Loon：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/Streaming.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/Streaming.list)<br>Shadowrocket：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/Streaming.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/Streaming.list) | !CN.list@ConnersHua<br>ProxyMedia.list@ACL4SSR |
-| AI | Clash：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/AI.txt](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/AI.txt)<br>QuantumultX：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/QuantumultX/AI.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/QuantumultX/AI.list)<br>Loon：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/AI.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/AI.list)<br>Shadowrocket：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/AI.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/AI.list) | AI.txt@666OS<br>AI.list@ConnersHua<br>AI.list@ACL4SSR |
-| Private | Clash：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Private.txt](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Private.txt)<br>QuantumultX：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/QuantumultX/Private.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/QuantumultX/Private.list)<br>Loon：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/Private.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/Private.list)<br>Shadowrocket：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/Private.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/Private.list) | LocalAreaNetwork.list@ACL4SSR<br>private.txt@Loyalsoldier<br>lancidr.txt@Loyalsoldier |
-| WeChat | Clash：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/WeChat.txt](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/WeChat.txt)<br>QuantumultX：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/QuantumultX/WeChat.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/QuantumultX/WeChat.list)<br>Loon：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/WeChat.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/WeChat.list)<br>Shadowrocket：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/WeChat.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/WeChat.list) | WeChat.list@blackmatrix7<br>Wechat.list@ACL4SSR<br>WeChat.list@ConnersHua |
-| StreamingHMT | Clash：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/StreamingHMT.txt](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/StreamingHMT.txt)<br>QuantumultX：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/QuantumultX/StreamingHMT.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/QuantumultX/StreamingHMT.list)<br>Loon：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/StreamingHMT.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/StreamingHMT.list)<br>Shadowrocket：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/StreamingHMT.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/StreamingHMT.list) | StreamingSE.list@ddgksf2013<br>CN.list@ConnersHua |
-| Apple | Clash：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Apple.txt](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Apple.txt)<br>QuantumultX：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/QuantumultX/Apple.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/QuantumultX/Apple.list)<br>Loon：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/Apple.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/Apple.list)<br>Shadowrocket：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/Apple.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/Apple.list) | Apple.list@ACL4SSR |
-| SteamCN | Clash：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/SteamCN.txt](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/SteamCN.txt)<br>QuantumultX：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/QuantumultX/SteamCN.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/QuantumultX/SteamCN.list)<br>Loon：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/SteamCN.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/SteamCN.list)<br>Shadowrocket：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/SteamCN.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/SteamCN.list) | SteamCN.yaml@blackmatrix7 |
-| Telegram | Clash：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Telegram.txt](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Telegram.txt)<br>QuantumultX：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/QuantumultX/Telegram.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/QuantumultX/Telegram.list)<br>Loon：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/Telegram.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/Telegram.list)<br>Shadowrocket：[https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/Telegram.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/Telegram.list) | Telegram.list@blackmatrix7<br>Telegram.list@ACL4SSR<br>Telegram.list@ConnersHua<br>telegramcidr.txt@Loyalsoldier |
+---
 
-## 文件更新 2026-06-03 17:26:51
+## 更新
 
-| 文件 | 变化 |
-| --- | --- |
-| [AI Loon](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/AI.list) | 新增 |
-| [Apple Loon](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/Apple.list) | 新增 |
-| [China Loon](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/China.list) | 新增 |
-| [Direct Loon](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/Direct.list) | 新增 |
-| [Private Loon](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/Private.list) | 新增 |
-| [Proxy Loon](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/Proxy.list) | 新增 |
-| [SteamCN Loon](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/SteamCN.list) | 新增 |
-| [Streaming Loon](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/Streaming.list) | 新增 |
-| [StreamingHMT Loon](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/StreamingHMT.list) | 新增 |
-| [Telegram Loon](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/Telegram.list) | 新增 |
-| [WeChat Loon](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/WeChat.list) | 新增 |
-| [AI QuantumultX](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/QuantumultX/AI.list) | 新增 |
-| [Apple QuantumultX](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/QuantumultX/Apple.list) | 新增 |
-| [China QuantumultX](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/QuantumultX/China.list) | 新增 |
-| [Direct QuantumultX](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/QuantumultX/Direct.list) | 新增 |
-| [Private QuantumultX](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/QuantumultX/Private.list) | 新增 |
-| [Proxy QuantumultX](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/QuantumultX/Proxy.list) | 新增 |
-| [SteamCN QuantumultX](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/QuantumultX/SteamCN.list) | 新增 |
-| [Streaming QuantumultX](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/QuantumultX/Streaming.list) | 新增 |
-| [StreamingHMT QuantumultX](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/QuantumultX/StreamingHMT.list) | 新增 |
-| [Telegram QuantumultX](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/QuantumultX/Telegram.list) | 新增 |
-| [WeChat QuantumultX](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/QuantumultX/WeChat.list) | 新增 |
-| [AI Shadowrocket](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/AI.list) | 新增 |
-| [Apple Shadowrocket](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/Apple.list) | 新增 |
-| [China Shadowrocket](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/China.list) | 新增 |
-| [Direct Shadowrocket](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/Direct.list) | 新增 |
-| [Private Shadowrocket](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/Private.list) | 新增 |
-| [Proxy Shadowrocket](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/Proxy.list) | 新增 |
-| [SteamCN Shadowrocket](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/SteamCN.list) | 新增 |
-| [Streaming Shadowrocket](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/Streaming.list) | 新增 |
-| [StreamingHMT Shadowrocket](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/StreamingHMT.list) | 新增 |
-| [Telegram Shadowrocket](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/Telegram.list) | 新增 |
-| [WeChat Shadowrocket](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/WeChat.list) | 新增 |
+- 规则文件自动更新
+- 更新时间：2026-06-04 02:00
 
+---
+
+## 规则集
+
+| 文件名 | 包含内容 | 用途 | 链接 |
+| :--- | :--- | :--- | :--- |
+| Private | 私有网络 | 内网设备管理、路由器配置、本地服务访问 | <span style="white-space:nowrap">[Clash](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Private.txt) / [Loon](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/Private.list) / [Shadowrocket](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/Private.list)</span> |
+| Direct | 直连域名列表 | 国内可直连的常用服务，避免不必要的代理 | <span style="white-space:nowrap">[Clash](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Direct.txt) / [Loon](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/Direct.list) / [Shadowrocket](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/Direct.list)</span> |
+| WeChat | 微信服务 | 微信相关服务、API 与访问优化 | <span style="white-space:nowrap">[Clash](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/WeChat.txt) / [Loon](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/WeChat.list) / [Shadowrocket](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/WeChat.list)</span> |
+| SteamCN | Steam国内直连 | Steam 国内可直连访问内容 | <span style="white-space:nowrap">[Clash](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/SteamCN.txt) / [Loon](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/SteamCN.list) / [Shadowrocket](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/SteamCN.list)</span> |
+| AI | AI 服务 | ChatGPT、Claude、Gemini 等主流 AI 服务 | <span style="white-space:nowrap">[Clash](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/AI.txt) / [Loon](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/AI.list) / [Shadowrocket](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/AI.list)</span> |
+| Apple | 苹果服务 | 苹果全球服务、iCloud、App Store 国际区 | <span style="white-space:nowrap">[Clash](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Apple.txt) / [Loon](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/Apple.list) / [Shadowrocket](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/Apple.list)</span> |
+| Telegram | Telegram | Telegram 官方及第三方客户端、API 服务 | <span style="white-space:nowrap">[Clash](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Telegram.txt) / [Loon](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/Telegram.list) / [Shadowrocket](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/Telegram.list)</span> |
+| StreamingHMT | 港澳台流媒体 | 哔哩哔哩、爱奇艺等港澳台流媒体 | <span style="white-space:nowrap">[Clash](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/StreamingHMT.txt) / [Loon](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/StreamingHMT.list) / [Shadowrocket](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/StreamingHMT.list)</span> |
+| Streaming | 流媒体 | Netflix、Disney+、HBO 等国际流媒体 | <span style="white-space:nowrap">[Clash](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Streaming.txt) / [Loon](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/Streaming.list) / [Shadowrocket](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/Streaming.list)</span> |
+| Proxy | 代理服务列表 | 国外代理、VPN、科学上网服务 | <span style="white-space:nowrap">[Clash](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Proxy.txt) / [Loon](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/Proxy.list) / [Shadowrocket](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/Proxy.list)</span> |
+| China | 中国网站列表 | 国内网站、服务，确保直连访问 | <span style="white-space:nowrap">[Clash](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/China.txt) / [Loon](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/China.list) / [Shadowrocket](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/China.list)</span> |
+
+## 使用示例
+
+### Clash 使用示例
+
+```yaml
+c: &RuleSet_c {type: http, behavior: classical, format: text, interval: 86400}
+
+rule-providers:
+  # 规则集
+  Private: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Private.txt}
+  Direct: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Direct.txt}
+  WeChat: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/WeChat.txt}
+  SteamCN: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/SteamCN.txt}
+  AI: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/AI.txt}
+  Apple: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Apple.txt}
+  Telegram: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Telegram.txt}
+  StreamingHMT: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/StreamingHMT.txt}
+  Streaming: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Streaming.txt}
+  Proxy: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Proxy.txt}
+  China: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/China.txt}
+
+rules:
+  # 订阅规则
+  - RULE-SET,Private,DIRECT
+  - RULE-SET,Direct,DIRECT
+  - RULE-SET,WeChat,DIRECT
+  - RULE-SET,SteamCN,DIRECT
+  - RULE-SET,AI,AI
+  - RULE-SET,Apple,苹果服务
+  - RULE-SET,Telegram,Telegram
+  - RULE-SET,StreamingHMT,哔哩哔哩
+  - RULE-SET,Streaming,国际媒体
+  - RULE-SET,Proxy,全球加速
+  - RULE-SET,China,DIRECT
+  - GEOIP,CN,DIRECT
+
+  # 兜底规则
+  - MATCH,漏网之鱼
+```
+
+### QX 使用示例
+
+```ini
+[general]
+# 资源解析器，可用于自定义各类远程资源的转换，如节点，规则 filter，重写 rewrite 等，url 地址可远程，可task_local本地/iCloud(Quantumult X/Scripts目录)
+resource_parser_url=https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js
+
+[filter_remote]
+https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/Direct.txt, tag=直连修正, force-policy=direct, img-url=https://github.com/Koolson/Qure/raw/master/IconSet/mini/Direct.png, update-interval=172800, opt-parser=true, enabled=true
+```

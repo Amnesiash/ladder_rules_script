@@ -50,7 +50,7 @@ jobs:
           git config --local user.email "${{ github.actor }}@users.noreply.github.com"
           git config --local user.name "${{ github.actor }}"
           git add Rules/README.md
-          git commit -m "Auto Update Rules README $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')"
+          git commit -m "Auto Update $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')"
           git push --force-with-lease origin HEAD:main
 
       - name: Push Update
@@ -74,7 +74,7 @@ jobs:
             git config --local user.email "${{ github.actor }}@users.noreply.github.com"
             git config --local user.name "${{ github.actor }}"
             git add -A
-            git commit -m "Auto Update Release $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')"
+            git commit -m "Auto Update $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')"
             git push --force-with-lease origin release
           else
             echo "No release changes to commit."
