@@ -7,7 +7,7 @@
 ## 更新
 
 - 规则文件自动更新
-- 更新时间：2026-06-04 02:00
+- 更新时间：2026-06-04 10:01
 
 ---
 
@@ -77,3 +77,4 @@ resource_parser_url=https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/maste
 [filter_remote]
 https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/Direct.txt, tag=直连修正, force-policy=direct, img-url=https://github.com/Koolson/Qure/raw/master/IconSet/mini/Direct.png, update-interval=172800, opt-parser=true, enabled=true
 ```
+
