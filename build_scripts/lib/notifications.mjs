@@ -516,7 +516,7 @@ export async function writeArtifactManifest({ outputRoot, artifacts }) {
   const manifestPath = path.join(outputRoot, MANIFEST_FILE_NAME);
   const manifest = {
     timestamp: new Date().toISOString(),
-    artifacts: artifacts.map((a) => ({
+    artifacts: await Promise.all(artifacts.map(async (a) => ({
       slug: a.slug,
       name: a.name,
       sourceRelativeDir: a.sourceRelativeDir,
@@ -525,8 +525,8 @@ export async function writeArtifactManifest({ outputRoot, artifacts }) {
       kind: a.kind,
       label: a.label,
       behavior: a.behavior,
-      sha256: computeFileSha256(a.filePath),
-    })),
+      sha256: await computeFileSha256(a.filePath),
+    }))),
   };
 
   await fs.writeFile(manifestPath, JSON.stringify(manifest, null, 2));
