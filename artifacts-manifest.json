@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-06T08:29:36.260Z",
+  "timestamp": "2026-06-07T08:50:28.024Z",
   "artifacts": [
     {
       "slug": "China",
@@ -10,7 +10,7 @@
       "kind": "clash",
       "label": "China Clash",
       "behavior": "classical",
-      "sha256": {}
+      "sha256": "5ac6891eba3020f85ca3c24b72c750bbf817e6e5da55ac0e498096c67f752fce"
     },
     {
       "slug": "China",
@@ -21,7 +21,7 @@
       "kind": "loon",
       "label": "China Loon",
       "behavior": "classical",
-      "sha256": {}
+      "sha256": "5ac6891eba3020f85ca3c24b72c750bbf817e6e5da55ac0e498096c67f752fce"
     },
     {
       "slug": "China",
@@ -32,7 +32,7 @@
       "kind": "shadowrocket",
       "label": "China Shadowrocket",
       "behavior": "classical",
-      "sha256": {}
+      "sha256": "5ac6891eba3020f85ca3c24b72c750bbf817e6e5da55ac0e498096c67f752fce"
     },
     {
       "slug": "Direct",
@@ -43,7 +43,7 @@
       "kind": "clash",
       "label": "Direct Clash",
       "behavior": "classical",
-      "sha256": {}
+      "sha256": "1ef531fb580664f1db52d1172cb22c798408ea5e4ff4fb63fc6a9356d9541b23"
     },
     {
       "slug": "Direct",
@@ -54,7 +54,7 @@
       "kind": "loon",
       "label": "Direct Loon",
       "behavior": "classical",
-      "sha256": {}
+      "sha256": "1ef531fb580664f1db52d1172cb22c798408ea5e4ff4fb63fc6a9356d9541b23"
     },
     {
       "slug": "Direct",
@@ -65,7 +65,7 @@
       "kind": "shadowrocket",
       "label": "Direct Shadowrocket",
       "behavior": "classical",
-      "sha256": {}
+      "sha256": "1ef531fb580664f1db52d1172cb22c798408ea5e4ff4fb63fc6a9356d9541b23"
     },
     {
       "slug": "Proxy",
@@ -76,7 +76,7 @@
       "kind": "clash",
       "label": "Proxy Clash",
       "behavior": "classical",
-      "sha256": {}
+      "sha256": "8e4ed8b0ecb79a3c897fb2591408fb5f0f79972139199a277f2790ce178d0e40"
     },
     {
       "slug": "Proxy",
@@ -87,7 +87,7 @@
       "kind": "loon",
       "label": "Proxy Loon",
       "behavior": "classical",
-      "sha256": {}
+      "sha256": "8e4ed8b0ecb79a3c897fb2591408fb5f0f79972139199a277f2790ce178d0e40"
     },
     {
       "slug": "Proxy",
@@ -98,7 +98,7 @@
       "kind": "shadowrocket",
       "label": "Proxy Shadowrocket",
       "behavior": "classical",
-      "sha256": {}
+      "sha256": "8e4ed8b0ecb79a3c897fb2591408fb5f0f79972139199a277f2790ce178d0e40"
     },
     {
       "slug": "Streaming",
@@ -109,7 +109,7 @@
       "kind": "clash",
       "label": "Streaming Clash",
       "behavior": "classical",
-      "sha256": {}
+      "sha256": "7249c4de3864385d3bf12dc0e8feaff1234397a202b8e9c3a826ea679575cb9f"
     },
     {
       "slug": "Streaming",
@@ -120,7 +120,7 @@
       "kind": "loon",
       "label": "Streaming Loon",
       "behavior": "classical",
-      "sha256": {}
+      "sha256": "c16d8cf6f43248aaa41e1eebf10d679a6dae47d48dff746fe958ddd102fa85b9"
     },
     {
       "slug": "Streaming",
@@ -131,7 +131,7 @@
       "kind": "shadowrocket",
       "label": "Streaming Shadowrocket",
       "behavior": "classical",
-      "sha256": {}
+      "sha256": "c16d8cf6f43248aaa41e1eebf10d679a6dae47d48dff746fe958ddd102fa85b9"
     },
     {
       "slug": "AI",
@@ -142,7 +142,7 @@
       "kind": "clash",
       "label": "AI Clash",
       "behavior": "classical",
-      "sha256": {}
+      "sha256": "de188dceb17b0c3488d95a766ca0cc314eda0435a0cb4e17523aa6476419bb7a"
     },
     {
       "slug": "AI",
@@ -153,7 +153,7 @@
       "kind": "loon",
       "label": "AI Loon",
       "behavior": "classical",
-      "sha256": {}
+      "sha256": "de188dceb17b0c3488d95a766ca0cc314eda0435a0cb4e17523aa6476419bb7a"
     },
     {
       "slug": "AI",
@@ -164,7 +164,7 @@
       "kind": "shadowrocket",
       "label": "AI Shadowrocket",
       "behavior": "classical",
-      "sha256": {}
+      "sha256": "de188dceb17b0c3488d95a766ca0cc314eda0435a0cb4e17523aa6476419bb7a"
     },
     {
       "slug": "Private",
@@ -175,7 +175,7 @@
       "kind": "clash",
       "label": "Private Clash",
       "behavior": "classical",
-      "sha256": {}
+      "sha256": "98d204819cd4d2a120a869ecdd2cc65f6481c88c786c740e3e45f271c72be3a3"
     },
     {
       "slug": "Private",
@@ -186,7 +186,7 @@
       "kind": "loon",
       "label": "Private Loon",
       "behavior": "classical",
-      "sha256": {}
+      "sha256": "98d204819cd4d2a120a869ecdd2cc65f6481c88c786c740e3e45f271c72be3a3"
     },
     {
       "slug": "Private",
@@ -197,7 +197,7 @@
       "kind": "shadowrocket",
       "label": "Private Shadowrocket",
       "behavior": "classical",
-      "sha256": {}
+      "sha256": "98d204819cd4d2a120a869ecdd2cc65f6481c88c786c740e3e45f271c72be3a3"
     },
     {
       "slug": "WeChat",
@@ -208,7 +208,7 @@
       "kind": "clash",
       "label": "WeChat Clash",
       "behavior": "classical",
-      "sha256": {}
+      "sha256": "75c2f6c02f89ea3f5310d8abe72df08e934a19661504fb5603d7870948c626b0"
     },
     {
       "slug": "WeChat",
@@ -219,7 +219,7 @@
       "kind": "loon",
       "label": "WeChat Loon",
       "behavior": "classical",
-      "sha256": {}
+      "sha256": "75c2f6c02f89ea3f5310d8abe72df08e934a19661504fb5603d7870948c626b0"
     },
     {
       "slug": "WeChat",
@@ -230,7 +230,7 @@
       "kind": "shadowrocket",
       "label": "WeChat Shadowrocket",
       "behavior": "classical",
-      "sha256": {}
+      "sha256": "75c2f6c02f89ea3f5310d8abe72df08e934a19661504fb5603d7870948c626b0"
     },
     {
       "slug": "StreamingHMT",
@@ -241,7 +241,7 @@
       "kind": "clash",
       "label": "StreamingHMT Clash",
       "behavior": "classical",
-      "sha256": {}
+      "sha256": "db89c5acbc3152900ffd58880185aa3fee90c42b869d743117d62bf7d1fbce82"
     },
     {
       "slug": "StreamingHMT",
@@ -252,7 +252,7 @@
       "kind": "loon",
       "label": "StreamingHMT Loon",
       "behavior": "classical",
-      "sha256": {}
+      "sha256": "db89c5acbc3152900ffd58880185aa3fee90c42b869d743117d62bf7d1fbce82"
     },
     {
       "slug": "StreamingHMT",
@@ -263,7 +263,7 @@
       "kind": "shadowrocket",
       "label": "StreamingHMT Shadowrocket",
       "behavior": "classical",
-      "sha256": {}
+      "sha256": "db89c5acbc3152900ffd58880185aa3fee90c42b869d743117d62bf7d1fbce82"
     },
     {
       "slug": "Apple",
@@ -274,7 +274,7 @@
       "kind": "clash",
       "label": "Apple Clash",
       "behavior": "classical",
-      "sha256": {}
+      "sha256": "297e42464318515d4af070f452b1389116e7d03836032c2ebc5c3b1c2c970887"
     },
     {
       "slug": "Apple",
@@ -285,7 +285,7 @@
       "kind": "loon",
       "label": "Apple Loon",
       "behavior": "classical",
-      "sha256": {}
+      "sha256": "297e42464318515d4af070f452b1389116e7d03836032c2ebc5c3b1c2c970887"
     },
     {
       "slug": "Apple",
@@ -296,7 +296,7 @@
       "kind": "shadowrocket",
       "label": "Apple Shadowrocket",
       "behavior": "classical",
-      "sha256": {}
+      "sha256": "297e42464318515d4af070f452b1389116e7d03836032c2ebc5c3b1c2c970887"
     },
     {
       "slug": "SteamCN",
@@ -307,7 +307,7 @@
       "kind": "clash",
       "label": "SteamCN Clash",
       "behavior": "classical",
-      "sha256": {}
+      "sha256": "7016b2ad1c7b6b130dc33e86116b4fa65713f37fe1024b95021c6741d4abbfdf"
     },
     {
       "slug": "SteamCN",
@@ -318,7 +318,7 @@
       "kind": "loon",
       "label": "SteamCN Loon",
       "behavior": "classical",
-      "sha256": {}
+      "sha256": "7016b2ad1c7b6b130dc33e86116b4fa65713f37fe1024b95021c6741d4abbfdf"
     },
     {
       "slug": "SteamCN",
@@ -329,7 +329,7 @@
       "kind": "shadowrocket",
       "label": "SteamCN Shadowrocket",
       "behavior": "classical",
-      "sha256": {}
+      "sha256": "7016b2ad1c7b6b130dc33e86116b4fa65713f37fe1024b95021c6741d4abbfdf"
     },
     {
       "slug": "Telegram",
@@ -340,7 +340,7 @@
       "kind": "clash",
       "label": "Telegram Clash",
       "behavior": "classical",
-      "sha256": {}
+      "sha256": "0e29c8d66a851c8b651faabaab198ae75a15a3a26ab0fd91e92eaf88e98625aa"
     },
     {
       "slug": "Telegram",
@@ -351,7 +351,7 @@
       "kind": "loon",
       "label": "Telegram Loon",
       "behavior": "classical",
-      "sha256": {}
+      "sha256": "353ba1a25f865eea179fc4ed638d2952a120a1b4bebff8f1e76151dbfef4ad2f"
     },
     {
       "slug": "Telegram",
@@ -362,7 +362,7 @@
       "kind": "shadowrocket",
       "label": "Telegram Shadowrocket",
       "behavior": "classical",
-      "sha256": {}
+      "sha256": "353ba1a25f865eea179fc4ed638d2952a120a1b4bebff8f1e76151dbfef4ad2f"
     }
   ]
 }
