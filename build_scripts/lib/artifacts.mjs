@@ -1,9 +1,13 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import { execFile } from "node:child_process";
+import { promisify } from "node:util";
 import { loadAllSources, toSafeFileStem } from "./config.mjs";
 import { buildSortedRulesetForClash, buildSortedRulesetForLoon, buildSortedRulesetForShadowrocket } from "./rules.mjs";
 import { fetchWithFallback, sourceConfigsFromSourceTxt } from "./subscriptions.mjs";
 import { makeArtifact, writeArtifactManifest } from "./notifications.mjs";
+
+const execFileAsync = promisify(execFile);
 
 export class BuildReleaseError extends Error {
   constructor(message, context = {}) {
@@ -164,11 +168,46 @@ async function writeRulesFile({ outputRoot, entry, kind, suffix, lines, policyNa
   const outPath = path.join(outputRoot, kindFolderName(kind), `${name}${suffix}`);
   const updateTime = formatUpdateTimeShanghai();
   const bodyLines = policyName ? lines.map((line) => `${line},${policyName}`) : lines;
-  const header = includeHeader ? buildHeaderBlock({ name: entry.name, updateTime, bodyLines }) : "";
 
+  // 规则体未变化时，直接复用上次 release 的文件内容，
+  // 避免仅因 header 时间戳不同而产生 sha256 差异和误报通知
+  if (includeHeader) {
+    const relativePath = path.relative(outputRoot, outPath).split(path.sep).join("/");
+    const previousContent = await readPreviousReleaseFile(relativePath, outputRoot);
+    if (previousContent !== null) {
+      const previousBody = extractBodyLines(previousContent);
+      const newBody = bodyLines.join("\n");
+      if (previousBody === newBody) {
+        await fs.mkdir(path.dirname(outPath), { recursive: true });
+        await fs.writeFile(outPath, previousContent);
+        return outPath;
+      }
+    }
+  }
+
+  const header = includeHeader ? buildHeaderBlock({ name: entry.name, updateTime, bodyLines }) : "";
   await fs.mkdir(path.dirname(outPath), { recursive: true });
   await fs.writeFile(outPath, header + bodyLines.join("\n") + "\n");
   return outPath;
+}
+
+async function readPreviousReleaseFile(relativePath, cwd) {
+  try {
+    const { stdout } = await execFileAsync("git", ["show", `origin/release:${relativePath}`], {
+      cwd,
+      maxBuffer: 1024 * 1024 * 8,
+    });
+    return stdout;
+  } catch {
+    return null;
+  }
+}
+
+function extractBodyLines(content) {
+  return content
+    .split(/\r?\n/u)
+    .filter((line) => !line.startsWith("#"))
+    .join("\n");
 }
 
 function kindFolderName(kind) {
