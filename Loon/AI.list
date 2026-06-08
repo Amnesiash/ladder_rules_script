@@ -1,8 +1,8 @@
 # NAME: AI
-# UPDATE: 2026-06-07 16:50:27
-# TOTAL: 236
+# UPDATE: 2026-06-08 18:28:50
+# TOTAL: 237
 # DOMAIN: 31
-# DOMAIN-SUFFIX: 186
+# DOMAIN-SUFFIX: 187
 # DOMAIN-KEYWORD: 14
 # IP-CIDR: 4
 # IP-ASN: 1
@@ -76,6 +76,7 @@ DOMAIN-SUFFIX,clau.de
 DOMAIN-SUFFIX,claude.ai
 DOMAIN-SUFFIX,claude.com
 DOMAIN-SUFFIX,claudemcpclient.com
+DOMAIN-SUFFIX,claudemcpcontent.com
 DOMAIN-SUFFIX,claudeusercontent.com
 DOMAIN-SUFFIX,clawhub.ai
 DOMAIN-SUFFIX,client-api.arkoselabs.com
