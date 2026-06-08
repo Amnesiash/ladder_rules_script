@@ -29,13 +29,11 @@ export async function buildRelease({
   fetchImpl = fetch,
   warn = (message) => console.warn(message),
 } = {}) {
-  // 解析路径
   projectRoot = path.resolve(projectRoot);
   sourceRoot = path.resolve(sourceRoot);
   outputRoot = path.resolve(outputRoot);
   workRoot = path.resolve(workRoot);
 
-  // 清理并创建目录
   await fs.rm(outputRoot, { recursive: true, force: true });
   await fs.rm(workRoot, { recursive: true, force: true });
   await fs.mkdir(outputRoot, { recursive: true });
@@ -43,15 +41,12 @@ export async function buildRelease({
   await fs.mkdir(path.join(outputRoot, "QuantumultX"), { recursive: true });
   await fs.writeFile(path.join(outputRoot, "QuantumultX", ".gitkeep"), "");
 
-  // 加载源配置
   const sourceTxtConfigs = await sourceConfigsFromSourceTxt({ projectRoot, sourceRoot });
   const sourceConfigs = sourceTxtConfigs.length > 0 ? sourceTxtConfigs : await loadAllSources({ projectRoot, sourceRoot });
-  
+
   const allArtifacts = [];
 
-  // 处理每个源配置
   for (const sourceConfig of sourceConfigs) {
-    // 按名称分组处理
     const groups = new Map();
     for (const file of sourceConfig.files) {
       const key = file.name || file.slug;
@@ -81,7 +76,6 @@ export async function buildRelease({
     }
   }
 
-  // 写入 manifest
   const manifestPath = await writeArtifactManifest({ outputRoot, artifacts: allArtifacts });
   allArtifacts.push(
     makeArtifact({
@@ -97,12 +91,9 @@ export async function buildRelease({
 }
 
 async function processEntry({ entry, outputRoot, workRoot, fetchImpl, warn }) {
-  // 获取规则内容
   const content = await fetchEntryContent(entry, fetchImpl);
-
   const artifacts = [];
 
-  // Clash 格式 (排序后的 text)
   const clashLines = buildSortedRulesetForClash(content.split(/\r?\n/));
   if (clashLines.length) {
     const clashPath = await writeRulesFile({
@@ -115,14 +106,12 @@ async function processEntry({ entry, outputRoot, workRoot, fetchImpl, warn }) {
     artifacts.push(makeArtifact({ entry, outputRoot, filePath: clashPath, kind: "clash", label: `${entry.name} Clash` }));
   }
 
-  // Loon 格式
   const loonLines = buildSortedRulesetForLoon(content.split(/\r?\n/));
   if (loonLines.length) {
     const loonPath = await writeRulesFile({ outputRoot, entry, kind: "loon", suffix: ".list", lines: loonLines });
     artifacts.push(makeArtifact({ entry, outputRoot, filePath: loonPath, kind: "loon", label: `${entry.name} Loon` }));
   }
 
-  // Shadowrocket 格式
   const srLines = buildSortedRulesetForShadowrocket(content.split(/\r?\n/));
   if (srLines.length) {
     const srPath = await writeRulesFile({ outputRoot, entry, kind: "shadowrocket", suffix: ".list", lines: srLines });
@@ -166,11 +155,10 @@ async function fetchEntryContent(entry, fetchImpl) {
 async function writeRulesFile({ outputRoot, entry, kind, suffix, lines, policyName, includeHeader = true }) {
   const name = toSafeFileStem(entry.name);
   const outPath = path.join(outputRoot, kindFolderName(kind), `${name}${suffix}`);
-  const updateTime = formatUpdateTimeShanghai();
   const bodyLines = policyName ? lines.map((line) => `${line},${policyName}`) : lines;
 
-  // 规则体未变化时，直接复用上次 release 的文件内容，
-  // 避免仅因 header 时间戳不同而产生 sha256 差异和误报通知
+  // 规则体未变化时，复用上次 release 的完整文件（含旧时间戳），
+  // 避免仅 header 时间不同导致 sha256 变化和误报通知
   if (includeHeader) {
     const relativePath = path.relative(outputRoot, outPath).split(path.sep).join("/");
     const previousContent = await readPreviousReleaseFile(relativePath, outputRoot);
@@ -185,6 +173,7 @@ async function writeRulesFile({ outputRoot, entry, kind, suffix, lines, policyNa
     }
   }
 
+  const updateTime = formatUpdateTimeShanghai();
   const header = includeHeader ? buildHeaderBlock({ name: entry.name, updateTime, bodyLines }) : "";
   await fs.mkdir(path.dirname(outPath), { recursive: true });
   await fs.writeFile(outPath, header + bodyLines.join("\n") + "\n");
@@ -206,7 +195,7 @@ async function readPreviousReleaseFile(relativePath, cwd) {
 function extractBodyLines(content) {
   return content
     .split(/\r?\n/u)
-    .filter((line) => !line.startsWith("#"))
+    .filter((line) => line.length > 0 && !line.startsWith("#"))
     .join("\n");
 }
 
