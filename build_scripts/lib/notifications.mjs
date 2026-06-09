@@ -6,7 +6,7 @@ import crypto from "node:crypto";
 
 const execFileAsync = promisify(execFile);
 const MANIFEST_FILE_NAME = "artifacts-manifest.json";
-const PROVIDER_KINDS = new Set(["domain-mrs", "ipcidr-mrs", "classical-yaml", "remaining-yaml", "loon", "shadowrocket"]);
+const PROVIDER_KINDS = new Set(["domain-mrs", "ipcidr-mrs", "classical-yaml", "remaining-yaml", "clash", "loon", "shadowrocket"]);
 const TELEGRAM_MESSAGE_MAX_LENGTH = 4096;
 
 // ==================== Manifest 文件操作 ====================
@@ -133,6 +133,13 @@ function providerArtifactFromPath(absolutePath) {
   }
   if (fileName.endsWith(".yaml")) {
     return { relativePath, fileName, sourceRelativeDir, kind: "classical-yaml", sha256: null };
+  }
+  if (fileName.endsWith(".txt")) {
+    // Clash 规则文件使用 .txt 后缀，存放在 Clash/ 目录下
+    if (relativePath.startsWith("Clash/")) {
+      return { relativePath, fileName, sourceRelativeDir, kind: "clash", sha256: null };
+    }
+    return null;
   }
   if (fileName.endsWith(".list")) {
     let kind = "loon";
