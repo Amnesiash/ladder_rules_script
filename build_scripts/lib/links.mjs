@@ -105,9 +105,9 @@ export function renderRulesReadme({
     "",
     "## 规则集",
     "",
-    "| 文件名 | 包含内容 | 用途 | 链接 |",
-    "| :--- | :--- | :--- | :--- |",
-    rows.length ? rows.join("\n") : "| - | - | - | - |",
+    "| 文件名 | 包含内容 | 用途 |",
+    "| --- | --- | --- |",
+    rows.length ? rows.join("\n") : "| - | - | - |",
     "",
     "## 使用示例",
     "",
@@ -253,33 +253,23 @@ function renderRulesRows({ sourceConfigs, artifacts, repository, releaseBranch }
       artifactByKind.set(artifact.kind, artifact);
     }
 
-    const rowName = escapeTableCell(sourceConfig.sourceName);
-    const fileCell = [
-      renderArtifactLink(artifactByKind.get("clash"), repository, releaseBranch, "Rules"),
-    ].join(" / ");
+    const artifact = artifactByKind.get("clash");
+    const fileName = `${sourceConfig.sourceName}.list`;
+    const fileCell = artifact
+      ? `[\`${fileName}\`](${githubRawURL({ repository, branch: releaseBranch, filePath: `Rules/${fileName}` })})`
+      : `\`${fileName}\``;
     const info = RULE_ROW_INFO[sourceConfig.sourceName] || DEFAULT_RULE_ROW_INFO;
 
-    rows.push(`| ${rowName} | ${escapeTableCell(info.content)} | ${escapeTableCell(info.purpose)} | ${nowrapTableCell(fileCell)} |`);
+    rows.push(`| ${fileCell} | ${escapeTableCell(info.content)} | ${escapeTableCell(info.purpose)} |`);
   }
 
   return rows;
-}
-
-function renderArtifactLink(artifact, repository, releaseBranch, label) {
-  if (!artifact) return "-";
-  const rawPath = artifact.relativePath || artifact.outputPath;
-  const rawUrl = githubRawURL({ repository, branch: releaseBranch, filePath: rawPath });
-  return `[${label}](${rawUrl})`;
 }
 
 function escapeTableCell(value) {
   return String(value ?? "")
     .replace(/\|/g, "\\|")
     .replace(/\r?\n/g, "<br>");
-}
-
-function nowrapTableCell(value) {
-  return `<span style="white-space:nowrap">${String(value ?? "")}</span>`;
 }
 
 const DEFAULT_RULE_ROW_INFO = {

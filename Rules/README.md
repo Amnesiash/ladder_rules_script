@@ -13,10 +13,8 @@
 
 ## 规则集
 
-<div align="center">
-
 | 文件名 | 包含内容 | 用途 |
-| :--- | :--- | :--- |
+| --- | --- | --- |
 | [`Private.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Private.list) | 私有网络 | 内网设备管理、路由器配置、本地服务访问 |
 | [`Direct.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Direct.list) | 直连域名列表 | 国内可直连的常用服务，避免不必要的代理 |
 | [`WeChat.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/WeChat.list) | 微信服务 | 微信相关服务、API 与访问优化 |
@@ -28,8 +26,6 @@
 | [`Streaming.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Streaming.list) | 流媒体 | Netflix、Disney+、HBO 等国际流媒体 |
 | [`Proxy.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Proxy.list) | 代理服务列表 | 国外代理、VPN、科学上网服务 |
 | [`China.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/China.list) | 中国网站列表 | 国内网站、服务，确保直连访问 |
-
-</div>
 
 ## 使用示例
 
