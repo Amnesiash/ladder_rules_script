@@ -47,12 +47,12 @@ export async function loadManifestFromGitRef({ ref, cwd = process.cwd() }) {
   try {
     const { stdout } = await execFileAsync(
       "git",
-      ["show", `${ref}:${MANIFEST_FILE_NAME}`],
+      ["show", `${ref}:build_scripts/${MANIFEST_FILE_NAME}`],
       { cwd, maxBuffer: 1024 * 1024 * 8 },
     );
-    return parseManifest(stdout, `${ref}:${MANIFEST_FILE_NAME}`);
+    return parseManifest(stdout, `${ref}:build_scripts/${MANIFEST_FILE_NAME}`);
   } catch {
-    // Older release branches do not have a manifest
+    // Older branches do not have a manifest
   }
 
   try {
@@ -120,7 +120,7 @@ function manifestFromReleasePaths(paths) {
 
 function providerArtifactFromPath(absolutePath) {
   const relativePath = path.relative(process.cwd(), absolutePath).split(path.sep).join("/");
-  if (relativePath === MANIFEST_FILE_NAME || relativePath.endsWith("/README.md")) {
+  if (relativePath === MANIFEST_FILE_NAME || relativePath === `build_scripts/${MANIFEST_FILE_NAME}` || relativePath.endsWith("/README.md")) {
     return null;
   }
 

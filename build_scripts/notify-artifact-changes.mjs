@@ -45,7 +45,7 @@ try {
   }
 
   const currentManifest = await loadManifestFile(
-    path.resolve(projectRoot, args.current ?? ".release/artifacts-manifest.json"),
+    path.resolve(projectRoot, args.current ?? "build_scripts/artifacts-manifest.json"),
   );
   const previousManifest = await loadPreviousManifest({
     previousManifestPath: args["previous-manifest"]
@@ -77,7 +77,7 @@ try {
     previousReleaseDir: args["previous-release-dir"]
       ? path.resolve(projectRoot, args["previous-release-dir"])
       : undefined,
-    currentReleaseDir: path.dirname(path.resolve(projectRoot, args.current ?? ".release/artifacts-manifest.json")),
+    currentReleaseDir: path.dirname(path.resolve(projectRoot, args.current ?? "build_scripts/artifacts-manifest.json")),
     previousRef: args["previous-ref"] === "false"
       ? undefined
       : (typeof args["previous-ref"] === "string" ? args["previous-ref"] : "origin/main"),

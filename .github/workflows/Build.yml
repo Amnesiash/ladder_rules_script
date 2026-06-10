@@ -40,45 +40,18 @@ jobs:
         run: |
           bun run build:release:clean
 
-      - name: Update Rules README on main
+      - name: Commit Rules changes to main
         run: |
-          if git diff --quiet -- Rules/README.md; then
-            echo "Rules/README.md is unchanged."
+          if git diff --quiet -- Rules/; then
+            echo "No Rules/ changes to commit."
             exit 0
           fi
 
           git config --local user.email "${{ github.actor }}@users.noreply.github.com"
           git config --local user.name "${{ github.actor }}"
-          git add Rules/README.md
+          git add Rules/
           git commit -m "Auto Update $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')"
           git push --force-with-lease origin HEAD:main
-
-      - name: Push Update
-        run: |
-          if [[ ! -d ".release" ]]; then
-            echo "Missing .release/ artifacts directory; aborting."
-            exit 1
-          fi
-
-          release_worktree="$GITHUB_WORKSPACE/../ladder-release"
-          release_source="$GITHUB_WORKSPACE/.release"
-          rm -rf "$release_worktree"
-          git fetch origin release || true
-          git worktree add -B release "$release_worktree" origin/release
-
-          cd "$release_worktree"
-          find . -mindepth 1 -maxdepth 1 ! -name ".git" -exec rm -rf {} +
-          cp -a "$release_source"/. .
-
-          if [[ -n $(git status -s) ]]; then
-            git config --local user.email "${{ github.actor }}@users.noreply.github.com"
-            git config --local user.name "${{ github.actor }}"
-            git add -A
-            git commit -m "Auto Update $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')"
-            git push --force-with-lease origin release
-          else
-            echo "No release changes to commit."
-          fi
 
       - name: Cleanup Workflow
         uses: Mattraks/delete-workflow-runs@main

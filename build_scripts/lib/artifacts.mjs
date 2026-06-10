@@ -61,11 +61,13 @@ export async function buildRelease({
     }
   }
 
-  const manifestPath = await writeArtifactManifest({ outputRoot, artifacts: allArtifacts });
+  const manifestDir = path.join(projectRoot, "build_scripts");
+  await fs.mkdir(manifestDir, { recursive: true });
+  const manifestPath = await writeArtifactManifest({ outputRoot: manifestDir, artifacts: allArtifacts });
   allArtifacts.push(
     makeArtifact({
       entry: { slug: "artifacts-manifest", name: "artifacts-manifest", sourceRelativeDir: "" },
-      outputRoot,
+      outputRoot: manifestDir,
       filePath: manifestPath,
       kind: "manifest",
       label: "release artifact manifest",

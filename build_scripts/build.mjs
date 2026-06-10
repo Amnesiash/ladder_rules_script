@@ -107,7 +107,7 @@ async function main() {
 
   // 加载之前的 manifest（用于变更检测）
   let previousManifest = await loadPreviousManifest({
-    previousReleaseDir: path.resolve(projectRoot, args.out ?? "Rules"),
+    previousReleaseDir: path.resolve(projectRoot, "build_scripts"),
   });
   if (!previousManifest) {
     previousManifest = await loadPreviousManifest({
