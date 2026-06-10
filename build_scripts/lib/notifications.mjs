@@ -6,7 +6,7 @@ import crypto from "node:crypto";
 
 const execFileAsync = promisify(execFile);
 const MANIFEST_FILE_NAME = "artifacts-manifest.json";
-const PROVIDER_KINDS = new Set(["domain-mrs", "ipcidr-mrs", "classical-yaml", "remaining-yaml", "clash", "loon", "shadowrocket"]);
+const PROVIDER_KINDS = new Set(["domain-mrs", "ipcidr-mrs", "classical-yaml", "remaining-yaml", "clash"]);
 const TELEGRAM_MESSAGE_MAX_LENGTH = 4096;
 
 // ==================== Manifest 文件操作 ====================
@@ -19,7 +19,7 @@ export async function loadManifestFile(filePath) {
 export async function loadPreviousManifest({
   previousManifestPath,
   previousReleaseDir,
-  previousRef = "origin/release",
+  previousRef = "origin/main",
   cwd = process.cwd(),
 } = {}) {
   if (previousManifestPath) {
@@ -142,10 +142,11 @@ function providerArtifactFromPath(absolutePath) {
     return null;
   }
   if (fileName.endsWith(".list")) {
-    let kind = "loon";
-    if (relativePath.includes("Shadowrocket")) kind = "shadowrocket";
-    else if (relativePath.includes("QuantumultX")) kind = "quantumultx";
-    return { relativePath, fileName, sourceRelativeDir, kind, sha256: null };
+    // 规则文件使用 .list 后缀，存放在 Rules/ 目录下
+    if (relativePath.startsWith("Rules/")) {
+      return { relativePath, fileName, sourceRelativeDir, kind: "clash", sha256: null };
+    }
+    return null;
   }
   return null;
 }
@@ -201,7 +202,7 @@ function escapeHtml(text) {
 export async function renderTelegramArtifactChangeMessage({
   changes,
   repository,
-  releaseBranch = "release",
+  releaseBranch = "main",
   maxItemsPerSection = 25,
   maxMessageLength = TELEGRAM_MESSAGE_MAX_LENGTH,
   previousReleaseDir,

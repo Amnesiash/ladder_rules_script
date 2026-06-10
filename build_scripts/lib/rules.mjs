@@ -416,20 +416,6 @@ export function buildSortedRulesetForClash(lines) {
   });
 }
 
-// ==================== Loon 规则处理 ====================
-
-export function buildSortedRulesetForLoon(lines) {
-  const normalized = normalizeRulesetLines(lines);
-  return sortAndDedupRulesetLines(normalized, sortBucket).filter((line) => normalizeRuleType(line) !== "PROCESS-NAME");
-}
-
-// ==================== Shadowrocket 规则处理 ====================
-
-export function buildSortedRulesetForShadowrocket(lines) {
-  const normalized = normalizeRulesetLines(lines);
-  return sortAndDedupRulesetLines(normalized, sortBucket).filter((line) => normalizeRuleType(line) !== "PROCESS-NAME");
-}
-
 // ==================== QuantumultX 规则处理 ====================
 
 function transformQxLine(line) {

@@ -1,5 +1,5 @@
 const DEFAULT_MAIN_BRANCH = "main";
-const DEFAULT_RELEASE_BRANCH = "release";
+const DEFAULT_RELEASE_BRANCH = "main";
 
 export class LinkGenerationError extends Error {
   constructor(message) {
@@ -157,7 +157,7 @@ function renderRulesClashExample({ sourceConfigs, repository, releaseBranch }) {
     const rawUrl = githubRawURL({
       repository,
       branch: releaseBranch,
-      filePath: `Clash/${sourceConfig.sourceName}.txt`,
+      filePath: `Rules/${sourceConfig.sourceName}.list`,
     });
     lines.push(`  ${sourceConfig.sourceName}: {<<: *RuleSet_c, url: ${rawUrl}}`);
   }
@@ -185,7 +185,7 @@ function renderRulesQxExample() {
     "resource_parser_url=https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js",
     "",
     "[filter_remote]",
-    "https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/Direct.txt, tag=直连修正, force-policy=direct, img-url=https://github.com/Koolson/Qure/raw/master/IconSet/mini/Direct.png, update-interval=172800, opt-parser=true, enabled=true",
+    "https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Direct.list, tag=直连修正, force-policy=direct, img-url=https://github.com/Koolson/Qure/raw/master/IconSet/mini/Direct.png, update-interval=172800, opt-parser=true, enabled=true",
     "```",
   ].join("\n");
 }
@@ -255,9 +255,7 @@ function renderRulesRows({ sourceConfigs, artifacts, repository, releaseBranch }
 
     const rowName = escapeTableCell(sourceConfig.sourceName);
     const fileCell = [
-      renderArtifactLink(artifactByKind.get("clash"), repository, releaseBranch, "Clash"),
-      renderArtifactLink(artifactByKind.get("loon"), repository, releaseBranch, "Loon"),
-      renderArtifactLink(artifactByKind.get("shadowrocket"), repository, releaseBranch, "Shadowrocket"),
+      renderArtifactLink(artifactByKind.get("clash"), repository, releaseBranch, "Rules"),
     ].join(" / ");
     const info = RULE_ROW_INFO[sourceConfig.sourceName] || DEFAULT_RULE_ROW_INFO;
 

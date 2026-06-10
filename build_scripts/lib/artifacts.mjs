@@ -3,7 +3,7 @@ import path from "node:path";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import { loadAllSources, toSafeFileStem } from "./config.mjs";
-import { buildSortedRulesetForClash, buildSortedRulesetForLoon, buildSortedRulesetForShadowrocket } from "./rules.mjs";
+import { buildSortedRulesetForClash } from "./rules.mjs";
 import { fetchWithFallback, sourceConfigsFromSourceTxt } from "./subscriptions.mjs";
 import { makeArtifact, writeArtifactManifest } from "./notifications.mjs";
 
@@ -21,25 +21,16 @@ export class BuildReleaseError extends Error {
 export async function buildRelease({
   projectRoot = process.cwd(),
   sourceRoot = path.join(projectRoot, "source"),
-  outputRoot = path.join(projectRoot, ".release"),
-  workRoot = path.join(projectRoot, ".release-work"),
+  outputRoot = path.join(projectRoot, "Rules"),
   repository = process.env.GITHUB_REPOSITORY,
-  mainBranch = "main",
-  releaseBranch = "release",
   fetchImpl = fetch,
   warn = (message) => console.warn(message),
 } = {}) {
   projectRoot = path.resolve(projectRoot);
   sourceRoot = path.resolve(sourceRoot);
   outputRoot = path.resolve(outputRoot);
-  workRoot = path.resolve(workRoot);
 
-  await fs.rm(outputRoot, { recursive: true, force: true });
-  await fs.rm(workRoot, { recursive: true, force: true });
   await fs.mkdir(outputRoot, { recursive: true });
-  await fs.mkdir(workRoot, { recursive: true });
-  await fs.mkdir(path.join(outputRoot, "QuantumultX"), { recursive: true });
-  await fs.writeFile(path.join(outputRoot, "QuantumultX", ".gitkeep"), "");
 
   const sourceTxtConfigs = await sourceConfigsFromSourceTxt({ projectRoot, sourceRoot });
   const sourceConfigs = sourceTxtConfigs.length > 0 ? sourceTxtConfigs : await loadAllSources({ projectRoot, sourceRoot });
@@ -57,13 +48,7 @@ export async function buildRelease({
     for (const group of groups.values()) {
       for (const entry of group.entries) {
         try {
-          const entryArtifacts = await processEntry({
-            entry,
-            outputRoot,
-            workRoot,
-            fetchImpl,
-            warn,
-          });
+          const entryArtifacts = await processEntry({ entry, outputRoot, fetchImpl });
           allArtifacts.push(...entryArtifacts);
         } catch (error) {
           if (error instanceof BuildReleaseError) {
@@ -90,32 +75,14 @@ export async function buildRelease({
   return { outputRoot, artifacts: allArtifacts, sourceConfigs };
 }
 
-async function processEntry({ entry, outputRoot, workRoot, fetchImpl, warn }) {
+async function processEntry({ entry, outputRoot, fetchImpl }) {
   const content = await fetchEntryContent(entry, fetchImpl);
   const artifacts = [];
 
   const clashLines = buildSortedRulesetForClash(content.split(/\r?\n/));
   if (clashLines.length) {
-    const clashPath = await writeRulesFile({
-      outputRoot,
-      entry,
-      kind: "clash",
-      suffix: ".txt",
-      lines: clashLines,
-    });
-    artifacts.push(makeArtifact({ entry, outputRoot, filePath: clashPath, kind: "clash", label: `${entry.name} Clash` }));
-  }
-
-  const loonLines = buildSortedRulesetForLoon(content.split(/\r?\n/));
-  if (loonLines.length) {
-    const loonPath = await writeRulesFile({ outputRoot, entry, kind: "loon", suffix: ".list", lines: loonLines });
-    artifacts.push(makeArtifact({ entry, outputRoot, filePath: loonPath, kind: "loon", label: `${entry.name} Loon` }));
-  }
-
-  const srLines = buildSortedRulesetForShadowrocket(content.split(/\r?\n/));
-  if (srLines.length) {
-    const srPath = await writeRulesFile({ outputRoot, entry, kind: "shadowrocket", suffix: ".list", lines: srLines });
-    artifacts.push(makeArtifact({ entry, outputRoot, filePath: srPath, kind: "shadowrocket", label: `${entry.name} Shadowrocket` }));
+    const rulesPath = await writeRulesFile({ outputRoot, entry, lines: clashLines });
+    artifacts.push(makeArtifact({ entry, outputRoot, filePath: rulesPath, kind: "clash", label: `${entry.name} Rules` }));
   }
 
   return artifacts;
@@ -152,37 +119,32 @@ async function fetchEntryContent(entry, fetchImpl) {
   throw new BuildReleaseError(`unsupported entry type: ${entry.type}`, { entryName: entry.name });
 }
 
-async function writeRulesFile({ outputRoot, entry, kind, suffix, lines, policyName, includeHeader = true }) {
+async function writeRulesFile({ outputRoot, entry, lines }) {
   const name = toSafeFileStem(entry.name);
-  const outPath = path.join(outputRoot, kindFolderName(kind), `${name}${suffix}`);
-  const bodyLines = policyName ? lines.map((line) => `${line},${policyName}`) : lines;
+  const outPath = path.join(outputRoot, `${name}.list`);
 
-  // 规则体未变化时，复用上次 release 的完整文件（含旧时间戳），
+  // 规则体未变化时，复用上次 main 分支的文件（含旧时间戳），
   // 避免仅 header 时间不同导致 sha256 变化和误报通知
-  if (includeHeader) {
-    const relativePath = path.relative(outputRoot, outPath).split(path.sep).join("/");
-    const previousContent = await readPreviousReleaseFile(relativePath, outputRoot);
-    if (previousContent !== null) {
-      const previousBody = extractBodyLines(previousContent);
-      const newBody = bodyLines.join("\n");
-      if (previousBody === newBody) {
-        await fs.mkdir(path.dirname(outPath), { recursive: true });
-        await fs.writeFile(outPath, previousContent);
-        return outPath;
-      }
+  const relativePath = path.relative(outputRoot, outPath).split(path.sep).join("/");
+  const previousContent = await readPreviousMainFile(relativePath, outputRoot);
+  if (previousContent !== null) {
+    const previousBody = extractBodyLines(previousContent);
+    const newBody = lines.join("\n");
+    if (previousBody === newBody) {
+      await fs.writeFile(outPath, previousContent);
+      return outPath;
     }
   }
 
   const updateTime = formatUpdateTimeShanghai();
-  const header = includeHeader ? buildHeaderBlock({ name: entry.name, updateTime, bodyLines }) : "";
-  await fs.mkdir(path.dirname(outPath), { recursive: true });
-  await fs.writeFile(outPath, header + bodyLines.join("\n") + "\n");
+  const header = buildHeaderBlock({ name: entry.name, updateTime, bodyLines: lines });
+  await fs.writeFile(outPath, header + lines.join("\n") + "\n");
   return outPath;
 }
 
-async function readPreviousReleaseFile(relativePath, cwd) {
+async function readPreviousMainFile(relativePath, cwd) {
   try {
-    const { stdout } = await execFileAsync("git", ["show", `origin/release:${relativePath}`], {
+    const { stdout } = await execFileAsync("git", ["show", `origin/main:${relativePath}`], {
       cwd,
       maxBuffer: 1024 * 1024 * 8,
     });
@@ -197,21 +159,6 @@ function extractBodyLines(content) {
     .split(/\r?\n/u)
     .filter((line) => line.length > 0 && !line.startsWith("#"))
     .join("\n");
-}
-
-function kindFolderName(kind) {
-  switch (kind) {
-    case "clash":
-      return "Clash";
-    case "loon":
-      return "Loon";
-    case "shadowrocket":
-      return "Shadowrocket";
-    case "quantumultx":
-      return "QuantumultX";
-    default:
-      return kind;
-  }
 }
 
 function buildHeaderBlock({ name, updateTime, bodyLines }) {

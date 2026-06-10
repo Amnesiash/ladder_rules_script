@@ -13,19 +13,72 @@
 
 ## 规则集
 
-| 文件名 | 包含内容 | 用途 | 链接 |
-| :--- | :--- | :--- | :--- |
-| Private | 私有网络 | 内网设备管理、路由器配置、本地服务访问 | <span style="white-space:nowrap">[Clash](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Private.txt) / [Loon](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/Private.list) / [Shadowrocket](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/Private.list)</span> |
-| Direct | 直连域名列表 | 国内可直连的常用服务，避免不必要的代理 | <span style="white-space:nowrap">[Clash](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Direct.txt) / [Loon](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/Direct.list) / [Shadowrocket](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/Direct.list)</span> |
-| WeChat | 微信服务 | 微信相关服务、API 与访问优化 | <span style="white-space:nowrap">[Clash](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/WeChat.txt) / [Loon](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/WeChat.list) / [Shadowrocket](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/WeChat.list)</span> |
-| SteamCN | Steam国内直连 | Steam 国内可直连访问内容 | <span style="white-space:nowrap">[Clash](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/SteamCN.txt) / [Loon](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/SteamCN.list) / [Shadowrocket](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/SteamCN.list)</span> |
-| AI | AI 服务 | ChatGPT、Claude、Gemini 等主流 AI 服务 | <span style="white-space:nowrap">[Clash](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/AI.txt) / [Loon](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/AI.list) / [Shadowrocket](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/AI.list)</span> |
-| Apple | 苹果服务 | 苹果全球服务、iCloud、App Store 国际区 | <span style="white-space:nowrap">[Clash](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Apple.txt) / [Loon](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/Apple.list) / [Shadowrocket](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/Apple.list)</span> |
-| Telegram | Telegram | Telegram 官方及第三方客户端、API 服务 | <span style="white-space:nowrap">[Clash](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Telegram.txt) / [Loon](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/Telegram.list) / [Shadowrocket](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/Telegram.list)</span> |
-| StreamingHMT | 港澳台流媒体 | 哔哩哔哩、爱奇艺等港澳台流媒体 | <span style="white-space:nowrap">[Clash](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/StreamingHMT.txt) / [Loon](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/StreamingHMT.list) / [Shadowrocket](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/StreamingHMT.list)</span> |
-| Streaming | 流媒体 | Netflix、Disney+、HBO 等国际流媒体 | <span style="white-space:nowrap">[Clash](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Streaming.txt) / [Loon](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/Streaming.list) / [Shadowrocket](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/Streaming.list)</span> |
-| Proxy | 代理服务列表 | 国外代理、VPN、科学上网服务 | <span style="white-space:nowrap">[Clash](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Proxy.txt) / [Loon](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/Proxy.list) / [Shadowrocket](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/Proxy.list)</span> |
-| China | 中国网站列表 | 国内网站、服务，确保直连访问 | <span style="white-space:nowrap">[Clash](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/China.txt) / [Loon](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Loon/China.list) / [Shadowrocket](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Shadowrocket/China.list)</span> |
+<table width="100%">
+  <thead>
+    <tr>
+      <th>文件名</th>
+      <th>包含内容</th>
+      <th width="100%">用途</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Private.list"><code>Private.list</code></a></td>
+      <td>私有网络</td>
+      <td>内网设备管理、路由器配置、本地服务访问</td>
+    </tr>
+    <tr>
+      <td><a href="https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Direct.list"><code>Direct.list</code></a></td>
+      <td>直连域名列表</td>
+      <td>国内可直连的常用服务，避免不必要的代理</td>
+    </tr>
+    <tr>
+      <td><a href="https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/WeChat.list"><code>WeChat.list</code></a></td>
+      <td>微信服务</td>
+      <td>微信相关服务、API 与访问优化</td>
+    </tr>
+    <tr>
+      <td><a href="https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/SteamCN.list"><code>SteamCN.list</code></a></td>
+      <td>Steam国内直连</td>
+      <td>Steam 国内可直连访问内容</td>
+    </tr>
+    <tr>
+      <td><a href="https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/AI.list"><code>AI.list</code></a></td>
+      <td>AI 服务</td>
+      <td>ChatGPT、Claude、Gemini 等主流 AI 服务</td>
+    </tr>
+    <tr>
+      <td><a href="https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Apple.list"><code>Apple.list</code></a></td>
+      <td>苹果服务</td>
+      <td>苹果全球服务、iCloud、App Store 国际区</td>
+    </tr>
+    <tr>
+      <td><a href="https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Telegram.list"><code>Telegram.list</code></a></td>
+      <td>Telegram</td>
+      <td>Telegram 官方及第三方客户端、API 服务</td>
+    </tr>
+    <tr>
+      <td><a href="https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/StreamingHMT.list"><code>StreamingHMT.list</code></a></td>
+      <td>港澳台流媒体</td>
+      <td>哔哩哔哩、爱奇艺等港澳台流媒体</td>
+    </tr>
+    <tr>
+      <td><a href="https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Streaming.list"><code>Streaming.list</code></a></td>
+      <td>流媒体</td>
+      <td>Netflix、Disney+、HBO 等国际流媒体</td>
+    </tr>
+    <tr>
+      <td><a href="https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Proxy.list"><code>Proxy.list</code></a></td>
+      <td>代理服务列表</td>
+      <td>国外代理、VPN、科学上网服务</td>
+    </tr>
+    <tr>
+      <td><a href="https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/China.list"><code>China.list</code></a></td>
+      <td>中国网站列表</td>
+      <td>国内网站、服务，确保直连访问</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 使用示例
 
@@ -36,17 +89,17 @@ c: &RuleSet_c {type: http, behavior: classical, format: text, interval: 86400}
 
 rule-providers:
   # 规则集
-  Private: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Private.txt}
-  Direct: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Direct.txt}
-  WeChat: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/WeChat.txt}
-  SteamCN: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/SteamCN.txt}
-  AI: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/AI.txt}
-  Apple: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Apple.txt}
-  Telegram: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Telegram.txt}
-  StreamingHMT: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/StreamingHMT.txt}
-  Streaming: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Streaming.txt}
-  Proxy: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/Proxy.txt}
-  China: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Clash/China.txt}
+  Private: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Private.list}
+  Direct: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Direct.list}
+  WeChat: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/WeChat.list}
+  SteamCN: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/SteamCN.list}
+  AI: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/AI.list}
+  Apple: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Apple.list}
+  Telegram: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Telegram.list}
+  StreamingHMT: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/StreamingHMT.list}
+  Streaming: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Streaming.list}
+  Proxy: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Proxy.list}
+  China: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/China.list}
 
 rules:
   # 订阅规则
@@ -75,6 +128,6 @@ rules:
 resource_parser_url=https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js
 
 [filter_remote]
-https://github.com/Amnesiash/ladder_rules_script/raw/release/Clash/Direct.txt, tag=直连修正, force-policy=direct, img-url=https://github.com/Koolson/Qure/raw/master/IconSet/mini/Direct.png, update-interval=172800, opt-parser=true, enabled=true
+https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Direct.list, tag=直连修正, force-policy=direct, img-url=https://github.com/Koolson/Qure/raw/master/IconSet/mini/Direct.png, update-interval=172800, opt-parser=true, enabled=true
 ```
 

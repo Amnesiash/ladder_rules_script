@@ -107,11 +107,11 @@ async function main() {
 
   // 加载之前的 manifest（用于变更检测）
   let previousManifest = await loadPreviousManifest({
-    previousReleaseDir: path.resolve(projectRoot, args.out ?? ".release"),
+    previousReleaseDir: path.resolve(projectRoot, args.out ?? "Rules"),
   });
   if (!previousManifest) {
     previousManifest = await loadPreviousManifest({
-      previousRef: "origin/release",
+      previousRef: "origin/main",
       cwd: projectRoot,
     });
   }
@@ -120,12 +120,11 @@ async function main() {
   const result = await buildRelease({
     projectRoot,
     sourceRoot: path.resolve(projectRoot, args.source ?? "source"),
-    outputRoot: path.resolve(projectRoot, args.out ?? ".release"),
-    workRoot: path.resolve(projectRoot, args.work ?? ".release-work"),
+    outputRoot: path.resolve(projectRoot, args.out ?? "Rules"),
     repository,
   });
 
-  console.log(`Generated ${result.artifacts.length} release files in ${result.outputRoot}`);
+  console.log(`Generated ${result.artifacts.length} rule files in ${result.outputRoot}`);
 
   // 生成 Rules/README.md，汇总分流文件、版本链接和来源
   const currentManifest = await loadPreviousManifest({
@@ -143,7 +142,7 @@ async function main() {
       changes,
       repository,
       dryRun: args["telegram-dry-run"] ?? false,
-      previousRef: "origin/release",
+      previousRef: "origin/main",
       currentReleaseDir: result.outputRoot,
       cwd: projectRoot,
     });

@@ -56,7 +56,7 @@ try {
       : undefined,
     previousRef: args["previous-ref"] === "false"
       ? undefined
-      : (typeof args["previous-ref"] === "string" ? args["previous-ref"] : "origin/release"),
+      : (typeof args["previous-ref"] === "string" ? args["previous-ref"] : "origin/main"),
     cwd: projectRoot,
   });
   const changes = compareProviderArtifactChanges(previousManifest, currentManifest);
@@ -73,14 +73,14 @@ try {
   const message = await renderTelegramArtifactChangeMessage({
     changes,
     repository: args.repo ?? process.env.GITHUB_REPOSITORY,
-    releaseBranch: args["release-branch"] ?? "release",
+    releaseBranch: args["release-branch"] ?? "main",
     previousReleaseDir: args["previous-release-dir"]
       ? path.resolve(projectRoot, args["previous-release-dir"])
       : undefined,
     currentReleaseDir: path.dirname(path.resolve(projectRoot, args.current ?? ".release/artifacts-manifest.json")),
     previousRef: args["previous-ref"] === "false"
       ? undefined
-      : (typeof args["previous-ref"] === "string" ? args["previous-ref"] : "origin/release"),
+      : (typeof args["previous-ref"] === "string" ? args["previous-ref"] : "origin/main"),
     cwd: projectRoot,
   });
 
