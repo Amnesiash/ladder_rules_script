@@ -48,17 +48,17 @@ i: &RuleSet_i {type: http, behavior: ipcidr, format: text, interval: 86400}
 
 # 规则提供者
 rule-providers:
-  Direct:        {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Rules/Direct.list, path: ./ruleset/Direct.list}
-  WeChat:        {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Rules/WeChat.list, path: ./ruleset/WeChat.list}
-  SteamCN:       {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Rules/SteamCN.list, path: ./ruleset/SteamCN.list}
-  Private:       {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Rules/Private.list, path: ./ruleset/Private.list}
-  AI:            {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Rules/AI.list, path: ./ruleset/AI.list}
-  Apple:         {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Rules/Apple.list, path: ./ruleset/Apple.list}
-  Telegram:      {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Rules/Telegram.list, path: ./ruleset/Telegram.list}
-  StreamingHMT:  {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Rules/StreamingHMT.list, path: ./ruleset/StreamingHMT.list}
-  Streaming:     {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Rules/Streaming.list, path: ./ruleset/Streaming.list}
-  Proxy:         {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Rules/Proxy.list, path: ./ruleset/Proxy.list}
-  China:         {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/release/Rules/China.list, path: ./ruleset/China.list}
+  Direct:        {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Direct.list, path: ./ruleset/Direct.list}
+  WeChat:        {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/WeChat.list, path: ./ruleset/WeChat.list}
+  SteamCN:       {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/SteamCN.list, path: ./ruleset/SteamCN.list}
+  Private:       {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Private.list, path: ./ruleset/Private.list}
+  AI:            {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/AI.list, path: ./ruleset/AI.list}
+  Apple:         {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Apple.list, path: ./ruleset/Apple.list}
+  Telegram:      {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Telegram.list, path: ./ruleset/Telegram.list}
+  StreamingHMT:  {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/StreamingHMT.list, path: ./ruleset/StreamingHMT.list}
+  Streaming:     {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Streaming.list, path: ./ruleset/Streaming.list}
+  Proxy:         {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Proxy.list, path: ./ruleset/Proxy.list}
+  China:         {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/China.list, path: ./ruleset/China.list}
 
 # ==================== 规则路由 ====================
 rules: 
