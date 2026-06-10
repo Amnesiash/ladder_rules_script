@@ -1,0 +1,126 @@
+{
+  "timestamp": "2026-06-10T06:36:18.635Z",
+  "artifacts": [
+    {
+      "slug": "China",
+      "name": "China",
+      "sourceRelativeDir": "China",
+      "outputPath": "China.list",
+      "relativePath": "China.list",
+      "kind": "clash",
+      "label": "China Rules",
+      "behavior": "classical",
+      "sha256": "3e706d84b083af1d51e9eddb4f8f6353decd885ddaf2681e794c367ae4d37f0a"
+    },
+    {
+      "slug": "Direct",
+      "name": "Direct",
+      "sourceRelativeDir": "Direct",
+      "outputPath": "Direct.list",
+      "relativePath": "Direct.list",
+      "kind": "clash",
+      "label": "Direct Rules",
+      "behavior": "classical",
+      "sha256": "5eae039bd32e108a3b347f2b92de6e7ceaea41075a31c2be2b5f3a669e4b41a3"
+    },
+    {
+      "slug": "Proxy",
+      "name": "Proxy",
+      "sourceRelativeDir": "Proxy",
+      "outputPath": "Proxy.list",
+      "relativePath": "Proxy.list",
+      "kind": "clash",
+      "label": "Proxy Rules",
+      "behavior": "classical",
+      "sha256": "ac61416c55ed8ee8e30f8d7454b2ebfb71f6932e174c2ee3cc796b7125fc167b"
+    },
+    {
+      "slug": "Streaming",
+      "name": "Streaming",
+      "sourceRelativeDir": "Streaming",
+      "outputPath": "Streaming.list",
+      "relativePath": "Streaming.list",
+      "kind": "clash",
+      "label": "Streaming Rules",
+      "behavior": "classical",
+      "sha256": "68a69c67b9a8582b659927db09d34993f63bfefc8b72db9d8e2c7dbc90b48b55"
+    },
+    {
+      "slug": "AI",
+      "name": "AI",
+      "sourceRelativeDir": "AI",
+      "outputPath": "AI.list",
+      "relativePath": "AI.list",
+      "kind": "clash",
+      "label": "AI Rules",
+      "behavior": "classical",
+      "sha256": "e5c84fd9f5e3e87a75061a2294b9cb916d033a2a31d0d744998bb42bb6f15161"
+    },
+    {
+      "slug": "Private",
+      "name": "Private",
+      "sourceRelativeDir": "Private",
+      "outputPath": "Private.list",
+      "relativePath": "Private.list",
+      "kind": "clash",
+      "label": "Private Rules",
+      "behavior": "classical",
+      "sha256": "515b3505c7c4cdd33e4153cb78cbe8c8efb0e9721686fa3839df6cb1ee6888c3"
+    },
+    {
+      "slug": "WeChat",
+      "name": "WeChat",
+      "sourceRelativeDir": "WeChat",
+      "outputPath": "WeChat.list",
+      "relativePath": "WeChat.list",
+      "kind": "clash",
+      "label": "WeChat Rules",
+      "behavior": "classical",
+      "sha256": "248d548120271ab17c2112992aa51374fac6821c621f32debe03165f01bc8ef9"
+    },
+    {
+      "slug": "StreamingHMT",
+      "name": "StreamingHMT",
+      "sourceRelativeDir": "StreamingHMT",
+      "outputPath": "StreamingHMT.list",
+      "relativePath": "StreamingHMT.list",
+      "kind": "clash",
+      "label": "StreamingHMT Rules",
+      "behavior": "classical",
+      "sha256": "8b6b9c2782a122da08024be98bf2a4aa4f311a197464743ba8d788d9cfe1ce85"
+    },
+    {
+      "slug": "Apple",
+      "name": "Apple",
+      "sourceRelativeDir": "Apple",
+      "outputPath": "Apple.list",
+      "relativePath": "Apple.list",
+      "kind": "clash",
+      "label": "Apple Rules",
+      "behavior": "classical",
+      "sha256": "6c4bc93cc11a1391ec8188d56a992998c5dd969db5acd8d0d5f6b91c807edb0d"
+    },
+    {
+      "slug": "SteamCN",
+      "name": "SteamCN",
+      "sourceRelativeDir": "SteamCN",
+      "outputPath": "SteamCN.list",
+      "relativePath": "SteamCN.list",
+      "kind": "clash",
+      "label": "SteamCN Rules",
+      "behavior": "classical",
+      "sha256": "9d4389d362ba5cf9a252fe204d856f242dd47107d8d1252c998ade0bbb6b9111"
+    },
+    {
+      "slug": "Telegram",
+      "name": "Telegram",
+      "sourceRelativeDir": "Telegram",
+      "outputPath": "Telegram.list",
+      "relativePath": "Telegram.list",
+      "kind": "clash",
+      "label": "Telegram Rules",
+      "behavior": "classical",
+      "sha256": "7a262f91301a841f147e049d06d2db935ca7ef3228cf0468b2ff8df07b8031d7"
+    }
+  ]
+}
