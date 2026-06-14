@@ -1,9 +1,9 @@
 # NAME: Proxy
-# UPDATE: 2026-06-13 16:52:41
-# TOTAL: 30030
+# UPDATE: 2026-06-14 17:27:09
+# TOTAL: 30052
 # DOMAIN: 61
-# DOMAIN-SUFFIX: 29476
-# DOMAIN-KEYWORD: 397
+# DOMAIN-SUFFIX: 29497
+# DOMAIN-KEYWORD: 398
 # IP-CIDR: 91
 # IP-CIDR6: 5
 
@@ -10482,12 +10482,22 @@ DOMAIN-SUFFIX,fusker.xxx
 DOMAIN-SUFFIX,futanarihq.com
 DOMAIN-SUFFIX,futhead.com
 DOMAIN-SUFFIX,futpromos.com
+DOMAIN-SUFFIX,futu.cn
+DOMAIN-SUFFIX,futu.link
+DOMAIN-SUFFIX,futu5.com
+DOMAIN-SUFFIX,futuau.com
+DOMAIN-SUFFIX,futuesop.com
 DOMAIN-SUFFIX,futufin.com
 DOMAIN-SUFFIX,futuhk.com
+DOMAIN-SUFFIX,futuhk1.com
+DOMAIN-SUFFIX,futuhk2.com
 DOMAIN-SUFFIX,futuhkapp.com
 DOMAIN-SUFFIX,futuhn.com
 DOMAIN-SUFFIX,futuholdings.com
 DOMAIN-SUFFIX,futunited.com
+DOMAIN-SUFFIX,futuniuniu.com
+DOMAIN-SUFFIX,futunn.com
+DOMAIN-SUFFIX,futuoa.com
 DOMAIN-SUFFIX,future-cs.ru
 DOMAIN-SUFFIX,futurechinaforum.org
 DOMAIN-SUFFIX,futuremessage.org
@@ -10495,6 +10505,9 @@ DOMAIN-SUFFIX,futureofbritishmanufacturing.com
 DOMAIN-SUFFIX,futureofbusinesssurvey.org
 DOMAIN-SUFFIX,futureofmaktingthings.com
 DOMAIN-SUFFIX,futureshop.ca
+DOMAIN-SUFFIX,futusg.com
+DOMAIN-SUFFIX,futustatic.com
+DOMAIN-SUFFIX,fututrade.com
 DOMAIN-SUFFIX,fux.com
 DOMAIN-SUFFIX,fuxporn.com
 DOMAIN-SUFFIX,fuyin.net
@@ -15309,6 +15322,7 @@ DOMAIN-SUFFIX,lantosfoundation.org
 DOMAIN-SUFFIX,laod.cn
 DOMAIN-SUFFIX,laogai.org
 DOMAIN-SUFFIX,laogairesearch.org
+DOMAIN-SUFFIX,laohu8.com
 DOMAIN-SUFFIX,laomiu.com
 DOMAIN-SUFFIX,laosijifuli9009.top
 DOMAIN-SUFFIX,laowang.vip
@@ -15741,11 +15755,13 @@ DOMAIN-SUFFIX,londonmithraeum.com
 DOMAIN-SUFFIX,londonreal.tv
 DOMAIN-SUFFIX,lonestarnaughtygirls.com
 DOMAIN-SUFFIX,longbridge.cloud
+DOMAIN-SUFFIX,longbridge.cn
 DOMAIN-SUFFIX,longbridge.com
 DOMAIN-SUFFIX,longbridge.global
 DOMAIN-SUFFIX,longbridge.hk
 DOMAIN-SUFFIX,longbridge.sg
 DOMAIN-SUFFIX,longbridgeapp.com
+DOMAIN-SUFFIX,longbridgehk.com
 DOMAIN-SUFFIX,longhair.hk
 DOMAIN-SUFFIX,longmabook.com
 DOMAIN-SUFFIX,longmabookcn.com
@@ -23093,6 +23109,7 @@ DOMAIN-SUFFIX,skysports.fr
 DOMAIN-SUFFIX,skysports.ie
 DOMAIN-SUFFIX,skysportsonline.com
 DOMAIN-SUFFIX,skysportsracing.com
+DOMAIN-SUFFIX,skytigris.cn
 DOMAIN-SUFFIX,skyvegas.com
 DOMAIN-SUFFIX,skyxvpn.com
 DOMAIN-SUFFIX,sl-reverse.com
@@ -23822,6 +23839,7 @@ DOMAIN-SUFFIX,steamserver.net
 DOMAIN-SUFFIX,steamstat.us
 DOMAIN-SUFFIX,steamstatic.com
 DOMAIN-SUFFIX,steamstore-a.akamaihd.net
+DOMAIN-SUFFIX,steamugcquincy.blob.core.windows.net
 DOMAIN-SUFFIX,steamunlocked.net
 DOMAIN-SUFFIX,steamusercontent-a.akamaihd.net
 DOMAIN-SUFFIX,steamusercontent.com
@@ -24922,6 +24940,8 @@ DOMAIN-SUFFIX,tidelift.com
 DOMAIN-SUFFIX,tiendabestbuy.com
 DOMAIN-SUFFIX,tiffany-towers.com
 DOMAIN-SUFFIX,tig-ol-bitties.live
+DOMAIN-SUFFIX,tigerbbs.cn
+DOMAIN-SUFFIX,tigerbbs.com
 DOMAIN-SUFFIX,tigervpn.com
 DOMAIN-SUFFIX,tik-tokapi.com
 DOMAIN-SUFFIX,tiktok-minis.com
@@ -28131,6 +28151,7 @@ DOMAIN-SUFFIX,xiaod.in
 DOMAIN-SUFFIX,xiaofu.me
 DOMAIN-SUFFIX,xiaogirls.com
 DOMAIN-SUFFIX,xiaohexie.com
+DOMAIN-SUFFIX,xiaohu8.com
 DOMAIN-SUFFIX,xiaolan.me
 DOMAIN-SUFFIX,xiaoma.org
 DOMAIN-SUFFIX,xiaomi.eu
@@ -29929,6 +29950,7 @@ DOMAIN-KEYWORD,xbox
 DOMAIN-KEYWORD,xbox360
 DOMAIN-KEYWORD,xnxx
 DOMAIN-KEYWORD,xnxx2
+DOMAIN-KEYWORD,xtom
 DOMAIN-KEYWORD,xvideo
 DOMAIN-KEYWORD,xvideos
 DOMAIN-KEYWORD,xxxvideo
