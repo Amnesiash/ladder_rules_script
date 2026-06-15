@@ -112,7 +112,6 @@ dns:
   nameserver:                  # 默认DNS服务器，支持udp/tcp/dot/doh/doq
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
-    - 172.30.7.2
 
 # 代理
 proxies: 
