@@ -149,22 +149,12 @@ proxy-groups:
     proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择, 直连]
     icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Telegram_X.png
 
-  - name: 哔哩哔哩
-    type: select
-    proxies: [直连, 自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择]
-    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/bilibili_3.png
-
   - name: 国际媒体
     type: select
     proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择, 直连]
     icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Streaming!CN.png
 
-  - name: 国内
-    type: select
-    proxies: [直连, 自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择]
-    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/China_Map.png
-
-  - name: 其他
+  - name: 漏网之鱼
     type: select
     proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择, 直连]
     icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Final.png
@@ -236,23 +226,28 @@ rules:
   - DOMAIN-SUFFIX, figma.com, Figma
   - RULE-SET, AI, AI
 
-  - GEOIP, lan, 直连, no-resolve
+  - GEOSITE, private, 直连
   - GEOSITE, github, 代理加速
   - GEOSITE, twitter, 代理加速
   - GEOSITE, youtube, 国际媒体
   - GEOSITE, google, 代理加速
   - GEOSITE, telegram, Telegram
   - GEOSITE, netflix, 国际媒体
-  - GEOSITE, bilibili, 哔哩哔哩
+  - GEOSITE, biliintl, 代理加速
   - GEOSITE, bahamut, 代理加速
   - GEOSITE, spotify, 代理加速
-  - GEOSITE, steam@cn, 国内
-  - GEOSITE, CN, 国内
-  - GEOSITE, geolocation-!cn, 其他
+  - GEOSITE, onedrive, 直连
+  - GEOSITE, microsoft@cn, 直连
+  - GEOSITE, apple-cn, 直连
+  - GEOSITE, steam@cn, 直连
+  - GEOSITE, category-games@cn, 直连
+  - GEOSITE, geolocation-!cn, 代理加速
+  - GEOSITE, CN, 直连
 
+  - GEOIP, private, 直连, no-resolve
   - GEOIP, google, 代理加速
   - GEOIP, netflix, 国际媒体
   - GEOIP, telegram, Telegram
   - GEOIP, twitter, 代理加速
-  - GEOIP, CN, 国内
-  - MATCH, 其他
+  - GEOIP, CN, 直连
+  - MATCH, 漏网之鱼
