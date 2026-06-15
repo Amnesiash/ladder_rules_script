@@ -1,0 +1,258 @@
+# Mihomo 配置
+# 日期：2026-06-15
+# 配置作者：https://github.com/Amnesiash
+# 适用版本：所有使用 Clash Meta 核心的程序
+
+
+# ==================== 锚点配置 ====================
+# 代理提供者模板 - 订阅源基础配置
+BaseProvider: &BaseProvider {type: http, interval: 86400, proxy: DIRECT, health-check: {enable: true, url: 'https://www.google.com/generate_204', interval: 300}, filter: '^(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'}
+
+# 策略组类型模板 - 定义不同的策略组基础配置
+BaseUrltest: &BaseUrltest {type: url-test, interval: 300, tolerance: 50, timeout: 3000, max-failed-times: 3, lazy: true, url: 'https://www.gstatic.com/generate_204', hidden: true} 
+
+# ==================== 代理提供者 ====================
+proxy-providers:
+  # Sub1: {<<: *BaseProvider, url: '', path: ./proxy/Sub1.yaml, override: {additional-prefix: '[Sub1] '}}
+  # Sub2: {<<: *BaseProvider, url: '', path: ./proxy/Sub2.yaml, override: {additional-prefix: '[Sub2] '}}
+
+# ==================== 核心配置 ====================
+#基础配置
+mixed-port: 7890      # 混合端口 HTTP和SOCKS5用一个端口
+port: 7891
+socks-port: 7892
+unified-delay: true
+tcp-concurrent: true
+find-process-mode: 'always'
+global-client-fingerprint: chrome
+keep-alive-interval: 15
+keep-alive-idle: 600
+allow-lan: true       # 允许局域网的连接（可用来共享代理）
+mode: rule            # 规则模式：rule（规则） / global（全局代理）/ direct（全局直连）/ script (脚本)
+log-level: info       # 设置日志输出级别 (5 个级别：silent / error / warning / info / debug）
+ipv6: true            # 开启 IPv6 总开关,关闭阻断所有 IPv6 链接和屏蔽 DNS 请求 AAAA 记录
+udp: true
+
+geodata-mode: true
+geo-auto-update: true
+geo-update-interval: 24
+geox-url:
+  geoip:   "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat"
+  geosite: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
+  mmdb:    "https://github.com/Masaiki/GeoIP2-CN/raw/release/Country.mmdb"
+  asn:     "https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb"
+
+# 认证配置
+# authentication:
+#  - mihomo:mihomopassword
+skip-auth-prefixes:
+  - 192.168.1.0/24
+  - 192.168.31.0/24
+  - 192.168.100.0/24
+  - 127.0.0.1/8
+
+# 实验性功能
+experimental:
+  quic-go-disable-gso: true 
+
+# 管理面板配置
+external-ui-url: "https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip"
+external-ui-name: zashboard
+external-ui: ui
+external-controller: 127.0.0.1:9090   #外部控制器,可以使用 RESTful API 来控制你的 clash 内核
+secret: ''
+
+# 配置存储
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+# 流量嗅探
+sniffer:
+  enable: true
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+    TLS:
+      ports: [443, 8443]
+    QUIC:
+      ports: [443, 8443]
+  skip-domain:
+    - "Mijia Cloud"
+    - "+.push.apple.com"
+
+# TUN模式配置    
+tun:
+  enable: true
+  stack: mixed
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
+  auto-route: true
+  auto-redirect: true
+  auto-detect-interface: true
+
+# DNS配置
+dns:
+  enable: true                 # 关闭将使用系统 DNS
+  ipv6: true                   # IPV6解析开关；如果为false，将返回ipv6结果为空
+  enhanced-mode: fake-ip       # 模式：redir-host或fake-ip
+  fake-ip-filter:              # fake ip 白名单列表'以下地址不会下发fakeip映射用于连接
+    - "*"
+    - "+.lan"
+    - "+.local"
+    - "+.market.xiaomi.com"
+    - "+.miwifi.com"
+    - "+.docker.io"
+    - "+.push.apple.com"
+  default-nameserver:          
+    - tls://223.5.5.5
+    - tls://223.6.6.6
+  nameserver:                  # 默认DNS服务器，支持udp/tcp/dot/doh/doq
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+    - 172.30.7.2
+
+# 代理
+proxies: 
+  - name: 直连
+    type: direct
+    udp: true
+
+# 策略组
+proxy-groups:
+  # 应用策略层 - Select手动选择，支持多场景应用优化，使用时默认，也可修改
+  - name: 手动选择
+    type: select
+    include-all: true
+    exclude-type: direct
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/Gallery/vpnlogo/Meta.png
+
+  - name: 代理加速
+    type: select
+    proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择, 直连]
+    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Global.png
+
+  - name: AI
+    type: select
+    proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择, 直连]
+    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/AI.png
+
+  - name: Figma
+    type: select
+    proxies: [直连, 自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择]
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/Gallery/Color/Figma.png
+
+  - name: Telegram
+    type: select
+    proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择, 直连]
+    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Telegram_X.png
+
+  - name: 哔哩哔哩
+    type: select
+    proxies: [直连, 自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择]
+    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/bilibili_3.png
+
+  - name: 国际媒体
+    type: select
+    proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择, 直连]
+    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Streaming!CN.png
+
+  - name: 国内
+    type: select
+    proxies: [直连, 自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择]
+    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/China_Map.png
+
+  - name: 其他
+    type: select
+    proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择, 直连]
+    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Final.png
+
+
+  # 地理策略层
+  - name: 自动选择
+    <<: *BaseUrltest
+    include-all: true
+    exclude-type: direct
+    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png
+
+  - name: 香港
+    <<: *BaseUrltest
+    include-all: true
+    exclude-type: direct
+    filter: "(?i)港|hk|hongkong|hong kong"
+    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Hong_Kong.png
+
+  - name: 台湾
+    <<: *BaseUrltest
+    include-all: true
+    exclude-type: direct
+    filter: "(?i)台|tw|taiwan"
+    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Taiwan.png
+
+  - name: 日本
+    <<: *BaseUrltest
+    include-all: true
+    exclude-type: direct
+    filter: "(?i)日|jp|japan"
+    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Japan.png
+
+  - name: 新加坡
+    <<: *BaseUrltest
+    include-all: true
+    exclude-type: direct
+    filter: "(?i)新|sg|singapore"
+    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Singapore.png
+
+  - name: 美国
+    <<: *BaseUrltest
+    include-all: true
+    exclude-type: direct
+    filter: "(?i)美|us|unitedstates|united states"
+    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/United_States.png
+
+  - name: 其他地区
+    <<: *BaseUrltest
+    include-all: true
+    exclude-type: direct
+    filter: "(?i)^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hongkong|台|tw|taiwan|日|jp|japan|新|sg|singapore|美|us|unitedstates)).*"
+    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/United_Nations.png
+
+
+# ==================== 规则集 ====================
+# 规则集行为模板
+c: &RuleSet_c {type: http, behavior: classical, format: text, interval: 86400}
+
+# 规则提供者
+rule-providers:
+  AI:
+    <<: *RuleSet_c
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/AI.list
+    path: ./ruleset/AI.list
+
+# ==================== 规则路由 ====================
+rules: 
+  - DOMAIN-SUFFIX, figma.com, Figma
+  - RULE-SET, AI, AI
+
+  - GEOIP, lan, 直连, no-resolve
+  - GEOSITE, github, 代理加速
+  - GEOSITE, twitter, 代理加速
+  - GEOSITE, youtube, 国际媒体
+  - GEOSITE, google, 代理加速
+  - GEOSITE, telegram, Telegram
+  - GEOSITE, netflix, 国际媒体
+  - GEOSITE, bilibili, 哔哩哔哩
+  - GEOSITE, bahamut, 代理加速
+  - GEOSITE, spotify, 代理加速
+  - GEOSITE, steam@cn, 国内
+  - GEOSITE, CN, 国内
+  - GEOSITE, geolocation-!cn, 其他
+
+  - GEOIP, google, 代理加速
+  - GEOIP, netflix, 国际媒体
+  - GEOIP, telegram, Telegram
+  - GEOIP, twitter, 代理加速
+  - GEOIP, CN, 国内
+  - MATCH, 其他
