@@ -8,7 +8,7 @@ on:
     branches:
       - main
     paths:
-      - Rules/rule_source.txt
+      - rules/rule_source.txt
 
 concurrency:
   group: build-${{ github.ref }}
@@ -42,14 +42,14 @@ jobs:
 
       - name: Commit Rules changes to main
         run: |
-          if [ -z "$(git status --porcelain -- Rules/)" ]; then
-            echo "No Rules/ changes to commit."
+          if [ -z "$(git status --porcelain -- rules/)" ]; then
+            echo "No rules/ changes to commit."
             exit 0
           fi
 
           git config --local user.email "${{ github.actor }}@users.noreply.github.com"
           git config --local user.name "${{ github.actor }}"
-          git add Rules/ build_scripts/artifacts-manifest.json
+          git add rules/ build_scripts/artifacts-manifest.json
           git commit -m "Auto Update $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')"
           git push --force-with-lease origin HEAD:main
 
