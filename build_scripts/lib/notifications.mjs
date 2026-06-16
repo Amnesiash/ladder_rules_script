@@ -144,7 +144,12 @@ function providerArtifactFromPath(absolutePath) {
   if (fileName.endsWith(".list")) {
     // 规则文件使用 .list 后缀，存放在 Rules/ 目录下
     if (relativePath.startsWith("Rules/")) {
-      return { relativePath, fileName, sourceRelativeDir, kind: "clash", sha256: null };
+      // 去掉 "Rules/release/" 前缀，与 makeArtifact 输出的 relativePath 格式一致
+      const releaseRelative = relativePath.replace(/^Rules\/release\//, "");
+      const releaseFileName = path.posix.basename(releaseRelative);
+      const releaseDir = path.posix.dirname(releaseRelative);
+      const releaseSourceDir = releaseDir === "." ? "" : releaseDir;
+      return { relativePath: releaseRelative, fileName: releaseFileName, sourceRelativeDir: releaseSourceDir, kind: "clash", sha256: null };
     }
     return null;
   }
