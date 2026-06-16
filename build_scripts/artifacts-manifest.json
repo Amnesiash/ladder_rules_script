@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-16T16:11:12.390Z",
+  "timestamp": "2026-06-16T16:19:49.010Z",
   "artifacts": [
     {
       "slug": "China",
@@ -21,7 +21,7 @@
       "kind": "clash",
       "label": "Direct Rules",
       "behavior": "classical",
-      "sha256": "a0e6d9da8dc2df19477f76a8fb8c54c8f10732db0f3ef21c6ea71e38b90be328"
+      "sha256": "a2bbac969e3d43184a22d90825bfffb1a2d81b09640608c472e62a43e0e6b201"
     },
     {
       "slug": "Proxy",
@@ -32,7 +32,7 @@
       "kind": "clash",
       "label": "Proxy Rules",
       "behavior": "classical",
-      "sha256": "9d7621ed48487dadba670e7f1210d5221ddc508b4087e949df91821525a630b5"
+      "sha256": "e1e8ae02d514141ffd7d048d7a9ef32a263ed33c01045480c7cc65cab3b75920"
     },
     {
       "slug": "Streaming",
@@ -70,7 +70,7 @@
     {
       "slug": "Extra/WeChat",
       "name": "Extra/WeChat",
-      "sourceRelativeDir": "Extra_WeChat",
+      "sourceRelativeDir": "Extra/WeChat",
       "outputPath": "Extra/WeChat.list",
       "relativePath": "Extra/WeChat.list",
       "kind": "clash",
@@ -92,7 +92,7 @@
     {
       "slug": "Extra/Apple",
       "name": "Extra/Apple",
-      "sourceRelativeDir": "Extra_Apple",
+      "sourceRelativeDir": "Extra/Apple",
       "outputPath": "Extra/Apple.list",
       "relativePath": "Extra/Apple.list",
       "kind": "clash",
@@ -103,7 +103,7 @@
     {
       "slug": "Extra/Telegram",
       "name": "Extra/Telegram",
-      "sourceRelativeDir": "Extra_Telegram",
+      "sourceRelativeDir": "Extra/Telegram",
       "outputPath": "Extra/Telegram.list",
       "relativePath": "Extra/Telegram.list",
       "kind": "clash",

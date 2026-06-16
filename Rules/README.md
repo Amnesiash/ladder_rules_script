@@ -9,15 +9,15 @@
 | 文件名 | 包含内容 | 用途 | 最近更新 |
 | --- | --- | --- | --- |
 | [`Private.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Private.list) | 私有网络 | 内网设备管理、路由器配置、本地服务访问 | 2026-06-15 19:55:28 |
-| [`Direct.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Direct.list) | 直连域名列表 | 国内可直连的常用服务，避免不必要的代理 | 2026-06-17 00:11:10 |
+| [`Direct.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Direct.list) | 直连域名列表 | 国内可直连的常用服务，避免不必要的代理 | 2026-06-17 00:19:47 |
 | [`AI.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/AI.list) | AI 服务 | ChatGPT、Claude、Gemini 等主流 AI 服务 | 2026-06-15 19:55:28 |
 | [`StreamingHMT.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/StreamingHMT.list) | 港澳台流媒体 | 哔哩哔哩、爱奇艺等港澳台流媒体 | 2026-06-15 19:55:28 |
 | [`Streaming.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Streaming.list) | 国际流媒体 | Netflix、Disney+、HBO 等国际流媒体 | 2026-06-16 09:49:27 |
-| [`Proxy.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Proxy.list) | 代理服务列表 | 国外代理、VPN、科学上网服务 | 2026-06-16 13:35:47 |
+| [`Proxy.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Proxy.list) | 代理服务列表 | 国外代理、VPN、科学上网服务 | 2026-06-17 00:19:48 |
 | [`China.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/China.list) | 中国网站列表 | 国内网站、服务，确保直连访问 | 2026-06-16 13:35:46 |
-| [`Extra/Apple.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Extra/Apple.list) | 规则集合 | 按需分流与策略匹配 | - |
-| [`Extra/Telegram.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Extra/Telegram.list) | 规则集合 | 按需分流与策略匹配 | - |
-| [`Extra/WeChat.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Extra/WeChat.list) | 规则集合 | 按需分流与策略匹配 | - |
+| [`Extra/Apple.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Extra/Apple.list) | 规则集合 | 按需分流与策略匹配 | 2026-06-17 00:11:12 |
+| [`Extra/Telegram.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Extra/Telegram.list) | 规则集合 | 按需分流与策略匹配 | 2026-06-17 00:11:12 |
+| [`Extra/WeChat.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Extra/WeChat.list) | 规则集合 | 按需分流与策略匹配 | 2026-06-17 00:11:11 |
 
 ## 使用示例
 
