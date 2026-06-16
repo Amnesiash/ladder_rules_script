@@ -4,7 +4,7 @@ import path from "node:path";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import { buildRelease } from "./lib/artifacts.mjs";
-import { backupSourceTxtEntries } from "./lib/subscriptions.mjs";
+import { backupSourceTxtEntries, syncSourceCache } from "./lib/subscriptions.mjs";
 import { loadPreviousManifest, compareProviderArtifactChanges, sendTelegramNotification } from "./lib/notifications.mjs";
 import { renderRulesReadme } from "./lib/links.mjs";
 
@@ -106,6 +106,22 @@ async function main() {
     projectRoot,
     sourceRoot: path.resolve(projectRoot, args.source ?? "source"),
   });
+
+  // 同步清理 source 缓存（删除 rule_source.txt 中不再引用的缓存文件）
+  const sourceRoot = path.resolve(projectRoot, args.source ?? "Rules/source");
+  const syncResult = await syncSourceCache({ projectRoot, sourceRoot });
+  if (syncResult.removed.length > 0) {
+    console.log(`已清理 ${syncResult.removed.length} 个过期缓存文件/目录`);
+    for (const item of syncResult.removed) {
+      console.log(`  - [${item.type}] ${path.relative(projectRoot, item.path)}`);
+    }
+  }
+  if (syncResult.errors.length > 0) {
+    console.warn(`清理过程中出现 ${syncResult.errors.length} 个错误:`);
+    for (const err of syncResult.errors) {
+      console.warn(`  - ${path.relative(projectRoot, err.path)}: ${err.error}`);
+    }
+  }
 
   // 获取仓库信息
   const repository =

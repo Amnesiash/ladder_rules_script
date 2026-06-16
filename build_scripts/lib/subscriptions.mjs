@@ -162,11 +162,137 @@ export async function sourceConfigsFromSourceTxt({ projectRoot, sourceRoot }) {
   return configs;
 }
 
+// ==================== 缓存同步清理 ====================
+
+/**
+ * 从 URL 推导出预期的缓存文件名
+ * 例如: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+ *       -> ProxyMedia@ACL4SSR.list
+ * 
+ * 特殊字符会被替换为 _（与 sanitizeName 保持一致）
+ * 例如: !CN.list -> _CN.list, Direct+.list -> Direct_.list
+ */
+function deriveCacheFileNameFromUrl(url) {
+  try {
+    const urlObj = new URL(url);
+    const pathParts = urlObj.pathname.split("/").filter(Boolean);
+    
+    if (pathParts.length < 2) return null;
+    
+    // 提取文件名（最后一个部分）
+    const fileName = pathParts[pathParts.length - 1];
+    const dotIndex = fileName.lastIndexOf(".");
+    const baseName = dotIndex > 0 ? fileName.slice(0, dotIndex) : fileName;
+    const ext = dotIndex > 0 ? fileName.slice(dotIndex) : "";
+    
+    // 提取来源（GitHub 用户名/组织名，路径的第一个部分）
+    const source = pathParts[0];
+    
+    // 对 baseName 应用与 sanitizeName 相同的转换
+    // 将非字母数字字符替换为 _
+    const sanitizedBaseName = baseName.replace(/[^\w.-]+/g, "_");
+    
+    return `${sanitizedBaseName}@${source}${ext}`;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * 同步清理 source 缓存文件夹
+ * 删除 rule_source.txt 中不再引用的缓存文件
+ */
+export async function syncSourceCache({ projectRoot, sourceRoot }) {
+  const sourceTxtPath = path.join(projectRoot, "Rules", "rule_source.txt");
+  const content = await safeReadFile(sourceTxtPath);
+  if (!content) return { removed: [], errors: [] };
+
+  const sections = parseSourceFile(content.toString("utf8"));
+  
+  // 构建预期的缓存文件映射: { sectionName: Set<fileName> }
+  const expectedCacheFiles = new Map();
+  
+  for (const section of sections) {
+    const sectionName = sanitizeName(section.name);
+    const fileNames = new Set();
+    
+    for (const url of section.urls) {
+      const cacheFileName = deriveCacheFileNameFromUrl(url);
+      if (cacheFileName) {
+        fileNames.add(cacheFileName);
+      }
+    }
+    
+    expectedCacheFiles.set(sectionName, fileNames);
+  }
+  
+  const removed = [];
+  const errors = [];
+  
+  // 扫描 source 目录 (Rules/source)
+  try {
+    const sourceEntries = await fs.readdir(sourceRoot, { withFileTypes: true });
+    
+    for (const entry of sourceEntries) {
+      if (!entry.isDirectory()) continue;
+      
+      const sectionName = entry.name;
+      const sectionDir = path.join(sourceRoot, sectionName);
+      const expectedFiles = expectedCacheFiles.get(sectionName);
+      
+      // 如果 rule_source.txt 中没有这个 section，删除整个目录
+      if (!expectedFiles) {
+        try {
+          await fs.rm(sectionDir, { recursive: true, force: true });
+          removed.push({ type: "directory", path: sectionDir });
+        } catch (err) {
+          errors.push({ path: sectionDir, error: err.message });
+        }
+        continue;
+      }
+      
+      // 检查该 section 目录下的文件
+      try {
+        const files = await fs.readdir(sectionDir);
+        
+        for (const file of files) {
+          if (!expectedFiles.has(file)) {
+            const filePath = path.join(sectionDir, file);
+            try {
+              await fs.unlink(filePath);
+              removed.push({ type: "file", path: filePath });
+            } catch (err) {
+              errors.push({ path: filePath, error: err.message });
+            }
+          }
+        }
+        
+        // 如果目录为空，删除目录
+        const remainingFiles = await fs.readdir(sectionDir);
+        if (remainingFiles.length === 0) {
+          await fs.rmdir(sectionDir);
+          removed.push({ type: "empty-directory", path: sectionDir });
+        }
+      } catch (err) {
+        if (err.code !== "ENOENT") {
+          errors.push({ path: sectionDir, error: err.message });
+        }
+      }
+    }
+  } catch (err) {
+    if (err.code !== "ENOENT") {
+      errors.push({ path: sourceRoot, error: err.message });
+    }
+  }
+  
+  return { removed, errors };
+}
+
 // ==================== 备份 source.txt ====================
 
+// 兼容 ladder_rules_script 的 rule_source.txt 格式
+// 当前实现为空操作，保持兼容性
 export async function backupSourceTxtEntries({ projectRoot, sourceRoot }) {
-  // 兼容 ladder_rules_script 的 rule_source.txt 格式
-  // 当前实现为空操作，保持兼容性
   return [];
 }
 

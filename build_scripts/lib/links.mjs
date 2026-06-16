@@ -286,7 +286,7 @@ const RULE_ROW_INFO = {
     purpose: "国外代理、VPN、科学上网服务",
   },
   Streaming: {
-    content: "流媒体",
+    content: "国际流媒体",
     purpose: "Netflix、Disney+、HBO 等国际流媒体",
   },
   AI: {
