@@ -104,20 +104,20 @@ async function main() {
   // 备份 source.txt
   await backupSourceTxtEntries({
     projectRoot,
-    sourceRoot: path.resolve(projectRoot, args.source ?? "rules/source"),
+    sourceRoot: path.resolve(projectRoot, args.source ?? "Rules/source"),
   });
 
-  // 同步清理 source 缓存（删�?rule_source.txt 中不再引用的缓存文件�?
-  const sourceRoot = path.resolve(projectRoot, args.source ?? "rules/source");
+  // 同步清理 source 缓存（删除 rule_source.txt 中不再引用的缓存文件）
+  const sourceRoot = path.resolve(projectRoot, args.source ?? "Rules/source");
   const syncResult = await syncSourceCache({ projectRoot, sourceRoot });
   if (syncResult.removed.length > 0) {
-    console.log(`已清�?${syncResult.removed.length} 个过期缓存文�?目录`);
+    console.log(`已清理 ${syncResult.removed.length} 个过期缓存文件/目录`);
     for (const item of syncResult.removed) {
       console.log(`  - [${item.type}] ${path.relative(projectRoot, item.path)}`);
     }
   }
   if (syncResult.errors.length > 0) {
-    console.warn(`清理过程中出�?${syncResult.errors.length} 个错�?`);
+    console.warn(`清理过程中出现 ${syncResult.errors.length} 个错误:`);
     for (const err of syncResult.errors) {
       console.warn(`  - ${path.relative(projectRoot, err.path)}: ${err.error}`);
     }
@@ -133,7 +133,7 @@ async function main() {
     throw new Error('缺少仓库信息：请设置环境变量 GITHUB_REPOSITORY，或使用参数 --repo "owner/repo"');
   }
 
-  // 加载之前�?manifest（用于变更检测）
+  // 加载之前的 manifest（用于变更检测）
   let previousManifest = await loadPreviousManifest({
     previousReleaseDir: path.resolve(projectRoot, "build_scripts"),
   });
@@ -148,7 +148,7 @@ async function main() {
   const result = await buildRelease({
     projectRoot,
     sourceRoot,
-    outputRoot: path.resolve(projectRoot, args.out ?? "rules/release"),
+    outputRoot: path.resolve(projectRoot, args.out ?? "Rules/release"),
     repository,
   });
 
@@ -176,7 +176,7 @@ async function main() {
     });
   }
 
-  // 收集各规则文件的最近更新时间（�?header �?# UPDATE: 行读取）
+  // 收集各规则文件的最近更新时间（从 header 的 # UPDATE: 行读取）
   const updateTimes = {};
   for (const artifact of result.artifacts) {
     if (artifact.kind !== "clash") continue;
@@ -189,7 +189,7 @@ async function main() {
     }
   }
 
-  const rulesReadmePath = path.join(projectRoot, "rules", "README.md");
+  const rulesReadmePath = path.join(projectRoot, "Rules", "README.md");
   const newReadme = renderRulesReadme({
     sourceConfigs: result.sourceConfigs,
     artifacts: result.artifacts,
