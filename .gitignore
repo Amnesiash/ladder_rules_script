@@ -2,3 +2,10 @@
 .release/
 .rules-work/
 .tools/
+
+# AI 辅助工具目录
+.codegraph/
+.codex/
+.copilot/
+.reasonix/
+.workbuddy/
