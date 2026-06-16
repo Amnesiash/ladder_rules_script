@@ -1,7 +1,7 @@
 # Rules Configuration (自用)| Amnesiash.
 
 <p align="center">
-  <a href="https://github.com/Amnesiash/ladder_rules_script/tree/main/Rules">
+  <a href="https://github.com/Amnesiash/ladder_rules_script/tree/main/rules">
 
   **仓库内容来源于网络中 如有侵权或未标明出处请预留issue**
 </p>
@@ -29,7 +29,7 @@
 ```
 例如：
   
-  https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/release/Rules/Clash/Proxy.yaml 
+  https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Direct.list 
   此为浏览器地址栏中获取到的链接
 
 ```
@@ -39,13 +39,13 @@
 ```markdown
 使用 JsDeliver CDN 链接
 
-  e.g: https://cdn.jsdelivr.net/gh/Amnesiash/ladder_rules_script@release/Rules/Clash/Proxy.yaml
+  e.g: https://cdn.jsdelivr.net/gh/Amnesiash/ladder_rules_script@main/rules/release/Direct.list
   
-  例如文件: https://github.com/Amnesiash/ladder_rules_script/release/Rules/Clash/Proxy.yaml
+  例如文件: https://github.com/Amnesiash/ladder_rules_script/blob/main/rules/release/Direct.list
   
   替换后链接为
   
-  https://cdn.jsdelivr.net/gh/Amnesiash/ladder_rules_script@release/Rules/Clash/Proxy.yaml
+  https://cdn.jsdelivr.net/gh/Amnesiash/ladder_rules_script@main/rules/release/Direct.list
 ```
 
 

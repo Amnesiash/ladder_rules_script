@@ -116,7 +116,7 @@ proxy-groups:
     type: select
     include-all: true
     exclude-type: direct
-    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/Gallery/vpnlogo/Meta.png
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/vpnlogo/Meta.png
 
   - name: 代理加速
     type: select
@@ -196,7 +196,7 @@ proxy-groups:
 rule-providers:
   AI:
     <<: *RuleSet_c
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/AI.list
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/AI.list
     path: ./ruleset/AI.list
 
 # 规则路由

@@ -5,10 +5,10 @@
 
 ## 规则&配置
 
-| <img src="https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Gallery/vpnlogo/Clash.png" alt="Clash" align="center" height="70" width="70"> | <img src="https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Gallery/vpnlogo/QuantumultX.png" alt="QuantumultX" align="center" height="70" width="70"> | <img src="https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Gallery/vpnlogo/Loon.png" alt="Loon" align="center" height="70" width="70"> | <img src="https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Gallery/vpnlogo/Shadowrocket.png" alt="Shadowrocket" align="center" height="70" width="70"> |
+| <img src="https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/gallery/vpnlogo/Clash.png" alt="Clash" align="center" height="70" width="70"> | <img src="https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/gallery/vpnlogo/QuantumultX.png" alt="QuantumultX" align="center" height="70" width="70"> | <img src="https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/gallery/vpnlogo/Loon.png" alt="Loon" align="center" height="70" width="70"> | <img src="https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/gallery/vpnlogo/Shadowrocket.png" alt="Shadowrocket" align="center" height="70" width="70"> |
 |:--------:|:--------:|:--------:|:--------:|
 | [Clash&Mihomo](https://github.com/Amnesiash/ladder_rules_script/tree/release/Clash) | [QuantumultX](https://github.com/Amnesiash/ladder_rules_script/tree/release/QuantumultX) | [Loon](https://github.com/Amnesiash/ladder_rules_script/tree/release/Loon) | [Shadowrocket](https://github.com/Amnesiash/ladder_rules_script/tree/release/Shadowrocket) |
-| [配置](https://github.com/Amnesiash/ladder_rules_script/tree/main/Config) | [配置](https://github.com/Amnesiash/ladder_rules_script/tree/main/Config) | [配置](https://github.com/Amnesiash/ladder_rules_script/tree/main/Config) | [配置](https://github.com/Amnesiash/ladder_rules_script/tree/main/Config) |
+| [配置](https://github.com/Amnesiash/ladder_rules_script/tree/main/config) | [配置](https://github.com/Amnesiash/ladder_rules_script/tree/main/config) | [配置](https://github.com/Amnesiash/ladder_rules_script/tree/main/config) | [配置](https://github.com/Amnesiash/ladder_rules_script/tree/main/config) |
 
 所有规则数据都来自互联网，感谢开源规则项目作者的辛勤付出
 
