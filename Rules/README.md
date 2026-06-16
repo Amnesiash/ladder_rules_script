@@ -4,28 +4,21 @@
 
 ---
 
-## 更新
-
-- 规则文件自动更新
-- 更新时间：2026-06-16 09:03
-
----
-
 ## 规则集
 
-| 文件名 | 包含内容 | 用途 |
-| --- | --- | --- |
-| [`Private.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Private.list) | 私有网络 | 内网设备管理、路由器配置、本地服务访问 |
-| [`Direct.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Direct.list) | 直连域名列表 | 国内可直连的常用服务，避免不必要的代理 |
-| [`WeChat.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/WeChat.list) | 微信服务 | 微信相关服务、API 与访问优化 |
-| [`SteamCN.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/SteamCN.list) | Steam国内直连 | Steam 国内可直连访问内容 |
-| [`AI.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/AI.list) | AI 服务 | ChatGPT、Claude、Gemini 等主流 AI 服务 |
-| [`Apple.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Apple.list) | 苹果服务 | 苹果全球服务、iCloud、App Store 国际区 |
-| [`Telegram.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Telegram.list) | Telegram | Telegram 官方及第三方客户端、API 服务 |
-| [`StreamingHMT.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/StreamingHMT.list) | 港澳台流媒体 | 哔哩哔哩、爱奇艺等港澳台流媒体 |
-| [`Streaming.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Streaming.list) | 流媒体 | Netflix、Disney+、HBO 等国际流媒体 |
-| [`Proxy.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Proxy.list) | 代理服务列表 | 国外代理、VPN、科学上网服务 |
-| [`China.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/China.list) | 中国网站列表 | 国内网站、服务，确保直连访问 |
+| 文件名 | 包含内容 | 用途 | 最近更新 |
+| --- | --- | --- | --- |
+| [`Private.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Private.list) | 私有网络 | 内网设备管理、路由器配置、本地服务访问 | 2026-06-15 19:55:28 |
+| [`Direct.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Direct.list) | 直连域名列表 | 国内可直连的常用服务，避免不必要的代理 | 2026-06-15 19:55:27 |
+| [`WeChat.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/WeChat.list) | 微信服务 | 微信相关服务、API 与访问优化 | 2026-06-15 19:55:28 |
+| [`SteamCN.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/SteamCN.list) | Steam国内直连 | Steam 国内可直连访问内容 | 2026-06-15 19:55:28 |
+| [`AI.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/AI.list) | AI 服务 | ChatGPT、Claude、Gemini 等主流 AI 服务 | 2026-06-15 19:55:28 |
+| [`Apple.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Apple.list) | 苹果服务 | 苹果全球服务、iCloud、App Store 国际区 | 2026-06-15 19:55:28 |
+| [`Telegram.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Telegram.list) | Telegram | Telegram 官方及第三方客户端、API 服务 | 2026-06-15 19:55:28 |
+| [`StreamingHMT.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/StreamingHMT.list) | 港澳台流媒体 | 哔哩哔哩、爱奇艺等港澳台流媒体 | 2026-06-15 19:55:28 |
+| [`Streaming.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Streaming.list) | 流媒体 | Netflix、Disney+、HBO 等国际流媒体 | 2026-06-15 19:55:28 |
+| [`Proxy.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Proxy.list) | 代理服务列表 | 国外代理、VPN、科学上网服务 | 2026-06-15 19:55:27 |
+| [`China.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/China.list) | 中国网站列表 | 国内网站、服务，确保直连访问 | 2026-06-15 19:55:27 |
 
 ## 使用示例
 
