@@ -127,7 +127,7 @@ export async function fetchWithFallback(url, options = {}, fetchImpl = fetch) {
 // ==================== 源配置解析 ====================
 
 export async function sourceConfigsFromSourceTxt({ projectRoot, sourceRoot }) {
-  const sourceTxtPath = path.join(projectRoot, "Rules", "rule_source.txt");
+  const sourceTxtPath = path.join(projectRoot, "rules", "rule_source.txt");
   const content = await safeReadFile(sourceTxtPath);
   if (!content) return [];
 
@@ -207,7 +207,7 @@ export function deriveCacheFileNameFromUrl(url) {
  * 删除 rule_source.txt 中不再引用的缓存文件
  */
 export async function syncSourceCache({ projectRoot, sourceRoot }) {
-  const sourceTxtPath = path.join(projectRoot, "Rules", "rule_source.txt");
+  const sourceTxtPath = path.join(projectRoot, "rules", "rule_source.txt");
   const content = await safeReadFile(sourceTxtPath);
   if (!content) return { removed: [], errors: [] };
 

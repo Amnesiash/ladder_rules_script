@@ -97,37 +97,37 @@ c: &RuleSet_c {type: http, behavior: classical, format: text, interval: 86400}
 rule-providers:
   Direct:
     <<: *RuleSet_c
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Direct.list
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/Direct.list
     path: ./ruleset/Direct.list
 
   Private:
     <<: *RuleSet_c
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Private.list
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/Private.list
     path: ./ruleset/Private.list
 
   AI:
     <<: *RuleSet_c
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/AI.list
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/AI.list
     path: ./ruleset/AI.list
 
   Telegram:
     <<: *RuleSet_c
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Telegram.list
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/Telegram.list
     path: ./ruleset/Telegram.list
 
   Streaming:
     <<: *RuleSet_c
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Streaming.list
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/Streaming.list
     path: ./ruleset/Streaming.list
 
   Proxy:
     <<: *RuleSet_c
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Proxy.list
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/Proxy.list
     path: ./ruleset/Proxy.list
 
   China:
     <<: *RuleSet_c
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/China.list
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/China.list
     path: ./ruleset/China.list
 
 # 规则路由

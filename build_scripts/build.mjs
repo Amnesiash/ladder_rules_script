@@ -104,11 +104,11 @@ async function main() {
   // 备份 source.txt
   await backupSourceTxtEntries({
     projectRoot,
-    sourceRoot: path.resolve(projectRoot, args.source ?? "Rules/source"),
+    sourceRoot: path.resolve(projectRoot, args.source ?? "rules/source"),
   });
 
   // 同步清理 source 缓存（删除 rule_source.txt 中不再引用的缓存文件）
-  const sourceRoot = path.resolve(projectRoot, args.source ?? "Rules/source");
+  const sourceRoot = path.resolve(projectRoot, args.source ?? "rules/source");
   const syncResult = await syncSourceCache({ projectRoot, sourceRoot });
   if (syncResult.removed.length > 0) {
     console.log(`已清理 ${syncResult.removed.length} 个过期缓存文件/目录`);
@@ -133,7 +133,7 @@ async function main() {
     throw new Error('缺少仓库信息：请设置环境变量 GITHUB_REPOSITORY，或使用参数 --repo "owner/repo"');
   }
 
-  const outputRoot = path.resolve(projectRoot, args.out ?? "Rules/release");
+  const outputRoot = path.resolve(projectRoot, args.out ?? "rules/release");
 
   // 加载之前的 manifest（用于变更检测）
   let previousManifest = await loadPreviousManifest({
@@ -156,7 +156,7 @@ async function main() {
 
   console.log(`Generated ${result.artifacts.length} rule files in ${result.outputRoot}`);
 
-  // 生成 Rules/README.md，汇总分流文件、版本链接和来源
+  // 生成 rules/README.md，汇总分流文件、版本链接和来源
   const currentManifest = await loadPreviousManifest({
     previousReleaseDir: outputRoot,
   });
@@ -202,7 +202,7 @@ async function main() {
   await fs.mkdir(path.dirname(rulesReadmePath), { recursive: true });
 
   // 内容未变化时复用上次 main 分支的文件，避免不必要的提交
-  const previousReadme = await readPreviousMainFile("Rules/README.md", projectRoot);
+  const previousReadme = await readPreviousMainFile("rules/README.md", projectRoot);
   if (previousReadme !== null && previousReadme === `${newReadme}\n`) {
     await fs.writeFile(rulesReadmePath, previousReadme);
   } else {

@@ -20,7 +20,7 @@ export class BuildReleaseError extends Error {
 
 export async function buildRelease({
   projectRoot = process.cwd(),
-  sourceRoot = path.join(projectRoot, "Rules/source"),
+  sourceRoot = path.join(projectRoot, "rules/source"),
   outputRoot = path.join(projectRoot, "Rules"),
   repository = process.env.GITHUB_REPOSITORY,
   fetchImpl = fetch,
@@ -103,7 +103,7 @@ async function cleanupOrphanedOutputFiles({ outputRoot, artifacts }) {
     }
   }
   
-  // 扫描 outputRoot 的父目录（Rules/），跳过 custom/ 和 source/
+  // 扫描 outputRoot 的父目录（rules/），跳过 custom/ 和 source/
   try {
     const scanRoot = path.dirname(outputRoot);
     const allFiles = await listAllFiles(scanRoot);
