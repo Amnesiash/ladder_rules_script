@@ -82,38 +82,61 @@ export function renderRulesReadme({
 }) {
   const repo = resolveRepository(repository);
   const providerArtifacts = artifacts.filter((artifact) => artifact.kind && artifact.kind !== "manifest");
+
+  // 分离一级规则集（常用）和带层级的规则集（其他）
+  const sortedConfigs = sortRulesSourceConfigs(sourceConfigs);
+  const topLevelConfigs = sortedConfigs.filter((c) => !c.pathName || !c.pathName.includes("/"));
+  const nestedConfigs = sortedConfigs.filter((c) => c.pathName && c.pathName.includes("/"));
+
   const rows = renderRulesRows({
-    sourceConfigs: sortRulesSourceConfigs(sourceConfigs),
+    sourceConfigs: topLevelConfigs,
     artifacts: providerArtifacts,
     repository: repo,
     releaseBranch,
     updateTimes,
   });
 
-  return [
+  const otherSection = renderOtherRulesets({
+    sourceConfigs: nestedConfigs,
+    artifacts: providerArtifacts,
+    repository: repo,
+    releaseBranch,
+    updateTimes,
+  });
+
+  const parts = [
     "# 规则",
     "",
     "本目录自动生成规则文件仓库，包含各类代理软件使用的规则集合。",
     "",
     "---",
     "",
-    "## 规则列表",
+    "## 常用规则集",
     "",
     "| 文件名 | 包含内容 | 用途 | 最近更新 |",
     "| --- | --- | --- | --- |",
     rows.length ? rows.join("\n") : "| - | - | - | - |",
     "",
+  ];
+
+  if (otherSection) {
+    parts.push("## 其他规则集", "", otherSection, "");
+  }
+
+  parts.push(
     "## 使用示例",
     "",
     "### Clash 使用示例",
     "",
-    renderRulesClashExample({ sourceConfigs: sortRulesSourceConfigs(sourceConfigs), repository: repo, releaseBranch }),
+    renderRulesClashExample({ sourceConfigs: sortedConfigs, repository: repo, releaseBranch }),
     "",
     "### QX 使用示例",
     "",
     renderRulesQxExample(),
     "",
-  ].join("\n");
+  );
+
+  return parts.join("\n");
 }
 
 function sortRulesSourceConfigs(sourceConfigs) {
@@ -261,6 +284,45 @@ function renderRulesRows({ sourceConfigs, artifacts, repository, releaseBranch, 
   }
 
   return rows;
+}
+
+function renderOtherRulesets({ sourceConfigs, artifacts, repository, releaseBranch, updateTimes = {} }) {
+  if (!sourceConfigs.length) return "";
+
+  const cells = [];
+  for (const sourceConfig of sourceConfigs) {
+    const relevantArtifacts = artifacts.filter((artifact) => artifact.sourceRelativeDir === sourceConfig.sourceRelativeDir);
+    const artifactByKind = new Map();
+    for (const artifact of relevantArtifacts) {
+      artifactByKind.set(artifact.kind, artifact);
+    }
+
+    const artifact = artifactByKind.get("clash");
+    const filePathName = sourceConfig.pathName || sourceConfig.sourceName;
+    // 取路径最后一段作为显示文件名（如 Extra/Apple → Apple）
+    const fileNamePart = filePathName.split("/").pop();
+    const rawUrl = artifact
+      ? githubRawURL({ repository, branch: releaseBranch, filePath: `rules/release/${filePathName}.list` })
+      : null;
+    const updateTime = updateTimes[sourceConfig.pathName || sourceConfig.sourceName] || "-";
+
+    const cellContent = rawUrl
+      ? `[${fileNamePart}.list](${rawUrl})<br>更新时间：${updateTime}`
+      : `${fileNamePart}.list<br>更新时间：${updateTime}`;
+
+    cells.push(cellContent);
+  }
+
+  // 每行固定 5 个单元格，不足补空，无表头，纯 Markdown 表格
+  const COLS = 5;
+  const rows = [];
+  for (let i = 0; i < cells.length; i += COLS) {
+    const rowCells = cells.slice(i, i + COLS);
+    while (rowCells.length < COLS) rowCells.push("");
+    rows.push(`| ${rowCells.join(" | ")} |`);
+  }
+
+  return rows.join("\n");
 }
 
 function escapeTableCell(value) {
