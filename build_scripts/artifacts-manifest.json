@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-16T02:08:38.368Z",
+  "timestamp": "2026-06-16T05:35:48.721Z",
   "artifacts": [
     {
       "slug": "China",
@@ -10,7 +10,7 @@
       "kind": "clash",
       "label": "China Rules",
       "behavior": "classical",
-      "sha256": "b69b5be0a2dce0b2598818ad5e75cb1058c21976dbd6ec4f8b24fea7a876dcd0"
+      "sha256": "29111c9207b65390969a24dab668de6c7477172f6bda356ae0d060e79d5a5f09"
     },
     {
       "slug": "Direct",
@@ -32,7 +32,7 @@
       "kind": "clash",
       "label": "Proxy Rules",
       "behavior": "classical",
-      "sha256": "393996eedf30f02614482ed7ba5f7e714b26b8896dc69fb46d26ccd63a068c6d"
+      "sha256": "9d7621ed48487dadba670e7f1210d5221ddc508b4087e949df91821525a630b5"
     },
     {
       "slug": "Streaming",
@@ -68,17 +68,6 @@
       "sha256": "a546d21fe350ff4a01b80a7fac3b026993f98232a992befa18d53be17b2c857e"
     },
     {
-      "slug": "WeChat",
-      "name": "WeChat",
-      "sourceRelativeDir": "WeChat",
-      "outputPath": "WeChat.list",
-      "relativePath": "WeChat.list",
-      "kind": "clash",
-      "label": "WeChat Rules",
-      "behavior": "classical",
-      "sha256": "c3ad16c76629d2b5e2ebd51dcf99c0c72de479eeea54d70437a7a7003581377b"
-    },
-    {
       "slug": "StreamingHMT",
       "name": "StreamingHMT",
       "sourceRelativeDir": "StreamingHMT",
@@ -88,28 +77,6 @@
       "label": "StreamingHMT Rules",
       "behavior": "classical",
       "sha256": "cb4e86752a8408be926c530252b028f7024298b1bf13b44c96c0cc405ad3a760"
-    },
-    {
-      "slug": "Apple",
-      "name": "Apple",
-      "sourceRelativeDir": "Apple",
-      "outputPath": "Apple.list",
-      "relativePath": "Apple.list",
-      "kind": "clash",
-      "label": "Apple Rules",
-      "behavior": "classical",
-      "sha256": "1e7725be945cc4c9a58e12cd78b12057fcb0b11f5c5e9a0f67d7ee6c83a69d26"
-    },
-    {
-      "slug": "SteamCN",
-      "name": "SteamCN",
-      "sourceRelativeDir": "SteamCN",
-      "outputPath": "SteamCN.list",
-      "relativePath": "SteamCN.list",
-      "kind": "clash",
-      "label": "SteamCN Rules",
-      "behavior": "classical",
-      "sha256": "e0fc06f760cf4153686e43e7631a318ef45153e6a845d711fca79e5822be0cc5"
     },
     {
       "slug": "Telegram",
