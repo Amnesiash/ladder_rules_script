@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-16T08:11:33.229Z",
+  "timestamp": "2026-06-16T08:35:41.809Z",
   "artifacts": [
     {
       "slug": "China",
@@ -88,6 +88,17 @@
       "label": "StreamingHMT Rules",
       "behavior": "classical",
       "sha256": "cb4e86752a8408be926c530252b028f7024298b1bf13b44c96c0cc405ad3a760"
+    },
+    {
+      "slug": "Apple",
+      "name": "Apple",
+      "sourceRelativeDir": "Apple",
+      "outputPath": "Apple.list",
+      "relativePath": "Apple.list",
+      "kind": "clash",
+      "label": "Apple Rules",
+      "behavior": "classical",
+      "sha256": "fbd746f15d126a2346b229bf1d80490c62a9ff0ce736a0982d88749661afd870"
     },
     {
       "slug": "Telegram",
