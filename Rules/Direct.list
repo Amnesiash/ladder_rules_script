@@ -1,11 +1,12 @@
 # NAME: Direct
-# UPDATE: 2026-06-15 19:55:27
-# TOTAL: 66
-# DOMAIN: 22
+# UPDATE: 2026-06-17 00:11:10
+# TOTAL: 67
+# DOMAIN: 23
 # DOMAIN-SUFFIX: 42
 # DOMAIN-KEYWORD: 2
 
 DOMAIN,analytics.strava.com
+DOMAIN,api.841859784.xyz
 DOMAIN,app.adjust.com
 DOMAIN,app.appsflyer.com
 DOMAIN,bdtj.tagtic.cn

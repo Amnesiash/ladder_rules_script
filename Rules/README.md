@@ -9,15 +9,15 @@
 | 文件名 | 包含内容 | 用途 | 最近更新 |
 | --- | --- | --- | --- |
 | [`Private.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Private.list) | 私有网络 | 内网设备管理、路由器配置、本地服务访问 | 2026-06-15 19:55:28 |
-| [`Direct.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Direct.list) | 直连域名列表 | 国内可直连的常用服务，避免不必要的代理 | 2026-06-15 19:55:27 |
-| [`WeChat.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/WeChat.list) | 微信服务 | 微信相关服务、API 与访问优化 | 2026-06-16 16:11:31 |
+| [`Direct.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Direct.list) | 直连域名列表 | 国内可直连的常用服务，避免不必要的代理 | 2026-06-17 00:11:10 |
 | [`AI.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/AI.list) | AI 服务 | ChatGPT、Claude、Gemini 等主流 AI 服务 | 2026-06-15 19:55:28 |
-| [`Apple.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Apple.list) | 苹果服务 | 苹果全球服务、iCloud、App Store 国际区 | 2026-06-16 16:35:41 |
-| [`Telegram.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Telegram.list) | Telegram | Telegram 官方及第三方客户端、API 服务 | 2026-06-15 19:55:28 |
 | [`StreamingHMT.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/StreamingHMT.list) | 港澳台流媒体 | 哔哩哔哩、爱奇艺等港澳台流媒体 | 2026-06-15 19:55:28 |
 | [`Streaming.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Streaming.list) | 国际流媒体 | Netflix、Disney+、HBO 等国际流媒体 | 2026-06-16 09:49:27 |
 | [`Proxy.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Proxy.list) | 代理服务列表 | 国外代理、VPN、科学上网服务 | 2026-06-16 13:35:47 |
 | [`China.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/China.list) | 中国网站列表 | 国内网站、服务，确保直连访问 | 2026-06-16 13:35:46 |
+| [`Extra/Apple.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Extra/Apple.list) | 规则集合 | 按需分流与策略匹配 | - |
+| [`Extra/Telegram.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Extra/Telegram.list) | 规则集合 | 按需分流与策略匹配 | - |
+| [`Extra/WeChat.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Extra/WeChat.list) | 规则集合 | 按需分流与策略匹配 | - |
 
 ## 使用示例
 
@@ -30,27 +30,27 @@ rule-providers:
   # 规则集
   Private: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Private.list}
   Direct: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Direct.list}
-  WeChat: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/WeChat.list}
   AI: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/AI.list}
-  Apple: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Apple.list}
-  Telegram: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Telegram.list}
   StreamingHMT: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/StreamingHMT.list}
   Streaming: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Streaming.list}
   Proxy: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Proxy.list}
   China: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/China.list}
+  Extra_Apple: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Extra/Apple.list}
+  Extra_Telegram: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Extra/Telegram.list}
+  Extra_WeChat: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Extra/WeChat.list}
 
 rules:
   # 订阅规则
   - RULE-SET,Private,DIRECT
   - RULE-SET,Direct,DIRECT
-  - RULE-SET,WeChat,DIRECT
   - RULE-SET,AI,AI
-  - RULE-SET,Apple,苹果服务
-  - RULE-SET,Telegram,Telegram
   - RULE-SET,StreamingHMT,哔哩哔哩
   - RULE-SET,Streaming,国际媒体
   - RULE-SET,Proxy,全球加速
   - RULE-SET,China,DIRECT
+  - RULE-SET,Extra_Apple,DIRECT
+  - RULE-SET,Extra_Telegram,DIRECT
+  - RULE-SET,Extra_WeChat,DIRECT
   - GEOIP,CN,DIRECT
 
   # 兜底规则

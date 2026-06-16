@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-16T08:35:41.809Z",
+  "timestamp": "2026-06-16T16:11:12.390Z",
   "artifacts": [
     {
       "slug": "China",
@@ -21,7 +21,7 @@
       "kind": "clash",
       "label": "Direct Rules",
       "behavior": "classical",
-      "sha256": "363f8d985f458d95916c1a54cd6bde09792caf3b27e2c801884525e14e14e9bc"
+      "sha256": "a0e6d9da8dc2df19477f76a8fb8c54c8f10732db0f3ef21c6ea71e38b90be328"
     },
     {
       "slug": "Proxy",
@@ -68,15 +68,15 @@
       "sha256": "a546d21fe350ff4a01b80a7fac3b026993f98232a992befa18d53be17b2c857e"
     },
     {
-      "slug": "WeChat",
-      "name": "WeChat",
-      "sourceRelativeDir": "WeChat",
-      "outputPath": "WeChat.list",
-      "relativePath": "WeChat.list",
+      "slug": "Extra/WeChat",
+      "name": "Extra/WeChat",
+      "sourceRelativeDir": "Extra_WeChat",
+      "outputPath": "Extra/WeChat.list",
+      "relativePath": "Extra/WeChat.list",
       "kind": "clash",
-      "label": "WeChat Rules",
+      "label": "Extra/WeChat Rules",
       "behavior": "classical",
-      "sha256": "6e63d853e78480477ebd289f2f4bcfd22a454711b03fe143368a7c5f85572c03"
+      "sha256": "6d8202e31c36858c6a2a364991b836cb69c4de2e98f33732deb16da5d3859b8e"
     },
     {
       "slug": "StreamingHMT",
@@ -90,26 +90,26 @@
       "sha256": "cb4e86752a8408be926c530252b028f7024298b1bf13b44c96c0cc405ad3a760"
     },
     {
-      "slug": "Apple",
-      "name": "Apple",
-      "sourceRelativeDir": "Apple",
-      "outputPath": "Apple.list",
-      "relativePath": "Apple.list",
+      "slug": "Extra/Apple",
+      "name": "Extra/Apple",
+      "sourceRelativeDir": "Extra_Apple",
+      "outputPath": "Extra/Apple.list",
+      "relativePath": "Extra/Apple.list",
       "kind": "clash",
-      "label": "Apple Rules",
+      "label": "Extra/Apple Rules",
       "behavior": "classical",
-      "sha256": "fbd746f15d126a2346b229bf1d80490c62a9ff0ce736a0982d88749661afd870"
+      "sha256": "c695c51bfcec09852ddfccb3d90bb269ab1f8671a1512438ac22adb91edc7ada"
     },
     {
-      "slug": "Telegram",
-      "name": "Telegram",
-      "sourceRelativeDir": "Telegram",
-      "outputPath": "Telegram.list",
-      "relativePath": "Telegram.list",
+      "slug": "Extra/Telegram",
+      "name": "Extra/Telegram",
+      "sourceRelativeDir": "Extra_Telegram",
+      "outputPath": "Extra/Telegram.list",
+      "relativePath": "Extra/Telegram.list",
       "kind": "clash",
-      "label": "Telegram Rules",
+      "label": "Extra/Telegram Rules",
       "behavior": "classical",
-      "sha256": "c021bad9699ad53f2f91f8bf8373fa51398b7f371d34952250d6b207b750e493"
+      "sha256": "6265ddb9ee96833a40966e7adbc811a17f7438669443fa89d5194e6268449a66"
     }
   ]
 }
