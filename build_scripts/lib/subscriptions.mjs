@@ -172,7 +172,7 @@ export async function sourceConfigsFromSourceTxt({ projectRoot, sourceRoot }) {
  * 特殊字符会被替换为 _（与 sanitizeName 保持一致）
  * 例如: !CN.list -> _CN.list, Direct+.list -> Direct_.list
  */
-function deriveCacheFileNameFromUrl(url) {
+export function deriveCacheFileNameFromUrl(url) {
   try {
     const urlObj = new URL(url);
     const pathParts = urlObj.pathname.split("/").filter(Boolean);

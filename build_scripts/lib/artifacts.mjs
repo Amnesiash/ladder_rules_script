@@ -4,7 +4,7 @@ import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import { loadAllSources, toSafeFileStem } from "./config.mjs";
 import { buildSortedRulesetForClash } from "./rules.mjs";
-import { fetchWithFallback, sourceConfigsFromSourceTxt } from "./subscriptions.mjs";
+import { fetchWithFallback, sourceConfigsFromSourceTxt, deriveCacheFileNameFromUrl } from "./subscriptions.mjs";
 import { makeArtifact, writeArtifactManifest } from "./notifications.mjs";
 
 const execFileAsync = promisify(execFile);
@@ -48,7 +48,7 @@ export async function buildRelease({
     for (const group of groups.values()) {
       for (const entry of group.entries) {
         try {
-          const entryArtifacts = await processEntry({ entry, outputRoot, fetchImpl, projectRoot });
+          const entryArtifacts = await processEntry({ entry, outputRoot, fetchImpl, projectRoot, sourceRoot });
           allArtifacts.push(...entryArtifacts);
         } catch (error) {
           if (error instanceof BuildReleaseError) {
@@ -130,8 +130,8 @@ async function cleanupOrphanedOutputFiles({ outputRoot, artifacts }) {
   return { removed };
 }
 
-async function processEntry({ entry, outputRoot, fetchImpl, projectRoot }) {
-  const content = await fetchEntryContent(entry, fetchImpl);
+async function processEntry({ entry, outputRoot, fetchImpl, projectRoot, sourceRoot }) {
+  const content = await fetchEntryContent(entry, fetchImpl, { sourceRoot, sourceName: entry.sourceName });
   const artifacts = [];
 
   const clashLines = buildSortedRulesetForClash(content.split(/\r?\n/));
@@ -143,13 +143,14 @@ async function processEntry({ entry, outputRoot, fetchImpl, projectRoot }) {
   return artifacts;
 }
 
-async function fetchEntryContent(entry, fetchImpl) {
+async function fetchEntryContent(entry, fetchImpl, { sourceRoot, sourceName } = {}) {
   if (Array.isArray(entry.urls) && entry.urls.length > 0) {
     const parts = [];
     for (const url of entry.urls) {
       if (entry.type === "http") {
-        const res = await fetchWithFallback(url, {}, fetchImpl);
-        parts.push(await res.text());
+        const content = await fetchUrlContent(url, fetchImpl);
+        parts.push(content);
+        await saveToCache({ url, content, sourceRoot, sourceName });
       } else if (entry.type === "file") {
         parts.push(await fs.readFile(url, "utf8"));
       } else if (entry.type === "inline") {
@@ -162,8 +163,9 @@ async function fetchEntryContent(entry, fetchImpl) {
   }
 
   if (entry.type === "http") {
-    const res = await fetchWithFallback(entry.url, {}, fetchImpl);
-    return await res.text();
+    const content = await fetchUrlContent(entry.url, fetchImpl);
+    await saveToCache({ url: entry.url, content, sourceRoot, sourceName });
+    return content;
   }
   if (entry.type === "file") {
     return await fs.readFile(entry.url, "utf8");
@@ -172,6 +174,21 @@ async function fetchEntryContent(entry, fetchImpl) {
     return entry.url;
   }
   throw new BuildReleaseError(`unsupported entry type: ${entry.type}`, { entryName: entry.name });
+}
+
+async function fetchUrlContent(url, fetchImpl) {
+  const res = await fetchWithFallback(url, {}, fetchImpl);
+  return await res.text();
+}
+
+async function saveToCache({ url, content, sourceRoot, sourceName }) {
+  if (!sourceRoot || !sourceName) return;
+  const cacheFileName = deriveCacheFileNameFromUrl(url);
+  if (!cacheFileName) return;
+  const cacheDir = path.join(sourceRoot, sourceName);
+  const cachePath = path.join(cacheDir, cacheFileName);
+  await fs.mkdir(cacheDir, { recursive: true });
+  await fs.writeFile(cachePath, content);
 }
 
 async function writeRulesFile({ outputRoot, entry, lines, projectRoot }) {
