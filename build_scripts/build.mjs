@@ -128,7 +128,7 @@ async function main() {
 
   // 生成 Rules/README.md，汇总分流文件、版本链接和来源
   const currentManifest = await loadPreviousManifest({
-    previousReleaseDir: result.outputRoot,
+    previousReleaseDir: path.resolve(projectRoot, "build_scripts"),
   });
 
   let changes = null;

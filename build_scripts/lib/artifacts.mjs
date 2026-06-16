@@ -48,7 +48,7 @@ export async function buildRelease({
     for (const group of groups.values()) {
       for (const entry of group.entries) {
         try {
-          const entryArtifacts = await processEntry({ entry, outputRoot, fetchImpl });
+          const entryArtifacts = await processEntry({ entry, outputRoot, fetchImpl, projectRoot });
           allArtifacts.push(...entryArtifacts);
         } catch (error) {
           if (error instanceof BuildReleaseError) {
@@ -77,13 +77,13 @@ export async function buildRelease({
   return { outputRoot, artifacts: allArtifacts, sourceConfigs };
 }
 
-async function processEntry({ entry, outputRoot, fetchImpl }) {
+async function processEntry({ entry, outputRoot, fetchImpl, projectRoot }) {
   const content = await fetchEntryContent(entry, fetchImpl);
   const artifacts = [];
 
   const clashLines = buildSortedRulesetForClash(content.split(/\r?\n/));
   if (clashLines.length) {
-    const rulesPath = await writeRulesFile({ outputRoot, entry, lines: clashLines });
+    const rulesPath = await writeRulesFile({ outputRoot, entry, lines: clashLines, projectRoot });
     artifacts.push(makeArtifact({ entry, outputRoot, filePath: rulesPath, kind: "clash", label: `${entry.name} Rules` }));
   }
 
@@ -121,14 +121,14 @@ async function fetchEntryContent(entry, fetchImpl) {
   throw new BuildReleaseError(`unsupported entry type: ${entry.type}`, { entryName: entry.name });
 }
 
-async function writeRulesFile({ outputRoot, entry, lines }) {
+async function writeRulesFile({ outputRoot, entry, lines, projectRoot }) {
   const name = toSafeFileStem(entry.name);
   const outPath = path.join(outputRoot, `${name}.list`);
 
   // 规则体未变化时，复用上次 main 分支的文件（含旧时间戳），
   // 避免仅 header 时间不同导致 sha256 变化和误报通知
-  const relativePath = path.relative(outputRoot, outPath).split(path.sep).join("/");
-  const previousContent = await readPreviousMainFile(relativePath, outputRoot);
+  const relativePath = path.relative(projectRoot, outPath).split(path.sep).join("/");
+  const previousContent = await readPreviousMainFile(relativePath, projectRoot);
   if (previousContent !== null) {
     const previousBody = extractBodyLines(previousContent);
     const newBody = lines.join("\n");
