@@ -239,11 +239,13 @@ DOMAIN-SUFFIX,zello.com
 DOMAIN-SUFFIX,zeronet.io
 DOMAIN-SUFFIX,zophar.net
 DOMAIN-SUFFIX,zyxel.com
+
 DOMAIN,cdn.jsdelivr.net
 DOMAIN,cdn.statically.io
 DOMAIN,lab.skk.moe
 DOMAIN,ocsp.int-x3.letsencrypt.org
 DOMAIN,search.arc.net
+
 # > Akamai
 DOMAIN,a248.e.akamai.net
 DOMAIN,a771.dscq.akamai.net
@@ -501,6 +503,7 @@ DOMAIN-SUFFIX,go-to-library.sk
 DOMAIN-SUFFIX,library-access.sk
 DOMAIN-SUFFIX,singlelogin.rs
 DOMAIN-SUFFIX,z-library.sk
+
 # (Region-Restricted Access Denied)
 DOMAIN-SUFFIX,cnbeta.com.tw
 DOMAIN-SUFFIX,engadget.com
@@ -511,10 +514,12 @@ DOMAIN-SUFFIX,wunderground.com
 DOMAIN-SUFFIX,xiaomi.eu
 DOMAIN-SUFFIX,zaobao.com.sg
 DOMAIN-SUFFIX,zoominfo.com
+
 DOMAIN-SUFFIX,zoom.us
 DOMAIN,addons.mozilla.org
 DOMAIN,community.oneplus.com
 DOMAIN,wego.here.com
+
 # Alibaba
 DOMAIN,login.alibaba.com
 DOMAIN,merchant-rating.alibaba.com
@@ -522,15 +527,15 @@ DOMAIN,merchant-rating.alibaba.com
 DOMAIN-SUFFIX,go.dev
 DOMAIN-SUFFIX,golang.org
 # ---(Apple)---
-DOMAIN-SUFFIX,appsto.re
-DOMAIN-SUFFIX,smoot.apple.com
-DOMAIN,amp-api.podcasts.apple.com
-DOMAIN,beta.music.apple.com
-DOMAIN,books.itunes.apple.com
-DOMAIN,facetime.apple.com
-DOMAIN,lookup-api.apple.com
-DOMAIN,radio.itunes.apple.com
-DOMAIN,apple-relay.apple.com
+DOMAIN-SUFFIX,appsto.re // Apple URL Shortener
+DOMAIN-SUFFIX,smoot.apple.com // Spotlight
+DOMAIN,amp-api.podcasts.apple.com // Podcasts
+DOMAIN,beta.music.apple.com // Apple Music Web
+DOMAIN,books.itunes.apple.com // iBooks Store download
+DOMAIN,facetime.apple.com // FaceTime Links
+DOMAIN,lookup-api.apple.com // Look Up
+DOMAIN,radio.itunes.apple.com // Apple Music Radio
+DOMAIN,apple-relay.apple.com // Apple Intelligence
 DOMAIN,apple-relay.cloudflare.com
 DOMAIN,apple-relay.fastly-edge.com
 DOMAIN,cp4.cloudflare.com

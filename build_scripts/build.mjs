@@ -104,7 +104,7 @@ async function main() {
   // 备份 source.txt
   await backupSourceTxtEntries({
     projectRoot,
-    sourceRoot: path.resolve(projectRoot, args.source ?? "source"),
+    sourceRoot: path.resolve(projectRoot, args.source ?? "Rules/source"),
   });
 
   // 同步清理 source 缓存（删除 rule_source.txt 中不再引用的缓存文件）
@@ -147,7 +147,7 @@ async function main() {
   // 执行构建
   const result = await buildRelease({
     projectRoot,
-    sourceRoot: path.resolve(projectRoot, args.source ?? "source"),
+    sourceRoot,
     outputRoot: path.resolve(projectRoot, args.out ?? "Rules"),
     repository,
   });

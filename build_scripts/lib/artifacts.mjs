@@ -20,7 +20,7 @@ export class BuildReleaseError extends Error {
 
 export async function buildRelease({
   projectRoot = process.cwd(),
-  sourceRoot = path.join(projectRoot, "source"),
+  sourceRoot = path.join(projectRoot, "Rules/source"),
   outputRoot = path.join(projectRoot, "Rules"),
   repository = process.env.GITHUB_REPOSITORY,
   fetchImpl = fetch,
