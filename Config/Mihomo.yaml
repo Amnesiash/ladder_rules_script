@@ -236,8 +236,8 @@ rules:
   - RULE-SET, AI, AI
   - RULE-SET, Telegram, Telegram
   - RULE-SET, Streaming, 国际流媒体
-  - RULE-SET, China, 直连
   - RULE-SET, Proxy, 代理加速
+  - RULE-SET, China, 直连
   - GEOIP, CN, 直连
 
   # 兜底规则
