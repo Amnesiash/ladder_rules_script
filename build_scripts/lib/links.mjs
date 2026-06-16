@@ -255,7 +255,7 @@ function renderRulesRows({ sourceConfigs, artifacts, repository, releaseBranch, 
       ? `[\`${fileName}\`](${githubRawURL({ repository, branch: releaseBranch, filePath: `Rules/${fileName}` })})`
       : `\`${fileName}\``;
     const info = RULE_ROW_INFO[sourceConfig.sourceName] || DEFAULT_RULE_ROW_INFO;
-    const updateTime = updateTimes[sourceConfig.sourceName] || "-";
+    const updateTime = updateTimes[sourceConfig.pathName || sourceConfig.sourceName] || "-";
 
     rows.push(`| ${fileCell} | ${escapeTableCell(info.content)} | ${escapeTableCell(info.purpose)} | ${updateTime} |`);
   }

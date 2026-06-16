@@ -136,11 +136,10 @@ export async function sourceConfigsFromSourceTxt({ projectRoot, sourceRoot }) {
 
   for (const section of sections) {
     // 支持 [Extra/Apple] 这样的多级路径命名
-    // sourceName 保持为 sanitize 后的扁平名称（用于标识符）
-    // sourceRelativeDir 使用路径形式（用于输出目录结构）
+    // sourceName 保持为 sanitize 后的扁平名称（用于标识符、YAML key）
+    // pathName 使用路径形式（用于输出文件路径和缓存目录结构）
     const sourceName = sanitizeName(section.name);
     const pathName = toSafePathStem(section.name);
-    const sourceRelativeDir = sourceName;
     const firstUrl = section.urls[0];
     const files = [
       {
@@ -150,14 +149,14 @@ export async function sourceConfigsFromSourceTxt({ projectRoot, sourceRoot }) {
         urls: [...section.urls],
         format: inferFormatFromUrl(firstUrl),
         behavior: "classical",
-        sourceName,
-        sourceRelativeDir,
+        sourceName: pathName,
+        sourceRelativeDir: pathName,
       },
     ];
 
     configs.push({
       sourceName,
-      sourceRelativeDir,
+      sourceRelativeDir: pathName,
       pathName,
       configFiles: [],
       files,
@@ -214,81 +213,41 @@ export async function syncSourceCache({ projectRoot, sourceRoot }) {
 
   const sections = parseSourceFile(content.toString("utf8"));
   
-  // 构建预期的缓存文件映射: { sectionName: Set<fileName> }
-  const expectedCacheFiles = new Map();
+  // 构建预期的缓存文件路径集合（相对于 sourceRoot）
+  const expectedPaths = new Set();
   
   for (const section of sections) {
-    const sectionName = sanitizeName(section.name);
-    const fileNames = new Set();
+    const pathName = toSafePathStem(section.name);
     
     for (const url of section.urls) {
       const cacheFileName = deriveCacheFileNameFromUrl(url);
       if (cacheFileName) {
-        fileNames.add(cacheFileName);
+        expectedPaths.add(path.join(pathName, cacheFileName));
       }
     }
-    
-    expectedCacheFiles.set(sectionName, fileNames);
   }
   
   const removed = [];
   const errors = [];
   
-  // 扫描 source 目录 (Rules/source)
-  try {
-    const sourceEntries = await fs.readdir(sourceRoot, { withFileTypes: true });
+  // 递归扫描 source 目录
+  const allFiles = await listFilesRecursively(sourceRoot);
+  
+  for (const filePath of allFiles) {
+    const relativePath = path.relative(sourceRoot, filePath);
     
-    for (const entry of sourceEntries) {
-      if (!entry.isDirectory()) continue;
-      
-      const sectionName = entry.name;
-      const sectionDir = path.join(sourceRoot, sectionName);
-      const expectedFiles = expectedCacheFiles.get(sectionName);
-      
-      // 如果 rule_source.txt 中没有这个 section，删除整个目录
-      if (!expectedFiles) {
-        try {
-          await fs.rm(sectionDir, { recursive: true, force: true });
-          removed.push({ type: "directory", path: sectionDir });
-        } catch (err) {
-          errors.push({ path: sectionDir, error: err.message });
-        }
-        continue;
-      }
-      
-      // 检查该 section 目录下的文件
+    if (!expectedPaths.has(relativePath)) {
       try {
-        const files = await fs.readdir(sectionDir);
-        
-        for (const file of files) {
-          if (!expectedFiles.has(file)) {
-            const filePath = path.join(sectionDir, file);
-            try {
-              await fs.unlink(filePath);
-              removed.push({ type: "file", path: filePath });
-            } catch (err) {
-              errors.push({ path: filePath, error: err.message });
-            }
-          }
-        }
-        
-        // 如果目录为空，删除目录
-        const remainingFiles = await fs.readdir(sectionDir);
-        if (remainingFiles.length === 0) {
-          await fs.rmdir(sectionDir);
-          removed.push({ type: "empty-directory", path: sectionDir });
-        }
+        await fs.unlink(filePath);
+        removed.push({ type: "file", path: filePath });
       } catch (err) {
-        if (err.code !== "ENOENT") {
-          errors.push({ path: sectionDir, error: err.message });
-        }
+        errors.push({ path: filePath, error: err.message });
       }
-    }
-  } catch (err) {
-    if (err.code !== "ENOENT") {
-      errors.push({ path: sourceRoot, error: err.message });
     }
   }
+  
+  // 清理空目录
+  await removeEmptyDirs(sourceRoot);
   
   return { removed, errors };
 }
