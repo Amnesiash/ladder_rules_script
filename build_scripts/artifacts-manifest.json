@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-16T06:07:32.067Z",
+  "timestamp": "2026-06-16T08:11:33.229Z",
   "artifacts": [
     {
       "slug": "China",
@@ -66,6 +66,17 @@
       "label": "Private Rules",
       "behavior": "classical",
       "sha256": "a546d21fe350ff4a01b80a7fac3b026993f98232a992befa18d53be17b2c857e"
+    },
+    {
+      "slug": "WeChat",
+      "name": "WeChat",
+      "sourceRelativeDir": "WeChat",
+      "outputPath": "WeChat.list",
+      "relativePath": "WeChat.list",
+      "kind": "clash",
+      "label": "WeChat Rules",
+      "behavior": "classical",
+      "sha256": "6e63d853e78480477ebd289f2f4bcfd22a454711b03fe143368a7c5f85572c03"
     },
     {
       "slug": "StreamingHMT",
