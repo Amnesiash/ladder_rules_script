@@ -61,6 +61,15 @@ export async function buildRelease({
     }
   }
 
+  // 清理不再由 rule_source.txt 生成的旧输出文件
+  const cleanupResult = await cleanupOrphanedOutputFiles({ outputRoot, artifacts: allArtifacts });
+  if (cleanupResult.removed.length > 0) {
+    console.log(`已清理 ${cleanupResult.removed.length} 个旧输出文件`);
+    for (const item of cleanupResult.removed) {
+      console.log(`  - ${path.relative(projectRoot, item)}`);
+    }
+  }
+
   const manifestDir = path.join(projectRoot, "build_scripts");
   await fs.mkdir(manifestDir, { recursive: true });
   const manifestPath = await writeArtifactManifest({ outputRoot: manifestDir, artifacts: allArtifacts });
@@ -74,7 +83,51 @@ export async function buildRelease({
     }),
   );
 
-  return { outputRoot, artifacts: allArtifacts, sourceConfigs };
+  return { outputRoot, artifacts: allArtifacts, sourceConfigs, cleanup: cleanupResult };
+}
+
+/**
+ * 清理不再由当前 rule_source.txt 生成的旧输出文件
+ * 保留本次构建生成的文件，删除其他 .list 文件
+ */
+async function cleanupOrphanedOutputFiles({ outputRoot, artifacts }) {
+  const removed = [];
+  
+  // 收集本次构建生成的所有 .list 文件路径
+  const generatedFiles = new Set();
+  for (const artifact of artifacts) {
+    if (artifact.kind === "clash" && artifact.filePath) {
+      generatedFiles.add(path.resolve(artifact.filePath));
+    }
+  }
+  
+  // 扫描 outputRoot 目录下的所有 .list 文件
+  try {
+    const entries = await fs.readdir(outputRoot, { withFileTypes: true });
+    
+    for (const entry of entries) {
+      if (!entry.isFile()) continue;
+      if (!entry.name.endsWith(".list")) continue;
+      
+      const fullPath = path.resolve(outputRoot, entry.name);
+      
+      // 如果文件不在本次生成的列表中，删除它
+      if (!generatedFiles.has(fullPath)) {
+        try {
+          await fs.unlink(fullPath);
+          removed.push(fullPath);
+        } catch (err) {
+          console.warn(`清理文件失败: ${fullPath}: ${err.message}`);
+        }
+      }
+    }
+  } catch (err) {
+    if (err.code !== "ENOENT") {
+      console.warn(`扫描输出目录失败: ${err.message}`);
+    }
+  }
+  
+  return { removed };
 }
 
 async function processEntry({ entry, outputRoot, fetchImpl, projectRoot }) {
