@@ -1,15 +1,18 @@
 # Mihomo 配置
-# 日期：2026-06-15
+# 日期：2026-06-16
 # 配置作者：https://github.com/Amnesiash
 # 适用版本：所有使用 Clash Meta 核心的程序
 
 
 # ==================== 锚点配置 ====================
 # 代理提供者模板 - 订阅源基础配置
-BaseProvider: &BaseProvider {type: http, interval: 86400, proxy: DIRECT, health-check: {enable: true, url: 'https://www.google.com/generate_204', interval: 300}, filter: '^(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'}
+BaseProvider: &BaseProvider {type: http, interval: 86400, proxy: 直连, health-check: {enable: true, url: 'https://cp.cloudflare.com/generate_204', interval: 300}, filter: '^(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'}
 
 # 策略组类型模板 - 定义不同的策略组基础配置
-BaseUrltest: &BaseUrltest {type: url-test, interval: 300, tolerance: 50, timeout: 3000, max-failed-times: 3, lazy: true, url: 'https://www.gstatic.com/generate_204', hidden: true} 
+BaseUrltest: &BaseUrltest {type: url-test, interval: 300, tolerance: 50, timeout: 3000, max-failed-times: 3, lazy: true, url: 'https://cp.cloudflare.com/generate_204', hidden: true} 
+
+# 规则集行为模板
+c: &RuleSet_c {type: http, behavior: classical, format: text, interval: 86400}
 
 # ==================== 代理提供者 ====================
 proxy-providers:
@@ -19,41 +22,25 @@ proxy-providers:
 # ==================== 核心配置 ====================
 #基础配置
 mixed-port: 7890      # 混合端口 HTTP和SOCKS5用一个端口
-port: 7891
-socks-port: 7892
-unified-delay: true
-tcp-concurrent: true
-find-process-mode: 'always'
-global-client-fingerprint: chrome
-keep-alive-interval: 15
-keep-alive-idle: 600
 allow-lan: true       # 允许局域网的连接（可用来共享代理）
-mode: rule            # 规则模式：rule（规则） / global（全局代理）/ direct（全局直连）/ script (脚本)
+mode: rule            # 规则模式：rule（规则） / global（全局代理）/ 直连（全局直连）/ script (脚本)
 log-level: info       # 设置日志输出级别 (5 个级别：silent / error / warning / info / debug）
 ipv6: true            # 开启 IPv6 总开关,关闭阻断所有 IPv6 链接和屏蔽 DNS 请求 AAAA 记录
 udp: true
+unified-delay: true
+tcp-concurrent: true
+find-process-mode: strict
+keep-alive-interval: 15
+keep-alive-idle: 600
 
 geodata-mode: true
 geo-auto-update: true
 geo-update-interval: 24
 geox-url:
-  geoip:   "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat"
-  geosite: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
-  mmdb:    "https://github.com/Masaiki/GeoIP2-CN/raw/release/Country.mmdb"
-  asn:     "https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb"
-
-# 认证配置
-# authentication:
-#  - mihomo:mihomopassword
-skip-auth-prefixes:
-  - 192.168.1.0/24
-  - 192.168.31.0/24
-  - 192.168.100.0/24
-  - 127.0.0.1/8
-
-# 实验性功能
-experimental:
-  quic-go-disable-gso: true 
+  geoip: 'https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat'
+  geosite: 'https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat'
+  mmdb: 'https://github.com/Masaiki/GeoIP2-CN/raw/release/Country.mmdb'
+  asn: 'https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb'
 
 # 管理面板配置
 external-ui-url: "https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip"
@@ -90,30 +77,33 @@ tun:
     - "any:53"
     - "tcp://any:53"
   auto-route: true
-  auto-redirect: true
+  auto-re直连: true
   auto-detect-interface: true
 
 # DNS配置
 dns:
   enable: true                 # 关闭将使用系统 DNS
+  listen: 0.0.0.0:1053         # DNS监听地址
   ipv6: true                   # IPV6解析开关；如果为false，将返回ipv6结果为空
+  prefer-h3: true              # 优先使用HTTP/3协议
   enhanced-mode: fake-ip       # 模式：redir-host或fake-ip
+  fake-ip-range: 198.18.0.1/16 # Fake-IP解析地址池
   fake-ip-filter:              # fake ip 白名单列表'以下地址不会下发fakeip映射用于连接
     - "*"
     - "+.lan"
     - "+.local"
-    - "+.market.xiaomi.com"
     - "+.miwifi.com"
     - "+.docker.io"
+    - "+.market.xiaomi.com"
     - "+.push.apple.com"
   default-nameserver:          
     - tls://223.5.5.5
     - tls://223.6.6.6
   nameserver:                  # 默认DNS服务器，支持udp/tcp/dot/doh/doq
-    - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
 
-# 代理
+# 出站代理
 proxies: 
   - name: 直连
     type: direct
@@ -138,32 +128,25 @@ proxy-groups:
     proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择, 直连]
     icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/AI.png
 
-  - name: Figma
-    type: select
-    proxies: [直连, 自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择]
-    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/Gallery/Color/Figma.png
-
   - name: Telegram
     type: select
     proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择, 直连]
     icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Telegram_X.png
 
-  - name: 国际媒体
+  - name: 国际流媒体
     type: select
     proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择, 直连]
     icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Streaming!CN.png
 
   - name: 漏网之鱼
     type: select
-    proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择, 直连]
+    proxies: [直连, 自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择]
     icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Final.png
 
-
-  # 地理策略层
+  # 地理策略层 - 自动测速节点选择
   - name: 自动选择
     <<: *BaseUrltest
     include-all: true
-    exclude-type: direct
     icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png
 
   - name: 香港
@@ -208,23 +191,16 @@ proxy-groups:
     filter: "(?i)^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hongkong|台|tw|taiwan|日|jp|japan|新|sg|singapore|美|us|unitedstates)).*"
     icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/United_Nations.png
 
-
-# ==================== 规则集 ====================
-# 规则集行为模板
-c: &RuleSet_c {type: http, behavior: classical, format: text, interval: 86400}
-
-# 规则提供者
+# 规则集
 rule-providers:
   AI:
     <<: *RuleSet_c
     url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/AI.list
     path: ./ruleset/AI.list
 
-# ==================== 规则路由 ====================
+# 规则路由
 rules: 
-  - DOMAIN-SUFFIX, figma.com, Figma
   - RULE-SET, AI, AI
-
   - GEOSITE, private, 直连
   - GEOSITE, github, 代理加速
   - GEOSITE, twitter, 代理加速

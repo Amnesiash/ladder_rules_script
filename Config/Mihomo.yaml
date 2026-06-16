@@ -1,24 +1,18 @@
 # Mihomo 配置
-# 日期：2026-03-25
+# 日期：2026-06-16
 # 配置作者：https://github.com/Amnesiash
 # 适用版本：所有使用 Clash Meta 核心的程序
 
 
 # ==================== 锚点配置 ====================
 # 代理提供者模板 - 订阅源基础配置
-BaseProvider: &BaseProvider {type: http, interval: 86400, proxy: DIRECT, health-check: {enable: true, url: 'https://cp.cloudflare.com/generate_204', interval: 300}, filter: '^(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'}
+BaseProvider: &BaseProvider {type: http, interval: 86400, proxy: 直连, health-check: {enable: true, url: 'https://cp.cloudflare.com/generate_204', interval: 300}, filter: '^(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'}
 
 # 策略组类型模板 - 定义不同的策略组基础配置
 BaseUrltest: &BaseUrltest {type: url-test, interval: 300, tolerance: 50, timeout: 3000, max-failed-times: 3, lazy: true, url: 'https://cp.cloudflare.com/generate_204', hidden: true} 
 
-# 节点筛选正则表达式 - 基于地理位置和关键词过滤
-FilterHK: &FilterHK '^(?=.*(?i)(港|🇭🇰|HK|Hong|HKG))(?!.*(排除1|排除2|5x)).*$'
-FilterSG: &FilterSG '^(?=.*(?i)(坡|🇸🇬|SG|Sing|SIN|XSP))(?!.*(排除1|排除2|5x)).*$'
-FilterJP: &FilterJP '^(?=.*(?i)(日本|🇯🇵|JP|Japan|NRT|HND|KIX|CTS|FUK))(?!.*(排除1|排除2|5x)).*$'
-FilterKR: &FilterKR '^(?=.*(?i)(韩|🇰🇷|韓|首尔|南朝鲜|KR|KOR|Korea|South))(?!.*(排除1|排除2|5x)).*$'
-FilterUS: &FilterUS '^(?=.*(?i)(美|🇺🇸|US|USA|SJC|JFK|LAX|ORD|ATL|DFW|SFO|MIA|SEA|IAD))(?!.*(排除1|排除2|5x)).*$'
-FilterTW: &FilterTW '^(?=.*(?i)(台|🇼🇸|🇹🇼|TW|tai|TPE|TSA|KHH))(?!.*(排除1|排除2|5x)).*$'
-FilterEU: &FilterEU '^(?=.*(?i)(奥|比|保|克罗地亚|塞|捷|丹|爱沙|芬|法|德|希|匈|爱尔|意|拉|立|卢|马其它|荷|波|葡|罗|斯洛伐|斯洛文|西|瑞|英|🇧🇪|🇨🇿|🇩🇰|🇫🇮|🇫🇷|🇩🇪|🇮🇪|🇮🇹|🇱🇹|🇱🇺|🇳🇱|🇵🇱|🇸🇪|🇬🇧|CDG|FRA|AMS|MAD|BCN|FCO|MUC|BRU))(?!.*(排除1|排除2|5x)).*$'
+# 规则集行为模板
+c: &RuleSet_c {type: http, behavior: classical, format: text, interval: 86400}
 
 # ==================== 代理提供者 ====================
 proxy-providers:
@@ -28,42 +22,25 @@ proxy-providers:
 # ==================== 核心配置 ====================
 #基础配置
 mixed-port: 7890      # 混合端口 HTTP和SOCKS5用一个端口
-port: 7891
-socks-port: 7892
-unified-delay: true
-geodata-mode: false
-geodata-loader: standard
-geo-auto-update: true
-geo-update-interval: 24
-tcp-concurrent: true
-find-process-mode: 'always'
-global-client-fingerprint: chrome
-keep-alive-interval: 15
-keep-alive-idle: 600
 allow-lan: true       # 允许局域网的连接（可用来共享代理）
-mode: rule            # 规则模式：rule（规则） / global（全局代理）/ direct（全局直连）/ script (脚本)
+mode: rule            # 规则模式：rule（规则） / global（全局代理）/ 直连（全局直连）/ script (脚本)
 log-level: info       # 设置日志输出级别 (5 个级别：silent / error / warning / info / debug）
 ipv6: true            # 开启 IPv6 总开关,关闭阻断所有 IPv6 链接和屏蔽 DNS 请求 AAAA 记录
 udp: true
+unified-delay: true
+tcp-concurrent: true
+find-process-mode: strict
+keep-alive-interval: 15
+keep-alive-idle: 600
 
+geodata-mode: true
+geo-auto-update: true
+geo-update-interval: 24
 geox-url:
-  # geoip: 'https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat'
-  # geosite: 'https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat'
+  geoip: 'https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat'
+  geosite: 'https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat'
   mmdb: 'https://github.com/Masaiki/GeoIP2-CN/raw/release/Country.mmdb'
   asn: 'https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb'
-
-# 认证配置
-# authentication:
-#  - mihomo:mihomopassword
-skip-auth-prefixes:
-  - 192.168.1.0/24
-  - 192.168.31.0/24
-  - 192.168.100.0/24
-  - 127.0.0.1/8
-
-# 实验性功能
-experimental:
-  quic-go-disable-gso: true 
 
 # 管理面板配置
 external-ui-url: "https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip"
@@ -100,7 +77,7 @@ tun:
     - "any:53"
     - "tcp://any:53"
   auto-route: true
-  auto-redirect: true
+  auto-re直连: true
   auto-detect-interface: true
 
 # DNS配置
@@ -112,79 +89,168 @@ dns:
   enhanced-mode: fake-ip       # 模式：redir-host或fake-ip
   fake-ip-range: 198.18.0.1/16 # Fake-IP解析地址池
   fake-ip-filter:              # fake ip 白名单列表'以下地址不会下发fakeip映射用于连接
-    - rule-set:Direct
-    - rule-set:Private
-    - rule-set:China
-    - +.miwifi.com
-    - +.docker.io
-    - +.market.xiaomi.com
-    - +.push.apple.com
+    - "*"
+    - "+.lan"
+    - "+.local"
+    - "+.miwifi.com"
+    - "+.docker.io"
+    - "+.market.xiaomi.com"
+    - "+.push.apple.com"
   default-nameserver:          
-    - 119.29.29.29
-    - 180.184.1.1
-    - 223.5.5.5
+    - tls://223.5.5.5
+    - tls://223.6.6.6
   nameserver:                  # 默认DNS服务器，支持udp/tcp/dot/doh/doq
-    - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
 
+# 出站代理
+proxies: 
+  - name: 直连
+    type: direct
+    udp: true
 
 # 策略组
 proxy-groups:
   # 应用策略层 - Select手动选择，支持多场景应用优化，使用时默认，也可修改
-  - {name: 手动选择, type: select, include-all: true, icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/Gallery/vpnlogo/Meta.png}
-  - {name: 全球加速, type: select, proxies: [自动选择, 香港节点, 台湾节点, 日本节点, 狮城节点, 韩国节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Global.png}
-  - {name: AI, type: select, proxies: [狮城节点, 日本节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/AI.png}
-  - {name: Telegram, type: select, proxies: [自动选择, 香港节点, 台湾节点, 日本节点, 狮城节点, 韩国节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Telegram_X.png}
-  - {name: 哔哩哔哩, type: select, proxies: [DIRECT, 香港节点, 台湾节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/bilibili_3.png}
-  - {name: 国际媒体, type: select, proxies: [自动选择, 香港节点, 台湾节点, 日本节点, 狮城节点, 韩国节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Streaming!CN.png}
-  - {name: 苹果服务, type: select, proxies: [DIRECT, 自动选择, 香港节点, 台湾节点, 日本节点, 狮城节点, 韩国节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Apple.png}
-  - {name: 漏网之鱼, type: select, proxies: [DIRECT, 自动选择, 香港节点, 台湾节点, 日本节点, 狮城节点, 韩国节点, 美国节点, 欧洲节点, 手动选择], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Final.png}
+  - name: 手动选择
+    type: select
+    include-all: true
+    exclude-type: direct
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/Gallery/vpnlogo/Meta.png
+
+  - name: 代理加速
+    type: select
+    proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择, 直连]
+    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Global.png
+
+  - name: AI
+    type: select
+    proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择, 直连]
+    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/AI.png
+
+  - name: Telegram
+    type: select
+    proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择, 直连]
+    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Telegram_X.png
+
+  - name: 国际流媒体
+    type: select
+    proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择, 直连]
+    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Streaming!CN.png
+
+  - name: 漏网之鱼
+    type: select
+    proxies: [直连, 自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择]
+    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Final.png
 
   # 地理策略层 - 自动测速节点选择
-  - {name: 自动选择, <<: *BaseUrltest, include-all: true, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png}
-  - {name: 香港节点, <<: *BaseUrltest, include-all: true, filter: *FilterHK, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Hong_Kong.png}
-  - {name: 台湾节点, <<: *BaseUrltest, include-all: true, filter: *FilterTW, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Taiwan.png}
-  - {name: 日本节点, <<: *BaseUrltest, include-all: true, filter: *FilterJP, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Japan.png}
-  - {name: 狮城节点, <<: *BaseUrltest, include-all: true, filter: *FilterSG, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Singapore.png}
-  - {name: 韩国节点, <<: *BaseUrltest, include-all: true, filter: *FilterKR, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Korea.png}
-  - {name: 美国节点, <<: *BaseUrltest, include-all: true, filter: *FilterUS, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/United_States.png}
-  - {name: 欧洲节点, <<: *BaseUrltest, include-all: true, filter: *FilterEU, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/European_Union.png}
+  - name: 自动选择
+    <<: *BaseUrltest
+    include-all: true
+    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png
 
-# ==================== 规则集 ====================
-# 规则集行为模板
-c: &RuleSet_c {type: http, behavior: classical, format: text, interval: 86400}
-d: &RuleSet_d {type: http, behavior: domain, format: text, interval: 86400}
-i: &RuleSet_i {type: http, behavior: ipcidr, format: text, interval: 86400}
+  - name: 香港
+    <<: *BaseUrltest
+    include-all: true
+    exclude-type: direct
+    filter: "(?i)港|hk|hongkong|hong kong"
+    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Hong_Kong.png
 
-# 规则提供者
+  - name: 台湾
+    <<: *BaseUrltest
+    include-all: true
+    exclude-type: direct
+    filter: "(?i)台|tw|taiwan"
+    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Taiwan.png
+
+  - name: 日本
+    <<: *BaseUrltest
+    include-all: true
+    exclude-type: direct
+    filter: "(?i)日|jp|japan"
+    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Japan.png
+
+  - name: 新加坡
+    <<: *BaseUrltest
+    include-all: true
+    exclude-type: direct
+    filter: "(?i)新|sg|singapore"
+    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Singapore.png
+
+  - name: 美国
+    <<: *BaseUrltest
+    include-all: true
+    exclude-type: direct
+    filter: "(?i)美|us|unitedstates|united states"
+    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/United_States.png
+
+  - name: 其他地区
+    <<: *BaseUrltest
+    include-all: true
+    exclude-type: direct
+    filter: "(?i)^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hongkong|台|tw|taiwan|日|jp|japan|新|sg|singapore|美|us|unitedstates)).*"
+    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/United_Nations.png
+
+# 规则集
 rule-providers:
-  Direct:        {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Direct.list, path: ./ruleset/Direct.list}
-  WeChat:        {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/WeChat.list, path: ./ruleset/WeChat.list}
-  SteamCN:       {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/SteamCN.list, path: ./ruleset/SteamCN.list}
-  Private:       {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Private.list, path: ./ruleset/Private.list}
-  AI:            {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/AI.list, path: ./ruleset/AI.list}
-  Apple:         {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Apple.list, path: ./ruleset/Apple.list}
-  Telegram:      {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Telegram.list, path: ./ruleset/Telegram.list}
-  StreamingHMT:  {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/StreamingHMT.list, path: ./ruleset/StreamingHMT.list}
-  Streaming:     {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Streaming.list, path: ./ruleset/Streaming.list}
-  Proxy:         {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Proxy.list, path: ./ruleset/Proxy.list}
-  China:         {<<: *RuleSet_c, url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/China.list, path: ./ruleset/China.list}
+  Direct:
+    <<: *RuleSet_c
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Direct.list
+    path: ./ruleset/Direct.list
 
-# ==================== 规则路由 ====================
-rules: 
+  WeChat:
+    <<: *RuleSet_c
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/WeChat.list
+    path: ./ruleset/WeChat.list
+
+  SteamCN:
+    <<: *RuleSet_c
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/SteamCN.list
+    path: ./ruleset/SteamCN.list
+
+  Private:
+    <<: *RuleSet_c
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Private.list
+    path: ./ruleset/Private.list
+
+  AI:
+    <<: *RuleSet_c
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/AI.list
+    path: ./ruleset/AI.list
+
+  Telegram:
+    <<: *RuleSet_c
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Telegram.list
+    path: ./ruleset/Telegram.list
+
+  Streaming:
+    <<: *RuleSet_c
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Streaming.list
+    path: ./ruleset/Streaming.list
+
+  Proxy:
+    <<: *RuleSet_c
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Proxy.list
+    path: ./ruleset/Proxy.list
+
+  China:
+    <<: *RuleSet_c
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/China.list
+    path: ./ruleset/China.list
+
+# 规则路由
+rules:
   # > 订阅规则
-  - RULE-SET, Private, DIRECT
-  - RULE-SET, Direct, DIRECT
-  - RULE-SET, WeChat, DIRECT
-  - RULE-SET, SteamCN, DIRECT
+  - RULE-SET, Private, 直连
+  - RULE-SET, Direct, 直连
+  - RULE-SET, WeChat, 直连
+  - RULE-SET, SteamCN, 直连
   - RULE-SET, AI, AI
-  - RULE-SET, Apple, 苹果服务
   - RULE-SET, Telegram, Telegram
-  - RULE-SET, StreamingHMT, 哔哩哔哩
-  - RULE-SET, Streaming, 国际媒体
-  - RULE-SET, Proxy, 全球加速
-  - RULE-SET, China, DIRECT
-  - GEOIP, CN, DIRECT
+  - RULE-SET, Streaming, 国际流媒体
+  - RULE-SET, Proxy, 代理加速
+  - RULE-SET, China, 直连
+  - GEOIP, CN, 直连
 
   # 兜底规则
   - MATCH, 漏网之鱼
