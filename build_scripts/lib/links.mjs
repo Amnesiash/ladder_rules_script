@@ -152,7 +152,7 @@ function renderRulesClashExample({ sourceConfigs, repository, releaseBranch }) {
     const rawUrl = githubRawURL({
       repository,
       branch: releaseBranch,
-      filePath: `Rules/${filePathName}.list`,
+      filePath: `Rules/release/${filePathName}.list`,
     });
     lines.push(`  ${sourceConfig.sourceName}: {<<: *RuleSet_c, url: ${rawUrl}}`);
   }
@@ -180,7 +180,7 @@ function renderRulesQxExample() {
     "resource_parser_url=https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js",
     "",
     "[filter_remote]",
-    "https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Direct.list, tag=直连修正, force-policy=direct, img-url=https://github.com/Koolson/Qure/raw/master/IconSet/mini/Direct.png, update-interval=172800, opt-parser=true, enabled=true",
+    "https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/release/Direct.list, tag=直连修正, force-policy=direct, img-url=https://github.com/Koolson/Qure/raw/master/IconSet/mini/Direct.png, update-interval=172800, opt-parser=true, enabled=true",
     "```",
   ].join("\n");
 }
@@ -252,7 +252,7 @@ function renderRulesRows({ sourceConfigs, artifacts, repository, releaseBranch, 
     const filePathName = sourceConfig.pathName || sourceConfig.sourceName;
     const fileName = `${filePathName}.list`;
     const fileCell = artifact
-      ? `[\`${fileName}\`](${githubRawURL({ repository, branch: releaseBranch, filePath: `Rules/${fileName}` })})`
+      ? `[\`${fileName}\`](${githubRawURL({ repository, branch: releaseBranch, filePath: `Rules/release/${fileName}` })})`
       : `\`${fileName}\``;
     const info = RULE_ROW_INFO[sourceConfig.sourceName] || DEFAULT_RULE_ROW_INFO;
     const updateTime = updateTimes[sourceConfig.pathName || sourceConfig.sourceName] || "-";

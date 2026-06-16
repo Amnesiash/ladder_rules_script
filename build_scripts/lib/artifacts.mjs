@@ -101,14 +101,18 @@ async function cleanupOrphanedOutputFiles({ outputRoot, artifacts }) {
     }
   }
   
-  // 扫描 outputRoot 目录下的所有 .list 文件（包括子目录）
+  // 扫描 outputRoot 目录下的所有 .list 文件（包括子目录），跳过 Custom/ 目录
   try {
     const allFiles = await listAllFiles(outputRoot);
+    const customDir = path.resolve(outputRoot, "Custom");
     
     for (const fullPath of allFiles) {
       if (!fullPath.endsWith(".list")) continue;
       
       const resolvedPath = path.resolve(fullPath);
+      
+      // 跳过 Custom/ 目录下的手动维护文件
+      if (resolvedPath.startsWith(customDir + path.sep)) continue;
       
       // 如果文件不在本次生成的列表中，删除它
       if (!generatedFiles.has(resolvedPath)) {
