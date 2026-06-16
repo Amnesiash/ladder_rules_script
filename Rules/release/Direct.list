@@ -1,41 +1,12 @@
 # NAME: Direct
-# UPDATE: 2026-06-17 00:39:00
-# TOTAL: 100
-# DOMAIN: 22
-# DOMAIN-SUFFIX: 46
+# UPDATE: 2026-06-17 00:46:45
+# TOTAL: 67
+# DOMAIN: 23
+# DOMAIN-SUFFIX: 42
 # DOMAIN-KEYWORD: 2
-# <!-- <SCRIPT ASYNC SRC="HTTPS://GA.IOIOX.NET/GTAG/JS?ID=G-YR9B2BS8D8"></SCRIPT>: 1
-# <!-- <TITLE>VUE</TITLE> -->: 1
-# <!-- BUILT FILES WILL BE AUTO INJECTED -->: 1
-# <!-- GOOGLE TAG (GTAG.JS) -->: 1
-# <!-- TWITTER CARDS -->: 1
-# <!-- UMAMI ANALYTICS -->: 1
-# <!DOCTYPE HTML>: 1
-# </SCRIPT> -->: 1
-# <DIV ID="APP"></DIV>: 1
-# <HTML LANG="">: 1
-# <LINK REL="ICON" HREF="/FAVICON.ICO">: 1
-# <META CHARSET="UTF-8">: 1
-# <META HTTP-EQUIV="X-UA-COMPATIBLE" CONTENT="IE=EDGE">: 1
-# <META NAME="TWITTER:CARD" CONTENT="SUMMARY_LARGE_IMAGE" />: 1
-# <META NAME="TWITTER:CREATOR" CONTENT="@STILLESHAN" />: 1
-# <META NAME="TWITTER:SITE" CONTENT="@STILLESHAN" />: 1
-# <META NAME="VIEWPORT" CONTENT="WIDTH=DEVICE-WIDTH: 1
-# <META PROPERTY="OG:DESCRIPTION": 1
-# <META PROPERTY="OG:IMAGE" CONTENT="/IMG/GHPROXY_COM_TWITTER_800.JPG" />: 1
-# <META PROPERTY="OG:TITLE" CONTENT="GITHUB PROXY Ä»£ÇÅ É" />: 1
-# <META PROPERTY="OG:URL" CONTENT="HTTPS://GHFAST.TOP" />: 1
-# <SCRIPT DEFER SRC="/JS/CHUNK-VENDORS.JS"></SCRIPT><SCRIPT DEFER SRC="/JS/APP.JS"></SCRIPT></HEAD>: 1
-# <SCRIPT DEFER SRC="HTTPS://UMAMI.IOIOX.NET/SCRIPT.JS" DATA-WEBSITE-ID="57725903-779A-4E20-9187-D755B752A177"></SCRIPT>: 1
-# <STRONG>WE'RE SORRY BUT VUE DOESN'T WORK PROPERLY WITHOUT JAVASCRIPT ENABLED. PLEASE ENABLE IT TO CONTINUE.</STRONG>: 1
-# <TITLE>GITHUB PROXY Ä»£ÇÅ É</TITLE>: 1
-# CONTENT="GITHUB ÆÄ»¶: 1
-# FUNCTION GTAG(){DATALAYER.PUSH(ARGUMENTS);}: 1
-# GTAG('CONFIG': 1
-# GTAG('JS': 1
-# WINDOW.DATALAYER = WINDOW.DATALAYER || [];: 1
 
 DOMAIN,analytics.strava.com
+DOMAIN,api.841859784.xyz
 DOMAIN,app.adjust.com
 DOMAIN,app.appsflyer.com
 DOMAIN,bdtj.tagtic.cn
@@ -57,17 +28,11 @@ DOMAIN,tracking.miui.com
 DOMAIN,update.googleapis.com
 DOMAIN,vd.l.qq.com
 DOMAIN,vi.l.qq.com
-DOMAIN-SUFFIX,</body>
-DOMAIN-SUFFIX,</html>
-DOMAIN-SUFFIX,</noscript>
-DOMAIN-SUFFIX,<body>
-DOMAIN-SUFFIX,<head>
-DOMAIN-SUFFIX,<noscript>
-DOMAIN-SUFFIX,<script>
 DOMAIN-SUFFIX,blog.google
 DOMAIN-SUFFIX,checkip.dyndns.org
 DOMAIN-SUFFIX,checkip.synology.com
 DOMAIN-SUFFIX,checkipv6.dyndns.org
+DOMAIN-SUFFIX,clawcloudrun.com
 DOMAIN-SUFFIX,cloudstudio.work
 DOMAIN-SUFFIX,cocopilot.org
 DOMAIN-SUFFIX,czzyvideo.com
@@ -82,10 +47,12 @@ DOMAIN-SUFFIX,DSmyNAS.org
 DOMAIN-SUFFIX,FamilyDS.com
 DOMAIN-SUFFIX,FamilyDS.net
 DOMAIN-SUFFIX,FamilyDS.org
+DOMAIN-SUFFIX,ghfast.top
 DOMAIN-SUFFIX,ghp.ci
 DOMAIN-SUFFIX,googletraveladservices-cn.com
 DOMAIN-SUFFIX,googletraveladservices.com
 DOMAIN-SUFFIX,gradio.live
+DOMAIN-SUFFIX,hxcy.top
 DOMAIN-SUFFIX,i234.me
 DOMAIN-SUFFIX,iqiyis.com
 DOMAIN-SUFFIX,istoreos.com
@@ -105,33 +72,3 @@ DOMAIN-SUFFIX,synology.me
 DOMAIN-SUFFIX,tracking-protection.cdn.mozilla.net
 DOMAIN-KEYWORD,quickconnect
 DOMAIN-KEYWORD,synology
-<!-- <script async src="https://ga.ioiox.net/gtag/js?id=G-YR9B2BS8D8"></script>
-<!-- <title>vue</title> -->
-<!-- built files will be auto injected -->
-<!-- Google tag (gtag.js) -->
-<!-- Twitter Cards -->
-<!-- Umami Analytics -->
-<!DOCTYPE html>
-</script> -->
-<div id="app"></div>
-<html lang="">
-<link rel="icon" href="/favicon.ico">
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:creator" content="@stilleshan" />
-<meta name="twitter:site" content="@stilleshan" />
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta property="og:description"
-<meta property="og:image" content="/img/ghproxy_com_twitter_800.jpg" />
-<meta property="og:title" content="GitHub Proxy ä»£çå é" />
-<meta property="og:url" content="https://ghfast.top" />
-<script defer src="/js/chunk-vendors.js"></script><script defer src="/js/app.js"></script></head>
-<script defer src="https://umami.ioiox.net/script.js" data-website-id="57725903-779a-4e20-9187-d755b752a177"></script>
-<strong>We're sorry but vue doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-<title>GitHub Proxy ä»£çå é</title>
-content="GitHub æä»¶ ,Releases ,archive ,gist ,raw.githubusercontent.com æä»¶ä»£çå éä¸è½½æå¡." />
-function gtag(){dataLayer.push(arguments);}
-gtag('config','G-YR9B2BS8D8');
-gtag('js',new Date());
-window.dataLayer = window.dataLayer || [];
