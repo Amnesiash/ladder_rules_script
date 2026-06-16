@@ -88,7 +88,8 @@ export async function buildRelease({
 
 /**
  * 清理不再由当前 rule_source.txt 生成的旧输出文件
- * 保留本次构建生成的文件，删除其他 .list 文件
+ * 保留本次构建生成的文件（在 release/ 下），删除其他 .list 文件
+ * 跳过 custom/ 和 source/ 目录
  */
 async function cleanupOrphanedOutputFiles({ outputRoot, artifacts }) {
   const removed = [];
@@ -101,18 +102,19 @@ async function cleanupOrphanedOutputFiles({ outputRoot, artifacts }) {
     }
   }
   
-  // 扫描 outputRoot 目录下的所有 .list 文件（包括子目录），跳过 Custom/ 目录
+  // 扫描 outputRoot 的父目录（Rules/），跳过 custom/ 和 source/
   try {
-    const allFiles = await listAllFiles(outputRoot);
-    const customDir = path.resolve(outputRoot, "Custom");
+    const scanRoot = path.dirname(outputRoot);
+    const allFiles = await listAllFiles(scanRoot);
+    const skipDirs = [path.resolve(scanRoot, "custom"), path.resolve(scanRoot, "source")];
     
     for (const fullPath of allFiles) {
       if (!fullPath.endsWith(".list")) continue;
       
       const resolvedPath = path.resolve(fullPath);
       
-      // 跳过 Custom/ 目录下的手动维护文件
-      if (resolvedPath.startsWith(customDir + path.sep)) continue;
+      // 跳过 custom/ 和 source/ 目录下的文件
+      if (skipDirs.some((dir) => resolvedPath.startsWith(dir + path.sep) || resolvedPath === dir)) continue;
       
       // 如果文件不在本次生成的列表中，删除它
       if (!generatedFiles.has(resolvedPath)) {

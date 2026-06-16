@@ -189,7 +189,7 @@ async function main() {
     }
   }
 
-  const rulesReadmePath = path.join(projectRoot, "Rules", "release", "README.md");
+  const rulesReadmePath = path.join(projectRoot, "Rules", "README.md");
   const newReadme = renderRulesReadme({
     sourceConfigs: result.sourceConfigs,
     artifacts: result.artifacts,
@@ -200,7 +200,7 @@ async function main() {
   await fs.mkdir(path.dirname(rulesReadmePath), { recursive: true });
 
   // 内容未变化时复用上次 main 分支的文件，避免不必要的提交
-  const previousReadme = await readPreviousMainFile("Rules/release/README.md", projectRoot);
+  const previousReadme = await readPreviousMainFile("Rules/README.md", projectRoot);
   if (previousReadme !== null && previousReadme === `${newReadme}\n`) {
     await fs.writeFile(rulesReadmePath, previousReadme);
   } else {
