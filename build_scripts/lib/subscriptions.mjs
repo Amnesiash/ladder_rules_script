@@ -136,10 +136,12 @@ export async function sourceConfigsFromSourceTxt({ projectRoot, sourceRoot }) {
 
   for (const section of sections) {
     // 支持 [Extra/Apple] 这样的多级路径命名
-    // sourceName 保持为 sanitize 后的扁平名称（用于标识符、YAML key）
-    // pathName 使用路径形式（用于输出文件路径和缓存目录结构）
+    // sourceName: 扁平标识符（用于 YAML key、RULE_POLICY 查找）
+    // pathName:   路径形式（用于输出文件: Rules/release/Extra/Apple.list）
+    // displayName: 末段名称（用于缓存目录和 README 显示: Apple）
     const sourceName = sanitizeName(section.name);
     const pathName = toSafePathStem(section.name);
+    const displayName = sanitizeName(section.name.split("/").pop());
     const firstUrl = section.urls[0];
     const files = [
       {
@@ -149,15 +151,16 @@ export async function sourceConfigsFromSourceTxt({ projectRoot, sourceRoot }) {
         urls: [...section.urls],
         format: inferFormatFromUrl(firstUrl),
         behavior: "classical",
-        sourceName: pathName,
-        sourceRelativeDir: pathName,
+        sourceName: displayName,
+        sourceRelativeDir: displayName,
       },
     ];
 
     configs.push({
       sourceName,
-      sourceRelativeDir: pathName,
+      sourceRelativeDir: displayName,
       pathName,
+      displayName,
       configFiles: [],
       files,
     });

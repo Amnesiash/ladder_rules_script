@@ -250,10 +250,10 @@ function renderRulesRows({ sourceConfigs, artifacts, repository, releaseBranch, 
 
     const artifact = artifactByKind.get("clash");
     const filePathName = sourceConfig.pathName || sourceConfig.sourceName;
-    const fileName = `${filePathName}.list`;
+    const displayName = sourceConfig.displayName || sourceConfig.sourceName;
     const fileCell = artifact
-      ? `[\`${fileName}\`](${githubRawURL({ repository, branch: releaseBranch, filePath: `Rules/release/${fileName}` })})`
-      : `\`${fileName}\``;
+      ? `[\`${displayName}.list\`](${githubRawURL({ repository, branch: releaseBranch, filePath: `Rules/release/${filePathName}.list` })})`
+      : `\`${displayName}.list\``;
     const info = RULE_ROW_INFO[sourceConfig.sourceName] || DEFAULT_RULE_ROW_INFO;
     const updateTime = updateTimes[sourceConfig.pathName || sourceConfig.sourceName] || "-";
 
