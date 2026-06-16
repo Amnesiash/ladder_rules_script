@@ -16,7 +16,7 @@
 | [`Apple.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Apple.list) | 苹果服务 | 苹果全球服务、iCloud、App Store 国际区 | 2026-06-15 19:55:28 |
 | [`Telegram.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Telegram.list) | Telegram | Telegram 官方及第三方客户端、API 服务 | 2026-06-15 19:55:28 |
 | [`StreamingHMT.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/StreamingHMT.list) | 港澳台流媒体 | 哔哩哔哩、爱奇艺等港澳台流媒体 | 2026-06-15 19:55:28 |
-| [`Streaming.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Streaming.list) | 流媒体 | Netflix、Disney+、HBO 等国际流媒体 | 2026-06-15 19:55:28 |
+| [`Streaming.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Streaming.list) | 流媒体 | Netflix、Disney+、HBO 等国际流媒体 | 2026-06-16 09:49:27 |
 | [`Proxy.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/Proxy.list) | 代理服务列表 | 国外代理、VPN、科学上网服务 | 2026-06-15 19:55:27 |
 | [`China.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/Rules/China.list) | 中国网站列表 | 国内网站、服务，确保直连访问 | 2026-06-15 19:55:27 |
 

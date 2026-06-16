@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-16T01:14:00.084Z",
+  "timestamp": "2026-06-16T01:49:29.122Z",
   "artifacts": [
     {
       "slug": "China",
@@ -43,7 +43,7 @@
       "kind": "clash",
       "label": "Streaming Rules",
       "behavior": "classical",
-      "sha256": "341df67514cd1ecc529f47eea8877b6343969aad827d08b9e02d68f14b58858e"
+      "sha256": "fab4c7047360483d405250d913eadf73bff578ff330bb9a0ff4c787ac9543e2c"
     },
     {
       "slug": "AI",
