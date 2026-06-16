@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-16T18:16:08.044Z",
+  "timestamp": "2026-06-16T18:18:31.651Z",
   "artifacts": [
     {
       "slug": "China",
@@ -10,7 +10,7 @@
       "kind": "clash",
       "label": "China Rules",
       "behavior": "classical",
-      "sha256": "0e0a27f44916cbf459d69e6482abe25ad1790fcaf012421169cc8c396407b5a7"
+      "sha256": "5d9d6f804d93377983580392777a80a2d509ec85cef841dd3fc36b21a4bd59b4"
     },
     {
       "slug": "Direct",
@@ -21,7 +21,7 @@
       "kind": "clash",
       "label": "Direct Rules",
       "behavior": "classical",
-      "sha256": "f8c6e5fc5d7063f2955527db445eadb6898c69f8105d2085713975b84a351d15"
+      "sha256": "99eae93c6c1c3c031b2bb90e0609d3cb19c0de1954c6c9a3108c1b028cc80685"
     },
     {
       "slug": "Proxy",
@@ -32,7 +32,7 @@
       "kind": "clash",
       "label": "Proxy Rules",
       "behavior": "classical",
-      "sha256": "2e49b874e2aabe46a545557e6b3c98dbb0420c44935cb06fb1574a6a3546e8ee"
+      "sha256": "768679f2534bd525568d0704f83df89e0e4152c88dc937f275c0ac2a24a42614"
     },
     {
       "slug": "Streaming",
@@ -43,7 +43,7 @@
       "kind": "clash",
       "label": "Streaming Rules",
       "behavior": "classical",
-      "sha256": "5abc0ceeb5f415014ec45daf4288d9f20e5caa57d0e019df4eb222070a165cb7"
+      "sha256": "0a182cfb7875c995216173e8ff1f08f71d8cff3163b22be69f09f7a9e7540a63"
     },
     {
       "slug": "AI",
@@ -54,7 +54,7 @@
       "kind": "clash",
       "label": "AI Rules",
       "behavior": "classical",
-      "sha256": "eb9eb075c9cd1d828acbacd7d3053e4a74d65ae1007a269c7b51409b014ca300"
+      "sha256": "3c0be56f3ffee4faffcc8d6d9a92c643ab3059e86620b1e39e3a6ae735f6d6fb"
     },
     {
       "slug": "Private",
@@ -65,7 +65,7 @@
       "kind": "clash",
       "label": "Private Rules",
       "behavior": "classical",
-      "sha256": "b9d6b93d56af30e9a9fcb843ad61c3dad7775bddabb6a51d6ab6cdd6bd9eb832"
+      "sha256": "e527f5b53bbe9119cfe0ae3793d1918a6b227c2ef0fd8ab4b27ddcef12dbac29"
     },
     {
       "slug": "Extra/SteamCN",
@@ -76,7 +76,7 @@
       "kind": "clash",
       "label": "Extra/SteamCN Rules",
       "behavior": "classical",
-      "sha256": "e8834e7a0057b31042d7d79a3b692ebc95ae801b35cea307364bb714e4413446"
+      "sha256": "e11b1f556e1e7bb766ba9778fffdf2da5635dd210a28428e3e79a56d7698dba5"
     },
     {
       "slug": "Extra/WeChat",
@@ -87,7 +87,7 @@
       "kind": "clash",
       "label": "Extra/WeChat Rules",
       "behavior": "classical",
-      "sha256": "b0c87b4eeb572791c91cc60ea1d961eecacdba0808cc402b81feb0b80a9b3968"
+      "sha256": "0d1655759d3a3e53b89488952edb8198b4ae87123e60822ec53d8d3dad3a4736"
     },
     {
       "slug": "StreamingHMT",
@@ -98,7 +98,7 @@
       "kind": "clash",
       "label": "StreamingHMT Rules",
       "behavior": "classical",
-      "sha256": "04fc9110c8f6bdaa3bd0f881c5eed2e845427513c790064489dbf0f71924a454"
+      "sha256": "47ebe793d52fd28efe19dd683db104f057977ac3c3914145252058ee706b5e19"
     },
     {
       "slug": "Extra/Apple",
@@ -109,7 +109,7 @@
       "kind": "clash",
       "label": "Extra/Apple Rules",
       "behavior": "classical",
-      "sha256": "4b12cf0af68fd7161121618f044217262e4c188a32e56c04b20c13ab940bf626"
+      "sha256": "41fd4cb564e19460a50396adf8d4266922aee9afb741272c33bf876722c6f065"
     },
     {
       "slug": "Extra/Telegram",
@@ -120,7 +120,7 @@
       "kind": "clash",
       "label": "Extra/Telegram Rules",
       "behavior": "classical",
-      "sha256": "2ff4eac3ebffbcfbca7d487082ce9eb06d9745e352ed94717cde56c24fd3f26a"
+      "sha256": "c2da2a3361788c34ed0878d03974c75543a1629ef4063602fd719f5ffc1ad4e3"
     }
   ]
 }

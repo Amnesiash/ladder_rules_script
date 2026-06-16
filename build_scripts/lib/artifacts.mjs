@@ -70,7 +70,8 @@ export async function buildRelease({
     }
   }
 
-  const manifestDir = path.join(projectRoot, "build_scripts");
+  // manifest 写入 release 目录
+  const manifestDir = outputRoot;
   await fs.mkdir(manifestDir, { recursive: true });
   const manifestPath = await writeArtifactManifest({ outputRoot: manifestDir, artifacts: allArtifacts });
   allArtifacts.push(

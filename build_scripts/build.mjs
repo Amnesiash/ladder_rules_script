@@ -133,9 +133,11 @@ async function main() {
     throw new Error('缺少仓库信息：请设置环境变量 GITHUB_REPOSITORY，或使用参数 --repo "owner/repo"');
   }
 
+  const outputRoot = path.resolve(projectRoot, args.out ?? "Rules/release");
+
   // 加载之前的 manifest（用于变更检测）
   let previousManifest = await loadPreviousManifest({
-    previousReleaseDir: path.resolve(projectRoot, "build_scripts"),
+    previousReleaseDir: outputRoot,
   });
   if (!previousManifest) {
     previousManifest = await loadPreviousManifest({
@@ -148,7 +150,7 @@ async function main() {
   const result = await buildRelease({
     projectRoot,
     sourceRoot,
-    outputRoot: path.resolve(projectRoot, args.out ?? "Rules/release"),
+    outputRoot,
     repository,
   });
 
@@ -156,7 +158,7 @@ async function main() {
 
   // 生成 Rules/README.md，汇总分流文件、版本链接和来源
   const currentManifest = await loadPreviousManifest({
-    previousReleaseDir: path.resolve(projectRoot, "build_scripts"),
+    previousReleaseDir: outputRoot,
   });
 
   let changes = null;
