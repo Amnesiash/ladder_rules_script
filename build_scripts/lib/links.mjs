@@ -148,10 +148,11 @@ function renderRulesClashExample({ sourceConfigs, repository, releaseBranch }) {
   ];
 
   for (const sourceConfig of sourceConfigs) {
+    const filePathName = sourceConfig.pathName || sourceConfig.sourceName;
     const rawUrl = githubRawURL({
       repository,
       branch: releaseBranch,
-      filePath: `Rules/${sourceConfig.sourceName}.list`,
+      filePath: `Rules/${filePathName}.list`,
     });
     lines.push(`  ${sourceConfig.sourceName}: {<<: *RuleSet_c, url: ${rawUrl}}`);
   }
@@ -248,7 +249,8 @@ function renderRulesRows({ sourceConfigs, artifacts, repository, releaseBranch, 
     }
 
     const artifact = artifactByKind.get("clash");
-    const fileName = `${sourceConfig.sourceName}.list`;
+    const filePathName = sourceConfig.pathName || sourceConfig.sourceName;
+    const fileName = `${filePathName}.list`;
     const fileCell = artifact
       ? `[\`${fileName}\`](${githubRawURL({ repository, branch: releaseBranch, filePath: `Rules/${fileName}` })})`
       : `\`${fileName}\``;

@@ -2,7 +2,7 @@ import fs from "node:fs/promises";
 import { execFile } from "node:child_process";
 import path from "node:path";
 import { promisify } from "node:util";
-import { parseSourceFile, sanitizeName } from "./config.mjs";
+import { parseSourceFile, sanitizeName, toSafePathStem, sanitizePathSegment } from "./config.mjs";
 
 const execFileAsync = promisify(execFile);
 
@@ -135,25 +135,30 @@ export async function sourceConfigsFromSourceTxt({ projectRoot, sourceRoot }) {
   const configs = [];
 
   for (const section of sections) {
+    // 支持 [Extra/Apple] 这样的多级路径命名
+    // sourceName 保持为 sanitize 后的扁平名称（用于标识符）
+    // sourceRelativeDir 使用路径形式（用于输出目录结构）
     const sourceName = sanitizeName(section.name);
+    const pathName = toSafePathStem(section.name);
     const sourceRelativeDir = sourceName;
     const firstUrl = section.urls[0];
     const files = [
       {
-        name: sourceName,
+        name: pathName,
         type: "http",
         url: firstUrl,
         urls: [...section.urls],
         format: inferFormatFromUrl(firstUrl),
         behavior: "classical",
         sourceName,
-        sourceRelativeDir: sourceName,
+        sourceRelativeDir,
       },
     ];
 
     configs.push({
       sourceName,
       sourceRelativeDir,
+      pathName,
       configFiles: [],
       files,
     });
@@ -169,8 +174,8 @@ export async function sourceConfigsFromSourceTxt({ projectRoot, sourceRoot }) {
  * 例如: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
  *       -> ProxyMedia@ACL4SSR.list
  * 
- * 特殊字符会被替换为 _（与 sanitizeName 保持一致）
- * 例如: !CN.list -> _CN.list, Direct+.list -> Direct_.list
+ * 只过滤 Windows 非法文件名字符，保留 ! + 等合法字符
+ * 例如: !CN.list -> !CN@xxx.list, Direct+.list -> Direct+@xxx.list
  */
 export function deriveCacheFileNameFromUrl(url) {
   try {
@@ -188,11 +193,11 @@ export function deriveCacheFileNameFromUrl(url) {
     // 提取来源（GitHub 用户名/组织名，路径的第一个部分）
     const source = pathParts[0];
     
-    // 对 baseName 应用与 sanitizeName 相同的转换
-    // 将非字母数字字符替换为 _
-    const sanitizedBaseName = baseName.replace(/[^\w.-]+/g, "_");
+    // 只过滤 Windows 非法文件名字符，保留 ! + 等合法字符
+    const sanitizedBaseName = sanitizePathSegment(baseName);
+    const sanitizedSource = sanitizePathSegment(source);
     
-    return `${sanitizedBaseName}@${source}${ext}`;
+    return `${sanitizedBaseName}@${sanitizedSource}${ext}`;
   } catch {
     return null;
   }

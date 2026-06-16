@@ -2,7 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
-import { loadAllSources, toSafeFileStem } from "./config.mjs";
+import { loadAllSources, toSafeFileStem, toSafePathStem } from "./config.mjs";
 import { buildSortedRulesetForClash } from "./rules.mjs";
 import { fetchWithFallback, sourceConfigsFromSourceTxt, deriveCacheFileNameFromUrl } from "./subscriptions.mjs";
 import { makeArtifact, writeArtifactManifest } from "./notifications.mjs";
@@ -101,26 +101,28 @@ async function cleanupOrphanedOutputFiles({ outputRoot, artifacts }) {
     }
   }
   
-  // 扫描 outputRoot 目录下的所有 .list 文件
+  // 扫描 outputRoot 目录下的所有 .list 文件（包括子目录）
   try {
-    const entries = await fs.readdir(outputRoot, { withFileTypes: true });
+    const allFiles = await listAllFiles(outputRoot);
     
-    for (const entry of entries) {
-      if (!entry.isFile()) continue;
-      if (!entry.name.endsWith(".list")) continue;
+    for (const fullPath of allFiles) {
+      if (!fullPath.endsWith(".list")) continue;
       
-      const fullPath = path.resolve(outputRoot, entry.name);
+      const resolvedPath = path.resolve(fullPath);
       
       // 如果文件不在本次生成的列表中，删除它
-      if (!generatedFiles.has(fullPath)) {
+      if (!generatedFiles.has(resolvedPath)) {
         try {
-          await fs.unlink(fullPath);
-          removed.push(fullPath);
+          await fs.unlink(resolvedPath);
+          removed.push(resolvedPath);
         } catch (err) {
-          console.warn(`清理文件失败: ${fullPath}: ${err.message}`);
+          console.warn(`清理文件失败: ${resolvedPath}: ${err.message}`);
         }
       }
     }
+    
+    // 清理空目录
+    await removeEmptySubdirs(outputRoot);
   } catch (err) {
     if (err.code !== "ENOENT") {
       console.warn(`扫描输出目录失败: ${err.message}`);
@@ -192,8 +194,10 @@ async function saveToCache({ url, content, sourceRoot, sourceName }) {
 }
 
 async function writeRulesFile({ outputRoot, entry, lines, projectRoot }) {
-  const name = toSafeFileStem(entry.name);
+  // 支持 [Extra/Apple] 多级路径: entry.name 可能是 "Extra/Apple"
+  const name = toSafePathStem(entry.name);
   const outPath = path.join(outputRoot, `${name}.list`);
+  await fs.mkdir(path.dirname(outPath), { recursive: true });
 
   // 规则体未变化时，复用上次 main 分支的文件（含旧时间戳），
   // 避免仅 header 时间不同导致 sha256 变化和误报通知
@@ -223,6 +227,61 @@ async function readPreviousMainFile(relativePath, cwd) {
     return stdout;
   } catch {
     return null;
+  }
+}
+
+/** 递归列出目录下所有文件 */
+async function listAllFiles(dir) {
+  const result = [];
+  const stack = [dir];
+  while (stack.length > 0) {
+    const current = stack.pop();
+    let entries;
+    try {
+      entries = await fs.readdir(current, { withFileTypes: true });
+    } catch {
+      continue;
+    }
+    for (const entry of entries) {
+      const fullPath = path.join(current, entry.name);
+      if (entry.isDirectory()) {
+        stack.push(fullPath);
+      } else if (entry.isFile()) {
+        result.push(fullPath);
+      }
+    }
+  }
+  return result;
+}
+
+/** 递归清理子目录中的空目录 */
+async function removeEmptySubdirs(rootDir) {
+  const dirs = [];
+  const stack = [rootDir];
+  while (stack.length > 0) {
+    const current = stack.pop();
+    let entries;
+    try {
+      entries = await fs.readdir(current, { withFileTypes: true });
+    } catch {
+      continue;
+    }
+    for (const entry of entries) {
+      if (entry.isDirectory()) {
+        stack.push(path.join(current, entry.name));
+      }
+    }
+    if (current !== rootDir) dirs.push(current);
+  }
+  // 从深到浅删除空目录
+  dirs.sort((a, b) => b.length - a.length);
+  for (const dir of dirs) {
+    try {
+      const remaining = await fs.readdir(dir);
+      if (remaining.length === 0) await fs.rmdir(dir);
+    } catch {
+      // ignore
+    }
   }
 }
 

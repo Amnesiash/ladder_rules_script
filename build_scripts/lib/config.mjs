@@ -52,6 +52,32 @@ export function toSafeFileStem(name) {
   return name.replace(/[^\w.-]+/g, "_");
 }
 
+/**
+ * 将带有 / 的名称转换为安全的路径片段。
+ * 只过滤文件名中的非法字符（Windows 保留字符和控制字符），保留 ! + 等合法字符。
+ * 例如: "Extra/Apple" -> "Extra/Apple", "Extra/Streaming/!CN" -> "Extra/Streaming/!CN"
+ * 支持多级目录结构。
+ */
+export function toSafePathStem(name) {
+  return String(name ?? "")
+    .trim()
+    .split("/")
+    .map((part) => sanitizePathSegment(part))
+    .filter(Boolean)
+    .join("/");
+}
+
+/**
+ * 清理路径片段中的非法文件名字符。
+ * Windows 保留字符: < > : " | ? * 以及控制字符（含 \x00-\x1f）
+ * 注意: / 和 \ 已在 split("/") 时被处理，不会出现在片段中
+ */
+export function sanitizePathSegment(part) {
+  return part
+    .replace(/[<>:"|?*\x00-\x1f]+/g, "_")
+    .trim();
+}
+
 // ==================== 源目录发现 ====================
 
 async function discoverSourceConfigPaths(sourceDir) {
