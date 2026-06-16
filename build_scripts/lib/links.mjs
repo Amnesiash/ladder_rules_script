@@ -133,7 +133,7 @@ function renderSourceConfigLinks({ sourceConfig, repository, mainBranch }) {
   const links = configFiles.map(
     (configFile) => `[${configFile.fileName}](${githubBlobURL({ repository, branch: mainBranch, filePath: configFile.relativePath })})`,
   );
-  return `配置文件�?{links.join("�?)}`;
+  return `配置文件：${links.join("、")}`;
 }
 
 function renderRulesClashExample({ sourceConfigs, repository, releaseBranch }) {
@@ -281,39 +281,39 @@ const RULE_ROW_INFO = {
   },
   Direct: {
     content: "直连域名列表",
-    purpose: "国内可直连的常用服务，避免不必要的代�?,
+    purpose: "国内可直连的常用服务，避免不必要的代理",
   },
   Proxy: {
     content: "代理服务列表",
-    purpose: "国外代理、VPN、科学上网服�?,
+    purpose: "国外代理、VPN、科学上网服务",
   },
   Streaming: {
-    content: "国际流媒�?,
+    content: "国际流媒体",
     purpose: "Netflix、Disney+、HBO 等国际流媒体",
   },
   AI: {
     content: "AI 服务",
-    purpose: "ChatGPT、Claude、Gemini 等主�?AI 服务",
+    purpose: "ChatGPT、Claude、Gemini 等主要 AI 服务",
   },
   Private: {
     content: "私有网络",
-    purpose: "内网设备管理、路由器配置、本地服务访�?,
+    purpose: "内网设备管理、路由器配置、本地服务访问",
   },
   WeChat: {
     content: "微信服务",
-    purpose: "微信相关服务、API 与访问优�?,
+    purpose: "微信相关服务、API 与访问优化",
   },
   StreamingHMT: {
     content: "港澳台流媒体",
-    purpose: "哔哩哔哩、爱奇艺等港澳台流媒�?,
+    purpose: "哔哩哔哩、爱奇艺等港澳台流媒体",
   },
   Apple: {
     content: "苹果服务",
-    purpose: "苹果全球服务、iCloud、App Store 国际�?,
+    purpose: "苹果全球服务、iCloud、App Store 国际版",
   },
   SteamCN: {
     content: "Steam国内直连",
-    purpose: "Steam 国内可直连访问内�?,
+    purpose: "Steam 国内可直连访问内容",
   },
   Telegram: {
     content: "Telegram",
