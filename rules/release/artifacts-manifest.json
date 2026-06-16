@@ -1,0 +1,126 @@
+{
+  "timestamp": "2026-06-16T18:33:15.072Z",
+  "artifacts": [
+    {
+      "slug": "China",
+      "name": "China",
+      "sourceRelativeDir": "China",
+      "outputPath": "China.list",
+      "relativePath": "China.list",
+      "kind": "clash",
+      "label": "China Rules",
+      "behavior": "classical",
+      "sha256": "618d2c89c451aadd3acc5060344755bead5ff6ca3c297942a57dd1cff81d3008"
+    },
+    {
+      "slug": "Direct",
+      "name": "Direct",
+      "sourceRelativeDir": "Direct",
+      "outputPath": "Direct.list",
+      "relativePath": "Direct.list",
+      "kind": "clash",
+      "label": "Direct Rules",
+      "behavior": "classical",
+      "sha256": "552464f67f9c9e4b0b65fc4d5c393cda9ac1f31a327954964b428f2b11f8abfd"
+    },
+    {
+      "slug": "Proxy",
+      "name": "Proxy",
+      "sourceRelativeDir": "Proxy",
+      "outputPath": "Proxy.list",
+      "relativePath": "Proxy.list",
+      "kind": "clash",
+      "label": "Proxy Rules",
+      "behavior": "classical",
+      "sha256": "ef4e677d5b09e7bc4f5dba168d9c052d7ce1444bdff6d3eb71744cdf242ba1db"
+    },
+    {
+      "slug": "Streaming",
+      "name": "Streaming",
+      "sourceRelativeDir": "Streaming",
+      "outputPath": "Streaming.list",
+      "relativePath": "Streaming.list",
+      "kind": "clash",
+      "label": "Streaming Rules",
+      "behavior": "classical",
+      "sha256": "aee2a37b2caf81b7065689dd401556979cc40ad14d9dd2359b6f56431bf9f0f5"
+    },
+    {
+      "slug": "AI",
+      "name": "AI",
+      "sourceRelativeDir": "AI",
+      "outputPath": "AI.list",
+      "relativePath": "AI.list",
+      "kind": "clash",
+      "label": "AI Rules",
+      "behavior": "classical",
+      "sha256": "7d5d95907d36435c8d393063313f16da30ad6b72f2b7754bcecd119788da268a"
+    },
+    {
+      "slug": "Private",
+      "name": "Private",
+      "sourceRelativeDir": "Private",
+      "outputPath": "Private.list",
+      "relativePath": "Private.list",
+      "kind": "clash",
+      "label": "Private Rules",
+      "behavior": "classical",
+      "sha256": "3c74c3dc58b978e9fb4f67be73c1469bea80542f5042af3c2214c6b30db78b1d"
+    },
+    {
+      "slug": "Extra/SteamCN",
+      "name": "Extra/SteamCN",
+      "sourceRelativeDir": "Extra/SteamCN",
+      "outputPath": "Extra/SteamCN.list",
+      "relativePath": "Extra/SteamCN.list",
+      "kind": "clash",
+      "label": "Extra/SteamCN Rules",
+      "behavior": "classical",
+      "sha256": "180b8a0a750479dfa666a5e5545b1668c9de499251cd1f8a7ed11c4d72c8926d"
+    },
+    {
+      "slug": "Extra/WeChat",
+      "name": "Extra/WeChat",
+      "sourceRelativeDir": "Extra/WeChat",
+      "outputPath": "Extra/WeChat.list",
+      "relativePath": "Extra/WeChat.list",
+      "kind": "clash",
+      "label": "Extra/WeChat Rules",
+      "behavior": "classical",
+      "sha256": "29a2009ce498471cd7dc56def74ead32f0b37ffc5b289680d76a863d40e4856b"
+    },
+    {
+      "slug": "StreamingHMT",
+      "name": "StreamingHMT",
+      "sourceRelativeDir": "StreamingHMT",
+      "outputPath": "StreamingHMT.list",
+      "relativePath": "StreamingHMT.list",
+      "kind": "clash",
+      "label": "StreamingHMT Rules",
+      "behavior": "classical",
+      "sha256": "5bf02f2c60b4cbec4ebbec2396abf138a831ea46f9b453bdd4133a70aa3213e2"
+    },
+    {
+      "slug": "Extra/Apple",
+      "name": "Extra/Apple",
+      "sourceRelativeDir": "Extra/Apple",
+      "outputPath": "Extra/Apple.list",
+      "relativePath": "Extra/Apple.list",
+      "kind": "clash",
+      "label": "Extra/Apple Rules",
+      "behavior": "classical",
+      "sha256": "be586c84f0aa8fd27eafaf074c75a4f5c1ee2c6936e6218024ee53b9a513a124"
+    },
+    {
+      "slug": "Extra/Telegram",
+      "name": "Extra/Telegram",
+      "sourceRelativeDir": "Extra/Telegram",
+      "outputPath": "Extra/Telegram.list",
+      "relativePath": "Extra/Telegram.list",
+      "kind": "clash",
+      "label": "Extra/Telegram Rules",
+      "behavior": "classical",
+      "sha256": "1e6b78d35720eb382f6685d2c7afbfdf2b1b5d5635745f6eeda2bb4486fda8af"
+    }
+  ]
+}
