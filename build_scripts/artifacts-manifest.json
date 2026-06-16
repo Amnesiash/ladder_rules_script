@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-16T17:37:45.550Z",
+  "timestamp": "2026-06-16T18:09:24.817Z",
   "artifacts": [
     {
       "slug": "China",
@@ -10,7 +10,7 @@
       "kind": "clash",
       "label": "China Rules",
       "behavior": "classical",
-      "sha256": "bdcdc9cf737ceae370f7bdc7530db118be7385308e3b2264fb2a3fec5d724e8a"
+      "sha256": "fef8a84f60f69e28a1cce580123cbe6c66cdbed20539c5426d3b5e642c104930"
     },
     {
       "slug": "Direct",
@@ -21,7 +21,7 @@
       "kind": "clash",
       "label": "Direct Rules",
       "behavior": "classical",
-      "sha256": "7eabd642156c667b076257b9d8b12f881ecdfa4d5471d34a5428043333efe198"
+      "sha256": "a078f049aeb84eb832fba4d70ff78510c766eac66cc8671b8853b6b804ac2e24"
     },
     {
       "slug": "Proxy",
@@ -32,7 +32,7 @@
       "kind": "clash",
       "label": "Proxy Rules",
       "behavior": "classical",
-      "sha256": "6e18e9ff2cadcf4b8a5e629b61c54bbc73dfae77b11f21df5371ceee6b92519b"
+      "sha256": "061ee74b35f8a2a92f2d93b80dac9a0f6b8e0568d1edbba9b66649e8ce73e77f"
     },
     {
       "slug": "Streaming",
@@ -43,7 +43,7 @@
       "kind": "clash",
       "label": "Streaming Rules",
       "behavior": "classical",
-      "sha256": "29028b9dc769523827635dbb98ee11a1d7a799ee7a7db6b11fbbdbceb33ab581"
+      "sha256": "8a317b244a356588dcbd6a37ebeec376a82463b20ca5cf5b9801f3a136590fe6"
     },
     {
       "slug": "AI",
@@ -54,7 +54,7 @@
       "kind": "clash",
       "label": "AI Rules",
       "behavior": "classical",
-      "sha256": "2feca6f9e35b4656d2cf01c5766ff309915e4baf59becb3da59e4e4ffee781db"
+      "sha256": "a34943550c8959c63c6c13d94fd7a12c3d2d99b02af202daa3f075657f4702f0"
     },
     {
       "slug": "Private",
@@ -65,18 +65,29 @@
       "kind": "clash",
       "label": "Private Rules",
       "behavior": "classical",
-      "sha256": "3e96c58a78b84d08f5f314cf7b0b499ab03b6da3d29ce466bcdd84b9a0382dce"
+      "sha256": "9dd4e99ad7713beb470500dad3038fff2f2fb30adda9d2a5a3ec60fa9b5a0652"
+    },
+    {
+      "slug": "Extra/SteamCN",
+      "name": "Extra/SteamCN",
+      "sourceRelativeDir": "Extra/SteamCN",
+      "outputPath": "Extra/SteamCN.list",
+      "relativePath": "Extra/SteamCN.list",
+      "kind": "clash",
+      "label": "Extra/SteamCN Rules",
+      "behavior": "classical",
+      "sha256": "ae369ad8b3361d9f6be49bacc86e5c4464f85254d3fec4764b8a01a2a0d75504"
     },
     {
       "slug": "Extra/WeChat",
       "name": "Extra/WeChat",
-      "sourceRelativeDir": "WeChat",
+      "sourceRelativeDir": "Extra/WeChat",
       "outputPath": "Extra/WeChat.list",
       "relativePath": "Extra/WeChat.list",
       "kind": "clash",
       "label": "Extra/WeChat Rules",
       "behavior": "classical",
-      "sha256": "78309107b3fc5c5b945ee16c974fdf8bee5d2e81e96bf47ee083bd85525d79a2"
+      "sha256": "8b7446017ad82cae33fe14df928b1492a9dea57fb58b8226a75c5a7fd2a95c91"
     },
     {
       "slug": "StreamingHMT",
@@ -87,29 +98,29 @@
       "kind": "clash",
       "label": "StreamingHMT Rules",
       "behavior": "classical",
-      "sha256": "dfdfc69c37cf19e4e3cdb84a391bde6d2687126ca61ba79ea747728e4ee113a4"
+      "sha256": "f4d9797eb387e1123533f000991acf19b75d07e63387e17fa6afb8fd83c8180c"
     },
     {
       "slug": "Extra/Apple",
       "name": "Extra/Apple",
-      "sourceRelativeDir": "Apple",
+      "sourceRelativeDir": "Extra/Apple",
       "outputPath": "Extra/Apple.list",
       "relativePath": "Extra/Apple.list",
       "kind": "clash",
       "label": "Extra/Apple Rules",
       "behavior": "classical",
-      "sha256": "f0e738489f0c89f9006cc1cc5217f7257780970beb681603215f8855526acd39"
+      "sha256": "3fd795f88934a5813585d2011a6f4268ba1b03ff6e8bfa6ed381bc83cdb23ab7"
     },
     {
       "slug": "Extra/Telegram",
       "name": "Extra/Telegram",
-      "sourceRelativeDir": "Telegram",
+      "sourceRelativeDir": "Extra/Telegram",
       "outputPath": "Extra/Telegram.list",
       "relativePath": "Extra/Telegram.list",
       "kind": "clash",
       "label": "Extra/Telegram Rules",
       "behavior": "classical",
-      "sha256": "aac4d4f7d4bfa04155df91e325e098ff85ca9389502f45fe213ab5a2afc6b1d7"
+      "sha256": "3ef0c4f225e5b157ef1612b5e83dbfca67512669050f5a7349944e66ca35cbae"
     }
   ]
 }

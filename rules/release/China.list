@@ -1,5 +1,5 @@
 # NAME: China
-# UPDATE: 2026-06-17 00:28:17
+# UPDATE: 2026-06-17 02:09:16
 # TOTAL: 112665
 # DOMAIN: 328
 # DOMAIN-SUFFIX: 112288
@@ -112659,6 +112659,7 @@ IP-CIDR6,2a0b:b580::/48,no-resolve
 IP-CIDR6,2a0b:b581::/48,no-resolve
 IP-CIDR6,2a0b:b582::/48,no-resolve
 IP-CIDR6,2a0b:b583::/48,no-resolve
+PROCESS-NAME,小米云服务.exe
 PROCESS-NAME,com.bilibili.app.blue
 PROCESS-NAME,com.bilibili.app.in
 PROCESS-NAME,com.bilibili.comic
@@ -112672,4 +112673,3 @@ PROCESS-NAME,Thunder
 PROCESS-NAME,Thunder.exe
 PROCESS-NAME,tv.danmaku.bili
 PROCESS-NAME,tv.danmaku.bilibilihd
-PROCESS-NAME,小米云服务.exe

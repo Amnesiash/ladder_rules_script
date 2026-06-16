@@ -4,20 +4,21 @@
 
 ---
 
-## 规则列表
+## 常用规则集
 
 | 文件名 | 包含内容 | 用途 | 最近更新 |
 | --- | --- | --- | --- |
-| [`Private.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Private.list) | 私有网络 | 内网设备管理、路由器配置、本地服务访问 | 2026-06-17 00:28:19 |
-| [`Direct.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Direct.list) | 直连域名列表 | 国内可直连的常用服务，避免不必要的代理 | 2026-06-17 00:46:45 |
-| [`AI.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/AI.list) | AI 服务 | ChatGPT、Claude、Gemini 等主要 AI 服务 | 2026-06-17 00:28:18 |
-| [`StreamingHMT.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/StreamingHMT.list) | 港澳台流媒体 | 哔哩哔哩、爱奇艺等港澳台流媒体 | 2026-06-17 00:28:19 |
-| [`Streaming.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Streaming.list) | 国际流媒体 | Netflix、Disney+、HBO 等国际流媒体 | 2026-06-17 00:28:18 |
-| [`Proxy.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Proxy.list) | 代理服务列表 | 国外代理、VPN、科学上网服务 | 2026-06-17 00:46:45 |
-| [`China.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/China.list) | 中国网站列表 | 国内网站、服务，确保直连访问 | 2026-06-17 00:28:17 |
-| [`Apple.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/Apple.list) | 规则集合 | 按需分流与策略匹配 | 2026-06-17 00:28:19 |
-| [`Telegram.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/Telegram.list) | 规则集合 | 按需分流与策略匹配 | 2026-06-17 00:28:20 |
-| [`WeChat.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/WeChat.list) | 规则集合 | 按需分流与策略匹配 | 2026-06-17 00:28:19 |
+| [`Private.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Private.list) | 私有网络 | 内网设备管理、路由器配置、本地服务访问 | 2026-06-17 02:09:23 |
+| [`Direct.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Direct.list) | 直连域名列表 | 国内可直连的常用服务，避免不必要的代理 | 2026-06-17 02:09:19 |
+| [`AI.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/AI.list) | AI 服务 | ChatGPT、Claude、Gemini 等主要 AI 服务 | 2026-06-17 02:09:22 |
+| [`StreamingHMT.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/StreamingHMT.list) | 港澳台流媒体 | 哔哩哔哩、爱奇艺等港澳台流媒体 | 2026-06-17 02:09:24 |
+| [`Streaming.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Streaming.list) | 国际流媒体 | Netflix、Disney+、HBO 等国际流媒体 | 2026-06-17 02:09:21 |
+| [`Proxy.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Proxy.list) | 代理服务列表 | 国外代理、VPN、科学上网服务 | 2026-06-17 02:09:21 |
+| [`China.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/China.list) | 中国网站列表 | 国内网站、服务，确保直连访问 | 2026-06-17 02:09:16 |
+
+## 其他规则集
+
+| [Apple.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/Apple.list)<br>更新时间：2026-06-17 02:09:24 | [SteamCN.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/SteamCN.list)<br>更新时间：2026-06-17 02:09:23 | [Telegram.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/Telegram.list)<br>更新时间：2026-06-17 02:09:24 | [WeChat.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/WeChat.list)<br>更新时间：2026-06-17 02:09:23 |  |
 
 ## 使用示例
 
@@ -36,6 +37,7 @@ rule-providers:
   Proxy: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Proxy.list}
   China: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/China.list}
   Extra_Apple: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/Apple.list}
+  Extra_SteamCN: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/SteamCN.list}
   Extra_Telegram: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/Telegram.list}
   Extra_WeChat: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/WeChat.list}
 
@@ -49,6 +51,7 @@ rules:
   - RULE-SET,Proxy,全球加速
   - RULE-SET,China,DIRECT
   - RULE-SET,Extra_Apple,DIRECT
+  - RULE-SET,Extra_SteamCN,DIRECT
   - RULE-SET,Extra_Telegram,DIRECT
   - RULE-SET,Extra_WeChat,DIRECT
   - GEOIP,CN,DIRECT

@@ -289,8 +289,15 @@ function renderRulesRows({ sourceConfigs, artifacts, repository, releaseBranch, 
 function renderOtherRulesets({ sourceConfigs, artifacts, repository, releaseBranch, updateTimes = {} }) {
   if (!sourceConfigs.length) return "";
 
+  // 按显示名（路径最后一段）A-Z 排序
+  const sortedConfigs = [...sourceConfigs].sort((a, b) => {
+    const nameA = (a.pathName || a.sourceName || "").split("/").pop().toLowerCase();
+    const nameB = (b.pathName || b.sourceName || "").split("/").pop().toLowerCase();
+    return nameA.localeCompare(nameB);
+  });
+
   const cells = [];
-  for (const sourceConfig of sourceConfigs) {
+  for (const sourceConfig of sortedConfigs) {
     const relevantArtifacts = artifacts.filter((artifact) => artifact.sourceRelativeDir === sourceConfig.sourceRelativeDir);
     const artifactByKind = new Map();
     for (const artifact of relevantArtifacts) {
