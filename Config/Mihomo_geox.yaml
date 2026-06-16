@@ -6,7 +6,7 @@
 
 # ==================== 锚点配置 ====================
 # 代理提供者模板 - 订阅源基础配置
-BaseProvider: &BaseProvider {type: http, interval: 86400, proxy: 直连, health-check: {enable: true, url: 'https://cp.cloudflare.com/generate_204', interval: 300}, filter: '^(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'}
+BaseProvider: &BaseProvider {type: http, interval: 86400, health-check: {enable: true, url: 'https://cp.cloudflare.com/generate_204', interval: 300}, filter: '^(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'}
 
 # 策略组类型模板 - 定义不同的策略组基础配置
 BaseUrltest: &BaseUrltest {type: url-test, interval: 300, tolerance: 50, timeout: 3000, max-failed-times: 3, lazy: true, url: 'https://cp.cloudflare.com/generate_204', hidden: true} 
@@ -23,7 +23,7 @@ proxy-providers:
 #基础配置
 mixed-port: 7890      # 混合端口 HTTP和SOCKS5用一个端口
 allow-lan: true       # 允许局域网的连接（可用来共享代理）
-mode: rule            # 规则模式：rule（规则） / global（全局代理）/ 直连（全局直连）/ script (脚本)
+mode: rule            # 规则模式：rule（规则） / global（全局代理）/ direct（全局直连）/ script (脚本)
 log-level: info       # 设置日志输出级别 (5 个级别：silent / error / warning / info / debug）
 ipv6: true            # 开启 IPv6 总开关,关闭阻断所有 IPv6 链接和屏蔽 DNS 请求 AAAA 记录
 udp: true
@@ -77,7 +77,7 @@ tun:
     - "any:53"
     - "tcp://any:53"
   auto-route: true
-  auto-re直连: true
+  auto-redirect: true
   auto-detect-interface: true
 
 # DNS配置
@@ -205,10 +205,10 @@ rules:
   - GEOSITE, private, 直连
   - GEOSITE, github, 代理加速
   - GEOSITE, twitter, 代理加速
-  - GEOSITE, youtube, 国际媒体
+  - GEOSITE, youtube, 国际流媒体
   - GEOSITE, google, 代理加速
   - GEOSITE, telegram, Telegram
-  - GEOSITE, netflix, 国际媒体
+  - GEOSITE, netflix, 国际流媒体
   - GEOSITE, biliintl, 代理加速
   - GEOSITE, bahamut, 代理加速
   - GEOSITE, spotify, 代理加速
@@ -222,7 +222,7 @@ rules:
 
   - GEOIP, private, 直连, no-resolve
   - GEOIP, google, 代理加速
-  - GEOIP, netflix, 国际媒体
+  - GEOIP, netflix, 国际流媒体
   - GEOIP, telegram, Telegram
   - GEOIP, twitter, 代理加速
   - GEOIP, CN, 直连
