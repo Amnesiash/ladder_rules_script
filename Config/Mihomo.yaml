@@ -16,8 +16,8 @@ c: &RuleSet_c {type: http, behavior: classical, format: text, interval: 86400}
 
 # ==================== 代理提供者 ====================
 proxy-providers:
-  # Sub1: {<<: *BaseProvider, url: '', path: ./proxy/Sub1.yaml, override: {additional-prefix: '[Sub1] '}}
-  # Sub2: {<<: *BaseProvider, url: '', path: ./proxy/Sub2.yaml, override: {additional-prefix: '[Sub2] '}}
+  Kitty: {<<: *BaseProvider, url: 'https://feed1.chitanda-eru.com/oosaka/e83cf17aebbc447ea48c8a4d099acc0a', path: ./proxy/Kitty.yaml, override: {additional-prefix: '[K] '}} 
+  Bocchi: {<<: *BaseProvider, url: 'https://qaq.atami.top/bilibili/c62a0db40b1141948ccd6415331a10c5', path: ./proxy/Bocchi.yaml, override: {additional-prefix: '[B] '}} 
 
 # ==================== 核心配置 ====================
 #基础配置
@@ -198,16 +198,6 @@ rule-providers:
     url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Direct.list
     path: ./ruleset/Direct.list
 
-  WeChat:
-    <<: *RuleSet_c
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/WeChat.list
-    path: ./ruleset/WeChat.list
-
-  SteamCN:
-    <<: *RuleSet_c
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/SteamCN.list
-    path: ./ruleset/SteamCN.list
-
   Private:
     <<: *RuleSet_c
     url: https://github.com/Amnesiash/ladder_rules_script/raw/main/Rules/Private.list
@@ -243,13 +233,11 @@ rules:
   # > 订阅规则
   - RULE-SET, Private, 直连
   - RULE-SET, Direct, 直连
-  - RULE-SET, WeChat, 直连
-  - RULE-SET, SteamCN, 直连
   - RULE-SET, AI, AI
   - RULE-SET, Telegram, Telegram
   - RULE-SET, Streaming, 国际流媒体
-  - RULE-SET, Proxy, 代理加速
   - RULE-SET, China, 直连
+  - RULE-SET, Proxy, 代理加速
   - GEOIP, CN, 直连
 
   # 兜底规则
