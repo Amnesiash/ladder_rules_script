@@ -78,7 +78,7 @@ export function renderRulesReadme({
   artifacts = [],
   repository,
   releaseBranch = DEFAULT_RELEASE_BRANCH,
-  updateTime = "北京时间 2:00",
+  updateTimes = {},
 }) {
   const repo = resolveRepository(repository);
   const providerArtifacts = artifacts.filter((artifact) => artifact.kind && artifact.kind !== "manifest");
@@ -87,6 +87,7 @@ export function renderRulesReadme({
     artifacts: providerArtifacts,
     repository: repo,
     releaseBranch,
+    updateTimes,
   });
 
   return [
@@ -96,18 +97,11 @@ export function renderRulesReadme({
     "",
     "---",
     "",
-    "## 更新",
-    "",
-    "- 规则文件自动更新",
-    `- 更新时间：${updateTime}`,
-    "",
-    "---",
-    "",
     "## 规则集",
     "",
-    "| 文件名 | 包含内容 | 用途 |",
-    "| --- | --- | --- |",
-    rows.length ? rows.join("\n") : "| - | - | - |",
+    "| 文件名 | 包含内容 | 用途 | 最近更新 |",
+    "| --- | --- | --- | --- |",
+    rows.length ? rows.join("\n") : "| - | - | - | - |",
     "",
     "## 使用示例",
     "",
@@ -244,7 +238,7 @@ function renderArtifacts({ artifacts, repository, releaseBranch }) {
   return ["| 名称 | 链接 |", "| --- | --- |", ...rows].join("\n");
 }
 
-function renderRulesRows({ sourceConfigs, artifacts, repository, releaseBranch }) {
+function renderRulesRows({ sourceConfigs, artifacts, repository, releaseBranch, updateTimes = {} }) {
   const rows = [];
   for (const sourceConfig of sourceConfigs) {
     const relevantArtifacts = artifacts.filter((artifact) => artifact.sourceRelativeDir === sourceConfig.sourceRelativeDir);
@@ -259,8 +253,9 @@ function renderRulesRows({ sourceConfigs, artifacts, repository, releaseBranch }
       ? `[\`${fileName}\`](${githubRawURL({ repository, branch: releaseBranch, filePath: `Rules/${fileName}` })})`
       : `\`${fileName}\``;
     const info = RULE_ROW_INFO[sourceConfig.sourceName] || DEFAULT_RULE_ROW_INFO;
+    const updateTime = updateTimes[sourceConfig.sourceName] || "-";
 
-    rows.push(`| ${fileCell} | ${escapeTableCell(info.content)} | ${escapeTableCell(info.purpose)} |`);
+    rows.push(`| ${fileCell} | ${escapeTableCell(info.content)} | ${escapeTableCell(info.purpose)} | ${updateTime} |`);
   }
 
   return rows;

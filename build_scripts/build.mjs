@@ -88,6 +88,18 @@ async function inferRepositoryFromGit(projectDir) {
   return undefined;
 }
 
+async function readPreviousMainFile(relativePath, cwd) {
+  try {
+    const { stdout } = await execFileAsync("git", ["show", `origin/main:${relativePath}`], {
+      cwd,
+      maxBuffer: 1024 * 1024 * 8,
+    });
+    return stdout;
+  } catch {
+    return null;
+  }
+}
+
 async function main() {
   // 备份 source.txt
   await backupSourceTxtEntries({
@@ -148,15 +160,36 @@ async function main() {
     });
   }
 
+  // 收集各规则文件的最近更新时间（从 header 的 # UPDATE: 行读取）
+  const updateTimes = {};
+  for (const artifact of result.artifacts) {
+    if (artifact.kind !== "clash") continue;
+    try {
+      const content = await fs.readFile(artifact.filePath, "utf8");
+      const match = content.match(/^# UPDATE:\s*(.+)$/m);
+      if (match) updateTimes[artifact.name] = match[1].trim();
+    } catch {
+      // ignore
+    }
+  }
+
   const rulesReadmePath = path.join(projectRoot, "Rules", "README.md");
-  const rulesReadme = renderRulesReadme({
+  const newReadme = renderRulesReadme({
     sourceConfigs: result.sourceConfigs,
     artifacts: result.artifacts,
     repository,
-    updateTime: formatUpdateTimeShanghai(),
+    updateTimes,
   });
+
   await fs.mkdir(path.dirname(rulesReadmePath), { recursive: true });
-  await fs.writeFile(rulesReadmePath, `${rulesReadme}\n`);
+
+  // 内容未变化时复用上次 main 分支的文件，避免不必要的提交
+  const previousReadme = await readPreviousMainFile("Rules/README.md", projectRoot);
+  if (previousReadme !== null && previousReadme === `${newReadme}\n`) {
+    await fs.writeFile(rulesReadmePath, previousReadme);
+  } else {
+    await fs.writeFile(rulesReadmePath, `${newReadme}\n`);
+  }
 }
 
 main().catch((error) => {
