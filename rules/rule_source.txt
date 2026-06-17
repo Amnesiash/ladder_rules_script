@@ -9,9 +9,9 @@ https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/custo
 https://raw.githubusercontent.com/666OS/rules/release/mihomo/Direct.txt
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list
 https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Direct+.list
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
 
 [Proxy]
-https://raw.githubusercontent.com/666OS/rules/release/mihomo/Proxy.txt
 https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/custom/AddProxy.list
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list
 https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Proxy.list
@@ -31,6 +31,7 @@ https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt
 
 [Extra/SteamCN]
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN.yaml
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
 
 [Extra/WeChat]
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/WeChat/WeChat.list
