@@ -320,9 +320,10 @@ function renderOtherRulesets({ sourceConfigs, artifacts, repository, releaseBran
     cells.push(cellContent);
   }
 
-  // 每行固定 5 个单元格，不足补空，无表头，纯 Markdown 表格
+  // 每行固定 5 个单元格，不足补空，带表头的 Markdown 表格
   const COLS = 5;
-  const rows = [];
+  const header = `| ${Array.from({ length: COLS }, () => "---").join(" | ")} |`;
+  const rows = [header];
   for (let i = 0; i < cells.length; i += COLS) {
     const rowCells = cells.slice(i, i + COLS);
     while (rowCells.length < COLS) rowCells.push("");
