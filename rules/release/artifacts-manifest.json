@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-06-17T00:51:50.057Z",
+  "timestamp": "2026-06-17T02:06:56.217Z",
   "artifacts": [
     {
       "slug": "China",
@@ -21,7 +21,7 @@
       "kind": "clash",
       "label": "Direct Rules",
       "behavior": "classical",
-      "sha256": "552464f67f9c9e4b0b65fc4d5c393cda9ac1f31a327954964b428f2b11f8abfd"
+      "sha256": "89eeb4ec33ca026cda02d75c4d3b40a2cb73a49c69c088c4f12e1b7f2457ffc4"
     },
     {
       "slug": "Proxy",
@@ -32,7 +32,7 @@
       "kind": "clash",
       "label": "Proxy Rules",
       "behavior": "classical",
-      "sha256": "ef4e677d5b09e7bc4f5dba168d9c052d7ce1444bdff6d3eb71744cdf242ba1db"
+      "sha256": "524a14157e400bd98f2f88a8c62cd0b482b317b0fef22373e7e0fbb341532ded"
     },
     {
       "slug": "Streaming",
