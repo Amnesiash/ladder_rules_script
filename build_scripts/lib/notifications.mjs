@@ -280,7 +280,7 @@ function renderChangeSection({ title, artifacts, repository, releaseBranch, maxI
     const displayName = artifact.relativePath || artifact.outputPath || artifact.label || "-";
     const detail = artifact.ruleDeltaText ? ` ${escapeHtml(artifact.ruleDeltaText)}` : "";
     if (repository && releaseBranch) {
-      const url = `https://raw.githubusercontent.com/${repository}/refs/heads/${releaseBranch}/${artifact.relativePath}`;
+      const url = `https://raw.githubusercontent.com/${repository}/${releaseBranch}/rules/release/${artifact.relativePath}`;
       lines.push(`- <a href="${url}">${escapeHtml(displayName)}</a>${detail}`);
     } else {
       lines.push(`- ${escapeHtml(displayName)}${detail}`);
