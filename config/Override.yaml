@@ -112,13 +112,18 @@ rule-providers:
 
   Telegram:
     <<: *RuleSet_c
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/Telegram.list
-    path: ./ruleset/Telegram.list
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/Extra/Telegram.list
+    path: ./ruleset/Extra/Telegram.list
 
   Streaming:
     <<: *RuleSet_c
     url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/Streaming.list
     path: ./ruleset/Streaming.list
+
+  SteamCN:
+    <<: *RuleSet_c
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/Extra/SteamCN.list
+    path: ./ruleset/Extra/SteamCN.list
 
   Proxy:
     <<: *RuleSet_c
@@ -138,6 +143,7 @@ rules:
   - RULE-SET, AI, AI
   - RULE-SET, Telegram, Telegram
   - RULE-SET, Streaming, 国际流媒体
+  - RULE-SET, SteamCN, 直连
   - RULE-SET, Proxy, 代理加速
   - RULE-SET, China, 直连
   - GEOIP, CN, 直连
