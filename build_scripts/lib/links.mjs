@@ -321,9 +321,10 @@ function renderOtherRulesets({ sourceConfigs, artifacts, repository, releaseBran
   }
 
   // 每行固定 5 个单元格，不足补空
-  // 第一行第一格为 "Other" 表头，其余数据从第二行开始
+  // 第一行第一格为 "Other" 表头，其余使用 &nbsp; 保持列宽均匀
   const COLS = 5;
-  const titleRow = `| Other | ${Array.from({ length: COLS - 1 }, () => "").join(" | ")} |`;
+  const emptyCells = Array.from({ length: COLS - 1 }, () => "&nbsp;").join(" | ");
+  const titleRow = `| Other | ${emptyCells} |`;
   const separator = `| ${Array.from({ length: COLS }, () => "---").join(" | ")} |`;
   const rows = [titleRow, separator];
   for (let i = 0; i < cells.length; i += COLS) {

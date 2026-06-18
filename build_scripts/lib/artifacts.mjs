@@ -233,15 +233,17 @@ async function writeRulesFile({ outputRoot, entry, lines, projectRoot }) {
   const outPath = path.join(outputRoot, `${name}.list`);
   await fs.mkdir(path.dirname(outPath), { recursive: true });
 
-  // 规则体未变化时，复用上次 main 分支的文件（含旧时间戳），
-  // 避免仅 header 时间不同导致 sha256 变化和误报通知
+  // 规则体未变化时，复用上次 main 分支的规则内容但更新时间为当前构建时间
   const relativePath = path.relative(projectRoot, outPath).split(path.sep).join("/");
   const previousContent = await readPreviousMainFile(relativePath, projectRoot);
   if (previousContent !== null) {
     const previousBody = extractBodyLines(previousContent);
     const newBody = lines.join("\n");
     if (previousBody === newBody) {
-      await fs.writeFile(outPath, previousContent);
+      // 规则体未变，复用旧内容但使用当前构建时间
+      const updateTime = formatUpdateTimeShanghai();
+      const header = buildHeaderBlock({ name: entry.name, updateTime, bodyLines: lines });
+      await fs.writeFile(outPath, header + lines.join("\n") + "\n");
       return outPath;
     }
   }
