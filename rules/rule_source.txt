@@ -15,6 +15,7 @@ https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
 https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/custom/AddProxy.list
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list
 https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Proxy.list
+https://kelee.one/Tool/Clash/Rule/AI.yaml
 
 [Streaming]
 https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Streaming/!CN.list
