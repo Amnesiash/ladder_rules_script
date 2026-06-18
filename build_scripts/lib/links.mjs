@@ -314,8 +314,8 @@ function renderOtherRulesets({ sourceConfigs, artifacts, repository, releaseBran
     const updateTime = updateTimes[sourceConfig.pathName || sourceConfig.sourceName] || "-";
 
     const cellContent = rawUrl
-      ? `[${fileNamePart}.list](${rawUrl})<br>更新时间：${updateTime}`
-      : `${fileNamePart}.list<br>更新时间：${updateTime}`;
+      ? `[${fileNamePart}.list](${rawUrl})<br>${updateTime}`
+      : `${fileNamePart}.list<br>${updateTime}`;
 
     cells.push(cellContent);
   }

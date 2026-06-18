@@ -187,7 +187,7 @@ async function main() {
     try {
       const content = await fs.readFile(releasePath, "utf8");
       const match = content.match(/^# UPDATE:\s*(.+)$/m);
-      if (match) updateTimes[filePathName] = match[1].trim();
+      if (match) updateTimes[filePathName] = match[1].trim().replace(/:\d{2}$/, "");
     } catch {
       // ignore
     }
