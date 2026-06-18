@@ -193,7 +193,7 @@ async function main() {
     }
   }
 
-  const rulesReadmePath = path.join(projectRoot, "Rules", "README.md");
+  const rulesReadmePath = path.join(projectRoot, "rules", "README.md");
   const newReadme = renderRulesReadme({
     sourceConfigs: result.sourceConfigs,
     artifacts: result.artifacts,
