@@ -15,12 +15,14 @@
 | [`Streaming.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Streaming.list) | 国际流媒体 | Netflix、Disney+、HBO 等国际流媒体 | 2026-06-18 10:14 |
 | [`Proxy.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Proxy.list) | 代理服务列表 | 国外代理、VPN、科学上网服务 | 2026-06-18 10:14 |
 | [`China.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/China.list) | 中国网站列表 | 国内网站、服务，确保直连访问 | 2026-06-18 10:14 |
+| [`Advertising.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Advertising.list) | 规则集合 | 按需分流与策略匹配 | 2026-06-18 11:11 |
 
 ## 其他规则集
 
 | Other | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | --- | --- | --- | --- | --- |
-| [Apple.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/Apple.list)<br>2026-06-18 10:14 | [SteamCN.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/SteamCN.list)<br>2026-06-18 10:14 | [Telegram.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/Telegram.list)<br>2026-06-18 10:14 | [WeChat.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/WeChat.list)<br>2026-06-18 10:14 | &nbsp; |
+| [Apple.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/Apple.list)<br>2026-06-18 10:14 | [OneDrive.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/OneDrive.list)<br>2026-06-18 11:11 | [SteamCN.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/SteamCN.list)<br>2026-06-18 10:14 | [Telegram.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/Telegram.list)<br>2026-06-18 10:14 | [TikTok.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/TikTok.list)<br>2026-06-18 11:11 |
+| [WeChat.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/WeChat.list)<br>2026-06-18 10:14 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 ## 使用示例
 
@@ -38,9 +40,12 @@ rule-providers:
   Streaming: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Streaming.list}
   Proxy: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Proxy.list}
   China: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/China.list}
+  Advertising: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Advertising.list}
   Extra_Apple: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/Apple.list}
+  Extra_OneDrive: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/OneDrive.list}
   Extra_SteamCN: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/SteamCN.list}
   Extra_Telegram: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/Telegram.list}
+  Extra_TikTok: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/TikTok.list}
   Extra_WeChat: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/WeChat.list}
 
 rules:
@@ -52,9 +57,12 @@ rules:
   - RULE-SET,Streaming,国际媒体
   - RULE-SET,Proxy,全球加速
   - RULE-SET,China,DIRECT
+  - RULE-SET,Advertising,DIRECT
   - RULE-SET,Extra_Apple,DIRECT
+  - RULE-SET,Extra_OneDrive,DIRECT
   - RULE-SET,Extra_SteamCN,DIRECT
   - RULE-SET,Extra_Telegram,DIRECT
+  - RULE-SET,Extra_TikTok,DIRECT
   - RULE-SET,Extra_WeChat,DIRECT
   - GEOIP,CN,DIRECT
 
