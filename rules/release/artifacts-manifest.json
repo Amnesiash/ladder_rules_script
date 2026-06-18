@@ -1,6 +1,17 @@
 {
-  "timestamp": "2026-06-18T02:37:20.935Z",
+  "timestamp": "2026-06-18T03:11:50.288Z",
   "artifacts": [
+    {
+      "slug": "Advertising",
+      "name": "Advertising",
+      "sourceRelativeDir": "Advertising",
+      "outputPath": "Advertising.list",
+      "relativePath": "Advertising.list",
+      "kind": "clash",
+      "label": "Advertising Rules",
+      "behavior": "classical",
+      "sha256": "30d2adb22567142439fc68985dd27d2ae70ff2aac1bf5ddb0a04b7527cbd30ea"
+    },
     {
       "slug": "China",
       "name": "China",
@@ -121,6 +132,28 @@
       "label": "Extra/Telegram Rules",
       "behavior": "classical",
       "sha256": "7283f59be7b205901709d468418e90a1c34e387ab987839d709a92e03cd2c697"
+    },
+    {
+      "slug": "Extra/TikTok",
+      "name": "Extra/TikTok",
+      "sourceRelativeDir": "Extra/TikTok",
+      "outputPath": "Extra/TikTok.list",
+      "relativePath": "Extra/TikTok.list",
+      "kind": "clash",
+      "label": "Extra/TikTok Rules",
+      "behavior": "classical",
+      "sha256": "ab5234d2325320e54d6405e697ab93ecb5f502784dd2f5bfcfa7c3d4c16145d5"
+    },
+    {
+      "slug": "Extra/OneDrive",
+      "name": "Extra/OneDrive",
+      "sourceRelativeDir": "Extra/OneDrive",
+      "outputPath": "Extra/OneDrive.list",
+      "relativePath": "Extra/OneDrive.list",
+      "kind": "clash",
+      "label": "Extra/OneDrive Rules",
+      "behavior": "classical",
+      "sha256": "749b4721a8cfb2e3ea997bc4f9b61287db6903d24dac81561d0dea7869d6cdb3"
     }
   ]
 }
