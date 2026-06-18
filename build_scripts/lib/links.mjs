@@ -320,10 +320,12 @@ function renderOtherRulesets({ sourceConfigs, artifacts, repository, releaseBran
     cells.push(cellContent);
   }
 
-  // 每行固定 5 个单元格，不足补空，带表头的 Markdown 表格
+  // 每行固定 5 个单元格，不足补空
+  // 第一行第一格为 "Other" 表头，其余数据从第二行开始
   const COLS = 5;
-  const header = `| ${Array.from({ length: COLS }, () => "---").join(" | ")} |`;
-  const rows = [header];
+  const titleRow = `| Other | ${Array.from({ length: COLS - 1 }, () => "").join(" | ")} |`;
+  const separator = `| ${Array.from({ length: COLS }, () => "---").join(" | ")} |`;
+  const rows = [titleRow, separator];
   for (let i = 0; i < cells.length; i += COLS) {
     const rowCells = cells.slice(i, i + COLS);
     while (rowCells.length < COLS) rowCells.push("");

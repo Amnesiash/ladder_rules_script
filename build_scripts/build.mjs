@@ -179,13 +179,15 @@ async function main() {
   }
 
   // 收集各规则文件的最近更新时间（从 header 的 # UPDATE: 行读取）
+  // 使用 sourceConfig.pathName 作为 key，与 renderRulesRows/renderOtherRulesets 保持一致
   const updateTimes = {};
-  for (const artifact of result.artifacts) {
-    if (artifact.kind !== "clash") continue;
+  for (const sourceConfig of result.sourceConfigs) {
+    const filePathName = sourceConfig.pathName || sourceConfig.sourceName;
+    const releasePath = path.join(outputRoot, `${filePathName}.list`);
     try {
-      const content = await fs.readFile(artifact.filePath, "utf8");
+      const content = await fs.readFile(releasePath, "utf8");
       const match = content.match(/^# UPDATE:\s*(.+)$/m);
-      if (match) updateTimes[artifact.name] = match[1].trim();
+      if (match) updateTimes[filePathName] = match[1].trim();
     } catch {
       // ignore
     }
