@@ -36,6 +36,7 @@ export async function buildRelease({
   const sourceConfigs = sourceTxtConfigs.length > 0 ? sourceTxtConfigs : await loadAllSources({ projectRoot, sourceRoot });
 
   const allArtifacts = [];
+  const skippedEntries = [];
 
   for (const sourceConfig of sourceConfigs) {
     const groups = new Map();
@@ -48,17 +49,35 @@ export async function buildRelease({
     for (const group of groups.values()) {
       for (const entry of group.entries) {
         try {
-          const entryArtifacts = await processEntry({ entry, outputRoot, fetchImpl, projectRoot, sourceRoot });
+          const entryArtifacts = await processEntry({ entry, outputRoot, fetchImpl, projectRoot, sourceRoot, warn });
           allArtifacts.push(...entryArtifacts);
         } catch (error) {
-          if (error instanceof BuildReleaseError) {
-            warn(`Skipping ${entry.name}: ${error.message}`);
-          } else {
-            throw error;
+          const errorInfo = {
+            name: entry.name,
+            source: entry.sourceName || group.name,
+            urls: entry.urls || [entry.url],
+            error: error.message,
+          };
+          skippedEntries.push(errorInfo);
+          warn(`⚠️  跳过 [${errorInfo.source}/${errorInfo.name}]: ${errorInfo.error}`);
+          if (errorInfo.urls.length > 0) {
+            warn(`   URL: ${errorInfo.urls.join(", ")}`);
           }
         }
       }
     }
+  }
+
+  // 输出汇总报告
+  if (skippedEntries.length > 0) {
+    console.log(`\n📊 构建汇总:`);
+    console.log(`   ✅ 成功生成: ${allArtifacts.length} 个规则文件`);
+    console.log(`   ⚠️  跳过: ${skippedEntries.length} 个条目`);
+    console.log(`\n跳过的详情:`);
+    for (const item of skippedEntries) {
+      console.log(`   - [${item.source}/${item.name}]: ${item.error}`);
+    }
+    console.log("");
   }
 
   // 清理不再由 rule_source.txt 生成的旧输出文件
@@ -139,8 +158,8 @@ async function cleanupOrphanedOutputFiles({ outputRoot, artifacts }) {
   return { removed };
 }
 
-async function processEntry({ entry, outputRoot, fetchImpl, projectRoot, sourceRoot }) {
-  const content = await fetchEntryContent(entry, fetchImpl, { sourceRoot, sourceName: entry.sourceName });
+async function processEntry({ entry, outputRoot, fetchImpl, projectRoot, sourceRoot, warn }) {
+  const content = await fetchEntryContent(entry, fetchImpl, { sourceRoot, sourceName: entry.sourceName, warn });
   const artifacts = [];
 
   const clashLines = buildSortedRulesetForClash(content.split(/\r?\n/));
@@ -152,21 +171,29 @@ async function processEntry({ entry, outputRoot, fetchImpl, projectRoot, sourceR
   return artifacts;
 }
 
-async function fetchEntryContent(entry, fetchImpl, { sourceRoot, sourceName } = {}) {
+async function fetchEntryContent(entry, fetchImpl, { sourceRoot, sourceName, warn } = {}) {
+  const logWarn = warn || ((msg) => console.warn(msg));
   if (Array.isArray(entry.urls) && entry.urls.length > 0) {
     const parts = [];
     for (const url of entry.urls) {
-      if (entry.type === "http") {
-        const content = await fetchUrlContent(url, fetchImpl);
-        parts.push(content);
-        await saveToCache({ url, content, sourceRoot, sourceName });
-      } else if (entry.type === "file") {
-        parts.push(await fs.readFile(url, "utf8"));
-      } else if (entry.type === "inline") {
-        parts.push(String(url));
-      } else {
-        throw new BuildReleaseError(`unsupported entry type: ${entry.type}`, { entryName: entry.name });
+      try {
+        if (entry.type === "http") {
+          const content = await fetchUrlContent(url, fetchImpl);
+          parts.push(content);
+          await saveToCache({ url, content, sourceRoot, sourceName });
+        } else if (entry.type === "file") {
+          parts.push(await fs.readFile(url, "utf8"));
+        } else if (entry.type === "inline") {
+          parts.push(String(url));
+        } else {
+          throw new BuildReleaseError(`unsupported entry type: ${entry.type}`, { entryName: entry.name });
+        }
+      } catch (error) {
+        logWarn(`Warning: Failed to fetch ${url}: ${error.message}`);
       }
+    }
+    if (parts.length === 0) {
+      throw new BuildReleaseError(`All URLs failed for entry ${entry.name}`, { entryName: entry.name });
     }
     return parts.join("\n");
   }

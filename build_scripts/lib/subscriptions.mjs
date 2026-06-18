@@ -76,14 +76,38 @@ function proxyCandidatesForUrl(url) {
   if (!/^https?:\/\//iu.test(url)) return [];
   const candidates = [];
   if (/^https:\/\/raw\.githubusercontent\.com\//iu.test(url) || /^https:\/\/github\.com\//iu.test(url)) {
-    candidates.push(`https://ghproxy.com/${url}`);
-    candidates.push(`https://ghp.ci/${url}`);
+    // 使用多个可用的 GitHub 镜像代理
+    candidates.push(`https://mirror.ghproxy.com/${url}`);
+    candidates.push(`https://gh.api.99988866.xyz/${url}`);
+    candidates.push(`https://ghfast.top/${url}`);
+    candidates.push(`https://gh-proxy.com/${url}`);
   }
   return candidates;
 }
 
+// 默认 User-Agent
+const DEFAULT_USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
+
+// 备用 User-Agent 列表（代理客户端 UA，用于绕过 Cloudflare UA 白名单）
+const FALLBACK_USER_AGENTS = [
+  "Loon/472 CFNetwork/1220.1 Darwin/20.3.0",
+  "Shadowrocket/2.1 CFNetwork/1220.1 Darwin/20.3.0",
+  "Quantumult X/1.0.0",
+  "Surge Mac/2023.1",
+  "clash.meta/1.0",
+];
+
 async function fetchViaCurl(url, options = {}) {
-  const curlArgs = ["-L", "--silent", "--show-error", "--max-time", String(options.timeout ?? 60), "-w", "\n%{http_code}", url];
+  const headers = options.headers || {};
+  const curlArgs = ["-L", "--silent", "--show-error", "--max-time", String(options.timeout ?? 60), "-w", "\n%{http_code}"];
+  
+  // 添加自定义 headers
+  for (const [key, value] of Object.entries(headers)) {
+    curlArgs.push("-H", `${key}: ${value}`);
+  }
+  
+  curlArgs.push(url);
+  
   const { stdout } = await execFileAsync("curl", curlArgs, { maxBuffer: 1024 * 1024 * 20 });
   const output = String(stdout ?? "");
   const lastNewline = output.lastIndexOf("\n");
@@ -98,26 +122,49 @@ async function fetchViaCurl(url, options = {}) {
   };
 }
 
+// 尝试使用指定 UA 获取内容
+async function tryFetchWithUA(url, userAgent, options, fetchImpl) {
+  const headers = {
+    "User-Agent": userAgent,
+    ...options.headers,
+  };
+  const fetchOptions = { ...options, headers };
+
+  // 尝试 fetch
+  try {
+    const response = await fetchImpl(url, fetchOptions);
+    if (response?.ok) return response;
+  } catch {
+    // fetch 失败，继续尝试 curl
+  }
+
+  // 尝试 curl
+  try {
+    const response = await fetchViaCurl(url, fetchOptions);
+    if (response?.ok) return response;
+  } catch {
+    // curl 也失败
+  }
+
+  return null;
+}
+
 export async function fetchWithFallback(url, options = {}, fetchImpl = fetch) {
   const candidates = [url, ...proxyCandidatesForUrl(url)];
   let lastError;
 
   for (const candidate of candidates) {
-    try {
-      const response = await fetchImpl(candidate, options);
-      if (response?.ok) return response;
-      lastError = new Error(`HTTP ${response?.status ?? "unknown"}`);
-    } catch (error) {
-      lastError = error;
-    }
+    // 1. 优先使用默认 UA
+    const defaultResponse = await tryFetchWithUA(candidate, DEFAULT_USER_AGENT, options, fetchImpl);
+    if (defaultResponse) return defaultResponse;
+    lastError = new Error(`HTTP 403/failed with default UA`);
 
-    try {
-      const response = await fetchViaCurl(candidate, options);
-      if (response?.ok) return response;
-      lastError = new Error(`HTTP ${response?.status ?? "unknown"}`);
-    } catch (error) {
-      lastError = error;
+    // 2. 默认 UA 失败，循环使用备用 UA 重试
+    for (const fallbackUA of FALLBACK_USER_AGENTS) {
+      const response = await tryFetchWithUA(candidate, fallbackUA, options, fetchImpl);
+      if (response) return response;
     }
+    lastError = new Error(`HTTP failed with all UAs`);
   }
 
   const message = lastError?.message ? `: ${lastError.message}` : "";
