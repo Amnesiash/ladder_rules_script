@@ -1,16 +1,27 @@
 # NAME: Proxy
-# UPDATE: 2026-06-17 10:06:54
-# TOTAL: 7018
-# DOMAIN: 61
-# DOMAIN-SUFFIX: 6832
+# UPDATE: 2026-06-18 09:16:51
+# TOTAL: 7093
+# DOMAIN: 110
+# DOMAIN-SUFFIX: 6856
 # DOMAIN-KEYWORD: 30
-# IP-CIDR: 90
-# IP-CIDR6: 5
+# IP-CIDR: 91
+# IP-CIDR6: 6
 
 DOMAIN,a248.e.akamai.net
 DOMAIN,a771.dscq.akamai.net
 DOMAIN,addons.mozilla.org
+DOMAIN,ai-gateway.vercel.sh
+DOMAIN,ai.google.dev
+DOMAIN,aida.googleapis.com
+DOMAIN,aiplatform.googleapis.com
+DOMAIN,aisandbox-pa.googleapis.com
+DOMAIN,aistudio.google.com
+DOMAIN,alkalicore-pa.clients6.google.com
+DOMAIN,alkalimakersuite-pa.clients6.google.com
 DOMAIN,amp-api.podcasts.apple.com
+DOMAIN,api.githubcopilot.com
+DOMAIN,api.hyperbolic.xyz
+DOMAIN,api.x.ai
 DOMAIN,apple-relay.apple.com
 DOMAIN,apple-relay.cloudflare.com
 DOMAIN,apple-relay.fastly-edge.com
@@ -20,39 +31,72 @@ DOMAIN,assets1.xboxlive.com
 DOMAIN,assets2.xboxlive.com
 DOMAIN,az416426.vo.msecnd.net
 DOMAIN,az668014.vo.msecnd.net
+DOMAIN,bard.google.com
 DOMAIN,beta.music.apple.com
 DOMAIN,books.apple.com
 DOMAIN,books.itunes.apple.com
 DOMAIN,c.mi.com
 DOMAIN,cdn.jsdelivr.net
 DOMAIN,cdn.statically.io
+DOMAIN,chat.mistral.ai
+DOMAIN,chatgpt.livekit.cloud
 DOMAIN,cloud.oracle.com
 DOMAIN,clubhouse.pubnubapi.com
 DOMAIN,community.oneplus.com
+DOMAIN,console.mistral.ai
+DOMAIN,copilot-proxy.githubusercontent.com
 DOMAIN,copilot.microsoft.com
 DOMAIN,cp4.cloudflare.com
 DOMAIN,d19eijqb5qll1w.cloudfront.net
 DOMAIN,d1e00ek4ebabms.cloudfront.net
 DOMAIN,d3c33hcgiwev3.cloudfront.net
+DOMAIN,daily-cloudcode-pa.googleapis.com
+DOMAIN,daily-cloudcode-pa.sandbox.googleapis.com
+DOMAIN,deepmind.com
+DOMAIN,deepmind.google
 DOMAIN,disk.yandex.com
 DOMAIN,facetime.apple.com
 DOMAIN,gateway.icloud.com
+DOMAIN,geller-pa.googleapis.com
+DOMAIN,gemini.google
+DOMAIN,gemini.google.com
+DOMAIN,generativeai.google
+DOMAIN,generativelanguage.googleapis.com
 DOMAIN,github.global.ssl.fastly.net
+DOMAIN,host.livekit.cloud
+DOMAIN,imagine.meta.com
+DOMAIN,integrate.api.nvidia.com
 DOMAIN,itunes.apple.com
+DOMAIN,jules.google
+DOMAIN,jules.google.com
 DOMAIN,lab.skk.moe
+DOMAIN,labs.google
 DOMAIN,login.alibaba.com
 DOMAIN,lookup-api.apple.com
+DOMAIN,makersuite.google.com
 DOMAIN,merchant-rating.alibaba.com
+DOMAIN,models.inference.ai.azure.com
 DOMAIN,new.c.mi.com
 DOMAIN,news-assets.apple.com
 DOMAIN,news-client-search.apple.com
 DOMAIN,news-client.apple.com
 DOMAIN,news-edge.apple.com
 DOMAIN,news-events.apple.com
+DOMAIN,notebooklm.google
+DOMAIN,notebooklm.google.com
 DOMAIN,nytimes.map.fastly.net
 DOMAIN,ocsp.int-x3.letsencrypt.org
+DOMAIN,openai.com.cdn.cloudflare.net
+DOMAIN,openaiapi-site.azureedge.net
+DOMAIN,openaicom.imgix.net
+DOMAIN,openaicomproductionae4b.blob.core.windows.net
 DOMAIN,payments-jp.amazon.com
+DOMAIN,pplx-res.cloudinary.com
+DOMAIN,proactivebackend-pa.googleapis.com
+DOMAIN,production-openaicom-storage.azureedge.net
 DOMAIN,radio.itunes.apple.com
+DOMAIN,robinfrontend-pa.googleapis.com
+DOMAIN,router.huggingface.co
 DOMAIN,s3-ap-northeast-1.amazonaws.com
 DOMAIN,s3-ap-southeast-1.amazonaws.com
 DOMAIN,s3-ap-southeast-2.amazonaws.com
@@ -65,8 +109,13 @@ DOMAIN,steampipe.akamaized.net
 DOMAIN,steamstore-a.akamaihd.net
 DOMAIN,steamusercontent-a.akamaihd.net
 DOMAIN,steamuserimages-a.akamaihd.net
+DOMAIN,sydney.bing.com
 DOMAIN,testflight.apple.com
+DOMAIN,token-plan-sgp.xiaomimimo.com
+DOMAIN,trae-api-sg.mchost.guru
+DOMAIN,turn.livekit.cloud
 DOMAIN,tv.apple.com
+DOMAIN,webchannel-alkalimakersuite-pa.clients6.google.com
 DOMAIN,wego.here.com
 DOMAIN-SUFFIX,000webhost.com
 DOMAIN-SUFFIX,030buy.com
@@ -414,6 +463,8 @@ DOMAIN-SUFFIX,anthonycalzadilla.com
 DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,anti1984.com
 DOMAIN-SUFFIX,antichristendom.com
+DOMAIN-SUFFIX,antigravity-unleash.goog
+DOMAIN-SUFFIX,antigravity.google
 DOMAIN-SUFFIX,antiwave.net
 DOMAIN-SUFFIX,antpool.com
 DOMAIN-SUFFIX,anyporn.com
@@ -1021,6 +1072,7 @@ DOMAIN-SUFFIX,centauro.com.br
 DOMAIN-SUFFIX,centerforhumanreprod.com
 DOMAIN-SUFFIX,centralnation.com
 DOMAIN-SUFFIX,centurys.net
+DOMAIN-SUFFIX,cerebras.ai
 DOMAIN-SUFFIX,certificate-transparency.org
 DOMAIN-SUFFIX,cex.io
 DOMAIN-SUFFIX,cfhks.org.hk
@@ -1183,6 +1235,7 @@ DOMAIN-SUFFIX,ck101.com
 DOMAIN-SUFFIX,clarionproject.org
 DOMAIN-SUFFIX,classicalguitarblog.net
 DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,claudeusercontent.com
 DOMAIN-SUFFIX,clb.org.hk
 DOMAIN-SUFFIX,cleansite.biz
 DOMAIN-SUFFIX,cleansite.info
@@ -1301,6 +1354,7 @@ DOMAIN-SUFFIX,creadersnet.com
 DOMAIN-SUFFIX,creativelab5.com
 DOMAIN-SUFFIX,crisisresponse.google
 DOMAIN-SUFFIX,cristyli.com
+DOMAIN-SUFFIX,crixet.com
 DOMAIN-SUFFIX,crocotube.com
 DOMAIN-SUFFIX,crossfire.co.kr
 DOMAIN-SUFFIX,crossthewall.net
@@ -1969,6 +2023,7 @@ DOMAIN-SUFFIX,firefox.com
 DOMAIN-SUFFIX,fireofliberty.info
 DOMAIN-SUFFIX,fireofliberty.org
 DOMAIN-SUFFIX,firetweet.io
+DOMAIN-SUFFIX,fireworks.ai
 DOMAIN-SUFFIX,firstfivefollowers.com
 DOMAIN-SUFFIX,firstory.me
 DOMAIN-SUFFIX,firstpost.com
@@ -2666,6 +2721,8 @@ DOMAIN-SUFFIX,graph.org
 DOMAIN-SUFFIX,graphis.ne.jp
 DOMAIN-SUFFIX,graphql.org
 DOMAIN-SUFFIX,gravatar.com
+DOMAIN-SUFFIX,grazie.ai
+DOMAIN-SUFFIX,grazie.aws.intellij.net
 DOMAIN-SUFFIX,greasespot.net
 DOMAIN-SUFFIX,greasyfork.org
 DOMAIN-SUFFIX,great-firewall.com
@@ -2687,6 +2744,7 @@ DOMAIN-SUFFIX,greenvpn.net
 DOMAIN-SUFFIX,greenvpn.org
 DOMAIN-SUFFIX,grindr.com
 DOMAIN-SUFFIX,grok.com
+DOMAIN-SUFFIX,groq.com
 DOMAIN-SUFFIX,grotty-monday.com
 DOMAIN-SUFFIX,ground.news
 DOMAIN-SUFFIX,grow.google
@@ -3021,6 +3079,7 @@ DOMAIN-SUFFIX,hxwk.org
 DOMAIN-SUFFIX,hxwq.org
 DOMAIN-SUFFIX,hybrid-analysis.com
 DOMAIN-SUFFIX,hyperbeam.com
+DOMAIN-SUFFIX,hyperbolic.ai
 DOMAIN-SUFFIX,hyperrate.com
 DOMAIN-SUFFIX,hypothes.is
 DOMAIN-SUFFIX,hyread.com.tw
@@ -3289,6 +3348,7 @@ DOMAIN-SUFFIX,jbtalks.my
 DOMAIN-SUFFIX,jcpenney.com
 DOMAIN-SUFFIX,jdwsy.com
 DOMAIN-SUFFIX,jeanyim.com
+DOMAIN-SUFFIX,jetbrains.ai
 DOMAIN-SUFFIX,jetos.com
 DOMAIN-SUFFIX,jex.com
 DOMAIN-SUFFIX,jfqu36.club
@@ -3306,6 +3366,7 @@ DOMAIN-SUFFIX,jigsy.com
 DOMAIN-SUFFIX,jihadology.net
 DOMAIN-SUFFIX,jiji.com
 DOMAIN-SUFFIX,jims.net
+DOMAIN-SUFFIX,jina.ai
 DOMAIN-SUFFIX,jinbushe.org
 DOMAIN-SUFFIX,jingpin.org
 DOMAIN-SUFFIX,jingsim.org
@@ -3426,6 +3487,7 @@ DOMAIN-SUFFIX,kinmen.org.tw
 DOMAIN-SUFFIX,kinmen.travel
 DOMAIN-SUFFIX,kinokuniya.com
 DOMAIN-SUFFIX,kir.jp
+DOMAIN-SUFFIX,kiro.dev
 DOMAIN-SUFFIX,kissbbao.cn
 DOMAIN-SUFFIX,kissjav.com
 DOMAIN-SUFFIX,kiwi.kz
@@ -3846,6 +3908,7 @@ DOMAIN-SUFFIX,mingpaovan.com
 DOMAIN-SUFFIX,mingshengbao.com
 DOMAIN-SUFFIX,minhhue.net
 DOMAIN-SUFFIX,miniforum.org
+DOMAIN-SUFFIX,minimax.io
 DOMAIN-SUFFIX,miningpoolhub.com
 DOMAIN-SUFFIX,ministrybooks.org
 DOMAIN-SUFFIX,minzhuhua.net
@@ -3861,6 +3924,7 @@ DOMAIN-SUFFIX,missav.com
 DOMAIN-SUFFIX,missav.ws
 DOMAIN-SUFFIX,misskon.com
 DOMAIN-SUFFIX,mist.vip
+DOMAIN-SUFFIX,mistral.ai
 DOMAIN-SUFFIX,mit.edu
 DOMAIN-SUFFIX,mitao.com.tw
 DOMAIN-SUFFIX,mitbbs.com
@@ -4279,6 +4343,7 @@ DOMAIN-SUFFIX,nytstyle.com
 DOMAIN-SUFFIX,nzchinese.com
 DOMAIN-SUFFIX,nzchinese.net.nz
 DOMAIN-SUFFIX,o3o.ca
+DOMAIN-SUFFIX,oaistatic.com
 DOMAIN-SUFFIX,oaiusercontent.com
 DOMAIN-SUFFIX,oanda.com
 DOMAIN-SUFFIX,oann.com
@@ -4366,6 +4431,7 @@ DOMAIN-SUFFIX,opendn.xyz
 DOMAIN-SUFFIX,openervpn.in
 DOMAIN-SUFFIX,openid.net
 DOMAIN-SUFFIX,openleaks.org
+DOMAIN-SUFFIX,openrouter.ai
 DOMAIN-SUFFIX,opensea.io
 DOMAIN-SUFFIX,openstreetmap.org
 DOMAIN-SUFFIX,opentech.fund
@@ -4505,6 +4571,7 @@ DOMAIN-SUFFIX,perfectgirls.net
 DOMAIN-SUFFIX,perfectvpn.net
 DOMAIN-SUFFIX,periscope.tv
 DOMAIN-SUFFIX,perplexity.ai
+DOMAIN-SUFFIX,perplexity.com
 DOMAIN-SUFFIX,persecutionblog.com
 DOMAIN-SUFFIX,persiankitty.com
 DOMAIN-SUFFIX,pewresearch.org
@@ -4655,6 +4722,7 @@ DOMAIN-SUFFIX,powerapple.com
 DOMAIN-SUFFIX,powercx.com
 DOMAIN-SUFFIX,powerphoto.org
 DOMAIN-SUFFIX,powerpointninja.com
+DOMAIN-SUFFIX,pplx.ai
 DOMAIN-SUFFIX,ppy.sh
 DOMAIN-SUFFIX,prayforchina.net
 DOMAIN-SUFFIX,prcleader.org
@@ -5811,9 +5879,11 @@ DOMAIN-SUFFIX,tngrnow.net
 DOMAIN-SUFFIX,tnp.org
 DOMAIN-SUFFIX,tnt-ea.com
 DOMAIN-SUFFIX,to-porno.com
+DOMAIN-SUFFIX,together.ai
 DOMAIN-SUFFIX,togetter.com
 DOMAIN-SUFFIX,toh.info
 DOMAIN-SUFFIX,token.im
+DOMAIN-SUFFIX,tokenflux.ai
 DOMAIN-SUFFIX,tokenlon.im
 DOMAIN-SUFFIX,tokyo-247.com
 DOMAIN-SUFFIX,tokyo-hot.com
@@ -5860,6 +5930,7 @@ DOMAIN-SUFFIX,tparents.org
 DOMAIN-SUFFIX,tpi.org.tw
 DOMAIN-SUFFIX,tracfone.com
 DOMAIN-SUFFIX,tradingview.com
+DOMAIN-SUFFIX,trae.ai
 DOMAIN-SUFFIX,traffichaus.com
 DOMAIN-SUFFIX,translate.goog
 DOMAIN-SUFFIX,transparency.org
@@ -6289,6 +6360,7 @@ DOMAIN-SUFFIX,vot.org
 DOMAIN-SUFFIX,vovo2000.com
 DOMAIN-SUFFIX,voxer.com
 DOMAIN-SUFFIX,voy.com
+DOMAIN-SUFFIX,voyageai.com
 DOMAIN-SUFFIX,vpn.ac
 DOMAIN-SUFFIX,vpn.cjb.net
 DOMAIN-SUFFIX,vpn.net
@@ -6814,6 +6886,7 @@ DOMAIN-SUFFIX,z-lib.io
 DOMAIN-SUFFIX,z-lib.org
 DOMAIN-SUFFIX,z-library.ec
 DOMAIN-SUFFIX,z-library.sk
+DOMAIN-SUFFIX,z.ai
 DOMAIN-SUFFIX,zacebook.com
 DOMAIN-SUFFIX,zalmos.com
 DOMAIN-SUFFIX,zamimg.com
@@ -6960,6 +7033,7 @@ IP-CIDR,157.240.0.0/17,no-resolve
 IP-CIDR,158.85.224.160/27,no-resolve
 IP-CIDR,158.85.46.128/27,no-resolve
 IP-CIDR,158.85.5.192/27,no-resolve
+IP-CIDR,160.79.104.0/23,no-resolve
 IP-CIDR,173.192.222.160/27,no-resolve
 IP-CIDR,173.192.231.32/27,no-resolve
 IP-CIDR,173.194.0.0/16,no-resolve
@@ -7024,4 +7098,5 @@ IP-CIDR6,2001:67c:4e8::/48,no-resolve
 IP-CIDR6,2001:b28:f23c::/48,no-resolve
 IP-CIDR6,2001:b28:f23d::/48,no-resolve
 IP-CIDR6,2001:b28:f23f::/48,no-resolve
+IP-CIDR6,2607:6bc0::/48,no-resolve
 IP-CIDR6,2a0a:f280::/32,no-resolve
