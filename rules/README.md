@@ -20,7 +20,7 @@
 
 | Other | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | --- | --- | --- | --- | --- |
-| [Apple.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/Apple.list)<br>2026-06-18 10:14 | [SteamCN.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/SteamCN.list)<br>2026-06-18 10:14 | [Telegram.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/Telegram.list)<br>2026-06-18 10:14 | [WeChat.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/WeChat.list)<br>2026-06-18 10:14 |  |
+| [Apple.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/Apple.list)<br>2026-06-18 10:14 | [SteamCN.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/SteamCN.list)<br>2026-06-18 10:14 | [Telegram.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/Telegram.list)<br>2026-06-18 10:14 | [WeChat.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/WeChat.list)<br>2026-06-18 10:14 | &nbsp; |
 
 ## 使用示例
 

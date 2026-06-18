@@ -329,7 +329,7 @@ function renderOtherRulesets({ sourceConfigs, artifacts, repository, releaseBran
   const rows = [titleRow, separator];
   for (let i = 0; i < cells.length; i += COLS) {
     const rowCells = cells.slice(i, i + COLS);
-    while (rowCells.length < COLS) rowCells.push("");
+    while (rowCells.length < COLS) rowCells.push("&nbsp;");
     rows.push(`| ${rowCells.join(" | ")} |`);
   }
 
