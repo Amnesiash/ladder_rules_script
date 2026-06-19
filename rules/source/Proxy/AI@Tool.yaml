@@ -1,5 +1,5 @@
-# UpdateTime：2026-06-17 18:56:23
-# RuleCount：88
+# UpdateTime：2026-06-19 15:39:33
+# RuleCount：89
 payload:
   - DOMAIN,models.inference.ai.azure.com
   - DOMAIN,openai.com.cdn.cloudflare.net
@@ -36,6 +36,7 @@ payload:
   - DOMAIN,robinfrontend-pa.googleapis.com
   - DOMAIN,imagine.meta.com
   - DOMAIN,copilot.microsoft.com
+  - DOMAIN,token-plan-ams.xiaomimimo.com
   - DOMAIN,token-plan-sgp.xiaomimimo.com
   - DOMAIN,ai.google.dev
   - DOMAIN,trae-api-sg.mchost.guru

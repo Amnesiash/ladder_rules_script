@@ -1,7 +1,7 @@
 # NAME: Proxy
-# UPDATE: 2026-06-18 10:14
-# TOTAL: 7093
-# DOMAIN: 110
+# UPDATE: 2026-06-19 18:19
+# TOTAL: 7094
+# DOMAIN: 111
 # DOMAIN-SUFFIX: 6856
 # DOMAIN-KEYWORD: 30
 # IP-CIDR: 91
@@ -111,6 +111,7 @@ DOMAIN,steamusercontent-a.akamaihd.net
 DOMAIN,steamuserimages-a.akamaihd.net
 DOMAIN,sydney.bing.com
 DOMAIN,testflight.apple.com
+DOMAIN,token-plan-ams.xiaomimimo.com
 DOMAIN,token-plan-sgp.xiaomimimo.com
 DOMAIN,trae-api-sg.mchost.guru
 DOMAIN,turn.livekit.cloud
