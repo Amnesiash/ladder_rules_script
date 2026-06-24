@@ -1,7 +1,7 @@
 # 下面是实际订阅清单（可按需增删）
 
 [Advertising]
-https://adrules.top/adrules.list
+https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules.list
 https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Reject/Advertising.list
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
 
