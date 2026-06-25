@@ -9,7 +9,8 @@
 BaseProvider: &BaseProvider {type: http, interval: 86400, health-check: {enable: true, url: 'https://cp.cloudflare.com/generate_204', interval: 300}, filter: '^(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'}
 
 # 策略组类型模板 - 定义不同的策略组基础配置
-BaseUrltest: &BaseUrltest {type: url-test, interval: 300, tolerance: 50, timeout: 3000, max-failed-times: 3, lazy: true, url: 'https://cp.cloudflare.com/generate_204', hidden: true} 
+BaseUrltest: &BaseUrltest {type: url-test, include-all: true, exclude-type: direct, interval: 300, tolerance: 50, timeout: 3000, max-failed-times: 5, lazy: true, url: 'https://cp.cloudflare.com', hidden: true} 
+BaseSelect: &BaseSelect {type: select, interval: 300, timeout: 3000, max-failed-times: 5, lazy: true, url: "https://cp.cloudflare.com"}
 
 # 规则集行为模板
 c: &RuleSet_c {type: http, behavior: classical, format: text, interval: 86400}
@@ -113,82 +114,68 @@ proxies:
 proxy-groups:
   # 应用策略层 - Select手动选择，支持多场景应用优化，使用时默认，也可修改
   - name: 手动选择
-    type: select
+    <<: *BaseSelect
     include-all: true
     exclude-type: direct
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/vpnlogo/Meta.png
 
   - name: 代理加速
-    type: select
+    <<: *BaseSelect
     proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择, 直连]
     icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Global.png
 
   - name: AI
-    type: select
+    <<: *BaseSelect
     proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择, 直连]
     icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/AI.png
 
   - name: Telegram
-    type: select
+    <<: *BaseSelect
     proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择, 直连]
     icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Telegram_X.png
 
   - name: 国际流媒体
-    type: select
+    <<: *BaseSelect
     proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择, 直连]
     icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Streaming!CN.png
 
   - name: 漏网之鱼
-    type: select
+    <<: *BaseSelect
     proxies: [直连, 自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择]
     icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Final.png
 
   # 地理策略层 - 自动测速节点选择
   - name: 自动选择
     <<: *BaseUrltest
-    include-all: true
-    exclude-type: direct
     icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png
 
   - name: 香港
     <<: *BaseUrltest
-    include-all: true
-    exclude-type: direct
     filter: "(?i)港|hk|hongkong|hong kong"
     icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Hong_Kong.png
 
   - name: 台湾
     <<: *BaseUrltest
-    include-all: true
-    exclude-type: direct
     filter: "(?i)台|tw|taiwan"
     icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Taiwan.png
 
   - name: 日本
     <<: *BaseUrltest
-    include-all: true
-    exclude-type: direct
     filter: "(?i)日|jp|japan"
     icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Japan.png
 
   - name: 新加坡
     <<: *BaseUrltest
-    include-all: true
-    exclude-type: direct
     filter: "(?i)新|sg|singapore"
     icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Singapore.png
 
   - name: 美国
     <<: *BaseUrltest
-    include-all: true
-    exclude-type: direct
     filter: "(?i)美|us|unitedstates|united states"
     icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/United_States.png
 
   - name: 其他地区
     <<: *BaseUrltest
-    include-all: true
-    exclude-type: direct
     filter: "(?i)^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hongkong|台|tw|taiwan|日|jp|japan|新|sg|singapore|美|us|unitedstates)).*"
     icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/United_Nations.png
 
