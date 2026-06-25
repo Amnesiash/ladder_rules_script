@@ -8,6 +8,7 @@ https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
 [China]
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaMax/ChinaMax.list
+https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list
 
 [Direct]
 https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/custom/AddDirect.list
