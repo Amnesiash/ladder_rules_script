@@ -210,27 +210,15 @@ export async function renderTelegramArtifactChangeMessage({
   releaseBranch = "main",
   maxItemsPerSection = 25,
   maxMessageLength = TELEGRAM_MESSAGE_MAX_LENGTH,
-  previousReleaseDir,
-  currentReleaseDir,
-  previousRef,
-  cwd = process.cwd(),
 }) {
-  const normalizedChanges = await enrichChangesWithRuleDeltas({
-    changes,
-    previousReleaseDir,
-    currentReleaseDir,
-    previousRef,
-    cwd,
-  });
-
   const itemLimits = {
-    added: Math.min(normalizedChanges.added.length, maxItemsPerSection),
-    removed: Math.min(normalizedChanges.removed.length, maxItemsPerSection),
-    updated: Math.min(normalizedChanges.updated.length, maxItemsPerSection),
+    added: Math.min(changes.added.length, maxItemsPerSection),
+    removed: Math.min(changes.removed.length, maxItemsPerSection),
+    updated: Math.min(changes.updated.length, maxItemsPerSection),
   };
 
   let message = renderTelegramMessageWithLimits({
-    changes: normalizedChanges,
+    changes,
     repository,
     releaseBranch,
     itemLimits,
@@ -246,7 +234,7 @@ export async function renderTelegramArtifactChangeMessage({
       itemLimits.removed -= 1;
     }
     message = renderTelegramMessageWithLimits({
-      changes: normalizedChanges,
+      changes,
       repository,
       releaseBranch,
       itemLimits,
@@ -278,12 +266,11 @@ function renderChangeSection({ title, artifacts, repository, releaseBranch, maxI
 
   for (const artifact of items) {
     const displayName = artifact.relativePath || artifact.outputPath || artifact.label || "-";
-    const detail = artifact.ruleDeltaText ? ` ${escapeHtml(artifact.ruleDeltaText)}` : "";
     if (repository && releaseBranch) {
       const url = `https://raw.githubusercontent.com/${repository}/${releaseBranch}/rules/release/${artifact.relativePath}`;
-      lines.push(`- <a href="${url}">${escapeHtml(displayName)}</a>${detail}`);
+      lines.push(`- <a href="${url}">${escapeHtml(displayName)}</a>`);
     } else {
-      lines.push(`- ${escapeHtml(displayName)}${detail}`);
+      lines.push(`- ${escapeHtml(displayName)}`);
     }
   }
 
@@ -295,153 +282,6 @@ function renderChangeSection({ title, artifacts, repository, releaseBranch, maxI
 }
 
 async function enrichChangesWithRuleDeltas({
-  changes,
-  previousReleaseDir,
-  currentReleaseDir,
-  previousRef,
-  cwd = process.cwd(),
-}) {
-  const added = await Promise.all((Array.isArray(changes?.added) ? changes.added : []).map(async (artifact) => ({
-    ...artifact,
-    ruleDeltaText: await formatArtifactRuleDelta({
-      artifact,
-      previousReleaseDir,
-      currentReleaseDir,
-      previousRef,
-      cwd,
-      mode: "added",
-    }),
-  })));
-
-  const removed = await Promise.all((Array.isArray(changes?.removed) ? changes.removed : []).map(async (artifact) => ({
-    ...artifact,
-    ruleDeltaText: await formatArtifactRuleDelta({
-      artifact,
-      previousReleaseDir,
-      currentReleaseDir,
-      previousRef,
-      cwd,
-      mode: "removed",
-    }),
-  })));
-
-  const updated = await Promise.all((Array.isArray(changes?.updated) ? changes.updated : []).map(async (artifact) => ({
-    ...artifact,
-    ruleDeltaText: await formatArtifactRuleDelta({
-      artifact,
-      previousReleaseDir,
-      currentReleaseDir,
-      previousRef,
-      cwd,
-      mode: "updated",
-    }),
-  })));
-
-  return { added, removed, updated };
-}
-
-async function formatArtifactRuleDelta({
-  artifact,
-  previousReleaseDir,
-  currentReleaseDir,
-  previousRef,
-  cwd,
-  mode,
-}) {
-  const relativePath = String(artifact?.relativePath || "");
-  if (!relativePath) return "";
-
-  const currentLines = mode === "removed"
-    ? []
-    : await readArtifactRuleLines({
-      releaseDir: currentReleaseDir,
-      gitRef: null,
-      relativePath,
-      cwd,
-    });
-
-  const previousLines = mode === "added"
-    ? []
-    : await readArtifactRuleLines({
-      releaseDir: previousReleaseDir,
-      gitRef: previousRef,
-      relativePath,
-      cwd,
-    });
-
-  const { added, removed } = diffRuleLines(previousLines, currentLines);
-
-  if (mode === "added") {
-    return added > 0 ? `(+${added})` : "";
-  }
-  if (mode === "removed") {
-    return removed > 0 ? `(-${removed})` : "";
-  }
-  if (added > 0 && removed > 0) return `(+${added}/-${removed})`;
-  if (added > 0) return `(+${added})`;
-  if (removed > 0) return `(-${removed})`;
-  return "";
-}
-
-async function readArtifactRuleLines({ releaseDir, gitRef, relativePath, cwd }) {
-  if (releaseDir) {
-    try {
-      const content = await fs.readFile(path.join(releaseDir, relativePath), "utf8");
-      return extractRuleLines(content);
-    } catch {
-      // fall through to git ref if available
-    }
-  }
-
-  if (gitRef) {
-    try {
-      const { stdout } = await execFileAsync(
-        "git",
-        ["show", `${gitRef}:${relativePath}`],
-        { cwd, maxBuffer: 1024 * 1024 * 8 },
-      );
-      return extractRuleLines(stdout);
-    } catch {
-      return [];
-    }
-  }
-
-  return [];
-}
-
-function extractRuleLines(content) {
-  return String(content ?? "")
-    .split(/\r?\n/u)
-    .map((line) => line.trim())
-    .filter((line) => line.length > 0 && !line.startsWith("#"));
-}
-
-function diffRuleLines(previousLines, currentLines) {
-  const previousCounts = countLineOccurrences(previousLines);
-  const currentCounts = countLineOccurrences(currentLines);
-  const allLines = new Set([...previousCounts.keys(), ...currentCounts.keys()]);
-  let added = 0;
-  let removed = 0;
-
-  for (const line of allLines) {
-    const prev = previousCounts.get(line) || 0;
-    const curr = currentCounts.get(line) || 0;
-    if (curr > prev) added += curr - prev;
-    else if (prev > curr) removed += prev - curr;
-  }
-
-  return { added, removed };
-}
-
-function countLineOccurrences(lines) {
-  const counts = new Map();
-  for (const line of lines) {
-    counts.set(line, (counts.get(line) || 0) + 1);
-  }
-  return counts;
-}
-
-// ==================== Telegram 发送 ====================
 
 export async function sendTelegramMessage({ botToken, chatId, text, fetchImpl = fetch }) {
   const response = await fetchImpl(
@@ -486,10 +326,6 @@ export async function sendTelegramNotification({
   const message = await renderTelegramArtifactChangeMessage({
     changes,
     repository,
-    previousReleaseDir,
-    currentReleaseDir,
-    previousRef,
-    cwd,
   });
 
   if (dryRun) {

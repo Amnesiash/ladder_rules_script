@@ -172,9 +172,6 @@ async function main() {
       changes,
       repository,
       dryRun: args["telegram-dry-run"] ?? false,
-      previousRef: "origin/main",
-      currentReleaseDir: result.outputRoot,
-      cwd: projectRoot,
     });
   }
 
