@@ -281,8 +281,6 @@ function renderChangeSection({ title, artifacts, repository, releaseBranch, maxI
   return lines.join("\n");
 }
 
-async function enrichChangesWithRuleDeltas({
-
 export async function sendTelegramMessage({ botToken, chatId, text, fetchImpl = fetch }) {
   const response = await fetchImpl(
     `https://api.telegram.org/bot${botToken}/sendMessage`,
