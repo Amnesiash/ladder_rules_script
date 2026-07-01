@@ -1,7 +1,7 @@
 # NAME: Direct
-# UPDATE: 2026-06-18 10:14
-# TOTAL: 96
-# DOMAIN: 23
+# UPDATE: 2026-07-01 11:46
+# TOTAL: 100
+# DOMAIN: 27
 # DOMAIN-SUFFIX: 71
 # DOMAIN-KEYWORD: 2
 
@@ -14,10 +14,14 @@ DOMAIN,ci.android.com
 DOMAIN,clientservices.googleapis.com
 DOMAIN,dl.google.com
 DOMAIN,dl.l.google.com
+DOMAIN,edge.activity.windows.com
+DOMAIN,edge.microsoft.com
 DOMAIN,errlog.umeng.com
 DOMAIN,fairplay.l.qq.com
+DOMAIN,iecvlist.microsoft.com
 DOMAIN,livew.l.qq.com
 DOMAIN,log.mmstat.com
+DOMAIN,msedge.api.cdp.microsoft.com
 DOMAIN,msg.umeng.com
 DOMAIN,msg.umengcloud.com
 DOMAIN,origin-a.akamaihd.net
