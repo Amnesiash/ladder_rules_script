@@ -1,7 +1,7 @@
 # NAME: Direct
-# UPDATE: 2026-07-01 11:46
-# TOTAL: 100
-# DOMAIN: 27
+# UPDATE: 2026-07-04 16:30
+# TOTAL: 101
+# DOMAIN: 28
 # DOMAIN-SUFFIX: 71
 # DOMAIN-KEYWORD: 2
 
@@ -32,6 +32,7 @@ DOMAIN,tracking.miui.com
 DOMAIN,update.googleapis.com
 DOMAIN,vd.l.qq.com
 DOMAIN,vi.l.qq.com
+DOMAIN,www.freecycle.top
 DOMAIN-SUFFIX,265.com
 DOMAIN-SUFFIX,2mdn.net
 DOMAIN-SUFFIX,alt1-mtalk.google.com
