@@ -1,8 +1,8 @@
 # NAME: AI
-# UPDATE: 2026-06-18 10:14
-# TOTAL: 240
+# UPDATE: 2026-07-06 18:09
+# TOTAL: 242
 # DOMAIN: 31
-# DOMAIN-SUFFIX: 190
+# DOMAIN-SUFFIX: 192
 # DOMAIN-KEYWORD: 14
 # IP-CIDR: 4
 # IP-ASN: 1
@@ -93,6 +93,7 @@ DOMAIN-SUFFIX,comfy.org
 DOMAIN-SUFFIX,comfyci.org
 DOMAIN-SUFFIX,comfyregistry.org
 DOMAIN-SUFFIX,copilot.cloud.microsoft
+DOMAIN-SUFFIX,copilot.com
 DOMAIN-SUFFIX,copilot.microsoft.com
 DOMAIN-SUFFIX,coze.com
 DOMAIN-SUFFIX,crewai.com
@@ -220,6 +221,7 @@ DOMAIN-SUFFIX,tabnine.com
 DOMAIN-SUFFIX,tapnow.ai
 DOMAIN-SUFFIX,themeforest.net
 DOMAIN-SUFFIX,trae.ai
+DOMAIN-SUFFIX,tripo3d.ai
 DOMAIN-SUFFIX,turn.livekit.cloud
 DOMAIN-SUFFIX,windsurf.build
 DOMAIN-SUFFIX,windsurf.com
