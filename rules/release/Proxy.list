@@ -1,7 +1,7 @@
 # NAME: Proxy
-# UPDATE: 2026-06-26 06:14
-# TOTAL: 7095
-# DOMAIN: 111
+# UPDATE: 2026-07-10 17:26
+# TOTAL: 7096
+# DOMAIN: 112
 # DOMAIN-SUFFIX: 6857
 # DOMAIN-KEYWORD: 30
 # IP-CIDR: 91
@@ -12,6 +12,7 @@ DOMAIN,a771.dscq.akamai.net
 DOMAIN,addons.mozilla.org
 DOMAIN,ai-gateway.vercel.sh
 DOMAIN,ai.google.dev
+DOMAIN,aicode.googleapis.com
 DOMAIN,aida.googleapis.com
 DOMAIN,aiplatform.googleapis.com
 DOMAIN,aisandbox-pa.googleapis.com

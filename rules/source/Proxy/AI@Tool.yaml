@@ -1,5 +1,5 @@
-# UpdateTime：2026-06-26 00:09:13
-# RuleCount：90
+# UpdateTime：2026-07-09 20:46:27
+# RuleCount：91
 payload:
   - DOMAIN,models.inference.ai.azure.com
   - DOMAIN,openai.com.cdn.cloudflare.net
@@ -26,6 +26,7 @@ payload:
   - DOMAIN,jules.google.com
   - DOMAIN,makersuite.google.com
   - DOMAIN,notebooklm.google.com
+  - DOMAIN,aicode.googleapis.com
   - DOMAIN,aida.googleapis.com
   - DOMAIN,aiplatform.googleapis.com
   - DOMAIN,aisandbox-pa.googleapis.com
