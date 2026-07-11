@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-07-10T09:26:38.158Z",
+  "timestamp": "2026-07-11T07:47:30.480Z",
   "artifacts": [
     {
       "slug": "Advertising",
@@ -10,7 +10,7 @@
       "kind": "clash",
       "label": "Advertising Rules",
       "behavior": "classical",
-      "sha256": "75e74c4f947b36ad39a304cb3f802fe6070be29bb0dfa2cb58524eefdafac7d8"
+      "sha256": "87924b15d69c6165d9e556d87e1ddc64d23bdf9c4fb12da39232a1390c3193dc"
     },
     {
       "slug": "China",
