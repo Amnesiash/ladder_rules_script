@@ -1,12 +1,19 @@
-# Mihomo 配置
-# 日期：2026-06-16
+# Mihomo 覆写配置
+# 日期：2026-07-15
 # 配置作者：https://github.com/Amnesiash
 # 适用版本：所有使用 Clash Meta 核心的程序
 
 
 # 策略组类型模板 - 定义不同的策略组基础配置
-BaseUrltest: &BaseUrltest {type: url-test, interval: 300, tolerance: 50, timeout: 3000, max-failed-times: 3, lazy: true, url: 'https://cp.cloudflare.com/generate_204', hidden: true} 
+BaseUrltest: &BaseUrltest {type: url-test, include-all: true, exclude-type: direct, interval: 300, tolerance: 50, timeout: 3000, max-failed-times: 5, lazy: true, url: 'https://cp.cloudflare.com', hidden: true} 
+BaseSelect: &BaseSelect {type: select, interval: 300, timeout: 3000, max-failed-times: 5, lazy: true, url: "https://cp.cloudflare.com"}
 
+# 出站代理
++proxies: 
+  - name: 直连
+    type: direct
+    udp: true
+    
 # 策略组
 proxy-groups:
   # 应用策略层 - Select手动选择，支持多场景应用优化，使用时默认，也可修改
@@ -17,27 +24,27 @@ proxy-groups:
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/vpnlogo/Meta.png
 
   - name: 代理加速
-    type: select
+    <<: *BaseSelect
     proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择, 直连]
     icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Global.png
 
   - name: AI
-    type: select
+    <<: *BaseSelect
     proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择, 直连]
     icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/AI.png
 
   - name: Telegram
-    type: select
+    <<: *BaseSelect
     proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择, 直连]
     icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Telegram_X.png
 
   - name: 国际流媒体
-    type: select
+    <<: *BaseSelect
     proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择, 直连]
     icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Streaming!CN.png
 
   - name: 漏网之鱼
-    type: select
+    <<: *BaseSelect
     proxies: [直连, 自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择]
     icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Final.png
 
