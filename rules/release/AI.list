@@ -1,7 +1,7 @@
 # NAME: AI
-# UPDATE: 2026-07-06 18:09
-# TOTAL: 242
-# DOMAIN: 31
+# UPDATE: 2026-07-19 16:08
+# TOTAL: 246
+# DOMAIN: 35
 # DOMAIN-SUFFIX: 192
 # DOMAIN-KEYWORD: 14
 # IP-CIDR: 4
@@ -11,6 +11,9 @@ DOMAIN,ai.google.dev
 DOMAIN,aistudio.google.com
 DOMAIN,alkalicore-pa.clients6.google.com
 DOMAIN,alkalimakersuite-pa.clients6.google.com
+DOMAIN,anthropic-com.ghost.io
+DOMAIN,anthropic.auth0.com
+DOMAIN,anthropic.com.cdn.cloudflare.net
 DOMAIN,antigravity-unleash.goog
 DOMAIN,antigravity.google
 DOMAIN,api-iam.intercom.io
@@ -36,6 +39,7 @@ DOMAIN,notebooklm.google.com
 DOMAIN,o33249.ingest.sentry.io
 DOMAIN,openaiapi-site.azureedge.net
 DOMAIN,pplx-res.cloudinary.com
+DOMAIN,servd-anthropic-website.b-cdn.net
 DOMAIN,sydney.bing.com
 DOMAIN,www.bing.com
 DOMAIN-SUFFIX,agentclientprotocol.com
