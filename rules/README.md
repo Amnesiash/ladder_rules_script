@@ -14,8 +14,8 @@
 | [`StreamingHMT.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/StreamingHMT.list) | 港澳台流媒体 | 哔哩哔哩、爱奇艺等港澳台流媒体 | 2026-06-18 10:14 |
 | [`Streaming.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Streaming.list) | 国际流媒体 | Netflix、Disney+、HBO 等国际流媒体 | 2026-06-18 10:14 |
 | [`Proxy.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Proxy.list) | 代理服务列表 | 国外代理、VPN、科学上网服务 | 2026-07-15 15:59 |
-| [`China.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/China.list) | 中国网站列表 | 国内网站、服务，确保直连访问 | 2026-07-28 16:25 |
-| [`Advertising.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Advertising.list) | 规则集合 | 按需分流与策略匹配 | 2026-07-29 16:31 |
+| [`China.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/China.list) | 中国网站列表 | 国内网站、服务，确保直连访问 | 2026-07-30 16:16 |
+| [`Advertising.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Advertising.list) | 规则集合 | 按需分流与策略匹配 | 2026-07-30 16:16 |
 
 ## 其他规则集
 
