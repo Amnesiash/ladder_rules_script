@@ -1,8 +1,8 @@
 # NAME: AI
-# UPDATE: 2026-08-02 16:14
-# TOTAL: 250
+# UPDATE: 2026-08-10 15:21
+# TOTAL: 253
 # DOMAIN: 35
-# DOMAIN-SUFFIX: 196
+# DOMAIN-SUFFIX: 199
 # DOMAIN-KEYWORD: 14
 # IP-CIDR: 4
 # IP-ASN: 1
@@ -111,6 +111,8 @@ DOMAIN-SUFFIX,cursorapi.com
 DOMAIN-SUFFIX,d-id.com
 DOMAIN-SUFFIX,deepmind.com
 DOMAIN-SUFFIX,deepmind.google
+DOMAIN-SUFFIX,deepwiki.com
+DOMAIN-SUFFIX,deepwiki.org
 DOMAIN-SUFFIX,devin.ai
 DOMAIN-SUFFIX,diabrowser.com
 DOMAIN-SUFFIX,diabrowser.engineering
@@ -180,6 +182,7 @@ DOMAIN-SUFFIX,midjourney.com
 DOMAIN-SUFFIX,minimax.io
 DOMAIN-SUFFIX,mistral.ai
 DOMAIN-SUFFIX,mozilla.ai
+DOMAIN-SUFFIX,notebook.google.com
 DOMAIN-SUFFIX,notebooklm.google
 DOMAIN-SUFFIX,notebooklm.google.com
 DOMAIN-SUFFIX,oaifree.com
