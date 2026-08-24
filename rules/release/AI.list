@@ -1,8 +1,8 @@
 # NAME: AI
-# UPDATE: 2026-08-10 15:21
-# TOTAL: 253
+# UPDATE: 2026-08-24 14:46
+# TOTAL: 259
 # DOMAIN: 35
-# DOMAIN-SUFFIX: 199
+# DOMAIN-SUFFIX: 205
 # DOMAIN-KEYWORD: 14
 # IP-CIDR: 4
 # IP-ASN: 1
@@ -120,6 +120,7 @@ DOMAIN-SUFFIX,diffusionbee.com
 DOMAIN-SUFFIX,dify.ai
 DOMAIN-SUFFIX,dola.com
 DOMAIN-SUFFIX,dola.com,extended-matching
+DOMAIN-SUFFIX,dreamgen.com
 DOMAIN-SUFFIX,duck.ai
 DOMAIN-SUFFIX,elevenlabs.com
 DOMAIN-SUFFIX,elevenlabs.io
@@ -161,6 +162,7 @@ DOMAIN-SUFFIX,jasper.ai
 DOMAIN-SUFFIX,jetbrains.ai
 DOMAIN-SUFFIX,jules.google
 DOMAIN-SUFFIX,jules.google.com
+DOMAIN-SUFFIX,kimi.ai
 DOMAIN-SUFFIX,kiro.dev
 DOMAIN-SUFFIX,labs.google
 DOMAIN-SUFFIX,labs.google.com
@@ -181,10 +183,13 @@ DOMAIN-SUFFIX,microsoft-copilot.com
 DOMAIN-SUFFIX,midjourney.com
 DOMAIN-SUFFIX,minimax.io
 DOMAIN-SUFFIX,mistral.ai
+DOMAIN-SUFFIX,moonshot.ai
 DOMAIN-SUFFIX,mozilla.ai
 DOMAIN-SUFFIX,notebook.google.com
 DOMAIN-SUFFIX,notebooklm.google
 DOMAIN-SUFFIX,notebooklm.google.com
+DOMAIN-SUFFIX,notegpt.io
+DOMAIN-SUFFIX,novelai.net
 DOMAIN-SUFFIX,oaifree.com
 DOMAIN-SUFFIX,oaistatic.com
 DOMAIN-SUFFIX,oaistatsig.com
@@ -229,6 +234,7 @@ DOMAIN-SUFFIX,stitch.withgoogle.com
 DOMAIN-SUFFIX,stripe.com
 DOMAIN-SUFFIX,synthesia.io
 DOMAIN-SUFFIX,tabnine.com
+DOMAIN-SUFFIX,talkai.info
 DOMAIN-SUFFIX,tapnow.ai
 DOMAIN-SUFFIX,themeforest.net
 DOMAIN-SUFFIX,trae.ai

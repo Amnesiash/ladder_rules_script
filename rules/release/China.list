@@ -1,5 +1,5 @@
 # NAME: China
-# UPDATE: 2026-08-22 14:30
+# UPDATE: 2026-08-24 14:46
 # TOTAL: 128988
 # DOMAIN: 291
 # DOMAIN-SUFFIX: 111409
@@ -115236,7 +115236,7 @@ IP-CIDR,140.249.0.0/16,no-resolve
 IP-CIDR,140.250.0.0/16,no-resolve
 IP-CIDR,140.255.0.0/16,no-resolve
 IP-CIDR,140.75.0.0/16,no-resolve
-IP-CIDR,141.11.50.0/23,no-resolve
+IP-CIDR,141.11.51.0/24,no-resolve
 IP-CIDR,142.70.0.0/16,no-resolve
 IP-CIDR,142.86.0.0/16,no-resolve
 IP-CIDR,143.191.188.0/22,no-resolve
@@ -116101,7 +116101,7 @@ IP-CIDR,192.197.113.0/24,no-resolve
 IP-CIDR,192.23.191.0/24,no-resolve
 IP-CIDR,192.232.97.0/24,no-resolve
 IP-CIDR,192.240.127.34/32,no-resolve
-IP-CIDR,192.51.173.0/24,no-resolve
+IP-CIDR,192.51.172.0/23,no-resolve
 IP-CIDR,192.51.188.0/24,no-resolve
 IP-CIDR,192.55.10.0/23,no-resolve
 IP-CIDR,192.55.40.0/24,no-resolve

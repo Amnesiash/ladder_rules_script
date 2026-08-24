@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-23T06:32:22.032Z",
+  "timestamp": "2026-08-24T06:46:12.421Z",
   "artifacts": [
     {
       "slug": "Advertising",
@@ -10,7 +10,7 @@
       "kind": "clash",
       "label": "Advertising Rules",
       "behavior": "classical",
-      "sha256": "e4762584cc6be742fed049de32ad1a829f742520f383f562e8955a5e7d21a3fd"
+      "sha256": "6fa43ab851e2d30dd49d8eddfd9e48f58e06229140ece4ee4e2df1e5e511c4b5"
     },
     {
       "slug": "China",
@@ -21,7 +21,7 @@
       "kind": "clash",
       "label": "China Rules",
       "behavior": "classical",
-      "sha256": "7295ec96a8f89a48fb2eea6fd1ad28b54bf2818db0d8270acee1dee5c332fd9e"
+      "sha256": "aa6e63c28ad089587413a8bb20e505e83c8f213d77f691dad2e13f96fad4c4cd"
     },
     {
       "slug": "Direct",
@@ -65,7 +65,7 @@
       "kind": "clash",
       "label": "AI Rules",
       "behavior": "classical",
-      "sha256": "40625fef2e8d63429a213fb9161b0f1482b982226bebb882bebc0b824905ed0e"
+      "sha256": "f2e4f0a2b409d2893d31e1408ea31609d036bc9bb63d60b52d3ba7beb987ef6d"
     },
     {
       "slug": "Private",
