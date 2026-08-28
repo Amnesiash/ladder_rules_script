@@ -2,6 +2,8 @@
 
 这份文档合并了原来的配置指南和样式说明，内容以当前实现为准。
 
+> 当前状态：自动构建流程已关闭 Telegram 通知。下文的独立脚本仍可在需要时手动运行。
+
 ## 1. 用途
 
 Telegram 通知用于在规则产物发生变化时提醒你，触发点是 `artifacts-manifest.json` 的差异，而不是 Git 提交本身。
@@ -58,7 +60,7 @@ GitHub Actions 里通常放在 Secrets 中：
 
 ### 4.1 构建流程内触发
 
-`bun run build:release:clean` 会在构建后读取前后两个 manifest，然后调用 Telegram 发送逻辑。
+自动构建流程不再调用 Telegram 发送逻辑。
 
 ### 4.2 独立脚本触发
 

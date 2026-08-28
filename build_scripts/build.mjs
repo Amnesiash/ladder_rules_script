@@ -5,7 +5,6 @@ import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import { buildRelease } from "./lib/artifacts.mjs";
 import { backupSourceTxtEntries, syncSourceCache } from "./lib/subscriptions.mjs";
-import { loadPreviousManifest, compareProviderArtifactChanges, sendTelegramNotification } from "./lib/notifications.mjs";
 import { renderRulesReadme } from "./lib/links.mjs";
 
 const execFileAsync = promisify(execFile);
@@ -40,7 +39,6 @@ function printHelpAndExit() {
       "  --out, -o      Output directory (default: .release).",
       "  --rules, -r    Rules directory to package (default: Rules).",
       "  --repo         GitHub repo name (owner/repo).",
-      "  --telegram-dry-run  Test Telegram notification without sending.",
       "  --help, -h     Show this help message.",
     ].join("\n"),
   );
@@ -135,17 +133,6 @@ async function main() {
 
   const outputRoot = path.resolve(projectRoot, args.out ?? "rules/release");
 
-  // 加载之前的 manifest（用于变更检测）
-  let previousManifest = await loadPreviousManifest({
-    previousReleaseDir: outputRoot,
-  });
-  if (!previousManifest) {
-    previousManifest = await loadPreviousManifest({
-      previousRef: "origin/main",
-      cwd: projectRoot,
-    });
-  }
-
   // 执行构建
   const result = await buildRelease({
     projectRoot,
@@ -155,25 +142,6 @@ async function main() {
   });
 
   console.log(`Generated ${result.artifacts.length} rule files in ${result.outputRoot}`);
-
-  // 生成 rules/README.md，汇总分流文件、版本链接和来源
-  const currentManifest = await loadPreviousManifest({
-    previousReleaseDir: outputRoot,
-  });
-
-  let changes = null;
-  if (currentManifest) {
-    changes = compareProviderArtifactChanges(previousManifest, currentManifest);
-    
-    // Telegram 通知
-    await sendTelegramNotification({
-      botToken: process.env.TELEGRAM_BOT_TOKEN,
-      chatId: process.env.TELEGRAM_CHAT_ID,
-      changes,
-      repository,
-      dryRun: args["telegram-dry-run"] ?? false,
-    });
-  }
 
   // 收集各规则文件的最近更新时间（从 header 的 # UPDATE: 行读取）
   // 使用 sourceConfig.pathName 作为 key，与 renderRulesRows/renderOtherRulesets 保持一致
