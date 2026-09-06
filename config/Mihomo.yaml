@@ -117,31 +117,32 @@ dns:
 proxy-groups:
   # 应用策略层 - Select手动选择，支持多场景应用优化，使用时默认，也可修改
   - name: 手动选择
-    <<: *a3
+    type: select
+    include-all: true
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/vpnlogo/Meta.png
 
   - name: 代理加速
-    <<: *a3
+    type: select
     proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 手动选择, DIRECT]
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/mini/Color/Global.png
 
   - name: AI
-    <<: *a3
+    type: select
     proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 手动选择, DIRECT]
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/mini/Color/OpenAI.png
 
   - name: Telegram
-    <<: *a3
+    type: select
     proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 手动选择, DIRECT]
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/mini/Color/Telegram.png
 
   - name: 国际流媒体
-    <<: *a3
+    type: select
     proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 手动选择, DIRECT]
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/mini/Color/StreamingCN.png
 
   - name: 漏网之鱼
-    <<: *a3
+    type: select
     proxies: [DIRECT, 自动选择, 香港, 台湾, 日本, 新加坡, 美国, 手动选择]
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/mini/Color/Final.png
 
