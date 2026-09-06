@@ -4,156 +4,130 @@
 # 适用版本：所有使用 Clash Meta 核心的程序
 
 
+# ==================== 锚点配置 ====================
 # 策略组类型模板 - 定义不同的策略组基础配置
-BaseUrltest: &BaseUrltest {type: url-test, include-all: true, exclude-type: direct, interval: 300, tolerance: 50, timeout: 3000, max-failed-times: 5, lazy: true, url: 'https://cp.cloudflare.com', hidden: true} 
-BaseSelect: &BaseSelect {type: select, interval: 300, timeout: 3000, max-failed-times: 5, lazy: true, url: "https://cp.cloudflare.com"}
+auto:  &a2 {type: url-test, include-all: true, exclude-type: direct, interval: 900, lazy: true, url: 'https://cp.cloudflare.com', hidden: false} 
+sl: &a3 {type: select, include-all: true}
 
-# 出站代理
-+proxies: 
-  - name: 直连
-    type: direct
-    udp: true
-    
+# 规则集行为模板
+c: &r1 {type: http, behavior: classical, format: text, interval: 86400}
+
 # 策略组
 proxy-groups:
   # 应用策略层 - Select手动选择，支持多场景应用优化，使用时默认，也可修改
   - name: 手动选择
-    type: select
-    include-all: true
-    exclude-type: direct
+    <<: *a3
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/vpnlogo/Meta.png
 
   - name: 代理加速
-    <<: *BaseSelect
-    proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择, 直连]
-    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Global.png
+    <<: *a3
+    proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 手动选择, DIRECT]
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/mini/Color/Global.png
 
   - name: AI
-    <<: *BaseSelect
-    proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择, 直连]
-    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/AI.png
+    <<: *a3
+    proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 手动选择, DIRECT]
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/mini/Color/OpenAI.png
 
   - name: Telegram
-    <<: *BaseSelect
-    proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择, 直连]
-    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Telegram_X.png
+    <<: *a3
+    proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 手动选择, DIRECT]
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/mini/Color/Telegram.png
 
   - name: 国际流媒体
-    <<: *BaseSelect
-    proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择, 直连]
-    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Streaming!CN.png
+    <<: *a3
+    proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 手动选择, DIRECT]
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/mini/Color/StreamingCN.png
 
   - name: 漏网之鱼
-    <<: *BaseSelect
-    proxies: [直连, 自动选择, 香港, 台湾, 日本, 新加坡, 美国, 其他地区, 手动选择]
-    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Final.png
+    <<: *a3
+    proxies: [DIRECT, 自动选择, 香港, 台湾, 日本, 新加坡, 美国, 手动选择]
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/mini/Color/Final.png
 
   # 地理策略层 - 自动测速节点选择
   - name: 自动选择
-    <<: *BaseUrltest
-    include-all: true
-    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Auto.png
+    <<: *a2
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/mini/Color/Auto.png
 
   - name: 香港
-    <<: *BaseUrltest
-    include-all: true
-    exclude-type: direct
+    <<: *a2
     filter: "(?i)港|hk|hongkong|hong kong"
-    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Hong_Kong.png
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/mini/Color/HK.png
 
   - name: 台湾
-    <<: *BaseUrltest
-    include-all: true
-    exclude-type: direct
+    <<: *a2
     filter: "(?i)台|tw|taiwan"
-    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Taiwan.png
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/mini/Color/TW.png
 
   - name: 日本
-    <<: *BaseUrltest
-    include-all: true
-    exclude-type: direct
+    <<: *a2
     filter: "(?i)日|jp|japan"
-    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Japan.png
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/mini/Color/JP.png
 
   - name: 新加坡
-    <<: *BaseUrltest
-    include-all: true
-    exclude-type: direct
+    <<: *a2
     filter: "(?i)新|sg|singapore"
-    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Singapore.png
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/mini/Color/SG.png
 
   - name: 美国
-    <<: *BaseUrltest
-    include-all: true
-    exclude-type: direct
+    <<: *a2
     filter: "(?i)美|us|unitedstates|united states"
-    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/United_States.png
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/mini/Color/US.png
 
-  - name: 其他地区
-    <<: *BaseUrltest
-    include-all: true
-    exclude-type: direct
-    filter: "(?i)^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hongkong|台|tw|taiwan|日|jp|japan|新|sg|singapore|美|us|unitedstates)).*"
-    icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/United_Nations.png
-
-# ==================== 规则集 ====================
-# 规则集行为模板
-c: &RuleSet_c {type: http, behavior: classical, format: text, interval: 86400}
-
-# 规则提供者
+# 规则集
 rule-providers:
   Direct:
-    <<: *RuleSet_c
+    <<: *r1
     url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/Direct.list
     path: ./ruleset/Direct.list
 
   Private:
-    <<: *RuleSet_c
+    <<: *r1
     url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/Private.list
     path: ./ruleset/Private.list
 
   AI:
-    <<: *RuleSet_c
+    <<: *r1
     url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/AI.list
     path: ./ruleset/AI.list
 
   Telegram:
-    <<: *RuleSet_c
+    <<: *r1
     url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/Extra/Telegram.list
     path: ./ruleset/Extra/Telegram.list
 
   Streaming:
-    <<: *RuleSet_c
+    <<: *r1
     url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/Streaming.list
     path: ./ruleset/Streaming.list
 
   SteamCN:
-    <<: *RuleSet_c
+    <<: *r1
     url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/Extra/SteamCN.list
     path: ./ruleset/Extra/SteamCN.list
 
   Proxy:
-    <<: *RuleSet_c
+    <<: *r1
     url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/Proxy.list
     path: ./ruleset/Proxy.list
 
   China:
-    <<: *RuleSet_c
+    <<: *r1
     url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/China.list
     path: ./ruleset/China.list
 
 # 规则路由
 rules:
   # > 订阅规则
-  - RULE-SET, Private, 直连
-  - RULE-SET, Direct, 直连
+  - RULE-SET, Private, DIRECT
+  - RULE-SET, Direct, DIRECT
   - RULE-SET, AI, AI
   - RULE-SET, Telegram, Telegram
   - RULE-SET, Streaming, 国际流媒体
-  - RULE-SET, SteamCN, 直连
+  - RULE-SET, SteamCN, DIRECT
   - RULE-SET, Proxy, 代理加速
-  - RULE-SET, China, 直连
-  - GEOIP, CN, 直连
+  - RULE-SET, China, DIRECT
+  - GEOIP, CN, DIRECT
 
   # 兜底规则
   - MATCH, 漏网之鱼
