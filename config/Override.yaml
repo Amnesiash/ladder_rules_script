@@ -1,5 +1,5 @@
 # Mihomo 覆写配置
-# 日期：2026-07-15
+# 日期：2026-09-07
 # 配置作者：https://github.com/Amnesiash
 # 适用版本：所有使用 Clash Meta 核心的程序
 
@@ -7,7 +7,6 @@
 # ==================== 锚点配置 ====================
 # 策略组类型模板 - 定义不同的策略组基础配置
 auto:  &a2 {type: url-test, include-all: true, exclude-type: direct, interval: 900, lazy: true, url: 'https://cp.cloudflare.com', hidden: false} 
-sl: &a3 {type: select, include-all: true}
 
 # 规则集行为模板
 c: &r1 {type: http, behavior: classical, format: text, interval: 86400}
@@ -23,57 +22,57 @@ proxy-groups:
   - name: 代理加速
     type: select
     proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 手动选择, DIRECT]
-    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/mini/Color/Global.png
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/Global.png
 
   - name: AI
     type: select
     proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 手动选择, DIRECT]
-    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/mini/Color/OpenAI.png
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/OpenAI.png
 
   - name: Telegram
     type: select
     proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 手动选择, DIRECT]
-    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/mini/Color/Telegram.png
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/Telegram.png
 
   - name: 国际流媒体
     type: select
     proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 手动选择, DIRECT]
-    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/mini/Color/StreamingCN.png
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/StreamingCN.png
 
   - name: 漏网之鱼
     type: select
     proxies: [DIRECT, 自动选择, 香港, 台湾, 日本, 新加坡, 美国, 手动选择]
-    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/mini/Color/Final.png
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/Final.png
 
   # 地理策略层 - 自动测速节点选择
   - name: 自动选择
     <<: *a2
-    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/mini/Color/Auto.png
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/Auto.png
 
   - name: 香港
     <<: *a2
     filter: "(?i)港|hk|hongkong|hong kong"
-    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/mini/Color/HK.png
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/HK.png
 
   - name: 台湾
     <<: *a2
     filter: "(?i)台|tw|taiwan"
-    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/mini/Color/TW.png
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/TW.png
 
   - name: 日本
     <<: *a2
     filter: "(?i)日|jp|japan"
-    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/mini/Color/JP.png
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/JP.png
 
   - name: 新加坡
     <<: *a2
     filter: "(?i)新|sg|singapore"
-    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/mini/Color/SG.png
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/SG.png
 
   - name: 美国
     <<: *a2
     filter: "(?i)美|us|unitedstates|united states"
-    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/mini/Color/US.png
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/US.png
 
 # 规则集
 rule-providers:
