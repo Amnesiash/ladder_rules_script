@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-08T10:28:23.695Z",
+  "timestamp": "2026-09-08T11:23:32.004Z",
   "artifacts": [
     {
       "slug": "Advertising",
@@ -32,7 +32,7 @@
       "kind": "clash",
       "label": "Direct Rules",
       "behavior": "classical",
-      "sha256": "4394dc98f72676ee7b147908bb97e020ac52b381621d323e0165091dfa5580f9"
+      "sha256": "fa771f1738a324f6eb0a3b05520076500eae2aedbac5a9fc7473686d4a468cfc"
     },
     {
       "slug": "Proxy",
@@ -43,7 +43,7 @@
       "kind": "clash",
       "label": "Proxy Rules",
       "behavior": "classical",
-      "sha256": "2ba958c2b4a6a0e9fcc7d6f64e6fafcf5e31885e65bc5ee3a1d36e4c879d503f"
+      "sha256": "f508dcaf9f2e0f727e794c5eb2fe1b0b0650d4d75e40e2920f795e7e44f2e1e9"
     },
     {
       "slug": "Streaming",
@@ -65,7 +65,7 @@
       "kind": "clash",
       "label": "AI Rules",
       "behavior": "classical",
-      "sha256": "f2e4f0a2b409d2893d31e1408ea31609d036bc9bb63d60b52d3ba7beb987ef6d"
+      "sha256": "6bdc2bc795fd99e5861fd1c4dce42a33274f42fd1d4544b60b6b7314809d56d2"
     },
     {
       "slug": "Private",
