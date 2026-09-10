@@ -9,7 +9,7 @@
 | 文件名 | 包含内容 | 用途 | 最近更新 |
 | --- | --- | --- | --- |
 | [`Private.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Private.list) | 私有网络 | 内网设备管理、路由器配置、本地服务访问 | 2026-06-18 10:14 |
-| [`Direct.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Direct.list) | 直连域名列表 | 国内可直连的常用服务，避免不必要的代理 | 2026-09-10 07:51 |
+| [`Direct.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Direct.list) | 直连域名列表 | 国内可直连的常用服务，避免不必要的代理 | 2026-09-10 08:48 |
 | [`AI.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/AI.list) | AI 服务 | ChatGPT、Claude、Gemini 等主要 AI 服务 | 2026-09-08 19:23 |
 | [`StreamingHMT.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/StreamingHMT.list) | 港澳台流媒体 | 哔哩哔哩、爱奇艺等港澳台流媒体 | 2026-06-18 10:14 |
 | [`Streaming.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Streaming.list) | 国际流媒体 | Netflix、Disney+、HBO 等国际流媒体 | 2026-06-18 10:14 |
