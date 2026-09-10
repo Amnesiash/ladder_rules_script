@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-10T00:34:57.982Z",
+  "timestamp": "2026-09-10T00:43:08.549Z",
   "artifacts": [
     {
       "slug": "Advertising",
@@ -21,7 +21,7 @@
       "kind": "clash",
       "label": "China Rules",
       "behavior": "classical",
-      "sha256": "a0c18e1b0203d2b84f488ec0fc2f3afd8c2e2e06e590b941453c71e4049c322e"
+      "sha256": "d986e660c1e32ef72a8dad9b452b880747eab0fc0cdb145558f91e49637417e5"
     },
     {
       "slug": "Direct",
@@ -43,7 +43,7 @@
       "kind": "clash",
       "label": "Proxy Rules",
       "behavior": "classical",
-      "sha256": "f508dcaf9f2e0f727e794c5eb2fe1b0b0650d4d75e40e2920f795e7e44f2e1e9"
+      "sha256": "a1a283c65442c6b29cdf173577d3c4b69927d360e525b7d8e03ab81cc524b5f5"
     },
     {
       "slug": "Streaming",
