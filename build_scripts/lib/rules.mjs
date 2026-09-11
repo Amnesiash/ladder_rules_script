@@ -72,25 +72,127 @@ function ensureCidrPrefixes(line) {
 // ==================== 规则类型名归一化 ====================
 
 // 语义相同、但 mihomo 不认的类型名 → mihomo 类型名。
-// IP6-CIDR 是 Quantumult X 的 IPv6 CIDR 类型名（QX 九种分流类型之一），
-// mihomo / Surge / Loon 都写作 IP-CIDR6。
-// 不归一化的话，mihomo 的 parser 会走 default 分支报 unsupported rule type，整条规则被丢弃
-// （见 rules/parser.go），且报错只写日志不中断构建，很容易被忽略。
+//
+// 规则源里会混进别家客户端的写法，这些名字 mihomo 的 parser 一个都不认：
+//
+//   Quantumult X:
+//     HOST            -> DOMAIN
+//     HOST-SUFFIX     -> DOMAIN-SUFFIX
+//     HOST-KEYWORD    -> DOMAIN-KEYWORD
+//     HOST-WILDCARD   -> DOMAIN-WILDCARD
+//     IP6-CIDR        -> IP-CIDR6
+//   Surge:
+//     DEST-PORT       -> DST-PORT
+//
+// Surge 与 Loon 的 IP-CIDR6 与 mihomo 同名，不需要改名。
+//
+// 不做归一化的话，mihomo 的 parser 会走 default 分支报
+// "unsupported rule type"，整条规则被丢弃，且只写日志、不中断启动
+// —— 属于静默失效（见 rules/parser.go）。
+//
+// 注意：HOST-WILDCARD 的通配符语法与 mihomo DOMAIN-WILDCARD 一致
+// （`*` 任意多字符、`?` 恰好一个字符），值可以直接搬。
 const RULE_TYPE_ALIASES = new Map([
   ["IP6-CIDR", "IP-CIDR6"],
+  ["HOST", "DOMAIN"],
+  ["HOST-SUFFIX", "DOMAIN-SUFFIX"],
+  ["HOST-KEYWORD", "DOMAIN-KEYWORD"],
+  ["HOST-WILDCARD", "DOMAIN-WILDCARD"],
+  ["DEST-PORT", "DST-PORT"],
 ]);
 
-function normalizeRuleTypeAlias(line) {
+/** 取某个类型名归一化后的 mihomo 类型名；不需要改名时返回 null。 */
+export function ruleTypeAliasTarget(type) {
+  return RULE_TYPE_ALIASES.get(String(type ?? "").trim().toUpperCase()) ?? null;
+}
+
+function normalizeRuleTypeAlias(line, stats) {
   const comma = line.indexOf(",");
   if (comma === -1) return line;
 
-  const canonical = RULE_TYPE_ALIASES.get(line.slice(0, comma).trim().toUpperCase());
+  const source = line.slice(0, comma).trim().toUpperCase();
+  const canonical = RULE_TYPE_ALIASES.get(source);
   if (!canonical) return line;
 
+  if (stats?.aliased) stats.aliased.set(source, (stats.aliased.get(source) ?? 0) + 1);
   return `${canonical}${line.slice(comma)}`;
 }
 
-export function normalizeRulesetLines(lines) {
+// mihomo rules/parser.go 的 switch 能识别的全部规则类型（即 ParseRule 的 case 全集）。
+// 用于把「会被 mihomo 静默丢弃的规则」暴露到构建日志里 —— 别名表没覆盖到的新类型
+// 会在这里报出来，而不是悄悄消失。
+//
+// 注意：端口只有 DST-PORT，没有 DEST-PORT（那是 Surge 的写法，已进别名表）。
+// URL-REGEX / USER-AGENT 不在这个名单里 —— parser.go 并没有对应 case，
+// 它们由 INTENTIONALLY_DROPPED_RULE_TYPES 主动剔除，因此也不会触发告警。
+const MIHOMO_RULE_TYPES = new Set([
+  "DOMAIN",
+  "DOMAIN-SUFFIX",
+  "DOMAIN-KEYWORD",
+  "DOMAIN-REGEX",
+  "DOMAIN-WILDCARD",
+  "GEOSITE",
+  "GEOIP",
+  "SRC-GEOIP",
+  "IP-ASN",
+  "SRC-IP-ASN",
+  "IP-CIDR",
+  "IP-CIDR6",
+  "SRC-IP-CIDR",
+  "IP-SUFFIX",
+  "SRC-IP-SUFFIX",
+  "SRC-PORT",
+  "DST-PORT",
+  "IN-PORT",
+  "DSCP",
+  "PROCESS-NAME",
+  "PROCESS-PATH",
+  "PROCESS-NAME-REGEX",
+  "PROCESS-PATH-REGEX",
+  "PROCESS-NAME-WILDCARD",
+  "PROCESS-PATH-WILDCARD",
+  "NETWORK",
+  "UID",
+  "IN-TYPE",
+  "IN-USER",
+  "IN-NAME",
+  "REMATCH-NAME",
+  "SUB-RULE",
+  "AND",
+  "OR",
+  "NOT",
+  "RULE-SET",
+  "MATCH",
+]);
+
+// 会被 buildSortedRulesetForClash 主动剔除的类型，不参与「不被支持」告警。
+// mihomo 的规则引擎没有这两种类型（parser.go 无对应 case），
+// 但规则源里常见，剔除属于既定策略，不算异常。
+const INTENTIONALLY_DROPPED_RULE_TYPES = new Set(["URL-REGEX", "USER-AGENT"]);
+
+/**
+ * 找出 mihomo 不认识、且不会被主动剔除的规则类型。
+ * 这些行在客户端里等同不存在，需要让构建日志报出来。
+ */
+export function findUnsupportedRuleTypes(lines) {
+  const found = new Map();
+  for (const line of lines) {
+    const comma = line.indexOf(",");
+    if (comma === -1) continue;
+    const type = line.slice(0, comma).trim().toUpperCase();
+    if (!type || MIHOMO_RULE_TYPES.has(type) || INTENTIONALLY_DROPPED_RULE_TYPES.has(type)) continue;
+    found.set(type, (found.get(type) ?? 0) + 1);
+  }
+  return found;
+}
+
+/**
+ * 逐行归一化。
+ * @param {string[]} lines 原始行
+ * @param {{aliased?: Map<string, number>}|null} stats 可选；传入时会把「类型名归一化」
+ *   的次数累计到 stats.aliased（key 为改写前的类型名），供构建日志展示。
+ */
+export function normalizeRulesetLines(lines, stats = null) {
   return lines
     .map((l) => String(l ?? ""))
     .map((l) => stripInlineSuffixComments(l))
@@ -100,7 +202,9 @@ export function normalizeRulesetLines(lines) {
     .filter((l) => !isLikelyYamlHeaderLine(l))
     .map(normalizeCommaSpacing)
     .map(normalizeLooseDomainSyntax)
-    .map(normalizeRuleTypeAlias)
+    // 类型名归一化必须早于 ensureCidrPrefixes：IP6-CIDR 先变成 IP-CIDR6，
+    // 后续 CIDR 兜底识别才不会把已改好的行再包一层前缀。
+    .map((l) => normalizeRuleTypeAlias(l, stats))
     .map(ensureCidrPrefixes);
 }
 
@@ -247,7 +351,8 @@ function sortBucket(line) {
 }
 
 export function buildSortedRulesetForClash(lines, options = {}) {
-  const normalized = normalizeRulesetLines(lines);
+  const stats = { aliased: new Map() };
+  const normalized = normalizeRulesetLines(lines, stats);
 
   // 先统一补 no-resolve，再排序去重——补全后重复的两种写法会自然合并为一行
   const { lines: flagged, added } = ensureNoResolveOnTargetIpRules(normalized);
@@ -258,8 +363,15 @@ export function buildSortedRulesetForClash(lines, options = {}) {
   });
 
   const mergedCount = flagged.length - sorted.length;
-  if ((added.length > 0 || mergedCount > 0) && typeof options.onNormalize === "function") {
-    options.onNormalize({ added, mergedCount });
+  const aliased = stats.aliased;
+  // 别名表没覆盖到、又不属于主动剔除的类型：这些行在客户端里等同不存在，
+  // 必须报出来而不是悄悄丢掉。检查 sorted 而非 result，避免剔除名单内的类型误报。
+  const unsupportedRuleTypes = findUnsupportedRuleTypes(sorted);
+
+  const hasNews =
+    added.length > 0 || mergedCount > 0 || aliased.size > 0 || unsupportedRuleTypes.size > 0;
+  if (hasNews && typeof options.onNormalize === "function") {
+    options.onNormalize({ added, mergedCount, aliased, unsupportedRuleTypes });
   }
 
   return result;

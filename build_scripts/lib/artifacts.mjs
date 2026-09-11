@@ -3,7 +3,7 @@ import path from "node:path";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import { loadAllSources, toSafeFileStem, toSafePathStem } from "./config.mjs";
-import { buildSortedRulesetForClash } from "./rules.mjs";
+import { buildSortedRulesetForClash, ruleTypeAliasTarget } from "./rules.mjs";
 import { fetchWithFallback, sourceConfigsFromSourceTxt, deriveCacheFileNameFromUrl } from "./subscriptions.mjs";
 import { makeArtifact, writeArtifactManifest } from "./notifications.mjs";
 
@@ -163,8 +163,27 @@ async function processEntry({ entry, outputRoot, fetchImpl, projectRoot, sourceR
   const artifacts = [];
 
   const clashLines = buildSortedRulesetForClash(content.split(/\r?\n/), {
-    onNormalize: ({ added, mergedCount }) => {
+    onNormalize: ({ added, mergedCount, aliased, unsupportedRuleTypes }) => {
       const label = `[${entry.sourceName || entry.name}/${entry.name}]`;
+
+      // 别家客户端的类型名被改写成 mihomo 认得的写法
+      if (aliased?.size > 0) {
+        const detail = [...aliased.entries()]
+          .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+          .map(([from, count]) => `${from}→${ruleTypeAliasTarget(from) ?? "?"} ×${count}`)
+          .join("，");
+        warn(`🧭 ${label} 归一化非 mihomo 规则类型: ${detail}`);
+      }
+
+      // 别名表没覆盖到的类型：客户端会整条忽略，必须显式暴露
+      if (unsupportedRuleTypes?.size > 0) {
+        const detail = [...unsupportedRuleTypes.entries()]
+          .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+          .map(([type, count]) => `${type} ×${count}`)
+          .join("，");
+        warn(`⚠️  ${label} 含 mihomo 不支持的规则类型（这些行会被客户端丢弃）: ${detail}`);
+      }
+
       if (added.length > 0) {
         const preview = added.slice(0, 3).map((item) => item.to).join(" | ");
         const rest = added.length > 3 ? ` ... 其余 ${added.length - 3} 条` : "";
@@ -379,27 +398,23 @@ function normalizeRuleHeaderType(line) {
   return type || null;
 }
 
+// header 里类型行的展示顺序。
+// 只列可能出现在产物里的类型 —— 别家客户端的写法（HOST*、IP6-CIDR、DEST-PORT）
+// 已在 normalizeRuleTypeAlias 阶段改写，URL-REGEX / USER-AGENT 已被剔除，
+// 都不会进到 body，因此不在此表。表外类型会按字母序追加到末尾。
 const RULE_TYPE_HEADER_ORDER = [
   "DOMAIN",
-  "HOST",
   "DOMAIN-SUFFIX",
-  "HOST-SUFFIX",
   "GEOSITE",
   "DOMAIN-KEYWORD",
-  "HOST-KEYWORD",
   "DOMAIN-WILDCARD",
-  "HOST-WILDCARD",
   "DOMAIN-REGEX",
-  "URL-REGEX",
-  "USER-AGENT",
   "DST-PORT",
-  "DEST-PORT",
   "SRC-PORT",
   "NETWORK",
   "DSCP",
   "IP-CIDR",
   "IP-CIDR6",
-  "IP6-CIDR",
   "IP-SUFFIX",
   "IP-ASN",
   "GEOIP",
@@ -411,13 +426,14 @@ const RULE_TYPE_HEADER_ORDER = [
   "IN-TYPE",
   "IN-USER",
   "IN-NAME",
+  "UID",
+  "REMATCH-NAME",
   "PROCESS-NAME",
   "PROCESS-NAME-WILDCARD",
   "PROCESS-NAME-REGEX",
   "PROCESS-PATH",
   "PROCESS-PATH-WILDCARD",
   "PROCESS-PATH-REGEX",
-  "UID",
   "AND",
   "OR",
   "NOT",
