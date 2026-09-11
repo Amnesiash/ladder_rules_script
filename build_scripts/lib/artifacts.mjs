@@ -162,7 +162,19 @@ async function processEntry({ entry, outputRoot, fetchImpl, projectRoot, sourceR
   const content = await fetchEntryContent(entry, fetchImpl, { sourceRoot, sourceName: entry.sourceName, warn });
   const artifacts = [];
 
-  const clashLines = buildSortedRulesetForClash(content.split(/\r?\n/));
+  const clashLines = buildSortedRulesetForClash(content.split(/\r?\n/), {
+    onNormalize: ({ added, mergedCount }) => {
+      const label = `[${entry.sourceName || entry.name}/${entry.name}]`;
+      if (added.length > 0) {
+        const preview = added.slice(0, 3).map((item) => item.to).join(" | ");
+        const rest = added.length > 3 ? ` ... 其余 ${added.length - 3} 条` : "";
+        warn(`ℹ️  ${label} 为 ${added.length} 条目标 IP 规则补充 no-resolve: ${preview}${rest}`);
+      }
+      if (mergedCount > 0) {
+        warn(`ℹ️  ${label} 去重合并 ${mergedCount} 条重复规则`);
+      }
+    },
+  });
   if (clashLines.length) {
     const rulesPath = await writeRulesFile({ outputRoot, entry, lines: clashLines, projectRoot });
     artifacts.push(makeArtifact({ entry, outputRoot, filePath: rulesPath, kind: "clash", label: `${entry.name} Rules` }));
@@ -326,7 +338,7 @@ function extractBodyLines(content) {
     .join("\n");
 }
 
-function buildHeaderBlock({ name, updateTime, bodyLines }) {
+export function buildHeaderBlock({ name, updateTime, bodyLines }) {
   const typeCounts = countRuleTypes(bodyLines);
   const lines = [
     `# NAME: ${name}`,

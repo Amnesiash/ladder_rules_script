@@ -100,6 +100,68 @@ export function sortAndDedupRulesetLines(lines, bucketOf) {
   return deduped;
 }
 
+// ==================== 目标 IP 规则的 no-resolve 归一化 ====================
+
+// 只有“目标 IP 类”规则才谈得上 no-resolve（mihomo: 仅支持关于 目标IP 的规则）
+// 注意：SRC-IP-CIDR / SRC-GEOIP / SRC-IP-ASN 等来源 IP 规则不在此列
+const TARGET_IP_RULE_TYPES = new Set([
+  "IP-CIDR",
+  "IP-CIDR6",
+  "IP6-CIDR",
+  "IP-SUFFIX",
+  "IP-ASN",
+  "GEOIP",
+]);
+
+const NO_RESOLVE_PARAM = "no-resolve";
+
+function splitRuleParams(line) {
+  const parts = String(line ?? "").split(",");
+  return {
+    type: parts[0].trim().toUpperCase(),
+    params: parts.slice(1).map((p) => p.trim()),
+  };
+}
+
+function hasNoResolveParam(line) {
+  return splitRuleParams(line).params.some((p) => p.toLowerCase() === NO_RESOLVE_PARAM);
+}
+
+/**
+ * 给一条目标 IP 规则补上 no-resolve；不适用或已有该参数时原样返回。
+ * 参数追加在行尾（策略列之后），例如 IP-CIDR,1.2.3.0/24,DIRECT → IP-CIDR,1.2.3.0/24,DIRECT,no-resolve
+ */
+function withNoResolveParam(line) {
+  const { type, params } = splitRuleParams(line);
+  if (!TARGET_IP_RULE_TYPES.has(type)) return line;
+  if (!params[0]) return line;
+  if (hasNoResolveParam(line)) return line;
+  return `${String(line).trim().replace(/[,\s]+$/u, "")},${NO_RESOLVE_PARAM}`;
+}
+
+/**
+ * 为目标 IP 类规则统一补上 no-resolve。
+ *
+ * 原因：域名请求匹配到目标 IP 规则时，mihomo 会先触发 DNS 解析再比对
+ * （rules/common/ipcidr.go），解析结果会写回 metadata.DstIP 并对该连接后续所有规则生效
+ * （tunnel/tunnel.go）。对于规则集里这些按 IP 段/ASN 兜底的规则，这一步解析既非必要，
+ * 又会把解析时机提前。统一标注 no-resolve 后，这类规则只在目标已经是 IP 时才参与匹配。
+ *
+ * 补全后原本「带 no-resolve」与「不带 no-resolve」的同款规则会变成完全相同的行，
+ * 由后续 sortAndDedupRulesetLines 自然合并，无需额外去重逻辑。
+ *
+ * @returns {{ lines: string[], added: Array<{from: string, to: string}> }}
+ */
+export function ensureNoResolveOnTargetIpRules(lines) {
+  const added = [];
+  const next = lines.map((line) => {
+    const updated = withNoResolveParam(line);
+    if (updated !== line) added.push({ from: line, to: updated });
+    return updated;
+  });
+  return { lines: next, added };
+}
+
 // ==================== 规则解析 ====================
 
 function normalizeRawRuleLine(rawLine) {
@@ -157,13 +219,23 @@ function sortBucket(line) {
   return REFERENCE_RULE_ORDER.get(type) ?? 16;
 }
 
-export function buildSortedRulesetForClash(lines) {
+export function buildSortedRulesetForClash(lines, options = {}) {
   const normalized = normalizeRulesetLines(lines);
-  const sorted = sortAndDedupRulesetLines(normalized, sortBucket);
-  return sorted.filter((line) => {
+
+  // 先统一补 no-resolve，再排序去重——补全后重复的两种写法会自然合并为一行
+  const { lines: flagged, added } = ensureNoResolveOnTargetIpRules(normalized);
+  const sorted = sortAndDedupRulesetLines(flagged, sortBucket);
+  const result = sorted.filter((line) => {
     const type = normalizeRuleType(line);
     return type !== "URL-REGEX" && type !== "USER-AGENT";
   });
+
+  const mergedCount = flagged.length - sorted.length;
+  if ((added.length > 0 || mergedCount > 0) && typeof options.onNormalize === "function") {
+    options.onNormalize({ added, mergedCount });
+  }
+
+  return result;
 }
 
 function normalizeRuleType(line) {
