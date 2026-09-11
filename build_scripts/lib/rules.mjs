@@ -103,11 +103,16 @@ export function sortAndDedupRulesetLines(lines, bucketOf) {
 // ==================== 目标 IP 规则的 no-resolve 归一化 ====================
 
 // 只有“目标 IP 类”规则才谈得上 no-resolve（mihomo: 仅支持关于 目标IP 的规则）
-// 注意：SRC-IP-CIDR / SRC-GEOIP / SRC-IP-ASN 等来源 IP 规则不在此列
+// 依据 rules/parser.go：真正读取 no-resolve 参数的只有 GEOIP / IP-ASN /
+// IP-CIDR & IP-CIDR6 / IP-SUFFIX / RULE-SET。
+// 注意两点：
+//   1. SRC-GEOIP / SRC-IP-ASN / SRC-IP-CIDR / SRC-IP-SUFFIX 在 parser 里把
+//      src+noResolve 硬编码为 true、不读 params，因此不需要也不应该补；
+//   2. IP6-CIDR 不是 mihomo 的规则类型（那是 Surge 的写法，mihomo 只有 IP-CIDR6，
+//      且与 IP-CIDR 等价），写进去会被 parser 判为 unsupported rule type 而整条丢弃。
 const TARGET_IP_RULE_TYPES = new Set([
   "IP-CIDR",
   "IP-CIDR6",
-  "IP6-CIDR",
   "IP-SUFFIX",
   "IP-ASN",
   "GEOIP",
