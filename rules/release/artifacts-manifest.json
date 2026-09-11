@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-10T10:27:47.597Z",
+  "timestamp": "2026-09-11T07:33:58.910Z",
   "artifacts": [
     {
       "slug": "Advertising",
@@ -10,7 +10,7 @@
       "kind": "clash",
       "label": "Advertising Rules",
       "behavior": "classical",
-      "sha256": "e009bd86ecff57244cbc0817382b4823ed8bbb91e07c6a13815c9ae2757c7800"
+      "sha256": "c5b04f06795b4b5b1bae4ef20ca3a351dff8c0a7af865eca22a34c15d9e986e1"
     },
     {
       "slug": "China",
@@ -76,7 +76,7 @@
       "kind": "clash",
       "label": "Private Rules",
       "behavior": "classical",
-      "sha256": "20de437784bccbf7dfe3b75d971b01e01d4bad26fc43db582e2b43dd7f611b6b"
+      "sha256": "479e19638e9212dc7b2dd487ac58f20e60e065dad5b481c8b117c9efdea23731"
     },
     {
       "slug": "Extra/SteamCN",
@@ -131,7 +131,7 @@
       "kind": "clash",
       "label": "Extra/Telegram Rules",
       "behavior": "classical",
-      "sha256": "7283f59be7b205901709d468418e90a1c34e387ab987839d709a92e03cd2c697"
+      "sha256": "54302ab367f89875128394d3c8c39b71d7639845aba40ace31db9fdb81f007bc"
     },
     {
       "slug": "Extra/TikTok",
