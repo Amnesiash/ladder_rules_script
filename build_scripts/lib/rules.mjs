@@ -69,6 +69,27 @@ function ensureCidrPrefixes(line) {
   return out;
 }
 
+// ==================== 规则类型名归一化 ====================
+
+// 语义相同、但 mihomo 不认的类型名 → mihomo 类型名。
+// IP6-CIDR 是 Quantumult X 的 IPv6 CIDR 类型名（QX 九种分流类型之一），
+// mihomo / Surge / Loon 都写作 IP-CIDR6。
+// 不归一化的话，mihomo 的 parser 会走 default 分支报 unsupported rule type，整条规则被丢弃
+// （见 rules/parser.go），且报错只写日志不中断构建，很容易被忽略。
+const RULE_TYPE_ALIASES = new Map([
+  ["IP6-CIDR", "IP-CIDR6"],
+]);
+
+function normalizeRuleTypeAlias(line) {
+  const comma = line.indexOf(",");
+  if (comma === -1) return line;
+
+  const canonical = RULE_TYPE_ALIASES.get(line.slice(0, comma).trim().toUpperCase());
+  if (!canonical) return line;
+
+  return `${canonical}${line.slice(comma)}`;
+}
+
 export function normalizeRulesetLines(lines) {
   return lines
     .map((l) => String(l ?? ""))
@@ -79,6 +100,7 @@ export function normalizeRulesetLines(lines) {
     .filter((l) => !isLikelyYamlHeaderLine(l))
     .map(normalizeCommaSpacing)
     .map(normalizeLooseDomainSyntax)
+    .map(normalizeRuleTypeAlias)
     .map(ensureCidrPrefixes);
 }
 
@@ -108,8 +130,8 @@ export function sortAndDedupRulesetLines(lines, bucketOf) {
 // 注意两点：
 //   1. SRC-GEOIP / SRC-IP-ASN / SRC-IP-CIDR / SRC-IP-SUFFIX 在 parser 里把
 //      src+noResolve 硬编码为 true、不读 params，因此不需要也不应该补；
-//   2. IP6-CIDR 不是 mihomo 的规则类型（那是 Surge 的写法，mihomo 只有 IP-CIDR6，
-//      且与 IP-CIDR 等价），写进去会被 parser 判为 unsupported rule type 而整条丢弃。
+//   2. IP6-CIDR 不是 mihomo 的规则类型（那是 Quantumult X 的写法），已在上游的
+//      normalizeRuleTypeAlias() 里统一改写成 IP-CIDR6，这里不需要再列出。
 const TARGET_IP_RULE_TYPES = new Set([
   "IP-CIDR",
   "IP-CIDR6",
