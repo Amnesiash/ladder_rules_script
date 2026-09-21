@@ -1,8 +1,8 @@
 # NAME: AI
-# UPDATE: 2026-09-08 19:23
-# TOTAL: 306
-# DOMAIN: 72
-# DOMAIN-SUFFIX: 213
+# UPDATE: 2026-09-21 19:48
+# TOTAL: 311
+# DOMAIN: 73
+# DOMAIN-SUFFIX: 217
 # DOMAIN-KEYWORD: 14
 # IP-CIDR: 5
 # IP-CIDR6: 1
@@ -63,6 +63,7 @@ DOMAIN,models.inference.ai.azure.com
 DOMAIN,notebooklm.google
 DOMAIN,notebooklm.google.com
 DOMAIN,o33249.ingest.sentry.io
+DOMAIN,ollama.com
 DOMAIN,openai.com.cdn.cloudflare.net
 DOMAIN,openaiapi-site.azureedge.net
 DOMAIN,openaicom.imgix.net
@@ -124,6 +125,7 @@ DOMAIN-SUFFIX,claudemcpcontent.com
 DOMAIN-SUFFIX,claudeusercontent.com
 DOMAIN-SUFFIX,clawhub.ai
 DOMAIN-SUFFIX,client-api.arkoselabs.com
+DOMAIN-SUFFIX,cline.bot
 DOMAIN-SUFFIX,clipdrop.co
 DOMAIN-SUFFIX,cocopilot.org
 DOMAIN-SUFFIX,codeium.com
@@ -136,6 +138,7 @@ DOMAIN-SUFFIX,cohere.com
 DOMAIN-SUFFIX,comfy.org
 DOMAIN-SUFFIX,comfyci.org
 DOMAIN-SUFFIX,comfyregistry.org
+DOMAIN-SUFFIX,commandcode.ai
 DOMAIN-SUFFIX,copilot-stg.com
 DOMAIN-SUFFIX,copilot.cloud.microsoft
 DOMAIN-SUFFIX,copilot.com
@@ -246,6 +249,7 @@ DOMAIN-SUFFIX,openaiapi-site.azureedge.net
 DOMAIN-SUFFIX,openaicom.imgix.net
 DOMAIN-SUFFIX,openart.ai
 DOMAIN-SUFFIX,openclaw.ai
+DOMAIN-SUFFIX,opencode.ai
 DOMAIN-SUFFIX,openrouter.ai
 DOMAIN-SUFFIX,openspec.dev
 DOMAIN-SUFFIX,oystermercury.top
@@ -284,6 +288,7 @@ DOMAIN-SUFFIX,tokenflux.ai
 DOMAIN-SUFFIX,trae.ai
 DOMAIN-SUFFIX,tripo3d.ai
 DOMAIN-SUFFIX,turn.livekit.cloud
+DOMAIN-SUFFIX,typesafe.ai
 DOMAIN-SUFFIX,voyageai.com
 DOMAIN-SUFFIX,windsurf.build
 DOMAIN-SUFFIX,windsurf.com
