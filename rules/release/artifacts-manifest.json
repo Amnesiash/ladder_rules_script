@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-25T03:12:48.068Z",
+  "timestamp": "2026-09-25T03:15:55.871Z",
   "artifacts": [
     {
       "slug": "Advertising",
@@ -32,7 +32,7 @@
       "kind": "clash",
       "label": "Direct Rules",
       "behavior": "classical",
-      "sha256": "8b001419636e1a6d89a215e9afef963124c4ec3d03cf42c9643747fac0f2079d"
+      "sha256": "8dbfe25e4f5c81ae26b67cabc35c0fd925779f4cb799e5e6a7837f7b62c1ec3a"
     },
     {
       "slug": "Proxy",

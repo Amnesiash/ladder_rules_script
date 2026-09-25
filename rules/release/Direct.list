@@ -1,7 +1,7 @@
 # NAME: Direct
-# UPDATE: 2026-09-25 11:12
-# TOTAL: 67
-# DOMAIN: 25
+# UPDATE: 2026-09-25 11:15
+# TOTAL: 66
+# DOMAIN: 24
 # DOMAIN-SUFFIX: 40
 # DOMAIN-KEYWORD: 2
 
@@ -16,7 +16,6 @@ DOMAIN,dl.google.com
 DOMAIN,dl.l.google.com
 DOMAIN,errlog.umeng.com
 DOMAIN,fairplay.l.qq.com
-DOMAIN,hxcy.top
 DOMAIN,livew.l.qq.com
 DOMAIN,log.mmstat.com
 DOMAIN,msg.umeng.com
