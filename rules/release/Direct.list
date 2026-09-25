@@ -1,8 +1,8 @@
 # NAME: Direct
-# UPDATE: 2026-09-10 08:48
+# UPDATE: 2026-09-25 11:12
 # TOTAL: 67
-# DOMAIN: 24
-# DOMAIN-SUFFIX: 41
+# DOMAIN: 25
+# DOMAIN-SUFFIX: 40
 # DOMAIN-KEYWORD: 2
 
 DOMAIN,analytics.strava.com
@@ -16,6 +16,7 @@ DOMAIN,dl.google.com
 DOMAIN,dl.l.google.com
 DOMAIN,errlog.umeng.com
 DOMAIN,fairplay.l.qq.com
+DOMAIN,hxcy.top
 DOMAIN,livew.l.qq.com
 DOMAIN,log.mmstat.com
 DOMAIN,msg.umeng.com
@@ -52,7 +53,6 @@ DOMAIN-SUFFIX,ghp.ci
 DOMAIN-SUFFIX,googletraveladservices-cn.com
 DOMAIN-SUFFIX,googletraveladservices.com
 DOMAIN-SUFFIX,gradio.live
-DOMAIN-SUFFIX,hxcy.top
 DOMAIN-SUFFIX,i234.me
 DOMAIN-SUFFIX,iqiyis.com
 DOMAIN-SUFFIX,istoreos.com
