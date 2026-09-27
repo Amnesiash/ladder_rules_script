@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-27T11:15:33.999Z",
+  "timestamp": "2026-09-27T15:03:20.547Z",
   "artifacts": [
     {
       "slug": "Advertising",
@@ -77,6 +77,17 @@
       "label": "Private Rules",
       "behavior": "classical",
       "sha256": "479e19638e9212dc7b2dd487ac58f20e60e065dad5b481c8b117c9efdea23731"
+    },
+    {
+      "slug": "Extra/Microsoft",
+      "name": "Extra/Microsoft",
+      "sourceRelativeDir": "Extra/Microsoft",
+      "outputPath": "Extra/Microsoft.list",
+      "relativePath": "Extra/Microsoft.list",
+      "kind": "clash",
+      "label": "Extra/Microsoft Rules",
+      "behavior": "classical",
+      "sha256": "4bcf4b970ec4891c96553dc6abe7f55c1c4e50342dfdd8bd062cb3c145851aa3"
     },
     {
       "slug": "Extra/SteamCN",

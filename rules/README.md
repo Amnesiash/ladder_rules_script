@@ -21,8 +21,8 @@
 
 | Other | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | --- | --- | --- | --- | --- |
-| [Apple.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/Apple.list)<br>2026-06-18 10:14 | [OneDrive.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/OneDrive.list)<br>2026-06-18 11:11 | [SteamCN.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/SteamCN.list)<br>2026-06-18 10:14 | [Telegram.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/Telegram.list)<br>2026-06-18 10:14 | [TikTok.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/TikTok.list)<br>2026-06-18 11:11 |
-| [WeChat.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/WeChat.list)<br>2026-06-18 10:14 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+| [Apple.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/Apple.list)<br>2026-06-18 10:14 | [Microsoft.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/Microsoft.list)<br>2026-09-27 23:03 | [OneDrive.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/OneDrive.list)<br>2026-06-18 11:11 | [SteamCN.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/SteamCN.list)<br>2026-06-18 10:14 | [Telegram.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/Telegram.list)<br>2026-06-18 10:14 |
+| [TikTok.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/TikTok.list)<br>2026-06-18 11:11 | [WeChat.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/WeChat.list)<br>2026-06-18 10:14 | &nbsp; | &nbsp; | &nbsp; |
 
 ## 使用示例
 
@@ -42,6 +42,7 @@ rule-providers:
   China: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/China.list}
   Advertising: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Advertising.list}
   Extra_Apple: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/Apple.list}
+  Extra_Microsoft: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/Microsoft.list}
   Extra_OneDrive: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/OneDrive.list}
   Extra_SteamCN: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/SteamCN.list}
   Extra_Telegram: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/Telegram.list}
@@ -59,6 +60,7 @@ rules:
   - RULE-SET,China,DIRECT
   - RULE-SET,Advertising,DIRECT
   - RULE-SET,Extra_Apple,DIRECT
+  - RULE-SET,Extra_Microsoft,DIRECT
   - RULE-SET,Extra_OneDrive,DIRECT
   - RULE-SET,Extra_SteamCN,DIRECT
   - RULE-SET,Extra_Telegram,DIRECT
