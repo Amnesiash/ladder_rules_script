@@ -36,6 +36,9 @@ https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.
 https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt
 https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt
 
+[Extra/Microsoft]
+https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Microsoft.list
+
 [Extra/SteamCN]
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN.yaml
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
