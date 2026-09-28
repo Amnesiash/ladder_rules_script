@@ -1,8 +1,8 @@
 # NAME: AI
-# UPDATE: 2026-09-22 18:50
-# TOTAL: 450
+# UPDATE: 2026-09-28 20:43
+# TOTAL: 452
 # DOMAIN: 211
-# DOMAIN-SUFFIX: 218
+# DOMAIN-SUFFIX: 220
 # DOMAIN-KEYWORD: 14
 # IP-CIDR: 5
 # IP-CIDR6: 1
@@ -311,6 +311,7 @@ DOMAIN-SUFFIX,events.statsigapi.net
 DOMAIN-SUFFIX,featuregates.org
 DOMAIN-SUFFIX,fireworks.ai
 DOMAIN-SUFFIX,flow.google
+DOMAIN-SUFFIX,flow.google.com
 DOMAIN-SUFFIX,gateway.ai.cloudflare.com
 DOMAIN-SUFFIX,gateway.icloud.com
 DOMAIN-SUFFIX,geller-pa.googleapis.com
@@ -369,6 +370,7 @@ DOMAIN-SUFFIX,minimax.io
 DOMAIN-SUFFIX,mistral.ai
 DOMAIN-SUFFIX,moonshot.ai
 DOMAIN-SUFFIX,mozilla.ai
+DOMAIN-SUFFIX,notebook.google
 DOMAIN-SUFFIX,notebook.google.com
 DOMAIN-SUFFIX,notebooklm.google
 DOMAIN-SUFFIX,notebooklm.google.com
