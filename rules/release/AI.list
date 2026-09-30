@@ -1,7 +1,7 @@
 # NAME: AI
-# UPDATE: 2026-09-28 20:43
-# TOTAL: 452
-# DOMAIN: 211
+# UPDATE: 2026-09-30 19:48
+# TOTAL: 453
+# DOMAIN: 212
 # DOMAIN-SUFFIX: 220
 # DOMAIN-KEYWORD: 14
 # IP-CIDR: 5
@@ -208,6 +208,7 @@ DOMAIN,router.requesty.ai
 DOMAIN,servd-anthropic-website.b-cdn.net
 DOMAIN,sydney.bing.com
 DOMAIN,tinker.thinkingmachines.dev
+DOMAIN,titles.prod.mos.microsoft.com
 DOMAIN,token-plan-ams.xiaomimimo.com
 DOMAIN,token-plan-sgp.xiaomimimo.com
 DOMAIN,token-plan.ap-southeast-1.maas.aliyuncs.com

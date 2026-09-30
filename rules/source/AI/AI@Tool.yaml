@@ -1,11 +1,12 @@
-# UpdateTime：2026-09-23 11:36:20
-# RuleCount：238
+# UpdateTime：2026-09-30 15:41:32
+# RuleCount：239
 payload:
   - DOMAIN,oai.endpoints.kepler.ai.cloud.ovh.net
   - DOMAIN,api.openai-compat.model-serving.eu01.onstackit.cloud
   - DOMAIN,inference.generativeai.us-chicago-1.oci.oraclecloud.com
   - DOMAIN,token-plan.ap-southeast-1.maas.aliyuncs.com
   - DOMAIN,models.inference.ai.azure.com
+  - DOMAIN,titles.prod.mos.microsoft.com
   - DOMAIN,openai.com.cdn.cloudflare.net
   - DOMAIN,openaicomproductionae4b.blob.core.windows.net
   - DOMAIN,api.code.umans.ai
