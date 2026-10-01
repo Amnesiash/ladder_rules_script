@@ -34,6 +34,11 @@ proxy-groups:
     proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 手动选择, DIRECT]
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/Telegram.png
 
+  - name: 微软服务
+    type: select
+    proxies: [DIRECT, 自动选择, 香港, 台湾, 日本, 新加坡, 美国, 手动选择]
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/Microsoft.png
+
   - name: 国际流媒体
     type: select
     proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 手动选择, DIRECT]
@@ -96,6 +101,11 @@ rule-providers:
     url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/Extra/Telegram.list
     path: ./ruleset/Extra/Telegram.list
 
+  Microsoft:
+    <<: *r1
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/Extra/Microsoft.list
+    path: ./ruleset/Extra/Microsoft.list
+
   Streaming:
     <<: *r1
     url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/Streaming.list
@@ -121,6 +131,7 @@ rules:
   # > 订阅规则
   - RULE-SET, Private, DIRECT
   - RULE-SET, Direct, DIRECT
+  - RULE-SET, Microsoft, 微软服务
   - RULE-SET, AI, AI
   - RULE-SET, Telegram, Telegram
   - RULE-SET, Streaming, 国际流媒体
