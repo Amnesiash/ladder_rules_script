@@ -1,5 +1,5 @@
-# UpdateTime：2026-09-30 15:41:32
-# RuleCount：239
+# UpdateTime：2026-10-07 22:43:45
+# RuleCount：240
 payload:
   - DOMAIN,oai.endpoints.kepler.ai.cloud.ovh.net
   - DOMAIN,api.openai-compat.model-serving.eu01.onstackit.cloud
@@ -221,6 +221,7 @@ payload:
   - DOMAIN-SUFFIX,anthropic.com
   - DOMAIN-SUFFIX,chat.com
   - DOMAIN-SUFFIX,chatgpt.com
+  - DOMAIN-SUFFIX,claude.com
   - DOMAIN-SUFFIX,claudeusercontent.com
   - DOMAIN-SUFFIX,crixet.com
   - DOMAIN-SUFFIX,grok.com
