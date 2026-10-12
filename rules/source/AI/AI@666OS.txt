@@ -1,7 +1,7 @@
 # NAME: AI
 # AUTHOR: YYDS666
-# UPDATED: 2026-10-10 05:58:21
-# TOTAL: 224
+# UPDATED: 2026-10-12 05:10:27
+# TOTAL: 225
 DOMAIN-SUFFIX,agentclientprotocol.com
 DOMAIN-SUFFIX,ai.com
 DOMAIN-SUFFIX,ai.studio
@@ -195,6 +195,7 @@ DOMAIN-SUFFIX,stablediffusionweb.com
 DOMAIN-SUFFIX,stitch.withgoogle.com
 DOMAIN-SUFFIX,stripe.com
 DOMAIN-SUFFIX,synthesia.io
+DOMAIN-SUFFIX,syntx.ai
 DOMAIN-SUFFIX,tabnine.com
 DOMAIN-SUFFIX,talkai.info
 DOMAIN-SUFFIX,tapnow.ai

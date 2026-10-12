@@ -1,8 +1,8 @@
 # NAME: AI
-# UPDATE: 2026-10-04 19:41
-# TOTAL: 457
+# UPDATE: 2026-10-12 22:14
+# TOTAL: 458
 # DOMAIN: 212
-# DOMAIN-SUFFIX: 224
+# DOMAIN-SUFFIX: 225
 # DOMAIN-KEYWORD: 14
 # IP-CIDR: 5
 # IP-CIDR6: 1
@@ -425,6 +425,7 @@ DOMAIN-SUFFIX,stablediffusionweb.com
 DOMAIN-SUFFIX,stitch.withgoogle.com
 DOMAIN-SUFFIX,stripe.com
 DOMAIN-SUFFIX,synthesia.io
+DOMAIN-SUFFIX,syntx.ai
 DOMAIN-SUFFIX,tabnine.com
 DOMAIN-SUFFIX,talkai.info
 DOMAIN-SUFFIX,tapnow.ai
