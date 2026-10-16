@@ -15,14 +15,14 @@
 | [`Streaming.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Streaming.list) | 国际流媒体 | Netflix、Disney+、HBO 等国际流媒体 | 2026-06-18 10:14 |
 | [`Proxy.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Proxy.list) | 代理服务列表 | 国外代理、VPN、科学上网服务 | 2026-09-10 08:43 |
 | [`China.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/China.list) | 中国网站列表 | 国内网站、服务，确保直连访问 | 2026-09-10 08:43 |
-| [`Advertising.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Advertising.list) | 规则集合 | 按需分流与策略匹配 | 2026-10-15 18:45 |
+| [`Advertising.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Advertising.list) | 规则集合 | 按需分流与策略匹配 | 2026-10-16 18:32 |
 
 ## 其他规则集
 
 | Other | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | --- | --- | --- | --- | --- |
 | [Apple.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/Apple.list)<br>2026-06-18 10:14 | [Microsoft.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/Microsoft.list)<br>2026-09-27 23:03 | [OneDrive.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/OneDrive.list)<br>2026-06-18 11:11 | [SteamCN.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/SteamCN.list)<br>2026-06-18 10:14 | [Telegram.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/Telegram.list)<br>2026-06-18 10:14 |
-| [TikTok.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/TikTok.list)<br>2026-06-18 11:11 | [WeChat.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/WeChat.list)<br>2026-06-18 10:14 | &nbsp; | &nbsp; | &nbsp; |
+| [TikTok.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/TikTok.list)<br>2026-10-16 18:32 | [WeChat.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/WeChat.list)<br>2026-06-18 10:14 | &nbsp; | &nbsp; | &nbsp; |
 
 ## 使用示例
 

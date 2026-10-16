@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-15T10:45:18.886Z",
+  "timestamp": "2026-10-16T10:32:55.313Z",
   "artifacts": [
     {
       "slug": "Advertising",
@@ -10,7 +10,7 @@
       "kind": "clash",
       "label": "Advertising Rules",
       "behavior": "classical",
-      "sha256": "6f845c3cb7ee8e9d67d033e2a2e87627324bda1e5cba062b14097c985ed2bbb0"
+      "sha256": "7c5c8b30de959f909f42e4a72af90be1a2b1f655b5bcc00765d360eb62a1d032"
     },
     {
       "slug": "China",
@@ -153,7 +153,7 @@
       "kind": "clash",
       "label": "Extra/TikTok Rules",
       "behavior": "classical",
-      "sha256": "ab5234d2325320e54d6405e697ab93ecb5f502784dd2f5bfcfa7c3d4c16145d5"
+      "sha256": "6c1a2df899b3430c81f77ec262cfcd525296bc417a2201d06c933e777d22b84c"
     },
     {
       "slug": "Extra/OneDrive",
