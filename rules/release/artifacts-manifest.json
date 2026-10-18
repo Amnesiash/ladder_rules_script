@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-17T10:02:45.467Z",
+  "timestamp": "2026-10-18T10:15:57.717Z",
   "artifacts": [
     {
       "slug": "Advertising",
@@ -10,7 +10,7 @@
       "kind": "clash",
       "label": "Advertising Rules",
       "behavior": "classical",
-      "sha256": "5bf5d4445f01f550f8db72e4ccd98e2fc24cc12fd45c20259beacbf87d4afcec"
+      "sha256": "ae750db0a1e122bb3ccddae226951c6e05bc930198931356bcd3c4ce45483b91"
     },
     {
       "slug": "China",
@@ -76,7 +76,7 @@
       "kind": "clash",
       "label": "Private Rules",
       "behavior": "classical",
-      "sha256": "479e19638e9212dc7b2dd487ac58f20e60e065dad5b481c8b117c9efdea23731"
+      "sha256": "d829d53f189ce36178fbc19442bc9f5c3cc74f51bcf3581264e51c32609e11b5"
     },
     {
       "slug": "Extra/Microsoft",
