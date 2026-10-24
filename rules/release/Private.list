@@ -1,10 +1,10 @@
 # NAME: Private
-# UPDATE: 2026-10-18 18:15
-# TOTAL: 163
+# UPDATE: 2026-10-24 18:09
+# TOTAL: 173
 # DOMAIN: 4
 # DOMAIN-SUFFIX: 137
-# IP-CIDR: 16
-# IP-CIDR6: 6
+# IP-CIDR: 18
+# IP-CIDR6: 14
 
 DOMAIN,instant.arubanetworks.com
 DOMAIN,router.asus.com
@@ -156,6 +156,8 @@ IP-CIDR,172.16.0.0/12,no-resolve
 IP-CIDR,192.0.0.0/24,no-resolve
 IP-CIDR,192.0.2.0/24,no-resolve
 IP-CIDR,192.168.0.0/16,no-resolve
+IP-CIDR,192.31.196.0/24,no-resolve
+IP-CIDR,192.52.193.0/24,no-resolve
 IP-CIDR,192.88.99.0/24,no-resolve
 IP-CIDR,198.18.0.0/15,no-resolve
 IP-CIDR,198.18.0.0/16,no-resolve
@@ -165,6 +167,14 @@ IP-CIDR,224.0.0.0/3,no-resolve
 IP-CIDR,224.0.0.0/4,no-resolve
 IP-CIDR6,::/127,no-resolve
 IP-CIDR6,::1/128,no-resolve
+IP-CIDR6,100::/64,no-resolve
+IP-CIDR6,2001::/23,no-resolve
+IP-CIDR6,2001:db8::/32,no-resolve
+IP-CIDR6,2620:4f:8000::/48,no-resolve
+IP-CIDR6,3fff::/20,no-resolve
+IP-CIDR6,5f00::/16,no-resolve
+IP-CIDR6,64:ff9b::/96,no-resolve
+IP-CIDR6,64:ff9b:1::/48,no-resolve
 IP-CIDR6,fc00::/7,no-resolve
 IP-CIDR6,fd00::/8,no-resolve
 IP-CIDR6,fe80::/10,no-resolve
