@@ -335,18 +335,24 @@ function renderOtherRulesets({ sourceConfigs, artifacts, repository, releaseBran
   }
 
   return [...groups.entries()].map(([rootName, configs]) => {
-    const rows = configs.map((sourceConfig) => {
+    const cells = configs.map((sourceConfig) => {
       const pathName = sourceConfig.pathName || sourceConfig.sourceName || "";
       const title = pathName.split("/").pop();
       const updateTime = updateTimes[pathName] || "-";
       const links = renderRuleFileLinks({ sourceConfig, artifacts, repository, releaseBranch }) || "-";
-      return `| ${updateTime}<br>${escapeTableCell(title)}<br>${links} |`;
+      return `${updateTime}<br>${escapeTableCell(title)}<br>${links}`;
     });
-    return [
-      `| ${escapeTableCell(rootName)} |`,
-      "| --- |",
-      ...rows,
-    ].join("\n");
+    const columns = 5;
+    const rows = [
+      `| ${escapeTableCell(rootName)} | ${Array.from({ length: columns - 1 }, () => "&nbsp;").join(" | ")} |`,
+      `| ${Array.from({ length: columns }, () => "---").join(" | ")} |`,
+    ];
+    for (let i = 0; i < cells.length; i += columns) {
+      const row = cells.slice(i, i + columns);
+      while (row.length < columns) row.push("&nbsp;");
+      rows.push(`| ${row.join(" | ")} |`);
+    }
+    return rows.join("\n");
   }).join("\n\n");
 }
 
