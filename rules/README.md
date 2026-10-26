@@ -38,42 +38,32 @@ c: &RuleSet_c {type: http, behavior: classical, format: text, interval: 86400}
 rule-providers:
   # 规则集
   Private: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/private.list}
-  Direct: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/direct.list}
-  AI: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/ai.list}
-  StreamingHMT: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/streaminghmt.list}
-  Streaming: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/streaming.list}
-  Proxy: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/proxy.list}
-  China: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/china.list}
-  Advertising: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/advertising.list}
-  Extra_Apple: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/apple.list}
-  Extra_Microsoft: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/microsoft.list}
-  Extra_OneDrive: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/onedrive.list}
-  Extra_SteamCN: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/steamcn.list}
-  Extra_Telegram: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/telegram.list}
-  Extra_TikTok: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/tiktok.list}
-  Extra_WeChat: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/wechat.list}
 
 rules:
   # 订阅规则
   - RULE-SET,Private,DIRECT
-  - RULE-SET,Direct,DIRECT
-  - RULE-SET,AI,AI
-  - RULE-SET,StreamingHMT,哔哩哔哩
-  - RULE-SET,Streaming,国际媒体
-  - RULE-SET,Proxy,全球加速
-  - RULE-SET,China,DIRECT
-  - RULE-SET,Advertising,DIRECT
-  - RULE-SET,Extra_Apple,DIRECT
-  - RULE-SET,Extra_Microsoft,DIRECT
-  - RULE-SET,Extra_OneDrive,DIRECT
-  - RULE-SET,Extra_SteamCN,DIRECT
-  - RULE-SET,Extra_Telegram,DIRECT
-  - RULE-SET,Extra_TikTok,DIRECT
-  - RULE-SET,Extra_WeChat,DIRECT
   - GEOIP,CN,DIRECT
 
   # 兜底规则
   - MATCH,漏网之鱼
+```
+
+### Mihomo 使用示例
+
+```yaml
+rule-providers:
+  advertising_domain:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/advertising_domain.mrs
+    interval: 86400
+  advertising_ip:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/advertising_ip.mrs
+    interval: 86400
 ```
 
 ### QX 使用示例

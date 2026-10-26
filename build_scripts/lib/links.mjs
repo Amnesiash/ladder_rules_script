@@ -130,7 +130,11 @@ export function renderRulesReadme({
     "",
     "### Clash 使用示例",
     "",
-    renderRulesClashExample({ sourceConfigs: sortedConfigs, repository: repo, releaseBranch }),
+    renderRulesClashExample({ sourceConfigs: sortedConfigs.slice(0, 1), repository: repo, releaseBranch }),
+    "",
+    "### Mihomo 使用示例",
+    "",
+    renderMihomoConfig({ artifacts: providerArtifacts, repository: repo, releaseBranch }),
     "",
     "### QX 使用示例",
     "",
@@ -223,35 +227,26 @@ function renderSourceTable({ files, repository, mainBranch }) {
 }
 
 function renderMihomoConfig({ artifacts, repository, releaseBranch }) {
-  const mrsArtifacts = artifacts.filter((a) => a.kind?.includes("mrs"));
-  const yamlArtifacts = artifacts.filter((a) => a.kind?.includes("yaml"));
+  const mrsArtifacts = artifacts.filter((a) => a.kind === "domain-mrs" || a.kind === "ipcidr-mrs");
+  const examples = [
+    mrsArtifacts.find((artifact) => artifact.kind === "domain-mrs"),
+    mrsArtifacts.find((artifact) => artifact.kind === "ipcidr-mrs"),
+  ].filter(Boolean);
 
-  if (!mrsArtifacts.length && !yamlArtifacts.length) return "_暂无可用产物_";
+  if (!examples.length) return "_暂无 MRS 产物_";
 
   const lines = ["```yaml", "rule-providers:"];
-
-  for (const artifact of mrsArtifacts) {
+  for (const artifact of examples) {
     const rawPath = artifact.relativePath || artifact.outputPath;
-    const rawUrl = githubRawURL({ repository, branch: releaseBranch, filePath: rawPath });
+    const releasePath = rawPath.startsWith("rules/release/") ? rawPath : `rules/release/${rawPath}`;
+    const rawUrl = githubRawURL({ repository, branch: releaseBranch, filePath: releasePath });
     lines.push(`  ${artifact.slug}:`);
     lines.push(`    type: http`);
-    lines.push(`    behavior: ${artifact.behavior || "domain"}`);
+    lines.push(`    behavior: ${artifact.behavior === "ipcidr" ? "ipcidr" : "domain"}`);
     lines.push(`    format: mrs`);
     lines.push(`    url: ${rawUrl}`);
     lines.push(`    interval: 86400`);
   }
-
-  for (const artifact of yamlArtifacts) {
-    const rawPath = artifact.relativePath || artifact.outputPath;
-    const rawUrl = githubRawURL({ repository, branch: releaseBranch, filePath: rawPath });
-    lines.push(`  ${artifact.slug}:`);
-    lines.push(`    type: http`);
-    lines.push(`    behavior: classical`);
-    lines.push(`    format: yaml`);
-    lines.push(`    url: ${rawUrl}`);
-    lines.push(`    interval: 86400`);
-  }
-
   lines.push("```");
   return lines.join("\n");
 }
