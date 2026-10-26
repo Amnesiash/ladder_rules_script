@@ -2,7 +2,7 @@
 
 本目录自动生成规则文件仓库，包含各类代理软件使用的规则集合。
 
-说明：规则生成过程按 rule_source.txt 原始内容读取、解析和处理；仅在最终生成 release 产物时将文件名转换为小写。
+说明：规则生成过程按 rule_source.txt 原始内容读取、解析和处理；仅在最终生成 release 产物时将目录层级和文件名转换为小写。
 
 ---
 
@@ -21,13 +21,15 @@
 
 ## 额外规则集
 
-| `Apple` | `Microsoft` | `OneDrive` | `SteamCN` | `Telegram` |
-| --- | --- | --- | --- | --- |
-| 2026-10-26<br>[`apple.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/apple.list)<br>[`apple_domain.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/apple_domain.mrs)<br>[`apple_ip.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/apple_ip.mrs) | 2026-10-26<br>[`microsoft.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/microsoft.list)<br>[`microsoft_domain.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/microsoft_domain.mrs) | 2026-10-26<br>[`onedrive.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/onedrive.list)<br>[`onedrive_domain.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/onedrive_domain.mrs) | 2026-10-26<br>[`steamcn.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/steamcn.list)<br>[`steamcn_domain.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/steamcn_domain.mrs) | 2026-10-26<br>[`telegram.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/telegram.list)<br>[`telegram_domain.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/telegram_domain.mrs)<br>[`telegram_ip.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/telegram_ip.mrs) |
-
-| `TikTok` | `WeChat` |
-| --- | --- |
-| 2026-10-26<br>[`tiktok.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/tiktok.list)<br>[`tiktok_domain.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/tiktok_domain.mrs) | 2026-10-26<br>[`wechat.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/wechat.list)<br>[`wechat_domain.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/wechat_domain.mrs)<br>[`wechat_ip.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/wechat_ip.mrs) |
+| Extra |
+| --- |
+| 2026-10-26<br>Apple<br>[`apple.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/apple.list)<br>[`apple_domain.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/apple_domain.mrs)<br>[`apple_ip.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/apple_ip.mrs) |
+| 2026-10-26<br>Microsoft<br>[`microsoft.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/microsoft.list)<br>[`microsoft_domain.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/microsoft_domain.mrs) |
+| 2026-10-26<br>OneDrive<br>[`onedrive.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/onedrive.list)<br>[`onedrive_domain.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/onedrive_domain.mrs) |
+| 2026-10-26<br>SteamCN<br>[`steamcn.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/steamcn.list)<br>[`steamcn_domain.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/steamcn_domain.mrs) |
+| 2026-10-26<br>Telegram<br>[`telegram.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/telegram.list)<br>[`telegram_domain.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/telegram_domain.mrs)<br>[`telegram_ip.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/telegram_ip.mrs) |
+| 2026-10-26<br>TikTok<br>[`tiktok.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/tiktok.list)<br>[`tiktok_domain.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/tiktok_domain.mrs) |
+| 2026-10-26<br>WeChat<br>[`wechat.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/wechat.list)<br>[`wechat_domain.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/wechat_domain.mrs)<br>[`wechat_ip.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/wechat_ip.mrs) |
 
 ## 使用示例
 

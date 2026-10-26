@@ -109,7 +109,7 @@ export function renderRulesReadme({
     "",
     "本目录自动生成规则文件仓库，包含各类代理软件使用的规则集合。",
     "",
-    "说明：规则生成过程按 rule_source.txt 原始内容读取、解析和处理；仅在最终生成 release 产物时将文件名转换为小写。",
+    "说明：规则生成过程按 rule_source.txt 原始内容读取、解析和处理；仅在最终生成 release 产物时将目录层级和文件名转换为小写。",
     "",
     "---",
     "",
@@ -322,30 +322,32 @@ function renderOtherRulesets({ sourceConfigs, artifacts, repository, releaseBran
   if (!sourceConfigs.length) return "";
 
   const sortedConfigs = [...sourceConfigs].sort((a, b) => {
-    const nameA = (a.pathName || a.sourceName || "").split("/").pop().toLowerCase();
-    const nameB = (b.pathName || b.sourceName || "").split("/").pop().toLowerCase();
-    return nameA.localeCompare(nameB);
+    const pathA = a.pathName || a.sourceName || "";
+    const pathB = b.pathName || b.sourceName || "";
+    return pathA.localeCompare(pathB, undefined, { sensitivity: "base" });
   });
-  const groups = [];
-  for (let i = 0; i < sortedConfigs.length; i += 5) {
-    const group = sortedConfigs.slice(i, i + 5);
-    const titles = group.map((sourceConfig) => {
-      const fileNamePart = (sourceConfig.pathName || sourceConfig.sourceName || "").split("/").pop();
-      return `\`${fileNamePart}\``;
-    });
-    const cells = group.map((sourceConfig) => {
-      const updateTime = updateTimes[sourceConfig.pathName || sourceConfig.sourceName] || "-";
-      const links = renderRuleFileLinks({ sourceConfig, artifacts, repository, releaseBranch }) || "-";
-      return `${updateTime}<br>${links}`;
-    });
-    groups.push([
-      `| ${titles.join(" | ")} |`,
-      `| ${titles.map(() => "---").join(" | ")} |`,
-      `| ${cells.join(" | ")} |`,
-    ].join("\n"));
+  const groups = new Map();
+  for (const sourceConfig of sortedConfigs) {
+    const pathName = sourceConfig.pathName || sourceConfig.sourceName || "";
+    const [rootName] = pathName.split("/");
+    if (!groups.has(rootName)) groups.set(rootName, []);
+    groups.get(rootName).push(sourceConfig);
   }
 
-  return groups.join("\n\n");
+  return [...groups.entries()].map(([rootName, configs]) => {
+    const rows = configs.map((sourceConfig) => {
+      const pathName = sourceConfig.pathName || sourceConfig.sourceName || "";
+      const title = pathName.split("/").pop();
+      const updateTime = updateTimes[pathName] || "-";
+      const links = renderRuleFileLinks({ sourceConfig, artifacts, repository, releaseBranch }) || "-";
+      return `| ${updateTime}<br>${escapeTableCell(title)}<br>${links} |`;
+    });
+    return [
+      `| ${escapeTableCell(rootName)} |`,
+      "| --- |",
+      ...rows,
+    ].join("\n");
+  }).join("\n\n");
 }
 
 function escapeTableCell(value) {
