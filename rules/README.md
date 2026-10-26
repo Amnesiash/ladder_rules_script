@@ -51,19 +51,16 @@ rules:
 ### Mihomo 使用示例
 
 ```yaml
+d: &r2 {type: http, behavior: domain, format: mrs, interval: 86400}
+i: &r3 {type: http, behavior: ipcidr, format: mrs, interval: 86400}
+
 rule-providers:
   advertising_domain:
-    type: http
-    behavior: domain
-    format: mrs
-    url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/advertising_domain.mrs
-    interval: 86400
+    <<: *r2
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/advertising_domain.mrs
   advertising_ip:
-    type: http
-    behavior: ipcidr
-    format: mrs
-    url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/advertising_ip.mrs
-    interval: 86400
+    <<: *r3
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/advertising_ip.mrs
 ```
 
 ### QX 使用示例

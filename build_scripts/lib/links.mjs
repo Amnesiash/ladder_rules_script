@@ -235,17 +235,21 @@ function renderMihomoConfig({ artifacts, repository, releaseBranch }) {
 
   if (!examples.length) return "_暂无 MRS 产物_";
 
-  const lines = ["```yaml", "rule-providers:"];
+  const lines = [
+    "```yaml",
+    "d: &r2 {type: http, behavior: domain, format: mrs, interval: 86400}",
+    "i: &r3 {type: http, behavior: ipcidr, format: mrs, interval: 86400}",
+    "",
+    "rule-providers:",
+  ];
   for (const artifact of examples) {
     const rawPath = artifact.relativePath || artifact.outputPath;
     const releasePath = rawPath.startsWith("rules/release/") ? rawPath : `rules/release/${rawPath}`;
-    const rawUrl = githubRawURL({ repository, branch: releaseBranch, filePath: releasePath });
+    const rawUrl = `https://github.com/${repository}/raw/${releaseBranch}/${releasePath}`;
+    const anchor = artifact.kind === "ipcidr-mrs" ? "r3" : "r2";
     lines.push(`  ${artifact.slug}:`);
-    lines.push(`    type: http`);
-    lines.push(`    behavior: ${artifact.behavior === "ipcidr" ? "ipcidr" : "domain"}`);
-    lines.push(`    format: mrs`);
+    lines.push(`    <<: *${anchor}`);
     lines.push(`    url: ${rawUrl}`);
-    lines.push(`    interval: 86400`);
   }
   lines.push("```");
   return lines.join("\n");
