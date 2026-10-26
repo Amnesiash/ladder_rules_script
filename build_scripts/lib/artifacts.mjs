@@ -11,6 +11,17 @@ import { makeArtifact, writeArtifactManifest } from "./notifications.mjs";
 
 const execFileAsync = promisify(execFile);
 
+/**
+ * 生成日志用的条目标签。
+ * sourceName 与 name 在 sourceConfigsFromSourceTxt 中都是完整路径（如 Extra/Telegram），
+ * 两者相同时只保留一项，避免出现 [Extra/Telegram/Extra/Telegram]。
+ */
+function formatEntryLabel({ sourceName, name } = {}) {
+  const label = name ?? "";
+  if (!sourceName || sourceName === label) return `[${label}]`;
+  return `[${sourceName}/${label}]`;
+}
+
 export class BuildReleaseError extends Error {
   constructor(message, context = {}) {
     const location = [context.sourceName, context.entryName].filter(Boolean).join(":");
@@ -61,7 +72,7 @@ export async function buildRelease({
             error: error.message,
           };
           skippedEntries.push(errorInfo);
-          warn(`⚠️  跳过 [${errorInfo.source}/${errorInfo.name}]: ${errorInfo.error}`);
+          warn(`⚠️  跳过 ${formatEntryLabel({ sourceName: errorInfo.source, name: errorInfo.name })}: ${errorInfo.error}`);
           if (errorInfo.urls.length > 0) {
             warn(`   URL: ${errorInfo.urls.join(", ")}`);
           }
@@ -77,7 +88,7 @@ export async function buildRelease({
     console.log(`   ⚠️  跳过: ${skippedEntries.length} 个条目`);
     console.log(`\n跳过的详情:`);
     for (const item of skippedEntries) {
-      console.log(`   - [${item.source}/${item.name}]: ${item.error}`);
+      console.log(`   - ${formatEntryLabel({ sourceName: item.source, name: item.name })}: ${item.error}`);
     }
     console.log("");
   }
@@ -176,7 +187,7 @@ async function processEntry({ entry, outputRoot, fetchImpl, projectRoot, sourceR
 
   const clashLines = buildSortedRulesetForClash(content.split(/\r?\n/), {
     onNormalize: ({ added, mergedCount, aliased, unsupportedRuleTypes }) => {
-      const label = `[${entry.sourceName || entry.name}/${entry.name}]`;
+      const label = formatEntryLabel(entry);
 
       // 别家客户端的类型名被改写成 mihomo 认得的写法
       if (aliased?.size > 0) {
@@ -294,7 +305,7 @@ async function writeMihomoMRSArtifacts({ entry, outputRoot, projectRoot, domainL
       }));
     }
   } catch (error) {
-    warn(`⚠️  [${entry.sourceName || entry.name}/${entry.name}] MRS 转换失败: ${error.message}`);
+    warn(`⚠️  ${formatEntryLabel(entry)} MRS 转换失败: ${error.message}`);
     for (const artifact of artifacts) await fs.rm(artifact.filePath, { force: true });
     return [];
   } finally {
