@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-28T12:43:32.181Z",
+  "timestamp": "2026-10-25T10:34:52.832Z",
   "artifacts": [
     {
       "slug": "Advertising",
@@ -10,7 +10,7 @@
       "kind": "clash",
       "label": "Advertising Rules",
       "behavior": "classical",
-      "sha256": "1215a33b69f6215cf6188f1a09f7d4a7a7222dd40e377e81ff6889e009f8a34d"
+      "sha256": "245896628744bd1aa89c6e1ff6ac7f35af37c65a09e3208c8084bcd9ff478df2"
     },
     {
       "slug": "China",
@@ -65,7 +65,7 @@
       "kind": "clash",
       "label": "AI Rules",
       "behavior": "classical",
-      "sha256": "d9d7ec35179e1e7fb0d46c3c5be81d4c5d33b4c10c9ee5f0ad200022b1dda893"
+      "sha256": "6ebcf4b4edd6f0e60b914b51f4f966bef0d6b026af46f9d2ff94c6f8f98058d9"
     },
     {
       "slug": "Private",
@@ -76,7 +76,7 @@
       "kind": "clash",
       "label": "Private Rules",
       "behavior": "classical",
-      "sha256": "479e19638e9212dc7b2dd487ac58f20e60e065dad5b481c8b117c9efdea23731"
+      "sha256": "6cb4c80ba71bd24a1e45f54f7bfe0625c9e386e470937e5a4782e019d138af3c"
     },
     {
       "slug": "Extra/Microsoft",
@@ -153,7 +153,7 @@
       "kind": "clash",
       "label": "Extra/TikTok Rules",
       "behavior": "classical",
-      "sha256": "ab5234d2325320e54d6405e697ab93ecb5f502784dd2f5bfcfa7c3d4c16145d5"
+      "sha256": "6c1a2df899b3430c81f77ec262cfcd525296bc417a2201d06c933e777d22b84c"
     },
     {
       "slug": "Extra/OneDrive",

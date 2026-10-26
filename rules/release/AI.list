@@ -1,8 +1,8 @@
 # NAME: AI
-# UPDATE: 2026-09-28 20:43
-# TOTAL: 452
-# DOMAIN: 211
-# DOMAIN-SUFFIX: 220
+# UPDATE: 2026-10-12 22:14
+# TOTAL: 458
+# DOMAIN: 212
+# DOMAIN-SUFFIX: 225
 # DOMAIN-KEYWORD: 14
 # IP-CIDR: 5
 # IP-CIDR6: 1
@@ -208,6 +208,7 @@ DOMAIN,router.requesty.ai
 DOMAIN,servd-anthropic-website.b-cdn.net
 DOMAIN,sydney.bing.com
 DOMAIN,tinker.thinkingmachines.dev
+DOMAIN,titles.prod.mos.microsoft.com
 DOMAIN,token-plan-ams.xiaomimimo.com
 DOMAIN,token-plan-sgp.xiaomimimo.com
 DOMAIN,token-plan.ap-southeast-1.maas.aliyuncs.com
@@ -258,6 +259,7 @@ DOMAIN-SUFFIX,ciciaicdn.com
 DOMAIN-SUFFIX,clau.de
 DOMAIN-SUFFIX,claude.ai
 DOMAIN-SUFFIX,claude.com
+DOMAIN-SUFFIX,claude.dev
 DOMAIN-SUFFIX,claudemcpclient.com
 DOMAIN-SUFFIX,claudemcpcontent.com
 DOMAIN-SUFFIX,claudeusercontent.com
@@ -351,6 +353,7 @@ DOMAIN-SUFFIX,kimi.ai
 DOMAIN-SUFFIX,kiro.dev
 DOMAIN-SUFFIX,labs.google
 DOMAIN-SUFFIX,labs.google.com
+DOMAIN-SUFFIX,labstailwind.pa.googleapis.com
 DOMAIN-SUFFIX,langchain.com
 DOMAIN-SUFFIX,launchdarkly.com
 DOMAIN-SUFFIX,leonardo.ai
@@ -364,12 +367,14 @@ DOMAIN-SUFFIX,manus.im
 DOMAIN-SUFFIX,manuscdn.com
 DOMAIN-SUFFIX,marscode.com
 DOMAIN-SUFFIX,meta.ai
+DOMAIN-SUFFIX,metaaivm.com
 DOMAIN-SUFFIX,microsoft-copilot.com
 DOMAIN-SUFFIX,midjourney.com
 DOMAIN-SUFFIX,minimax.io
 DOMAIN-SUFFIX,mistral.ai
 DOMAIN-SUFFIX,moonshot.ai
 DOMAIN-SUFFIX,mozilla.ai
+DOMAIN-SUFFIX,muse.ai
 DOMAIN-SUFFIX,notebook.google
 DOMAIN-SUFFIX,notebook.google.com
 DOMAIN-SUFFIX,notebooklm.google
@@ -420,6 +425,7 @@ DOMAIN-SUFFIX,stablediffusionweb.com
 DOMAIN-SUFFIX,stitch.withgoogle.com
 DOMAIN-SUFFIX,stripe.com
 DOMAIN-SUFFIX,synthesia.io
+DOMAIN-SUFFIX,syntx.ai
 DOMAIN-SUFFIX,tabnine.com
 DOMAIN-SUFFIX,talkai.info
 DOMAIN-SUFFIX,tapnow.ai

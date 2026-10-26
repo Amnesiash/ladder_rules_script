@@ -1,11 +1,12 @@
-# UpdateTime：2026-09-23 11:36:20
-# RuleCount：238
+# UpdateTime：2026-10-07 22:43:45
+# RuleCount：240
 payload:
   - DOMAIN,oai.endpoints.kepler.ai.cloud.ovh.net
   - DOMAIN,api.openai-compat.model-serving.eu01.onstackit.cloud
   - DOMAIN,inference.generativeai.us-chicago-1.oci.oraclecloud.com
   - DOMAIN,token-plan.ap-southeast-1.maas.aliyuncs.com
   - DOMAIN,models.inference.ai.azure.com
+  - DOMAIN,titles.prod.mos.microsoft.com
   - DOMAIN,openai.com.cdn.cloudflare.net
   - DOMAIN,openaicomproductionae4b.blob.core.windows.net
   - DOMAIN,api.code.umans.ai
@@ -220,6 +221,7 @@ payload:
   - DOMAIN-SUFFIX,anthropic.com
   - DOMAIN-SUFFIX,chat.com
   - DOMAIN-SUFFIX,chatgpt.com
+  - DOMAIN-SUFFIX,claude.com
   - DOMAIN-SUFFIX,claudeusercontent.com
   - DOMAIN-SUFFIX,crixet.com
   - DOMAIN-SUFFIX,grok.com
