@@ -339,7 +339,10 @@ function renderOtherRulesets({ sourceConfigs, artifacts, repository, releaseBran
       const pathName = sourceConfig.pathName || sourceConfig.sourceName || "";
       const title = pathName.split("/").pop();
       const links = renderRuleFileLinks({ sourceConfig, artifacts, repository, releaseBranch }) || "-";
-      return `<div style="vertical-align: top; text-align: left;"><strong><code>${escapeTableCell(title)}</code></strong><br>${links}</div>`;
+      return {
+        title: `<strong><code>${escapeTableCell(title)}</code></strong>`,
+        links,
+      };
     });
     const columns = 5;
     const rows = [
@@ -348,8 +351,9 @@ function renderOtherRulesets({ sourceConfigs, artifacts, repository, releaseBran
     ];
     for (let i = 0; i < cells.length; i += columns) {
       const row = cells.slice(i, i + columns);
-      while (row.length < columns) row.push("&nbsp;");
-      rows.push(`| ${row.join(" | ")} |`);
+      while (row.length < columns) row.push({ title: "&nbsp;", links: "&nbsp;" });
+      rows.push(`| ${row.map((cell) => cell.title).join(" | ")} |`);
+      rows.push(`| ${row.map((cell) => cell.links).join(" | ")} |`);
     }
     return rows.join("\n");
   }).join("\n\n");
