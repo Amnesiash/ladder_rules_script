@@ -338,12 +338,8 @@ function renderOtherRulesets({ sourceConfigs, artifacts, repository, releaseBran
     const cells = configs.map((sourceConfig) => {
       const pathName = sourceConfig.pathName || sourceConfig.sourceName || "";
       const title = pathName.split("/").pop();
-      const updateTime = updateTimes[pathName] || "-";
       const links = renderRuleFileLinks({ sourceConfig, artifacts, repository, releaseBranch }) || "-";
-      const datedLinks = links === "-"
-        ? `${updateTime} -`
-        : links.split("<br>").map((link) => `${updateTime} ${link}`).join("<br>");
-      return `<div style="vertical-align: top; text-align: left;"><strong><code>${escapeTableCell(title)}</code></strong><br>${datedLinks}</div>`;
+      return `<div style="vertical-align: top; text-align: left;"><strong><code>${escapeTableCell(title)}</code></strong><br>${links}</div>`;
     });
     const columns = 5;
     const rows = [
