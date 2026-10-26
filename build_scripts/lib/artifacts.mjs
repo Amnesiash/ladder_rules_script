@@ -2,9 +2,11 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
+import os from "node:os";
 import { loadAllSources, toSafeFileStem, toSafePathStem } from "./config.mjs";
 import { buildSortedRulesetForClash, ruleTypeAliasTarget } from "./rules.mjs";
 import { fetchWithFallback, sourceConfigsFromSourceTxt, deriveCacheFileNameFromUrl } from "./subscriptions.mjs";
+import { installMihomo } from "./mihomo.mjs";
 import { makeArtifact, writeArtifactManifest } from "./notifications.mjs";
 
 const execFileAsync = promisify(execFile);
@@ -120,6 +122,9 @@ async function cleanupOrphanedOutputFiles({ outputRoot, artifacts }) {
     if (artifact.kind === "clash" && artifact.filePath) {
       generatedFiles.add(path.resolve(artifact.filePath));
     }
+    if (artifact.kind === "domain-mrs" || artifact.kind === "ipcidr-mrs") {
+      generatedFiles.add(path.resolve(artifact.filePath));
+    }
   }
   
   // 扫描 outputRoot 的父目录（rules/），跳过 custom/ 和 source/
@@ -129,7 +134,7 @@ async function cleanupOrphanedOutputFiles({ outputRoot, artifacts }) {
     const skipDirs = [path.resolve(scanRoot, "custom"), path.resolve(scanRoot, "source")];
     
     for (const fullPath of allFiles) {
-      if (!fullPath.endsWith(".list")) continue;
+      if (!fullPath.endsWith(".list") && !fullPath.endsWith(".mrs")) continue;
       
       const resolvedPath = path.resolve(fullPath);
       
@@ -199,8 +204,84 @@ async function processEntry({ entry, outputRoot, fetchImpl, projectRoot, sourceR
     artifacts.push(makeArtifact({ entry, outputRoot, filePath: rulesPath, kind: "clash", label: `${entry.name} Rules` }));
   }
 
+  // MRS 只接受 domain/ipcidr 两种 behavior。按规则类型拆分后分别转换，
+  // 避免把混合 classical 规则误标成单一 behavior，且让调用方可按需加载。
+  const domainLines = selectMihomoMRSLines(clashLines, "domain");
+  const ipLines = selectMihomoMRSLines(clashLines, "ipcidr");
+  if (domainLines.length > 0 || ipLines.length > 0) {
+    const mrsArtifacts = await writeMihomoMRSArtifacts({
+      entry,
+      outputRoot,
+      projectRoot,
+      domainLines,
+      ipLines,
+      warn,
+    });
+    artifacts.push(...mrsArtifacts);
+  }
+
   return artifacts;
 }
+
+const MRS_DOMAIN_TYPES = new Set([
+  "DOMAIN",
+  "DOMAIN-SUFFIX",
+  "DOMAIN-KEYWORD",
+  "DOMAIN-WILDCARD",
+  "DOMAIN-REGEX",
+]);
+const MRS_IPCIDR_TYPES = new Set(["IP-CIDR", "IP-CIDR6", "IP-SUFFIX"]);
+
+function selectMihomoMRSLines(lines, behavior) {
+  const allowed = behavior === "domain" ? MRS_DOMAIN_TYPES : MRS_IPCIDR_TYPES;
+  return lines.filter((line) => allowed.has(String(line).split(",", 1)[0].trim().toUpperCase()));
+}
+
+function normalizeMihomoMRSInputLine(line) {
+  return String(line)
+    .split(",")
+    .filter((part) => part.trim().toLowerCase() !== "no-resolve")
+    .join(",");
+}
+
+async function writeMihomoMRSArtifacts({ entry, outputRoot, projectRoot, domainLines, ipLines, warn }) {
+  const artifacts = [];
+  const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "ladder-rules-mrs-"));
+
+  try {
+    const cacheRoot = path.join(projectRoot, ".tools", "mihomo-cache");
+    const binaryPath = await installMihomo({ cacheRoot });
+    for (const [behavior, lines] of [["domain", domainLines], ["ip", ipLines]]) {
+      if (lines.length === 0) continue;
+      const inputPath = path.join(tempDir, `${behavior}.txt`);
+      const relativePath = `${toSafePathStem(entry.name)}_${behavior}.mrs`;
+      const outputPath = path.join(outputRoot, relativePath);
+      await fs.mkdir(path.dirname(outputPath), { recursive: true });
+      await fs.writeFile(inputPath, `${lines.map(normalizeMihomoMRSInputLine).join("\n")}\n`);
+      await execFileAsync(binaryPath, ["convert-ruleset", behavior === "domain" ? "domain" : "ipcidr", "text", inputPath, outputPath]);
+      artifacts.push(makeArtifact({
+        entry: {
+          ...entry,
+          name: `${entry.name}_${behavior}`,
+          slug: `${entry.name}_${behavior}`,
+          behavior: behavior === "domain" ? "domain" : "ipcidr",
+        },
+        outputRoot,
+        filePath: outputPath,
+        kind: behavior === "domain" ? "domain-mrs" : "ipcidr-mrs",
+        label: `${entry.name}_${behavior}.mrs`,
+      }));
+    }
+  } catch (error) {
+    warn(`⚠️  [${entry.sourceName || entry.name}/${entry.name}] MRS 转换失败: ${error.message}`);
+    for (const artifact of artifacts) await fs.rm(artifact.filePath, { force: true });
+    return [];
+  } finally {
+    await fs.rm(tempDir, { recursive: true, force: true });
+  }
+  return artifacts;
+}
+
 
 async function fetchEntryContent(entry, fetchImpl, { sourceRoot, sourceName, warn } = {}) {
   const logWarn = warn || ((msg) => console.warn(msg));
