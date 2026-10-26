@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-26T06:33:54.514Z",
+  "timestamp": "2026-10-26T06:38:10.443Z",
   "artifacts": [
     {
       "slug": "Advertising",
@@ -13,6 +13,28 @@
       "sha256": "c026527050f51d7a562c5afefaeb0976cb3751f043817ce070f9e3f6abb7a2ab"
     },
     {
+      "slug": "Advertising_domain",
+      "name": "Advertising_domain",
+      "sourceRelativeDir": "Advertising",
+      "outputPath": "Advertising_domain.mrs",
+      "relativePath": "Advertising_domain.mrs",
+      "kind": "domain-mrs",
+      "label": "Advertising_domain.mrs",
+      "behavior": "domain",
+      "sha256": "70adb4941f8ae51de75332a6d0cf7a657b0d360dc8b7cb4775bdcbb1f3f76e4c"
+    },
+    {
+      "slug": "Advertising_ip",
+      "name": "Advertising_ip",
+      "sourceRelativeDir": "Advertising",
+      "outputPath": "Advertising_ip.mrs",
+      "relativePath": "Advertising_ip.mrs",
+      "kind": "ipcidr-mrs",
+      "label": "Advertising_ip.mrs",
+      "behavior": "ipcidr",
+      "sha256": "e7e0c783d3d4641428780ec00529af5421b6a837dd90fde83e5b22c60132210e"
+    },
+    {
       "slug": "China",
       "name": "China",
       "sourceRelativeDir": "China",
@@ -22,6 +44,28 @@
       "label": "China Rules",
       "behavior": "classical",
       "sha256": "d986e660c1e32ef72a8dad9b452b880747eab0fc0cdb145558f91e49637417e5"
+    },
+    {
+      "slug": "China_domain",
+      "name": "China_domain",
+      "sourceRelativeDir": "China",
+      "outputPath": "China_domain.mrs",
+      "relativePath": "China_domain.mrs",
+      "kind": "domain-mrs",
+      "label": "China_domain.mrs",
+      "behavior": "domain",
+      "sha256": "c72a093801310eeba575c982258d101bcb0e21feb5c2d18ec3b3d542045ad63e"
+    },
+    {
+      "slug": "China_ip",
+      "name": "China_ip",
+      "sourceRelativeDir": "China",
+      "outputPath": "China_ip.mrs",
+      "relativePath": "China_ip.mrs",
+      "kind": "ipcidr-mrs",
+      "label": "China_ip.mrs",
+      "behavior": "ipcidr",
+      "sha256": "74ee91f8131ac1273406ad695e278f0350d8d32dd4406a2de59cf2169af1d482"
     },
     {
       "slug": "Direct",
@@ -43,7 +87,7 @@
       "kind": "domain-mrs",
       "label": "Direct_domain.mrs",
       "behavior": "domain",
-      "sha256": "0e60d50e3fdd2c94db55f4de1a24307f79591935243ec583525963419fe558ac"
+      "sha256": "47245eef1f0fd76189221d6e25e2aa176629f48bb2a8b5d7003109bfe9d22220"
     },
     {
       "slug": "Proxy",
@@ -57,6 +101,28 @@
       "sha256": "a1a283c65442c6b29cdf173577d3c4b69927d360e525b7d8e03ab81cc524b5f5"
     },
     {
+      "slug": "Proxy_domain",
+      "name": "Proxy_domain",
+      "sourceRelativeDir": "Proxy",
+      "outputPath": "Proxy_domain.mrs",
+      "relativePath": "Proxy_domain.mrs",
+      "kind": "domain-mrs",
+      "label": "Proxy_domain.mrs",
+      "behavior": "domain",
+      "sha256": "72bee9d1cccf5503acb11770a7b2a5122038adb5009ff81b5b28aa345e6faa21"
+    },
+    {
+      "slug": "Proxy_ip",
+      "name": "Proxy_ip",
+      "sourceRelativeDir": "Proxy",
+      "outputPath": "Proxy_ip.mrs",
+      "relativePath": "Proxy_ip.mrs",
+      "kind": "ipcidr-mrs",
+      "label": "Proxy_ip.mrs",
+      "behavior": "ipcidr",
+      "sha256": "1adb3910f04c63663d44f61e06c25d726a2deb0c8842b8641ff56885d1524f52"
+    },
+    {
       "slug": "Streaming",
       "name": "Streaming",
       "sourceRelativeDir": "Streaming",
@@ -66,6 +132,28 @@
       "label": "Streaming Rules",
       "behavior": "classical",
       "sha256": "f470157fd53b92bc62b0ca4966f2b73eede56bcd9b1a70f6db79e67c5ed60fce"
+    },
+    {
+      "slug": "Streaming_domain",
+      "name": "Streaming_domain",
+      "sourceRelativeDir": "Streaming",
+      "outputPath": "Streaming_domain.mrs",
+      "relativePath": "Streaming_domain.mrs",
+      "kind": "domain-mrs",
+      "label": "Streaming_domain.mrs",
+      "behavior": "domain",
+      "sha256": "c6c01474e99d70a2d3e425f4e6523aaa73a4b1c5915ef68de42eb6ec35c68765"
+    },
+    {
+      "slug": "Streaming_ip",
+      "name": "Streaming_ip",
+      "sourceRelativeDir": "Streaming",
+      "outputPath": "Streaming_ip.mrs",
+      "relativePath": "Streaming_ip.mrs",
+      "kind": "ipcidr-mrs",
+      "label": "Streaming_ip.mrs",
+      "behavior": "ipcidr",
+      "sha256": "a8ce3ed4a4fbe89d06d642365976461986c4956844503a65d404cdeb3bf629b0"
     },
     {
       "slug": "AI",
@@ -79,6 +167,28 @@
       "sha256": "3a00f56d2b32a2ded42d94d345e72092c32e1bf1675bfb4d827f5c12521d53a8"
     },
     {
+      "slug": "AI_domain",
+      "name": "AI_domain",
+      "sourceRelativeDir": "AI",
+      "outputPath": "AI_domain.mrs",
+      "relativePath": "AI_domain.mrs",
+      "kind": "domain-mrs",
+      "label": "AI_domain.mrs",
+      "behavior": "domain",
+      "sha256": "b6e95ed8a1bd47413101400e862a307e74b09b5d758c8a4304a8ffb0824dc29c"
+    },
+    {
+      "slug": "AI_ip",
+      "name": "AI_ip",
+      "sourceRelativeDir": "AI",
+      "outputPath": "AI_ip.mrs",
+      "relativePath": "AI_ip.mrs",
+      "kind": "ipcidr-mrs",
+      "label": "AI_ip.mrs",
+      "behavior": "ipcidr",
+      "sha256": "2333c0b8945c7167e76759215e7186c1958c680458fda4ca1f9265642aaf3c1c"
+    },
+    {
       "slug": "Private",
       "name": "Private",
       "sourceRelativeDir": "Private",
@@ -88,6 +198,28 @@
       "label": "Private Rules",
       "behavior": "classical",
       "sha256": "6cb4c80ba71bd24a1e45f54f7bfe0625c9e386e470937e5a4782e019d138af3c"
+    },
+    {
+      "slug": "Private_domain",
+      "name": "Private_domain",
+      "sourceRelativeDir": "Private",
+      "outputPath": "Private_domain.mrs",
+      "relativePath": "Private_domain.mrs",
+      "kind": "domain-mrs",
+      "label": "Private_domain.mrs",
+      "behavior": "domain",
+      "sha256": "cc4f84f0aaa5e1c7d14efab65468406df3fb2ee280bbe21dbf288a70ac404252"
+    },
+    {
+      "slug": "Private_ip",
+      "name": "Private_ip",
+      "sourceRelativeDir": "Private",
+      "outputPath": "Private_ip.mrs",
+      "relativePath": "Private_ip.mrs",
+      "kind": "ipcidr-mrs",
+      "label": "Private_ip.mrs",
+      "behavior": "ipcidr",
+      "sha256": "f313cfd33803c4d868690f0576028493aea23040b9b9717f07da2a7d3b44245e"
     },
     {
       "slug": "Extra/Microsoft",
@@ -109,7 +241,7 @@
       "kind": "domain-mrs",
       "label": "Extra/Microsoft_domain.mrs",
       "behavior": "domain",
-      "sha256": "3f723f60036976ee8cad69d5419ac329c5374018ac725ed0060b4ceb0af5599c"
+      "sha256": "6a2571ec8bd693e96598d797171c44eec6f52438d1e2b9bbf5a1906cf0c5037a"
     },
     {
       "slug": "Extra/SteamCN",
@@ -131,7 +263,7 @@
       "kind": "domain-mrs",
       "label": "Extra/SteamCN_domain.mrs",
       "behavior": "domain",
-      "sha256": "50495f6f0613a071897a2eac3568e9a3b984aa0f61720255d6f8cbe2b5f26225"
+      "sha256": "974b440001a98be41b9214c7be6d1170188d8fc4653f1494b837b2a112abab08"
     },
     {
       "slug": "Extra/WeChat",
@@ -145,6 +277,28 @@
       "sha256": "bd11e49ca645692de460e561de035ad509929846513006b04b75cdedb34180d1"
     },
     {
+      "slug": "Extra/WeChat_domain",
+      "name": "Extra/WeChat_domain",
+      "sourceRelativeDir": "Extra/WeChat",
+      "outputPath": "Extra/WeChat_domain.mrs",
+      "relativePath": "Extra/WeChat_domain.mrs",
+      "kind": "domain-mrs",
+      "label": "Extra/WeChat_domain.mrs",
+      "behavior": "domain",
+      "sha256": "8324cb02ce3ccb54e8801f56c34dbd4d6afd5244c400efb0dcefabfb2aa32c5e"
+    },
+    {
+      "slug": "Extra/WeChat_ip",
+      "name": "Extra/WeChat_ip",
+      "sourceRelativeDir": "Extra/WeChat",
+      "outputPath": "Extra/WeChat_ip.mrs",
+      "relativePath": "Extra/WeChat_ip.mrs",
+      "kind": "ipcidr-mrs",
+      "label": "Extra/WeChat_ip.mrs",
+      "behavior": "ipcidr",
+      "sha256": "2407c2c16ecb4144d338a4ea17216235dc311ccd0e0e5f942085facdb3f33bd0"
+    },
+    {
       "slug": "StreamingHMT",
       "name": "StreamingHMT",
       "sourceRelativeDir": "StreamingHMT",
@@ -154,6 +308,28 @@
       "label": "StreamingHMT Rules",
       "behavior": "classical",
       "sha256": "97f8a9e4c7cda82d25cdd3e0d567b30cfc3ea7920779bba0870b343d7d3d0393"
+    },
+    {
+      "slug": "StreamingHMT_domain",
+      "name": "StreamingHMT_domain",
+      "sourceRelativeDir": "StreamingHMT",
+      "outputPath": "StreamingHMT_domain.mrs",
+      "relativePath": "StreamingHMT_domain.mrs",
+      "kind": "domain-mrs",
+      "label": "StreamingHMT_domain.mrs",
+      "behavior": "domain",
+      "sha256": "38479c9d812766be7ab784c0bff57ae00c9582567a49244fcf3cf3bbf6faad20"
+    },
+    {
+      "slug": "StreamingHMT_ip",
+      "name": "StreamingHMT_ip",
+      "sourceRelativeDir": "StreamingHMT",
+      "outputPath": "StreamingHMT_ip.mrs",
+      "relativePath": "StreamingHMT_ip.mrs",
+      "kind": "ipcidr-mrs",
+      "label": "StreamingHMT_ip.mrs",
+      "behavior": "ipcidr",
+      "sha256": "22bfea7414649543b6d67c98deea6814dea72ef4a8027fc2544b460d23ee59f6"
     },
     {
       "slug": "Extra/Apple",
@@ -167,6 +343,28 @@
       "sha256": "c7c34bd23dc27b4fe347c9e4a9a87f82946e0a5bd9e0cb598b8384befc4328b7"
     },
     {
+      "slug": "Extra/Apple_domain",
+      "name": "Extra/Apple_domain",
+      "sourceRelativeDir": "Extra/Apple",
+      "outputPath": "Extra/Apple_domain.mrs",
+      "relativePath": "Extra/Apple_domain.mrs",
+      "kind": "domain-mrs",
+      "label": "Extra/Apple_domain.mrs",
+      "behavior": "domain",
+      "sha256": "ddaf5a35f072204a8e66cddc0619d1159a5f8167fc26796cf51ffe96c38814c8"
+    },
+    {
+      "slug": "Extra/Apple_ip",
+      "name": "Extra/Apple_ip",
+      "sourceRelativeDir": "Extra/Apple",
+      "outputPath": "Extra/Apple_ip.mrs",
+      "relativePath": "Extra/Apple_ip.mrs",
+      "kind": "ipcidr-mrs",
+      "label": "Extra/Apple_ip.mrs",
+      "behavior": "ipcidr",
+      "sha256": "9c3ac6e550ff760e7af78040ceac1711e4b6173876069926e40a492ad1683cb5"
+    },
+    {
       "slug": "Extra/Telegram",
       "name": "Extra/Telegram",
       "sourceRelativeDir": "Extra/Telegram",
@@ -176,6 +374,28 @@
       "label": "Extra/Telegram Rules",
       "behavior": "classical",
       "sha256": "54302ab367f89875128394d3c8c39b71d7639845aba40ace31db9fdb81f007bc"
+    },
+    {
+      "slug": "Extra/Telegram_domain",
+      "name": "Extra/Telegram_domain",
+      "sourceRelativeDir": "Extra/Telegram",
+      "outputPath": "Extra/Telegram_domain.mrs",
+      "relativePath": "Extra/Telegram_domain.mrs",
+      "kind": "domain-mrs",
+      "label": "Extra/Telegram_domain.mrs",
+      "behavior": "domain",
+      "sha256": "a41a84d6d5c12152428541a363e240f54791f1b518aa1c9b93b289cb50da9cd1"
+    },
+    {
+      "slug": "Extra/Telegram_ip",
+      "name": "Extra/Telegram_ip",
+      "sourceRelativeDir": "Extra/Telegram",
+      "outputPath": "Extra/Telegram_ip.mrs",
+      "relativePath": "Extra/Telegram_ip.mrs",
+      "kind": "ipcidr-mrs",
+      "label": "Extra/Telegram_ip.mrs",
+      "behavior": "ipcidr",
+      "sha256": "550c689aa28a808ec8835c91508ace4fcc18a596f5a064f1af06ad68964136d7"
     },
     {
       "slug": "Extra/TikTok",
@@ -197,7 +417,7 @@
       "kind": "domain-mrs",
       "label": "Extra/TikTok_domain.mrs",
       "behavior": "domain",
-      "sha256": "ea270a8061ed7193d85a570c37e07c2c1861908b8b4cfd36bd5885a864eebed9"
+      "sha256": "2430084a34c4f889e338507dd187d8ef1a7c838f587370414352195c23d988bd"
     },
     {
       "slug": "Extra/OneDrive",
@@ -219,7 +439,7 @@
       "kind": "domain-mrs",
       "label": "Extra/OneDrive_domain.mrs",
       "behavior": "domain",
-      "sha256": "22d618e0e8220bd71a3307792f2c86a6138ebff4bfa63ab9cbb8513eae6baa82"
+      "sha256": "efd338d83e4e511601246dc1a64f40037f7e836e1d81168bc65528be0c83333f"
     }
   ]
 }
