@@ -17,7 +17,7 @@
 #   台湾       -> Taiwan
 #   日本       -> Japan
 #   新加坡     -> Singapore
-#   美国       -> United States
+#   美国       -> UnitedStates
 #   AI / Telegram 保持原名
 
 
@@ -130,32 +130,32 @@ proxy-groups:
 
   - name: Global
     type: select
-    proxies: [Auto, HongKong, Taiwan, Japan, Singapore, United States, Manual, DIRECT]
+    proxies: [Auto, HongKong, Taiwan, Japan, Singapore, UnitedStates, Manual, DIRECT]
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/Global.png
 
   - name: AI
     type: select
-    proxies: [Auto, HongKong, Taiwan, Japan, Singapore, United States, Manual, DIRECT]
+    proxies: [Auto, HongKong, Taiwan, Japan, Singapore, UnitedStates, Manual, DIRECT]
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/color/OpenAI.png
 
   - name: Telegram
     type: select
-    proxies: [Auto, HongKong, Taiwan, Japan, Singapore, United States, Manual, DIRECT]
+    proxies: [Auto, HongKong, Taiwan, Japan, Singapore, UnitedStates, Manual, DIRECT]
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/Telegram.png
 
   - name: Microsoft
     type: select
-    proxies: [DIRECT, Auto, HongKong, Taiwan, Japan, Singapore, United States, Manual]
+    proxies: [DIRECT, Auto, HongKong, Taiwan, Japan, Singapore, UnitedStates, Manual]
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/Microsoft.png
 
   - name: Streaming
     type: select
-    proxies: [Auto, HongKong, Taiwan, Japan, Singapore, United States, Manual, DIRECT]
+    proxies: [Auto, HongKong, Taiwan, Japan, Singapore, UnitedStates, Manual, DIRECT]
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/Streaming.png
 
   - name: Final
     type: select
-    proxies: [DIRECT, Auto, HongKong, Taiwan, Japan, Singapore, United States, Manual]
+    proxies: [DIRECT, Auto, HongKong, Taiwan, Japan, Singapore, UnitedStates, Manual]
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/Final.png
 
   # 地理策略层 - 自动测速节点选择
@@ -183,7 +183,7 @@ proxy-groups:
     filter: "(?i)新|sg|singapore"
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/SG.png
 
-  - name: United States
+  - name: UnitedStates
     <<: *a2
     filter: "(?i)美|us|unitedstates|united states"
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/US.png
