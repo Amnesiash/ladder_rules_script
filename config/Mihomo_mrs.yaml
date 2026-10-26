@@ -176,65 +176,77 @@ proxy-groups:
 
 # 规则集
 rule-providers:
-  Lan_DOMAIN:
+  lan_domain:
     <<: *r2
     url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/lan_domain.mrs
     path: ./ruleset/lan_domain.mrs
-  Lan_IP:
+
+  lan_ip:
     <<: *r3
     url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/lan_ip.mrs
     path: ./ruleset/lan_ip.mrs
 
-  Direct_DOMAIN:
+  direct_domain:
     <<: *r2
     url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/direct_domain.mrs
     path: ./ruleset/direct_domain.mrs
-  AI_DOMAIN:
+
+  ai_domain:
     <<: *r2
     url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/ai_domain.mrs
     path: ./ruleset/ai_domain.mrs
-  Telegram_DOMAIN:
+
+  telegram_domain:
     <<: *r2
     url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/extra/telegram_domain.mrs
     path: ./ruleset/telegram_domain.mrs
-  Microsoft_DOMAIN:
+
+  microsoft_domain:
     <<: *r2
     url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/extra/microsoft_domain.mrs
     path: ./ruleset/microsoft_domain.mrs
-  Streaming_DOMAIN:
+
+  streaming_domain:
     <<: *r2
     url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/streaming_domain.mrs
     path: ./ruleset/streaming_domain.mrs
-  SteamCN_DOMAIN:
+
+  steamcn_domain:
     <<: *r2
     url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/extra/steamcn_domain.mrs
     path: ./ruleset/steamcn_domain.mrs
-  Proxy_DOMAIN:
+
+  proxy_domain:
     <<: *r2
     url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/proxy_domain.mrs
     path: ./ruleset/proxy_domain.mrs
-  China_DOMAIN:
+
+  china_domain:
     <<: *r2
     url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/china_domain.mrs
     path: ./ruleset/china_domain.mrs
 
-  AI_IP:
+  ai_ip:
     <<: *r3
     url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/ai_ip.mrs
     path: ./ruleset/ai_ip.mrs
-  Telegram_IP:
+
+  telegram_ip:
     <<: *r3
     url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/extra/telegram_ip.mrs
     path: ./ruleset/telegram_ip.mrs
-  Streaming_IP:
+
+  streaming_ip:
     <<: *r3
     url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/streaming_ip.mrs
     path: ./ruleset/streaming_ip.mrs
-  Proxy_IP:
+
+  proxy_ip:
     <<: *r3
     url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/proxy_ip.mrs
     path: ./ruleset/proxy_ip.mrs
-  China_IP:
+
+  china_ip:
     <<: *r3
     url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/china_ip.mrs
     path: ./ruleset/china_ip.mrs
@@ -242,23 +254,23 @@ rule-providers:
 # 规则路由
 rules:
   # > 订阅规则
-  - RULE-SET, Lan_DOMAIN, DIRECT
-  - RULE-SET, Lan_IP, DIRECT
+  - RULE-SET, lan_domain, DIRECT
+  - RULE-SET, lan_ip, DIRECT, no-resolve
 
-  - RULE-SET, Direct_DOMAIN, DIRECT
-  - RULE-SET, Microsoft_DOMAIN, 微软服务
-  - RULE-SET, AI_DOMAIN, AI
-  - RULE-SET, Telegram_DOMAIN, Telegram
-  - RULE-SET, Streaming_DOMAIN, 国际流媒体
-  - RULE-SET, SteamCN_DOMAIN, DIRECT
-  - RULE-SET, Proxy_DOMAIN, 代理加速
-  - RULE-SET, China_DOMAIN, DIRECT
+  - RULE-SET, direct_domain, DIRECT
+  - RULE-SET, microsoft_domain, 微软服务
+  - RULE-SET, ai_domain, AI
+  - RULE-SET, telegram_domain, Telegram
+  - RULE-SET, streaming_domain, 国际流媒体
+  - RULE-SET, steamcn_domain, DIRECT
+  - RULE-SET, proxy_domain, 代理加速
+  - RULE-SET, china_domain, DIRECT
 
-  - RULE-SET, AI_IP, AI
-  - RULE-SET, Telegram_IP, Telegram
-  - RULE-SET, Streaming_IP, 国际流媒体
-  - RULE-SET, Proxy_IP, 代理加速
-  - RULE-SET, China_IP, DIRECT
+  - RULE-SET, ai_ip, AI
+  - RULE-SET, telegram_ip, Telegram
+  - RULE-SET, streaming_ip, 国际流媒体
+  - RULE-SET, proxy_ip, 代理加速
+  - RULE-SET, china_ip, DIRECT
   - GEOIP, CN, DIRECT
 
   # 兜底规则
