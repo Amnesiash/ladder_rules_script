@@ -223,18 +223,23 @@ async function processEntry({ entry, outputRoot, fetchImpl, projectRoot, sourceR
   return artifacts;
 }
 
-const MRS_DOMAIN_TYPES = new Set([
-  "DOMAIN",
-  "DOMAIN-SUFFIX",
-  "DOMAIN-KEYWORD",
-  "DOMAIN-WILDCARD",
-  "DOMAIN-REGEX",
-]);
+const MRS_DOMAIN_TYPES = new Set(["DOMAIN", "DOMAIN-SUFFIX", "DOMAIN-WILDCARD"]);
 const MRS_IPCIDR_TYPES = new Set(["IP-CIDR", "IP-CIDR6", "IP-SUFFIX"]);
 
 function selectMihomoMRSLines(lines, behavior) {
   const allowed = behavior === "domain" ? MRS_DOMAIN_TYPES : MRS_IPCIDR_TYPES;
-  return lines.filter((line) => allowed.has(String(line).split(",", 1)[0].trim().toUpperCase()));
+  const selected = [];
+
+  for (const line of lines) {
+    const parts = String(line).split(",");
+    const type = parts.shift()?.trim().toUpperCase();
+    if (!allowed.has(type)) continue;
+    const value = parts.shift()?.trim();
+    if (!value) continue;
+    selected.push(behavior === "domain" && type === "DOMAIN-SUFFIX" ? `+.${value}` : value);
+  }
+
+  return selected;
 }
 
 function normalizeMihomoMRSInputLine(line) {
