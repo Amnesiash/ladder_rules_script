@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-25T10:34:52.832Z",
+  "timestamp": "2026-10-26T06:29:40.043Z",
   "artifacts": [
     {
       "slug": "Advertising",
@@ -10,7 +10,7 @@
       "kind": "clash",
       "label": "Advertising Rules",
       "behavior": "classical",
-      "sha256": "245896628744bd1aa89c6e1ff6ac7f35af37c65a09e3208c8084bcd9ff478df2"
+      "sha256": "c026527050f51d7a562c5afefaeb0976cb3751f043817ce070f9e3f6abb7a2ab"
     },
     {
       "slug": "China",
@@ -33,6 +33,17 @@
       "label": "Direct Rules",
       "behavior": "classical",
       "sha256": "8dbfe25e4f5c81ae26b67cabc35c0fd925779f4cb799e5e6a7837f7b62c1ec3a"
+    },
+    {
+      "slug": "Direct_domain",
+      "name": "Direct_domain",
+      "sourceRelativeDir": "Direct",
+      "outputPath": "Direct_domain.mrs",
+      "relativePath": "Direct_domain.mrs",
+      "kind": "domain-mrs",
+      "label": "Direct_domain.mrs",
+      "behavior": "domain",
+      "sha256": "0e60d50e3fdd2c94db55f4de1a24307f79591935243ec583525963419fe558ac"
     },
     {
       "slug": "Proxy",
@@ -65,7 +76,7 @@
       "kind": "clash",
       "label": "AI Rules",
       "behavior": "classical",
-      "sha256": "6ebcf4b4edd6f0e60b914b51f4f966bef0d6b026af46f9d2ff94c6f8f98058d9"
+      "sha256": "3a00f56d2b32a2ded42d94d345e72092c32e1bf1675bfb4d827f5c12521d53a8"
     },
     {
       "slug": "Private",
@@ -90,6 +101,17 @@
       "sha256": "4bcf4b970ec4891c96553dc6abe7f55c1c4e50342dfdd8bd062cb3c145851aa3"
     },
     {
+      "slug": "Extra/Microsoft_domain",
+      "name": "Extra/Microsoft_domain",
+      "sourceRelativeDir": "Extra/Microsoft",
+      "outputPath": "Extra/Microsoft_domain.mrs",
+      "relativePath": "Extra/Microsoft_domain.mrs",
+      "kind": "domain-mrs",
+      "label": "Extra/Microsoft_domain.mrs",
+      "behavior": "domain",
+      "sha256": "3f723f60036976ee8cad69d5419ac329c5374018ac725ed0060b4ceb0af5599c"
+    },
+    {
       "slug": "Extra/SteamCN",
       "name": "Extra/SteamCN",
       "sourceRelativeDir": "Extra/SteamCN",
@@ -99,6 +121,17 @@
       "label": "Extra/SteamCN Rules",
       "behavior": "classical",
       "sha256": "1bd8a5bf12d69c2103ef61b1daf8039482d0d0b0ef46c4a9d45c33531689c3c5"
+    },
+    {
+      "slug": "Extra/SteamCN_domain",
+      "name": "Extra/SteamCN_domain",
+      "sourceRelativeDir": "Extra/SteamCN",
+      "outputPath": "Extra/SteamCN_domain.mrs",
+      "relativePath": "Extra/SteamCN_domain.mrs",
+      "kind": "domain-mrs",
+      "label": "Extra/SteamCN_domain.mrs",
+      "behavior": "domain",
+      "sha256": "50495f6f0613a071897a2eac3568e9a3b984aa0f61720255d6f8cbe2b5f26225"
     },
     {
       "slug": "Extra/WeChat",
@@ -156,6 +189,17 @@
       "sha256": "6c1a2df899b3430c81f77ec262cfcd525296bc417a2201d06c933e777d22b84c"
     },
     {
+      "slug": "Extra/TikTok_domain",
+      "name": "Extra/TikTok_domain",
+      "sourceRelativeDir": "Extra/TikTok",
+      "outputPath": "Extra/TikTok_domain.mrs",
+      "relativePath": "Extra/TikTok_domain.mrs",
+      "kind": "domain-mrs",
+      "label": "Extra/TikTok_domain.mrs",
+      "behavior": "domain",
+      "sha256": "ea270a8061ed7193d85a570c37e07c2c1861908b8b4cfd36bd5885a864eebed9"
+    },
+    {
       "slug": "Extra/OneDrive",
       "name": "Extra/OneDrive",
       "sourceRelativeDir": "Extra/OneDrive",
@@ -165,6 +209,17 @@
       "label": "Extra/OneDrive Rules",
       "behavior": "classical",
       "sha256": "749b4721a8cfb2e3ea997bc4f9b61287db6903d24dac81561d0dea7869d6cdb3"
+    },
+    {
+      "slug": "Extra/OneDrive_domain",
+      "name": "Extra/OneDrive_domain",
+      "sourceRelativeDir": "Extra/OneDrive",
+      "outputPath": "Extra/OneDrive_domain.mrs",
+      "relativePath": "Extra/OneDrive_domain.mrs",
+      "kind": "domain-mrs",
+      "label": "Extra/OneDrive_domain.mrs",
+      "behavior": "domain",
+      "sha256": "22d618e0e8220bd71a3307792f2c86a6138ebff4bfa63ab9cbb8513eae6baa82"
     }
   ]
 }
