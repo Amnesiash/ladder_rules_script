@@ -17,11 +17,6 @@ export function sanitizeName(value) {
     .replace(/^_+|_+$/g, "");
 }
 
-export function isInside(parent, child) {
-  const relative = path.relative(parent, child);
-  return relative === "" || (!relative.startsWith("..") && !path.isAbsolute(relative));
-}
-
 // ==================== 源文件解析（兼容 rule_source.txt 格式）====================
 
 export function parseSourceFile(text) {
@@ -46,10 +41,6 @@ export function parseSourceFile(text) {
   }
 
   return sections.filter((s) => s.name.length && s.urls.length);
-}
-
-export function toSafeFileStem(name) {
-  return name.replace(/[^\w.-]+/g, "_");
 }
 
 /**

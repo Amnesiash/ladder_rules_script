@@ -3,9 +3,9 @@ import path from "node:path";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import os from "node:os";
-import { loadAllSources, toSafeFileStem, toSafePathStem } from "./config.mjs";
+import { loadAllSources, toSafePathStem } from "./config.mjs";
 import { buildSortedRulesetForClash, ruleTypeAliasTarget } from "./rules.mjs";
-import { fetchWithFallback, sourceConfigsFromSourceTxt, deriveCacheFileNameFromUrl, parseAuthorMarkedUrl } from "./subscriptions.mjs";
+import { fetchWithFallback, sourceConfigsFromSourceTxt, deriveCacheFileNameFromUrl, parseAuthorMarkedUrl, readPreviousMainFile, formatUpdateTimeShanghai, listFilesRecursively } from "./subscriptions.mjs";
 import { installMihomo } from "./mihomo.mjs";
 import { makeArtifact, writeArtifactManifest } from "./notifications.mjs";
 
@@ -137,7 +137,7 @@ async function cleanupOrphanedOutputFiles({ outputRoot, artifacts }) {
   // 扫描 outputRoot 的父目录（rules/），跳过 custom/ 和 source/
   try {
     const scanRoot = path.dirname(outputRoot);
-    const allFiles = await listAllFiles(scanRoot);
+    const allFiles = await listFilesRecursively(scanRoot);
     const skipDirs = [path.resolve(scanRoot, "custom"), path.resolve(scanRoot, "source")];
     
     for (const fullPath of allFiles) {
@@ -387,42 +387,6 @@ async function writeRulesFile({ outputRoot, entry, lines, projectRoot }) {
   return outPath;
 }
 
-async function readPreviousMainFile(relativePath, cwd) {
-  try {
-    const { stdout } = await execFileAsync("git", ["show", `origin/main:${relativePath}`], {
-      cwd,
-      maxBuffer: 1024 * 1024 * 8,
-    });
-    return stdout;
-  } catch {
-    return null;
-  }
-}
-
-/** 递归列出目录下所有文件 */
-async function listAllFiles(dir) {
-  const result = [];
-  const stack = [dir];
-  while (stack.length > 0) {
-    const current = stack.pop();
-    let entries;
-    try {
-      entries = await fs.readdir(current, { withFileTypes: true });
-    } catch {
-      continue;
-    }
-    for (const entry of entries) {
-      const fullPath = path.join(current, entry.name);
-      if (entry.isDirectory()) {
-        stack.push(fullPath);
-      } else if (entry.isFile()) {
-        result.push(fullPath);
-      }
-    }
-  }
-  return result;
-}
-
 /** 递归清理子目录中的空目录 */
 async function removeEmptySubdirs(rootDir) {
   const dirs = [];
@@ -545,13 +509,3 @@ const RULE_TYPE_HEADER_ORDER = [
   "RULE-SET",
   "MATCH",
 ];
-
-function formatUpdateTimeShanghai(date = new Date()) {
-  const parts = new Intl.DateTimeFormat("sv-SE", {
-    timeZone: "Asia/Shanghai",
-    year: "numeric", month: "2-digit", day: "2-digit",
-    hour: "2-digit", minute: "2-digit", hour12: false,
-  }).formatToParts(date);
-  const map = new Map(parts.map((p) => [p.type, p.value]));
-  return `${map.get("year")}-${map.get("month")}-${map.get("day")} ${map.get("hour")}:${map.get("minute")}`;
-}

@@ -4,7 +4,7 @@ import path from "node:path";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import { buildRelease } from "./lib/artifacts.mjs";
-import { backupSourceTxtEntries, syncSourceCache } from "./lib/subscriptions.mjs";
+import { readPreviousMainFile, syncSourceCache } from "./lib/subscriptions.mjs";
 import { renderRulesReadme } from "./lib/links.mjs";
 
 const execFileAsync = promisify(execFile);
@@ -52,20 +52,6 @@ if (args.help || args.h) {
 
 const projectRoot = process.cwd();
 
-function formatUpdateTimeShanghai(date = new Date()) {
-  const parts = new Intl.DateTimeFormat("sv-SE", {
-    timeZone: "Asia/Shanghai",
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: false,
-  }).formatToParts(date);
-  const map = new Map(parts.map((part) => [part.type, part.value]));
-  return `${map.get("year")}-${map.get("month")}-${map.get("day")} ${map.get("hour")}:${map.get("minute")}`;
-}
-
 async function inferRepositoryFromGit(projectDir) {
   try {
     const { stdout } = await execFileAsync("git", ["config", "--get", "remote.origin.url"], {
@@ -86,25 +72,7 @@ async function inferRepositoryFromGit(projectDir) {
   return undefined;
 }
 
-async function readPreviousMainFile(relativePath, cwd) {
-  try {
-    const { stdout } = await execFileAsync("git", ["show", `origin/main:${relativePath}`], {
-      cwd,
-      maxBuffer: 1024 * 1024 * 8,
-    });
-    return stdout;
-  } catch {
-    return null;
-  }
-}
-
 async function main() {
-  // 备份 source.txt
-  await backupSourceTxtEntries({
-    projectRoot,
-    sourceRoot: path.resolve(projectRoot, args.source ?? "rules/source"),
-  });
-
   // 同步清理 source 缓存（删除 rule_source.txt 中不再引用的缓存文件）
   const sourceRoot = path.resolve(projectRoot, args.source ?? "rules/source");
   const syncResult = await syncSourceCache({ projectRoot, sourceRoot });

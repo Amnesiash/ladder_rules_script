@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       confirm:
-        description: 'Type CLEAR_MAIN to rewrite main history'
+        description: Type CLEAR_MAIN to rewrite main history
         required: true
-        default: ''
+        default: ""
 
 permissions:
   contents: write
@@ -16,17 +16,22 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6.0.2
+      - name: Checkout main
+        uses: actions/checkout@v6.0.2
         with:
           ref: main
+
       - name: Configure Git
         shell: bash
+        env:
+          CONFIRM_INPUT: ${{ github.event.inputs.confirm }}
+          ACTOR: ${{ github.actor }}
         run: |
-          if [ "${{ github.event.inputs.confirm }}" != "CLEAR_MAIN" ]; then
+          if [ "${CONFIRM_INPUT}" != "CLEAR_MAIN" ]; then
             echo "Confirmation missing/invalid; aborting."
             exit 1
           fi
-          if [ "${{ github.actor }}" != "Amnesiash" ]; then
+          if [ "${ACTOR}" != "Amnesiash" ]; then
             echo "Only Amnesiash can run this workflow; aborting."
             exit 1
           fi
@@ -36,10 +41,11 @@ jobs:
           git branch -D main
           git checkout --orphan main
           git add .
-          git commit -m "ㅤ"
+          git commit -m "Reset history"
           git push -f -u origin main
+
       - name: Cleanup Workflow
-        uses: Mattraks/delete-workflow-runs@main
+        uses: Mattraks/delete-workflow-runs@v2.1.0
         with:
           retain_days: 0
           keep_minimum_runs: 0

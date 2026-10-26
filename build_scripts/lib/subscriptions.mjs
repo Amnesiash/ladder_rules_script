@@ -307,13 +307,43 @@ export async function syncSourceCache({ projectRoot, sourceRoot }) {
   return { removed, errors };
 }
 
-// ==================== 备份 source.txt ====================
+// ==================== 上一版 main 内容读取 ====================
 
-// 兼容 ladder_rules_script 的 rule_source.txt 格式
-// 当前实现为空操作，保持兼容性
-export async function backupSourceTxtEntries({ projectRoot, sourceRoot }) {
-  return [];
+/**
+ * 读取 origin/main 上指定文件的内容。
+ * 用于「规则体未变化时复用旧文件」的优化，避免仅时间戳不同就产生提交。
+ * 读取失败（文件不存在、无 origin/main 等）时返回 null。
+ */
+export async function readPreviousMainFile(relativePath, cwd) {
+  try {
+    const { stdout } = await execFileAsync("git", ["show", `origin/main:${relativePath}`], {
+      cwd,
+      maxBuffer: 1024 * 1024 * 8,
+    });
+    return stdout;
+  } catch {
+    return null;
+  }
 }
+
+// ==================== 时间格式化 ====================
+
+/** 以 Asia/Shanghai 时区格式化为 `YYYY-MM-DD HH:mm`。 */
+export function formatUpdateTimeShanghai(date = new Date()) {
+  const parts = new Intl.DateTimeFormat("sv-SE", {
+    timeZone: "Asia/Shanghai",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  }).formatToParts(date);
+  const map = new Map(parts.map((part) => [part.type, part.value]));
+  return `${map.get("year")}-${map.get("month")}-${map.get("day")} ${map.get("hour")}:${map.get("minute")}`;
+}
+
+// ==================== 格式推断 ====================
 
 function inferFormatFromUrl(url) {
   const lowered = String(url ?? "").toLowerCase();
