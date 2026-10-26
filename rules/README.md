@@ -8,21 +8,20 @@
 
 | 文件名 | 包含内容 | 用途 | 最近更新 |
 | --- | --- | --- | --- |
-| [`Private.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Private.list) | 私有网络 | 内网设备管理、路由器配置、本地服务访问 | 2026-10-24 18:09 |
-| [`Direct.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Direct.list) | 直连域名列表 | 国内可直连的常用服务，避免不必要的代理 | 2026-09-25 11:15 |
-| [`AI.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/AI.list) | AI 服务 | ChatGPT、Claude、Gemini 等主要 AI 服务 | 2026-10-26 14:29 |
-| [`StreamingHMT.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/StreamingHMT.list) | 港澳台流媒体 | 哔哩哔哩、爱奇艺等港澳台流媒体 | 2026-06-18 10:14 |
-| [`Streaming.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Streaming.list) | 国际流媒体 | Netflix、Disney+、HBO 等国际流媒体 | 2026-06-18 10:14 |
-| [`Proxy.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Proxy.list) | 代理服务列表 | 国外代理、VPN、科学上网服务 | 2026-09-10 08:43 |
-| [`China.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/China.list) | 中国网站列表 | 国内网站、服务，确保直连访问 | 2026-09-10 08:43 |
-| [`Advertising.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Advertising.list) | 规则集合 | 按需分流与策略匹配 | 2026-10-26 14:29 |
+| [`private.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/private.list)<br>[`private_domain.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/private_domain.mrs)<br>[`private_ip.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/private_ip.mrs) | 私有网络 | 内网设备管理、路由器配置、本地服务访问 | 2026-10-26 14:53 |
+| [`direct.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/direct.list)<br>[`direct_domain.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/direct_domain.mrs) | 直连域名列表 | 国内可直连的常用服务，避免不必要的代理 | 2026-10-26 14:53 |
+| [`ai.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/ai.list)<br>[`ai_domain.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/ai_domain.mrs)<br>[`ai_ip.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/ai_ip.mrs) | AI 服务 | ChatGPT、Claude、Gemini 等主要 AI 服务 | 2026-10-26 14:53 |
+| [`streaminghmt.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/streaminghmt.list)<br>[`streaminghmt_domain.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/streaminghmt_domain.mrs)<br>[`streaminghmt_ip.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/streaminghmt_ip.mrs) | 港澳台流媒体 | 哔哩哔哩、爱奇艺等港澳台流媒体 | 2026-10-26 14:53 |
+| [`streaming.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/streaming.list)<br>[`streaming_domain.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/streaming_domain.mrs)<br>[`streaming_ip.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/streaming_ip.mrs) | 国际流媒体 | Netflix、Disney+、HBO 等国际流媒体 | 2026-10-26 14:53 |
+| [`proxy.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/proxy.list)<br>[`proxy_domain.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/proxy_domain.mrs)<br>[`proxy_ip.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/proxy_ip.mrs) | 代理服务列表 | 国外代理、VPN、科学上网服务 | 2026-10-26 14:53 |
+| [`china.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/china.list)<br>[`china_domain.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/china_domain.mrs)<br>[`china_ip.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/china_ip.mrs) | 中国网站列表 | 国内网站、服务，确保直连访问 | 2026-10-26 14:53 |
+| [`advertising.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/advertising.list)<br>[`advertising_domain.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/advertising_domain.mrs)<br>[`advertising_ip.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/advertising_ip.mrs) | 规则集合 | 按需分流与策略匹配 | 2026-10-26 14:53 |
 
-## 其他规则集
+## 额外规则集
 
-| Other | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-| --- | --- | --- | --- | --- |
-| [Apple.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/Apple.list)<br>2026-06-18 10:14 | [Microsoft.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/Microsoft.list)<br>2026-09-27 23:03 | [OneDrive.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/OneDrive.list)<br>2026-06-18 11:11 | [SteamCN.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/SteamCN.list)<br>2026-06-18 10:14 | [Telegram.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/Telegram.list)<br>2026-06-18 10:14 |
-| [TikTok.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/TikTok.list)<br>2026-10-16 18:32 | [WeChat.list](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/WeChat.list)<br>2026-06-18 10:14 | &nbsp; | &nbsp; | &nbsp; |
+| `apple` | `microsoft` | `onedrive` | `steamcn` | `telegram` | `tiktok` | `wechat` |
+| --- | --- | --- | --- | --- | --- | --- |
+| [`apple.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/apple.list)<br>[`apple_domain.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/apple_domain.mrs)<br>[`apple_ip.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/apple_ip.mrs)<br>更新日期：2026-10-26 14:53 | [`microsoft.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/microsoft.list)<br>[`microsoft_domain.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/microsoft_domain.mrs)<br>更新日期：2026-10-26 14:53 | [`onedrive.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/onedrive.list)<br>[`onedrive_domain.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/onedrive_domain.mrs)<br>更新日期：2026-10-26 14:53 | [`steamcn.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/steamcn.list)<br>[`steamcn_domain.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/steamcn_domain.mrs)<br>更新日期：2026-10-26 14:53 | [`telegram.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/telegram.list)<br>[`telegram_domain.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/telegram_domain.mrs)<br>[`telegram_ip.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/telegram_ip.mrs)<br>更新日期：2026-10-26 14:53 | [`tiktok.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/tiktok.list)<br>[`tiktok_domain.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/tiktok_domain.mrs)<br>更新日期：2026-10-26 14:53 | [`wechat.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/wechat.list)<br>[`wechat_domain.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/wechat_domain.mrs)<br>[`wechat_ip.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/wechat_ip.mrs)<br>更新日期：2026-10-26 14:53 |
 
 ## 使用示例
 
@@ -33,39 +32,39 @@ c: &RuleSet_c {type: http, behavior: classical, format: text, interval: 86400}
 
 rule-providers:
   # 规则集
-  Private: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Private.list}
-  Direct: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Direct.list}
-  AI: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/AI.list}
-  StreamingHMT: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/StreamingHMT.list}
-  Streaming: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Streaming.list}
-  Proxy: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Proxy.list}
-  China: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/China.list}
-  Advertising: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Advertising.list}
-  Extra_Apple: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/Apple.list}
-  Extra_Microsoft: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/Microsoft.list}
-  Extra_OneDrive: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/OneDrive.list}
-  Extra_SteamCN: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/SteamCN.list}
-  Extra_Telegram: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/Telegram.list}
-  Extra_TikTok: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/TikTok.list}
-  Extra_WeChat: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/Extra/WeChat.list}
+  private: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/private.list}
+  direct: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/direct.list}
+  ai: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/ai.list}
+  streaminghmt: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/streaminghmt.list}
+  streaming: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/streaming.list}
+  proxy: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/proxy.list}
+  china: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/china.list}
+  advertising: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/advertising.list}
+  extra_apple: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/apple.list}
+  extra_microsoft: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/microsoft.list}
+  extra_onedrive: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/onedrive.list}
+  extra_steamcn: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/steamcn.list}
+  extra_telegram: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/telegram.list}
+  extra_tiktok: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/tiktok.list}
+  extra_wechat: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/extra/wechat.list}
 
 rules:
   # 订阅规则
-  - RULE-SET,Private,DIRECT
-  - RULE-SET,Direct,DIRECT
-  - RULE-SET,AI,AI
-  - RULE-SET,StreamingHMT,哔哩哔哩
-  - RULE-SET,Streaming,国际媒体
-  - RULE-SET,Proxy,全球加速
-  - RULE-SET,China,DIRECT
-  - RULE-SET,Advertising,DIRECT
-  - RULE-SET,Extra_Apple,DIRECT
-  - RULE-SET,Extra_Microsoft,DIRECT
-  - RULE-SET,Extra_OneDrive,DIRECT
-  - RULE-SET,Extra_SteamCN,DIRECT
-  - RULE-SET,Extra_Telegram,DIRECT
-  - RULE-SET,Extra_TikTok,DIRECT
-  - RULE-SET,Extra_WeChat,DIRECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,ai,AI
+  - RULE-SET,streaminghmt,哔哩哔哩
+  - RULE-SET,streaming,国际媒体
+  - RULE-SET,proxy,全球加速
+  - RULE-SET,china,DIRECT
+  - RULE-SET,advertising,DIRECT
+  - RULE-SET,extra_apple,DIRECT
+  - RULE-SET,extra_microsoft,DIRECT
+  - RULE-SET,extra_onedrive,DIRECT
+  - RULE-SET,extra_steamcn,DIRECT
+  - RULE-SET,extra_telegram,DIRECT
+  - RULE-SET,extra_tiktok,DIRECT
+  - RULE-SET,extra_wechat,DIRECT
   - GEOIP,CN,DIRECT
 
   # 兜底规则

@@ -120,7 +120,7 @@ export function renderRulesReadme({
   ];
 
   if (otherSection) {
-    parts.push("## 其他规则集", "", otherSection, "");
+    parts.push("## 额外规则集", "", otherSection, "");
   }
 
   parts.push(
@@ -140,12 +140,14 @@ export function renderRulesReadme({
 }
 
 function sortRulesSourceConfigs(sourceConfigs) {
-  const order = new Map(RULE_SOURCE_ORDER.map((name, index) => [name, index]));
+  const order = new Map(RULE_SOURCE_ORDER.map((name, index) => [name.toLowerCase(), index]));
   return [...sourceConfigs].sort((left, right) => {
-    const leftIndex = order.has(left.sourceName) ? order.get(left.sourceName) : Number.POSITIVE_INFINITY;
-    const rightIndex = order.has(right.sourceName) ? order.get(right.sourceName) : Number.POSITIVE_INFINITY;
+    const leftName = String(left.sourceName ?? "").toLowerCase();
+    const rightName = String(right.sourceName ?? "").toLowerCase();
+    const leftIndex = order.has(leftName) ? order.get(leftName) : Number.POSITIVE_INFINITY;
+    const rightIndex = order.has(rightName) ? order.get(rightName) : Number.POSITIVE_INFINITY;
     if (leftIndex !== rightIndex) return leftIndex - rightIndex;
-    return String(left.sourceName).localeCompare(String(right.sourceName));
+    return leftName.localeCompare(rightName);
   });
 }
 
@@ -184,7 +186,7 @@ function renderRulesClashExample({ sourceConfigs, repository, releaseBranch }) {
   lines.push("rules:");
   lines.push("  # 订阅规则");
   for (const sourceConfig of sourceConfigs) {
-    const policy = RULE_POLICY_BY_SOURCE_NAME[sourceConfig.sourceName] || "DIRECT";
+    const policy = getRulePolicy(sourceConfig.sourceName);
     lines.push(`  - RULE-SET,${sourceConfig.sourceName},${policy}`);
   }
   lines.push("  - GEOIP,CN,DIRECT");
@@ -262,25 +264,53 @@ function renderArtifacts({ artifacts, repository, releaseBranch }) {
   return ["| 名称 | 链接 |", "| --- | --- |", ...rows].join("\n");
 }
 
+function renderRuleFileLinks({ sourceConfig, artifacts, repository, releaseBranch }) {
+  const relevantArtifacts = artifacts.filter((artifact) => artifact.sourceRelativeDir === sourceConfig.sourceRelativeDir);
+  const byKind = new Map(relevantArtifacts.map((artifact) => [artifact.kind, artifact]));
+  const files = [
+    ["clash", ".list"],
+    ["domain-mrs", "_domain.mrs"],
+    ["ipcidr-mrs", "_ip.mrs"],
+  ];
+  const fileStem = String(sourceConfig.pathName || sourceConfig.sourceName || "").toLowerCase();
+  const links = [];
+
+  for (const [kind, suffix] of files) {
+    const artifact = byKind.get(kind);
+    const fileName = artifact?.relativePath?.split("/").pop() || `${fileStem}${suffix}`;
+    const filePath = artifact?.relativePath || `${fileStem}${suffix}`;
+    const releasePath = filePath.startsWith("rules/release/") ? filePath : `rules/release/${filePath}`;
+    const url = githubRawURL({ repository, branch: releaseBranch, filePath: releasePath });
+    if (artifact) links.push(`[\`${fileName}\`](${url})`);
+  }
+
+  return links.join("<br>");
+}
+
+function getRuleRowInfo(sourceName) {
+  const exact = RULE_ROW_INFO[sourceName];
+  if (exact) return exact;
+  const lowered = String(sourceName ?? "").toLowerCase();
+  const key = Object.keys(RULE_ROW_INFO).find((name) => name.toLowerCase() === lowered);
+  return key ? RULE_ROW_INFO[key] : DEFAULT_RULE_ROW_INFO;
+}
+
+function getRulePolicy(sourceName) {
+  const exact = RULE_POLICY_BY_SOURCE_NAME[sourceName];
+  if (exact) return exact;
+  const lowered = String(sourceName ?? "").toLowerCase();
+  const key = Object.keys(RULE_POLICY_BY_SOURCE_NAME).find((name) => name.toLowerCase() === lowered);
+  return key ? RULE_POLICY_BY_SOURCE_NAME[key] : "DIRECT";
+}
+
 function renderRulesRows({ sourceConfigs, artifacts, repository, releaseBranch, updateTimes = {} }) {
   const rows = [];
   for (const sourceConfig of sourceConfigs) {
-    const relevantArtifacts = artifacts.filter((artifact) => artifact.sourceRelativeDir === sourceConfig.sourceRelativeDir);
-    const artifactByKind = new Map();
-    for (const artifact of relevantArtifacts) {
-      artifactByKind.set(artifact.kind, artifact);
-    }
-
-    const artifact = artifactByKind.get("clash");
-    const filePathName = sourceConfig.pathName || sourceConfig.sourceName;
-    const displayName = sourceConfig.displayName || sourceConfig.sourceName;
-    const fileCell = artifact
-      ? `[\`${displayName}.list\`](${githubRawURL({ repository, branch: releaseBranch, filePath: `rules/release/${filePathName}.list` })})`
-      : `\`${displayName}.list\``;
-    const info = RULE_ROW_INFO[sourceConfig.sourceName] || DEFAULT_RULE_ROW_INFO;
+    const fileCell = renderRuleFileLinks({ sourceConfig, artifacts, repository, releaseBranch });
+    const info = getRuleRowInfo(sourceConfig.sourceName);
     const updateTime = updateTimes[sourceConfig.pathName || sourceConfig.sourceName] || "-";
 
-    rows.push(`| ${fileCell} | ${escapeTableCell(info.content)} | ${escapeTableCell(info.purpose)} | ${updateTime} |`);
+    rows.push(`| ${fileCell || "-"} | ${escapeTableCell(info.content)} | ${escapeTableCell(info.purpose)} | ${updateTime} |`);
   }
 
   return rows;
@@ -289,51 +319,25 @@ function renderRulesRows({ sourceConfigs, artifacts, repository, releaseBranch, 
 function renderOtherRulesets({ sourceConfigs, artifacts, repository, releaseBranch, updateTimes = {} }) {
   if (!sourceConfigs.length) return "";
 
-  // 按显示名（路径最后一段）A-Z 排序
   const sortedConfigs = [...sourceConfigs].sort((a, b) => {
     const nameA = (a.pathName || a.sourceName || "").split("/").pop().toLowerCase();
     const nameB = (b.pathName || b.sourceName || "").split("/").pop().toLowerCase();
     return nameA.localeCompare(nameB);
   });
-
-  const cells = [];
-  for (const sourceConfig of sortedConfigs) {
-    const relevantArtifacts = artifacts.filter((artifact) => artifact.sourceRelativeDir === sourceConfig.sourceRelativeDir);
-    const artifactByKind = new Map();
-    for (const artifact of relevantArtifacts) {
-      artifactByKind.set(artifact.kind, artifact);
-    }
-
-    const artifact = artifactByKind.get("clash");
-    const filePathName = sourceConfig.pathName || sourceConfig.sourceName;
-    // 取路径最后一段作为显示文件名（如 Extra/Apple → Apple）
-    const fileNamePart = filePathName.split("/").pop();
-    const rawUrl = artifact
-      ? githubRawURL({ repository, branch: releaseBranch, filePath: `rules/release/${filePathName}.list` })
-      : null;
+  const titles = sortedConfigs.map((sourceConfig) => {
+    const fileNamePart = (sourceConfig.pathName || sourceConfig.sourceName || "").split("/").pop().toLowerCase();
+    return `\`${fileNamePart}\``;
+  });
+  const cells = sortedConfigs.map((sourceConfig) => {
     const updateTime = updateTimes[sourceConfig.pathName || sourceConfig.sourceName] || "-";
+    return `${renderRuleFileLinks({ sourceConfig, artifacts, repository, releaseBranch }) || "-"}<br>更新日期：${updateTime}`;
+  });
 
-    const cellContent = rawUrl
-      ? `[${fileNamePart}.list](${rawUrl})<br>${updateTime}`
-      : `${fileNamePart}.list<br>${updateTime}`;
-
-    cells.push(cellContent);
-  }
-
-  // 每行固定 5 个单元格，不足补空
-  // 第一行第一格为 "Other" 表头，其余使用 &nbsp; 保持列宽均匀
-  const COLS = 5;
-  const emptyCells = Array.from({ length: COLS - 1 }, () => "&nbsp;").join(" | ");
-  const titleRow = `| Other | ${emptyCells} |`;
-  const separator = `| ${Array.from({ length: COLS }, () => "---").join(" | ")} |`;
-  const rows = [titleRow, separator];
-  for (let i = 0; i < cells.length; i += COLS) {
-    const rowCells = cells.slice(i, i + COLS);
-    while (rowCells.length < COLS) rowCells.push("&nbsp;");
-    rows.push(`| ${rowCells.join(" | ")} |`);
-  }
-
-  return rows.join("\n");
+  return [
+    `| ${titles.join(" | ")} |`,
+    `| ${titles.map(() => "---").join(" | ")} |`,
+    `| ${cells.join(" | ")} |`,
+  ].join("\n");
 }
 
 function escapeTableCell(value) {

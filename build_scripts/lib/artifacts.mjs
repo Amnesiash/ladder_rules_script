@@ -116,14 +116,21 @@ export async function buildRelease({
 async function cleanupOrphanedOutputFiles({ outputRoot, artifacts }) {
   const removed = [];
   
+  // macOS/Windows 的默认文件系统通常大小写不敏感，统一比较路径大小写，
+  // 避免旧的 Advertising.list 与新生成的 advertising.list 被视为两个文件。
+  const pathKey = (filePath) => {
+    const resolved = path.resolve(filePath);
+    return process.platform === "darwin" || process.platform === "win32" ? resolved.toLowerCase() : resolved;
+  };
+
   // 收集本次构建生成的所有 .list 文件路径
   const generatedFiles = new Set();
   for (const artifact of artifacts) {
     if (artifact.kind === "clash" && artifact.filePath) {
-      generatedFiles.add(path.resolve(artifact.filePath));
+      generatedFiles.add(pathKey(artifact.filePath));
     }
     if (artifact.kind === "domain-mrs" || artifact.kind === "ipcidr-mrs") {
-      generatedFiles.add(path.resolve(artifact.filePath));
+      generatedFiles.add(pathKey(artifact.filePath));
     }
   }
   
@@ -142,7 +149,7 @@ async function cleanupOrphanedOutputFiles({ outputRoot, artifacts }) {
       if (skipDirs.some((dir) => resolvedPath.startsWith(dir + path.sep) || resolvedPath === dir)) continue;
       
       // 如果文件不在本次生成的列表中，删除它
-      if (!generatedFiles.has(resolvedPath)) {
+      if (!generatedFiles.has(pathKey(resolvedPath))) {
         try {
           await fs.unlink(resolvedPath);
           removed.push(resolvedPath);

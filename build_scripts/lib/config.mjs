@@ -14,7 +14,8 @@ export function sanitizeName(value) {
   return String(value ?? "")
     .trim()
     .replace(/[^\w.-]+/g, "_")
-    .replace(/^_+|_+$/g, "");
+    .replace(/^_+|_+$/g, "")
+    .toLowerCase();
 }
 
 export function isInside(parent, child) {
@@ -49,7 +50,7 @@ export function parseSourceFile(text) {
 }
 
 export function toSafeFileStem(name) {
-  return name.replace(/[^\w.-]+/g, "_");
+  return name.replace(/[^\w.-]+/g, "_").toLowerCase();
 }
 
 /**
@@ -75,7 +76,8 @@ export function toSafePathStem(name) {
 export function sanitizePathSegment(part) {
   return part
     .replace(/[<>:"|?*\x00-\x1f]+/g, "_")
-    .trim();
+    .trim()
+    .toLowerCase();
 }
 
 // ==================== 源目录发现 ====================
