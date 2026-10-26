@@ -223,9 +223,17 @@ export async function sourceConfigsFromSourceTxt({ projectRoot, sourceRoot }) {
  * 只过滤 Windows 非法文件名字符，保留 ! + 等合法字符
  * 例如: !CN.list -> !CN@xxx.list, Direct+.list -> Direct+@xxx.list
  */
+export function parseAuthorMarkedUrl(value) {
+  const text = String(value ?? "").trim();
+  const match = text.match(/^\{([^{}]+)\}\s*(\S+)$/);
+  if (!match) return { url: text, author: "" };
+  return { url: match[2], author: match[1].trim() };
+}
+
 export function deriveCacheFileNameFromUrl(url) {
   try {
-    const urlObj = new URL(url);
+    const parsed = parseAuthorMarkedUrl(url);
+    const urlObj = new URL(parsed.url);
     const pathParts = urlObj.pathname.split("/").filter(Boolean);
     
     if (pathParts.length < 2) return null;
@@ -237,7 +245,7 @@ export function deriveCacheFileNameFromUrl(url) {
     const ext = dotIndex > 0 ? fileName.slice(dotIndex) : "";
     
     // 提取来源（GitHub 用户名/组织名，路径的第一个部分）
-    const source = pathParts[0];
+    const source = parsed.author || pathParts[0];
     
     // 只过滤 Windows 非法文件名字符，保留 ! + 等合法字符
     const sanitizedBaseName = sanitizePathSegment(baseName);

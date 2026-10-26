@@ -5,7 +5,7 @@ import { promisify } from "node:util";
 import os from "node:os";
 import { loadAllSources, toSafeFileStem, toSafePathStem } from "./config.mjs";
 import { buildSortedRulesetForClash, ruleTypeAliasTarget } from "./rules.mjs";
-import { fetchWithFallback, sourceConfigsFromSourceTxt, deriveCacheFileNameFromUrl } from "./subscriptions.mjs";
+import { fetchWithFallback, sourceConfigsFromSourceTxt, deriveCacheFileNameFromUrl, parseAuthorMarkedUrl } from "./subscriptions.mjs";
 import { installMihomo } from "./mihomo.mjs";
 import { makeArtifact, writeArtifactManifest } from "./notifications.mjs";
 
@@ -309,15 +309,16 @@ async function fetchEntryContent(entry, fetchImpl, { sourceRoot, sourceName, war
   if (Array.isArray(entry.urls) && entry.urls.length > 0) {
     const parts = [];
     for (const url of entry.urls) {
+      const markedUrl = parseAuthorMarkedUrl(url).url;
       try {
         if (entry.type === "http") {
-          const content = await fetchUrlContent(url, fetchImpl);
+          const content = await fetchUrlContent(markedUrl, fetchImpl);
           parts.push(content);
           await saveToCache({ url, content, sourceRoot, sourceName });
         } else if (entry.type === "file") {
-          parts.push(await fs.readFile(url, "utf8"));
+          parts.push(await fs.readFile(markedUrl, "utf8"));
         } else if (entry.type === "inline") {
-          parts.push(String(url));
+          parts.push(String(markedUrl));
         } else {
           throw new BuildReleaseError(`unsupported entry type: ${entry.type}`, { entryName: entry.name });
         }
@@ -332,15 +333,16 @@ async function fetchEntryContent(entry, fetchImpl, { sourceRoot, sourceName, war
   }
 
   if (entry.type === "http") {
-    const content = await fetchUrlContent(entry.url, fetchImpl);
+    const markedUrl = parseAuthorMarkedUrl(entry.url);
+    const content = await fetchUrlContent(markedUrl.url, fetchImpl);
     await saveToCache({ url: entry.url, content, sourceRoot, sourceName });
     return content;
   }
   if (entry.type === "file") {
-    return await fs.readFile(entry.url, "utf8");
+    return await fs.readFile(parseAuthorMarkedUrl(entry.url).url, "utf8");
   }
   if (entry.type === "inline") {
-    return entry.url;
+    return parseAuthorMarkedUrl(entry.url).url;
   }
   throw new BuildReleaseError(`unsupported entry type: ${entry.type}`, { entryName: entry.name });
 }

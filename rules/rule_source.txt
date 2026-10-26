@@ -1,3 +1,4 @@
+# HTTP 链接可在前面加 {作者}，例如 {blackmatrix7}https://...，用于固定 source 缓存文件名中的作者标识
 # 下面是实际订阅清单（可按需增删）
 
 [Advertising]
@@ -65,4 +66,4 @@ https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.list
 
 [Extra/OneDrive]
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.list
+{blackmatrix7}https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.list
