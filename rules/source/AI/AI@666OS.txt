@@ -1,7 +1,7 @@
 # NAME: AI
 # AUTHOR: YYDS666
-# UPDATED: 2026-10-24 04:43:42
-# TOTAL: 225
+# UPDATED: 2026-10-26 04:05:26
+# TOTAL: 234
 DOMAIN-SUFFIX,agentclientprotocol.com
 DOMAIN-SUFFIX,ai.com
 DOMAIN-SUFFIX,ai.studio
@@ -11,9 +11,12 @@ DOMAIN-SUFFIX,aiproxy.io
 DOMAIN-SUFFIX,aisandbox-pa.googleapis.com
 DOMAIN-SUFFIX,aistudio.google.com
 DOMAIN-SUFFIX,algolia.net
+DOMAIN-SUFFIX,ant.dev
 DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,anthropic.team
 DOMAIN-SUFFIX,antigravity-unleash.goog
 DOMAIN-SUFFIX,antigravity.google
+DOMAIN-SUFFIX,antspace.dev
 DOMAIN-SUFFIX,anythingllm.com
 DOMAIN-SUFFIX,api.statsig.com
 DOMAIN-SUFFIX,api2d.com
@@ -26,6 +29,7 @@ DOMAIN-SUFFIX,bard.google.com
 DOMAIN-SUFFIX,cerebras.ai
 DOMAIN-SUFFIX,character.ai
 DOMAIN-SUFFIX,chat.com
+DOMAIN-SUFFIX,chatbotclaude.com
 DOMAIN-SUFFIX,chatgpt.com
 DOMAIN-SUFFIX,chatgpt.livekit.cloud
 DOMAIN-SUFFIX,chatgpt.site
@@ -34,11 +38,11 @@ DOMAIN-SUFFIX,cici.com
 DOMAIN-SUFFIX,ciciai.com
 DOMAIN-SUFFIX,ciciaicdn.com
 DOMAIN-SUFFIX,clau.de
-DOMAIN-SUFFIX,claude.ai
-DOMAIN-SUFFIX,claude.com
-DOMAIN-SUFFIX,claude.dev
+DOMAIN-SUFFIX,claudeacademy.com
 DOMAIN-SUFFIX,claudemcpclient.com
 DOMAIN-SUFFIX,claudemcpcontent.com
+DOMAIN-SUFFIX,claudepages.dev
+DOMAIN-SUFFIX,claudestudio.com
 DOMAIN-SUFFIX,claudeusercontent.com
 DOMAIN-SUFFIX,clawhub.ai
 DOMAIN-SUFFIX,client-api.arkoselabs.com
@@ -65,6 +69,7 @@ DOMAIN-SUFFIX,cursor-cdn.com
 DOMAIN-SUFFIX,cursor.com
 DOMAIN-SUFFIX,cursor.sh
 DOMAIN-SUFFIX,cursorapi.com
+DOMAIN-SUFFIX,cursorvm.com
 DOMAIN-SUFFIX,d-id.com
 DOMAIN-SUFFIX,deepmind.com
 DOMAIN-SUFFIX,deepmind.google
@@ -132,6 +137,7 @@ DOMAIN-SUFFIX,liveperson.net
 DOMAIN-SUFFIX,lmstudio.ai
 DOMAIN-SUFFIX,lovart.ai
 DOMAIN-SUFFIX,lpsnmedia.net
+DOMAIN-SUFFIX,magnific.com
 DOMAIN-SUFFIX,makersuite.google.com
 DOMAIN-SUFFIX,manus.im
 DOMAIN-SUFFIX,manuscdn.com
@@ -161,6 +167,7 @@ DOMAIN-SUFFIX,opal.google
 DOMAIN-SUFFIX,opal.google.com
 DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,openai.com.cdn.cloudflare.net
+DOMAIN-SUFFIX,openai.org
 DOMAIN-SUFFIX,openaiapi-site.azureedge.net
 DOMAIN-SUFFIX,openaicom.imgix.net
 DOMAIN-SUFFIX,openart.ai
@@ -203,6 +210,7 @@ DOMAIN-SUFFIX,themeforest.net
 DOMAIN-SUFFIX,trae.ai
 DOMAIN-SUFFIX,tripo3d.ai
 DOMAIN-SUFFIX,turn.livekit.cloud
+DOMAIN-SUFFIX,typesafe.ai
 DOMAIN-SUFFIX,windsurf.build
 DOMAIN-SUFFIX,windsurf.com
 DOMAIN-SUFFIX,x.ai
@@ -211,6 +219,7 @@ DOMAIN-SUFFIX,youmind.com
 DOMAIN-SUFFIX,youmind.site
 DOMAIN-SUFFIX,zed.dev
 DOMAIN-KEYWORD,antigravity
+DOMAIN-KEYWORD,claude
 DOMAIN-KEYWORD,colab
 DOMAIN-KEYWORD,developerprofiles
 DOMAIN-KEYWORD,diabrowser
