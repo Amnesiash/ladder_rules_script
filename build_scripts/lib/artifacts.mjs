@@ -240,7 +240,8 @@ function selectMihomoMRSLines(lines, behavior) {
 function normalizeMihomoMRSInputLine(line) {
   return String(line)
     .split(",")
-    .filter((part) => part.trim().toLowerCase() !== "no-resolve")
+    .map((part) => part.trim())
+    .filter((part) => part && part.toLowerCase() !== "no-resolve")
     .join(",");
 }
 
@@ -257,7 +258,9 @@ async function writeMihomoMRSArtifacts({ entry, outputRoot, projectRoot, domainL
       const relativePath = `${toSafePathStem(entry.name)}_${behavior}.mrs`;
       const outputPath = path.join(outputRoot, relativePath);
       await fs.mkdir(path.dirname(outputPath), { recursive: true });
-      await fs.writeFile(inputPath, `${lines.map(normalizeMihomoMRSInputLine).join("\n")}\n`);
+      const mrsInputLines = lines.map(normalizeMihomoMRSInputLine).filter(Boolean);
+      if (mrsInputLines.length === 0) continue;
+      await fs.writeFile(inputPath, `${mrsInputLines.join("\n")}\n`);
       await execFileAsync(binaryPath, ["convert-ruleset", behavior === "domain" ? "domain" : "ipcidr", "text", inputPath, outputPath]);
       artifacts.push(makeArtifact({
         entry: {
