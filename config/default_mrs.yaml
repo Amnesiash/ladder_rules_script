@@ -1,0 +1,291 @@
+# Mihomo 配置（ClashBar 英文策略组 + MRS 规则版）
+# 基于本地 Default.yaml 与项目 config/mihomo_en_mrs.yaml
+# 保留 ClashBar 本地特殊功能，不改动原 Default.yaml
+
+# ==================== 锚点配置 ====================
+pr: &a1 {type: http, interval: 86400, health-check: {enable: true, url: 'http://www.gstatic.com/generate_204', interval: 1800}, filter: '^(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'}
+auto: &a2 {type: url-test, include-all: true, exclude-type: direct, interval: 900, lazy: true, url: 'http://www.gstatic.com/generate_204', hidden: true}
+d: &r2 {type: http, behavior: domain, format: mrs, interval: 86400}
+i: &r3 {type: http, behavior: ipcidr, format: mrs, interval: 86400}
+c: &r1 {type: http, behavior: classical, format: text, interval: 86400}
+
+# ==================== 代理提供者 ====================
+proxy-providers:
+  Kitty: {<<: *a1, url: "https://sub-store-dzj.pages.dev/XpX1uzGm4Tes8o5oMbzY/download/Kitty", path: ./proxy/Kitty.yaml, override: {additional-prefix: "🄚 "}}
+  Bocchi: {<<: *a1, url: "https://sub-store-dzj.pages.dev/XpX1uzGm4Tes8o5oMbzY/download/Bocchi", path: ./proxy/Bocchi.yaml, override: {additional-prefix: "🄑 "}}
+
+# ==================== 核心配置 ====================
+mixed-port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: true
+udp: true
+unified-delay: true
+tcp-concurrent: true
+find-process-mode: strict
+keep-alive-interval: 15
+keep-alive-idle: 600
+geo-auto-update: true
+geo-update-interval: 24
+geox-url:
+  mmdb: 'https://github.com/Masaiki/GeoIP2-CN/raw/release/Country.mmdb'
+  asn: 'https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb'
+
+external-ui-url: "https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip"
+external-ui-name: zashboard
+external-ui: ui
+external-controller: 127.0.0.1:9090
+secret: ''
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+sniffer:
+  enable: true
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+    TLS:
+      ports: [443, 8443]
+    QUIC:
+      ports: [443, 8443]
+  skip-domain:
+    - "Mijia Cloud"
+    - "+.push.apple.com"
+
+tun:
+  enable: true
+  stack: mips
+  dns-hijack:
+    - "any:53"
+  auto-route: true
+  auto-redirect: true
+  auto-detect-interface: true
+
+dns:
+  enable: true
+  listen: 0.0.0.0:1053
+  ipv6: true
+  prefer-h3: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*"
+    - "+.lan"
+    - "+.local"
+    - "+.miwifi.com"
+    - "+.docker.io"
+    - "+.market.xiaomi.com"
+    - "+.push.apple.com"
+  default-nameserver:
+    - tls://223.5.5.5
+    - tls://223.6.6.6
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+    - https://dns.flymc.cc/dns-query
+    - 172.30.7.2
+    - 172.30.7.3
+
+# ==================== 策略组 ====================
+proxy-groups:
+  - name: 手动选择
+    type: select
+    include-all: true
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/vpnlogo/Meta.png
+
+  - name: Company
+    type: select
+    proxies: [DIRECT, 自动选择, 香港, 台湾, 日本, 新加坡, 美国, 手动选择]
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/Netease.png
+
+  - name: Figma
+    type: select
+    proxies: [DIRECT, 自动选择, 香港, 台湾, 日本, 新加坡, 美国, 手动选择]
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/color/Figma.png
+
+  - name: 代理加速
+    type: select
+    proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 手动选择, DIRECT]
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/Global.png
+
+  - name: AI
+    type: select
+    proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 手动选择, DIRECT]
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/OpenAI.png
+
+  - name: Telegram
+    type: select
+    proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 手动选择, DIRECT]
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/Telegram.png
+
+  - name: 微软服务
+    type: select
+    proxies: [DIRECT, 自动选择, 香港, 台湾, 日本, 新加坡, 美国, 手动选择]
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/Microsoft.png
+
+  - name: 苹果服务
+    type: select
+    proxies: [DIRECT, 自动选择, 香港, 台湾, 日本, 新加坡, 美国, 手动选择]
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/Apple.png
+
+  - name: 国际流媒体
+    type: select
+    proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 手动选择, DIRECT]
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/Streaming.png
+
+  - name: 漏网之鱼
+    type: select
+    proxies: [DIRECT, 自动选择, 香港, 台湾, 日本, 新加坡, 美国, 手动选择]
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/Final.png
+
+  - name: 自动选择
+    <<: *a2
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/Auto.png
+
+  - name: 香港
+    <<: *a2
+    filter: "(?i)港|hk|hongkong|hong kong"
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/HK.png
+
+  - name: 台湾
+    <<: *a2
+    filter: "(?i)台|tw|taiwan"
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/TW.png
+
+  - name: 日本
+    <<: *a2
+    filter: "(?i)日|jp|japan"
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/JP.png
+
+  - name: 新加坡
+    <<: *a2
+    filter: "(?i)新|sg|singapore"
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/SG.png
+
+  - name: 美国
+    <<: *a2
+    filter: "(?i)美|us|unitedstates|united states"
+    icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/US.png
+
+# 规则集
+rule-providers:
+  unban:
+    <<: *r1
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/custom/unban.list
+    path: ./ruleset/unban.list
+
+  lan_domain:
+    <<: *r2
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/lan_domain.mrs
+    path: ./ruleset/lan_domain.mrs
+
+  lan_ip:
+    <<: *r3
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/lan_ip.mrs
+    path: ./ruleset/lan_ip.mrs
+
+  direct_domain:
+    <<: *r2
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/direct_domain.mrs
+    path: ./ruleset/direct_domain.mrs
+
+  ai_domain:
+    <<: *r2
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/ai_domain.mrs
+    path: ./ruleset/ai_domain.mrs
+
+  telegram_domain:
+    <<: *r2
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/extra/telegram_domain.mrs
+    path: ./ruleset/telegram_domain.mrs
+
+  microsoft_domain:
+    <<: *r2
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/extra/microsoft_domain.mrs
+    path: ./ruleset/microsoft_domain.mrs
+
+  apple_domain:
+    <<: *r2
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/extra/apple_domain.mrs
+    path: ./ruleset/apple_domain.mrs
+
+  apple_ip:
+    <<: *r3
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/extra/apple_ip.mrs
+    path: ./ruleset/apple_ip.mrs
+
+  streaming_domain:
+    <<: *r2
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/streaming_domain.mrs
+    path: ./ruleset/streaming_domain.mrs
+
+  steamcn_domain:
+    <<: *r2
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/extra/steamcn_domain.mrs
+    path: ./ruleset/steamcn_domain.mrs
+
+  proxy_domain:
+    <<: *r2
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/proxy_domain.mrs
+    path: ./ruleset/proxy_domain.mrs
+
+  china_domain:
+    <<: *r2
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/china_domain.mrs
+    path: ./ruleset/china_domain.mrs
+
+  ai_ip:
+    <<: *r3
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/ai_ip.mrs
+    path: ./ruleset/ai_ip.mrs
+
+  telegram_ip:
+    <<: *r3
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/extra/telegram_ip.mrs
+    path: ./ruleset/telegram_ip.mrs
+
+  streaming_ip:
+    <<: *r3
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/streaming_ip.mrs
+    path: ./ruleset/streaming_ip.mrs
+
+  proxy_ip:
+    <<: *r3
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/proxy_ip.mrs
+    path: ./ruleset/proxy_ip.mrs
+
+  china_ip:
+    <<: *r3
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/china_ip.mrs
+    path: ./ruleset/china_ip.mrs
+
+rules:
+  - DOMAIN-SUFFIX, jasolar.com, DIRECT
+  - RULE-SET, unban, Company
+  - DOMAIN-SUFFIX, figma.com, Figma
+
+  - RULE-SET, lan_domain, DIRECT
+  - RULE-SET, lan_ip, DIRECT
+
+  - RULE-SET, direct_domain, DIRECT
+  - RULE-SET, microsoft_domain, 微软服务
+  - RULE-SET, ai_domain, AI
+  - RULE-SET, telegram_domain, Telegram
+  - RULE-SET, apple_domain, 苹果服务
+  - RULE-SET, streaming_domain, 国际流媒体
+  - RULE-SET, steamcn_domain, DIRECT
+  - RULE-SET, proxy_domain, 代理加速
+  - RULE-SET, china_domain, DIRECT
+
+  - RULE-SET, ai_ip, AI
+  - RULE-SET, telegram_ip, Telegram
+  - RULE-SET, apple_ip, 苹果服务
+  - RULE-SET, streaming_ip, 国际流媒体
+  - RULE-SET, proxy_ip, 代理加速
+  - RULE-SET, china_ip, DIRECT
+  - GEOIP, CN, DIRECT
+
+  - MATCH, 漏网之鱼
