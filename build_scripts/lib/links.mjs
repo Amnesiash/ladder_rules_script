@@ -386,7 +386,7 @@ const RULE_ROW_INFO = {
     content: "AI 服务",
     purpose: "ChatGPT、Claude、Gemini 等主要 AI 服务",
   },
-  Private: {
+  Lan: {
     content: "私有网络",
     purpose: "内网设备管理、路由器配置、本地服务访问",
   },
@@ -413,7 +413,7 @@ const RULE_ROW_INFO = {
 };
 
 const RULE_SOURCE_ORDER = [
-  "Private",
+  "Lan",
   "Direct",
   "WeChat",
   "SteamCN",
@@ -427,7 +427,7 @@ const RULE_SOURCE_ORDER = [
 ];
 
 const RULE_POLICY_BY_SOURCE_NAME = {
-  Private: "DIRECT",
+  Lan: "DIRECT",
   Direct: "DIRECT",
   WeChat: "DIRECT",
   SteamCN: "DIRECT",

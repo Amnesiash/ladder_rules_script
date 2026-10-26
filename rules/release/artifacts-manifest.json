@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-26T07:22:51.522Z",
+  "timestamp": "2026-10-26T07:25:00.552Z",
   "artifacts": [
     {
       "slug": "advertising",
@@ -189,35 +189,35 @@
       "sha256": "2333c0b8945c7167e76759215e7186c1958c680458fda4ca1f9265642aaf3c1c"
     },
     {
-      "slug": "private",
-      "name": "private",
-      "sourceRelativeDir": "Private",
-      "outputPath": "private.list",
-      "relativePath": "private.list",
+      "slug": "lan",
+      "name": "lan",
+      "sourceRelativeDir": "Lan",
+      "outputPath": "lan.list",
+      "relativePath": "lan.list",
       "kind": "clash",
-      "label": "private Rules",
+      "label": "lan Rules",
       "behavior": "classical",
-      "sha256": "3e11f7f39fe46b1fd6f65fcc0a7bddce55f5cf5ecc7f70a510c1dd5f8840d566"
+      "sha256": "2726fbfd969841290417f16db8c2778c578ae50e4ae9c8380cea9e5c250ae88a"
     },
     {
-      "slug": "private_domain",
-      "name": "private_domain",
-      "sourceRelativeDir": "Private",
-      "outputPath": "private_domain.mrs",
-      "relativePath": "private_domain.mrs",
+      "slug": "lan_domain",
+      "name": "lan_domain",
+      "sourceRelativeDir": "Lan",
+      "outputPath": "lan_domain.mrs",
+      "relativePath": "lan_domain.mrs",
       "kind": "domain-mrs",
-      "label": "Private_domain.mrs",
+      "label": "Lan_domain.mrs",
       "behavior": "domain",
       "sha256": "cc4f84f0aaa5e1c7d14efab65468406df3fb2ee280bbe21dbf288a70ac404252"
     },
     {
-      "slug": "private_ip",
-      "name": "private_ip",
-      "sourceRelativeDir": "Private",
-      "outputPath": "private_ip.mrs",
-      "relativePath": "private_ip.mrs",
+      "slug": "lan_ip",
+      "name": "lan_ip",
+      "sourceRelativeDir": "Lan",
+      "outputPath": "lan_ip.mrs",
+      "relativePath": "lan_ip.mrs",
       "kind": "ipcidr-mrs",
-      "label": "Private_ip.mrs",
+      "label": "Lan_ip.mrs",
       "behavior": "ipcidr",
       "sha256": "f313cfd33803c4d868690f0576028493aea23040b9b9717f07da2a7d3b44245e"
     },

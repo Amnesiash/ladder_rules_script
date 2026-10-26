@@ -10,7 +10,7 @@
 
 | 文件名 | 包含内容 | 用途 | 日期 |
 | --- | --- | --- | --- |
-| [`private.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/private.list)<br>[`private_domain.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/private_domain.mrs)<br>[`private_ip.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/private_ip.mrs) | 私有网络 | 内网设备管理、路由器配置、本地服务访问 | 2026-10-26 |
+| [`lan.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/lan.list)<br>[`lan_domain.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/lan_domain.mrs)<br>[`lan_ip.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/lan_ip.mrs) | 私有网络 | 内网设备管理、路由器配置、本地服务访问 | 2026-10-26 |
 | [`direct.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/direct.list)<br>[`direct_domain.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/direct_domain.mrs) | 直连域名列表 | 国内可直连的常用服务，避免不必要的代理 | 2026-10-26 |
 | [`ai.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/ai.list)<br>[`ai_domain.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/ai_domain.mrs)<br>[`ai_ip.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/ai_ip.mrs) | AI 服务 | ChatGPT、Claude、Gemini 等主要 AI 服务 | 2026-10-26 |
 | [`streaminghmt.list`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/streaminghmt.list)<br>[`streaminghmt_domain.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/streaminghmt_domain.mrs)<br>[`streaminghmt_ip.mrs`](https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/streaminghmt_ip.mrs) | 港澳台流媒体 | 哔哩哔哩、爱奇艺等港澳台流媒体 | 2026-10-26 |
@@ -37,11 +37,11 @@ c: &RuleSet_c {type: http, behavior: classical, format: text, interval: 86400}
 
 rule-providers:
   # 规则集
-  Private: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/private.list}
+  Lan: {<<: *RuleSet_c, url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/release/lan.list}
 
 rules:
   # 订阅规则
-  - RULE-SET,Private,DIRECT
+  - RULE-SET,Lan,DIRECT
   - GEOIP,CN,DIRECT
 
   # 兜底规则
