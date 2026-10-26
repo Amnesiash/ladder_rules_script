@@ -340,7 +340,7 @@ function renderOtherRulesets({ sourceConfigs, artifacts, repository, releaseBran
       const title = pathName.split("/").pop();
       const updateTime = updateTimes[pathName] || "-";
       const links = renderRuleFileLinks({ sourceConfig, artifacts, repository, releaseBranch }) || "-";
-      return `${updateTime}<br>${escapeTableCell(title)}<br>${links}`;
+      return `<div style="vertical-align: top; text-align: left;"><strong><code>${escapeTableCell(title)}</code></strong><br>${updateTime}<br>${links}</div>`;
     });
     const columns = 5;
     const rows = [
