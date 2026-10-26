@@ -109,11 +109,13 @@ export function renderRulesReadme({
     "",
     "本目录自动生成规则文件仓库，包含各类代理软件使用的规则集合。",
     "",
+    "说明：规则生成过程按 rule_source.txt 原始内容读取、解析和处理；仅在最终生成 release 产物时将文件名转换为小写。",
+    "",
     "---",
     "",
     "## 常用规则集",
     "",
-    "| 文件名 | 包含内容 | 用途 | 最近更新 |",
+    "| 文件名 | 包含内容 | 用途 | 日期 |",
     "| --- | --- | --- | --- |",
     rows.length ? rows.join("\n") : "| - | - | - | - |",
     "",
@@ -173,7 +175,7 @@ function renderRulesClashExample({ sourceConfigs, repository, releaseBranch }) {
   ];
 
   for (const sourceConfig of sourceConfigs) {
-    const filePathName = sourceConfig.pathName || sourceConfig.sourceName;
+    const filePathName = (sourceConfig.pathName || sourceConfig.sourceName).toLowerCase();
     const rawUrl = githubRawURL({
       repository,
       branch: releaseBranch,
@@ -205,7 +207,7 @@ function renderRulesQxExample() {
     "resource_parser_url=https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js",
     "",
     "[filter_remote]",
-    "https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/Direct.list, tag=直连修正, force-policy=direct, img-url=https://github.com/Koolson/Qure/raw/master/IconSet/mini/Direct.png, update-interval=172800, opt-parser=true, enabled=true",
+    "https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/direct.list, tag=直连修正, force-policy=direct, img-url=https://github.com/Koolson/Qure/raw/master/IconSet/mini/Direct.png, update-interval=172800, opt-parser=true, enabled=true",
     "```",
   ].join("\n");
 }
@@ -324,20 +326,26 @@ function renderOtherRulesets({ sourceConfigs, artifacts, repository, releaseBran
     const nameB = (b.pathName || b.sourceName || "").split("/").pop().toLowerCase();
     return nameA.localeCompare(nameB);
   });
-  const titles = sortedConfigs.map((sourceConfig) => {
-    const fileNamePart = (sourceConfig.pathName || sourceConfig.sourceName || "").split("/").pop().toLowerCase();
-    return `\`${fileNamePart}\``;
-  });
-  const cells = sortedConfigs.map((sourceConfig) => {
-    const updateTime = updateTimes[sourceConfig.pathName || sourceConfig.sourceName] || "-";
-    return `${renderRuleFileLinks({ sourceConfig, artifacts, repository, releaseBranch }) || "-"}<br>更新日期：${updateTime}`;
-  });
+  const groups = [];
+  for (let i = 0; i < sortedConfigs.length; i += 5) {
+    const group = sortedConfigs.slice(i, i + 5);
+    const titles = group.map((sourceConfig) => {
+      const fileNamePart = (sourceConfig.pathName || sourceConfig.sourceName || "").split("/").pop();
+      return `\`${fileNamePart}\``;
+    });
+    const cells = group.map((sourceConfig) => {
+      const updateTime = updateTimes[sourceConfig.pathName || sourceConfig.sourceName] || "-";
+      const links = renderRuleFileLinks({ sourceConfig, artifacts, repository, releaseBranch }) || "-";
+      return `${updateTime}<br>${links}`;
+    });
+    groups.push([
+      `| ${titles.join(" | ")} |`,
+      `| ${titles.map(() => "---").join(" | ")} |`,
+      `| ${cells.join(" | ")} |`,
+    ].join("\n"));
+  }
 
-  return [
-    `| ${titles.join(" | ")} |`,
-    `| ${titles.map(() => "---").join(" | ")} |`,
-    `| ${cells.join(" | ")} |`,
-  ].join("\n");
+  return groups.join("\n\n");
 }
 
 function escapeTableCell(value) {

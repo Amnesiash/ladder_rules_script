@@ -148,11 +148,11 @@ async function main() {
   const updateTimes = {};
   for (const sourceConfig of result.sourceConfigs) {
     const filePathName = sourceConfig.pathName || sourceConfig.sourceName;
-    const releasePath = path.join(outputRoot, `${filePathName}.list`);
+    const releasePath = path.join(outputRoot, `${filePathName.toLowerCase()}.list`);
     try {
       const content = await fs.readFile(releasePath, "utf8");
       const match = content.match(/^# UPDATE:\s*(.+)$/m);
-      if (match) updateTimes[filePathName] = match[1].trim();
+      if (match) updateTimes[filePathName] = match[1].trim().split(/\s+/u)[0];
     } catch {
       // ignore
     }

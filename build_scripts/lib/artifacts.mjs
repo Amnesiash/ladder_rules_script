@@ -208,7 +208,13 @@ async function processEntry({ entry, outputRoot, fetchImpl, projectRoot, sourceR
   });
   if (clashLines.length) {
     const rulesPath = await writeRulesFile({ outputRoot, entry, lines: clashLines, projectRoot });
-    artifacts.push(makeArtifact({ entry, outputRoot, filePath: rulesPath, kind: "clash", label: `${entry.name} Rules` }));
+    artifacts.push(makeArtifact({
+      entry: { ...entry, name: toSafePathStem(entry.name).toLowerCase(), slug: toSafePathStem(entry.name).toLowerCase() },
+      outputRoot,
+      filePath: rulesPath,
+      kind: "clash",
+      label: `${toSafePathStem(entry.name).toLowerCase()} Rules`,
+    }));
   }
 
   // MRS 只接受 domain/ipcidr 两种 behavior。按规则类型拆分后分别转换，
@@ -267,7 +273,7 @@ async function writeMihomoMRSArtifacts({ entry, outputRoot, projectRoot, domainL
     for (const [behavior, lines] of [["domain", domainLines], ["ip", ipLines]]) {
       if (lines.length === 0) continue;
       const inputPath = path.join(tempDir, `${behavior}.txt`);
-      const relativePath = `${toSafePathStem(entry.name)}_${behavior}.mrs`;
+      const relativePath = `${toSafePathStem(entry.name).toLowerCase()}_${behavior}.mrs`;
       const outputPath = path.join(outputRoot, relativePath);
       await fs.mkdir(path.dirname(outputPath), { recursive: true });
       const mrsInputLines = lines.map(normalizeMihomoMRSInputLine).filter(Boolean);
@@ -277,8 +283,8 @@ async function writeMihomoMRSArtifacts({ entry, outputRoot, projectRoot, domainL
       artifacts.push(makeArtifact({
         entry: {
           ...entry,
-          name: `${entry.name}_${behavior}`,
-          slug: `${entry.name}_${behavior}`,
+          name: `${toSafePathStem(entry.name).toLowerCase()}_${behavior}`,
+          slug: `${toSafePathStem(entry.name).toLowerCase()}_${behavior}`,
           behavior: behavior === "domain" ? "domain" : "ipcidr",
         },
         outputRoot,
@@ -356,7 +362,7 @@ async function saveToCache({ url, content, sourceRoot, sourceName }) {
 
 async function writeRulesFile({ outputRoot, entry, lines, projectRoot }) {
   // 支持 [Extra/Apple] 多级路径: entry.name 可能是 "Extra/Apple"
-  const name = toSafePathStem(entry.name);
+  const name = toSafePathStem(entry.name).toLowerCase();
   const outPath = path.join(outputRoot, `${name}.list`);
   await fs.mkdir(path.dirname(outPath), { recursive: true });
 
