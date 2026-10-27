@@ -12,9 +12,7 @@ pr: &a1 {type: http, interval: 86400, health-check: {enable: true, url: 'http://
 auto:  &a2 {type: url-test, include-all: true, exclude-type: direct, interval: 900, lazy: true, url: 'http://www.gstatic.com/generate_204', hidden: false} 
 
 # 规则集行为模板
-# MRS 域名规则模板
 d: &r2 {type: http, behavior: domain, format: mrs, interval: 86400}
-# MRS IP 规则模板
 i: &r3 {type: http, behavior: ipcidr, format: mrs, interval: 86400}
 
 # ==================== 代理提供者 ====================
