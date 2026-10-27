@@ -71,7 +71,7 @@ sniffer:
 # TUN模式配置    
 tun:
   enable: true
-  stack: mixed
+  stack: mips
   dns-hijack:
     - "any:53"
     - "tcp://any:53"
