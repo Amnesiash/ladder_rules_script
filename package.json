@@ -10,6 +10,7 @@
     "build:release:noclean": "bun run build_scripts/build.mjs --no-clean",
     "generate:clients": "bun run build_scripts/build.mjs",
     "build:all": "bun run generate:clients && bun run build:release:clean",
-    "notify:artifact-changes": "bun run build_scripts/notify-artifact-changes.mjs"
+    "notify:artifact-changes": "bun run build_scripts/notify-artifact-changes.mjs",
+    "record:rule-changes": "bun run build_scripts/record-rule-changes.mjs"
   }
 }

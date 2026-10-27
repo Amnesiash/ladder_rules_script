@@ -36,6 +36,9 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: bun run build:release:clean
 
+      - name: Record automatic update
+        run: bun run record:rule-changes
+
       - name: Commit Rules changes to main
         run: |
           if [ -z "$(git status --porcelain -- rules/)" ]; then
