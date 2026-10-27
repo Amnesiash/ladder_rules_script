@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-26T16:08:01.231Z",
+  "timestamp": "2026-10-27T01:12:30.809Z",
   "artifacts": [
     {
       "slug": "advertising",
@@ -10,7 +10,7 @@
       "kind": "clash",
       "label": "advertising Rules",
       "behavior": "classical",
-      "sha256": "7a40e4f1faca1e3c50b53f9a880fce8965db752fdb5681da57e45aa17ae29284"
+      "sha256": "0d7bf7f88b4dd4686db8f6a3b5a016b3160dcae2d4083a864e2d0f6a23efe8f0"
     },
     {
       "slug": "advertising_domain",
@@ -21,7 +21,7 @@
       "kind": "domain-mrs",
       "label": "advertising.mrs",
       "behavior": "domain",
-      "sha256": "3fadb3fe31bc7e6ea1e9e2606b78a945ba9583ee2ac1689f67286d06c5538994"
+      "sha256": "c1c55583578dddf20a9897d305940c900e77a7aa3dc498749772297199a3f1d7"
     },
     {
       "slug": "advertising_ip",
@@ -233,7 +233,7 @@
       "sha256": "2663555abd940748bde23ff03554e87b4a6aee347dab98817c559eb2a97cf755"
     },
     {
-      "slug": "extra/microsoft_domain",
+      "slug": "microsoft_domain",
       "name": "microsoft",
       "sourceRelativeDir": "Extra/Microsoft",
       "outputPath": "mrs/domain/microsoft.mrs",
@@ -255,7 +255,7 @@
       "sha256": "4b5f52a6a2861cf90037eceda219fd02dab0764a3ef19f592b3dc9f2d4d97aad"
     },
     {
-      "slug": "extra/steamcn_domain",
+      "slug": "steamcn_domain",
       "name": "steamcn",
       "sourceRelativeDir": "Extra/SteamCN",
       "outputPath": "mrs/domain/steamcn.mrs",
@@ -277,7 +277,7 @@
       "sha256": "8a983f77a7afef3f05f70c082a493e891404872ed24d0482307acf8ab5143284"
     },
     {
-      "slug": "extra/wechat_domain",
+      "slug": "wechat_domain",
       "name": "wechat",
       "sourceRelativeDir": "Extra/WeChat",
       "outputPath": "mrs/domain/wechat.mrs",
@@ -288,7 +288,7 @@
       "sha256": "8324cb02ce3ccb54e8801f56c34dbd4d6afd5244c400efb0dcefabfb2aa32c5e"
     },
     {
-      "slug": "extra/wechat_ip",
+      "slug": "wechat_ip",
       "name": "wechat",
       "sourceRelativeDir": "Extra/WeChat",
       "outputPath": "mrs/ip/wechat.mrs",
@@ -343,7 +343,7 @@
       "sha256": "59137bf32b0fd16917c5f70041085ab0dff088c6fe0e36b4ded433ec2090da4f"
     },
     {
-      "slug": "extra/apple_domain",
+      "slug": "apple_domain",
       "name": "apple",
       "sourceRelativeDir": "Extra/Apple",
       "outputPath": "mrs/domain/apple.mrs",
@@ -354,7 +354,7 @@
       "sha256": "ddaf5a35f072204a8e66cddc0619d1159a5f8167fc26796cf51ffe96c38814c8"
     },
     {
-      "slug": "extra/apple_ip",
+      "slug": "apple_ip",
       "name": "apple",
       "sourceRelativeDir": "Extra/Apple",
       "outputPath": "mrs/ip/apple.mrs",
@@ -376,7 +376,7 @@
       "sha256": "78ef7a7c17f37052fbda331112a4fe6605af1b507c791c0f69d7ff836ae9841a"
     },
     {
-      "slug": "extra/telegram_domain",
+      "slug": "telegram_domain",
       "name": "telegram",
       "sourceRelativeDir": "Extra/Telegram",
       "outputPath": "mrs/domain/telegram.mrs",
@@ -387,7 +387,7 @@
       "sha256": "a41a84d6d5c12152428541a363e240f54791f1b518aa1c9b93b289cb50da9cd1"
     },
     {
-      "slug": "extra/telegram_ip",
+      "slug": "telegram_ip",
       "name": "telegram",
       "sourceRelativeDir": "Extra/Telegram",
       "outputPath": "mrs/ip/telegram.mrs",
@@ -409,7 +409,7 @@
       "sha256": "fd9e01d15cf6f54d8f886ec43f32153d6655fefd652ce60c5a9604b8b1839dca"
     },
     {
-      "slug": "extra/tiktok_domain",
+      "slug": "tiktok_domain",
       "name": "tiktok",
       "sourceRelativeDir": "Extra/TikTok",
       "outputPath": "mrs/domain/tiktok.mrs",
@@ -431,7 +431,7 @@
       "sha256": "57c747fb60d34b641b838788682b7b4ae97c9dc343f2f0b22647380234e1d05a"
     },
     {
-      "slug": "extra/onedrive_domain",
+      "slug": "onedrive_domain",
       "name": "onedrive",
       "sourceRelativeDir": "Extra/OneDrive",
       "outputPath": "mrs/domain/onedrive.mrs",
