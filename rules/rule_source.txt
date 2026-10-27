@@ -32,7 +32,7 @@ https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/A
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/AI.list
 {kelee}https://kelee.one/Tool/Clash/Rule/AI.yaml
 
-[Lan]
+[Private]
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
 https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt
 https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt

@@ -284,7 +284,9 @@ async function writeMihomoMRSArtifacts({ entry, outputRoot, projectRoot, domainL
     for (const [behavior, lines] of [["domain", domainLines], ["ip", ipLines]]) {
       if (lines.length === 0) continue;
       const inputPath = path.join(tempDir, `${behavior}.txt`);
-      const relativePath = `${toSafePathStem(entry.name).toLowerCase()}_${behavior}.mrs`;
+      // MRS 按行为集中存放，规则集原有的 Extra 等目录不参与发布路径。
+      const fileStem = toSafePathStem(entry.name).split("/").at(-1).toLowerCase();
+      const relativePath = path.join("mrs", behavior, `${fileStem}.mrs`);
       const outputPath = path.join(outputRoot, relativePath);
       await fs.mkdir(path.dirname(outputPath), { recursive: true });
       const mrsInputLines = lines.map(normalizeMihomoMRSInputLine).filter(Boolean);
@@ -294,14 +296,14 @@ async function writeMihomoMRSArtifacts({ entry, outputRoot, projectRoot, domainL
       artifacts.push(makeArtifact({
         entry: {
           ...entry,
-          name: `${toSafePathStem(entry.name).toLowerCase()}_${behavior}`,
-          slug: `${toSafePathStem(entry.name).toLowerCase()}_${behavior}`,
+          name: fileStem,
+          slug: `${fileStem}_${behavior}`,
           behavior: behavior === "domain" ? "domain" : "ipcidr",
         },
         outputRoot,
         filePath: outputPath,
         kind: behavior === "domain" ? "domain-mrs" : "ipcidr-mrs",
-        label: `${entry.name}_${behavior}.mrs`,
+        label: `${fileStem}.mrs`,
       }));
     }
   } catch (error) {

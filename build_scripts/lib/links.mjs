@@ -268,18 +268,19 @@ function renderArtifacts({ artifacts, repository, releaseBranch }) {
 function renderRuleFileLinks({ sourceConfig, artifacts, repository, releaseBranch }) {
   const relevantArtifacts = artifacts.filter((artifact) => artifact.sourceRelativeDir === sourceConfig.sourceRelativeDir);
   const byKind = new Map(relevantArtifacts.map((artifact) => [artifact.kind, artifact]));
-  const files = [
-    ["clash", ".list"],
-    ["domain-mrs", "_domain.mrs"],
-    ["ipcidr-mrs", "_ip.mrs"],
-  ];
   const fileStem = String(sourceConfig.pathName || sourceConfig.sourceName || "").toLowerCase();
+  const mrsFileStem = fileStem.split("/").at(-1);
+  const files = [
+    ["clash", `${fileStem}.list`],
+    ["domain-mrs", `mrs/domain/${mrsFileStem}.mrs`],
+    ["ipcidr-mrs", `mrs/ip/${mrsFileStem}.mrs`],
+  ];
   const links = [];
 
-  for (const [kind, suffix] of files) {
+  for (const [kind, fallbackPath] of files) {
     const artifact = byKind.get(kind);
-    const fileName = artifact?.relativePath?.split("/").pop() || `${fileStem}${suffix}`;
-    const filePath = artifact?.relativePath || `${fileStem}${suffix}`;
+    const fileName = artifact?.relativePath?.split("/").pop() || fallbackPath.split("/").pop();
+    const filePath = artifact?.relativePath || fallbackPath;
     const releasePath = filePath.startsWith("rules/release/") ? filePath : `rules/release/${filePath}`;
     const url = githubRawURL({ repository, branch: releaseBranch, filePath: releasePath });
     if (artifact) links.push(`[\`${fileName}\`](${url})`);
@@ -390,7 +391,7 @@ const RULE_ROW_INFO = {
     content: "AI 服务",
     purpose: "ChatGPT、Claude、Gemini 等主要 AI 服务",
   },
-  Lan: {
+  Private: {
     content: "私有网络",
     purpose: "内网设备管理、路由器配置、本地服务访问",
   },
@@ -417,7 +418,7 @@ const RULE_ROW_INFO = {
 };
 
 const RULE_SOURCE_ORDER = [
-  "Lan",
+  "Private",
   "Direct",
   "WeChat",
   "SteamCN",
@@ -431,7 +432,7 @@ const RULE_SOURCE_ORDER = [
 ];
 
 const RULE_POLICY_BY_SOURCE_NAME = {
-  Lan: "DIRECT",
+  Private: "DIRECT",
   Direct: "DIRECT",
   WeChat: "DIRECT",
   SteamCN: "DIRECT",
