@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-29T12:09:53.647Z",
+  "timestamp": "2026-10-30T12:00:33.743Z",
   "artifacts": [
     {
       "slug": "advertising",
@@ -10,7 +10,7 @@
       "kind": "clash",
       "label": "advertising Rules",
       "behavior": "classical",
-      "sha256": "66038e924f4c513244ebf3c4f35a4d41fc2cd9e2318556002a5c27bfc3a7b803"
+      "sha256": "76914c9146dccf1ecf3208c9104e47564182d44543bd25f33b493b099f363b65"
     },
     {
       "slug": "advertising_domain",
@@ -21,7 +21,7 @@
       "kind": "domain-mrs",
       "label": "advertising.mrs",
       "behavior": "domain",
-      "sha256": "1f4f35f739de86f9c1ffea5dce293253f59ef9dbed9e40f8b71898c726b04243"
+      "sha256": "25d2c905334b1c8948a8c4ee54274cb104fa4272ca899eb647d0c9cb0c64fb2d"
     },
     {
       "slug": "advertising_ip",
@@ -164,7 +164,7 @@
       "kind": "clash",
       "label": "ai Rules",
       "behavior": "classical",
-      "sha256": "1566fc9e38593c3541846b9aaeb941f7adb1deea81cdc6acec7288c8b72a7527"
+      "sha256": "2667f61188612130f2bb89a32c090ff65d963b003469eadc5a69b04cdcba0e7d"
     },
     {
       "slug": "ai_domain",
@@ -175,7 +175,7 @@
       "kind": "domain-mrs",
       "label": "ai.mrs",
       "behavior": "domain",
-      "sha256": "b6e95ed8a1bd47413101400e862a307e74b09b5d758c8a4304a8ffb0824dc29c"
+      "sha256": "89a3fbafcc5d12b552934d435ab6688902e573ea9d16a04f7c1e2dfef79c59ab"
     },
     {
       "slug": "ai_ip",
@@ -186,7 +186,7 @@
       "kind": "ipcidr-mrs",
       "label": "ai.mrs",
       "behavior": "ipcidr",
-      "sha256": "2333c0b8945c7167e76759215e7186c1958c680458fda4ca1f9265642aaf3c1c"
+      "sha256": "1b23d1fd271003f7ece56f213b5e9ada122f77848a111a9d4bd6c1d7ea927bde"
     },
     {
       "slug": "private",
