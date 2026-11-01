@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-31T11:36:02.809Z",
+  "timestamp": "2026-11-01T12:33:20.682Z",
   "artifacts": [
     {
       "slug": "advertising",
@@ -10,7 +10,7 @@
       "kind": "clash",
       "label": "advertising Rules",
       "behavior": "classical",
-      "sha256": "f45a7275ca8afbc3eb83234621086356189632d2d44036814c7039e29b9b7f80"
+      "sha256": "c38aaacf980e48386a529840d2f069a87f1ab214600cb11a068b88e7f9520bf0"
     },
     {
       "slug": "advertising_domain",
@@ -21,7 +21,7 @@
       "kind": "domain-mrs",
       "label": "advertising.mrs",
       "behavior": "domain",
-      "sha256": "a7d5a6cd977fb6e0cd392feaa57ff066e6b7e98b585c5651f36f6e6d47b6c85e"
+      "sha256": "08c6da2de67d04532ff60289d204799ff47ac5572696ba706368d584aaf79e07"
     },
     {
       "slug": "advertising_ip",
@@ -164,7 +164,7 @@
       "kind": "clash",
       "label": "ai Rules",
       "behavior": "classical",
-      "sha256": "2667f61188612130f2bb89a32c090ff65d963b003469eadc5a69b04cdcba0e7d"
+      "sha256": "eb9ca12a500525bf3209242ce08cce5f14d7906a76ae858750b9105cad70c1d2"
     },
     {
       "slug": "ai_domain",
@@ -175,7 +175,7 @@
       "kind": "domain-mrs",
       "label": "ai.mrs",
       "behavior": "domain",
-      "sha256": "89a3fbafcc5d12b552934d435ab6688902e573ea9d16a04f7c1e2dfef79c59ab"
+      "sha256": "a83769047522d4a39922dec86f31ab42d94a80e839c3139c30cf6b9f00109ea1"
     },
     {
       "slug": "ai_ip",
@@ -186,7 +186,7 @@
       "kind": "ipcidr-mrs",
       "label": "ai.mrs",
       "behavior": "ipcidr",
-      "sha256": "1b23d1fd271003f7ece56f213b5e9ada122f77848a111a9d4bd6c1d7ea927bde"
+      "sha256": "2333c0b8945c7167e76759215e7186c1958c680458fda4ca1f9265642aaf3c1c"
     },
     {
       "slug": "private",
