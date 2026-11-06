@@ -9,3 +9,12 @@
 .copilot/
 .reasonix/
 .workbuddy/
+.claude/
+.cursor/
+.windsurf/
+.gemini/
+.serena/
+.aider*
+.mcp.json
+AGENTS.md
+CLAUDE.md

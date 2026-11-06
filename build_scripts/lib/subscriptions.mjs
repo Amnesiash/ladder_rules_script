@@ -179,6 +179,9 @@ export async function sourceConfigsFromSourceTxt({ projectRoot, sourceRoot }) {
   if (!content) return [];
 
   const sections = parseSourceFile(content.toString("utf8"));
+  for (const warning of sections.warnings ?? []) {
+    console.warn(`⚠️  rule_source.txt: ${warning}`);
+  }
   const configs = [];
 
   for (const section of sections) {
@@ -198,6 +201,8 @@ export async function sourceConfigsFromSourceTxt({ projectRoot, sourceRoot }) {
         behavior: "classical",
         sourceName: pathName,
         sourceRelativeDir: pathName,
+        // rule_source.txt 段标题的 `!skip mrs` 指令：该段不生成任何 MRS 产物
+        skipMrs: Boolean(section.skipMrs),
       },
     ];
 

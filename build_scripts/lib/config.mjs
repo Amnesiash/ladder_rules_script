@@ -19,28 +19,61 @@ export function sanitizeName(value) {
 
 // ==================== 源文件解析（兼容 rule_source.txt 格式）====================
 
+/**
+ * 解析段标题行尾的指令，写法：[段名]!skip mrs
+ *   !skip mrs   该段不生成任何 MRS 产物（mrs/domain 与 mrs/ip 都跳过）
+ * classical 的 <stem>.list 始终生成，不受指令影响。
+ */
+const SECTION_HEADER_RE = /^\[(.+?)\]\s*(!.*)$/;
+const SECTION_PLAIN_RE = /^\[(.+)\]$/;
+
+function applyDirective(rest, section, warnings) {
+  const text = String(rest).trim();
+  if (/^!skip\s+mrs$/i.test(text)) {
+    section.skipMrs = true;
+    return;
+  }
+  warnings.push(`未知指令 "${text}"（段 ${section.name}），已忽略`);
+}
+
 export function parseSourceFile(text) {
   const lines = text.split(/\r?\n/);
   const sections = [];
+  const warnings = [];
   let current;
 
   for (const rawLine of lines) {
     const line = rawLine.trim();
     if (!line || line.startsWith("#")) continue;
 
-    const sectionMatch = line.match(/^\[(.+)\]$/);
+    const withDirective = line.match(SECTION_HEADER_RE);
+    if (withDirective) {
+      current = { name: withDirective[1].trim(), urls: [], skipMrs: false };
+      sections.push(current);
+      applyDirective(withDirective[2], current, warnings);
+      continue;
+    }
+
+    const sectionMatch = line.match(SECTION_PLAIN_RE);
     if (sectionMatch) {
-      current = { name: sectionMatch[1].trim(), urls: [] };
+      current = { name: sectionMatch[1].trim(), urls: [], skipMrs: false };
       sections.push(current);
       continue;
     }
 
     if (!current) continue;
 
+    if (line.startsWith("!")) {
+      warnings.push(`指令 "${line}"（段 ${current.name}）须写在段标题行尾，如 [${current.name}]!skip mrs，已忽略`);
+      continue;
+    }
+
     current.urls.push(line);
   }
 
-  return sections.filter((s) => s.name.length && s.urls.length);
+  const kept = sections.filter((s) => s.name.length && s.urls.length);
+  if (warnings.length) Object.defineProperty(kept, "warnings", { value: warnings, enumerable: false });
+  return kept;
 }
 
 /**

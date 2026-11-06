@@ -83,48 +83,48 @@ proxy-groups:
 rule-providers:
   Direct:
     <<: *r1
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/Direct.list
-    path: ./ruleset/Direct.list
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/direct.list
+    path: ./ruleset/direct.list
 
   Private:
     <<: *r1
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/Private.list
-    path: ./ruleset/Private.list
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/private.list
+    path: ./ruleset/private.list
 
   AI:
     <<: *r1
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/AI.list
-    path: ./ruleset/AI.list
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/ai.list
+    path: ./ruleset/ai.list
 
   Telegram:
     <<: *r1
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/Extra/Telegram.list
-    path: ./ruleset/Extra/Telegram.list
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/extra/telegram.list
+    path: ./ruleset/extra/telegram.list
 
   Microsoft:
     <<: *r1
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/Extra/Microsoft.list
-    path: ./ruleset/Extra/Microsoft.list
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/extra/microsoft.list
+    path: ./ruleset/extra/microsoft.list
 
   Streaming:
     <<: *r1
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/Streaming.list
-    path: ./ruleset/Streaming.list
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/streaming.list
+    path: ./ruleset/streaming.list
 
   SteamCN:
     <<: *r1
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/Extra/SteamCN.list
-    path: ./ruleset/Extra/SteamCN.list
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/extra/steamcn.list
+    path: ./ruleset/extra/steamcn.list
 
   Proxy:
     <<: *r1
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/Proxy.list
-    path: ./ruleset/Proxy.list
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/proxy.list
+    path: ./ruleset/proxy.list
 
   China:
     <<: *r1
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/China.list
-    path: ./ruleset/China.list
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/china.list
+    path: ./ruleset/china.list
 
 # 规则路由
 rules:

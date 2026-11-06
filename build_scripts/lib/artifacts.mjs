@@ -230,6 +230,11 @@ async function processEntry({ entry, outputRoot, fetchImpl, projectRoot, sourceR
 
   // MRS 只接受 domain/ipcidr 两种 behavior。按规则类型拆分后分别转换，
   // 避免把混合 classical 规则误标成单一 behavior，且让调用方可按需加载。
+  // rule_source.txt 段标题挂 `!skip mrs` 指令：该段完全不生成 MRS 产物。
+  if (entry.skipMrs) {
+    warn(`ℹ️  ${formatEntryLabel(entry)} 按 rule_source.txt 标题指令跳过 MRS 产物（仅生成 .list）`);
+    return artifacts;
+  }
   const domainLines = selectMihomoMRSLines(clashLines, "domain");
   const ipLines = selectMihomoMRSLines(clashLines, "ipcidr");
   if (domainLines.length > 0 || ipLines.length > 0) {

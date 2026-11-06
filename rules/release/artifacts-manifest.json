@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-05T13:53:38.683Z",
+  "timestamp": "2026-11-06T07:09:26.455Z",
   "artifacts": [
     {
       "slug": "advertising",
@@ -10,7 +10,7 @@
       "kind": "clash",
       "label": "advertising Rules",
       "behavior": "classical",
-      "sha256": "d23af22e4b3fda7a8c87d44a20075de837f234105e4566e6b13be802d6f5fa31"
+      "sha256": "0c46e2dc12161a5c3f2fe3994d607392f2c19e750e049cc4954f6394ac680ed3"
     },
     {
       "slug": "advertising_domain",
@@ -21,7 +21,7 @@
       "kind": "domain-mrs",
       "label": "advertising.mrs",
       "behavior": "domain",
-      "sha256": "959fc425f7b8ac18898ac8e8c3a393d56b29b604fc245e94b3336256a59525de"
+      "sha256": "2e1e8f6e9e7861a9e4909cd7f157b739da2dedccd00b84f95eb0fb1e16e5e855"
     },
     {
       "slug": "advertising_ip",
@@ -88,6 +88,17 @@
       "label": "direct.mrs",
       "behavior": "domain",
       "sha256": "47245eef1f0fd76189221d6e25e2aa176629f48bb2a8b5d7003109bfe9d22220"
+    },
+    {
+      "slug": "proxy+",
+      "name": "proxy+",
+      "sourceRelativeDir": "Proxy+",
+      "outputPath": "proxy+.list",
+      "relativePath": "proxy+.list",
+      "kind": "clash",
+      "label": "proxy+ Rules",
+      "behavior": "classical",
+      "sha256": "87df294121c18ff95c50ec27d6dde1a5ab339230d9c98f6e6ebffe1a4c4c1fac"
     },
     {
       "slug": "proxy",
