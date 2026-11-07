@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-07T02:06:22.251Z",
+  "timestamp": "2026-11-07T12:19:41.805Z",
   "artifacts": [
     {
       "slug": "advertising",
@@ -10,7 +10,7 @@
       "kind": "clash",
       "label": "advertising Rules",
       "behavior": "classical",
-      "sha256": "32efc95d654b7bf5f67be671b14a97d4868a83ee8705b1ae120468ef85aebbdd"
+      "sha256": "7a8c7cecfdeca6c45222cebbc1657d4788ef39d4ae9d21f1c74251321a862590"
     },
     {
       "slug": "advertising_domain",
@@ -21,7 +21,7 @@
       "kind": "domain-mrs",
       "label": "advertising.mrs",
       "behavior": "domain",
-      "sha256": "32fc44163dc298432cebd155157c3afcd2fa57683534ddfbe0880353bc2578d0"
+      "sha256": "3d1ef3ed68fd3f926722ad373a725be2788df0f6e9309c9bd61c7441b7a24dec"
     },
     {
       "slug": "advertising_ip",
