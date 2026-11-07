@@ -21,32 +21,32 @@ proxy-groups:
 
   - name: 代理加速
     type: select
-    proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 手动选择, DIRECT]
+    proxies: [自动选择, 香港, 台湾, 日本, 新国, 美国, 手动选择, DIRECT]
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/Global.png
 
   - name: AI
     type: select
-    proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 手动选择, DIRECT]
+    proxies: [自动选择, 香港, 台湾, 日本, 新国, 美国, 手动选择, DIRECT]
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/color/OpenAI.png
 
   - name: Telegram
     type: select
-    proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 手动选择, DIRECT]
+    proxies: [自动选择, 香港, 台湾, 日本, 新国, 美国, 手动选择, DIRECT]
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/Telegram.png
 
   - name: 微软服务
     type: select
-    proxies: [DIRECT, 自动选择, 香港, 台湾, 日本, 新加坡, 美国, 手动选择]
+    proxies: [DIRECT, 自动选择, 香港, 台湾, 日本, 新国, 美国, 手动选择]
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/Microsoft.png
 
   - name: 国际流媒体
     type: select
-    proxies: [自动选择, 香港, 台湾, 日本, 新加坡, 美国, 手动选择, DIRECT]
+    proxies: [自动选择, 香港, 台湾, 日本, 新国, 美国, 手动选择, DIRECT]
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/Streaming.png
 
   - name: 漏网之鱼
     type: select
-    proxies: [DIRECT, 自动选择, 香港, 台湾, 日本, 新加坡, 美国, 手动选择]
+    proxies: [DIRECT, 自动选择, 香港, 台湾, 日本, 新国, 美国, 手动选择]
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/Final.png
 
   # 地理策略层 - 自动测速节点选择
@@ -69,7 +69,7 @@ proxy-groups:
     filter: "(?i)日|jp|japan"
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/JP.png
 
-  - name: 新加坡
+  - name: 新国
     <<: *a2
     filter: "(?i)新|sg|singapore"
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/SG.png

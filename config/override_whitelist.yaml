@@ -5,7 +5,7 @@
 #
 # 与 override_mix.yaml 的差异（白名单范式，参考 iKeLee 样例）：
 # 1. 境内白名单直连：Private / Direct / SteamCN / China + GEOIP,CN，未命中的流量一律走 FallBack 代理兜底
-# 2. 删除组与规则：微软服务 / 国际流媒体 / 漏网之鱼；AI / Telegram 组仅 include-all
+# 2. 删除组与规则：微软服务 / 国际流媒体 / 漏网之鱼；AI / Telegram 组 include-all 并把 FallBack 置顶
 # 3. 新增 FallBack（fallback 故障转移组，套 6 个地区自动策略）与 其他地区自动策略（联合国旗）
 # 4. 自用补充集独立为 proxy+ 规则集（rules/custom/AddProxy.list 生成），命中走 FallBack
 # 5. 地区组统一「XX自动策略」命名，filter 换词边界正则，排除 回国 / 校园 / 游戏 节点
@@ -13,10 +13,13 @@
 
 # ==================== 锚点配置 ====================
 # 策略组类型模板 - 地区自动测速（词边界匹配靠各组的 filter）
-auto: &a2 {type: url-test, include-all: true, exclude-type: direct, interval: 120, tolerance: 30, lazy: true, timeout: 2000, max-failed-times: 3, url: 'http://www.gstatic.com/generate_204', hidden: false}
+auto: &a2 {type: url-test, include-all: true, exclude-type: direct, interval: 120, tolerance: 30, lazy: true, timeout: 2000, max-failed-times: 3, url: 'http://www.gstatic.com/generate_204', hidden: true}
 
 # 兜底故障转移模板 - 按列表顺序取第一个测速可用项
 fb: &a3 {type: fallback, interval: 60, lazy: true, timeout: 2000, max-failed-times: 3, url: 'http://www.gstatic.com/generate_204', hidden: false}
+
+# 专项选择模板 - include-all 引入全部节点，FallBack 置顶作为兜底
+s: &s1 {type: select, include-all: true, proxies: [FallBack]}
 
 # 规则集行为模板
 c: &r1 {type: http, behavior: classical, format: text, interval: 86400}
@@ -28,18 +31,18 @@ proxy-groups:
   # 专项选择层 - include-all 引入全部节点与策略组
   - name: AI
     type: select
-    include-all: true
+    <<: *s1
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/color/OpenAI.png
 
   - name: Telegram
     type: select
-    include-all: true
+    <<: *s1
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/Telegram.png
 
   # 兜底层 - fallback 故障转移，按顺序取第一个可用地区；MATCH 与 proxy+ 默认落到这里
   - name: FallBack
     <<: *a3
-    proxies: [香港自动策略, 台湾自动策略, 日本自动策略, 新加坡自动策略, 美国自动策略, 其他地区自动策略]
+    proxies: [香港自动策略, 台湾自动策略, 日本自动策略, 新国自动策略, 美国自动策略, 其他自动策略]
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/Final.png
 
   # 地理策略层 - 自动测速节点选择，其他地区自动策略 排本层最后
@@ -58,9 +61,9 @@ proxy-groups:
     filter: '^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉野|埼玉|九州|(\b(JP|JPN|Japan)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/JP.png
 
-  - name: 新加坡自动策略
+  - name: 新国自动策略
     <<: *a2
-    filter: '^(?=.*((?i)🇸🇬|新加坡|狮城|(\b(SG|SGP|Singapore)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+    filter: '^(?=.*((?i)🇸🇬|新国|狮城|(\b(SG|SGP|Singapore)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/SG.png
 
   - name: 美国自动策略
@@ -68,9 +71,9 @@ proxy-groups:
     filter: '^(?=.*((?i)🇺🇸|美国|波特兰|凤凰城|(\b(US|USA|America|States)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/US.png
 
-  - name: 其他地区自动策略
+  - name: 其他自动策略
     <<: *a2
-    filter: '^(?!.*((?i)🇭🇰|🇹🇼|🇯🇵|🇸🇬|🇺🇸|香港|台湾|日本|新加坡|美国|回国|校园|游戏|🎮|(\b(HK|HKG|Hong|TW|TWN|Taiwan|JP|JPN|Japan|SG|SGP|Singapore|US|USA|America|States|GAME)(\d+)?\b))).*$'
+    filter: '^(?!.*((?i)🇭🇰|🇹🇼|🇯🇵|🇸🇬|🇺🇸|香港|台湾|日本|新国|美国|回国|校园|游戏|🎮|(\b(HK|HKG|Hong|TW|TWN|Taiwan|JP|JPN|Japan|SG|SGP|Singapore|US|USA|America|States|GAME)(\d+)?\b))).*$'
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/UN.png
 
 # ==================== 规则集 ====================
