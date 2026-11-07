@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-06T13:39:09.258Z",
+  "timestamp": "2026-11-07T02:06:22.251Z",
   "artifacts": [
     {
       "slug": "advertising",
@@ -10,7 +10,7 @@
       "kind": "clash",
       "label": "advertising Rules",
       "behavior": "classical",
-      "sha256": "9f10ea945f6b474387a9b53eceb75b36ffcf7f9dea01ba7b028ba036799132ae"
+      "sha256": "32efc95d654b7bf5f67be671b14a97d4868a83ee8705b1ae120468ef85aebbdd"
     },
     {
       "slug": "advertising_domain",
@@ -21,7 +21,7 @@
       "kind": "domain-mrs",
       "label": "advertising.mrs",
       "behavior": "domain",
-      "sha256": "e5dfa6dd98560044ac14bfb9317f2cb606e372d8e12150daccc7392016d94f9e"
+      "sha256": "32fc44163dc298432cebd155157c3afcd2fa57683534ddfbe0880353bc2578d0"
     },
     {
       "slug": "advertising_ip",
@@ -43,7 +43,7 @@
       "kind": "clash",
       "label": "china Rules",
       "behavior": "classical",
-      "sha256": "be3ee0f39fc2ea5a21a4b08d4c45a69847165f94fd9c784db10f08a350c2a34e"
+      "sha256": "a6d82a8f74ef20e4feae12f16e05c016dd7faac7f7e99f47af6422ac0034324d"
     },
     {
       "slug": "china_domain",
@@ -54,7 +54,7 @@
       "kind": "domain-mrs",
       "label": "china.mrs",
       "behavior": "domain",
-      "sha256": "c72a093801310eeba575c982258d101bcb0e21feb5c2d18ec3b3d542045ad63e"
+      "sha256": "eb7eebb2389c3a6a37cb52dabb80d0fea1f34b1114f5115778a3cb3ebae93feb"
     },
     {
       "slug": "china_ip",
@@ -65,7 +65,7 @@
       "kind": "ipcidr-mrs",
       "label": "china.mrs",
       "behavior": "ipcidr",
-      "sha256": "74ee91f8131ac1273406ad695e278f0350d8d32dd4406a2de59cf2169af1d482"
+      "sha256": "9baaad75b8639633ac2e97c53a0a8c31d49c6c737fa6c01d45cd331d0c7ab530"
     },
     {
       "slug": "direct",
