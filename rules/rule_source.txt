@@ -1,5 +1,6 @@
 # HTTP 链接可在前面加 {作者}，例如 {blackmatrix7}https://...，用于固定 source 缓存文件名中的作者标识
 # 下面是实际订阅清单（可按需增删）
+# 标题挂 !skip mrs 整段跳过 MRS
 
 [Advertising]
 https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules.list
@@ -9,8 +10,6 @@ https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
 [China]
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
 https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Direct.list
-# https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaMax/ChinaMax.list
-# https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list
 
 [Direct]
 https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/custom/AddDirect.list
@@ -18,13 +17,9 @@ https://raw.githubusercontent.com/666OS/rules/release/mihomo/Direct.txt
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list
 https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Direct+.list
 
-# 自用补充集：白名单版配置（config/mihomo_whitelist.yaml / mihomo_whitelist_classical.yaml）以 Proxy+ 单独引用它
-# 该段条目含 DOMAIN-KEYWORD，MRS domain 产物不会保留它（构建只挑 DOMAIN/DOMAIN-SUFFIX/DOMAIN-WILDCARD），
-# 故在段标题挂 !skip mrs 整段跳过 MRS，两份白名单配置统一引用 classical 的 proxy+.list。
 [Proxy+]!skip mrs
 https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/custom/AddProxy.list
 
-# 传统「国内直连、境外代理」版配置（config/mihomo_mix*.yaml）使用的通用代理集
 [Proxy]
 https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/custom/AddProxy.list
 https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
