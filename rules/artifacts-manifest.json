@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-09T05:59:23.362Z",
+  "timestamp": "2026-11-09T15:08:38.997Z",
   "artifacts": [
     {
       "slug": "advertising",
@@ -10,7 +10,7 @@
       "kind": "mihomo-yaml",
       "label": "advertising mihomo",
       "behavior": "classical",
-      "sha256": "dba212c6d0af858b8c11d284175d3035c45acc10a2d127bbbcdf601023c5d54b"
+      "sha256": "4a1933e99639414574824f6567992ffe1a1a269cf2d27c0bb85c3f02b2a5e86d"
     },
     {
       "slug": "advertising",
@@ -21,7 +21,7 @@
       "kind": "quantumultx-list",
       "label": "advertising quantumultx",
       "behavior": "classical",
-      "sha256": "17f3bf4c4f6fb9b3443b1d1b4f36e77affd043c264d60598c891859cc9ab3675"
+      "sha256": "d62f0f653c61a9ec009e969f9c7d4ce190fee64e00c129090b7fa8bc84923051"
     },
     {
       "slug": "advertising",
@@ -32,7 +32,7 @@
       "kind": "loon-list",
       "label": "advertising loon",
       "behavior": "classical",
-      "sha256": "7950e1500320f27aa05f5430962dc5e0b4c7e4b7e395cb3d7a11e01b41e192f4"
+      "sha256": "33aa90f936f73dad8e2d3dbbafe9829c4eb98fb7ffc893d5fe6142655ec9b6a9"
     },
     {
       "slug": "china",
@@ -406,7 +406,7 @@
       "kind": "mihomo-yaml",
       "label": "telegram mihomo",
       "behavior": "classical",
-      "sha256": "7a3b2c369037db8446bf36b0e6bccd928d6ac011fe0d8cc72a66d6bd0ec46ba5"
+      "sha256": "e456eb5a0420b83adec1db36407a6aa34b5c59abe757b8ddd2bd2e725ed48118"
     },
     {
       "slug": "telegram",
@@ -417,7 +417,7 @@
       "kind": "quantumultx-list",
       "label": "telegram quantumultx",
       "behavior": "classical",
-      "sha256": "efadd3e86a4675af0dd892bf36f513ba3012af8eba21ed2406dc8c2c74729fbc"
+      "sha256": "2a0dfbdc2b56d0a26ab16e469c6fa7c50f51363396fb39f9e2d06192ea500587"
     },
     {
       "slug": "telegram",
@@ -428,7 +428,7 @@
       "kind": "loon-list",
       "label": "telegram loon",
       "behavior": "classical",
-      "sha256": "aa7e16e7db707492bb28aae406969f81009064aac4c330fb8fc78c5542302b40"
+      "sha256": "cca968f1faa3844147c5ce382834e92c6713ec84a0b2a8901250766341ea2ea7"
     },
     {
       "slug": "tiktok",
