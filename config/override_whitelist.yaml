@@ -4,7 +4,7 @@
 # 适用版本：所有使用 Clash Meta 核心的程序
 #
 # 与 override_mix.yaml 的差异（白名单范式，参考 iKeLee 样例）：
-# 1. 境内白名单直连：Private / Direct / SteamCN / China + GEOIP,CN，未命中的流量一律走 FallBack 代理兜底
+# 1. 境内白名单直连：Lan / Direct / SteamCN / China + GEOIP,CN，未命中的流量一律走 FallBack 代理兜底
 # 2. 删除组与规则：微软服务 / 国际流媒体 / 漏网之鱼；AI / Telegram 组 include-all 并把 FallBack 置顶
 # 3. 新增 FallBack（fallback 故障转移组，套 6 个地区自动策略）与 其他地区自动策略（联合国旗）
 # 4. 自用补充集独立为 Proxy+ 规则集（rules/custom/proxy+.list），命中走 FallBack

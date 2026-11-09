@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-09T04:55:02.548Z",
+  "timestamp": "2026-11-09T05:05:41.417Z",
   "artifacts": [
     {
       "slug": "advertising",
@@ -200,37 +200,37 @@
       "sha256": "1469fc0e93301a78c671a43bffd49310626c8dd88a4bf45d6e840a4ba5da377f"
     },
     {
-      "slug": "private",
-      "name": "private",
-      "sourceRelativeDir": "Private",
-      "outputPath": "mihomo/private.yaml",
-      "relativePath": "mihomo/private.yaml",
+      "slug": "lan",
+      "name": "lan",
+      "sourceRelativeDir": "Lan",
+      "outputPath": "mihomo/lan.yaml",
+      "relativePath": "mihomo/lan.yaml",
       "kind": "mihomo-yaml",
-      "label": "private mihomo",
+      "label": "lan mihomo",
       "behavior": "classical",
-      "sha256": "e2cbbd54bff596930669ce5c7995f59b2dd48fc665105d9ad1f817dabd0cccd8"
+      "sha256": "a6986a3b3237a7fbb772b8655e1a5bc3f7facca5ace69d8ec6f201af6b37fd82"
     },
     {
-      "slug": "private",
-      "name": "private",
-      "sourceRelativeDir": "Private",
-      "outputPath": "quantumultx/private.list",
-      "relativePath": "quantumultx/private.list",
+      "slug": "lan",
+      "name": "lan",
+      "sourceRelativeDir": "Lan",
+      "outputPath": "quantumultx/lan.list",
+      "relativePath": "quantumultx/lan.list",
       "kind": "quantumultx-list",
-      "label": "private quantumultx",
+      "label": "lan quantumultx",
       "behavior": "classical",
-      "sha256": "018a74bcd8d1775b1b9195ed392c33faade7cf8f93fcb121723e79f719b7d1d5"
+      "sha256": "85666f35f2e5a71be4aebe3a12d45d94a7e244e871060f5befc81cca38915276"
     },
     {
-      "slug": "private",
-      "name": "private",
-      "sourceRelativeDir": "Private",
-      "outputPath": "loon/private.list",
-      "relativePath": "loon/private.list",
+      "slug": "lan",
+      "name": "lan",
+      "sourceRelativeDir": "Lan",
+      "outputPath": "loon/lan.list",
+      "relativePath": "loon/lan.list",
       "kind": "loon-list",
-      "label": "private loon",
+      "label": "lan loon",
       "behavior": "classical",
-      "sha256": "f9fad251a79bfb1e918f552c4fa5aedee1cfc029c7b0e4cf985d1bf5edb5c88f"
+      "sha256": "17252f54ecfd02433d35ed2de3647bdba388c20cfc162cbba9a61c157d2b3b08"
     },
     {
       "slug": "microsoftproxy",

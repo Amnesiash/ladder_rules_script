@@ -82,7 +82,7 @@ function countRuleTypes(lines) {
 
 /**
  * 生成项目自有风格的头部注释。
- * @param {string} name 段名（如 Private / SteamCN）
+ * @param {string} name 段名（如 Lan / SteamCN）
  * @param {string} updateTime 更新时间
  * @param {string[]} bodyLines 规则正文行（用于统计类型计数）
  */
