@@ -1,32 +1,19 @@
-# Mihomo 覆写配置（白名单版）
-# 日期：2026-11-07
-# 配置作者：https://github.com/Amnesiash
-# 适用版本：所有使用 Clash Meta 核心的程序
-#
-# 与 override_mix.yaml 的差异（白名单范式，参考 iKeLee 样例）：
-# 1. 境内白名单直连：Lan / Direct / SteamCN / China + GEOIP,CN，未命中的流量一律走 FallBack 代理兜底
-# 2. 删除组与规则：微软服务 / 国际流媒体 / 漏网之鱼；AI / Telegram 组 include-all 并把 FallBack 置顶
-# 3. 新增 FallBack（fallback 故障转移组，套 6 个地区自动策略）与 其他地区自动策略（联合国旗）
-# 4. 自用补充集独立为 Proxy+ 规则集（rules/custom/proxy+.list），命中走 FallBack
-# 5. 地区组统一「XX自动策略」命名，filter 换词边界正则，排除 回国 / 校园 / 游戏 节点
+pr: &a1 {type: http, interval: 86400, health-check: {enable: true, url: 'http://www.gstatic.com/generate_204', interval: 1800}, filter: '^(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'}
 
-
-# ==================== 锚点配置 ====================
 # 策略组类型模板 - 地区自动测速（词边界匹配靠各组的 filter）
 auto: &a2 {type: url-test, include-all: true, exclude-type: direct, interval: 120, tolerance: 30, lazy: true, timeout: 2000, max-failed-times: 3, url: 'http://www.gstatic.com/generate_204', hidden: true}
 
 # 兜底故障转移模板 - 按列表顺序取第一个测速可用项
 fb: &a3 {type: fallback, interval: 60, lazy: true, timeout: 2000, max-failed-times: 3, url: 'http://www.gstatic.com/generate_204', hidden: false}
-
-# 专项选择模板 - include-all 引入全部节点，FallBack 置顶作为兜底
 s: &s1 {type: select, include-all: true, proxies: [FallBack]}
 
 # 规则集行为模板
-c: &r1 {type: http, behavior: classical, format: text, interval: 86400}
+c: &r1 {type: http, behavior: classical, interval: 86400}
+d: &r2 {type: http, behavior: domain, interval: 86400}
+i: &r3 {type: http, behavior: ipcidr, interval: 86400}
 
-# ==================== 策略组 ====================
 proxy-groups:
-  # 专项选择层 - include-all 引入全部节点与策略组
+  # 专项选择层
   - name: AI
     type: select
     <<: *s1
@@ -37,13 +24,13 @@ proxy-groups:
     <<: *s1
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/Telegram.png
 
-  # 兜底层 - fallback 故障转移，按顺序取第一个可用地区；MATCH 与 proxy+ 默认落到这里
+  # fallback 故障转移，按顺序取第一个可用地区
   - name: FallBack
     <<: *a3
     proxies: [香港自动策略, 台湾自动策略, 日本自动策略, 新国自动策略, 美国自动策略, 其他自动策略]
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/Final.png
 
-  # 地理策略层 - 自动测速节点选择，其他地区自动策略 排本层最后
+  # 地理策略层
   - name: 香港自动策略
     <<: *a2
     filter: '^(?=.*((?i)🇭🇰|香港|(\b(HK|HKG|Hong)(\d+)?\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
@@ -74,56 +61,48 @@ proxy-groups:
     filter: '^(?!.*((?i)🇭🇰|🇹🇼|🇯🇵|🇸🇬|🇺🇸|香港|台湾|日本|新国|美国|回国|校园|游戏|🎮|(\b(HK|HKG|Hong|TW|TWN|Taiwan|JP|JPN|Japan|SG|SGP|Singapore|US|USA|America|States|GAME)(\d+)?\b))).*$'
     icon: https://github.com/Amnesiash/ladder_rules_script/raw/main/gallery/Orz-3/Color/UN.png
 
-# ==================== 规则集 ====================
+# 规则集
+
 rule-providers:
-  Lan:
+  lan:
     <<: *r1
-    url: https://magicrule.pages.dev/data/_shared/artifacts/Lan_classical_24817c9e646b9514.yaml
+    url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/mihomo/lan.yaml
 
-  Direct:
+  direct:
     <<: *r1
-    url: https://magicrule.pages.dev/data/_shared/artifacts/Direct_classical_055a900ccd414d6a.yaml
+    url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/mihomo/direct.yaml
 
-  SteamCN:
+  steamcn:
     <<: *r1
-    url: https://magicrule.pages.dev/data/_shared/artifacts/SteamCN_classical_f12eaf58b7866555.yaml
+    url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/mihomo/steamcn.yaml
 
-  GlobalAI:
+  ai:
     <<: *r1
-    url: https://magicrule.pages.dev/data/_shared/artifacts/GlobalAI_classical_53616f647b807ae2.yaml
+    url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/mihomo/ai.yaml
 
-  Telegram:
+  telegram:
     <<: *r1
-    url: https://magicrule.pages.dev/data/_shared/artifacts/Telegram_classical_ec67e1f0a43104a8.yaml
+    url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/mihomo/telegram.yaml
 
-  Proxy+:
+  proxy:
     <<: *r1
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/custom/proxy+.list
+    url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/mihomo/proxy.yaml
 
-  China:
+  china:
     <<: *r1
-    url: https://magicrule.pages.dev/data/_shared/artifacts/China_classical_488d107c687bae96.yaml
+    url: https://raw.githubusercontent.com/Amnesiash/ladder_rules_script/main/rules/mihomo/china.yaml
 
-  ChinaIps:
-    <<: *r1
-    url: https://magicrule.pages.dev/data/_shared/artifacts/ChinaIPs_classical_ef098f9be13f0809.yaml
+# 规则路由
 
-# ==================== 规则路由 ====================
 rules:
-  # > 本机 / 自用直连
-  - RULE-SET, Lan, DIRECT
-  - RULE-SET, Direct, DIRECT
-
-  # > 专项代理（排在境内白名单前，防止境内集截胡）
-  - RULE-SET, Telegram, Telegram
-  - RULE-SET, GlobalAI, AI
-  - RULE-SET, SteamCN, DIRECT
-
-  # > 自用补充集 → 兜底代理
-  - RULE-SET, Proxy+, FallBack
-
-  # > 境内白名单兜底：命中直连，未命中的流量默认走代理（白名单范式）
-  - RULE-SET, China, DIRECT
-  - RULE-SET, ChinaIps, DIRECT
-  - GEOIP, CN, DIRECT
+  - RULE-SET, lan, DIRECT
+  - RULE-SET, direct, DIRECT
+  
+  - RULE-SET, ai, AI
+  - RULE-SET, telegram, Telegram
+  - RULE-SET, steamcn, DIRECT
+  - RULE-SET, proxy, FallBack
+  - RULE-SET, china, DIRECT
+  
+  - GEOIP, CN, DIRECT 
   - MATCH, FallBack
