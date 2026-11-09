@@ -7,7 +7,7 @@
 # 1. 境内白名单直连：Private / Direct / SteamCN / China + GEOIP,CN，未命中的流量一律走 FallBack 代理兜底
 # 2. 删除组与规则：微软服务 / 国际流媒体 / 漏网之鱼；AI / Telegram 组 include-all 并把 FallBack 置顶
 # 3. 新增 FallBack（fallback 故障转移组，套 6 个地区自动策略）与 其他地区自动策略（联合国旗）
-# 4. 自用补充集独立为 proxy+ 规则集（rules/custom/AddProxy.list 生成），命中走 FallBack
+# 4. 自用补充集独立为 Proxy+ 规则集（rules/custom/proxy+.list），命中走 FallBack
 # 5. 地区组统一「XX自动策略」命名，filter 换词边界正则，排除 回国 / 校园 / 游戏 节点
 
 
@@ -23,8 +23,6 @@ s: &s1 {type: select, include-all: true, proxies: [FallBack]}
 
 # 规则集行为模板
 c: &r1 {type: http, behavior: classical, format: text, interval: 86400}
-d: &r2 {type: http, behavior: domain, format: mrs, interval: 86400}
-i: &r3 {type: http, behavior: ipcidr, format: mrs, interval: 86400}
 
 # ==================== 策略组 ====================
 proxy-groups:
@@ -78,69 +76,54 @@ proxy-groups:
 
 # ==================== 规则集 ====================
 rule-providers:
-  private_domain:
-    <<: *r2
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/mrs/domain/private.mrs
-
-  private_ip:
-    <<: *r3
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/mrs/ip/private.mrs
-
-  direct_domain:
-    <<: *r2
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/mrs/domain/direct.mrs
-
-  steamcn_domain:
-    <<: *r2
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/mrs/domain/steamcn.mrs
-
-  ai_domain:
-    <<: *r2
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/mrs/domain/ai.mrs
-
-  telegram_domain:
-    <<: *r2
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/mrs/domain/telegram.mrs
-
-  proxy+:
+  Lan:
     <<: *r1
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/proxy%2B.list
+    url: https://magicrule.pages.dev/data/_shared/artifacts/Lan_classical_24817c9e646b9514.yaml
 
-  china_domain:
-    <<: *r2
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/mrs/domain/china.mrs
+  Direct:
+    <<: *r1
+    url: https://magicrule.pages.dev/data/_shared/artifacts/Direct_classical_055a900ccd414d6a.yaml
 
-  ai_ip:
-    <<: *r3
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/mrs/ip/ai.mrs
+  SteamCN:
+    <<: *r1
+    url: https://magicrule.pages.dev/data/_shared/artifacts/SteamCN_classical_f12eaf58b7866555.yaml
 
-  telegram_ip:
-    <<: *r3
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/mrs/ip/telegram.mrs
+  GlobalAI:
+    <<: *r1
+    url: https://magicrule.pages.dev/data/_shared/artifacts/GlobalAI_classical_53616f647b807ae2.yaml
 
-  china_ip:
-    <<: *r3
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/mrs/ip/china.mrs
+  Telegram:
+    <<: *r1
+    url: https://magicrule.pages.dev/data/_shared/artifacts/Telegram_classical_ec67e1f0a43104a8.yaml
+
+  Proxy+:
+    <<: *r1
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/custom/proxy+.list
+
+  China:
+    <<: *r1
+    url: https://magicrule.pages.dev/data/_shared/artifacts/China_classical_488d107c687bae96.yaml
+
+  ChinaIps:
+    <<: *r1
+    url: https://magicrule.pages.dev/data/_shared/artifacts/ChinaIPs_classical_ef098f9be13f0809.yaml
 
 # ==================== 规则路由 ====================
 rules:
   # > 本机 / 自用直连
-  - RULE-SET, private_domain, DIRECT
-  - RULE-SET, private_ip, DIRECT, no-resolve
-  - RULE-SET, direct_domain, DIRECT
+  - RULE-SET, Lan, DIRECT
+  - RULE-SET, Direct, DIRECT
 
   # > 专项代理（排在境内白名单前，防止境内集截胡）
-  - RULE-SET, ai_domain, AI
-  - RULE-SET, ai_ip, AI
-  - RULE-SET, telegram_domain, Telegram
-  - RULE-SET, telegram_ip, Telegram
-  - RULE-SET, steamcn_domain, DIRECT
+  - RULE-SET, Telegram, Telegram
+  - RULE-SET, GlobalAI, AI
+  - RULE-SET, SteamCN, DIRECT
 
   # > 自用补充集 → 兜底代理
-  - RULE-SET, proxy+, FallBack
+  - RULE-SET, Proxy+, FallBack
 
   # > 境内白名单兜底：命中直连，未命中的流量默认走代理（白名单范式）
-  - RULE-SET, china_domain, DIRECT
-  - RULE-SET, china_ip, DIRECT
+  - RULE-SET, China, DIRECT
+  - RULE-SET, ChinaIps, DIRECT
   - GEOIP, CN, DIRECT
   - MATCH, FallBack

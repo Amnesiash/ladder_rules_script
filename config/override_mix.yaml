@@ -9,8 +9,7 @@
 auto:  &a2 {type: url-test, include-all: true, exclude-type: direct, interval: 900, lazy: true, url: 'http://www.gstatic.com/generate_204', hidden: false} 
 
 # 规则集行为模板
-d: &r2 {type: http, behavior: domain, format: mrs, interval: 86400}
-i: &r3 {type: http, behavior: ipcidr, format: mrs, interval: 86400}
+c: &r1 {type: http, behavior: classical, interval: 86400}
 
 # 策略组
 proxy-groups:
@@ -82,86 +81,59 @@ proxy-groups:
 
 # 规则集
 rule-providers:
-  private_domain:
-    <<: *r2
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/mrs/domain/private.mrs
+  Lan:
+    <<: *r1
+    url: https://magicrule.pages.dev/data/_shared/artifacts/Lan_classical_24817c9e646b9514.yaml
 
-  private_ip:
-    <<: *r3
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/mrs/ip/private.mrs
+  Direct:
+    <<: *r1
+    url: https://magicrule.pages.dev/data/_shared/artifacts/Direct_classical_055a900ccd414d6a.yaml
 
-  direct_domain:
-    <<: *r2
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/mrs/domain/direct.mrs
+  SteamCN:
+    <<: *r1
+    url: https://magicrule.pages.dev/data/_shared/artifacts/SteamCN_classical_f12eaf58b7866555.yaml
 
-  ai_domain:
-    <<: *r2
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/mrs/domain/ai.mrs
+  GlobalAI:
+    <<: *r1
+    url: https://magicrule.pages.dev/data/_shared/artifacts/GlobalAI_classical_53616f647b807ae2.yaml
 
-  telegram_domain:
-    <<: *r2
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/mrs/domain/telegram.mrs
+  Telegram:
+    <<: *r1
+    url: https://magicrule.pages.dev/data/_shared/artifacts/Telegram_classical_ec67e1f0a43104a8.yaml
 
-  microsoft_domain:
-    <<: *r2
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/mrs/domain/microsoft.mrs
+  GlobalMedia:
+    <<: *r1
+    url: https://magicrule.pages.dev/data/_shared/artifacts/GlobalMedia_classical_f0880cec2c24ebd6.yaml
 
-  streaming_domain:
-    <<: *r2
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/mrs/domain/streaming.mrs
+  Proxy+:
+    <<: *r1
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/custom/proxy+.list
 
-  steamcn_domain:
-    <<: *r2
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/mrs/domain/steamcn.mrs
+  Global:
+    <<: *r1
+    url: https://magicrule.pages.dev/data/_shared/artifacts/Global_classical_84d7c926159da35f.yaml
 
-  proxy_domain:
-    <<: *r2
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/mrs/domain/proxy.mrs
+  China:
+    <<: *r1
+    url: https://magicrule.pages.dev/data/_shared/artifacts/China_classical_488d107c687bae96.yaml
 
-  china_domain:
-    <<: *r2
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/mrs/domain/china.mrs
-
-  ai_ip:
-    <<: *r3
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/mrs/ip/ai.mrs
-
-  telegram_ip:
-    <<: *r3
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/mrs/ip/telegram.mrs
-
-  streaming_ip:
-    <<: *r3
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/mrs/ip/streaming.mrs
-
-  proxy_ip:
-    <<: *r3
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/mrs/ip/proxy.mrs
-
-  china_ip:
-    <<: *r3
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/mrs/ip/china.mrs
+  ChinaIps:
+    <<: *r1
+    url: https://magicrule.pages.dev/data/_shared/artifacts/ChinaIPs_classical_ef098f9be13f0809.yaml
 
 # 规则路由
 rules:
   # > 订阅规则
-  - RULE-SET, private_domain, DIRECT
-  - RULE-SET, private_ip, DIRECT, no-resolve
-
-  - RULE-SET, direct_domain, DIRECT
-  - RULE-SET, microsoft_domain, 微软服务
-  - RULE-SET, ai_domain, AI
-  - RULE-SET, telegram_domain, Telegram
-  - RULE-SET, streaming_domain, 国际流媒体
-  - RULE-SET, steamcn_domain, DIRECT
-  - RULE-SET, proxy_domain, 代理加速
-  - RULE-SET, china_domain, DIRECT
-
-  - RULE-SET, ai_ip, AI
-  - RULE-SET, telegram_ip, Telegram
-  - RULE-SET, streaming_ip, 国际流媒体
-  - RULE-SET, proxy_ip, 代理加速
-  - RULE-SET, china_ip, DIRECT
+  - RULE-SET, Lan, DIRECT
+  - RULE-SET, Direct, DIRECT
+  - RULE-SET, Telegram, Telegram
+  - RULE-SET, GlobalMedia, 国际流媒体
+  - RULE-SET, SteamCN, DIRECT
+  - RULE-SET, Proxy+, 代理加速
+  - RULE-SET, China, DIRECT
+  - RULE-SET, ChinaIps, DIRECT
+  - RULE-SET, GlobalAI, AI
+  - RULE-SET, Global, 代理加速
   - GEOIP, CN, DIRECT
 
   # 兜底规则
