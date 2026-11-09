@@ -22,8 +22,8 @@ i: &r3 {type: http, behavior: ipcidr, interval: 86400}
 
 # ==================== 代理提供者 ====================
 proxy-providers:
-  Kitty: {<<: *a1, url: "https://sub-store-dzj.pages.dev/XpX1uzGm4Tes8o5oMbzY/download/Kitty", override: {additional-prefix: "🄚 "}}
-  Bocchi: {<<: *a1, url: "https://sub-store-dzj.pages.dev/XpX1uzGm4Tes8o5oMbzY/download/Bocchi", override: {additional-prefix: "🄑 "}}
+  # Sub1: {<<: *a1, url: '', path: ./proxy/Sub1.yaml, override: {additional-prefix: '[Sub1] '}}
+  # Sub2: {<<: *a1, url: '', path: ./proxy/Sub2.yaml, override: {additional-prefix: '[Sub2] '}}
 
 # ==================== 核心配置 ====================
 #基础配置
@@ -183,7 +183,7 @@ rule-providers:
   proxy+:
     <<: *r1
     format: text
-    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/release/proxy+.list
+    url: https://github.com/Amnesiash/ladder_rules_script/raw/main/rules/custom/proxy+.list
 
   china:
     <<: *r1
@@ -197,14 +197,12 @@ rule-providers:
 rules:
   - RULE-SET, lan, DIRECT
   - RULE-SET, direct, DIRECT
-  - RULE-SET, ai, AI
-  - RULE-SET, telegram, Telegram
   - RULE-SET, steamcn, DIRECT
-
   - RULE-SET, proxy+, FallBack
-
   - RULE-SET, china, DIRECT
   - RULE-SET, chinaips, DIRECT
-  - GEOIP, CN, DIRECT
+  - RULE-SET, ai, AI
+  - RULE-SET, telegram, Telegram
   
+  - GEOIP, CN, DIRECT 
   - MATCH, FallBack
