@@ -1,0 +1,73 @@
+# NAME: Direct
+# UPDATE: 2026-11-09 12:55
+# TOTAL: 66
+# HOST: 24
+# HOST-KEYWORD: 2
+# HOST-SUFFIX: 40
+
+host, analytics.strava.com
+host, api.841859784.xyz
+host, app.adjust.com
+host, app.appsflyer.com
+host, bdtj.tagtic.cn
+host, ci.android.com
+host, clientservices.googleapis.com
+host, dl.google.com
+host, dl.l.google.com
+host, errlog.umeng.com
+host, fairplay.l.qq.com
+host, livew.l.qq.com
+host, log.mmstat.com
+host, msg.umeng.com
+host, msg.umengcloud.com
+host, origin-a.akamaihd.net
+host, redirector.gvt1.com
+host, rewards.hypixel.net
+host, sycm.mmstat.com
+host, tracking.miui.com
+host, update.googleapis.com
+host, vd.l.qq.com
+host, vi.l.qq.com
+host, www.freecycle.top
+host-suffix, blog.google
+host-suffix, checkip.dyndns.org
+host-suffix, checkip.synology.com
+host-suffix, checkipv6.dyndns.org
+host-suffix, cloudstudio.work
+host-suffix, cocopilot.org
+host-suffix, czzyvideo.com
+host-suffix, DiskStation.me
+host-suffix, dizhensubao.getui.com
+host-suffix, DSCloud.biz
+host-suffix, DSCloud.me
+host-suffix, DSCloud.mobi
+host-suffix, DSmyNAS.com
+host-suffix, DSmyNAS.net
+host-suffix, DSmyNAS.org
+host-suffix, FamilyDS.com
+host-suffix, FamilyDS.net
+host-suffix, FamilyDS.org
+host-suffix, ghfast.top
+host-suffix, ghp.ci
+host-suffix, googletraveladservices-cn.com
+host-suffix, googletraveladservices.com
+host-suffix, gradio.live
+host-suffix, i234.me
+host-suffix, iqiyis.com
+host-suffix, istoreos.com
+host-suffix, kelee.one
+host-suffix, koodomobile.ca
+host-suffix, koodomobile.com
+host-suffix, musicbrainz.org
+host-suffix, myDS.me
+host-suffix, ngrok-free.app
+host-suffix, ntp.org
+host-suffix, ol.epicgames.com
+host-suffix, quickconnect.to
+host-suffix, speedtest.cn
+host-suffix, steamcontent.com
+host-suffix, synology.com
+host-suffix, synology.me
+host-suffix, tracking-protection.cdn.mozilla.net
+host-keyword, quickconnect
+host-keyword, synology

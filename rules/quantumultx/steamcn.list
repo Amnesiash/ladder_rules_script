@@ -1,0 +1,22 @@
+# NAME: SteamCN
+# UPDATE: 2026-11-09 12:55
+# TOTAL: 16
+# HOST: 12
+# HOST-SUFFIX: 4
+
+host, csgo.wmsj.cn
+host, dl.steam.clngaa.com
+host, dl.steam.ksyna.com
+host, dota2.wmsj.cn
+host, st.dl.bscstorage.net
+host, st.dl.eccdnx.com
+host, st.dl.pinyuncloud.com
+host, steampipe.steamcontent.tnkjmec.com
+host, steampowered.com.8686c.com
+host, steamstatic.com.8686c.com
+host, wmsjsteam.com
+host, xz.pphimalayanrt.com
+host-suffix, cm.steampowered.com
+host-suffix, steamchina.com
+host-suffix, steamcontent.com
+host-suffix, steamusercontent.com

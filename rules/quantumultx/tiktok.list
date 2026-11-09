@@ -1,0 +1,72 @@
+# NAME: TikTok
+# UPDATE: 2026-11-09 12:55
+# TOTAL: 65
+# HOST: 9
+# HOST-KEYWORD: 4
+# HOST-SUFFIX: 52
+
+host, lf16-effectcdn.byteeffecttos-g.com
+host, lf16-pkgcdn.pitaya-clientai.com
+host, p16-tiktok-dm-sticker-sign-sg.ibyteimg.com
+host, p16-tiktokcdn-com.akamaized.net
+host, roovza-launches.appsflyersdk.com
+host, roovza.inapps.appsflyersdk.com
+host, roovza.launches.appsflyersdk.com
+host, roovza.skadsdk.appsflyersdk.com
+host, trae-api-sg.mchost.guru
+host-suffix, analytics.tiktok.com
+host-suffix, bytedapm.com
+host-suffix, bytegecko-i18n.com
+host-suffix, byteintlapi.com
+host-suffix, byteoversea.com
+host-suffix, capcut.com
+host-suffix, capcutapi.com
+host-suffix, capcutapi.us
+host-suffix, capcutcdn-us.com
+host-suffix, capcutstatic.com
+host-suffix, ibytedtos.com
+host-suffix, ibyteimg.com
+host-suffix, ipstatp.com
+host-suffix, isnssdk.com
+host-suffix, marscode.com
+host-suffix, muscdn.com
+host-suffix, musical.ly
+host-suffix, sgpstatp.com
+host-suffix, snssdk.com
+host-suffix, tik-tokapi.com
+host-suffix, tiktok-minis.com
+host-suffix, tiktok-row.net
+host-suffix, tiktok.com
+host-suffix, tiktokcdn-eu.com
+host-suffix, tiktokcdn-us.com
+host-suffix, tiktokcdn-us.com.edgesuite.net
+host-suffix, tiktokcdn.com
+host-suffix, tiktokcdn.com.akamaized.net
+host-suffix, tiktokcdn.com.edgesuite.net
+host-suffix, tiktokd.net
+host-suffix, tiktokd.org
+host-suffix, tiktokeu-cdn.com
+host-suffix, tiktokglobalshopv.com
+host-suffix, tiktokminis.us
+host-suffix, tiktokmusic.app
+host-suffix, tiktokrow-cdn.com
+host-suffix, tiktokshop.com
+host-suffix, tiktokstaticb.com
+host-suffix, tiktokv.com
+host-suffix, tiktokv.com.edgekey.net
+host-suffix, tiktokv.com.edgesuite.net
+host-suffix, tiktokv.eu
+host-suffix, tiktokv.us
+host-suffix, tiktokvapp.com
+host-suffix, tiktokw.eu
+host-suffix, tiktokw.us
+host-suffix, trae.ai
+host-suffix, ttcdn-us.com
+host-suffix, ttlivecdn.com
+host-suffix, ttoverseaus.net
+host-suffix, ttwebview.com
+host-suffix, ttwstatic.com
+host-keyword, -tiktokcdn-com
+host-keyword, musical.ly
+host-keyword, tiktok
+host-keyword, tiktokcdn
