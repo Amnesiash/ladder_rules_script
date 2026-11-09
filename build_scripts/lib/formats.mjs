@@ -139,8 +139,9 @@ function toMihomoYaml({ name, updateTime, lines }) {
 //   no-resolve 等附加标记一律移除（QX 不使用 no-resolve）
 //   URL-REGEX / PROCESS-* / AND|OR|NOT / GEOSITE / RULE-SET / MATCH 等丢弃
 //
-// 注意：解析器默认会补第三段策略（Shawn / policy=），本产物按要求不带策略，
-// 只输出 `类型, 值` 两段，策略由 QX 引用处的 force-policy 指定。
+// 注意：QX 的 filter_remote 原生格式要求每行三段式 `类型, 值, 策略`，
+// 两段式（无策略）无法被 QX 直接解析。产物统一补占位策略 `proxy`
+//（QX 内置策略，保证合法），实际策略由引用处的 force-policy 覆盖。
 const QX_TYPE_MAP = new Map([
   ["DOMAIN", "host"],
   ["DOMAIN-SUFFIX", "host-suffix"],
@@ -172,12 +173,13 @@ function toQuantumultXLine(line) {
     if (wildcard === null) return null;
     const prefix = value.startsWith("^") ? "" : "*";
     const suffix = value.endsWith("$") ? "" : "*";
-    return `host-wildcard, ${(prefix + wildcard + suffix).replace(/\*+/g, "*")}`;
+    return `host-wildcard, ${(prefix + wildcard + suffix).replace(/\*+/g, "*")}, proxy`;
   }
 
   const target = QX_TYPE_MAP.get(type);
   if (!target) return null;
-  return `${target}, ${value}`;
+  // 第三段策略占位：QX filter_remote 原生要求三段式，占位 proxy 由 force-policy 覆盖
+  return `${target}, ${value}, proxy`;
 }
 
 function toQuantumultXList({ name, updateTime, lines }) {

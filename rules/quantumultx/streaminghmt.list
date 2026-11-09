@@ -1,24 +1,24 @@
 # NAME: StreamingHMT
-# UPDATE: 2026-11-09 12:55
+# UPDATE: 2026-11-09 13:55
 # TOTAL: 16
 # IP-CIDR: 2
 # HOST: 12
 # HOST-KEYWORD: 1
 # HOST-SUFFIX: 1
 
-host, api.biliapi.com
-host, api.biliapi.net
-host, api.bilibili.com
-host, app.biliapi.com
-host, app.biliapi.net
-host, app.bilibili.com
-host, cache.video.iqiyi.com
-host, grpc.biliapi.net
-host, m.bilibili.com
-host, mobileso.bz.mgtv.com
-host, upos-hz-mirrorakam.akamaized.net
-host, www.bilibili.com
-host-suffix, api.mgtv.com
-host-keyword, cn-hk-eq-bcache-
-ip-cidr, 116.211.202.206/32
-ip-cidr, 116.211.202.216/32
+host, api.biliapi.com, proxy
+host, api.biliapi.net, proxy
+host, api.bilibili.com, proxy
+host, app.biliapi.com, proxy
+host, app.biliapi.net, proxy
+host, app.bilibili.com, proxy
+host, cache.video.iqiyi.com, proxy
+host, grpc.biliapi.net, proxy
+host, m.bilibili.com, proxy
+host, mobileso.bz.mgtv.com, proxy
+host, upos-hz-mirrorakam.akamaized.net, proxy
+host, www.bilibili.com, proxy
+host-suffix, api.mgtv.com, proxy
+host-keyword, cn-hk-eq-bcache-, proxy
+ip-cidr, 116.211.202.206/32, proxy
+ip-cidr, 116.211.202.216/32, proxy

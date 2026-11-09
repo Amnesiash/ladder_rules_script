@@ -1,89 +1,89 @@
 # NAME: MicrosoftProxy
-# UPDATE: 2026-11-09 12:55
+# UPDATE: 2026-11-09 13:55
 # TOTAL: 83
 # HOST-KEYWORD: 3
 # HOST-SUFFIX: 80
 
-host-suffix, aadrm.com
-host-suffix, acompli.com
-host-suffix, acompli.net
-host-suffix, aka.ms
-host-suffix, appcenter.ms
-host-suffix, aria.ms
-host-suffix, asp.net
-host-suffix, aspnetcdn.com
-host-suffix, assets-yammer.com
-host-suffix, azure.com
-host-suffix, azure.net
-host-suffix, azureedge.net
-host-suffix, azurerms.com
-host-suffix, bing.com
-host-suffix, clarity.ms
-host-suffix, cloudapp.net
-host-suffix, cloudappsecurity.com
-host-suffix, docs.com
-host-suffix, edgesuite.net
-host-suffix, gfx.ms
-host-suffix, live.com
-host-suffix, live.net
-host-suffix, lync.com
-host-suffix, msappproxy.net
-host-suffix, msauth.net
-host-suffix, msauthimages.net
-host-suffix, msecnd.net
-host-suffix, msedge.net
-host-suffix, msft.net
-host-suffix, msftauth.net
-host-suffix, msftauthimages.net
-host-suffix, msftidentity.com
-host-suffix, msidentity.com
-host-suffix, msn.com
-host-suffix, msocdn.com
-host-suffix, msocsp.com
-host-suffix, mstea.ms
-host-suffix, o365weve.com
-host-suffix, oaspapps.com
-host-suffix, office.com
-host-suffix, office.net
-host-suffix, office365.com
-host-suffix, officeppe.net
-host-suffix, omniroot.com
-host-suffix, onedrive.com
-host-suffix, onenote.com
-host-suffix, onenote.net
-host-suffix, onestore.ms
-host-suffix, outlook.com
-host-suffix, outlookmobile.com
-host-suffix, phonefactor.net
-host-suffix, powershellgallery.com
-host-suffix, public-trust.com
-host-suffix, sfbassets.com
-host-suffix, sfx.ms
-host-suffix, sharepoint.com
-host-suffix, sharepointonline.com
-host-suffix, skype.com
-host-suffix, skypeassets.com
-host-suffix, skypeforbusiness.com
-host-suffix, staffhub.ms
-host-suffix, svc.ms
-host-suffix, sway-cdn.com
-host-suffix, sway-extensions.com
-host-suffix, sway.com
-host-suffix, trafficmanager.net
-host-suffix, uservoice.com
-host-suffix, virtualearth.net
-host-suffix, visualstudio.com
-host-suffix, windows-ppe.net
-host-suffix, windows.com
-host-suffix, windows.net
-host-suffix, windowsazure.com
-host-suffix, windowsupdate.com
-host-suffix, wunderlist.com
-host-suffix, xbox.com
-host-suffix, xboxlive.com
-host-suffix, xboxservices.com
-host-suffix, yammer.com
-host-suffix, yammerusercontent.com
-host-keyword, 1drv
-host-keyword, hotmail
-host-keyword, microsoft
+host-suffix, aadrm.com, proxy
+host-suffix, acompli.com, proxy
+host-suffix, acompli.net, proxy
+host-suffix, aka.ms, proxy
+host-suffix, appcenter.ms, proxy
+host-suffix, aria.ms, proxy
+host-suffix, asp.net, proxy
+host-suffix, aspnetcdn.com, proxy
+host-suffix, assets-yammer.com, proxy
+host-suffix, azure.com, proxy
+host-suffix, azure.net, proxy
+host-suffix, azureedge.net, proxy
+host-suffix, azurerms.com, proxy
+host-suffix, bing.com, proxy
+host-suffix, clarity.ms, proxy
+host-suffix, cloudapp.net, proxy
+host-suffix, cloudappsecurity.com, proxy
+host-suffix, docs.com, proxy
+host-suffix, edgesuite.net, proxy
+host-suffix, gfx.ms, proxy
+host-suffix, live.com, proxy
+host-suffix, live.net, proxy
+host-suffix, lync.com, proxy
+host-suffix, msappproxy.net, proxy
+host-suffix, msauth.net, proxy
+host-suffix, msauthimages.net, proxy
+host-suffix, msecnd.net, proxy
+host-suffix, msedge.net, proxy
+host-suffix, msft.net, proxy
+host-suffix, msftauth.net, proxy
+host-suffix, msftauthimages.net, proxy
+host-suffix, msftidentity.com, proxy
+host-suffix, msidentity.com, proxy
+host-suffix, msn.com, proxy
+host-suffix, msocdn.com, proxy
+host-suffix, msocsp.com, proxy
+host-suffix, mstea.ms, proxy
+host-suffix, o365weve.com, proxy
+host-suffix, oaspapps.com, proxy
+host-suffix, office.com, proxy
+host-suffix, office.net, proxy
+host-suffix, office365.com, proxy
+host-suffix, officeppe.net, proxy
+host-suffix, omniroot.com, proxy
+host-suffix, onedrive.com, proxy
+host-suffix, onenote.com, proxy
+host-suffix, onenote.net, proxy
+host-suffix, onestore.ms, proxy
+host-suffix, outlook.com, proxy
+host-suffix, outlookmobile.com, proxy
+host-suffix, phonefactor.net, proxy
+host-suffix, powershellgallery.com, proxy
+host-suffix, public-trust.com, proxy
+host-suffix, sfbassets.com, proxy
+host-suffix, sfx.ms, proxy
+host-suffix, sharepoint.com, proxy
+host-suffix, sharepointonline.com, proxy
+host-suffix, skype.com, proxy
+host-suffix, skypeassets.com, proxy
+host-suffix, skypeforbusiness.com, proxy
+host-suffix, staffhub.ms, proxy
+host-suffix, svc.ms, proxy
+host-suffix, sway-cdn.com, proxy
+host-suffix, sway-extensions.com, proxy
+host-suffix, sway.com, proxy
+host-suffix, trafficmanager.net, proxy
+host-suffix, uservoice.com, proxy
+host-suffix, virtualearth.net, proxy
+host-suffix, visualstudio.com, proxy
+host-suffix, windows-ppe.net, proxy
+host-suffix, windows.com, proxy
+host-suffix, windows.net, proxy
+host-suffix, windowsazure.com, proxy
+host-suffix, windowsupdate.com, proxy
+host-suffix, wunderlist.com, proxy
+host-suffix, xbox.com, proxy
+host-suffix, xboxlive.com, proxy
+host-suffix, xboxservices.com, proxy
+host-suffix, yammer.com, proxy
+host-suffix, yammerusercontent.com, proxy
+host-keyword, 1drv, proxy
+host-keyword, hotmail, proxy
+host-keyword, microsoft, proxy

@@ -1,5 +1,5 @@
 # NAME: Streaming
-# UPDATE: 2026-11-09 12:55
+# UPDATE: 2026-11-09 13:54
 # TOTAL: 239
 # IP-CIDR: 16
 # GEOIP: 1
@@ -7,242 +7,242 @@
 # HOST-KEYWORD: 15
 # HOST-SUFFIX: 143
 
-host, 44wilhpljf.execute-api.ap-southeast-1.amazonaws.com
-host, api-abematv.bucketeer.jp
-host, api.viu.now.com
-host, apm-misaka.biliapi.net
-host, atv-ps.amazon.com
-host, avodmp4s3ww-a.akamaihd.net
-host, bahamut.akamaized.net
-host, bcbolt446c5271-a.akamaihd.net
-host, bcbolthboa-a.akamaihd.net
-host, cbsi.live.ott.irdeto.com
-host, cbsplaylistserver.aws.syncbak.com
-host, cbsservice.aws.syncbak.com
-host, cdn.registerdisney.go.com
-host, cf-images.ap-southeast-1.prod.boltdns.net
-host, d151l6v8er5bdm.cloudfront.net
-host, d1ckiw6kv3s3l5.cloudfront.net
-host, d1k2us671qcoau.cloudfront.net
-host, d1v5ir2lpwr8os.cloudfront.net
-host, d22qjgkvxw22r6.cloudfront.net
-host, d25xi40x97liuc.cloudfront.net
-host, d27xxe7juh1us6.cloudfront.net
-host, d2anahhhmp1ffz.cloudfront.net
-host, d349g9zuie06uo.cloudfront.net
-host, d3c7rimkq79yfu.cloudfront.net
-host, d3o7oi00quuwqu.cloudfront.net
-host, dai3fd1oh325y.cloudfront.net
-host, dfp6rglgjqszk.cloudfront.net
-host, dmqdd6hw24ucf.cloudfront.net
-host, edge.api.brightcove.com
-host, fls-na.amazon.com
-host, gamer-cds.cdn.hinet.net
-host, gamer2-cds.cdn.hinet.net
-host, hamifans.emome.net
-host, hboasia1-i.akamaihd.net
-host, hboasia2-i.akamaihd.net
-host, hboasia3-i.akamaihd.net
-host, hboasia4-i.akamaihd.net
-host, hboasia5-i.akamaihd.net
-host, hboasialive.akamaized.net
-host, hbogoprod-vod.akamaized.net
-host, hbolb.onwardsmg.com
-host, hbounify-prod.evergent.com
-host, hls-hichannel.cdn.hinet.net
-host, intl-rcd.iqiyi.com
-host, intl-subscription.iqiyi.com
-host, intl.iqiyi.com
-host, itvpnpmobile-a.akamaihd.net
-host, kktv-theater.kk.stream
-host, linear.tv.apple.com
-host, link.theplatform.com
-host, litvfreemobile-hichannel.cdn.hinet.net
-host, p-bstarstatic.akamaized.net
-host, p.bstarstatic.com
-host, play-edge.itunes.apple.com
-host, players.brightcove.net
-host, s3-ap-southeast-1.amazonaws.com
-host, theater-kktv.cdn.hinet.net
-host, tv.applemusic.com
-host, upos-bstar-mirrorakam.akamaized.net
-host, upos-bstar1-mirrorakam.akamaized.net
-host, uts-api.itunes.apple.com
-host, x-default-stgec.uplynk.com
-host, youtubei.googleapis.com
-host, yt3.ggpht.com
-host-suffix, 5itv.tv
-host-suffix, abema-tv.com
-host-suffix, abema.io
-host-suffix, abema.tv
-host-suffix, aiv-cdn.net
-host-suffix, aiv-delivery.net
-host-suffix, amazonvideo.com
-host-suffix, ameba.jp
-host-suffix, bahamut.com.tw
-host-suffix, bamgrid.com
-host-suffix, bbc.co.uk
-host-suffix, bbci.co.uk
-host-suffix, biliintl.com
-host-suffix, byteoversea.com
-host-suffix, c4assets.com
-host-suffix, cbsaavideo.com
-host-suffix, cbsi.com
-host-suffix, cbsivideo.com
-host-suffix, channel4.com
-host-suffix, channel5.com
-host-suffix, dazn-api.com
-host-suffix, dazn.com
-host-suffix, dazndn.com
-host-suffix, deezer.com
-host-suffix, disco-api.com
-host-suffix, discomax.com
-host-suffix, discoveryplus.co.uk
-host-suffix, discoveryplus.com
-host-suffix, discoveryplus.in
-host-suffix, disney-plus.net
-host-suffix, disneyplus.com
-host-suffix, disneystreaming.com
-host-suffix, dmc.nico
-host-suffix, dmm-extension.com
-host-suffix, dmm.co.jp
-host-suffix, dmm.com
-host-suffix, dnitv.com
-host-suffix, dssott.com
-host-suffix, dzcdn.net
-host-suffix, encoretvb.com
-host-suffix, ext-twitch.tv
-host-suffix, fast.com
-host-suffix, gamer.com.tw
-host-suffix, googlevideo.com
-host-suffix, hamivideo.hinet.net
-host-suffix, happyon.jp
-host-suffix, hayabusa.io
-host-suffix, hayabusa.media
-host-suffix, hbo.com
-host-suffix, hbogo.com
-host-suffix, hbogoasia.com
-host-suffix, hbogoasia.hk
-host-suffix, hbomax.com
-host-suffix, hbomaxcdn.com
-host-suffix, hbonow.com
-host-suffix, himalaya.com
-host-suffix, hjholdings.jp
-host-suffix, hulu.com
-host-suffix, hulu.jp
-host-suffix, huluim.com
-host-suffix, huluqa.com
-host-suffix, hulustream.com
-host-suffix, ibytedtos.com
-host-suffix, indazn.com
-host-suffix, iq.com
-host-suffix, itv.com
-host-suffix, itvstatic.com
-host-suffix, joox.com
-host-suffix, jtvnw.net
-host-suffix, kfs.io
-host-suffix, kkbox.com
-host-suffix, kkbox.com.tw
-host-suffix, kktv.com.tw
-host-suffix, kktv.me
-host-suffix, linetv.tw
-host-suffix, litv.tv
-host-suffix, max.com
-host-suffix, media-amazon.com
-host-suffix, muscdn.com
-host-suffix, musical.ly
-host-suffix, my5.tv
-host-suffix, mytvsuper.com
-host-suffix, naver.com
-host-suffix, netflix.com
-host-suffix, netflix.net
-host-suffix, nflxext.com
-host-suffix, nflximg.com
-host-suffix, nflximg.net
-host-suffix, nflxso.net
-host-suffix, nflxvideo.net
-host-suffix, nicovideo.jp
-host-suffix, nimg.jp
-host-suffix, nowe.com
-host-suffix, nowestatic.com
-host-suffix, ocnttv.com
-host-suffix, ott.hinet.net
-host-suffix, overcast.fm
-host-suffix, p-cdn.us
-host-suffix, pandora.com
-host-suffix, paramountplus.com
-host-suffix, pbs.org
-host-suffix, peacocktv.com
-host-suffix, phncdn.com
-host-suffix, phprcdn.com
-host-suffix, pornhub.com
-host-suffix, pornhubpremium.com
-host-suffix, pplusstatic.com
-host-suffix, primevideo.com
-host-suffix, pscdn.co
-host-suffix, pv-cdn.net
-host-suffix, scdn.co
-host-suffix, skyking.com.tw
-host-suffix, smartmediarep.com
-host-suffix, sndcdn.com
-host-suffix, soundcloud.com
-host-suffix, spoti.fi
-host-suffix, spotify.com
-host-suffix, tidal.com
-host-suffix, tik-tokapi.com
-host-suffix, tiktok.com
-host-suffix, tiktokcdn-eu.com
-host-suffix, tiktokcdn.com
-host-suffix, tiktokv.com
-host-suffix, ttvnw.net
-host-suffix, ttwstatic.com
-host-suffix, tvb.com
-host-suffix, tver.jp
-host-suffix, twitch-ext.rootonline.de
-host-suffix, twitch.tv
-host-suffix, twitchcdn.net
-host-suffix, viu.com
-host-suffix, viu.tv
-host-suffix, wetv.vip
-host-suffix, wetvinfo.com
-host-suffix, withyoutube.com
-host-suffix, youtu.be
-host-suffix, youtube-nocookie.com
-host-suffix, youtube.com
-host-suffix, youtubeeducation.com
-host-suffix, youtubegaming.com
-host-suffix, youtubekids.com
-host-suffix, yt.be
-host-suffix, ytimg.com
-host-keyword, -spotify-com
-host-keyword, .hbogoasia.
-host-keyword, abematv.akamaized.net
-host-keyword, apiproxy-device-prod-nlb-
-host-keyword, avoddashs
-host-keyword, bbcfmt
-host-keyword, discovery.uplynk.com
-host-keyword, dualstack.apiproxy-
-host-keyword, hamivideo.cdn.hinet.net
-host-keyword, jooxweb-api
-host-keyword, netflixdnstest
-host-keyword, spotify.com
-host-keyword, tiktokcdn-
-host-keyword, uk-live
-host-keyword, voddazn
-ip-cidr, 103.5.34.153/32
-ip-cidr, 104.109.129.153/32
-ip-cidr, 110.238.107.47/32
-ip-cidr, 118.26.32.178/32
-ip-cidr, 150.109.28.51/32
-ip-cidr, 203.211.4.169/32
-ip-cidr, 203.211.4.193/32
-ip-cidr, 203.74.95.131/32
-ip-cidr, 203.74.95.139/32
-ip-cidr, 203.74.95.153/32
-ip-cidr, 210.201.32.11/32
-ip-cidr, 210.201.32.8/32
-ip-cidr, 210.71.227.200/32
-ip-cidr, 210.71.227.202/32
-ip-cidr, 23.211.15.99/32
-ip-cidr, 23.53.32.88/32
-geoip, NETFLIX
+host, 44wilhpljf.execute-api.ap-southeast-1.amazonaws.com, proxy
+host, api-abematv.bucketeer.jp, proxy
+host, api.viu.now.com, proxy
+host, apm-misaka.biliapi.net, proxy
+host, atv-ps.amazon.com, proxy
+host, avodmp4s3ww-a.akamaihd.net, proxy
+host, bahamut.akamaized.net, proxy
+host, bcbolt446c5271-a.akamaihd.net, proxy
+host, bcbolthboa-a.akamaihd.net, proxy
+host, cbsi.live.ott.irdeto.com, proxy
+host, cbsplaylistserver.aws.syncbak.com, proxy
+host, cbsservice.aws.syncbak.com, proxy
+host, cdn.registerdisney.go.com, proxy
+host, cf-images.ap-southeast-1.prod.boltdns.net, proxy
+host, d151l6v8er5bdm.cloudfront.net, proxy
+host, d1ckiw6kv3s3l5.cloudfront.net, proxy
+host, d1k2us671qcoau.cloudfront.net, proxy
+host, d1v5ir2lpwr8os.cloudfront.net, proxy
+host, d22qjgkvxw22r6.cloudfront.net, proxy
+host, d25xi40x97liuc.cloudfront.net, proxy
+host, d27xxe7juh1us6.cloudfront.net, proxy
+host, d2anahhhmp1ffz.cloudfront.net, proxy
+host, d349g9zuie06uo.cloudfront.net, proxy
+host, d3c7rimkq79yfu.cloudfront.net, proxy
+host, d3o7oi00quuwqu.cloudfront.net, proxy
+host, dai3fd1oh325y.cloudfront.net, proxy
+host, dfp6rglgjqszk.cloudfront.net, proxy
+host, dmqdd6hw24ucf.cloudfront.net, proxy
+host, edge.api.brightcove.com, proxy
+host, fls-na.amazon.com, proxy
+host, gamer-cds.cdn.hinet.net, proxy
+host, gamer2-cds.cdn.hinet.net, proxy
+host, hamifans.emome.net, proxy
+host, hboasia1-i.akamaihd.net, proxy
+host, hboasia2-i.akamaihd.net, proxy
+host, hboasia3-i.akamaihd.net, proxy
+host, hboasia4-i.akamaihd.net, proxy
+host, hboasia5-i.akamaihd.net, proxy
+host, hboasialive.akamaized.net, proxy
+host, hbogoprod-vod.akamaized.net, proxy
+host, hbolb.onwardsmg.com, proxy
+host, hbounify-prod.evergent.com, proxy
+host, hls-hichannel.cdn.hinet.net, proxy
+host, intl-rcd.iqiyi.com, proxy
+host, intl-subscription.iqiyi.com, proxy
+host, intl.iqiyi.com, proxy
+host, itvpnpmobile-a.akamaihd.net, proxy
+host, kktv-theater.kk.stream, proxy
+host, linear.tv.apple.com, proxy
+host, link.theplatform.com, proxy
+host, litvfreemobile-hichannel.cdn.hinet.net, proxy
+host, p-bstarstatic.akamaized.net, proxy
+host, p.bstarstatic.com, proxy
+host, play-edge.itunes.apple.com, proxy
+host, players.brightcove.net, proxy
+host, s3-ap-southeast-1.amazonaws.com, proxy
+host, theater-kktv.cdn.hinet.net, proxy
+host, tv.applemusic.com, proxy
+host, upos-bstar-mirrorakam.akamaized.net, proxy
+host, upos-bstar1-mirrorakam.akamaized.net, proxy
+host, uts-api.itunes.apple.com, proxy
+host, x-default-stgec.uplynk.com, proxy
+host, youtubei.googleapis.com, proxy
+host, yt3.ggpht.com, proxy
+host-suffix, 5itv.tv, proxy
+host-suffix, abema-tv.com, proxy
+host-suffix, abema.io, proxy
+host-suffix, abema.tv, proxy
+host-suffix, aiv-cdn.net, proxy
+host-suffix, aiv-delivery.net, proxy
+host-suffix, amazonvideo.com, proxy
+host-suffix, ameba.jp, proxy
+host-suffix, bahamut.com.tw, proxy
+host-suffix, bamgrid.com, proxy
+host-suffix, bbc.co.uk, proxy
+host-suffix, bbci.co.uk, proxy
+host-suffix, biliintl.com, proxy
+host-suffix, byteoversea.com, proxy
+host-suffix, c4assets.com, proxy
+host-suffix, cbsaavideo.com, proxy
+host-suffix, cbsi.com, proxy
+host-suffix, cbsivideo.com, proxy
+host-suffix, channel4.com, proxy
+host-suffix, channel5.com, proxy
+host-suffix, dazn-api.com, proxy
+host-suffix, dazn.com, proxy
+host-suffix, dazndn.com, proxy
+host-suffix, deezer.com, proxy
+host-suffix, disco-api.com, proxy
+host-suffix, discomax.com, proxy
+host-suffix, discoveryplus.co.uk, proxy
+host-suffix, discoveryplus.com, proxy
+host-suffix, discoveryplus.in, proxy
+host-suffix, disney-plus.net, proxy
+host-suffix, disneyplus.com, proxy
+host-suffix, disneystreaming.com, proxy
+host-suffix, dmc.nico, proxy
+host-suffix, dmm-extension.com, proxy
+host-suffix, dmm.co.jp, proxy
+host-suffix, dmm.com, proxy
+host-suffix, dnitv.com, proxy
+host-suffix, dssott.com, proxy
+host-suffix, dzcdn.net, proxy
+host-suffix, encoretvb.com, proxy
+host-suffix, ext-twitch.tv, proxy
+host-suffix, fast.com, proxy
+host-suffix, gamer.com.tw, proxy
+host-suffix, googlevideo.com, proxy
+host-suffix, hamivideo.hinet.net, proxy
+host-suffix, happyon.jp, proxy
+host-suffix, hayabusa.io, proxy
+host-suffix, hayabusa.media, proxy
+host-suffix, hbo.com, proxy
+host-suffix, hbogo.com, proxy
+host-suffix, hbogoasia.com, proxy
+host-suffix, hbogoasia.hk, proxy
+host-suffix, hbomax.com, proxy
+host-suffix, hbomaxcdn.com, proxy
+host-suffix, hbonow.com, proxy
+host-suffix, himalaya.com, proxy
+host-suffix, hjholdings.jp, proxy
+host-suffix, hulu.com, proxy
+host-suffix, hulu.jp, proxy
+host-suffix, huluim.com, proxy
+host-suffix, huluqa.com, proxy
+host-suffix, hulustream.com, proxy
+host-suffix, ibytedtos.com, proxy
+host-suffix, indazn.com, proxy
+host-suffix, iq.com, proxy
+host-suffix, itv.com, proxy
+host-suffix, itvstatic.com, proxy
+host-suffix, joox.com, proxy
+host-suffix, jtvnw.net, proxy
+host-suffix, kfs.io, proxy
+host-suffix, kkbox.com, proxy
+host-suffix, kkbox.com.tw, proxy
+host-suffix, kktv.com.tw, proxy
+host-suffix, kktv.me, proxy
+host-suffix, linetv.tw, proxy
+host-suffix, litv.tv, proxy
+host-suffix, max.com, proxy
+host-suffix, media-amazon.com, proxy
+host-suffix, muscdn.com, proxy
+host-suffix, musical.ly, proxy
+host-suffix, my5.tv, proxy
+host-suffix, mytvsuper.com, proxy
+host-suffix, naver.com, proxy
+host-suffix, netflix.com, proxy
+host-suffix, netflix.net, proxy
+host-suffix, nflxext.com, proxy
+host-suffix, nflximg.com, proxy
+host-suffix, nflximg.net, proxy
+host-suffix, nflxso.net, proxy
+host-suffix, nflxvideo.net, proxy
+host-suffix, nicovideo.jp, proxy
+host-suffix, nimg.jp, proxy
+host-suffix, nowe.com, proxy
+host-suffix, nowestatic.com, proxy
+host-suffix, ocnttv.com, proxy
+host-suffix, ott.hinet.net, proxy
+host-suffix, overcast.fm, proxy
+host-suffix, p-cdn.us, proxy
+host-suffix, pandora.com, proxy
+host-suffix, paramountplus.com, proxy
+host-suffix, pbs.org, proxy
+host-suffix, peacocktv.com, proxy
+host-suffix, phncdn.com, proxy
+host-suffix, phprcdn.com, proxy
+host-suffix, pornhub.com, proxy
+host-suffix, pornhubpremium.com, proxy
+host-suffix, pplusstatic.com, proxy
+host-suffix, primevideo.com, proxy
+host-suffix, pscdn.co, proxy
+host-suffix, pv-cdn.net, proxy
+host-suffix, scdn.co, proxy
+host-suffix, skyking.com.tw, proxy
+host-suffix, smartmediarep.com, proxy
+host-suffix, sndcdn.com, proxy
+host-suffix, soundcloud.com, proxy
+host-suffix, spoti.fi, proxy
+host-suffix, spotify.com, proxy
+host-suffix, tidal.com, proxy
+host-suffix, tik-tokapi.com, proxy
+host-suffix, tiktok.com, proxy
+host-suffix, tiktokcdn-eu.com, proxy
+host-suffix, tiktokcdn.com, proxy
+host-suffix, tiktokv.com, proxy
+host-suffix, ttvnw.net, proxy
+host-suffix, ttwstatic.com, proxy
+host-suffix, tvb.com, proxy
+host-suffix, tver.jp, proxy
+host-suffix, twitch-ext.rootonline.de, proxy
+host-suffix, twitch.tv, proxy
+host-suffix, twitchcdn.net, proxy
+host-suffix, viu.com, proxy
+host-suffix, viu.tv, proxy
+host-suffix, wetv.vip, proxy
+host-suffix, wetvinfo.com, proxy
+host-suffix, withyoutube.com, proxy
+host-suffix, youtu.be, proxy
+host-suffix, youtube-nocookie.com, proxy
+host-suffix, youtube.com, proxy
+host-suffix, youtubeeducation.com, proxy
+host-suffix, youtubegaming.com, proxy
+host-suffix, youtubekids.com, proxy
+host-suffix, yt.be, proxy
+host-suffix, ytimg.com, proxy
+host-keyword, -spotify-com, proxy
+host-keyword, .hbogoasia., proxy
+host-keyword, abematv.akamaized.net, proxy
+host-keyword, apiproxy-device-prod-nlb-, proxy
+host-keyword, avoddashs, proxy
+host-keyword, bbcfmt, proxy
+host-keyword, discovery.uplynk.com, proxy
+host-keyword, dualstack.apiproxy-, proxy
+host-keyword, hamivideo.cdn.hinet.net, proxy
+host-keyword, jooxweb-api, proxy
+host-keyword, netflixdnstest, proxy
+host-keyword, spotify.com, proxy
+host-keyword, tiktokcdn-, proxy
+host-keyword, uk-live, proxy
+host-keyword, voddazn, proxy
+ip-cidr, 103.5.34.153/32, proxy
+ip-cidr, 104.109.129.153/32, proxy
+ip-cidr, 110.238.107.47/32, proxy
+ip-cidr, 118.26.32.178/32, proxy
+ip-cidr, 150.109.28.51/32, proxy
+ip-cidr, 203.211.4.169/32, proxy
+ip-cidr, 203.211.4.193/32, proxy
+ip-cidr, 203.74.95.131/32, proxy
+ip-cidr, 203.74.95.139/32, proxy
+ip-cidr, 203.74.95.153/32, proxy
+ip-cidr, 210.201.32.11/32, proxy
+ip-cidr, 210.201.32.8/32, proxy
+ip-cidr, 210.71.227.200/32, proxy
+ip-cidr, 210.71.227.202/32, proxy
+ip-cidr, 23.211.15.99/32, proxy
+ip-cidr, 23.53.32.88/32, proxy
+geoip, NETFLIX, proxy

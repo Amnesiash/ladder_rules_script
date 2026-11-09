@@ -1,73 +1,73 @@
 # NAME: Direct
-# UPDATE: 2026-11-09 12:55
+# UPDATE: 2026-11-09 13:54
 # TOTAL: 66
 # HOST: 24
 # HOST-KEYWORD: 2
 # HOST-SUFFIX: 40
 
-host, analytics.strava.com
-host, api.841859784.xyz
-host, app.adjust.com
-host, app.appsflyer.com
-host, bdtj.tagtic.cn
-host, ci.android.com
-host, clientservices.googleapis.com
-host, dl.google.com
-host, dl.l.google.com
-host, errlog.umeng.com
-host, fairplay.l.qq.com
-host, livew.l.qq.com
-host, log.mmstat.com
-host, msg.umeng.com
-host, msg.umengcloud.com
-host, origin-a.akamaihd.net
-host, redirector.gvt1.com
-host, rewards.hypixel.net
-host, sycm.mmstat.com
-host, tracking.miui.com
-host, update.googleapis.com
-host, vd.l.qq.com
-host, vi.l.qq.com
-host, www.freecycle.top
-host-suffix, blog.google
-host-suffix, checkip.dyndns.org
-host-suffix, checkip.synology.com
-host-suffix, checkipv6.dyndns.org
-host-suffix, cloudstudio.work
-host-suffix, cocopilot.org
-host-suffix, czzyvideo.com
-host-suffix, DiskStation.me
-host-suffix, dizhensubao.getui.com
-host-suffix, DSCloud.biz
-host-suffix, DSCloud.me
-host-suffix, DSCloud.mobi
-host-suffix, DSmyNAS.com
-host-suffix, DSmyNAS.net
-host-suffix, DSmyNAS.org
-host-suffix, FamilyDS.com
-host-suffix, FamilyDS.net
-host-suffix, FamilyDS.org
-host-suffix, ghfast.top
-host-suffix, ghp.ci
-host-suffix, googletraveladservices-cn.com
-host-suffix, googletraveladservices.com
-host-suffix, gradio.live
-host-suffix, i234.me
-host-suffix, iqiyis.com
-host-suffix, istoreos.com
-host-suffix, kelee.one
-host-suffix, koodomobile.ca
-host-suffix, koodomobile.com
-host-suffix, musicbrainz.org
-host-suffix, myDS.me
-host-suffix, ngrok-free.app
-host-suffix, ntp.org
-host-suffix, ol.epicgames.com
-host-suffix, quickconnect.to
-host-suffix, speedtest.cn
-host-suffix, steamcontent.com
-host-suffix, synology.com
-host-suffix, synology.me
-host-suffix, tracking-protection.cdn.mozilla.net
-host-keyword, quickconnect
-host-keyword, synology
+host, analytics.strava.com, proxy
+host, api.841859784.xyz, proxy
+host, app.adjust.com, proxy
+host, app.appsflyer.com, proxy
+host, bdtj.tagtic.cn, proxy
+host, ci.android.com, proxy
+host, clientservices.googleapis.com, proxy
+host, dl.google.com, proxy
+host, dl.l.google.com, proxy
+host, errlog.umeng.com, proxy
+host, fairplay.l.qq.com, proxy
+host, livew.l.qq.com, proxy
+host, log.mmstat.com, proxy
+host, msg.umeng.com, proxy
+host, msg.umengcloud.com, proxy
+host, origin-a.akamaihd.net, proxy
+host, redirector.gvt1.com, proxy
+host, rewards.hypixel.net, proxy
+host, sycm.mmstat.com, proxy
+host, tracking.miui.com, proxy
+host, update.googleapis.com, proxy
+host, vd.l.qq.com, proxy
+host, vi.l.qq.com, proxy
+host, www.freecycle.top, proxy
+host-suffix, blog.google, proxy
+host-suffix, checkip.dyndns.org, proxy
+host-suffix, checkip.synology.com, proxy
+host-suffix, checkipv6.dyndns.org, proxy
+host-suffix, cloudstudio.work, proxy
+host-suffix, cocopilot.org, proxy
+host-suffix, czzyvideo.com, proxy
+host-suffix, DiskStation.me, proxy
+host-suffix, dizhensubao.getui.com, proxy
+host-suffix, DSCloud.biz, proxy
+host-suffix, DSCloud.me, proxy
+host-suffix, DSCloud.mobi, proxy
+host-suffix, DSmyNAS.com, proxy
+host-suffix, DSmyNAS.net, proxy
+host-suffix, DSmyNAS.org, proxy
+host-suffix, FamilyDS.com, proxy
+host-suffix, FamilyDS.net, proxy
+host-suffix, FamilyDS.org, proxy
+host-suffix, ghfast.top, proxy
+host-suffix, ghp.ci, proxy
+host-suffix, googletraveladservices-cn.com, proxy
+host-suffix, googletraveladservices.com, proxy
+host-suffix, gradio.live, proxy
+host-suffix, i234.me, proxy
+host-suffix, iqiyis.com, proxy
+host-suffix, istoreos.com, proxy
+host-suffix, kelee.one, proxy
+host-suffix, koodomobile.ca, proxy
+host-suffix, koodomobile.com, proxy
+host-suffix, musicbrainz.org, proxy
+host-suffix, myDS.me, proxy
+host-suffix, ngrok-free.app, proxy
+host-suffix, ntp.org, proxy
+host-suffix, ol.epicgames.com, proxy
+host-suffix, quickconnect.to, proxy
+host-suffix, speedtest.cn, proxy
+host-suffix, steamcontent.com, proxy
+host-suffix, synology.com, proxy
+host-suffix, synology.me, proxy
+host-suffix, tracking-protection.cdn.mozilla.net, proxy
+host-keyword, quickconnect, proxy
+host-keyword, synology, proxy

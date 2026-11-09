@@ -1,36 +1,36 @@
 # NAME: Apple
-# UPDATE: 2026-11-09 12:55
+# UPDATE: 2026-11-09 13:55
 # TOTAL: 29
 # IP-CIDR: 10
 # HOST: 1
 # HOST-SUFFIX: 18
 
-host, apple.comscoreresearch.com
-host-suffix, aaplimg.com
-host-suffix, akadns.net
-host-suffix, apple-cloudkit.com
-host-suffix, apple-dns.net
-host-suffix, apple-mapkit.com
-host-suffix, apple.co
-host-suffix, apple.com
-host-suffix, apple.com.cn
-host-suffix, apple.news
-host-suffix, appstore.com
-host-suffix, cdn-apple.com
-host-suffix, crashlytics.com
-host-suffix, icloud-content.com
-host-suffix, icloud.com
-host-suffix, icloud.com.cn
-host-suffix, itunes.com
-host-suffix, me.com
-host-suffix, mzstatic.com
-ip-cidr, 139.178.128.0/18
-ip-cidr, 144.178.0.0/19
-ip-cidr, 144.178.36.0/22
-ip-cidr, 144.178.48.0/20
-ip-cidr, 17.0.0.0/8
-ip-cidr, 192.35.50.0/24
-ip-cidr, 198.183.17.0/24
-ip-cidr, 205.180.175.0/24
-ip-cidr, 63.92.224.0/19
-ip-cidr, 65.199.22.0/23
+host, apple.comscoreresearch.com, proxy
+host-suffix, aaplimg.com, proxy
+host-suffix, akadns.net, proxy
+host-suffix, apple-cloudkit.com, proxy
+host-suffix, apple-dns.net, proxy
+host-suffix, apple-mapkit.com, proxy
+host-suffix, apple.co, proxy
+host-suffix, apple.com, proxy
+host-suffix, apple.com.cn, proxy
+host-suffix, apple.news, proxy
+host-suffix, appstore.com, proxy
+host-suffix, cdn-apple.com, proxy
+host-suffix, crashlytics.com, proxy
+host-suffix, icloud-content.com, proxy
+host-suffix, icloud.com, proxy
+host-suffix, icloud.com.cn, proxy
+host-suffix, itunes.com, proxy
+host-suffix, me.com, proxy
+host-suffix, mzstatic.com, proxy
+ip-cidr, 139.178.128.0/18, proxy
+ip-cidr, 144.178.0.0/19, proxy
+ip-cidr, 144.178.36.0/22, proxy
+ip-cidr, 144.178.48.0/20, proxy
+ip-cidr, 17.0.0.0/8, proxy
+ip-cidr, 192.35.50.0/24, proxy
+ip-cidr, 198.183.17.0/24, proxy
+ip-cidr, 205.180.175.0/24, proxy
+ip-cidr, 63.92.224.0/19, proxy
+ip-cidr, 65.199.22.0/23, proxy

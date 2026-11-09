@@ -1,72 +1,72 @@
 # NAME: TikTok
-# UPDATE: 2026-11-09 12:55
+# UPDATE: 2026-11-09 13:55
 # TOTAL: 65
 # HOST: 9
 # HOST-KEYWORD: 4
 # HOST-SUFFIX: 52
 
-host, lf16-effectcdn.byteeffecttos-g.com
-host, lf16-pkgcdn.pitaya-clientai.com
-host, p16-tiktok-dm-sticker-sign-sg.ibyteimg.com
-host, p16-tiktokcdn-com.akamaized.net
-host, roovza-launches.appsflyersdk.com
-host, roovza.inapps.appsflyersdk.com
-host, roovza.launches.appsflyersdk.com
-host, roovza.skadsdk.appsflyersdk.com
-host, trae-api-sg.mchost.guru
-host-suffix, analytics.tiktok.com
-host-suffix, bytedapm.com
-host-suffix, bytegecko-i18n.com
-host-suffix, byteintlapi.com
-host-suffix, byteoversea.com
-host-suffix, capcut.com
-host-suffix, capcutapi.com
-host-suffix, capcutapi.us
-host-suffix, capcutcdn-us.com
-host-suffix, capcutstatic.com
-host-suffix, ibytedtos.com
-host-suffix, ibyteimg.com
-host-suffix, ipstatp.com
-host-suffix, isnssdk.com
-host-suffix, marscode.com
-host-suffix, muscdn.com
-host-suffix, musical.ly
-host-suffix, sgpstatp.com
-host-suffix, snssdk.com
-host-suffix, tik-tokapi.com
-host-suffix, tiktok-minis.com
-host-suffix, tiktok-row.net
-host-suffix, tiktok.com
-host-suffix, tiktokcdn-eu.com
-host-suffix, tiktokcdn-us.com
-host-suffix, tiktokcdn-us.com.edgesuite.net
-host-suffix, tiktokcdn.com
-host-suffix, tiktokcdn.com.akamaized.net
-host-suffix, tiktokcdn.com.edgesuite.net
-host-suffix, tiktokd.net
-host-suffix, tiktokd.org
-host-suffix, tiktokeu-cdn.com
-host-suffix, tiktokglobalshopv.com
-host-suffix, tiktokminis.us
-host-suffix, tiktokmusic.app
-host-suffix, tiktokrow-cdn.com
-host-suffix, tiktokshop.com
-host-suffix, tiktokstaticb.com
-host-suffix, tiktokv.com
-host-suffix, tiktokv.com.edgekey.net
-host-suffix, tiktokv.com.edgesuite.net
-host-suffix, tiktokv.eu
-host-suffix, tiktokv.us
-host-suffix, tiktokvapp.com
-host-suffix, tiktokw.eu
-host-suffix, tiktokw.us
-host-suffix, trae.ai
-host-suffix, ttcdn-us.com
-host-suffix, ttlivecdn.com
-host-suffix, ttoverseaus.net
-host-suffix, ttwebview.com
-host-suffix, ttwstatic.com
-host-keyword, -tiktokcdn-com
-host-keyword, musical.ly
-host-keyword, tiktok
-host-keyword, tiktokcdn
+host, lf16-effectcdn.byteeffecttos-g.com, proxy
+host, lf16-pkgcdn.pitaya-clientai.com, proxy
+host, p16-tiktok-dm-sticker-sign-sg.ibyteimg.com, proxy
+host, p16-tiktokcdn-com.akamaized.net, proxy
+host, roovza-launches.appsflyersdk.com, proxy
+host, roovza.inapps.appsflyersdk.com, proxy
+host, roovza.launches.appsflyersdk.com, proxy
+host, roovza.skadsdk.appsflyersdk.com, proxy
+host, trae-api-sg.mchost.guru, proxy
+host-suffix, analytics.tiktok.com, proxy
+host-suffix, bytedapm.com, proxy
+host-suffix, bytegecko-i18n.com, proxy
+host-suffix, byteintlapi.com, proxy
+host-suffix, byteoversea.com, proxy
+host-suffix, capcut.com, proxy
+host-suffix, capcutapi.com, proxy
+host-suffix, capcutapi.us, proxy
+host-suffix, capcutcdn-us.com, proxy
+host-suffix, capcutstatic.com, proxy
+host-suffix, ibytedtos.com, proxy
+host-suffix, ibyteimg.com, proxy
+host-suffix, ipstatp.com, proxy
+host-suffix, isnssdk.com, proxy
+host-suffix, marscode.com, proxy
+host-suffix, muscdn.com, proxy
+host-suffix, musical.ly, proxy
+host-suffix, sgpstatp.com, proxy
+host-suffix, snssdk.com, proxy
+host-suffix, tik-tokapi.com, proxy
+host-suffix, tiktok-minis.com, proxy
+host-suffix, tiktok-row.net, proxy
+host-suffix, tiktok.com, proxy
+host-suffix, tiktokcdn-eu.com, proxy
+host-suffix, tiktokcdn-us.com, proxy
+host-suffix, tiktokcdn-us.com.edgesuite.net, proxy
+host-suffix, tiktokcdn.com, proxy
+host-suffix, tiktokcdn.com.akamaized.net, proxy
+host-suffix, tiktokcdn.com.edgesuite.net, proxy
+host-suffix, tiktokd.net, proxy
+host-suffix, tiktokd.org, proxy
+host-suffix, tiktokeu-cdn.com, proxy
+host-suffix, tiktokglobalshopv.com, proxy
+host-suffix, tiktokminis.us, proxy
+host-suffix, tiktokmusic.app, proxy
+host-suffix, tiktokrow-cdn.com, proxy
+host-suffix, tiktokshop.com, proxy
+host-suffix, tiktokstaticb.com, proxy
+host-suffix, tiktokv.com, proxy
+host-suffix, tiktokv.com.edgekey.net, proxy
+host-suffix, tiktokv.com.edgesuite.net, proxy
+host-suffix, tiktokv.eu, proxy
+host-suffix, tiktokv.us, proxy
+host-suffix, tiktokvapp.com, proxy
+host-suffix, tiktokw.eu, proxy
+host-suffix, tiktokw.us, proxy
+host-suffix, trae.ai, proxy
+host-suffix, ttcdn-us.com, proxy
+host-suffix, ttlivecdn.com, proxy
+host-suffix, ttoverseaus.net, proxy
+host-suffix, ttwebview.com, proxy
+host-suffix, ttwstatic.com, proxy
+host-keyword, -tiktokcdn-com, proxy
+host-keyword, musical.ly, proxy
+host-keyword, tiktok, proxy
+host-keyword, tiktokcdn, proxy

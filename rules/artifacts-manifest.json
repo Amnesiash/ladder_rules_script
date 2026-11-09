@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-09T05:06:50.187Z",
+  "timestamp": "2026-11-09T05:55:52.540Z",
   "artifacts": [
     {
       "slug": "advertising",
@@ -21,7 +21,7 @@
       "kind": "quantumultx-list",
       "label": "advertising quantumultx",
       "behavior": "classical",
-      "sha256": "c24f266df79b8a874d6b047ca4ac757250d88e1a766a6d96652c37cbd261f2cf"
+      "sha256": "6c5834b82ed197239a77a34bb5e08ad6c69cf2e1f34593a446e454f4ffa85c6c"
     },
     {
       "slug": "advertising",
@@ -54,7 +54,7 @@
       "kind": "quantumultx-list",
       "label": "china quantumultx",
       "behavior": "classical",
-      "sha256": "b50125644f804f8c1dfd9c57df76db3d0b88164e063ef0a811cb9386ae477952"
+      "sha256": "e97756022a5b56f0cad01065db41e07f4efdbdc54df7573e03716c8adf781209"
     },
     {
       "slug": "china",
@@ -87,7 +87,7 @@
       "kind": "quantumultx-list",
       "label": "direct quantumultx",
       "behavior": "classical",
-      "sha256": "f9121b0dde5d21aac78236a94d0dfc381242072c342fc15a37f92d256069ae9b"
+      "sha256": "4e687f2e45db70b5adc7de3f3b87f7669dc88f8fb0f13aa985fbb609ec6e8b7d"
     },
     {
       "slug": "direct",
@@ -120,7 +120,7 @@
       "kind": "quantumultx-list",
       "label": "proxy quantumultx",
       "behavior": "classical",
-      "sha256": "b1ab7ff7814d4ef93f8140f9175417b8b75baf60e5eab1ce854b91692ea4da28"
+      "sha256": "f84d18ad96f32acc6b8b7528da0617ef19a6acf58bc735c0026d613d78234d63"
     },
     {
       "slug": "proxy",
@@ -153,7 +153,7 @@
       "kind": "quantumultx-list",
       "label": "streaming quantumultx",
       "behavior": "classical",
-      "sha256": "33e73748561e5d6f783cc6d2a577f86f2732a2429f947fa0e044206ce33543ca"
+      "sha256": "9ae6c630f3192dfcb4c2eb5e46e3cd95d164da34d6379428302b532ca96d0ff1"
     },
     {
       "slug": "streaming",
@@ -186,7 +186,7 @@
       "kind": "quantumultx-list",
       "label": "ai quantumultx",
       "behavior": "classical",
-      "sha256": "cc3a1e00716b065c3c8f48ba96958ab6baf7d978bd12b6327a97062098d35ff2"
+      "sha256": "4419314c7f02efadc0f0d4d6b9619ad2646b113d027a7f9db7d0b828fd06a1ec"
     },
     {
       "slug": "ai",
@@ -219,7 +219,7 @@
       "kind": "quantumultx-list",
       "label": "lan quantumultx",
       "behavior": "classical",
-      "sha256": "85666f35f2e5a71be4aebe3a12d45d94a7e244e871060f5befc81cca38915276"
+      "sha256": "e814c737463d3bb0f6d5a4b3795b8e0856dbdaf4d9ce585221a193579bceb119"
     },
     {
       "slug": "lan",
@@ -252,7 +252,7 @@
       "kind": "quantumultx-list",
       "label": "microsoftproxy quantumultx",
       "behavior": "classical",
-      "sha256": "e07b3f824a46da642a99f9448be1fb7efb445450055dce3be21be718c2c26330"
+      "sha256": "cc6820fe3fb6f4dfc91fa626899f72ba448c14f33d0e7d00e9c4605c97272984"
     },
     {
       "slug": "microsoftproxy",
@@ -285,7 +285,7 @@
       "kind": "quantumultx-list",
       "label": "steamcn quantumultx",
       "behavior": "classical",
-      "sha256": "2e3e80348e050dc11fdface6d2a44bf3fc9f26eb2531740b3aaf64949a8aa2bc"
+      "sha256": "16fc74793adccdc12fbbb20cda22ebf91a67334e9308683466d61d28ddffd0c3"
     },
     {
       "slug": "steamcn",
@@ -318,7 +318,7 @@
       "kind": "quantumultx-list",
       "label": "wechat quantumultx",
       "behavior": "classical",
-      "sha256": "49a02c7346d0916d2706aabdee39798a5acad426e172fa8d803893b76b015c21"
+      "sha256": "98756a200ec4e396aa18dcee714c80d0770c1e60ddbe9e68bb964ae1280717f0"
     },
     {
       "slug": "wechat",
@@ -351,7 +351,7 @@
       "kind": "quantumultx-list",
       "label": "streaminghmt quantumultx",
       "behavior": "classical",
-      "sha256": "05f5b32562fec0d2faffcddc8822adf46b556823b557d8ab2d05961839a87da4"
+      "sha256": "61cf2450e32a380f802436fbc170e65f6df7f51da2a6130bca675a8e0ea0f006"
     },
     {
       "slug": "streaminghmt",
@@ -384,7 +384,7 @@
       "kind": "quantumultx-list",
       "label": "apple quantumultx",
       "behavior": "classical",
-      "sha256": "867e0b34a64cb349694b4584f7def83648daf8a477773f9c9b4808024ddbba3e"
+      "sha256": "97f5bc102c90b090ef47784a8827f1bf0bd14429a33e95d5f67702133facd10f"
     },
     {
       "slug": "apple",
@@ -417,7 +417,7 @@
       "kind": "quantumultx-list",
       "label": "telegram quantumultx",
       "behavior": "classical",
-      "sha256": "7218abf4778874ed9613b33adf849908ee7b57d81e51ec372a100ca7f2a2bd34"
+      "sha256": "efadd3e86a4675af0dd892bf36f513ba3012af8eba21ed2406dc8c2c74729fbc"
     },
     {
       "slug": "telegram",
@@ -450,7 +450,7 @@
       "kind": "quantumultx-list",
       "label": "tiktok quantumultx",
       "behavior": "classical",
-      "sha256": "f46fce8c6a1f8257add3926ebfc517966c9ee30c3f436c289c6ca061e98e4bec"
+      "sha256": "0add80886e502a99d4d1175510045b5ac6e66218fd5af0df5babbfb35af04498"
     },
     {
       "slug": "tiktok",
