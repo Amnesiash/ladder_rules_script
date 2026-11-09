@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-09T05:55:52.540Z",
+  "timestamp": "2026-11-09T05:59:23.362Z",
   "artifacts": [
     {
       "slug": "advertising",
@@ -21,7 +21,7 @@
       "kind": "quantumultx-list",
       "label": "advertising quantumultx",
       "behavior": "classical",
-      "sha256": "6c5834b82ed197239a77a34bb5e08ad6c69cf2e1f34593a446e454f4ffa85c6c"
+      "sha256": "17f3bf4c4f6fb9b3443b1d1b4f36e77affd043c264d60598c891859cc9ab3675"
     },
     {
       "slug": "advertising",
