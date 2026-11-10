@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-09T15:08:38.997Z",
+  "timestamp": "2026-11-10T14:18:59.899Z",
   "artifacts": [
     {
       "slug": "advertising",
@@ -10,7 +10,7 @@
       "kind": "mihomo-yaml",
       "label": "advertising mihomo",
       "behavior": "classical",
-      "sha256": "4a1933e99639414574824f6567992ffe1a1a269cf2d27c0bb85c3f02b2a5e86d"
+      "sha256": "1877693a90d0308231166126a99bf68eb13a7279b41832a1b24173cc4faafa31"
     },
     {
       "slug": "advertising",
@@ -21,7 +21,7 @@
       "kind": "quantumultx-list",
       "label": "advertising quantumultx",
       "behavior": "classical",
-      "sha256": "d62f0f653c61a9ec009e969f9c7d4ce190fee64e00c129090b7fa8bc84923051"
+      "sha256": "5d3e49dcc8746a0c6c3a251c9a9bfce21b488bda4103096dfa628c9a39175b0a"
     },
     {
       "slug": "advertising",
@@ -32,7 +32,7 @@
       "kind": "loon-list",
       "label": "advertising loon",
       "behavior": "classical",
-      "sha256": "33aa90f936f73dad8e2d3dbbafe9829c4eb98fb7ffc893d5fe6142655ec9b6a9"
+      "sha256": "773ab93c56511a873f6add1238b3d3e430e2179154820d65d2eb211e01506ae8"
     },
     {
       "slug": "china",
@@ -241,7 +241,7 @@
       "kind": "mihomo-yaml",
       "label": "microsoftproxy mihomo",
       "behavior": "classical",
-      "sha256": "2d12ca1ea43d15b7c97828ed170e5d6ac9c0e1b5f1e7fe8bd09c7bb7ec38f3a6"
+      "sha256": "3d5277f7c4ce696cb109f036de18b6911d6c8958b5536273830fdfbb421a72a6"
     },
     {
       "slug": "microsoftproxy",
@@ -252,7 +252,7 @@
       "kind": "quantumultx-list",
       "label": "microsoftproxy quantumultx",
       "behavior": "classical",
-      "sha256": "cc6820fe3fb6f4dfc91fa626899f72ba448c14f33d0e7d00e9c4605c97272984"
+      "sha256": "73196b16ff1320d6366813966701344171ef466bad0eaa7c207b514a3f69ffc9"
     },
     {
       "slug": "microsoftproxy",
@@ -263,7 +263,7 @@
       "kind": "loon-list",
       "label": "microsoftproxy loon",
       "behavior": "classical",
-      "sha256": "4b4de661344e2330cc6b58b9f27f04184ee24ce7e4b6d37c1de0d3cff74b04c4"
+      "sha256": "c5ee973a37ee514f7b3d0d28520d9a9c835038963b7513baa2adc535427616fc"
     },
     {
       "slug": "steamcn",
@@ -406,7 +406,7 @@
       "kind": "mihomo-yaml",
       "label": "telegram mihomo",
       "behavior": "classical",
-      "sha256": "e456eb5a0420b83adec1db36407a6aa34b5c59abe757b8ddd2bd2e725ed48118"
+      "sha256": "3c7c53b655108b9f479a1967d3b960c82760e830151dfca6969fa8fe27f74ed3"
     },
     {
       "slug": "telegram",
@@ -417,7 +417,7 @@
       "kind": "quantumultx-list",
       "label": "telegram quantumultx",
       "behavior": "classical",
-      "sha256": "2a0dfbdc2b56d0a26ab16e469c6fa7c50f51363396fb39f9e2d06192ea500587"
+      "sha256": "7ef45ee43b4784791c75aed4d3e58ea96bdda946707232e515255f39ba42a6db"
     },
     {
       "slug": "telegram",
@@ -428,7 +428,7 @@
       "kind": "loon-list",
       "label": "telegram loon",
       "behavior": "classical",
-      "sha256": "cca968f1faa3844147c5ce382834e92c6713ec84a0b2a8901250766341ea2ea7"
+      "sha256": "2ce66df80e07e73ad89b716b5a6d169043e5e6f28291d6203272d3431e8dcd13"
     },
     {
       "slug": "tiktok",
