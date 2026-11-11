@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-10T14:18:59.899Z",
+  "timestamp": "2026-11-11T13:32:30.053Z",
   "artifacts": [
     {
       "slug": "advertising",
@@ -10,7 +10,7 @@
       "kind": "mihomo-yaml",
       "label": "advertising mihomo",
       "behavior": "classical",
-      "sha256": "1877693a90d0308231166126a99bf68eb13a7279b41832a1b24173cc4faafa31"
+      "sha256": "30d08e68df6d87afebbc14f64a416f13273473f7203bb77af2af78c7e143de97"
     },
     {
       "slug": "advertising",
@@ -21,7 +21,7 @@
       "kind": "quantumultx-list",
       "label": "advertising quantumultx",
       "behavior": "classical",
-      "sha256": "5d3e49dcc8746a0c6c3a251c9a9bfce21b488bda4103096dfa628c9a39175b0a"
+      "sha256": "3657cb5bb3d7ea703284c46912dca9e4b54b17f75e4143b6e7a26ecab5449350"
     },
     {
       "slug": "advertising",
@@ -32,7 +32,7 @@
       "kind": "loon-list",
       "label": "advertising loon",
       "behavior": "classical",
-      "sha256": "773ab93c56511a873f6add1238b3d3e430e2179154820d65d2eb211e01506ae8"
+      "sha256": "8fd3c39b1facb308f7035433adf2b723047d3e29ffaf2e03181c53453ebbc837"
     },
     {
       "slug": "china",
@@ -241,7 +241,7 @@
       "kind": "mihomo-yaml",
       "label": "microsoftproxy mihomo",
       "behavior": "classical",
-      "sha256": "3d5277f7c4ce696cb109f036de18b6911d6c8958b5536273830fdfbb421a72a6"
+      "sha256": "1283731db41939434a0881f8607b42edde8e7e67c2b8ba2e2ebb7971746a9eea"
     },
     {
       "slug": "microsoftproxy",
@@ -252,7 +252,7 @@
       "kind": "quantumultx-list",
       "label": "microsoftproxy quantumultx",
       "behavior": "classical",
-      "sha256": "73196b16ff1320d6366813966701344171ef466bad0eaa7c207b514a3f69ffc9"
+      "sha256": "7f77344e08e8fb5af4f7d0d3b5d18a167e224d5cd004e9648228e57d110dd115"
     },
     {
       "slug": "microsoftproxy",
@@ -263,7 +263,7 @@
       "kind": "loon-list",
       "label": "microsoftproxy loon",
       "behavior": "classical",
-      "sha256": "c5ee973a37ee514f7b3d0d28520d9a9c835038963b7513baa2adc535427616fc"
+      "sha256": "146c2b21056607804f590476e3d8eb7db4731f142220186e9085a9ca480ba4f8"
     },
     {
       "slug": "steamcn",
@@ -274,7 +274,7 @@
       "kind": "mihomo-yaml",
       "label": "steamcn mihomo",
       "behavior": "classical",
-      "sha256": "11084337486ecad0bda66ceea929d05cbac7a0bd8a333c0f3130178c4a5d3937"
+      "sha256": "394dbd69fead9e30d4518f3fdb71f8728a730167f5c539028db6312f90cba41d"
     },
     {
       "slug": "steamcn",
@@ -285,7 +285,7 @@
       "kind": "quantumultx-list",
       "label": "steamcn quantumultx",
       "behavior": "classical",
-      "sha256": "16fc74793adccdc12fbbb20cda22ebf91a67334e9308683466d61d28ddffd0c3"
+      "sha256": "57bb9cb13d2cd9e40e2d92d844ac4618859ee0851cbbcc140c31be07c069e524"
     },
     {
       "slug": "steamcn",
@@ -296,7 +296,7 @@
       "kind": "loon-list",
       "label": "steamcn loon",
       "behavior": "classical",
-      "sha256": "c455052f3f1ce9724ca5ecf170ebb2e68afa544a2e58ef72d4e19ae95376dbe6"
+      "sha256": "02010ab075e19144ebee7420492d26c1d0ac3d6c94f4e10336a2cf66d55d1ded"
     },
     {
       "slug": "wechat",
@@ -406,7 +406,7 @@
       "kind": "mihomo-yaml",
       "label": "telegram mihomo",
       "behavior": "classical",
-      "sha256": "3c7c53b655108b9f479a1967d3b960c82760e830151dfca6969fa8fe27f74ed3"
+      "sha256": "1064cad6e04a30a887221a9cee197b8d575302c023494394fc262810f908cddc"
     },
     {
       "slug": "telegram",
@@ -417,7 +417,7 @@
       "kind": "quantumultx-list",
       "label": "telegram quantumultx",
       "behavior": "classical",
-      "sha256": "7ef45ee43b4784791c75aed4d3e58ea96bdda946707232e515255f39ba42a6db"
+      "sha256": "d92683950f58c1ab758b5e4ec7cef98f610731781b59542ab5e4ced2854a4329"
     },
     {
       "slug": "telegram",
@@ -428,7 +428,7 @@
       "kind": "loon-list",
       "label": "telegram loon",
       "behavior": "classical",
-      "sha256": "2ce66df80e07e73ad89b716b5a6d169043e5e6f28291d6203272d3431e8dcd13"
+      "sha256": "e45ad777b949f8cdc0a826b27a754cd9832008d5ef8b06fc5ff5b094b87cead3"
     },
     {
       "slug": "tiktok",

@@ -1,10 +1,10 @@
 # NAME: SteamCN
 # AUTHOR: MagicRule
 # REPO: https://magicrule.pages.dev
-# UPDATED: 2026-11-10 09:49:30
+# UPDATED: 2026-11-11 11:13:47
 # BEHAVIOR: classical
 # DOMAIN: 12
-# DOMAIN-SUFFIX: 4
+# DOMAIN-SUFFIX: 5
 
 payload:
 - 'DOMAIN,csgo.wmsj.cn'
@@ -22,4 +22,5 @@ payload:
 - 'DOMAIN-SUFFIX,cm.steampowered.com'
 - 'DOMAIN-SUFFIX,steamchina.com'
 - 'DOMAIN-SUFFIX,steamcontent.com'
+- 'DOMAIN-SUFFIX,steamserver.net'
 - 'DOMAIN-SUFFIX,steamusercontent.com'

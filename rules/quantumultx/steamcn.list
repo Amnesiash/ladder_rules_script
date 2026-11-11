@@ -1,8 +1,8 @@
 # NAME: SteamCN
-# UPDATE: 2026-11-09 13:55
-# TOTAL: 16
+# UPDATE: 2026-11-11 21:32
+# TOTAL: 17
 # HOST: 12
-# HOST-SUFFIX: 4
+# HOST-SUFFIX: 5
 
 host, csgo.wmsj.cn, proxy
 host, dl.steam.clngaa.com, proxy
@@ -19,4 +19,5 @@ host, xz.pphimalayanrt.com, proxy
 host-suffix, cm.steampowered.com, proxy
 host-suffix, steamchina.com, proxy
 host-suffix, steamcontent.com, proxy
+host-suffix, steamserver.net, proxy
 host-suffix, steamusercontent.com, proxy
