@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-11T13:32:30.053Z",
+  "timestamp": "2026-11-12T14:36:31.634Z",
   "artifacts": [
     {
       "slug": "advertising",
@@ -10,7 +10,7 @@
       "kind": "mihomo-yaml",
       "label": "advertising mihomo",
       "behavior": "classical",
-      "sha256": "30d08e68df6d87afebbc14f64a416f13273473f7203bb77af2af78c7e143de97"
+      "sha256": "1f559beb353f8f33ecea387e57e9571b93999fa3ea0ded132e284386fba690d3"
     },
     {
       "slug": "advertising",
@@ -21,7 +21,7 @@
       "kind": "quantumultx-list",
       "label": "advertising quantumultx",
       "behavior": "classical",
-      "sha256": "3657cb5bb3d7ea703284c46912dca9e4b54b17f75e4143b6e7a26ecab5449350"
+      "sha256": "581615e13e22e3f02dda75d6e5c398b036be711743f0767d30bbbaa792c4d7b5"
     },
     {
       "slug": "advertising",
@@ -32,7 +32,7 @@
       "kind": "loon-list",
       "label": "advertising loon",
       "behavior": "classical",
-      "sha256": "8fd3c39b1facb308f7035433adf2b723047d3e29ffaf2e03181c53453ebbc837"
+      "sha256": "9e263c0c380ae2fb2c70e1f2f8103de2ce3be3636eddab77b5902b108230cea4"
     },
     {
       "slug": "china",
@@ -175,7 +175,7 @@
       "kind": "mihomo-yaml",
       "label": "ai mihomo",
       "behavior": "classical",
-      "sha256": "858046a392a99ab5444cfb435e40ebe1769b2e607030fb67f287c135ea730c80"
+      "sha256": "d931e5b70369c8436fe54848c66550d1ba16dee1f3cce257e3b6c1e68027eff2"
     },
     {
       "slug": "ai",
@@ -186,7 +186,7 @@
       "kind": "quantumultx-list",
       "label": "ai quantumultx",
       "behavior": "classical",
-      "sha256": "4419314c7f02efadc0f0d4d6b9619ad2646b113d027a7f9db7d0b828fd06a1ec"
+      "sha256": "b0245a75fdfb941d237692123378eb5ef52fbb6f4a6c01322688b0c0f8a94409"
     },
     {
       "slug": "ai",
@@ -197,7 +197,7 @@
       "kind": "loon-list",
       "label": "ai loon",
       "behavior": "classical",
-      "sha256": "1469fc0e93301a78c671a43bffd49310626c8dd88a4bf45d6e840a4ba5da377f"
+      "sha256": "aa424fc1949e68e6437698f1da3029261e246562a70593fa5279135c6e9b319a"
     },
     {
       "slug": "lan",
@@ -241,7 +241,7 @@
       "kind": "mihomo-yaml",
       "label": "microsoftproxy mihomo",
       "behavior": "classical",
-      "sha256": "1283731db41939434a0881f8607b42edde8e7e67c2b8ba2e2ebb7971746a9eea"
+      "sha256": "f0995bf18bb524d25cfdb29e46d0bbdd9dcbe8bbf882529122dc66feb4cb7285"
     },
     {
       "slug": "microsoftproxy",
@@ -252,7 +252,7 @@
       "kind": "quantumultx-list",
       "label": "microsoftproxy quantumultx",
       "behavior": "classical",
-      "sha256": "7f77344e08e8fb5af4f7d0d3b5d18a167e224d5cd004e9648228e57d110dd115"
+      "sha256": "c073afb57d0f22919169218389b9eae28dd5daaa3020f778d5004a6f92c81ffb"
     },
     {
       "slug": "microsoftproxy",
@@ -263,7 +263,7 @@
       "kind": "loon-list",
       "label": "microsoftproxy loon",
       "behavior": "classical",
-      "sha256": "146c2b21056607804f590476e3d8eb7db4731f142220186e9085a9ca480ba4f8"
+      "sha256": "53d28633ef5eb9e1b0773c9c270e58b20b27e933f699ea4c8fa2080672882f31"
     },
     {
       "slug": "steamcn",
@@ -406,7 +406,7 @@
       "kind": "mihomo-yaml",
       "label": "telegram mihomo",
       "behavior": "classical",
-      "sha256": "1064cad6e04a30a887221a9cee197b8d575302c023494394fc262810f908cddc"
+      "sha256": "65b867f08b6d307503c5018b0658d72ce7c667eb2539a0df2654571c3560234a"
     },
     {
       "slug": "telegram",
@@ -417,7 +417,7 @@
       "kind": "quantumultx-list",
       "label": "telegram quantumultx",
       "behavior": "classical",
-      "sha256": "d92683950f58c1ab758b5e4ec7cef98f610731781b59542ab5e4ced2854a4329"
+      "sha256": "dae09134d86160b85977eae99c44ec6225706ff51d0091fdfab1e362a689575a"
     },
     {
       "slug": "telegram",
@@ -428,7 +428,7 @@
       "kind": "loon-list",
       "label": "telegram loon",
       "behavior": "classical",
-      "sha256": "e45ad777b949f8cdc0a826b27a754cd9832008d5ef8b06fc5ff5b094b87cead3"
+      "sha256": "a3a041265ba4f18fef89ca875d8206c62cec2b8ae4be6eb33c0078b222ade7e1"
     },
     {
       "slug": "tiktok",

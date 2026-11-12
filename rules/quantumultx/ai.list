@@ -1,11 +1,11 @@
 # NAME: AI
-# UPDATE: 2026-11-09 13:55
-# TOTAL: 471
+# UPDATE: 2026-11-12 22:36
+# TOTAL: 473
 # IP-CIDR: 5
 # IP-ASN: 1
 # HOST: 212
 # HOST-KEYWORD: 14
-# HOST-SUFFIX: 238
+# HOST-SUFFIX: 240
 # IP6-CIDR: 1
 
 host, agentrouter.org, proxy
@@ -232,6 +232,7 @@ host-suffix, aisandbox-pa.googleapis.com, proxy
 host-suffix, aistudio.google.com, proxy
 host-suffix, algolia.net, proxy
 host-suffix, ant.dev, proxy
+host-suffix, anthropic.ai, proxy
 host-suffix, anthropic.com, proxy
 host-suffix, anthropic.team, proxy
 host-suffix, antigravity-unleash.goog, proxy
@@ -265,6 +266,7 @@ host-suffix, clau.de, proxy
 host-suffix, claude.ai, proxy
 host-suffix, claude.com, proxy
 host-suffix, claudeacademy.com, proxy
+host-suffix, claudeai.com, proxy
 host-suffix, claudemcpclient.com, proxy
 host-suffix, claudemcpcontent.com, proxy
 host-suffix, claudepages.dev, proxy
