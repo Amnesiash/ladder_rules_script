@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-15T13:25:28.812Z",
+  "timestamp": "2026-11-16T14:45:49.092Z",
   "artifacts": [
     {
       "slug": "advertising",
@@ -10,7 +10,7 @@
       "kind": "mihomo-yaml",
       "label": "advertising mihomo",
       "behavior": "classical",
-      "sha256": "19984a69d056e9db77737acade657a637e504bc4af738eb820713700d4f51ef6"
+      "sha256": "b747ef4e102903789c141f0fac9b69c8399bfa49b1168bc8c1580a744380e87c"
     },
     {
       "slug": "advertising",
@@ -21,7 +21,7 @@
       "kind": "quantumultx-list",
       "label": "advertising quantumultx",
       "behavior": "classical",
-      "sha256": "8938d77599529c64f25c9d9fe8168f332c49e6199cb404e256897dc415f46162"
+      "sha256": "581091431c91a2b65dd89bf18ddb631373a51e3a67e7d45eeabbf5e6eae1b09a"
     },
     {
       "slug": "advertising",
@@ -32,7 +32,7 @@
       "kind": "loon-list",
       "label": "advertising loon",
       "behavior": "classical",
-      "sha256": "ab6ce631a020da0157c719642aa55c6f477143df0ad2db2db26a89e6943d798f"
+      "sha256": "feb59abfaca77db293ece5d75b91af17910ca080b206672fc5125cb198427287"
     },
     {
       "slug": "china",
@@ -175,7 +175,7 @@
       "kind": "mihomo-yaml",
       "label": "ai mihomo",
       "behavior": "classical",
-      "sha256": "d931e5b70369c8436fe54848c66550d1ba16dee1f3cce257e3b6c1e68027eff2"
+      "sha256": "9900be1543a8ee58287e3fda864e3e5140fc9ea13510b5196fd16de7b4395e0c"
     },
     {
       "slug": "ai",
@@ -186,7 +186,7 @@
       "kind": "quantumultx-list",
       "label": "ai quantumultx",
       "behavior": "classical",
-      "sha256": "b0245a75fdfb941d237692123378eb5ef52fbb6f4a6c01322688b0c0f8a94409"
+      "sha256": "ff71eb311aa3ced3e354d196fc25b767cf360612df1dd30485c45781b3555e99"
     },
     {
       "slug": "ai",
@@ -197,7 +197,7 @@
       "kind": "loon-list",
       "label": "ai loon",
       "behavior": "classical",
-      "sha256": "aa424fc1949e68e6437698f1da3029261e246562a70593fa5279135c6e9b319a"
+      "sha256": "130eeece278c4ab64ab927923627ce4bc86cd91067c7872e6200e2a6d7804283"
     },
     {
       "slug": "lan",

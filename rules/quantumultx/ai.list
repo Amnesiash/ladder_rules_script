@@ -1,11 +1,12 @@
 # NAME: AI
-# UPDATE: 2026-11-12 22:36
-# TOTAL: 473
+# UPDATE: 2026-11-16 22:45
+# TOTAL: 476
 # IP-CIDR: 5
 # IP-ASN: 1
-# HOST: 212
+# HOST: 213
 # HOST-KEYWORD: 14
-# HOST-SUFFIX: 240
+# HOST-SUFFIX: 241
+# HOST-WILDCARD: 1
 # IP6-CIDR: 1
 
 host, agentrouter.org, proxy
@@ -155,6 +156,7 @@ host, gemini.google.com, proxy
 host, generativeai.google, proxy
 host, generativelanguage.googleapis.com, proxy
 host, go.fastrouter.ai, proxy
+host, graph.facebook.com, proxy
 host, gspe1-ssl.ls.apple.com, proxy
 host, guzzoni.apple.com, proxy
 host, host.livekit.cloud, proxy
@@ -342,6 +344,7 @@ host-suffix, grazie.ai, proxy
 host-suffix, grazie.aws.intellij.net, proxy
 host-suffix, grok.com, proxy
 host-suffix, grok.x.com, proxy
+host-suffix, grokbot.com, proxy
 host-suffix, grokipedia.com, proxy
 host-suffix, groq.com, proxy
 host-suffix, h2o.ai, proxy
@@ -474,6 +477,7 @@ host-keyword, openai, proxy
 host-keyword, openai-proxy, proxy
 host-keyword, openaiapi, proxy
 host-keyword, openaicom, proxy
+host-wildcard, scontent-*.xx.fbcdn.net, proxy
 ip-cidr, 104.18.6.192/32, proxy
 ip-cidr, 104.18.7.192/32, proxy
 ip-cidr, 160.79.104.0/23, proxy

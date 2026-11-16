@@ -1,9 +1,10 @@
 # NAME: AI
-# UPDATE: 2026-11-12 22:36
-# TOTAL: 473
-# DOMAIN: 212
-# DOMAIN-SUFFIX: 240
+# UPDATE: 2026-11-16 22:45
+# TOTAL: 476
+# DOMAIN: 213
+# DOMAIN-SUFFIX: 241
 # DOMAIN-KEYWORD: 14
+# DOMAIN-WILDCARD: 1
 # IP-CIDR: 5
 # IP-CIDR6: 1
 # IP-ASN: 1
@@ -156,6 +157,7 @@ payload:
 - 'DOMAIN,generativeai.google'
 - 'DOMAIN,generativelanguage.googleapis.com'
 - 'DOMAIN,go.fastrouter.ai'
+- 'DOMAIN,graph.facebook.com'
 - 'DOMAIN,gspe1-ssl.ls.apple.com'
 - 'DOMAIN,guzzoni.apple.com'
 - 'DOMAIN,host.livekit.cloud'
@@ -343,6 +345,7 @@ payload:
 - 'DOMAIN-SUFFIX,grazie.aws.intellij.net'
 - 'DOMAIN-SUFFIX,grok.com'
 - 'DOMAIN-SUFFIX,grok.x.com'
+- 'DOMAIN-SUFFIX,grokbot.com'
 - 'DOMAIN-SUFFIX,grokipedia.com'
 - 'DOMAIN-SUFFIX,groq.com'
 - 'DOMAIN-SUFFIX,h2o.ai'
@@ -475,6 +478,7 @@ payload:
 - 'DOMAIN-KEYWORD,openai-proxy'
 - 'DOMAIN-KEYWORD,openaiapi'
 - 'DOMAIN-KEYWORD,openaicom'
+- 'DOMAIN-WILDCARD,scontent-*.xx.fbcdn.net'
 - 'IP-CIDR,104.18.6.192/32,no-resolve'
 - 'IP-CIDR,104.18.7.192/32,no-resolve'
 - 'IP-CIDR,160.79.104.0/23,no-resolve'
