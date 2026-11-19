@@ -21,7 +21,7 @@
       "kind": "quantumultx-list",
       "label": "advertising quantumultx",
       "behavior": "classical",
-      "sha256": "903178c65162a27746517c053b99c2d5084ae092001490fd463916e04426f315"
+      "sha256": "43b9e6d93bbc943144715ca82cd060736ef256c12de5328d03185f7b6b82f87c"
     },
     {
       "slug": "advertising",
@@ -54,7 +54,7 @@
       "kind": "quantumultx-list",
       "label": "china quantumultx",
       "behavior": "classical",
-      "sha256": "e97756022a5b56f0cad01065db41e07f4efdbdc54df7573e03716c8adf781209"
+      "sha256": "b10d1c77a78cc3ba0019b2f0957eda4df38a7d6560b4dbcd3c10cef402636fa6"
     },
     {
       "slug": "china",
@@ -87,7 +87,7 @@
       "kind": "quantumultx-list",
       "label": "direct quantumultx",
       "behavior": "classical",
-      "sha256": "4e687f2e45db70b5adc7de3f3b87f7669dc88f8fb0f13aa985fbb609ec6e8b7d"
+      "sha256": "2d0129969f86bf161e5db086a1d725737004ba50241c5bb7f8963db1ec955aec"
     },
     {
       "slug": "direct",
@@ -153,7 +153,7 @@
       "kind": "quantumultx-list",
       "label": "streaming quantumultx",
       "behavior": "classical",
-      "sha256": "9ae6c630f3192dfcb4c2eb5e46e3cd95d164da34d6379428302b532ca96d0ff1"
+      "sha256": "7368b60f8f10bdf596d7cf1277e0643615e343a97b2431f219880c5b257613ab"
     },
     {
       "slug": "streaming",
@@ -186,7 +186,7 @@
       "kind": "quantumultx-list",
       "label": "ai quantumultx",
       "behavior": "classical",
-      "sha256": "ff71eb311aa3ced3e354d196fc25b767cf360612df1dd30485c45781b3555e99"
+      "sha256": "26ba8542c952e364e7903f754e733bedf03b836a680aa794a6edda5e3947cc45"
     },
     {
       "slug": "ai",
@@ -219,7 +219,7 @@
       "kind": "quantumultx-list",
       "label": "lan quantumultx",
       "behavior": "classical",
-      "sha256": "e814c737463d3bb0f6d5a4b3795b8e0856dbdaf4d9ce585221a193579bceb119"
+      "sha256": "00112829aa0b16dfc838dc92437ab4d2bd6806d4bcafbfb57b05515a03a19542"
     },
     {
       "slug": "lan",
@@ -252,7 +252,7 @@
       "kind": "quantumultx-list",
       "label": "microsoftproxy quantumultx",
       "behavior": "classical",
-      "sha256": "5e8a17404ab6298686d598c1873393c49c025609122ba43d158915d3c5dfdf17"
+      "sha256": "9553966cda1b188b5b984e4b088c15c5e0a0a0152bdd88fc984f026146fc0175"
     },
     {
       "slug": "microsoftproxy",
@@ -285,7 +285,7 @@
       "kind": "quantumultx-list",
       "label": "steamcn quantumultx",
       "behavior": "classical",
-      "sha256": "57bb9cb13d2cd9e40e2d92d844ac4618859ee0851cbbcc140c31be07c069e524"
+      "sha256": "02ea71c7ab32a1aaf12c7f11cc9b770811261ea05d5895dc614c12c8ef3da93a"
     },
     {
       "slug": "steamcn",
@@ -318,7 +318,7 @@
       "kind": "quantumultx-list",
       "label": "wechat quantumultx",
       "behavior": "classical",
-      "sha256": "98756a200ec4e396aa18dcee714c80d0770c1e60ddbe9e68bb964ae1280717f0"
+      "sha256": "771ee4bc5e081580e7087eff0f56d893fe2f977a25e9da3040d6b3f916952cb9"
     },
     {
       "slug": "wechat",
@@ -351,7 +351,7 @@
       "kind": "quantumultx-list",
       "label": "streaminghmt quantumultx",
       "behavior": "classical",
-      "sha256": "61cf2450e32a380f802436fbc170e65f6df7f51da2a6130bca675a8e0ea0f006"
+      "sha256": "5c1223da3c5453146fb8b5ab935701d7e880a5d0b67ff2d127f40f7a41419d9c"
     },
     {
       "slug": "streaminghmt",
@@ -384,7 +384,7 @@
       "kind": "quantumultx-list",
       "label": "apple quantumultx",
       "behavior": "classical",
-      "sha256": "97f5bc102c90b090ef47784a8827f1bf0bd14429a33e95d5f67702133facd10f"
+      "sha256": "991b4cab0ea446dcffe06b279eed9e414b195397bedcd9010e54831f9500ebdb"
     },
     {
       "slug": "apple",
@@ -417,7 +417,7 @@
       "kind": "quantumultx-list",
       "label": "telegram quantumultx",
       "behavior": "classical",
-      "sha256": "67e617b504db710243ac330d1813c6265f90e3af5225f6d057c84c4e505ca187"
+      "sha256": "853e3e88151530b87418edadc0d2a51d851513e7d80ccd7c28849e3a204ab096"
     },
     {
       "slug": "telegram",
@@ -450,7 +450,7 @@
       "kind": "quantumultx-list",
       "label": "tiktok quantumultx",
       "behavior": "classical",
-      "sha256": "0add80886e502a99d4d1175510045b5ac6e66218fd5af0df5babbfb35af04498"
+      "sha256": "ca5134608cacb7350413959682a25df1fc8d22119f67b85ab9b09e872661f965"
     },
     {
       "slug": "tiktok",
