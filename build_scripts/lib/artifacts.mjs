@@ -207,7 +207,8 @@ async function processEntry({ entry, outputRoot, fetchImpl, projectRoot, sourceR
   const stem = toSafePathStem(entry.name).toLowerCase();
 
   for (const fmt of OUTPUT_FORMATS) {
-    const body = renderFormat(fmt.key, { name: entry.name, lines: clashLines, updateTime });
+    // QX 产物的第三段策略用该段文件名（如 china），与产物同名对应
+    const body = renderFormat(fmt.key, { name: entry.name, lines: clashLines, updateTime, policy: stem });
     const outPath = path.join(outputRoot, fmt.dir, `${stem}.${fmt.ext}`);
     await writeFormatFile({ outPath, body, projectRoot });
     artifacts.push(makeArtifact({

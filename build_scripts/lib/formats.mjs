@@ -7,8 +7,9 @@
 //   quantumultx/ -> QX 的 .list，类型名按 KOP-XIAO resource-parser.js 的 Rule_Policy 规则转换
 //   loon/        -> Loon 的 .list，类型名按 Sub-Store LoonRules producer 的规则转换
 //
-// 三套都不带策略字段（策略由各客户端的引用处指定，例如 QX 的 force-policy、
-// Loon 的 [Remote Rule]、mihomo 的 rules: RULE-SET,x,策略）。
+// mihomo 与 Loon 不带策略字段（策略由各客户端的引用处指定，例如 Loon 的 [Remote Rule]、
+// mihomo 的 rules: RULE-SET,x,策略）；QX 的 filter_remote 原生要求三段式，
+// 所以 QX 产物第三段写该段自己的文件名（如 china），引用处仍可用 force-policy 覆盖。
 //
 // 头部注释沿用本项目自己的 buildHeaderBlock 风格（# NAME / # UPDATE / # TOTAL / 各类型计数），
 // 不采用 magicrule 的 # AUTHOR / # REPO / # BEHAVIOR 头。
@@ -140,8 +141,9 @@ function toMihomoYaml({ name, updateTime, lines }) {
 //   URL-REGEX / PROCESS-* / AND|OR|NOT / GEOSITE / RULE-SET / MATCH 等丢弃
 //
 // 注意：QX 的 filter_remote 原生格式要求每行三段式 `类型, 值, 策略`，
-// 两段式（无策略）无法被 QX 直接解析。产物统一补占位策略 `proxy`
-//（QX 内置策略，保证合法），实际策略由引用处的 force-policy 覆盖。
+// 两段式（无策略）无法被 QX 直接解析。
+// 第三段策略统一写该段产物自己的文件名（小写 stem，例如 china.list 里写 `china`），
+// 这样本地直接引用或自建同名策略组时都能对上；未传入策略时回退 QX 内置 `proxy`。
 const QX_TYPE_MAP = new Map([
   ["DOMAIN", "host"],
   ["DOMAIN-SUFFIX", "host-suffix"],
@@ -164,7 +166,9 @@ function simpleRegexToWildcard(pattern) {
     .replace(/\*+/g, "*");
 }
 
-function toQuantumultXLine(line) {
+const QX_DEFAULT_POLICY = "proxy";
+
+function toQuantumultXLine(line, policy) {
   const { type, value } = splitRule(line);
   if (!value) return null;
 
@@ -173,19 +177,20 @@ function toQuantumultXLine(line) {
     if (wildcard === null) return null;
     const prefix = value.startsWith("^") ? "" : "*";
     const suffix = value.endsWith("$") ? "" : "*";
-    return `host-wildcard, ${(prefix + wildcard + suffix).replace(/\*+/g, "*")}, proxy`;
+    return `host-wildcard, ${(prefix + wildcard + suffix).replace(/\*+/g, "*")}, ${policy}`;
   }
 
   const target = QX_TYPE_MAP.get(type);
   if (!target) return null;
-  // 第三段策略占位：QX filter_remote 原生要求三段式，占位 proxy 由 force-policy 覆盖
-  return `${target}, ${value}, proxy`;
+  // 第三段策略：用段自身的文件名（如 china），QX 里按同名策略组即可匹配
+  return `${target}, ${value}, ${policy}`;
 }
 
-function toQuantumultXList({ name, updateTime, lines }) {
+function toQuantumultXList({ name, updateTime, lines, policy }) {
+  const policyName = policy ? String(policy).trim() : QX_DEFAULT_POLICY;
   const bodyLines = [];
   for (const line of lines) {
-    const converted = toQuantumultXLine(line);
+    const converted = toQuantumultXLine(line, policyName);
     if (converted) bodyLines.push(converted);
   }
   const header = buildHeaderBlock({ name, updateTime, bodyLines });
@@ -255,16 +260,17 @@ function toLoonList({ name, updateTime, lines }) {
  * @param {string} name 段名
  * @param {string[]} lines 归一化后的规则行
  * @param {string} updateTime 更新时间（Asia/Shanghai），由调用方统一传入，保证三套产物头一致
+ * @param {string} [policy] 仅 quantumultx 使用：第三段策略名，取产物文件名 stem（如 china）
  * @returns {string} 完整文件内容（含头部注释）
  */
-export function renderFormat(format, { name, lines, updateTime } = {}) {
+export function renderFormat(format, { name, lines, updateTime, policy } = {}) {
   const time = updateTime ?? "";
   const ruleLines = Array.isArray(lines) ? lines : [];
   switch (format) {
     case "mihomo":
       return toMihomoYaml({ name, updateTime: time, lines: ruleLines });
     case "quantumultx":
-      return toQuantumultXList({ name, updateTime: time, lines: ruleLines });
+      return toQuantumultXList({ name, updateTime: time, lines: ruleLines, policy });
     case "loon":
       return toLoonList({ name, updateTime: time, lines: ruleLines });
     default:
