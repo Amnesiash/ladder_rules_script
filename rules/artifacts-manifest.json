@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-20T14:52:15.130Z",
+  "timestamp": "2026-11-21T14:12:07.134Z",
   "artifacts": [
     {
       "slug": "advertising",
@@ -10,7 +10,7 @@
       "kind": "mihomo-yaml",
       "label": "advertising mihomo",
       "behavior": "classical",
-      "sha256": "66a7d1899a82a5938d77647d1e964bfd876174dabe0fd968279742c68e2878a4"
+      "sha256": "d6415aa2814f8f40cd1f5d45ca8bd6872867735b743e72906eb8165cc2d85ac0"
     },
     {
       "slug": "advertising",
@@ -21,7 +21,7 @@
       "kind": "quantumultx-list",
       "label": "advertising quantumultx",
       "behavior": "classical",
-      "sha256": "6ed7ce8928db3dfb3ae9be7f8281c9a64354c42fdeed16f6c03a23f07347f3cd"
+      "sha256": "31e3199ea41288c98be199d233befee226241f2f0693bfdc1c8b23cf09473422"
     },
     {
       "slug": "advertising",
@@ -32,7 +32,7 @@
       "kind": "loon-list",
       "label": "advertising loon",
       "behavior": "classical",
-      "sha256": "5c043adbd9d2aa1fe7aeefb01d345a642332bcdb0bdd48f9c72d928bd40b5503"
+      "sha256": "3f2f4ef1e45eaf74d553c892e40ff9759b3934f1ff7e15ec720caf9750700eeb"
     },
     {
       "slug": "china",
