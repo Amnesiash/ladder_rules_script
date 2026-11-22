@@ -1,8 +1,8 @@
 # NAME: AI
-# UPDATE: 2026-11-16 22:45
-# TOTAL: 476
-# DOMAIN: 213
-# DOMAIN-SUFFIX: 241
+# UPDATE: 2026-11-22 22:01
+# TOTAL: 480
+# DOMAIN: 216
+# DOMAIN-SUFFIX: 242
 # DOMAIN-KEYWORD: 14
 # DOMAIN-WILDCARD: 1
 # IP-CIDR: 5
@@ -154,6 +154,8 @@ payload:
 - 'DOMAIN,geller-pa.googleapis.com'
 - 'DOMAIN,gemini.google'
 - 'DOMAIN,gemini.google.com'
+- 'DOMAIN,geminiweb-pa.clients.google.com'
+- 'DOMAIN,geminiweb-pa.clients6.google.com'
 - 'DOMAIN,generativeai.google'
 - 'DOMAIN,generativelanguage.googleapis.com'
 - 'DOMAIN,go.fastrouter.ai'
@@ -189,6 +191,7 @@ payload:
 - 'DOMAIN,models.mixlayer.ai'
 - 'DOMAIN,models.think.evroc.com'
 - 'DOMAIN,nano-gpt.com'
+- 'DOMAIN,notebooklm-pa.googleapis.com'
 - 'DOMAIN,notebooklm.google'
 - 'DOMAIN,notebooklm.google.com'
 - 'DOMAIN,o33249.ingest.sentry.io'
@@ -320,6 +323,7 @@ payload:
 - 'DOMAIN-SUFFIX,duck.ai'
 - 'DOMAIN-SUFFIX,elevenlabs.com'
 - 'DOMAIN-SUFFIX,elevenlabs.io'
+- 'DOMAIN-SUFFIX,elevenlabsusercontent.com'
 - 'DOMAIN-SUFFIX,envato-static.com'
 - 'DOMAIN-SUFFIX,envato.com'
 - 'DOMAIN-SUFFIX,envatousercontent.com'

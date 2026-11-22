@@ -1,11 +1,11 @@
 # NAME: AI
-# UPDATE: 2026-11-16 22:45
-# TOTAL: 476
+# UPDATE: 2026-11-22 22:01
+# TOTAL: 480
 # IP-CIDR: 5
 # IP-ASN: 1
-# HOST: 213
+# HOST: 216
 # HOST-KEYWORD: 14
-# HOST-SUFFIX: 241
+# HOST-SUFFIX: 242
 # HOST-WILDCARD: 1
 # IP6-CIDR: 1
 
@@ -153,6 +153,8 @@ host, gateway.ai.cloudflare.com, ai
 host, geller-pa.googleapis.com, ai
 host, gemini.google, ai
 host, gemini.google.com, ai
+host, geminiweb-pa.clients.google.com, ai
+host, geminiweb-pa.clients6.google.com, ai
 host, generativeai.google, ai
 host, generativelanguage.googleapis.com, ai
 host, go.fastrouter.ai, ai
@@ -188,6 +190,7 @@ host, models.inference.ai.azure.com, ai
 host, models.mixlayer.ai, ai
 host, models.think.evroc.com, ai
 host, nano-gpt.com, ai
+host, notebooklm-pa.googleapis.com, ai
 host, notebooklm.google, ai
 host, notebooklm.google.com, ai
 host, o33249.ingest.sentry.io, ai
@@ -319,6 +322,7 @@ host-suffix, dreamgen.com, ai
 host-suffix, duck.ai, ai
 host-suffix, elevenlabs.com, ai
 host-suffix, elevenlabs.io, ai
+host-suffix, elevenlabsusercontent.com, ai
 host-suffix, envato-static.com, ai
 host-suffix, envato.com, ai
 host-suffix, envatousercontent.com, ai
