@@ -1,8 +1,8 @@
 # NAME: Proxy
-# UPDATE: 2026-11-22 22:01
-# TOTAL: 903
+# UPDATE: 2026-11-28 23:00
+# TOTAL: 902
 # DOMAIN: 78
-# DOMAIN-SUFFIX: 696
+# DOMAIN-SUFFIX: 695
 # DOMAIN-KEYWORD: 34
 # IP-CIDR: 90
 # IP-CIDR6: 5
@@ -609,7 +609,6 @@ DOMAIN-SUFFIX,steam-chat.com
 DOMAIN-SUFFIX,steamcommunity.com
 DOMAIN-SUFFIX,steamgames.com
 DOMAIN-SUFFIX,steampowered.com
-DOMAIN-SUFFIX,steamserver.net
 DOMAIN-SUFFIX,steamstat.us
 DOMAIN-SUFFIX,steamstatic.com
 DOMAIN-SUFFIX,steemit.com

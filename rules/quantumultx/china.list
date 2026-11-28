@@ -1,13 +1,14 @@
 # NAME: China
-# UPDATE: 2026-11-09 13:54
-# TOTAL: 656
+# UPDATE: 2026-11-28 23:00
+# TOTAL: 664
 # IP-CIDR: 8
-# HOST: 31
+# HOST: 33
 # HOST-KEYWORD: 16
-# HOST-SUFFIX: 597
+# HOST-SUFFIX: 603
 # IP6-CIDR: 4
 
 host, auth.wosms.cn, china
+host, cn.download.nvidia.com, china
 host, config.cmpassport.com, china
 host, csgo.wmsj.cn, china
 host, dl.steam.clngaa.com, china
@@ -16,6 +17,7 @@ host, dota2.wmsj.cn, china
 host, download.jetbrains.com, china
 host, download.microsoft.com, china
 host, enrichgw.10010.com, china
+host, gstore.val.manlaxy.com, china
 host, hmrz.wo.cn, china
 host, id.mail.wo.cn, china
 host, log.cmpassport.com, china
@@ -236,12 +238,14 @@ host-suffix, feng.com, china
 host-suffix, fengkongcloud.com, china
 host-suffix, fir.im, china
 host-suffix, flyert.com, china
+host-suffix, focuschina.com, china
 host-suffix, foxmail.com, china
 host-suffix, frdic.com, china
 host-suffix, fresh-ideas.cc, china
 host-suffix, gandi.net, china
 host-suffix, ganji.com, china
 host-suffix, ganjistatic1.com, china
+host-suffix, gcloudsvcs.com, china
 host-suffix, geetest.com, china
 host-suffix, geilicdn.com, china
 host-suffix, ghpym.com, china
@@ -357,6 +361,7 @@ host-suffix, lofter.com, china
 host-suffix, luoo.net, china
 host-suffix, lvmama.com, china
 host-suffix, lxdns.com, china
+host-suffix, made-in-china.com, china
 host-suffix, maoyan.com, china
 host-suffix, meilishuo.com, china
 host-suffix, meipai.com, china
@@ -370,6 +375,7 @@ host-suffix, mgtv.com, china
 host-suffix, mi-img.com, china
 host-suffix, mi.com, china
 host-suffix, miaopai.com, china
+host-suffix, micstatic.com, china
 host-suffix, migucloud.com, china
 host-suffix, miguvideo.com, china
 host-suffix, miui.com, china
@@ -530,6 +536,7 @@ host-suffix, toutiaohao.com, china
 host-suffix, toutiaohao.net, china
 host-suffix, toutiaoimg.com, china
 host-suffix, toutiaopage.com, china
+host-suffix, trademessenger.com, china
 host-suffix, trip.com, china
 host-suffix, ttmeiju.com, china
 host-suffix, tudou.com, china
@@ -544,6 +551,7 @@ host-suffix, update.microsoft.com, china
 host-suffix, upyun.com, china
 host-suffix, uxengine.net, china
 host-suffix, v-56.com, china
+host-suffix, vemic.com, china
 host-suffix, videocc.net, china
 host-suffix, vip.com, china
 host-suffix, vipstatic.com, china

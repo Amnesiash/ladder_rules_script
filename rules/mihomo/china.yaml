@@ -1,14 +1,15 @@
 # NAME: China
-# UPDATE: 2026-11-09 12:55
-# TOTAL: 656
-# DOMAIN: 31
-# DOMAIN-SUFFIX: 597
+# UPDATE: 2026-11-28 23:00
+# TOTAL: 664
+# DOMAIN: 33
+# DOMAIN-SUFFIX: 603
 # DOMAIN-KEYWORD: 16
 # IP-CIDR: 8
 # IP-CIDR6: 4
 
 payload:
 - 'DOMAIN,auth.wosms.cn'
+- 'DOMAIN,cn.download.nvidia.com'
 - 'DOMAIN,config.cmpassport.com'
 - 'DOMAIN,csgo.wmsj.cn'
 - 'DOMAIN,dl.steam.clngaa.com'
@@ -17,6 +18,7 @@ payload:
 - 'DOMAIN,download.jetbrains.com'
 - 'DOMAIN,download.microsoft.com'
 - 'DOMAIN,enrichgw.10010.com'
+- 'DOMAIN,gstore.val.manlaxy.com'
 - 'DOMAIN,hmrz.wo.cn'
 - 'DOMAIN,id.mail.wo.cn'
 - 'DOMAIN,log.cmpassport.com'
@@ -237,12 +239,14 @@ payload:
 - 'DOMAIN-SUFFIX,fengkongcloud.com'
 - 'DOMAIN-SUFFIX,fir.im'
 - 'DOMAIN-SUFFIX,flyert.com'
+- 'DOMAIN-SUFFIX,focuschina.com'
 - 'DOMAIN-SUFFIX,foxmail.com'
 - 'DOMAIN-SUFFIX,frdic.com'
 - 'DOMAIN-SUFFIX,fresh-ideas.cc'
 - 'DOMAIN-SUFFIX,gandi.net'
 - 'DOMAIN-SUFFIX,ganji.com'
 - 'DOMAIN-SUFFIX,ganjistatic1.com'
+- 'DOMAIN-SUFFIX,gcloudsvcs.com'
 - 'DOMAIN-SUFFIX,geetest.com'
 - 'DOMAIN-SUFFIX,geilicdn.com'
 - 'DOMAIN-SUFFIX,ghpym.com'
@@ -358,6 +362,7 @@ payload:
 - 'DOMAIN-SUFFIX,luoo.net'
 - 'DOMAIN-SUFFIX,lvmama.com'
 - 'DOMAIN-SUFFIX,lxdns.com'
+- 'DOMAIN-SUFFIX,made-in-china.com'
 - 'DOMAIN-SUFFIX,maoyan.com'
 - 'DOMAIN-SUFFIX,meilishuo.com'
 - 'DOMAIN-SUFFIX,meipai.com'
@@ -371,6 +376,7 @@ payload:
 - 'DOMAIN-SUFFIX,mi-img.com'
 - 'DOMAIN-SUFFIX,mi.com'
 - 'DOMAIN-SUFFIX,miaopai.com'
+- 'DOMAIN-SUFFIX,micstatic.com'
 - 'DOMAIN-SUFFIX,migucloud.com'
 - 'DOMAIN-SUFFIX,miguvideo.com'
 - 'DOMAIN-SUFFIX,miui.com'
@@ -531,6 +537,7 @@ payload:
 - 'DOMAIN-SUFFIX,toutiaohao.net'
 - 'DOMAIN-SUFFIX,toutiaoimg.com'
 - 'DOMAIN-SUFFIX,toutiaopage.com'
+- 'DOMAIN-SUFFIX,trademessenger.com'
 - 'DOMAIN-SUFFIX,trip.com'
 - 'DOMAIN-SUFFIX,ttmeiju.com'
 - 'DOMAIN-SUFFIX,tudou.com'
@@ -545,6 +552,7 @@ payload:
 - 'DOMAIN-SUFFIX,upyun.com'
 - 'DOMAIN-SUFFIX,uxengine.net'
 - 'DOMAIN-SUFFIX,v-56.com'
+- 'DOMAIN-SUFFIX,vemic.com'
 - 'DOMAIN-SUFFIX,videocc.net'
 - 'DOMAIN-SUFFIX,vip.com'
 - 'DOMAIN-SUFFIX,vipstatic.com'

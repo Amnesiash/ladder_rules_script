@@ -1,10 +1,10 @@
 # NAME: Proxy
-# UPDATE: 2026-11-22 22:01
-# TOTAL: 903
+# UPDATE: 2026-11-28 23:00
+# TOTAL: 902
 # IP-CIDR: 90
 # HOST: 78
 # HOST-KEYWORD: 34
-# HOST-SUFFIX: 696
+# HOST-SUFFIX: 695
 # IP6-CIDR: 5
 
 host, a248.e.akamai.net, proxy
@@ -609,7 +609,6 @@ host-suffix, steam-chat.com, proxy
 host-suffix, steamcommunity.com, proxy
 host-suffix, steamgames.com, proxy
 host-suffix, steampowered.com, proxy
-host-suffix, steamserver.net, proxy
 host-suffix, steamstat.us, proxy
 host-suffix, steamstatic.com, proxy
 host-suffix, steemit.com, proxy
